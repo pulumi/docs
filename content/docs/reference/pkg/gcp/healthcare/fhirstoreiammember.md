@@ -20,231 +20,6 @@ Three different resources help you manage your IAM policy for Healthcare FHIR st
 
 > **Note:** `gcp.healthcare.FhirStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.FhirStoreIamMember` resources **only if** they do not grant privilege to the same role.
 
-## google\_healthcare\_fhir\_store\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/editor",
-        members: ["user:jane@example.com"],
-    }],
-});
-const fhirStore = new gcp.healthcare.FhirStoreIamPolicy("fhirStore", {
-    fhirStoreId: "your-fhir-store-id",
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-admin = gcp.organizations.get_iam_policy(binding=[{
-    "role": "roles/editor",
-    "members": ["user:jane@example.com"],
-}])
-fhir_store = gcp.healthcare.FhirStoreIamPolicy("fhirStore",
-    fhir_store_id="your-fhir-store-id",
-    policy_data=admin.policy_data)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
-        {
-            Binding = 
-            {
-                
-                {
-                    { "role", "roles/editor" },
-                    { "members", 
-                    {
-                        "user:jane@example.com",
-                    } },
-                },
-            },
-        }));
-        var fhirStore = new Gcp.Healthcare.FhirStoreIamPolicy("fhirStore", new Gcp.Healthcare.FhirStoreIamPolicyArgs
-        {
-            FhirStoreId = "your-fhir-store-id",
-            PolicyData = admin.Apply(admin => admin.PolicyData),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			Binding: []map[string]interface{}{
-				map[string]interface{}{
-					"role": "roles/editor",
-					"members": []string{
-						"user:jane@example.com",
-					},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = healthcare.NewFhirStoreIamPolicy(ctx, "fhirStore", &healthcare.FhirStoreIamPolicyArgs{
-			FhirStoreId: pulumi.String("your-fhir-store-id"),
-			PolicyData:  pulumi.String(admin.PolicyData),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_healthcare\_fhir\_store\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const fhirStore = new gcp.healthcare.FhirStoreIamBinding("fhir_store", {
-    fhirStoreId: "your-fhir-store-id",
-    members: ["user:jane@example.com"],
-    role: "roles/editor",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-fhir_store = gcp.healthcare.FhirStoreIamBinding("fhirStore",
-    fhir_store_id="your-fhir-store-id",
-    members=["user:jane@example.com"],
-    role="roles/editor")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fhirStore = new Gcp.Healthcare.FhirStoreIamBinding("fhirStore", new Gcp.Healthcare.FhirStoreIamBindingArgs
-        {
-            FhirStoreId = "your-fhir-store-id",
-            Members = 
-            {
-                "user:jane@example.com",
-            },
-            Role = "roles/editor",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = healthcare.NewFhirStoreIamBinding(ctx, "fhirStore", &healthcare.FhirStoreIamBindingArgs{
-			FhirStoreId: pulumi.String("your-fhir-store-id"),
-			Members: pulumi.StringArray{
-				pulumi.String("user:jane@example.com"),
-			},
-			Role: pulumi.String("roles/editor"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_healthcare\_fhir\_store\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const fhirStore = new gcp.healthcare.FhirStoreIamMember("fhir_store", {
-    fhirStoreId: "your-fhir-store-id",
-    member: "user:jane@example.com",
-    role: "roles/editor",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-fhir_store = gcp.healthcare.FhirStoreIamMember("fhirStore",
-    fhir_store_id="your-fhir-store-id",
-    member="user:jane@example.com",
-    role="roles/editor")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fhirStore = new Gcp.Healthcare.FhirStoreIamMember("fhirStore", new Gcp.Healthcare.FhirStoreIamMemberArgs
-        {
-            FhirStoreId = "your-fhir-store-id",
-            Member = "user:jane@example.com",
-            Role = "roles/editor",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = healthcare.NewFhirStoreIamMember(ctx, "fhirStore", &healthcare.FhirStoreIamMemberArgs{
-			FhirStoreId: pulumi.String("your-fhir-store-id"),
-			Member:      pulumi.String("user:jane@example.com"),
-			Role:        pulumi.String("roles/editor"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Create a FhirStoreIamMember Resource {#create}
@@ -256,7 +31,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#FhirStoreIamMember">FhirStoreIamMember</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>fhir_store_id=None<span class="p">, </span>member=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#pulumi_gcp.healthcare.FhirStoreIamMember">FhirStoreIamMember</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[FhirStoreIamMemberConditionArgs]</span> = None<span class="p">, </span><span class="nx">fhir_store_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -633,7 +408,7 @@ project setting will be used as a fallback.
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstoreiammembercondition">Dict[Fhir<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#fhirstoreiammembercondition">Fhir<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -779,7 +554,8 @@ Get an existing FhirStoreIamMember resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition=None<span class="p">, </span>etag=None<span class="p">, </span>fhir_store_id=None<span class="p">, </span>member=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[FhirStoreIamMemberConditionArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fhir_store_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FhirStoreIamMember</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -787,7 +563,7 @@ Get an existing FhirStoreIamMember resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreIamMember.html">FhirStoreIamMember</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreIamMemberState.html">FhirStoreIamMemberState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreIamMember.html">FhirStoreIamMember</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreIamMemberState.html">FhirStoreIamMemberState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1094,7 +870,7 @@ project setting will be used as a fallback.
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstoreiammembercondition">Dict[Fhir<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#fhirstoreiammembercondition">Fhir<wbr>Store<wbr>Iam<wbr>Member<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1338,6 +1114,6 @@ project setting will be used as a fallback.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

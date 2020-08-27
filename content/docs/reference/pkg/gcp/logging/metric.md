@@ -20,418 +20,6 @@ To get more information about Metric, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/logging/docs/apis)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Logging Metric Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
-        {
-            BucketOptions = new Gcp.Logging.Inputs.MetricBucketOptionsArgs
-            {
-                LinearBuckets = new Gcp.Logging.Inputs.MetricBucketOptionsLinearBucketsArgs
-                {
-                    NumFiniteBuckets = 3,
-                    Offset = 1,
-                    Width = 1,
-                },
-            },
-            Filter = "resource.type=gae_app AND severity>=ERROR",
-            LabelExtractors = 
-            {
-                { "mass", "EXTRACT(jsonPayload.request)" },
-                { "sku", "EXTRACT(jsonPayload.id)" },
-            },
-            MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
-            {
-                DisplayName = "My metric",
-                Labels = 
-                {
-                    new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
-                    {
-                        Description = "amount of matter",
-                        Key = "mass",
-                        ValueType = "STRING",
-                    },
-                    new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
-                    {
-                        Description = "Identifying number for item",
-                        Key = "sku",
-                        ValueType = "INT64",
-                    },
-                },
-                MetricKind = "DELTA",
-                Unit = "1",
-                ValueType = "DISTRIBUTION",
-            },
-            ValueExtractor = "EXTRACT(jsonPayload.request)",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
-			BucketOptions: &logging.MetricBucketOptionsArgs{
-				LinearBuckets: &logging.MetricBucketOptionsLinearBucketsArgs{
-					NumFiniteBuckets: pulumi.Int(3),
-					Offset:           pulumi.Float64(1),
-					Width:            pulumi.Int(1),
-				},
-			},
-			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
-			LabelExtractors: pulumi.Map{
-				"mass": pulumi.String("EXTRACT(jsonPayload.request)"),
-				"sku":  pulumi.String("EXTRACT(jsonPayload.id)"),
-			},
-			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
-				DisplayName: pulumi.String("My metric"),
-				Labels: logging.MetricMetricDescriptorLabelArray{
-					&logging.MetricMetricDescriptorLabelArgs{
-						Description: pulumi.String("amount of matter"),
-						Key:         pulumi.String("mass"),
-						ValueType:   pulumi.String("STRING"),
-					},
-					&logging.MetricMetricDescriptorLabelArgs{
-						Description: pulumi.String("Identifying number for item"),
-						Key:         pulumi.String("sku"),
-						ValueType:   pulumi.String("INT64"),
-					},
-				},
-				MetricKind: pulumi.String("DELTA"),
-				Unit:       pulumi.String("1"),
-				ValueType:  pulumi.String("DISTRIBUTION"),
-			},
-			ValueExtractor: pulumi.String("EXTRACT(jsonPayload.request)"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-logging_metric = gcp.logging.Metric("loggingMetric",
-    bucket_options={
-        "linearBuckets": {
-            "numFiniteBuckets": 3,
-            "offset": 1,
-            "width": 1,
-        },
-    },
-    filter="resource.type=gae_app AND severity>=ERROR",
-    label_extractors={
-        "mass": "EXTRACT(jsonPayload.request)",
-        "sku": "EXTRACT(jsonPayload.id)",
-    },
-    metric_descriptor={
-        "display_name": "My metric",
-        "labels": [
-            {
-                "description": "amount of matter",
-                "key": "mass",
-                "valueType": "STRING",
-            },
-            {
-                "description": "Identifying number for item",
-                "key": "sku",
-                "valueType": "INT64",
-            },
-        ],
-        "metricKind": "DELTA",
-        "unit": "1",
-        "valueType": "DISTRIBUTION",
-    },
-    value_extractor="EXTRACT(jsonPayload.request)")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const loggingMetric = new gcp.logging.Metric("logging_metric", {
-    bucketOptions: {
-        linearBuckets: {
-            numFiniteBuckets: 3,
-            offset: 1,
-            width: 1,
-        },
-    },
-    filter: "resource.type=gae_app AND severity>=ERROR",
-    labelExtractors: {
-        mass: "EXTRACT(jsonPayload.request)",
-        sku: "EXTRACT(jsonPayload.id)",
-    },
-    metricDescriptor: {
-        displayName: "My metric",
-        labels: [
-            {
-                description: "amount of matter",
-                key: "mass",
-                valueType: "STRING",
-            },
-            {
-                description: "Identifying number for item",
-                key: "sku",
-                valueType: "INT64",
-            },
-        ],
-        metricKind: "DELTA",
-        unit: "1",
-        valueType: "DISTRIBUTION",
-    },
-    valueExtractor: "EXTRACT(jsonPayload.request)",
-});
-```
-
-{{% /example %}}
-
-### Logging Metric Counter Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
-        {
-            Filter = "resource.type=gae_app AND severity>=ERROR",
-            MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
-            {
-                MetricKind = "DELTA",
-                ValueType = "INT64",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
-			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
-			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
-				MetricKind: pulumi.String("DELTA"),
-				ValueType:  pulumi.String("INT64"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-logging_metric = gcp.logging.Metric("loggingMetric",
-    filter="resource.type=gae_app AND severity>=ERROR",
-    metric_descriptor={
-        "metricKind": "DELTA",
-        "valueType": "INT64",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const loggingMetric = new gcp.logging.Metric("logging_metric", {
-    filter: "resource.type=gae_app AND severity>=ERROR",
-    metricDescriptor: {
-        metricKind: "DELTA",
-        valueType: "INT64",
-    },
-});
-```
-
-{{% /example %}}
-
-### Logging Metric Counter Labels
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
-        {
-            Filter = "resource.type=gae_app AND severity>=ERROR",
-            LabelExtractors = 
-            {
-                { "mass", "EXTRACT(jsonPayload.request)" },
-            },
-            MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
-            {
-                Labels = 
-                {
-                    new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
-                    {
-                        Description = "amount of matter",
-                        Key = "mass",
-                        ValueType = "STRING",
-                    },
-                },
-                MetricKind = "DELTA",
-                ValueType = "INT64",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = logging.NewMetric(ctx, "loggingMetric", &logging.MetricArgs{
-			Filter: pulumi.String("resource.type=gae_app AND severity>=ERROR"),
-			LabelExtractors: pulumi.Map{
-				"mass": pulumi.String("EXTRACT(jsonPayload.request)"),
-			},
-			MetricDescriptor: &logging.MetricMetricDescriptorArgs{
-				Labels: logging.MetricMetricDescriptorLabelArray{
-					&logging.MetricMetricDescriptorLabelArgs{
-						Description: pulumi.String("amount of matter"),
-						Key:         pulumi.String("mass"),
-						ValueType:   pulumi.String("STRING"),
-					},
-				},
-				MetricKind: pulumi.String("DELTA"),
-				ValueType:  pulumi.String("INT64"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-logging_metric = gcp.logging.Metric("loggingMetric",
-    filter="resource.type=gae_app AND severity>=ERROR",
-    label_extractors={
-        "mass": "EXTRACT(jsonPayload.request)",
-    },
-    metric_descriptor={
-        "labels": [{
-            "description": "amount of matter",
-            "key": "mass",
-            "valueType": "STRING",
-        }],
-        "metricKind": "DELTA",
-        "valueType": "INT64",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const loggingMetric = new gcp.logging.Metric("logging_metric", {
-    filter: "resource.type=gae_app AND severity>=ERROR",
-    labelExtractors: {
-        mass: "EXTRACT(jsonPayload.request)",
-    },
-    metricDescriptor: {
-        labels: [{
-            description: "amount of matter",
-            key: "mass",
-            valueType: "STRING",
-        }],
-        metricKind: "DELTA",
-        valueType: "INT64",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Metric Resource {#create}
@@ -443,7 +31,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#Metric">Metric</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket_options=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>label_extractors=None<span class="p">, </span>metric_descriptor=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>value_extractor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/logging/#pulumi_gcp.logging.Metric">Metric</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_options</span><span class="p">:</span> <span class="nx">Optional[MetricBucketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_extractors</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metric_descriptor</span><span class="p">:</span> <span class="nx">Optional[MetricMetricDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_extractor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +223,8 @@ is used to match log entries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -647,7 +236,8 @@ is used to match log entries.
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -747,7 +337,8 @@ is used to match log entries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -759,7 +350,8 @@ is used to match log entries.
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -859,7 +451,8 @@ is used to match log entries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,7 +464,8 @@ is used to match log entries.
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -969,9 +563,10 @@ is used to match log entries.
 <a href="#metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -980,10 +575,11 @@ is used to match log entries.
 <a href="#bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Dict[Metric<wbr>Bucket<wbr>Options]</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +600,7 @@ description is 8000 characters.
 <a href="#label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
@@ -1154,7 +750,8 @@ Get an existing Metric resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket_options=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>label_extractors=None<span class="p">, </span>metric_descriptor=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>value_extractor=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_options</span><span class="p">:</span> <span class="nx">Optional[MetricBucketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_extractors</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metric_descriptor</span><span class="p">:</span> <span class="nx">Optional[MetricMetricDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_extractor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Metric</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1162,7 +759,7 @@ Get an existing Metric resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Metric.html">Metric</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.MetricState.html">MetricState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Metric.html">Metric</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.MetricState.html">MetricState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1277,7 +874,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,7 +924,8 @@ the same as for the valueExtractor field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1389,7 +988,8 @@ error to specify a regex that does not include exactly one capture group.
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1438,7 +1038,8 @@ the same as for the valueExtractor field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1501,7 +1102,8 @@ error to specify a regex that does not include exactly one capture group.
         <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1550,7 +1152,8 @@ the same as for the valueExtractor field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1610,10 +1213,11 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#state_bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Dict[Metric<wbr>Bucket<wbr>Options]</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.
+describes the bucket boundaries used to create a histogram of the extracted values.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1646,7 +1250,7 @@ is used to match log entries.
 <a href="#state_label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
@@ -1660,9 +1264,10 @@ the same as for the valueExtractor field.
 <a href="#state_metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.  Structure is documented below.
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1750,7 +1355,8 @@ error to specify a regex that does not include exactly one capture group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.  Structure is documented below.
+    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1762,7 +1368,8 @@ error to specify a regex that does not include exactly one capture group.
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
-the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1774,7 +1381,8 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
-Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1792,7 +1400,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.  Structure is documented below.
+    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1804,7 +1413,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
-the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1816,7 +1426,8 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
-Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1834,7 +1445,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.  Structure is documented below.
+    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1846,7 +1458,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
         <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
-the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1858,7 +1471,8 @@ the lower bound. Each bucket represents a constant relative uncertainty on a spe
         <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
-Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1870,37 +1484,40 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="explicitbuckets_python">
-<a href="#explicitbuckets_python" style="color: inherit; text-decoration: inherit;">explicit<wbr>Buckets</a>
+        <span id="explicit_buckets_python">
+<a href="#explicit_buckets_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Dict[Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets]</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.  Structure is documented below.
+    <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exponentialbuckets_python">
-<a href="#exponentialbuckets_python" style="color: inherit; text-decoration: inherit;">exponential<wbr>Buckets</a>
+        <span id="exponential_buckets_python">
+<a href="#exponential_buckets_python" style="color: inherit; text-decoration: inherit;">exponential_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Dict[Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets]</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
-the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linearbuckets_python">
-<a href="#linearbuckets_python" style="color: inherit; text-decoration: inherit;">linear<wbr>Buckets</a>
+        <span id="linear_buckets_python">
+<a href="#linear_buckets_python" style="color: inherit; text-decoration: inherit;">linear_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Dict[Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets]</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
-Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1988,7 +1605,7 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
 {{% /md %}}</dd>
@@ -2140,8 +1757,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="growthfactor_python">
-<a href="#growthfactor_python" style="color: inherit; text-decoration: inherit;">growth<wbr>Factor</a>
+        <span id="growth_factor_python">
+<a href="#growth_factor_python" style="color: inherit; text-decoration: inherit;">growth_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2151,8 +1768,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numfinitebuckets_python">
-<a href="#numfinitebuckets_python" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
+        <span id="num_finite_buckets_python">
+<a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2318,8 +1935,8 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numfinitebuckets_python">
-<a href="#numfinitebuckets_python" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
+        <span id="num_finite_buckets_python">
+<a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2385,6 +2002,7 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
+Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2396,6 +2014,8 @@ For counter metrics, set this to DELTA.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2422,7 +2042,8 @@ recommended to be set for any metrics associated with user-visible concepts, suc
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
 for the HTTP response code, response_code, so you can look at latencies for successful responses
-or just for responses that failed.  Structure is documented below.
+or just for responses that failed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2456,6 +2077,7 @@ or just for responses that failed.  Structure is documented below.
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
+Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2467,6 +2089,8 @@ For counter metrics, set this to DELTA.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2493,7 +2117,8 @@ recommended to be set for any metrics associated with user-visible concepts, suc
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
 for the HTTP response code, response_code, so you can look at latencies for successful responses
-or just for responses that failed.  Structure is documented below.
+or just for responses that failed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2527,6 +2152,7 @@ or just for responses that failed.  Structure is documented below.
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
+Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2538,6 +2164,8 @@ For counter metrics, set this to DELTA.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2564,7 +2192,8 @@ recommended to be set for any metrics associated with user-visible concepts, suc
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
 for the HTTP response code, response_code, so you can look at latencies for successful responses
-or just for responses that failed.  Structure is documented below.
+or just for responses that failed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2589,8 +2218,8 @@ or just for responses that failed.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="metrickind_python">
-<a href="#metrickind_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
+        <span id="metric_kind_python">
+<a href="#metric_kind_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>kind</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2598,17 +2227,20 @@ or just for responses that failed.  Structure is documented below.
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
+Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="valuetype_python">
-<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2630,12 +2262,13 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">List[Metric<wbr>Metric<wbr>Descriptor<wbr>Label]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">List[Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
 for the HTTP response code, response_code, so you can look at latencies for successful responses
-or just for responses that failed.  Structure is documented below.
+or just for responses that failed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2708,6 +2341,8 @@ description is 8000 characters.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2749,6 +2384,8 @@ description is 8000 characters.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2790,6 +2427,8 @@ description is 8000 characters.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2824,13 +2463,15 @@ description is 8000 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuetype_python">
-<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
+Default value is `STRING`.
+Possible values are `BOOL`, `INT64`, and `STRING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2851,6 +2492,6 @@ description is 8000 characters.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

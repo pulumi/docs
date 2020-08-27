@@ -12,160 +12,6 @@ meta_desc: "Explore the GetTensorflowVersions function of the tpu module, includ
 
 Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := tpu.GetTensorflowVersions(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-available = gcp.tpu.get_tensorflow_versions()
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const available = pulumi.output(gcp.tpu.getTensorflowVersions({ async: true }));
-```
-
-{{% /example %}}
-
-### Configure Basic TPU Node With Available Version
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
-        var tpu = new Gcp.Tpu.Node("tpu", new Gcp.Tpu.NodeArgs
-        {
-            Zone = "us-central1-b",
-            AcceleratorType = "v3-8",
-            TensorflowVersion = available.Apply(available => available.Versions[0]),
-            CidrBlock = "10.2.0.0/29",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		available, err := tpu.GetTensorflowVersions(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		_, err = tpu.NewNode(ctx, "tpu", &tpu.NodeArgs{
-			Zone:              pulumi.String("us-central1-b"),
-			AcceleratorType:   pulumi.String("v3-8"),
-			TensorflowVersion: pulumi.String(available.Versions[0]),
-			CidrBlock:         pulumi.String("10.2.0.0/29"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-available = gcp.tpu.get_tensorflow_versions()
-tpu = gcp.tpu.Node("tpu",
-    zone="us-central1-b",
-    accelerator_type="v3-8",
-    tensorflow_version=available.versions[0],
-    cidr_block="10.2.0.0/29")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const available = gcp.tpu.getTensorflowVersions({});
-const tpu = new gcp.tpu.Node("tpu", {
-    zone: "us-central1-b",
-    acceleratorType: "v3-8",
-    tensorflowVersion: available.then(available => available.versions[0]),
-    cidrBlock: "10.2.0.0/29",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetTensorflowVersions {#using}
@@ -179,7 +25,7 @@ const tpu = new gcp.tpu.Node("tpu", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_tensorflow_versions(</span>project=None<span class="p">, </span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tensorflow_versions(</span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTensorflowVersionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -548,6 +394,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

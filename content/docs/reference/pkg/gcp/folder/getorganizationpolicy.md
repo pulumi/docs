@@ -14,89 +14,6 @@ Allows management of Organization policies for a Google Folder. For more informa
 [the official
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policy = Output.Create(Gcp.Folder.GetOrganizationPolicy.InvokeAsync(new Gcp.Folder.GetOrganizationPolicyArgs
-        {
-            Folder = "folders/folderid",
-            Constraint = "constraints/compute.trustedImageProjects",
-        }));
-        this.Version = policy.Apply(policy => policy.Version);
-    }
-
-    [Output("version")]
-    public Output<string> Version { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		policy, err := folder.LookupOrganizationPolicy(ctx, &folder.LookupOrganizationPolicyArgs{
-			Folder:     "folders/folderid",
-			Constraint: "constraints/compute.trustedImageProjects",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("version", policy.Version)
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-policy = gcp.folder.get_organization_policy(folder="folders/folderid",
-    constraint="constraints/compute.trustedImageProjects")
-pulumi.export("version", policy.version)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const policy = gcp.folder.getOrganizationPolicy({
-    folder: "folders/folderid",
-    constraint: "constraints/compute.trustedImageProjects",
-});
-export const version = policy.then(policy => policy.version);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetOrganizationPolicy {#using}
@@ -110,7 +27,7 @@ export const version = policy.then(policy => policy.version);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_organization_policy(</span>constraint=None<span class="p">, </span>folder=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organization_policy(</span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -915,7 +832,7 @@ The following output properties are available:
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -925,14 +842,14 @@ The following output properties are available:
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="inheritfromparent_python">
-<a href="#inheritfromparent_python" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
+        <span id="inherit_from_parent_python">
+<a href="#inherit_from_parent_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>from_<wbr>parent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -941,8 +858,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="suggestedvalue_python">
-<a href="#suggestedvalue_python" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
+        <span id="suggested_value_python">
+<a href="#suggested_value_python" style="color: inherit; text-decoration: inherit;">suggested_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1305,6 +1222,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

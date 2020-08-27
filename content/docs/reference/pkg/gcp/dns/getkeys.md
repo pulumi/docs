@@ -27,7 +27,7 @@ and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_keys(</span>managed_zone=None<span class="p">, </span>project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_keys(</span><span class="nx">managed_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -487,8 +487,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">List&lt;Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -606,8 +604,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">[]Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -725,8 +721,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest[]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -841,17 +835,15 @@ The following output properties are available:
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskeysigningkeydigest">List[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest]</a></span>
+        <span class="property-type"><a href="#getkeyskeysigningkeydigest">List[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dsrecord_python">
-<a href="#dsrecord_python" style="color: inherit; text-decoration: inherit;">ds<wbr>Record</a>
+        <span id="ds_record_python">
+<a href="#ds_record_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -872,8 +864,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isactive_python">
-<a href="#isactive_python" style="color: inherit; text-decoration: inherit;">is<wbr>Active</a>
+        <span id="is_active_python">
+<a href="#is_active_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -883,8 +875,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keylength_python">
-<a href="#keylength_python" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
+        <span id="key_length_python">
+<a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -894,8 +886,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keytag_python">
-<a href="#keytag_python" style="color: inherit; text-decoration: inherit;">key<wbr>Tag</a>
+        <span id="key_tag_python">
+<a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -947,7 +939,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -957,7 +950,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -974,7 +968,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +979,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1001,7 +997,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1011,7 +1008,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1028,7 +1026,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1038,7 +1037,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1107,8 +1107,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">List&lt;Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1215,8 +1213,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">[]Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1323,8 +1319,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest[]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1428,11 +1422,9 @@ The following output properties are available:
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyszonesigningkeydigest">List[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest]</a></span>
+        <span class="property-type"><a href="#getkeyszonesigningkeydigest">List[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
-- `digest` - The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
-- `type` - Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1448,8 +1440,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isactive_python">
-<a href="#isactive_python" style="color: inherit; text-decoration: inherit;">is<wbr>Active</a>
+        <span id="is_active_python">
+<a href="#is_active_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1459,8 +1451,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keylength_python">
-<a href="#keylength_python" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
+        <span id="key_length_python">
+<a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1470,8 +1462,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keytag_python">
-<a href="#keytag_python" style="color: inherit; text-decoration: inherit;">key<wbr>Tag</a>
+        <span id="key_tag_python">
+<a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1523,7 +1515,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1533,7 +1526,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1550,7 +1544,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1560,7 +1555,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1577,7 +1573,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1587,7 +1584,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1604,7 +1602,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1614,7 +1613,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1634,6 +1634,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

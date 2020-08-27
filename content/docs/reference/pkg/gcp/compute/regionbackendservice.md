@@ -30,7 +30,7 @@ To get more information about RegionBackendService, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionBackendService">RegionBackendService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>description=None<span class="p">, </span>failover_policy=None<span class="p">, </span>health_checks=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -238,7 +238,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">List&lt;Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -251,7 +252,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -303,7 +305,8 @@ Provide this property when you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -317,6 +320,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -349,6 +354,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,7 +366,8 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,7 +403,8 @@ This field can only be specified when the load balancing scheme is set to INTERN
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,6 +447,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,6 +472,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,7 +530,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -533,7 +544,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,7 +597,8 @@ Provide this property when you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,6 +612,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -631,6 +646,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -642,7 +658,8 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -678,7 +695,8 @@ This field can only be specified when the load balancing scheme is set to INTERN
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -721,6 +739,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -745,6 +764,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +822,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">Region<wbr>Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -815,7 +836,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -867,7 +889,8 @@ Provide this property when you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -881,6 +904,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,6 +938,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +950,8 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,7 +987,8 @@ This field can only be specified when the load balancing scheme is set to INTERN
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1003,6 +1031,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,6 +1056,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1082,9 +1112,10 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicebackend">List[Region<wbr>Backend<wbr>Service<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#regionbackendservicebackend">List[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1093,11 +1124,12 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Dict[Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers]</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1118,7 +1150,7 @@ connections, but still work to finish started).
 <a href="#consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Dict[Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -1147,9 +1179,10 @@ Provide this property when you create the resource.
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Dict[Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1163,6 +1196,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1195,6 +1230,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1203,10 +1239,11 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicelogconfig">Dict[Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,11 +1275,12 @@ This field can only be specified when the load balancing scheme is set to INTERN
 <a href="#outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Dict[Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,6 +1323,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1309,6 +1348,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1553,7 +1593,8 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>failover_policy=None<span class="p">, </span>fingerprint=None<span class="p">, </span>health_checks=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> RegionBackendService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1561,7 +1602,7 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendServiceState.html">RegionBackendServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendServiceState.html">RegionBackendServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1690,7 +1731,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">List&lt;Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1703,7 +1745,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1766,7 +1809,8 @@ Provide this property when you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1804,6 +1848,8 @@ check can be specified, and a health check is required.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1836,6 +1882,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1847,7 +1894,8 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1883,7 +1931,8 @@ This field can only be specified when the load balancing scheme is set to INTERN
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1926,6 +1975,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1961,6 +2011,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2005,7 +2056,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2018,7 +2070,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2081,7 +2134,8 @@ Provide this property when you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2119,6 +2173,8 @@ check can be specified, and a health check is required.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2151,6 +2207,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2162,7 +2219,8 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2198,7 +2256,8 @@ This field can only be specified when the load balancing scheme is set to INTERN
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2241,6 +2300,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2276,6 +2336,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2320,7 +2381,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">Region<wbr>Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2333,7 +2395,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2396,7 +2459,8 @@ Provide this property when you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2434,6 +2498,8 @@ check can be specified, and a health check is required.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2466,6 +2532,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2477,7 +2544,8 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2513,7 +2581,8 @@ This field can only be specified when the load balancing scheme is set to INTERN
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2556,6 +2625,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2591,6 +2661,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2633,9 +2704,10 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicebackend">List[Region<wbr>Backend<wbr>Service<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#regionbackendservicebackend">List[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this RegionBackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this RegionBackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2644,11 +2716,12 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Dict[Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers]</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
-and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2669,7 +2742,7 @@ connections, but still work to finish started).
 <a href="#state_consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Dict[Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -2709,9 +2782,10 @@ Provide this property when you create the resource.
 <a href="#state_failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Dict[Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for failovers.  Structure is documented below.
+    <dd>{{% md %}}Policy for failovers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2749,6 +2823,8 @@ check can be specified, and a health check is required.
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
 balancing cannot be used with the other(s).
+Default value is `INTERNAL`.
+Possible values are `INTERNAL` and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2781,6 +2857,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2789,10 +2866,11 @@ INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicelogconfig">Dict[Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2824,11 +2902,12 @@ This field can only be specified when the load balancing scheme is set to INTERN
 <a href="#state_outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Dict[Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
-to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.  Structure is documented below.
+to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2871,6 +2950,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, and `UDP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2906,6 +2986,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2988,6 +3069,8 @@ partial URL.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
+Default value is `CONNECTION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3179,6 +3262,8 @@ partial URL.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
+Default value is `CONNECTION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3370,6 +3455,8 @@ partial URL.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
+Default value is `CONNECTION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3554,19 +3641,21 @@ partial URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="balancingmode_python">
-<a href="#balancingmode_python" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
+        <span id="balancing_mode_python">
+<a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
+Default value is `CONNECTION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="capacityscaler_python">
-<a href="#capacityscaler_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
+        <span id="capacity_scaler_python">
+<a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3607,8 +3696,8 @@ than one failover backend can be configured for a given RegionBackendService.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnections_python">
-<a href="#maxconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3619,8 +3708,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionsperendpoint_python">
-<a href="#maxconnectionsperendpoint_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
+        <span id="max_connections_per_endpoint_python">
+<a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3636,8 +3725,8 @@ maxConnectionsPerEndpoint must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionsperinstance_python">
-<a href="#maxconnectionsperinstance_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
+        <span id="max_connections_per_instance_python">
+<a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3653,8 +3742,8 @@ maxConnectionsPerInstance must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrate_python">
-<a href="#maxrate_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
+        <span id="max_rate_python">
+<a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3669,8 +3758,8 @@ group type, must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrateperendpoint_python">
-<a href="#maxrateperendpoint_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
+        <span id="max_rate_per_endpoint_python">
+<a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3684,8 +3773,8 @@ for INTERNAL backend services.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrateperinstance_python">
-<a href="#maxrateperinstance_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
+        <span id="max_rate_per_instance_python">
+<a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3699,8 +3788,8 @@ for INTERNAL backend services.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxutilization_python">
-<a href="#maxutilization_python" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
+        <span id="max_utilization_python">
+<a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3977,19 +4066,19 @@ Defaults to 3.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecttimeout_python">
-<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Dict[Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnections_python">
-<a href="#maxconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4000,8 +4089,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpendingrequests_python">
-<a href="#maxpendingrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
+        <span id="max_pending_requests_python">
+<a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4012,8 +4101,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrequests_python">
-<a href="#maxrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
+        <span id="max_requests_python">
+<a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4024,8 +4113,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrequestsperconnection_python">
-<a href="#maxrequestsperconnection_python" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
+        <span id="max_requests_per_connection_python">
+<a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4038,8 +4127,8 @@ will effectively disable keep alive.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxretries_python">
-<a href="#maxretries_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4230,7 +4319,8 @@ less than one second are represented with a 0 `seconds` field and a positive
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4279,7 +4369,8 @@ Defaults to 1024.
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4328,7 +4419,8 @@ Defaults to 1024.
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4368,22 +4460,23 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpcookie_python">
-<a href="#httpcookie_python" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
+        <span id="http_cookie_python">
+<a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Dict[Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheadername_python">
-<a href="#httpheadername_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
+        <span id="http_header_name_python">
+<a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4394,8 +4487,8 @@ This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumringsize_python">
-<a href="#minimumringsize_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
+        <span id="minimum_ring_size_python">
+<a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4463,7 +4556,8 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4503,7 +4597,8 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4543,7 +4638,8 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4581,9 +4677,10 @@ Defaults to 1024.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Dict[Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4930,8 +5027,8 @@ This field is only used with l4 load balancing.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disableconnectiondrainonfailover_python">
-<a href="#disableconnectiondrainonfailover_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Connection<wbr>Drain<wbr>On<wbr>Failover</a>
+        <span id="disable_connection_drain_on_failover_python">
+<a href="#disable_connection_drain_on_failover_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>connection_<wbr>drain_<wbr>on_<wbr>failover</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4948,8 +5045,8 @@ The default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="droptrafficifunhealthy_python">
-<a href="#droptrafficifunhealthy_python" style="color: inherit; text-decoration: inherit;">drop<wbr>Traffic<wbr>If<wbr>Unhealthy</a>
+        <span id="drop_traffic_if_unhealthy_python">
+<a href="#drop_traffic_if_unhealthy_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>traffic_<wbr>if_<wbr>unhealthy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5112,8 +5209,8 @@ The default value is 1.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplerate_python">
-<a href="#samplerate_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
+        <span id="sample_rate_python">
+<a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5159,7 +5256,8 @@ The default value is 1.0.
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5236,7 +5334,8 @@ disable ejection or to ramp it up slowly. Defaults to 100.
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5313,7 +5412,8 @@ runtime value should be 1900. Defaults to 1900.
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5390,7 +5490,8 @@ disable ejection or to ramp it up slowly. Defaults to 100.
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5467,7 +5568,8 @@ runtime value should be 1900. Defaults to 1900.
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5544,7 +5646,8 @@ disable ejection or to ramp it up slowly. Defaults to 100.
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5613,21 +5716,22 @@ runtime value should be 1900. Defaults to 1900.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseejectiontime_python">
-<a href="#baseejectiontime_python" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
+        <span id="base_ejection_time_python">
+<a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Dict[Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consecutiveerrors_python">
-<a href="#consecutiveerrors_python" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
+        <span id="consecutive_errors_python">
+<a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5639,8 +5743,8 @@ Defaults to 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consecutivegatewayfailure_python">
-<a href="#consecutivegatewayfailure_python" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
+        <span id="consecutive_gateway_failure_python">
+<a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5652,8 +5756,8 @@ gateway failure ejection occurs. Defaults to 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcingconsecutiveerrors_python">
-<a href="#enforcingconsecutiveerrors_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
+        <span id="enforcing_consecutive_errors_python">
+<a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5665,8 +5769,8 @@ ejection or to ramp it up slowly. Defaults to 100.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcingconsecutivegatewayfailure_python">
-<a href="#enforcingconsecutivegatewayfailure_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
+        <span id="enforcing_consecutive_gateway_failure_python">
+<a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5678,8 +5782,8 @@ used to disable ejection or to ramp it up slowly. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcingsuccessrate_python">
-<a href="#enforcingsuccessrate_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
+        <span id="enforcing_success_rate_python">
+<a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5695,16 +5799,17 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Dict[Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval]</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxejectionpercent_python">
-<a href="#maxejectionpercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
+        <span id="max_ejection_percent_python">
+<a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5715,8 +5820,8 @@ that can be ejected. Defaults to 10%.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successrateminimumhosts_python">
-<a href="#successrateminimumhosts_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
+        <span id="success_rate_minimum_hosts_python">
+<a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5729,8 +5834,8 @@ cluster. Defaults to 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successraterequestvolume_python">
-<a href="#successraterequestvolume_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
+        <span id="success_rate_request_volume_python">
+<a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5744,8 +5849,8 @@ to 100.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successratestdevfactor_python">
-<a href="#successratestdevfactor_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
+        <span id="success_rate_stdev_factor_python">
+<a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6068,6 +6173,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -32,144 +32,6 @@ To get more information about Snapshot, see:
 > **Warning:** All arguments including `snapshot_encryption_key.raw_key` and `source_disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Snapshot Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var debian = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
-        {
-            Family = "debian-9",
-            Project = "debian-cloud",
-        }));
-        var persistent = new Gcp.Compute.Disk("persistent", new Gcp.Compute.DiskArgs
-        {
-            Image = debian.Apply(debian => debian.SelfLink),
-            Size = 10,
-            Type = "pd-ssd",
-            Zone = "us-central1-a",
-        });
-        var snapshot = new Gcp.Compute.Snapshot("snapshot", new Gcp.Compute.SnapshotArgs
-        {
-            SourceDisk = persistent.Name,
-            Zone = "us-central1-a",
-            Labels = 
-            {
-                { "my_label", "value" },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "debian-9"
-		opt1 := "debian-cloud"
-		debian, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
-			Family:  &opt0,
-			Project: &opt1,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		persistent, err := compute.NewDisk(ctx, "persistent", &compute.DiskArgs{
-			Image: pulumi.String(debian.SelfLink),
-			Size:  pulumi.Int(10),
-			Type:  pulumi.String("pd-ssd"),
-			Zone:  pulumi.String("us-central1-a"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
-			SourceDisk: persistent.Name,
-			Zone:       pulumi.String("us-central1-a"),
-			Labels: pulumi.Map{
-				"my_label": pulumi.String("value"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-debian = gcp.compute.get_image(family="debian-9",
-    project="debian-cloud")
-persistent = gcp.compute.Disk("persistent",
-    image=debian.self_link,
-    size=10,
-    type="pd-ssd",
-    zone="us-central1-a")
-snapshot = gcp.compute.Snapshot("snapshot",
-    source_disk=persistent.name,
-    zone="us-central1-a",
-    labels={
-        "my_label": "value",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const debian = gcp.compute.getImage({
-    family: "debian-9",
-    project: "debian-cloud",
-});
-const persistent = new gcp.compute.Disk("persistent", {
-    image: debian.then(debian => debian.selfLink),
-    size: 10,
-    type: "pd-ssd",
-    zone: "us-central1-a",
-});
-const snapshot = new gcp.compute.Snapshot("snapshot", {
-    sourceDisk: persistent.name,
-    zone: "us-central1-a",
-    labels: {
-        my_label: "value",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}
@@ -181,7 +43,7 @@ const snapshot = new gcp.compute.Snapshot("snapshot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Snapshot">Snapshot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>snapshot_encryption_key=None<span class="p">, </span>source_disk=None<span class="p">, </span>source_disk_encryption_key=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSourceDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -424,7 +286,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,7 +300,8 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,7 +393,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,7 +407,8 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -634,7 +500,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -647,7 +514,8 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -696,7 +564,7 @@ key.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Snapshot.
 {{% /md %}}</dd>
@@ -736,10 +604,11 @@ If it is not provided, the provider project is used.
 <a href="#snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Dict[Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -748,11 +617,12 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 <a href="#source_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Dict[Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1224,7 +1094,8 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>licenses=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>snapshot_encryption_key=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_disk=None<span class="p">, </span>source_disk_encryption_key=None<span class="p">, </span>source_disk_link=None<span class="p">, </span>storage_bytes=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSourceDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_disk_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Snapshot</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1232,7 +1103,7 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Snapshot.html">Snapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SnapshotState.html">SnapshotState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Snapshot.html">Snapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SnapshotState.html">SnapshotState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1455,7 +1326,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1490,7 +1362,8 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1650,7 +1523,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,7 +1559,8 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1845,7 +1720,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1880,7 +1756,8 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1973,7 +1850,7 @@ creation/deletion.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Snapshot.
 {{% /md %}}</dd>
@@ -2037,10 +1914,11 @@ If it is not provided, the provider project is used.
 <a href="#state_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Dict[Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
+source snapshot is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2071,11 +1949,12 @@ source snapshot is protected by a customer-supplied encryption key.  Structure i
 <a href="#state_source_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Dict[Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2153,7 +2032,8 @@ creation/deletion.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2185,7 +2065,8 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2217,7 +2098,8 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2242,14 +2124,15 @@ encryption key that protects this resource.
 
     <dt class="property-required"
             title="Required">
-        <span id="rawkey_python">
-<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+        <span id="raw_key_python">
+<a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2299,7 +2182,8 @@ encryption key that protects this resource.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -2318,7 +2202,8 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -2337,7 +2222,8 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -2349,14 +2235,15 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rawkey_python">
-<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+        <span id="raw_key_python">
+<a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
-RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This property is sensitive and will not be displayed in the plan.
+RFC 4648 base64 to either encrypt or decrypt this resource.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -2377,6 +2264,6 @@ RFC 4648 base64 to either encrypt or decrypt this resource.  **Note**: This prop
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -24,101 +24,6 @@ To get more information about BackendBucket, see:
 * How-to Guides
     * [Using a Cloud Storage bucket as a load balancer backend](https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Backend Bucket Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var imageBucket = new Gcp.Storage.Bucket("imageBucket", new Gcp.Storage.BucketArgs
-        {
-            Location = "EU",
-        });
-        var imageBackend = new Gcp.Compute.BackendBucket("imageBackend", new Gcp.Compute.BackendBucketArgs
-        {
-            Description = "Contains beautiful images",
-            BucketName = imageBucket.Name,
-            EnableCdn = true,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		imageBucket, err := storage.NewBucket(ctx, "imageBucket", &storage.BucketArgs{
-			Location: pulumi.String("EU"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewBackendBucket(ctx, "imageBackend", &compute.BackendBucketArgs{
-			Description: pulumi.String("Contains beautiful images"),
-			BucketName:  imageBucket.Name,
-			EnableCdn:   pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-image_bucket = gcp.storage.Bucket("imageBucket", location="EU")
-image_backend = gcp.compute.BackendBucket("imageBackend",
-    description="Contains beautiful images",
-    bucket_name=image_bucket.name,
-    enable_cdn=True)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const imageBucket = new gcp.storage.Bucket("imageBucket", {location: "EU"});
-const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
-    description: "Contains beautiful images",
-    bucketName: imageBucket.name,
-    enableCdn: true,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BackendBucket Resource {#create}
@@ -130,7 +35,7 @@ const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#BackendBucket">BackendBucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket_name=None<span class="p">, </span>cdn_policy=None<span class="p">, </span>description=None<span class="p">, </span>enable_cdn=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.BackendBucket">BackendBucket</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendBucketCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -321,7 +226,8 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,7 +308,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,7 +390,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -562,9 +470,10 @@ If it is not provided, the provider project is used.
 <a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicy">Dict[Backend<wbr>Bucket<wbr>Cdn<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,7 +714,8 @@ Get an existing BackendBucket resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket_name=None<span class="p">, </span>cdn_policy=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>enable_cdn=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendBucketCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BackendBucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -813,7 +723,7 @@ Get an existing BackendBucket resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendBucket.html">BackendBucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendBucketState.html">BackendBucketState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendBucket.html">BackendBucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendBucketState.html">BackendBucketState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -938,7 +848,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1041,7 +952,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1144,7 +1056,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,9 +1158,10 @@ If it is not provided, the provider project is used.
 <a href="#state_cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicy">Dict[Backend<wbr>Bucket<wbr>Cdn<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1434,8 +1348,8 @@ header. The actual headers served in responses will not be altered.
 
     <dt class="property-required"
             title="Required">
-        <span id="signedurlcachemaxagesec_python">
-<a href="#signedurlcachemaxagesec_python" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
+        <span id="signed_url_cache_max_age_sec_python">
+<a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1468,6 +1382,6 @@ header. The actual headers served in responses will not be altered.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

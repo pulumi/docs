@@ -32,7 +32,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_sql=None<span class="p">, </span>connection_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_sql</span><span class="p">:</span> <span class="nx">Optional[ConnectionCloudSqlArgs]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -212,7 +212,8 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -289,7 +290,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,7 +368,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,9 +444,10 @@ If it is not provided, the provider project is used.
 <a href="#cloud_sql_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsql">Dict[Connection<wbr>Cloud<wbr>Sql]</a></span>
+        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +699,8 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloud_sql=None<span class="p">, </span>connection_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>has_credential=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_sql</span><span class="p">:</span> <span class="nx">Optional[ConnectionCloudSqlArgs]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_credential</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -703,7 +708,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -817,7 +822,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,7 +923,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1017,7 +1024,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,9 +1123,10 @@ If it is not provided, the provider project is used.
 <a href="#state_cloud_sql_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsql">Dict[Connection<wbr>Cloud<wbr>Sql]</a></span>
+        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1243,7 +1252,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1277,6 +1287,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1294,7 +1305,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1328,6 +1340,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1345,7 +1358,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1379,6 +1393,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1394,9 +1409,10 @@ If it is not provided, the provider project is used.
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsqlcredential">Dict[Connection<wbr>Cloud<wbr>Sql<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1430,6 +1446,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1465,7 +1482,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1494,7 +1512,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1523,7 +1542,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1552,7 +1572,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1584,6 +1605,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

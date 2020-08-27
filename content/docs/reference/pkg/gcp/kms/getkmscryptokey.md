@@ -18,101 +18,6 @@ and
 A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myKeyRing = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
-        {
-            Name = "my-key-ring",
-            Location = "us-central1",
-        }));
-        var myCryptoKey = myKeyRing.Apply(myKeyRing => Output.Create(Gcp.Kms.GetKMSCryptoKey.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyArgs
-        {
-            Name = "my-crypto-key",
-            KeyRing = myKeyRing.SelfLink,
-        })));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myKeyRing, err := kms.GetKMSKeyRing(ctx, &kms.GetKMSKeyRingArgs{
-			Name:     "my-key-ring",
-			Location: "us-central1",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err := kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
-			Name:    "my-crypto-key",
-			KeyRing: myKeyRing.SelfLink,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
-    location="us-central1")
-my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
-    key_ring=my_key_ring.self_link)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myKeyRing = gcp.kms.getKMSKeyRing({
-    name: "my-key-ring",
-    location: "us-central1",
-});
-const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
-    name: "my-crypto-key",
-    keyRing: myKeyRing.selfLink,
-}));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetKMSCryptoKey {#using}
@@ -126,7 +31,7 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kms_crypto_key(</span>key_ring=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kms_crypto_key(</span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKMSCryptoKeyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -590,7 +495,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -773,8 +678,8 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
     <dt class="property-required"
             title="Required">
-        <span id="protectionlevel_python">
-<a href="#protectionlevel_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
+        <span id="protection_level_python">
+<a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -799,6 +704,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

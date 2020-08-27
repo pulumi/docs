@@ -33,7 +33,7 @@ To get more information about RegionAutoscaler, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionAutoscaler">RegionAutoscaler</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling_policy=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionAutoscaler">RegionAutoscaler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[RegionAutoscalerAutoscalingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,7 +217,8 @@ The RegionAutoscaler resource accepts the following [input]({{< relref "/docs/in
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -299,7 +300,8 @@ If it is not provided, the provider project is used.
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -381,7 +383,8 @@ If it is not provided, the provider project is used.
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -457,13 +460,14 @@ If it is not provided, the provider project is used.
 <a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -712,7 +716,8 @@ Get an existing RegionAutoscaler resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscaling_policy=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[RegionAutoscalerAutoscalingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RegionAutoscaler</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -720,7 +725,7 @@ Get an existing RegionAutoscaler resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscaler.html">RegionAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscalerState.html">RegionAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscaler.html">RegionAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscalerState.html">RegionAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -838,7 +843,8 @@ The following state arguments are supported:
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -942,7 +948,8 @@ be a positive float value. If not defined, the default is 0.8.
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1046,7 +1053,8 @@ be a positive float value. If not defined, the default is 0.8.
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1144,13 +1152,14 @@ be a positive float value. If not defined, the default is 0.8.
 <a href="#state_autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
 define one or more of the policies for an autoscaler: cpuUtilization,
 customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
-on cpuUtilization to 0.6 or 60%.  Structure is documented below.
+on cpuUtilization to 0.6 or 60%.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1325,7 +1334,8 @@ and time the startup process.
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
-group.  Structure is documented below.
+group.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1336,7 +1346,8 @@ group.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1347,8 +1358,32 @@ group.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
+Structure is documented below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+Default value is `ON`.
+Possible values are `OFF`, `ONLY_UP`, and `ON`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_csharp">
+<a href="#scaledowncontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1414,7 +1449,8 @@ and time the startup process.
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
-group.  Structure is documented below.
+group.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1425,7 +1461,8 @@ group.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1436,8 +1473,32 @@ group.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">[]Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
+Structure is documented below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+Default value is `ON`.
+Possible values are `OFF`, `ONLY_UP`, and `ON`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_go">
+<a href="#scaledowncontrol_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1503,7 +1564,8 @@ and time the startup process.
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
-group.  Structure is documented below.
+group.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1514,7 +1576,8 @@ group.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,8 +1588,32 @@ group.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
+Structure is documented below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+Default value is `ON`.
+Possible values are `OFF`, `ONLY_UP`, and `ON`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowncontrol_nodejs">
+<a href="#scaledowncontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1537,8 +1624,8 @@ group.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxreplicas_python">
-<a href="#maxreplicas_python" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
+        <span id="max_replicas_python">
+<a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1551,8 +1638,8 @@ of replicas.
 
     <dt class="property-required"
             title="Required">
-        <span id="minreplicas_python">
-<a href="#minreplicas_python" style="color: inherit; text-decoration: inherit;">min<wbr>Replicas</a>
+        <span id="min_replicas_python">
+<a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1565,8 +1652,8 @@ allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cooldownperiod_python">
-<a href="#cooldownperiod_python" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
+        <span id="cooldown_period_python">
+<a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1584,26 +1671,28 @@ and time the startup process.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuutilization_python">
-<a href="#cpuutilization_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
+        <span id="cpu_utilization_python">
+<a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
-group.  Structure is documented below.
+group.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancingutilization_python">
-<a href="#loadbalancingutilization_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Utilization</a>
+        <span id="load_balancing_utilization_python">
+<a href="#load_balancing_utilization_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1612,10 +1701,34 @@ group.  Structure is documented below.
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
+Structure is documented below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines operating mode for this policy.
+Default value is `ON`.
+Possible values are `OFF`, `ONLY_UP`, and `ON`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scale_down_control_python">
+<a href="#scale_down_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1935,6 +2048,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
+Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2041,6 +2155,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
+Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2147,6 +2262,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
+Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2208,8 +2324,8 @@ will sum their respective values to obtain its scaling value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="singleinstanceassignment_python">
-<a href="#singleinstanceassignment_python" style="color: inherit; text-decoration: inherit;">single<wbr>Instance<wbr>Assignment</a>
+        <span id="single_instance_assignment_python">
+<a href="#single_instance_assignment_python" style="color: inherit; text-decoration: inherit;">single_<wbr>instance_<wbr>assignment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2253,6 +2369,291 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
+Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyScaleDownControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyScaleDownControl">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyScaleDownControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyScaleDownControl.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_csharp">
+<a href="#maxscaleddownreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_csharp">
+<a href="#timewindowsec_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_go">
+<a href="#maxscaleddownreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_go">
+<a href="#timewindowsec_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaleddownreplicas_nodejs">
+<a href="#maxscaleddownreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_nodejs">
+<a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_scaled_down_replicas_python">
+<a href="#max_scaled_down_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>down_<wbr>replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_window_sec_python">
+<a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_csharp">
+<a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_csharp">
+<a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_go">
+<a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_go">
+<a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_nodejs">
+<a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_nodejs">
+<a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_python">
+<a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_python">
+<a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
 {{% /md %}}</dd>
 
 </dl>
@@ -2273,6 +2674,6 @@ Stackdriver Monitoring metric.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

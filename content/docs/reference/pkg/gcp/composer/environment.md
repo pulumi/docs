@@ -33,333 +33,6 @@ To get more information about Environments, see:
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Basic Usage
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
-        {
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
-			Region: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test = gcp.composer.Environment("test", region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test = new gcp.composer.Environment("test", {
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-### With GKE and Compute Resource Dependencies
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testNetwork = new Gcp.Compute.Network("testNetwork", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var testSubnetwork = new Gcp.Compute.Subnetwork("testSubnetwork", new Gcp.Compute.SubnetworkArgs
-        {
-            IpCidrRange = "10.2.0.0/16",
-            Region = "us-central1",
-            Network = testNetwork.Id,
-        });
-        var testAccount = new Gcp.ServiceAccount.Account("testAccount", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "composer-env-account",
-            DisplayName = "Test Service Account for Composer Environment",
-        });
-        var composer_worker = new Gcp.Projects.IAMMember("composer-worker", new Gcp.Projects.IAMMemberArgs
-        {
-            Role = "roles/composer.worker",
-            Member = testAccount.Email.Apply(email => $"serviceAccount:{email}"),
-        });
-        var testEnvironment = new Gcp.Composer.Environment("testEnvironment", new Gcp.Composer.EnvironmentArgs
-        {
-            Region = "us-central1",
-            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
-            {
-                NodeCount = 4,
-                Node_config = 
-                {
-                    { "zone", "us-central1-a" },
-                    { "machineType", "n1-standard-1" },
-                    { "network", testNetwork.Id },
-                    { "subnetwork", testSubnetwork.Id },
-                    { "serviceAccount", testAccount.Name },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test_network = gcp.compute.Network("testNetwork", auto_create_subnetworks=False)
-test_subnetwork = gcp.compute.Subnetwork("testSubnetwork",
-    ip_cidr_range="10.2.0.0/16",
-    region="us-central1",
-    network=test_network.id)
-test_account = gcp.service_account.Account("testAccount",
-    account_id="composer-env-account",
-    display_name="Test Service Account for Composer Environment")
-composer_worker = gcp.projects.IAMMember("composer-worker",
-    role="roles/composer.worker",
-    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
-test_environment = gcp.composer.Environment("testEnvironment",
-    region="us-central1",
-    config={
-        "node_count": 4,
-        "node_config": {
-            "zone": "us-central1-a",
-            "machine_type": "n1-standard-1",
-            "network": test_network.id,
-            "subnetwork": test_subnetwork.id,
-            "service_account": test_account.name,
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const testNetwork = new gcp.compute.Network("testNetwork", {autoCreateSubnetworks: false});
-const testSubnetwork = new gcp.compute.Subnetwork("testSubnetwork", {
-    ipCidrRange: "10.2.0.0/16",
-    region: "us-central1",
-    network: testNetwork.id,
-});
-const testAccount = new gcp.serviceAccount.Account("testAccount", {
-    accountId: "composer-env-account",
-    displayName: "Test Service Account for Composer Environment",
-});
-const composer_worker = new gcp.projects.IAMMember("composer-worker", {
-    role: "roles/composer.worker",
-    member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
-});
-const testEnvironment = new gcp.composer.Environment("testEnvironment", {
-    region: "us-central1",
-    config: {
-        nodeCount: 4,
-        node_config: {
-            zone: "us-central1-a",
-            machineType: "n1-standard-1",
-            network: testNetwork.id,
-            subnetwork: testSubnetwork.id,
-            serviceAccount: testAccount.name,
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-### With Software (Airflow) Config
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
-        {
-            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
-            {
-                SoftwareConfig = new Gcp.Composer.Inputs.EnvironmentConfigSoftwareConfigArgs
-                {
-                    AirflowConfigOverrides = 
-                    {
-                        { "core-loadExample", "True" },
-                    },
-                    EnvVariables = 
-                    {
-                        { "FOO", "bar" },
-                    },
-                    PypiPackages = 
-                    {
-                        { "numpy", "" },
-                        { "scipy", "==1.1.0" },
-                    },
-                },
-            },
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
-			Config: &composer.EnvironmentConfigArgs{
-				SoftwareConfig: &composer.EnvironmentConfigSoftwareConfigArgs{
-					AirflowConfigOverrides: pulumi.Map{
-						"core-loadExample": pulumi.String("True"),
-					},
-					EnvVariables: pulumi.Map{
-						"FOO": pulumi.String("bar"),
-					},
-					PypiPackages: pulumi.Map{
-						"numpy": pulumi.String(""),
-						"scipy": pulumi.String("==1.1.0"),
-					},
-				},
-			},
-			Region: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test = gcp.composer.Environment("test",
-    config={
-        "softwareConfig": {
-            "airflowConfigOverrides": {
-                "core-loadExample": "True",
-            },
-            "env_variables": {
-                "FOO": "bar",
-            },
-            "pypiPackages": {
-                "numpy": "",
-                "scipy": "==1.1.0",
-            },
-        },
-    },
-    region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test = new gcp.composer.Environment("test", {
-    config: {
-        softwareConfig: {
-            airflowConfigOverrides: {
-                "core-load_example": "True",
-            },
-            envVariables: {
-                FOO: "bar",
-            },
-            pypiPackages: {
-                numpy: "",
-                scipy: "==1.1.0",
-            },
-        },
-    },
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}
@@ -371,7 +44,7 @@ const test = new gcp.composer.Environment("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/composer/#Environment">Environment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/composer/#pulumi_gcp.composer.Environment">Environment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[EnvironmentConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -762,7 +435,7 @@ If it is not provided, the provider project is used.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfig">Dict[Environment<wbr>Config]</a></span>
+        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
 {{% /md %}}</dd>
@@ -773,7 +446,7 @@ If it is not provided, the provider project is used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
 no more than 64 entries. Entries of the labels map are UTF8 strings
@@ -918,7 +591,8 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[EnvironmentConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -926,7 +600,7 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Environment.html">Environment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.EnvironmentState.html">EnvironmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Environment.html">Environment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.EnvironmentState.html">EnvironmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1251,7 +925,7 @@ If it is not provided, the provider project is used.
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfig">Dict[Environment<wbr>Config]</a></span>
+        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
 {{% /md %}}</dd>
@@ -1262,7 +936,7 @@ If it is not provided, the provider project is used.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
 no more than 64 entries. Entries of the labels map are UTF8 strings
@@ -1623,8 +1297,8 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="airflowuri_python">
-<a href="#airflowuri_python" style="color: inherit; text-decoration: inherit;">airflow<wbr>Uri</a>
+        <span id="airflow_uri_python">
+<a href="#airflow_uri_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1633,8 +1307,8 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daggcsprefix_python">
-<a href="#daggcsprefix_python" style="color: inherit; text-decoration: inherit;">dag<wbr>Gcs<wbr>Prefix</a>
+        <span id="dag_gcs_prefix_python">
+<a href="#dag_gcs_prefix_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>gcs_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1643,8 +1317,8 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gkecluster_python">
-<a href="#gkecluster_python" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
+        <span id="gke_cluster_python">
+<a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1657,7 +1331,7 @@ will be used to run this environment.
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfig">Dict[Environment<wbr>Config<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
 {{% /md %}}</dd>
@@ -1676,33 +1350,33 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateenvironmentconfig_python">
-<a href="#privateenvironmentconfig_python" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
+        <span id="private_environment_config_python">
+<a href="#private_environment_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Dict[Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config]</a></span>
+        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="softwareconfig_python">
-<a href="#softwareconfig_python" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+        <span id="software_config_python">
+<a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Dict[Environment<wbr>Config<wbr>Software<wbr>Config]</a></span>
+        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webservernetworkaccesscontrol_python">
-<a href="#webservernetworkaccesscontrol_python" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+        <span id="web_server_network_access_control_python">
+<a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Dict[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control]</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd>
@@ -2151,7 +1825,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Dict[Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
@@ -2187,8 +1861,8 @@ communications, specified as a self-link, relative resource name
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2499,8 +2173,8 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-required"
             title="Required">
-        <span id="useipaliases_python">
-<a href="#useipaliases_python" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
+        <span id="use_ip_aliases_python">
+<a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2511,8 +2185,8 @@ Defaults to true if the `ip_allocation_block` is present in config.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusteripv4cidrblock_python">
-<a href="#clusteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="cluster_ipv4_cidr_block_python">
+<a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2527,8 +2201,8 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustersecondaryrangename_python">
-<a href="#clustersecondaryrangename_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+        <span id="cluster_secondary_range_name_python">
+<a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2540,8 +2214,8 @@ This field is applicable only when `use_ip_aliases` is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesipv4cidrblock_python">
-<a href="#servicesipv4cidrblock_python" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="services_ipv4_cidr_block_python">
+<a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2556,8 +2230,8 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicessecondaryrangename_python">
-<a href="#servicessecondaryrangename_python" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
+        <span id="services_secondary_range_name_python">
+<a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2762,8 +2436,8 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudsqlipv4cidrblock_python">
-<a href="#cloudsqlipv4cidrblock_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="cloud_sql_ipv4_cidr_block_python">
+<a href="#cloud_sql_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2773,8 +2447,8 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableprivateendpoint_python">
-<a href="#enableprivateendpoint_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
+        <span id="enable_private_endpoint_python">
+<a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2785,8 +2459,8 @@ If true, access to the public endpoint of the GKE cluster is denied.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masteripv4cidrblock_python">
-<a href="#masteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="master_ipv4_cidr_block_python">
+<a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2800,8 +2474,8 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webserveripv4cidrblock_python">
-<a href="#webserveripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="web_server_ipv4_cidr_block_python">
+<a href="#web_server_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3163,11 +2837,11 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
     <dt class="property-optional"
             title="Optional">
-        <span id="airflowconfigoverrides_python">
-<a href="#airflowconfigoverrides_python" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
+        <span id="airflow_config_overrides_python">
+<a href="#airflow_config_overrides_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>config_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}-
 (Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
@@ -3180,7 +2854,7 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes.
 Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
@@ -3220,8 +2894,8 @@ func main() {
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageversion_python">
-<a href="#imageversion_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
+        <span id="image_version_python">
+<a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3238,11 +2912,11 @@ for allowed release names.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pypipackages_python">
-<a href="#pypipackages_python" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
+        <span id="pypi_packages_python">
+<a href="#pypi_packages_python" style="color: inherit; text-decoration: inherit;">pypi_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom Python Package Index (PyPI) packages to be installed
 in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
@@ -3252,8 +2926,8 @@ pinning it to a version specifier, use the empty string as the value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pythonversion_python">
-<a href="#pythonversion_python" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+        <span id="python_version_python">
+<a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3347,11 +3021,11 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedipranges_python">
-<a href="#allowedipranges_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
+        <span id="allowed_ip_ranges_python">
+<a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
@@ -3521,6 +3195,6 @@ IP range prefixes should be properly truncated. For example,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

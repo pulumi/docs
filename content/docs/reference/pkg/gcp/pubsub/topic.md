@@ -18,261 +18,6 @@ To get more information about Topic, see:
 * How-to Guides
     * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Pubsub Topic Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Gcp.PubSub.Topic("example", new Gcp.PubSub.TopicArgs
-        {
-            Labels = 
-            {
-                { "foo", "bar" },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
-			Labels: pulumi.Map{
-				"foo": pulumi.String("bar"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.pubsub.Topic("example", labels={
-    "foo": "bar",
-})
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.pubsub.Topic("example", {
-    labels: {
-        foo: "bar",
-    },
-});
-```
-
-{{% /example %}}
-
-### Pubsub Topic Cmek
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var keyRing = new Gcp.Kms.KeyRing("keyRing", new Gcp.Kms.KeyRingArgs
-        {
-            Location = "global",
-        });
-        var cryptoKey = new Gcp.Kms.CryptoKey("cryptoKey", new Gcp.Kms.CryptoKeyArgs
-        {
-            KeyRing = keyRing.Id,
-        });
-        var example = new Gcp.PubSub.Topic("example", new Gcp.PubSub.TopicArgs
-        {
-            KmsKeyName = cryptoKey.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		keyRing, err := kms.NewKeyRing(ctx, "keyRing", &kms.KeyRingArgs{
-			Location: pulumi.String("global"),
-		})
-		if err != nil {
-			return err
-		}
-		cryptoKey, err := kms.NewCryptoKey(ctx, "cryptoKey", &kms.CryptoKeyArgs{
-			KeyRing: keyRing.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
-			KmsKeyName: cryptoKey.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-key_ring = gcp.kms.KeyRing("keyRing", location="global")
-crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
-example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
-const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
-const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.id});
-```
-
-{{% /example %}}
-
-### Pubsub Topic Geo Restricted
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Gcp.PubSub.Topic("example", new Gcp.PubSub.TopicArgs
-        {
-            MessageStoragePolicy = new Gcp.PubSub.Inputs.TopicMessageStoragePolicyArgs
-            {
-                AllowedPersistenceRegions = 
-                {
-                    "europe-west3",
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
-			MessageStoragePolicy: &pubsub.TopicMessageStoragePolicyArgs{
-				AllowedPersistenceRegions: pulumi.StringArray{
-					pulumi.String("europe-west3"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.pubsub.Topic("example", message_storage_policy={
-    "allowedPersistenceRegions": ["europe-west3"],
-})
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.pubsub.Topic("example", {
-    messageStoragePolicy: {
-        allowedPersistenceRegions: ["europe-west3"],
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Topic Resource {#create}
@@ -284,7 +29,7 @@ const example = new gcp.pubsub.Topic("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#Topic">Topic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kms_key_name=None<span class="p">, </span>labels=None<span class="p">, </span>message_storage_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#pulumi_gcp.pubsub.Topic">Topic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[TopicMessageStoragePolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -492,7 +237,8 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -561,7 +307,8 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -630,7 +377,8 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,7 +432,7 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Topic.
 {{% /md %}}</dd>
@@ -695,11 +443,12 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#message_storage_policy_python" style="color: inherit; text-decoration: inherit;">message_<wbr>storage_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicmessagestoragepolicy">Dict[Topic<wbr>Message<wbr>Storage<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -823,7 +572,8 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>kms_key_name=None<span class="p">, </span>labels=None<span class="p">, </span>message_storage_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[TopicMessageStoragePolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Topic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -831,7 +581,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Topic.html">Topic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.TopicState.html">TopicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Topic.html">Topic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.TopicState.html">TopicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -973,7 +723,8 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1042,7 +793,8 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1111,7 +863,8 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +918,7 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Topic.
 {{% /md %}}</dd>
@@ -1176,11 +929,12 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#state_message_storage_policy_python" style="color: inherit; text-decoration: inherit;">message_<wbr>storage_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicmessagestoragepolicy">Dict[Topic<wbr>Message<wbr>Storage<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect.  Structure is documented below.
+constraints are in effect.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1310,8 +1064,8 @@ and is not a valid configuration.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedpersistenceregions_python">
-<a href="#allowedpersistenceregions_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Persistence<wbr>Regions</a>
+        <span id="allowed_persistence_regions_python">
+<a href="#allowed_persistence_regions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>persistence_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1342,6 +1096,6 @@ and is not a valid configuration.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

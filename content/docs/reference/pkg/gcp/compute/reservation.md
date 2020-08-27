@@ -25,110 +25,6 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Reserving zonal resources](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Reservation Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var gceReservation = new Gcp.Compute.Reservation("gceReservation", new Gcp.Compute.ReservationArgs
-        {
-            SpecificReservation = new Gcp.Compute.Inputs.ReservationSpecificReservationArgs
-            {
-                Count = 1,
-                InstanceProperties = new Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesArgs
-                {
-                    MachineType = "n2-standard-2",
-                    MinCpuPlatform = "Intel Cascade Lake",
-                },
-            },
-            Zone = "us-central1-a",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewReservation(ctx, "gceReservation", &compute.ReservationArgs{
-			SpecificReservation: &compute.ReservationSpecificReservationArgs{
-				Count: pulumi.Int(1),
-				InstanceProperties: &compute.ReservationSpecificReservationInstancePropertiesArgs{
-					MachineType:    pulumi.String("n2-standard-2"),
-					MinCpuPlatform: pulumi.String("Intel Cascade Lake"),
-				},
-			},
-			Zone: pulumi.String("us-central1-a"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-gce_reservation = gcp.compute.Reservation("gceReservation",
-    specific_reservation={
-        "count": 1,
-        "instanceProperties": {
-            "machine_type": "n2-standard-2",
-            "min_cpu_platform": "Intel Cascade Lake",
-        },
-    },
-    zone="us-central1-a")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const gceReservation = new gcp.compute.Reservation("gce_reservation", {
-    specificReservation: {
-        count: 1,
-        instanceProperties: {
-            machineType: "n2-standard-2",
-            minCpuPlatform: "Intel Cascade Lake",
-        },
-    },
-    zone: "us-central1-a",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Reservation Resource {#create}
@@ -140,7 +36,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Reservation">Reservation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>specific_reservation=None<span class="p">, </span>specific_reservation_required=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Reservation">Reservation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specific_reservation</span><span class="p">:</span> <span class="nx">Optional[ReservationSpecificReservationArgs]</span> = None<span class="p">, </span><span class="nx">specific_reservation_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -320,7 +216,8 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -402,7 +299,8 @@ affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -484,7 +382,8 @@ affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -564,9 +463,10 @@ affinity for any reservation. Defaults to false.
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservation">Dict[Reservation<wbr>Specific<wbr>Reservation]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -907,7 +807,8 @@ Get an existing Reservation resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>commitment=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>specific_reservation=None<span class="p">, </span>specific_reservation_required=None<span class="p">, </span>status=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">commitment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specific_reservation</span><span class="p">:</span> <span class="nx">Optional[ReservationSpecificReservationArgs]</span> = None<span class="p">, </span><span class="nx">specific_reservation_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Reservation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -915,7 +816,7 @@ Get an existing Reservation resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Reservation.html">Reservation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ReservationState.html">ReservationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Reservation.html">Reservation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ReservationState.html">ReservationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1102,7 +1003,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1228,7 +1130,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,7 +1257,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1478,9 +1382,10 @@ If it is not provided, the provider project is used.
 <a href="#state_specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservation">Dict[Reservation<wbr>Specific<wbr>Reservation]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1570,7 +1475,8 @@ affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+    <dd>{{% md %}}The instance properties for the reservation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,7 +1517,8 @@ How many instances are in use.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+    <dd>{{% md %}}The instance properties for the reservation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1652,7 +1559,8 @@ How many instances are in use.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+    <dd>{{% md %}}The instance properties for the reservation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1687,19 +1595,20 @@ How many instances are in use.
 
     <dt class="property-required"
             title="Required">
-        <span id="instanceproperties_python">
-<a href="#instanceproperties_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Properties</a>
+        <span id="instance_properties_python">
+<a href="#instance_properties_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Dict[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+    <dd>{{% md %}}The instance properties for the reservation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inusecount_python">
-<a href="#inusecount_python" style="color: inherit; text-decoration: inherit;">in<wbr>Use<wbr>Count</a>
+        <span id="in_use_count_python">
+<a href="#in_use_count_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1752,7 +1661,8 @@ How many instances are in use.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+    <dd>{{% md %}}Guest accelerator type and count.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1764,7 +1674,8 @@ How many instances are in use.
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
-reserves disks of type `local-ssd`.  Structure is documented below.
+reserves disks of type `local-ssd`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1807,7 +1718,8 @@ for information on available CPU platforms.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">[]Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
-    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+    <dd>{{% md %}}Guest accelerator type and count.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1819,7 +1731,8 @@ for information on available CPU platforms.
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">[]Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
-reserves disks of type `local-ssd`.  Structure is documented below.
+reserves disks of type `local-ssd`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1862,7 +1775,8 @@ for information on available CPU platforms.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
-    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+    <dd>{{% md %}}Guest accelerator type and count.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1874,7 +1788,8 @@ for information on available CPU platforms.
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd[]</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
-reserves disks of type `local-ssd`.  Structure is documented below.
+reserves disks of type `local-ssd`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1915,21 +1830,23 @@ for information on available CPU platforms.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+    <dd>{{% md %}}Guest accelerator type and count.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localssds_python">
-<a href="#localssds_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ssds</a>
+        <span id="local_ssds_python">
+<a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
-reserves disks of type `local-ssd`.  Structure is documented below.
+reserves disks of type `local-ssd`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2072,8 +1989,8 @@ If you are creating an instance template, specify only the accelerator name.
 
     <dt class="property-required"
             title="Required">
-        <span id="acceleratorcount_python">
-<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+        <span id="accelerator_count_python">
+<a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2141,6 +2058,8 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2170,6 +2089,8 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2199,6 +2120,8 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2228,6 +2151,8 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
+Default value is `SCSI`.
+Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2248,6 +2173,6 @@ If you are creating an instance template, specify only the accelerator name.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -17,181 +17,6 @@ other Google Cloud Platform resources, such as the `gcp.organizations.Project` r
 See the [setIamPolicy docs](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy)
 for a list of these restrictions.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
-    auditConfigs: [{
-        auditLogConfigs: [
-            {
-                exemptedMembers: ["user:you@domain.com"],
-                logType: "DATA_READ",
-            },
-            {
-                logType: "DATA_WRITE",
-            },
-            {
-                logType: "ADMIN_READ",
-            },
-        ],
-        service: "cloudkms.googleapis.com",
-    }],
-    bindings: [
-        {
-            members: ["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
-            role: "roles/compute.instanceAdmin",
-        },
-        {
-            members: ["user:alice@gmail.com"],
-            role: "roles/storage.objectViewer",
-        },
-    ],
-}, { async: true }));
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-admin = gcp.organizations.get_iam_policy(audit_configs=[{
-        "audit_log_configs": [
-            {
-                "exemptedMembers": ["user:you@domain.com"],
-                "logType": "DATA_READ",
-            },
-            {
-                "logType": "DATA_WRITE",
-            },
-            {
-                "logType": "ADMIN_READ",
-            },
-        ],
-        "service": "cloudkms.googleapis.com",
-    }],
-    bindings=[
-        {
-            "members": ["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
-            "role": "roles/compute.instanceAdmin",
-        },
-        {
-            "members": ["user:alice@gmail.com"],
-            "role": "roles/storage.objectViewer",
-        },
-    ])
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
-        {
-            AuditConfigs = 
-            {
-                new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigArgs
-                {
-                    AuditLogConfigs = 
-                    {
-                        new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs
-                        {
-                            ExemptedMembers = 
-                            {
-                                "user:you@domain.com",
-                            },
-                            LogType = "DATA_READ",
-                        },
-                        new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs
-                        {
-                            LogType = "DATA_WRITE",
-                        },
-                        new Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs
-                        {
-                            LogType = "ADMIN_READ",
-                        },
-                    },
-                    Service = "cloudkms.googleapis.com",
-                },
-            },
-            Bindings = 
-            {
-                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
-                {
-                    Members = 
-                    {
-                        "serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com",
-                    },
-                    Role = "roles/compute.instanceAdmin",
-                },
-                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
-                {
-                    Members = 
-                    {
-                        "user:alice@gmail.com",
-                    },
-                    Role = "roles/storage.objectViewer",
-                },
-            },
-        }));
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			AuditConfigs: []organizations.GetIAMPolicyAuditConfig{
-				organizations.GetIAMPolicyAuditConfig{
-					AuditLogConfigs: []organizations.GetIAMPolicyAuditConfigAuditLogConfig{
-						organizations.GetIAMPolicyAuditConfigAuditLogConfig{
-							ExemptedMembers: []string{
-								"user:you@domain.com",
-							},
-							LogType: "DATA_READ",
-						},
-						organizations.GetIAMPolicyAuditConfigAuditLogConfig{
-							LogType: "DATA_WRITE",
-						},
-						organizations.GetIAMPolicyAuditConfigAuditLogConfig{
-							LogType: "ADMIN_READ",
-						},
-					},
-					Service: "cloudkms.googleapis.com",
-				},
-			},
-			Bindings: []organizations.GetIAMPolicyBinding{
-				organizations.GetIAMPolicyBinding{
-					Members: []string{
-						"serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com",
-					},
-					Role: "roles/compute.instanceAdmin",
-				},
-				organizations.GetIAMPolicyBinding{
-					Members: []string{
-						"user:alice@gmail.com",
-					},
-					Role: "roles/storage.objectViewer",
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy
 from another resource is the only way to apply an IAM policy to a resource.
@@ -209,7 +34,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_iam_policy(</span>audit_configs=None<span class="p">, </span>bindings=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy(</span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[List[GetIAMPolicyAuditConfigArgs]]</span> = None<span class="p">, </span><span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[List[GetIAMPolicyBindingArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIAMPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -335,7 +160,7 @@ defining a binding to be included in the policy document. Multiple
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
 {{% /md %}}</dd>
@@ -346,7 +171,7 @@ defining a binding to be included in the policy document. Multiple
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
@@ -690,7 +515,7 @@ referencing from a resource that supports IAM.
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd>
@@ -820,8 +645,8 @@ referencing from a resource that supports IAM.
 
     <dt class="property-required"
             title="Required">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -831,8 +656,8 @@ referencing from a resource that supports IAM.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exemptedmembers_python">
-<a href="#exemptedmembers_python" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
+        <span id="exempted_members_python">
+<a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -904,7 +729,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -952,7 +778,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1000,7 +827,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1046,9 +874,10 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Dict[Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1083,7 +912,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1093,7 +923,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1103,7 +934,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1120,7 +952,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1130,7 +963,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1140,7 +974,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1157,7 +992,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1167,7 +1003,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1177,7 +1014,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1194,7 +1032,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1204,7 +1043,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1214,7 +1054,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1234,6 +1075,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

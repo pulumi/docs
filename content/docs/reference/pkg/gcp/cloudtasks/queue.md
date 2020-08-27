@@ -12,79 +12,6 @@ meta_desc: "Explore the Queue resource of the cloudtasks module, including examp
 
 A named resource to which messages are sent by publishers.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Queue Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.CloudTasks.Queue("default", new Gcp.CloudTasks.QueueArgs
-        {
-            Location = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudtasks.NewQueue(ctx, "default", &cloudtasks.QueueArgs{
-			Location: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.cloudtasks.Queue("default", location="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultQueue = new gcp.cloudtasks.Queue("default", {
-    location: "us-central1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Queue Resource {#create}
@@ -96,7 +23,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudtasks/#Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_engine_routing_override=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rate_limits=None<span class="p">, </span>retry_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudtasks/#pulumi_gcp.cloudtasks.Queue">Queue</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -288,7 +215,8 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,7 +256,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -339,7 +268,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -369,7 +299,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -409,7 +340,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -420,7 +352,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -450,7 +383,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,7 +424,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -501,7 +436,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -528,10 +464,11 @@ smooth sudden large traffic spikes.  Structure is documented below.
 <a href="#app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Dict[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override]</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -563,7 +500,7 @@ If it is not provided, the provider project is used.
 <a href="#rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Dict[Queue<wbr>Rate<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -571,7 +508,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,9 +518,10 @@ smooth sudden large traffic spikes.  Structure is documented below.
 <a href="#retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Dict[Queue<wbr>Retry<wbr>Config]</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -683,7 +622,8 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_engine_routing_override=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rate_limits=None<span class="p">, </span>retry_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -691,7 +631,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.QueueState.html">QueueState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.QueueState.html">QueueState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -806,7 +746,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -857,7 +798,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,7 +810,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -887,7 +830,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -938,7 +882,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -949,7 +894,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -968,7 +914,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1019,7 +966,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,7 +978,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1046,10 +995,11 @@ smooth sudden large traffic spikes.  Structure is documented below.
 <a href="#state_app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Dict[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override]</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1092,7 +1042,7 @@ If it is not provided, the provider project is used.
 <a href="#state_rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Dict[Queue<wbr>Rate<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -1100,7 +1050,8 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1109,9 +1060,10 @@ smooth sudden large traffic spikes.  Structure is documented below.
 <a href="#state_retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Dict[Queue<wbr>Retry<wbr>Config]</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1534,8 +1486,8 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxburstsize_python">
-<a href="#maxburstsize_python" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
+        <span id="max_burst_size_python">
+<a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1550,8 +1502,8 @@ resource usage when many tasks are enqueued in a short period of time.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconcurrentdispatches_python">
-<a href="#maxconcurrentdispatches_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Dispatches</a>
+        <span id="max_concurrent_dispatches_python">
+<a href="#max_concurrent_dispatches_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>dispatches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1564,8 +1516,8 @@ concurrent requests decreases.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxdispatchespersecond_python">
-<a href="#maxdispatchespersecond_python" style="color: inherit; text-decoration: inherit;">max<wbr>Dispatches<wbr>Per<wbr>Second</a>
+        <span id="max_dispatches_per_second_python">
+<a href="#max_dispatches_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>dispatches_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1841,8 +1793,8 @@ specifies that the task should be retried.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxattempts_python">
-<a href="#maxattempts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
+        <span id="max_attempts_python">
+<a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1858,8 +1810,8 @@ the default.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbackoff_python">
-<a href="#maxbackoff_python" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
+        <span id="max_backoff_python">
+<a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1871,8 +1823,8 @@ specifies that the task should be retried.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxdoublings_python">
-<a href="#maxdoublings_python" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
+        <span id="max_doublings_python">
+<a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1885,8 +1837,8 @@ up to maxAttempts times.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxretryduration_python">
-<a href="#maxretryduration_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
+        <span id="max_retry_duration_python">
+<a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1901,8 +1853,8 @@ If zero, then the task age is unlimited.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minbackoff_python">
-<a href="#minbackoff_python" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
+        <span id="min_backoff_python">
+<a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1930,6 +1882,6 @@ specifies that the task should be retried.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

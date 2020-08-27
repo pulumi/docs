@@ -15,92 +15,6 @@ A secret version resource.
 > **Warning:** All arguments including `payload.secret_data` will be stored in the raw
 state as plain-text.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Secret Version Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var secret_basic = new Gcp.SecretManager.Secret("secret-basic", new Gcp.SecretManager.SecretArgs
-        {
-            SecretId = "secret-version",
-            Labels = 
-            {
-                { "label", "my-label" },
-            },
-            Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
-            {
-                Automatic = true,
-            },
-        });
-        var secret_version_basic = new Gcp.SecretManager.SecretVersion("secret-version-basic", new Gcp.SecretManager.SecretVersionArgs
-        {
-            Secret = secret_basic.Id,
-            SecretData = "secret-data",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-secret_basic = gcp.secretmanager.Secret("secret-basic",
-    secret_id="secret-version",
-    labels={
-        "label": "my-label",
-    },
-    replication={
-        "automatic": True,
-    })
-secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
-    secret=secret_basic.id,
-    secret_data="secret-data")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
-    secretId: "secret-version",
-    labels: {
-        label: "my-label",
-    },
-    replication: {
-        automatic: true,
-    },
-});
-const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
-    secret: secret_basic.id,
-    secretData: "secret-data",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SecretVersion Resource {#create}
@@ -112,7 +26,7 @@ const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/secretmanager/#SecretVersion">SecretVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>secret=None<span class="p">, </span>secret_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/secretmanager/#pulumi_gcp.secretmanager.SecretVersion">SecretVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +228,8 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -354,7 +269,8 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -394,7 +310,8 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -434,7 +351,8 @@ The SecretVersion resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -667,7 +585,8 @@ Get an existing SecretVersion resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>destroy_time=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>secret=None<span class="p">, </span>secret_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destroy_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecretVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -675,7 +594,7 @@ Get an existing SecretVersion resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretVersion.html">SecretVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretVersionState.html">SecretVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretVersion.html">SecretVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretVersionState.html">SecretVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -844,7 +763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -917,7 +837,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -990,7 +911,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1063,7 +985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The secret data. Must be no larger than 64KiB.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -1086,6 +1009,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

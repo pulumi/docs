@@ -21,137 +21,6 @@ To get more information about Agent, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Dialogflow Agent Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fullAgent = new Gcp.Diagflow.Agent("fullAgent", new Gcp.Diagflow.AgentArgs
-        {
-            ApiVersion = "API_VERSION_V2_BETA_1",
-            AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
-            ClassificationThreshold = 0.3,
-            DefaultLanguageCode = "en",
-            Description = "Example description.",
-            DisplayName = "dialogflow-agent",
-            EnableLogging = true,
-            MatchMode = "MATCH_MODE_ML_ONLY",
-            SupportedLanguageCodes = 
-            {
-                "fr",
-                "de",
-                "es",
-            },
-            Tier = "TIER_STANDARD",
-            TimeZone = "America/New_York",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/diagflow"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = diagflow.NewAgent(ctx, "fullAgent", &diagflow.AgentArgs{
-			ApiVersion:              pulumi.String("API_VERSION_V2_BETA_1"),
-			AvatarUri:               pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
-			ClassificationThreshold: pulumi.Float64(0.3),
-			DefaultLanguageCode:     pulumi.String("en"),
-			Description:             pulumi.String("Example description."),
-			DisplayName:             pulumi.String("dialogflow-agent"),
-			EnableLogging:           pulumi.Bool(true),
-			MatchMode:               pulumi.String("MATCH_MODE_ML_ONLY"),
-			SupportedLanguageCodes: pulumi.StringArray{
-				pulumi.String("fr"),
-				pulumi.String("de"),
-				pulumi.String("es"),
-			},
-			Tier:     pulumi.String("TIER_STANDARD"),
-			TimeZone: pulumi.String("America/New_York"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-full_agent = gcp.diagflow.Agent("fullAgent",
-    api_version="API_VERSION_V2_BETA_1",
-    avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
-    classification_threshold=0.3,
-    default_language_code="en",
-    description="Example description.",
-    display_name="dialogflow-agent",
-    enable_logging=True,
-    match_mode="MATCH_MODE_ML_ONLY",
-    supported_language_codes=[
-        "fr",
-        "de",
-        "es",
-    ],
-    tier="TIER_STANDARD",
-    time_zone="America/New_York")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const fullAgent = new gcp.diagflow.Agent("full_agent", {
-    apiVersion: "API_VERSION_V2_BETA_1",
-    avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
-    classificationThreshold: 0.3,
-    defaultLanguageCode: "en",
-    description: "Example description.",
-    displayName: "dialogflow-agent",
-    enableLogging: true,
-    matchMode: "MATCH_MODE_ML_ONLY",
-    supportedLanguageCodes: [
-        "fr",
-        "de",
-        "es",
-    ],
-    tier: "TIER_STANDARD",
-    timeZone: "America/New_York",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Agent Resource {#create}
@@ -163,7 +32,7 @@ const fullAgent = new gcp.diagflow.Agent("full_agent", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/diagflow/#Agent">Agent</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_version=None<span class="p">, </span>avatar_uri=None<span class="p">, </span>classification_threshold=None<span class="p">, </span>default_language_code=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enable_logging=None<span class="p">, </span>match_mode=None<span class="p">, </span>project=None<span class="p">, </span>supported_language_codes=None<span class="p">, </span>tier=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/diagflow/#pulumi_gcp.diagflow.Agent">Agent</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">avatar_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">supported_language_codes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -384,6 +253,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,6 +319,7 @@ default of 0.3 is used.
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -546,6 +417,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,6 +483,7 @@ default of 0.3 is used.
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,6 +581,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,6 +647,7 @@ default of 0.3 is used.
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -870,6 +745,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -935,6 +811,7 @@ default of 0.3 is used.
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1122,7 +999,8 @@ Get an existing Agent resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_version=None<span class="p">, </span>avatar_uri=None<span class="p">, </span>avatar_uri_backend=None<span class="p">, </span>classification_threshold=None<span class="p">, </span>default_language_code=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enable_logging=None<span class="p">, </span>match_mode=None<span class="p">, </span>project=None<span class="p">, </span>supported_language_codes=None<span class="p">, </span>tier=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">avatar_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">avatar_uri_backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">supported_language_codes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Agent</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1130,7 +1008,7 @@ Get an existing Agent resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Agent.html">Agent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.AgentState.html">AgentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Agent.html">Agent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.AgentState.html">AgentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1250,6 +1128,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1350,6 +1229,7 @@ for a list of the currently supported language codes. This field cannot be updat
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1424,6 +1304,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1524,6 +1405,7 @@ for a list of the currently supported language codes. This field cannot be updat
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1598,6 +1480,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1698,6 +1581,7 @@ for a list of the currently supported language codes. This field cannot be updat
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1772,6 +1656,7 @@ the specified API version.
 * API_VERSION_V1: Legacy V1 API.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
+Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1872,6 +1757,7 @@ for a list of the currently supported language codes. This field cannot be updat
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
+Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1945,6 +1831,6 @@ Europe/Paris.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

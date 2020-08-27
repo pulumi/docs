@@ -16,228 +16,6 @@ To get more information about ServiceSplitTraffic, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### App Engine Service Split Traffic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
-        {
-        });
-        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
-        {
-            Bucket = bucket.Name,
-            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
-        });
-        var liveappV1 = new Gcp.AppEngine.StandardAppVersion("liveappV1", new Gcp.AppEngine.StandardAppVersionArgs
-        {
-            VersionId = "v1",
-            Service = "liveapp",
-            DeleteServiceOnDestroy = true,
-            Runtime = "nodejs10",
-            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
-            {
-                Shell = "node ./app.js",
-            },
-            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
-            {
-                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
-                {
-                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
-                    {
-                        var bucketName = values.Item1;
-                        var objectName = values.Item2;
-                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
-                    }),
-                },
-            },
-            EnvVariables = 
-            {
-                { "port", "8080" },
-            },
-        });
-        var liveappV2 = new Gcp.AppEngine.StandardAppVersion("liveappV2", new Gcp.AppEngine.StandardAppVersionArgs
-        {
-            VersionId = "v2",
-            Service = "liveapp",
-            NoopOnDestroy = true,
-            Runtime = "nodejs10",
-            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
-            {
-                Shell = "node ./app.js",
-            },
-            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
-            {
-                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
-                {
-                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
-                    {
-                        var bucketName = values.Item1;
-                        var objectName = values.Item2;
-                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
-                    }),
-                },
-            },
-            EnvVariables = 
-            {
-                { "port", "8080" },
-            },
-        });
-        var liveapp = new Gcp.AppEngine.EngineSplitTraffic("liveapp", new Gcp.AppEngine.EngineSplitTrafficArgs
-        {
-            Service = liveappV2.Service,
-            MigrateTraffic = false,
-            Split = new Gcp.AppEngine.Inputs.EngineSplitTrafficSplitArgs
-            {
-                ShardBy = "IP",
-                Allocations = Output.Tuple(liveappV1.VersionId, liveappV2.VersionId).Apply(values =>
-                {
-                    var liveappV1VersionId = values.Item1;
-                    var liveappV2VersionId = values.Item2;
-                    return 
-                    {
-                        { liveappV1VersionId, 0.75 },
-                        { liveappV2VersionId, 0.25 },
-                    };
-                }),
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bucket = gcp.storage.Bucket("bucket")
-object = gcp.storage.BucketObject("object",
-    bucket=bucket.name,
-    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
-liveapp_v1 = gcp.appengine.StandardAppVersion("liveappV1",
-    version_id="v1",
-    service="liveapp",
-    delete_service_on_destroy=True,
-    runtime="nodejs10",
-    entrypoint={
-        "shell": "node ./app.js",
-    },
-    deployment={
-        "zip": {
-            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
-        },
-    },
-    env_variables={
-        "port": "8080",
-    })
-liveapp_v2 = gcp.appengine.StandardAppVersion("liveappV2",
-    version_id="v2",
-    service="liveapp",
-    noop_on_destroy=True,
-    runtime="nodejs10",
-    entrypoint={
-        "shell": "node ./app.js",
-    },
-    deployment={
-        "zip": {
-            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
-        },
-    },
-    env_variables={
-        "port": "8080",
-    })
-liveapp = gcp.appengine.EngineSplitTraffic("liveapp",
-    service=liveapp_v2.service,
-    migrate_traffic=False,
-    split={
-        "shardBy": "IP",
-        "allocations": pulumi.Output.all(liveapp_v1.version_id, liveapp_v2.version_id).apply(lambda liveappV1Version_id, liveappV2Version_id: {
-            liveapp_v1_version_id: 0.75,
-            liveapp_v2_version_id: 0.25,
-        }),
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bucket = new gcp.storage.Bucket("bucket", {});
-const object = new gcp.storage.BucketObject("object", {
-    bucket: bucket.name,
-    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
-});
-const liveappV1 = new gcp.appengine.StandardAppVersion("liveappV1", {
-    versionId: "v1",
-    service: "liveapp",
-    deleteServiceOnDestroy: true,
-    runtime: "nodejs10",
-    entrypoint: {
-        shell: "node ./app.js",
-    },
-    deployment: {
-        zip: {
-            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
-        },
-    },
-    envVariables: {
-        port: "8080",
-    },
-});
-const liveappV2 = new gcp.appengine.StandardAppVersion("liveappV2", {
-    versionId: "v2",
-    service: "liveapp",
-    noopOnDestroy: true,
-    runtime: "nodejs10",
-    entrypoint: {
-        shell: "node ./app.js",
-    },
-    deployment: {
-        zip: {
-            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
-        },
-    },
-    envVariables: {
-        port: "8080",
-    },
-});
-const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
-    service: liveappV2.service,
-    migrateTraffic: false,
-    split: {
-        shardBy: "IP",
-        allocations: pulumi.all([liveappV1.versionId, liveappV2.versionId]).apply(([liveappV1VersionId, liveappV2VersionId]) => {
-            [liveappV1VersionId]: 0.75,
-            [liveappV2VersionId]: 0.25,
-        }),
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a EngineSplitTraffic Resource {#create}
@@ -249,7 +27,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#EngineSplitTraffic">EngineSplitTraffic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>migrate_traffic=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>split=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.EngineSplitTraffic">EngineSplitTraffic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">migrate_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split</span><span class="p">:</span> <span class="nx">Optional[EngineSplitTrafficSplitArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -440,7 +218,8 @@ The EngineSplitTraffic resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,7 +271,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -544,7 +324,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,9 +375,10 @@ If it is not provided, the provider project is used.
 <a href="#split_python" style="color: inherit; text-decoration: inherit;">split</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginesplittrafficsplit">Dict[Engine<wbr>Split<wbr>Traffic<wbr>Split]</a></span>
+        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -720,7 +502,8 @@ Get an existing EngineSplitTraffic resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>migrate_traffic=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>split=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">migrate_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split</span><span class="p">:</span> <span class="nx">Optional[EngineSplitTrafficSplitArgs]</span> = None<span class="p">) -&gt;</span> EngineSplitTraffic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -728,7 +511,7 @@ Get an existing EngineSplitTraffic resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTraffic.html">EngineSplitTraffic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTrafficState.html">EngineSplitTrafficState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTraffic.html">EngineSplitTraffic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTrafficState.html">EngineSplitTrafficState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -876,7 +659,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -928,7 +712,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -980,7 +765,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1030,9 +816,10 @@ If it is not provided, the provider project is used.
 <a href="#state_split_python" style="color: inherit; text-decoration: inherit;">split</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginesplittrafficsplit">Dict[Engine<wbr>Split<wbr>Traffic<wbr>Split]</a></span>
+        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1088,6 +875,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1117,6 +905,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1146,6 +935,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1161,20 +951,21 @@ If it is not provided, the provider project is used.
 <a href="#allocations_python" style="color: inherit; text-decoration: inherit;">allocations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shardby_python">
-<a href="#shardby_python" style="color: inherit; text-decoration: inherit;">shard<wbr>By</a>
+        <span id="shard_by_python">
+<a href="#shard_by_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1195,6 +986,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

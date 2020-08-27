@@ -15,6 +15,7 @@ Explore the resources and functions of the monitoring module in the GCP package.
     <li><a href="customservice" title="CustomService"><span class="symbol resource"></span>CustomService</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="metricdescriptor" title="MetricDescriptor"><span class="symbol resource"></span>MetricDescriptor</a></li>
     <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
     <li><a href="slo" title="Slo"><span class="symbol resource"></span>Slo</a></li>
     <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
@@ -35,9 +36,9 @@ Explore the resources and functions of the monitoring module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.1</dd>
 </dl>
 
 

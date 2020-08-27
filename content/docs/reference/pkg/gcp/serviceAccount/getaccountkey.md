@@ -12,100 +12,6 @@ meta_desc: "Explore the GetAccountKey function of the serviceAccount module, inc
 
 Get service account public key. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myaccount = new Gcp.ServiceAccount.Account("myaccount", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "dev-foo-account",
-        });
-        var mykeyKey = new Gcp.ServiceAccount.Key("mykeyKey", new Gcp.ServiceAccount.KeyArgs
-        {
-            ServiceAccountId = myaccount.Name,
-        });
-        var mykeyAccountKey = mykeyKey.Name.Apply(name => Gcp.ServiceAccount.GetAccountKey.InvokeAsync(new Gcp.ServiceAccount.GetAccountKeyArgs
-        {
-            Name = name,
-            PublicKeyType = "TYPE_X509_PEM_FILE",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myaccount, err := serviceAccount.NewAccount(ctx, "myaccount", &serviceAccount.AccountArgs{
-			AccountId: pulumi.String("dev-foo-account"),
-		})
-		if err != nil {
-			return err
-		}
-		mykeyKey, err := serviceAccount.NewKey(ctx, "mykeyKey", &serviceAccount.KeyArgs{
-			ServiceAccountId: myaccount.Name,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-myaccount = gcp.service_account.Account("myaccount", account_id="dev-foo-account")
-mykey_key = gcp.service_account.Key("mykeyKey", service_account_id=myaccount.name)
-mykey_account_key = mykey_key.name.apply(lambda name: gcp.serviceAccount.get_account_key(name=name,
-    public_key_type="TYPE_X509_PEM_FILE"))
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myaccount = new gcp.serviceAccount.Account("myaccount", {accountId: "dev-foo-account"});
-const mykeyKey = new gcp.serviceAccount.Key("mykeyKey", {serviceAccountId: myaccount.name});
-const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccountKey({
-    name: name,
-    publicKeyType: "TYPE_X509_PEM_FILE",
-}));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAccountKey {#using}
@@ -119,7 +25,7 @@ const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccoun
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_account_key(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>public_key_type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account_key(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountKeyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -177,7 +83,7 @@ Defaults to the provider project configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The output format of the public key requested. X509_PEM is the default output format.
+    <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
 {{% /md %}}</dd>
 
 </dl>
@@ -220,7 +126,7 @@ Defaults to the provider project configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The output format of the public key requested. X509_PEM is the default output format.
+    <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
 {{% /md %}}</dd>
 
 </dl>
@@ -263,7 +169,7 @@ Defaults to the provider project configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The output format of the public key requested. X509_PEM is the default output format.
+    <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
 {{% /md %}}</dd>
 
 </dl>
@@ -306,7 +212,7 @@ Defaults to the provider project configuration.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The output format of the public key requested. X509_PEM is the default output format.
+    <dd>{{% md %}}The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
 {{% /md %}}</dd>
 
 </dl>
@@ -616,6 +522,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

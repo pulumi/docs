@@ -12,352 +12,6 @@ meta_desc: "Explore the ResourcePolicy resource of the compute module, including
 
 A policy that can be attached to a resource to specify or schedule actions on that resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Resource Policy Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new Gcp.Compute.ResourcePolicy("foo", new Gcp.Compute.ResourcePolicyArgs
-        {
-            Region = "us-central1",
-            SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
-            {
-                Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
-                {
-                    DailySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
-                    {
-                        DaysInCycle = 1,
-                        StartTime = "04:00",
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewResourcePolicy(ctx, "foo", &compute.ResourcePolicyArgs{
-			Region: pulumi.String("us-central1"),
-			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
-				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
-					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
-						DaysInCycle: pulumi.Int(1),
-						StartTime:   pulumi.String("04:00"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-foo = gcp.compute.ResourcePolicy("foo",
-    region="us-central1",
-    snapshot_schedule_policy={
-        "schedule": {
-            "dailySchedule": {
-                "daysInCycle": 1,
-                "startTime": "04:00",
-            },
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const foo = new gcp.compute.ResourcePolicy("foo", {
-    region: "us-central1",
-    snapshotSchedulePolicy: {
-        schedule: {
-            dailySchedule: {
-                daysInCycle: 1,
-                startTime: "04:00",
-            },
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-### Resource Policy Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bar = new Gcp.Compute.ResourcePolicy("bar", new Gcp.Compute.ResourcePolicyArgs
-        {
-            Region = "us-central1",
-            SnapshotSchedulePolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs
-            {
-                RetentionPolicy = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs
-                {
-                    MaxRetentionDays = 10,
-                    OnSourceDiskDelete = "KEEP_AUTO_SNAPSHOTS",
-                },
-                Schedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs
-                {
-                    HourlySchedule = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs
-                    {
-                        HoursInCycle = 20,
-                        StartTime = "23:00",
-                    },
-                },
-                SnapshotProperties = new Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs
-                {
-                    GuestFlush = true,
-                    Labels = 
-                    {
-                        { "myLabel", "value" },
-                    },
-                    StorageLocations = "us",
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewResourcePolicy(ctx, "bar", &compute.ResourcePolicyArgs{
-			Region: pulumi.String("us-central1"),
-			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
-				RetentionPolicy: &compute.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs{
-					MaxRetentionDays:   pulumi.Int(10),
-					OnSourceDiskDelete: pulumi.String("KEEP_AUTO_SNAPSHOTS"),
-				},
-				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
-					HourlySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs{
-						HoursInCycle: pulumi.Int(20),
-						StartTime:    pulumi.String("23:00"),
-					},
-				},
-				SnapshotProperties: &compute.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs{
-					GuestFlush: pulumi.Bool(true),
-					Labels: pulumi.Map{
-						"myLabel": pulumi.String("value"),
-					},
-					StorageLocations: pulumi.String("us"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bar = gcp.compute.ResourcePolicy("bar",
-    region="us-central1",
-    snapshot_schedule_policy={
-        "retention_policy": {
-            "maxRetentionDays": 10,
-            "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
-        },
-        "schedule": {
-            "hourlySchedule": {
-                "hoursInCycle": 20,
-                "startTime": "23:00",
-            },
-        },
-        "snapshotProperties": {
-            "guestFlush": True,
-            "labels": {
-                "myLabel": "value",
-            },
-            "storageLocations": "us",
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bar = new gcp.compute.ResourcePolicy("bar", {
-    region: "us-central1",
-    snapshotSchedulePolicy: {
-        retentionPolicy: {
-            maxRetentionDays: 10,
-            onSourceDiskDelete: "KEEP_AUTO_SNAPSHOTS",
-        },
-        schedule: {
-            hourlySchedule: {
-                hoursInCycle: 20,
-                startTime: "23:00",
-            },
-        },
-        snapshotProperties: {
-            guestFlush: true,
-            labels: {
-                my_label: "value",
-            },
-            storageLocations: "us",
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-### Resource Policy Placement Policy
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var baz = new Gcp.Compute.ResourcePolicy("baz", new Gcp.Compute.ResourcePolicyArgs
-        {
-            GroupPlacementPolicy = new Gcp.Compute.Inputs.ResourcePolicyGroupPlacementPolicyArgs
-            {
-                Collocation = "COLLOCATED",
-                VmCount = 2,
-            },
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewResourcePolicy(ctx, "baz", &compute.ResourcePolicyArgs{
-			GroupPlacementPolicy: &compute.ResourcePolicyGroupPlacementPolicyArgs{
-				Collocation: pulumi.String("COLLOCATED"),
-				VmCount:     pulumi.Int(2),
-			},
-			Region: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-baz = gcp.compute.ResourcePolicy("baz",
-    group_placement_policy={
-        "collocation": "COLLOCATED",
-        "vmCount": 2,
-    },
-    region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const baz = new gcp.compute.ResourcePolicy("baz", {
-    groupPlacementPolicy: {
-        collocation: "COLLOCATED",
-        vmCount: 2,
-    },
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ResourcePolicy Resource {#create}
@@ -369,7 +23,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#ResourcePolicy">ResourcePolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.ResourcePolicy">ResourcePolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicySnapshotSchedulePolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -549,7 +203,8 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -600,7 +255,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -618,7 +274,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -669,7 +326,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -687,7 +345,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,7 +397,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -754,9 +414,10 @@ If it is not provided, the provider project is used.
 <a href="#group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,9 +466,10 @@ If it is not provided, the provider project is used.
 <a href="#snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -952,7 +614,8 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicySnapshotSchedulePolicyArgs]</span> = None<span class="p">) -&gt;</span> ResourcePolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -960,7 +623,7 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyState.html">ResourcePolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyState.html">ResourcePolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1074,7 +737,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +800,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1154,7 +819,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1216,7 +882,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1234,7 +901,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1296,7 +964,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1312,9 +981,10 @@ If it is not provided, the provider project is used.
 <a href="#state_group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1374,9 +1044,10 @@ If it is not provided, the provider project is used.
 <a href="#state_snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1436,6 +1107,7 @@ availability domain, they will not be put in the same low latency network
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1480,6 +1152,7 @@ availability domain, they will not be put in the same low latency network
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1524,6 +1197,7 @@ availability domain, they will not be put in the same low latency network
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,8 +1220,8 @@ attached.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availabilitydomaincount_python">
-<a href="#availabilitydomaincount_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
+        <span id="availability_domain_count_python">
+<a href="#availability_domain_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>domain_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1568,12 +1242,13 @@ availability domain, they will not be put in the same low latency network
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vmcount_python">
-<a href="#vmcount_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
+        <span id="vm_count_python">
+<a href="#vm_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1614,7 +1289,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1625,7 +1301,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1636,7 +1313,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1654,7 +1332,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1665,7 +1344,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1676,7 +1356,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1694,7 +1375,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1705,7 +1387,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1716,7 +1399,8 @@ attached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1732,9 +1416,10 @@ attached.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1743,20 +1428,22 @@ attached.
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="snapshotproperties_python">
-<a href="#snapshotproperties_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
+        <span id="snapshot_properties_python">
+<a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1805,6 +1492,8 @@ attached.
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1835,6 +1524,8 @@ the source disk is deleted.
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1865,6 +1556,8 @@ the source disk is deleted.
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1876,8 +1569,8 @@ the source disk is deleted.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxretentiondays_python">
-<a href="#maxretentiondays_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
+        <span id="max_retention_days_python">
+<a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1887,14 +1580,16 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onsourcediskdelete_python">
-<a href="#onsourcediskdelete_python" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
+        <span id="on_source_disk_delete_python">
+<a href="#on_source_disk_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>source_<wbr>disk_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1930,7 +1625,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1941,7 +1637,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1952,7 +1649,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1970,7 +1668,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1981,7 +1680,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1992,7 +1692,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2010,7 +1711,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2021,7 +1723,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2032,7 +1735,8 @@ the source disk is deleted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2044,35 +1748,38 @@ the source disk is deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dailyschedule_python">
-<a href="#dailyschedule_python" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
+        <span id="daily_schedule_python">
+<a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hourlyschedule_python">
-<a href="#hourlyschedule_python" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
+        <span id="hourly_schedule_python">
+<a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weeklyschedule_python">
-<a href="#weeklyschedule_python" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
+        <span id="weekly_schedule_python">
+<a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2192,8 +1899,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span id="daysincycle_python">
-<a href="#daysincycle_python" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
+        <span id="days_in_cycle_python">
+<a href="#days_in_cycle_python" style="color: inherit; text-decoration: inherit;">days_<wbr>in_<wbr>cycle</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2203,8 +1910,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2330,8 +2037,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span id="hoursincycle_python">
-<a href="#hoursincycle_python" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
+        <span id="hours_in_cycle_python">
+<a href="#hours_in_cycle_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>in_<wbr>cycle</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2341,8 +2048,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2384,7 +2091,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2402,7 +2110,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">[]Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2420,7 +2129,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2432,13 +2142,14 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweeks_python">
-<a href="#dayofweeks_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
+        <span id="day_of_weeks_python">
+<a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2475,6 +2186,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2505,6 +2217,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2535,6 +2248,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2565,12 +2279,13 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2729,8 +2444,8 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="guestflush_python">
-<a href="#guestflush_python" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
+        <span id="guest_flush_python">
+<a href="#guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2744,15 +2459,15 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagelocations_python">
-<a href="#storagelocations_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
+        <span id="storage_locations_python">
+<a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2779,6 +2494,6 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -20,231 +20,6 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 
 > **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
 
-## google\_pubsub\_subscription\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/editor",
-        members: ["user:jane@example.com"],
-    }],
-});
-const editor = new gcp.pubsub.SubscriptionIAMPolicy("editor", {
-    subscription: "your-subscription-name",
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-admin = gcp.organizations.get_iam_policy(binding=[{
-    "role": "roles/editor",
-    "members": ["user:jane@example.com"],
-}])
-editor = gcp.pubsub.SubscriptionIAMPolicy("editor",
-    subscription="your-subscription-name",
-    policy_data=admin.policy_data)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
-        {
-            Binding = 
-            {
-                
-                {
-                    { "role", "roles/editor" },
-                    { "members", 
-                    {
-                        "user:jane@example.com",
-                    } },
-                },
-            },
-        }));
-        var editor = new Gcp.PubSub.SubscriptionIAMPolicy("editor", new Gcp.PubSub.SubscriptionIAMPolicyArgs
-        {
-            Subscription = "your-subscription-name",
-            PolicyData = admin.Apply(admin => admin.PolicyData),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			Binding: []map[string]interface{}{
-				map[string]interface{}{
-					"role": "roles/editor",
-					"members": []string{
-						"user:jane@example.com",
-					},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = pubsub.NewSubscriptionIAMPolicy(ctx, "editor", &pubsub.SubscriptionIAMPolicyArgs{
-			Subscription: pulumi.String("your-subscription-name"),
-			PolicyData:   pulumi.String(admin.PolicyData),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_pubsub\_subscription\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const editor = new gcp.pubsub.SubscriptionIAMBinding("editor", {
-    members: ["user:jane@example.com"],
-    role: "roles/editor",
-    subscription: "your-subscription-name",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-editor = gcp.pubsub.SubscriptionIAMBinding("editor",
-    members=["user:jane@example.com"],
-    role="roles/editor",
-    subscription="your-subscription-name")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var editor = new Gcp.PubSub.SubscriptionIAMBinding("editor", new Gcp.PubSub.SubscriptionIAMBindingArgs
-        {
-            Members = 
-            {
-                "user:jane@example.com",
-            },
-            Role = "roles/editor",
-            Subscription = "your-subscription-name",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = pubsub.NewSubscriptionIAMBinding(ctx, "editor", &pubsub.SubscriptionIAMBindingArgs{
-			Members: pulumi.StringArray{
-				pulumi.String("user:jane@example.com"),
-			},
-			Role:         pulumi.String("roles/editor"),
-			Subscription: pulumi.String("your-subscription-name"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_pubsub\_subscription\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
-    member: "user:jane@example.com",
-    role: "roles/editor",
-    subscription: "your-subscription-name",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-editor = gcp.pubsub.SubscriptionIAMMember("editor",
-    member="user:jane@example.com",
-    role="roles/editor",
-    subscription="your-subscription-name")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var editor = new Gcp.PubSub.SubscriptionIAMMember("editor", new Gcp.PubSub.SubscriptionIAMMemberArgs
-        {
-            Member = "user:jane@example.com",
-            Role = "roles/editor",
-            Subscription = "your-subscription-name",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = pubsub.NewSubscriptionIAMMember(ctx, "editor", &pubsub.SubscriptionIAMMemberArgs{
-			Member:       pulumi.String("user:jane@example.com"),
-			Role:         pulumi.String("roles/editor"),
-			Subscription: pulumi.String("your-subscription-name"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Create a SubscriptionIAMMember Resource {#create}
@@ -256,7 +31,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#SubscriptionIAMMember">SubscriptionIAMMember</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>subscription=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#pulumi_gcp.pubsub.SubscriptionIAMMember">SubscriptionIAMMember</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[SubscriptionIAMMemberConditionArgs]</span> = None<span class="p">, </span><span class="nx">member</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -657,7 +432,7 @@ is not provided, the provider project is used.
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptioniammembercondition">Dict[Subscription<wbr>IAMMember<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#subscriptioniammembercondition">Subscription<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -815,7 +590,8 @@ Get an existing SubscriptionIAMMember resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition=None<span class="p">, </span>etag=None<span class="p">, </span>member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>subscription=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[SubscriptionIAMMemberConditionArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SubscriptionIAMMember</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -823,7 +599,7 @@ Get an existing SubscriptionIAMMember resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionIAMMember.html">SubscriptionIAMMember</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionIAMMemberState.html">SubscriptionIAMMemberState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionIAMMember.html">SubscriptionIAMMember</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionIAMMemberState.html">SubscriptionIAMMemberState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1157,7 +933,7 @@ is not provided, the provider project is used.
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptioniammembercondition">Dict[Subscription<wbr>IAMMember<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#subscriptioniammembercondition">Subscription<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1410,6 +1186,6 @@ is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 
