@@ -15,7 +15,7 @@ aliases: ["/docs/quickstart/aws/review-project/"]
 Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
 {{% choosable language csharp %}}
 
@@ -23,7 +23,7 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
+- {{< langfile >}} is the Pulumi program that defines your stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -126,11 +126,11 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-This Pulumi program creates a new S3 bucket. To inspect your new bucket, you will need its physical AWS name. Pulumi records a logical name, my-bucket, however the resulting AWS name will be different.
+This Pulumi program creates a new S3 bucket. To inspect your new bucket, you will need its physical AWS name. Pulumi records a logical name, in this case `my-bucket`, however the resulting AWS name will be different.
 
 > The difference between logical and physical names is in part due to “auto-naming” which Pulumi does to ensure side-by-side projects and zero-downtime upgrades work seamlessly. It can be disabled if you wish; [read more about auto-naming here](https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming).
 
-Programs can export variables which will be shown in the CLI and recorded for each deployment. In the program we just created, we export the name of the bucket so that we can verify our bucket was created.
+Programs can export variables which will be shown in the CLI and recorded for each deployment. In the program you just created the name of the bucket is exported so that we can easily verify our bucket was created with the AWS CLI.
 
 {{% choosable language javascript %}}
 
@@ -173,6 +173,6 @@ public Output<string> BucketName { get; set; }
 
 {{% /choosable %}}
 
-Next, we will run our first update which will provision our S3 Bucket.
+Next, you will run your first update which will provision your S3 Bucket.
 
 {{< get-started-stepper >}}

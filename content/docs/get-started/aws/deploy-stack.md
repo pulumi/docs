@@ -12,13 +12,13 @@ menu:
 aliases: ["/docs/quickstart/aws/deploy-stack/"]
 ---
 
-Let's go ahead and run our first update:
+Let's go ahead and run your first update:
 
 ```bash
 $ pulumi up
 ```
 
-This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made:
+This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made when you run the update:
 
 ```
 Previewing update (dev):
@@ -61,7 +61,7 @@ Resources:
 Duration: 14s
 ```
 
-Remember the output we defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of our update. For example, the name of the bucket created above is `my-bucket-68e33ec`. To confirm our bucket has been created, let's list the contents of our bucket.
+Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. For example, the name of the bucket created above is `my-bucket-68e33ec`. To confirm your bucket has been created, let's try to list the contents of your bucket.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -105,6 +105,6 @@ $ aws s3 ls $(pulumi stack output BucketName)
 
 {{% /choosable %}}
 
-Running that command should result in no output as our bucket is currently empty. Let's change that by modifying our bucket to host a static website.
+Running that command should result in no output as your bucket is currently empty. Let's change that by modifying your bucket to host a static website.
 
 {{< get-started-stepper >}}

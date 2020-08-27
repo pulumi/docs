@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/aws/destroy-stack/"]
 ---
 
-Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.
+Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.
 
 To destroy resources, run the following:
 
@@ -59,6 +59,6 @@ Duration: 7s
 "/docs/reference/cli/pulumi_stack_rm" >}}). Note that this removes the stack
 entirely from the Pulumi Service, along with all of its update history.
 
-Congratulations! You've successfully provisioned some cloud resources using Pulumi. On the next page we have collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure.
+Congratulations! You've successfully provisioned some cloud resources using Pulumi. On the next page we have collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 
 {{< get-started-stepper >}}

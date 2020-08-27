@@ -20,13 +20,13 @@ aliases: [
 ]
 ---
 
-Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
+Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is setup correctly.
 
 ### Install Pulumi
 
 {{< install-pulumi >}}
 
-Next, we'll install the required language runtime.
+Next, you'll install the required language runtime, if you haven't already.
 
 ### Install Language Runtime
 
@@ -50,7 +50,7 @@ Next, we'll install the required language runtime.
 {{< install-dotnet >}}
 {{% /choosable %}}
 
-Next, we'll configure AWS.
+Finally, you'll configure AWS.
 
 ### Configure AWS
 
@@ -61,6 +61,6 @@ If you have multiple AWS profiles set up, specify a different profile using one 
 * Set `AWS_PROFILE`as an <a href="{{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}" target="_blank">environment variable</a>, or
 * After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. See <a href="{{< relref "/docs/intro/cloud-providers/aws#configuration" >}}" target="_blank">AWS Configuration</a> for more configuration options.
 
-Next, we'll create a new project.
+Next, you'll create a new project.
 
 {{< get-started-stepper >}}

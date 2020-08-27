@@ -12,13 +12,13 @@ menu:
 aliases: ["/docs/quickstart/aws/modify-program/"]
 ---
 
-Now that our S3 Bucket is provisioned, let's add an object to our bucket. First let's create a new directory call `site`.
+Now that your S3 Bucket is provisioned, let's add an object to your bucket. First let's create a new directory called `site`.
 
 ```bash
 $ mkdir site
 ```
 
-Next let's create an `index.html` file we will upload to our bucket.
+Next let's create an `index.html` file you will upload to your bucket.
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -56,7 +56,7 @@ Once you've created your `index.html` file, let's add some content:
 </html>
 ```
 
-Now that we have our new `index.html` with some content, let's modify our program to upload the file to your S3 Bucket. To successfully upload the file we need to give Pulumi the absolute path to our file. We can easily accomplish this by taking advantage of libraries native to your programming language of choice.
+Now that you have your new `index.html` with some content, let's modify your program to upload the file to your S3 Bucket. To successfully upload the file you need to give Pulumi the absolute path to your file. We can easily accomplish this by taking advantage of libraries native to your programming language of choice.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -66,7 +66,7 @@ Now that we have our new `index.html` with some content, let's modify our progra
 const path = require("path");
 ```
 
-Next we will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```javascript
 const filePath = path.join(__dirname, "site", "index.html");
@@ -85,7 +85,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 import * as path from "path";
 ```
 
-Next we will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```typescript
 const filePath = path.join(__dirname, "site", "index.html");
@@ -104,7 +104,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 import os
 ```
 
-Next we will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```python
 filepath = os.path.abspath('site/index.html')
@@ -127,7 +127,7 @@ import (
 )
 ```
 
-Next we will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```go
 filePath, err := filepath.Abs("./site/index.html")
@@ -149,7 +149,7 @@ if err != nil {
 using System.IO;
 ```
 
-Next we will create a new bucket object on the lines right after creating the bucket itself.
+Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```csharp
 var filePath = Path.GetFullPath("./site/index.html");
@@ -163,8 +163,8 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 
 {{% /choosable %}}
 
-Notice how we provide the bucket we created earlier as an input to our new `BucketObject`. This is so Pulumi knows what S3 Bucket the object should live in. You can learn more about Inputs and Outputs [here](/docs/intro/concepts/programming-model/#outputs).
+Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what S3 Bucket the object should live in. You can learn more about Inputs and Outputs [here](/docs/intro/concepts/programming-model/#outputs).
 
-Next, we'll deploy the changes.
+Next, you'll deploy the changes.
 
 {{< get-started-stepper >}}
