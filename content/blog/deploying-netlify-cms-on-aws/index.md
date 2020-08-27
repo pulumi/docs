@@ -1,22 +1,21 @@
 ---
 title: "Deploying Netlify CMS on AWS with Pulumi"
 date: 2020-08-20T11:07:51-07:00
-
-# Draft posts are visible in development, but excluded from production builds.
-# Set this property to `false` before submitting your post for review.
-draft: true
+draft: false
 meta_desc: "Implementing Netlify CMS without Netlify, deploying the Netlify CMS on AWS."
 meta_image: cms.png
 authors: ["zephyr-zhou"]
-tags: ["aws", "netlify-cms", "github-OAuth", "github-actions"]
+tags: ["aws", "netlify-cms","s3","cloudfront","certificate-manager","route53", "github-actions"]
 ---
 
 [Netlify CMS ](https://www.netlifycms.org/docs/intro/) is an open-source content management system that provides UI for editing content and adopting Git workflow. Initially, we want to take advantage of it to increase efficiency to edit Pulumi's website. However, during development, we found few examples are deploying the CMS application on AWS instead of Netlify, its home platform. Therefore, in this blog post, we would like to share the way to organize Netlify's file structure and use Pulumi to store the content on S3 buckets, connect to CloudFront, and configure certificate in Certificate Manager. 
 
-[Note**: Because we are deploying CMS on AWS, we could not use Netlify's Identity Service, which handles access token send by Github API. For the alternatives, we will introduce the way to write the [External OAuth Client Server](https://www.netlifycms.org/docs/external-oauth-clients/) and deploy it on AWS in the next post.]
-
 
 <!--more-->
+
+{{% notes type="info" %}} 
+Because we are deploying CMS on AWS, we could not use Netlify's Identity Service, which handles access token send by Github API. For the alternatives, we will introduce the way to write the [External OAuth Client Server](https://www.netlifycms.org/docs/external-oauth-clients/) and deploy it on AWS in the [next post]({{<relref "/blog/deploying-oauth-server-for-cms-on-aws-with-pulumi">}}).
+{{% /notes %}}
 
 
 For environment details, we are using [Nelify CMS's Github backend](https://www.netlifycms.org/docs/github-backend/). Our CMS app is changing website content stored in another Github repository under the same account. The website is using Hugo as the static site generator.
@@ -357,9 +356,9 @@ In the workflow, multiple Github Secret are referred to as `${{ secrets.ACCESS_T
 
 ## Summary and Next Step
 
-Now we have deployed the stand-alone React CMS application on AWS. The full code is included in [Pulumi's Example Repository](https://github.com/pulumi/examples) with the link [TODO: FILL IN THE LINK]
+Now we have deployed the stand-alone React CMS application on AWS. The full code is included in [Pulumi's Example Repository](https://github.com/pulumi/examples) with the link https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms.
 
-As mentioned previously, because we are deploying on AWS instead of Netlify, we have to found a way to substitute the Netlify Identity Service. Thus, the next step is to write an External OAuth Client-Server and deploy it on AWS as well. We would introduce that in our next blog post.
+As mentioned previously, because we are deploying on AWS instead of Netlify, we have to found a way to substitute the Netlify Identity Service. Thus, the next step is to write an External OAuth Client-Server and deploy it on AWS as well. We would introduce that in our [next blog post]({{<relref "/blog/deploying-oauth-server-for-cms-on-aws-with-pulumi">}}).
 
 
 
