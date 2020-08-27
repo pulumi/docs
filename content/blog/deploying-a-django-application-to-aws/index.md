@@ -132,7 +132,7 @@ django_admin_password = config.require_secret("django-admin-password")
 django_secret_key = config.require_secret("django-secret-key")
 ```
 
-After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers/" >}}) blog posts, and the full code can be seen in this example's [github repository.](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
+After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}) blog posts, and the full code can be seen in this example's [github repository.](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
 
 ```python
 app_cluster = aws.ecs.Cluster(...)
