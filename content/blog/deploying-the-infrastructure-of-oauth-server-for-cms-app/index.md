@@ -1,6 +1,6 @@
 ---
 title: "Deploying the Infrastructure of OAuth Server for CMS App"
-date: 2020-08-26T08:43:38-07:00
+date: "2020-08-28"
 draft: false
 meta_desc: "Implementing OAuth server for Netlify CMS app, deployING it using ECS Fargate Service, and configurING domain and certificate for it."
 meta_image: cms-oauth.png
@@ -187,6 +187,7 @@ new awsx.lb.ListenerRule("oauth-listener-rule", web, {
     }],
 });
 ```
+
 #### Environment Variable and Pulumi Stack Configuration
 
 Also, as mentioned previously, when building the Fargate service, we could pass in environment variables that act as a parameter to main.go.
@@ -237,9 +238,10 @@ For `HOST` we would pass in the link that we would want this OAuth Server to hav
 
 `SESSION_SECRET` is another environment variable to pass in main.go that we mention earlier. We generated value by using Pulumi's `random.RandomPassword` previously.
 
-To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAuth Application. Netlify have provided [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for that. 
-For the Home Page Url should be the targetDomain that we build with our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). 
-For the Authorization callback URL we should enter `https://{{the domain of your OAuth App}}/callback/github` which is specified by the main.go. 
+To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAuth Application. Netlify have provided [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for that.
+For the Home Page Url should be the targetDomain that we build with our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}).
+For the Authorization callback URL we should enter `https://{{the domain of your OAuth App}}/callback/github` which is specified by the main.go.
+
 ```go
     github.New(
         os.Getenv("GITHUB_KEY"), os.Getenv("GITHUB_SECRET"),
@@ -248,8 +250,8 @@ For the Authorization callback URL we should enter `https://{{the domain of your
         "public_repo",
     )
 ```
-If you are using different storaging system like Bitbucket and Gitlab, you can specify callback url to be `https://{{the domain of your OAuth App}}/callback/{{ backend name }}` and relace `{{backend name}}` with `bitbucket` or `github` correspondingly.
 
+If you are using different storaging system like Bitbucket and Gitlab, you can specify callback url to be `https://{{the domain of your OAuth App}}/callback/{{ backend name }}` and relace `{{backend name}}` with `bitbucket` or `github` correspondingly.
 
 Then we can copy and paste the github key and secret as stack configuration as well.
 
@@ -312,7 +314,7 @@ function createAliasRecord(
 const aRecord = createAliasRecord(cmsStackConfig.targetDomain, alb);
 ```
 
-Then we could run `pulumi up` to deploy all of this. 
+Then we could run `pulumi up` to deploy all of this.
 
 ### Github Workflow (Optional)
 
