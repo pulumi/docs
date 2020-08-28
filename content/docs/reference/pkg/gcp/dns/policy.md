@@ -30,7 +30,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternative_name_server_config=None<span class="p">, </span>description=None<span class="p">, </span>enable_inbound_forwarding=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#pulumi_gcp.dns.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_name_server_config</span><span class="p">:</span> <span class="nx">Optional[PolicyAlternativeNameServerConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_inbound_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[PolicyNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -212,7 +212,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -271,7 +272,8 @@ Defaults to no logging if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">List&lt;Policy<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -303,7 +305,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +365,8 @@ Defaults to no logging if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,7 +398,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -453,7 +458,8 @@ Defaults to no logging if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">Policy<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,11 +487,12 @@ If it is not provided, the provider project is used.
 <a href="#alternative_name_server_config_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>name_<wbr>server_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfig">Dict[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config]</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,9 +549,10 @@ Defaults to no logging if not set.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network]</a></span>
+        <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -657,7 +665,8 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternative_name_server_config=None<span class="p">, </span>description=None<span class="p">, </span>enable_inbound_forwarding=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_name_server_config</span><span class="p">:</span> <span class="nx">Optional[PolicyAlternativeNameServerConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_inbound_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[PolicyNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -665,7 +674,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -781,7 +790,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -840,7 +850,8 @@ Defaults to no logging if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">List&lt;Policy<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -872,7 +883,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -931,7 +943,8 @@ Defaults to no logging if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +976,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1022,7 +1036,8 @@ Defaults to no logging if not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">Policy<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1050,11 +1065,12 @@ If it is not provided, the provider project is used.
 <a href="#state_alternative_name_server_config_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>name_<wbr>server_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfig">Dict[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config]</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
+Names such as .internal are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1111,9 +1127,10 @@ Defaults to no logging if not set.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network]</a></span>
+        <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1171,7 +1188,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
-are not available when an alternative name server is specified.  Structure is documented below.
+are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1191,7 +1209,8 @@ are not available when an alternative name server is specified.  Structure is do
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
-are not available when an alternative name server is specified.  Structure is documented below.
+are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1211,7 +1230,8 @@ are not available when an alternative name server is specified.  Structure is do
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
-are not available when an alternative name server is specified.  Structure is documented below.
+are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1223,15 +1243,16 @@ are not available when an alternative name server is specified.  Structure is do
 
     <dt class="property-required"
             title="Required">
-        <span id="targetnameservers_python">
-<a href="#targetnameservers_python" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
+        <span id="target_name_servers_python">
+<a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
-are not available when an alternative name server is specified.  Structure is documented below.
+are not available when an alternative name server is specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1315,8 +1336,8 @@ are not available when an alternative name server is specified.  Structure is do
 
     <dt class="property-required"
             title="Required">
-        <span id="ipv4address_python">
-<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1411,8 +1432,8 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 
     <dt class="property-required"
             title="Required">
-        <span id="networkurl_python">
-<a href="#networkurl_python" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+        <span id="network_url_python">
+<a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1440,6 +1461,6 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

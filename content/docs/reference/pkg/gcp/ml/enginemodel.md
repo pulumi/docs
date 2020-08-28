@@ -15,178 +15,6 @@ Represents a machine learning solution.
 A model can have multiple versions, each of which is a deployed, trained model
 ready to receive prediction requests. The model itself is just a container.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Ml Model Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
-        {
-            Description = "My model",
-            Regions = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ml.NewEngineModel(ctx, "default", &ml.EngineModelArgs{
-			Description: pulumi.String("My model"),
-			Regions:     pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.ml.EngineModel("default",
-    description="My model",
-    regions="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultEngineModel = new gcp.ml.EngineModel("default", {
-    description: "My model",
-    regions: "us-central1",
-});
-```
-
-{{% /example %}}
-
-### Ml Model Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
-        {
-            Description = "My model",
-            Labels = 
-            {
-                { "my_model", "foo" },
-            },
-            OnlinePredictionConsoleLogging = true,
-            OnlinePredictionLogging = true,
-            Regions = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = ml.NewEngineModel(ctx, "default", &ml.EngineModelArgs{
-			Description: pulumi.String("My model"),
-			Labels: pulumi.Map{
-				"my_model": pulumi.String("foo"),
-			},
-			OnlinePredictionConsoleLogging: pulumi.Bool(true),
-			OnlinePredictionLogging:        pulumi.Bool(true),
-			Regions:                        pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.ml.EngineModel("default",
-    description="My model",
-    labels={
-        "my_model": "foo",
-    },
-    online_prediction_console_logging=True,
-    online_prediction_logging=True,
-    regions="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultEngineModel = new gcp.ml.EngineModel("default", {
-    description: "My model",
-    labels: {
-        my_model: "foo",
-    },
-    onlinePredictionConsoleLogging: true,
-    onlinePredictionLogging: true,
-    regions: "us-central1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a EngineModel Resource {#create}
@@ -198,7 +26,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/ml/#EngineModel">EngineModel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>online_prediction_console_logging=None<span class="p">, </span>online_prediction_logging=None<span class="p">, </span>project=None<span class="p">, </span>regions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/ml/#pulumi_gcp.ml.EngineModel">EngineModel</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[EngineModelDefaultVersionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">online_prediction_console_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">online_prediction_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -379,7 +207,8 @@ The EngineModel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +306,8 @@ Currently only one region per model is supported
         <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -575,7 +405,8 @@ Currently only one region per model is supported
         <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,10 +501,11 @@ Currently only one region per model is supported
 <a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Dict[Engine<wbr>Model<wbr>Default<wbr>Version]</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +525,7 @@ prediction requests that do not specify a version.  Structure is documented belo
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}One or more labels that you can add, to organize your models.
 {{% /md %}}</dd>
@@ -853,7 +685,8 @@ Get an existing EngineModel resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>online_prediction_console_logging=None<span class="p">, </span>online_prediction_logging=None<span class="p">, </span>project=None<span class="p">, </span>regions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[EngineModelDefaultVersionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">online_prediction_console_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">online_prediction_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EngineModel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -861,7 +694,7 @@ Get an existing EngineModel resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModel.html">EngineModel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModelState.html">EngineModelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModel.html">EngineModel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModelState.html">EngineModelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -976,7 +809,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1074,7 +908,8 @@ Currently only one region per model is supported
         <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1172,7 +1007,8 @@ Currently only one region per model is supported
         <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1267,10 +1103,11 @@ Currently only one region per model is supported
 <a href="#state_default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Dict[Engine<wbr>Model<wbr>Default<wbr>Version]</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle
-prediction requests that do not specify a version.  Structure is documented below.
+prediction requests that do not specify a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1290,7 +1127,7 @@ prediction requests that do not specify a version.  Structure is documented belo
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}One or more labels that you can add, to organize your models.
 {{% /md %}}</dd>
@@ -1468,6 +1305,6 @@ Currently only one region per model is supported
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

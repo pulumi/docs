@@ -14,79 +14,6 @@ Get information about a Google Cloud Function. For more information see
 the [official documentation](https://cloud.google.com/functions/docs/)
 and [API](https://cloud.google.com/functions/docs/apis).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var my_function = Output.Create(Gcp.CloudFunctions.GetFunction.InvokeAsync(new Gcp.CloudFunctions.GetFunctionArgs
-        {
-            Name = "function",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudfunctions.LookupFunction(ctx, &cloudfunctions.LookupFunctionArgs{
-			Name: "function",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_function = gcp.cloudfunctions.get_function(name="function")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
-    name: "function",
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetFunction {#using}
@@ -100,7 +27,7 @@ const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_function(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_function(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -414,7 +341,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -479,7 +407,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getfunctionsourcerepository">List&lt;Get<wbr>Function<wbr>Source<wbr>Repository&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -658,7 +587,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -723,7 +653,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getfunctionsourcerepository">[]Get<wbr>Function<wbr>Source<wbr>Repository</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -902,7 +833,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -967,7 +899,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getfunctionsourcerepository">Get<wbr>Function<wbr>Source<wbr>Repository[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1079,7 +1012,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1133,7 +1066,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this function.
 {{% /md %}}</dd>
@@ -1146,7 +1079,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1211,7 +1145,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getfunctionsourcerepository">List[Get<wbr>Function<wbr>Source<wbr>Repository]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1436,8 +1371,8 @@ for a full reference of accepted triggers.
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtype_python">
-<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1449,11 +1384,11 @@ for a full reference of accepted triggers.
 
     <dt class="property-required"
             title="Required">
-        <span id="failurepolicies_python">
-<a href="#failurepolicies_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Policies</a>
+        <span id="failure_policies_python">
+<a href="#failure_policies_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">List[Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">List[Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy for failed executions. Structure is documented below.
 {{% /md %}}</dd>
@@ -1602,7 +1537,8 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1629,7 +1565,8 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1656,7 +1593,8 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1667,8 +1605,8 @@ for a full reference of accepted triggers.
 
     <dt class="property-required"
             title="Required">
-        <span id="deployedurl_python">
-<a href="#deployedurl_python" style="color: inherit; text-decoration: inherit;">deployed<wbr>Url</a>
+        <span id="deployed_url_python">
+<a href="#deployed_url_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1683,7 +1621,8 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1703,6 +1642,6 @@ for a full reference of accepted triggers.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

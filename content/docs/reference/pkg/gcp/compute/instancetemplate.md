@@ -26,7 +26,7 @@ and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#InstanceTemplate">InstanceTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_ip_forward=None<span class="p">, </span>description=None<span class="p">, </span>disks=None<span class="p">, </span>enable_display=None<span class="p">, </span>guest_accelerators=None<span class="p">, </span>instance_description=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>metadata_startup_script=None<span class="p">, </span>min_cpu_platform=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>scheduling=None<span class="p">, </span>service_account=None<span class="p">, </span>shielded_instance_config=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceTemplate">InstanceTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceTemplateDiskArgs]]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[InstanceTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">instance_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,6 +232,18 @@ documented below.
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="confidentialinstanceconfig_csharp">
+<a href="#confidentialinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -486,6 +498,18 @@ packets with non-matching source or destination IPs. This defaults to false.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="confidentialinstanceconfig_go">
+<a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -736,6 +760,18 @@ packets with non-matching source or destination IPs. This defaults to false.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="confidentialinstanceconfig_nodejs">
+<a href="#confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -954,7 +990,7 @@ this configuration option are detailed below.
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">List[Instance<wbr>Template<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">List[Instance<wbr>Template<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -986,6 +1022,18 @@ packets with non-matching source or destination IPs. This defaults to false.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="confidential_instance_config_python">
+<a href="#confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -1013,7 +1061,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">List[Instance<wbr>Template<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">List[Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd>
@@ -1036,7 +1084,7 @@ created from this template.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -1048,7 +1096,7 @@ created from this template,
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
@@ -1110,7 +1158,7 @@ prefix. Conflicts with `name`.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">List[Instance<wbr>Template<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">List[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -1151,7 +1199,7 @@ Provider if no value is given.
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">Dict[Instance<wbr>Template<wbr>Scheduling]</a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -1163,7 +1211,7 @@ this configuration option are detailed below.
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">Dict[Instance<wbr>Template<wbr>Service<wbr>Account]</a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1174,7 +1222,7 @@ this configuration option are detailed below.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Dict[Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -1421,7 +1469,8 @@ Get an existing InstanceTemplate resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>can_ip_forward=None<span class="p">, </span>description=None<span class="p">, </span>disks=None<span class="p">, </span>enable_display=None<span class="p">, </span>guest_accelerators=None<span class="p">, </span>instance_description=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>metadata_fingerprint=None<span class="p">, </span>metadata_startup_script=None<span class="p">, </span>min_cpu_platform=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>scheduling=None<span class="p">, </span>self_link=None<span class="p">, </span>service_account=None<span class="p">, </span>shielded_instance_config=None<span class="p">, </span>tags=None<span class="p">, </span>tags_fingerprint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceTemplateDiskArgs]]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[InstanceTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">instance_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1429,7 +1478,7 @@ Get an existing InstanceTemplate resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InstanceTemplate.html">InstanceTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InstanceTemplateState.html">InstanceTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InstanceTemplate.html">InstanceTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InstanceTemplateState.html">InstanceTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1545,6 +1594,18 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_confidentialinstanceconfig_csharp">
+<a href="#state_confidentialinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1832,6 +1893,18 @@ packets with non-matching source or destination IPs. This defaults to false.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_confidentialinstanceconfig_go">
+<a href="#state_confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -2111,6 +2184,18 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_confidentialinstanceconfig_nodejs">
+<a href="#state_confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2398,6 +2483,18 @@ packets with non-matching source or destination IPs. This defaults to false.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_confidential_instance_config_python">
+<a href="#state_confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+to create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -2413,7 +2510,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">List[Instance<wbr>Template<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">List[Instance<wbr>Template<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -2438,7 +2535,7 @@ documented below.
 <a href="#state_guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">List[Instance<wbr>Template<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">List[Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd>
@@ -2461,7 +2558,7 @@ created from this template.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -2484,7 +2581,7 @@ created from this template,
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
@@ -2557,7 +2654,7 @@ prefix. Conflicts with `name`.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">List[Instance<wbr>Template<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">List[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -2598,7 +2695,7 @@ Provider if no value is given.
 <a href="#state_scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">Dict[Instance<wbr>Template<wbr>Scheduling]</a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -2621,7 +2718,7 @@ this configuration option are detailed below.
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">Dict[Instance<wbr>Template<wbr>Service<wbr>Account]</a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -2632,7 +2729,7 @@ this configuration option are detailed below.
 <a href="#state_shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Dict[Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -2673,6 +2770,92 @@ this configuration option are detailed below.
 
 
 ## Supporting Types
+
+
+<h4 id="instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateConfidentialInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateConfidentialInstanceConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateConfidentialInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceTemplateConfidentialInstanceConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceTemplateConfidentialInstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceTemplateConfidentialInstanceConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_csharp">
+<a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_go">
+<a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_nodejs">
+<a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_confidential_compute_python">
+<a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="instancetemplatedisk">Instance<wbr>Template<wbr>Disk</h4>
@@ -3202,8 +3385,8 @@ initialize this disk. This can be one of: the image's `self_link`,
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autodelete_python">
-<a href="#autodelete_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
+        <span id="auto_delete_python">
+<a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3238,37 +3421,25 @@ specified, the server chooses a default device name to apply to this disk.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskname_python">
-<a href="#diskname_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
+        <span id="disk_encryption_key_python">
+<a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_name_python">
+<a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="disktype_python">
-<a href="#disktype_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
-`"local-ssd"`, or `"pd-standard"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="disk_encryption_key_python">
-<a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Dict[Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3282,6 +3453,18 @@ to the name of the instance.
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
 the size must be exactly 375GB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
+`"local-ssd"`, or `"pd-standard"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3302,7 +3485,7 @@ this disk.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -3336,8 +3519,8 @@ of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceimage_python">
-<a href="#sourceimage_python" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
+        <span id="source_image_python">
+<a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3443,8 +3626,8 @@ initialize this disk. This can be one of: the image's `self_link`,
 
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3907,11 +4090,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accessconfigs_python">
-<a href="#accessconfigs_python" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
+        <span id="access_configs_python">
+<a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">List[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">List[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -3923,11 +4106,11 @@ on that network). This block can be repeated multiple times. Structure documente
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aliasipranges_python">
-<a href="#aliasipranges_python" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
+        <span id="alias_ip_ranges_python">
+<a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">List[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">List[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -3961,8 +4144,8 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkip_python">
-<a href="#networkip_python" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
+        <span id="network_ip_python">
+<a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3986,8 +4169,8 @@ created in. Either `network` or `subnetwork` must be provided.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetworkproject_python">
-<a href="#subnetworkproject_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
+        <span id="subnetwork_project_python">
+<a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4149,8 +4332,8 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="natip_python">
-<a href="#natip_python" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
+        <span id="nat_ip_python">
+<a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4174,8 +4357,8 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicptrdomainname_python">
-<a href="#publicptrdomainname_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
+        <span id="public_ptr_domain_name_python">
+<a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4329,8 +4512,8 @@ error.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetworkrangename_python">
-<a href="#subnetworkrangename_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
+        <span id="subnetwork_range_name_python">
+<a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4577,8 +4760,8 @@ false. Read more on this
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automaticrestart_python">
-<a href="#automaticrestart_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
+        <span id="automatic_restart_python">
+<a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4590,8 +4773,8 @@ terminated by a user). This defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minnodecpus_python">
-<a href="#minnodecpus_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
+        <span id="min_node_cpus_python">
+<a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4600,11 +4783,11 @@ terminated by a user). This defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeaffinities_python">
-<a href="#nodeaffinities_python" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
+        <span id="node_affinities_python">
+<a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">List[Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">List[Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -4615,8 +4798,8 @@ Structure documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onhostmaintenance_python">
-<a href="#onhostmaintenance_python" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
+        <span id="on_host_maintenance_python">
+<a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5109,8 +5292,8 @@ default Google Compute Engine service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableintegritymonitoring_python">
-<a href="#enableintegritymonitoring_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5120,8 +5303,8 @@ default Google Compute Engine service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablesecureboot_python">
-<a href="#enablesecureboot_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5131,8 +5314,8 @@ default Google Compute Engine service account is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablevtpm_python">
-<a href="#enablevtpm_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
+        <span id="enable_vtpm_python">
+<a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5158,6 +5341,6 @@ default Google Compute Engine service account is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

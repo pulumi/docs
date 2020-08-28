@@ -29,7 +29,7 @@ https://cloud.google.com/compute/docs/load-balancing/http/
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#GlobalForwardingRule">GlobalForwardingRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>ip_version=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>metadata_filters=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>port_range=None<span class="p">, </span>project=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.GlobalForwardingRule">GlobalForwardingRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[List[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -267,6 +267,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,6 +279,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,6 +308,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,7 +333,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,6 +475,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,6 +487,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -509,6 +516,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,7 +541,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -673,6 +683,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,6 +695,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,6 +724,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,7 +749,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -876,6 +891,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -887,6 +903,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -895,7 +912,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -915,6 +932,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -923,7 +942,7 @@ load balancing.
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">List[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">List[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing
 configuration to a limited set xDS compliant clients. In their xDS
@@ -938,7 +957,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,7 +1212,8 @@ Get an existing GlobalForwardingRule resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>ip_version=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>metadata_filters=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>port_range=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[List[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalForwardingRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1200,7 +1221,7 @@ Get an existing GlobalForwardingRule resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRule.html">GlobalForwardingRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRuleState.html">GlobalForwardingRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRule.html">GlobalForwardingRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRuleState.html">GlobalForwardingRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1358,6 +1379,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1369,6 +1391,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,6 +1431,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1431,7 +1456,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1583,6 +1609,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1594,6 +1621,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1633,6 +1661,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1656,7 +1686,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1808,6 +1839,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1819,6 +1851,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1858,6 +1891,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1881,7 +1916,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2033,6 +2069,7 @@ or unnecessary diffs.
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2044,6 +2081,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this global forwarding rule.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2063,7 +2101,7 @@ INTERNAL_SELF_MANAGED, only TCP is valid.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -2083,6 +2121,8 @@ will be used for External Global Load Balancing (HTTP(S) LB,
 External TCP/UDP LB, SSL Proxy)
 NOTE: Currently global forwarding rules cannot be used for INTERNAL
 load balancing.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2091,7 +2131,7 @@ load balancing.
 <a href="#state_metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">List[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">List[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing
 configuration to a limited set xDS compliant clients. In their xDS
@@ -2106,7 +2146,8 @@ corresponding labels in the provided metadata.
 metadataFilters specified here can be overridden by those specified in
 the UrlMap that this ForwardingRule references.
 metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2242,7 +2283,8 @@ are valid.
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria
-This list must not be empty and can have at the most 64 entries.  Structure is documented below.
+This list must not be empty and can have at the most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2259,6 +2301,7 @@ MATCH_ANY - At least one of the filterLabels must have a matching
 label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
+Possible values are `MATCH_ANY` and `MATCH_ALL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2278,7 +2321,8 @@ provided metadata.
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria
-This list must not be empty and can have at the most 64 entries.  Structure is documented below.
+This list must not be empty and can have at the most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2295,6 +2339,7 @@ MATCH_ANY - At least one of the filterLabels must have a matching
 label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
+Possible values are `MATCH_ANY` and `MATCH_ALL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2314,7 +2359,8 @@ provided metadata.
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria
-This list must not be empty and can have at the most 64 entries.  Structure is documented below.
+This list must not be empty and can have at the most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2331,6 +2377,7 @@ MATCH_ANY - At least one of the filterLabels must have a matching
 label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
+Possible values are `MATCH_ANY` and `MATCH_ALL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2342,21 +2389,22 @@ provided metadata.
 
     <dt class="property-required"
             title="Required">
-        <span id="filterlabels_python">
-<a href="#filterlabels_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
+        <span id="filter_labels_python">
+<a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">List[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">List[Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria
-This list must not be empty and can have at the most 64 entries.  Structure is documented below.
+This list must not be empty and can have at the most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="filtermatchcriteria_python">
-<a href="#filtermatchcriteria_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
+        <span id="filter_match_criteria_python">
+<a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2367,6 +2415,7 @@ MATCH_ANY - At least one of the filterLabels must have a matching
 label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata.
+Possible values are `MATCH_ANY` and `MATCH_ALL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2529,6 +2578,6 @@ length of 1024 characters.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -31,260 +31,6 @@ To get more information about Address, see:
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/instances-and-network)
     * [Reserving a Static Internal IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Address Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ipAddress = new Gcp.Compute.Address("ipAddress", new Gcp.Compute.AddressArgs
-        {
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewAddress(ctx, "ipAddress", nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-ip_address = gcp.compute.Address("ipAddress")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const ipAddress = new gcp.compute.Address("ip_address", {});
-```
-
-{{% /example %}}
-
-### Address With Subnetwork
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
-        {
-        });
-        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
-        {
-            IpCidrRange = "10.0.0.0/16",
-            Region = "us-central1",
-            Network = defaultNetwork.Id,
-        });
-        var internalWithSubnetAndAddress = new Gcp.Compute.Address("internalWithSubnetAndAddress", new Gcp.Compute.AddressArgs
-        {
-            Subnetwork = defaultSubnetwork.Id,
-            AddressType = "INTERNAL",
-            Address = "10.0.42.42",
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
-		if err != nil {
-			return err
-		}
-		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
-			IpCidrRange: pulumi.String("10.0.0.0/16"),
-			Region:      pulumi.String("us-central1"),
-			Network:     defaultNetwork.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewAddress(ctx, "internalWithSubnetAndAddress", &compute.AddressArgs{
-			Subnetwork:  defaultSubnetwork.ID(),
-			AddressType: pulumi.String("INTERNAL"),
-			Address:     pulumi.String("10.0.42.42"),
-			Region:      pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_network = gcp.compute.Network("defaultNetwork")
-default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
-    ip_cidr_range="10.0.0.0/16",
-    region="us-central1",
-    network=default_network.id)
-internal_with_subnet_and_address = gcp.compute.Address("internalWithSubnetAndAddress",
-    subnetwork=default_subnetwork.id,
-    address_type="INTERNAL",
-    address="10.0.42.42",
-    region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
-const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
-    ipCidrRange: "10.0.0.0/16",
-    region: "us-central1",
-    network: defaultNetwork.id,
-});
-const internalWithSubnetAndAddress = new gcp.compute.Address("internalWithSubnetAndAddress", {
-    subnetwork: defaultSubnetwork.id,
-    addressType: "INTERNAL",
-    address: "10.0.42.42",
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-### Address With Gce Endpoint
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var internalWithGceEndpoint = new Gcp.Compute.Address("internalWithGceEndpoint", new Gcp.Compute.AddressArgs
-        {
-            AddressType = "INTERNAL",
-            Purpose = "GCE_ENDPOINT",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewAddress(ctx, "internalWithGceEndpoint", &compute.AddressArgs{
-			AddressType: pulumi.String("INTERNAL"),
-			Purpose:     pulumi.String("GCE_ENDPOINT"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-internal_with_gce_endpoint = gcp.compute.Address("internalWithGceEndpoint",
-    address_type="INTERNAL",
-    purpose="GCE_ENDPOINT")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpoint", {
-    addressType: "INTERNAL",
-    purpose: "GCE_ENDPOINT",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Address Resource {#create}
@@ -296,7 +42,7 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Address">Address</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>address_type=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_tier=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>subnetwork=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Address">Address</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -477,6 +223,8 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -541,6 +289,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -567,6 +316,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -625,6 +375,8 @@ if any.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,6 +427,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -701,6 +454,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -759,6 +513,8 @@ if any.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,6 +565,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -835,6 +592,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -893,6 +651,8 @@ if any.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -912,7 +672,7 @@ if any.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -943,6 +703,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -969,6 +730,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1271,7 +1033,8 @@ Get an existing Address resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>address_type=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_tier=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>subnetwork=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Address</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1279,7 +1042,7 @@ Get an existing Address resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Address.html">Address</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.AddressState.html">AddressState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Address.html">Address</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.AddressState.html">AddressState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1394,6 +1157,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1480,6 +1245,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1506,6 +1272,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1586,6 +1353,8 @@ if any.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1658,6 +1427,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1684,6 +1454,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1764,6 +1535,8 @@ if any.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1836,6 +1609,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1862,6 +1636,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1942,6 +1717,8 @@ if any.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of address to reserve.
+Default value is `EXTERNAL`.
+Possible values are `INTERNAL` and `EXTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1983,7 +1760,7 @@ if any.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -2014,6 +1791,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2040,6 +1818,7 @@ If it is not provided, the provider project is used.
 - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources.
 - SHARED_LOADBALANCER_VIP for an address that can be used by multiple internal load balancers
 This should only be set when using an Internal address.
+Possible values are `GCE_ENDPOINT` and `SHARED_LOADBALANCER_VIP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2110,6 +1889,6 @@ GCE_ENDPOINT/DNS_RESOLVER purposes.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

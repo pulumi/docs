@@ -18,99 +18,6 @@ To get more information about Node, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/tpu/docs/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### TPU Node Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
-        var tpu = new Gcp.Tpu.Node("tpu", new Gcp.Tpu.NodeArgs
-        {
-            Zone = "us-central1-b",
-            AcceleratorType = "v3-8",
-            TensorflowVersion = available.Apply(available => available.Versions[0]),
-            CidrBlock = "10.2.0.0/29",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		available, err := tpu.GetTensorflowVersions(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		_, err = tpu.NewNode(ctx, "tpu", &tpu.NodeArgs{
-			Zone:              pulumi.String("us-central1-b"),
-			AcceleratorType:   pulumi.String("v3-8"),
-			TensorflowVersion: pulumi.String(available.Versions[0]),
-			CidrBlock:         pulumi.String("10.2.0.0/29"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-available = gcp.tpu.get_tensorflow_versions()
-tpu = gcp.tpu.Node("tpu",
-    zone="us-central1-b",
-    accelerator_type="v3-8",
-    tensorflow_version=available.versions[0],
-    cidr_block="10.2.0.0/29")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const available = gcp.tpu.getTensorflowVersions({});
-const tpu = new gcp.tpu.Node("tpu", {
-    zone: "us-central1-b",
-    acceleratorType: "v3-8",
-    tensorflowVersion: available.then(available => available.versions[0]),
-    cidrBlock: "10.2.0.0/29",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Node Resource {#create}
@@ -122,7 +29,7 @@ const tpu = new gcp.tpu.Node("tpu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/tpu/#Node">Node</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accelerator_type=None<span class="p">, </span>cidr_block=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>scheduling_config=None<span class="p">, </span>tensorflow_version=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/tpu/#pulumi_gcp.tpu.Node">Node</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -412,7 +319,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -540,7 +448,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -668,7 +577,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -746,7 +656,7 @@ is peered with another network that is using that CIDR block.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -794,9 +704,10 @@ If it is not provided, the provider project is used.
 <a href="#scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -993,7 +904,8 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accelerator_type=None<span class="p">, </span>cidr_block=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_endpoints=None<span class="p">, </span>project=None<span class="p">, </span>scheduling_config=None<span class="p">, </span>service_account=None<span class="p">, </span>tensorflow_version=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[NodeNetworkEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Node</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1001,7 +913,7 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Node.html">Node</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.NodeState.html">NodeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Node.html">Node</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.NodeState.html">NodeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1215,7 +1127,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1367,7 +1280,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +1433,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1609,7 +1524,7 @@ is peered with another network that is using that CIDR block.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -1645,7 +1560,7 @@ used.
 <a href="#state_network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
@@ -1669,9 +1584,10 @@ If it is not provided, the provider project is used.
 <a href="#state_scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1950,6 +1866,6 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

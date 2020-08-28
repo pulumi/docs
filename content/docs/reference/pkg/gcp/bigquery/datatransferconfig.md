@@ -19,174 +19,6 @@ To get more information about Config, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Bigquerydatatransfer Config Scheduled Query
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
-        var permissions = new Gcp.Projects.IAMMember("permissions", new Gcp.Projects.IAMMemberArgs
-        {
-            Role = "roles/iam.serviceAccountShortTermTokenMinter",
-            Member = project.Apply(project => $"serviceAccount:service-{project.Number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"),
-        });
-        var myDataset = new Gcp.BigQuery.Dataset("myDataset", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "my_dataset",
-            FriendlyName = "foo",
-            Description = "bar",
-            Location = "asia-northeast1",
-        });
-        var queryConfig = new Gcp.BigQuery.DataTransferConfig("queryConfig", new Gcp.BigQuery.DataTransferConfigArgs
-        {
-            DisplayName = "my-query",
-            Location = "asia-northeast1",
-            DataSourceId = "scheduled_query",
-            Schedule = "first sunday of quarter 00:00",
-            DestinationDatasetId = myDataset.DatasetId,
-            Params = 
-            {
-                { "destination_table_name_template", "my_table" },
-                { "write_disposition", "WRITE_APPEND" },
-                { "query", "SELECT name FROM tabl WHERE x = 'y'" },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		project, err := organizations.LookupProject(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		permissions, err := projects.NewIAMMember(ctx, "permissions", &projects.IAMMemberArgs{
-			Role:   pulumi.String("roles/iam.serviceAccountShortTermTokenMinter"),
-			Member: pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:service-", project.Number, "@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com")),
-		})
-		if err != nil {
-			return err
-		}
-		myDataset, err := bigquery.NewDataset(ctx, "myDataset", &bigquery.DatasetArgs{
-			DatasetId:    pulumi.String("my_dataset"),
-			FriendlyName: pulumi.String("foo"),
-			Description:  pulumi.String("bar"),
-			Location:     pulumi.String("asia-northeast1"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewDataTransferConfig(ctx, "queryConfig", &bigquery.DataTransferConfigArgs{
-			DisplayName:          pulumi.String("my-query"),
-			Location:             pulumi.String("asia-northeast1"),
-			DataSourceId:         pulumi.String("scheduled_query"),
-			Schedule:             pulumi.String("first sunday of quarter 00:00"),
-			DestinationDatasetId: myDataset.DatasetId,
-			Params: pulumi.Map{
-				"destination_table_name_template": pulumi.String("my_table"),
-				"write_disposition":               pulumi.String("WRITE_APPEND"),
-				"query":                           pulumi.String("SELECT name FROM tabl WHERE x = 'y'"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-project = gcp.organizations.get_project()
-permissions = gcp.projects.IAMMember("permissions",
-    role="roles/iam.serviceAccountShortTermTokenMinter",
-    member=f"serviceAccount:service-{project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com")
-my_dataset = gcp.bigquery.Dataset("myDataset",
-    dataset_id="my_dataset",
-    friendly_name="foo",
-    description="bar",
-    location="asia-northeast1")
-query_config = gcp.bigquery.DataTransferConfig("queryConfig",
-    display_name="my-query",
-    location="asia-northeast1",
-    data_source_id="scheduled_query",
-    schedule="first sunday of quarter 00:00",
-    destination_dataset_id=my_dataset.dataset_id,
-    params={
-        "destination_table_name_template": "my_table",
-        "write_disposition": "WRITE_APPEND",
-        "query": "SELECT name FROM tabl WHERE x = 'y'",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const project = gcp.organizations.getProject({});
-const permissions = new gcp.projects.IAMMember("permissions", {
-    role: "roles/iam.serviceAccountShortTermTokenMinter",
-    member: project.then(project => `serviceAccount:service-${project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`),
-});
-const myDataset = new gcp.bigquery.Dataset("myDataset", {
-    datasetId: "my_dataset",
-    friendlyName: "foo",
-    description: "bar",
-    location: "asia-northeast1",
-});
-const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
-    displayName: "my-query",
-    location: "asia-northeast1",
-    dataSourceId: "scheduled_query",
-    schedule: "first sunday of quarter 00:00",
-    destinationDatasetId: myDataset.datasetId,
-    params: {
-        destination_table_name_template: "my_table",
-        write_disposition: "WRITE_APPEND",
-        query: "SELECT name FROM tabl WHERE x = 'y'",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DataTransferConfig Resource {#create}
@@ -198,7 +30,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#DataTransferConfig">DataTransferConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>service_account_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DataTransferConfig">DataTransferConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -805,7 +637,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
 {{% /md %}}</dd>
@@ -1041,7 +873,8 @@ Get an existing DataTransferConfig resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>service_account_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1049,7 +882,7 @@ Get an existing DataTransferConfig resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DataTransferConfig.html">DataTransferConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DataTransferConfigState.html">DataTransferConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DataTransferConfig.html">DataTransferConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DataTransferConfigState.html">DataTransferConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1680,7 +1513,7 @@ required. The name is ignored when creating a transfer config.
 <a href="#state_params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
 {{% /md %}}</dd>
@@ -1748,6 +1581,6 @@ requesting user calling this API has permissions to act as this service account.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

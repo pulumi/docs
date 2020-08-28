@@ -35,7 +35,7 @@ To get more information about FlexibleAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[List[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -215,7 +215,8 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -226,7 +227,8 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -240,6 +242,17 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_csharp">
@@ -248,7 +261,8 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -259,7 +273,8 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -304,7 +319,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -315,7 +331,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -326,7 +343,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -349,7 +367,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type"><a href="#flexibleappversionhandler">List&lt;Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,7 +379,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -385,7 +405,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,7 +417,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,7 +463,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,17 +503,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_csharp">
-<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="servingstatus_csharp">
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span> 
@@ -498,6 +510,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,7 +534,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -538,7 +553,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -549,7 +565,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -563,6 +580,17 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_go">
@@ -571,7 +599,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -582,7 +611,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,7 +657,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,7 +669,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -649,7 +681,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -672,7 +705,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -683,7 +717,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,7 +743,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -719,7 +755,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -764,7 +801,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -803,17 +841,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_go">
-<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="servingstatus_go">
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
 </span> 
@@ -821,6 +848,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -843,7 +872,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -861,7 +891,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -872,7 +903,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -886,6 +918,17 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_nodejs">
@@ -894,7 +937,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +949,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -950,7 +995,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,7 +1007,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,7 +1019,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -995,7 +1043,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type"><a href="#flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1006,7 +1055,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1031,7 +1081,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1042,7 +1093,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,7 +1139,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,17 +1179,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_nodejs">
-<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="servingstatus_nodejs">
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span> 
@@ -1144,6 +1186,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1166,7 +1210,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1182,9 +1227,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#liveness_check_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1193,9 +1239,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#readiness_check_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1209,15 +1256,27 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="api_config_python">
 <a href="#api_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionapiconfig">Dict[Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config]</a></span>
+        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1226,9 +1285,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#automatic_scaling_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>scaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1237,7 +1297,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#beta_settings_python" style="color: inherit; text-decoration: inherit;">beta_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
@@ -1271,9 +1331,10 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeployment">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1282,9 +1343,10 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#endpoints_api_service_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>api_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Dict[Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service]</a></span>
+        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1293,9 +1355,10 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionentrypoint">Dict[Flexible<wbr>App<wbr>Version<wbr>Entrypoint]</a></span>
+        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,7 +1367,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
@@ -1315,10 +1378,11 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1329,7 +1393,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1352,9 +1417,10 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionmanualscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1363,9 +1429,10 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionnetwork">Dict[Flexible<wbr>App<wbr>Version<wbr>Network]</a></span>
+        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,9 +1475,10 @@ If it is not provided, the provider project is used.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresources">Dict[Flexible<wbr>App<wbr>Version<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1449,17 +1517,6 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="service_python">
-<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="serving_status_python">
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
 </span> 
@@ -1467,6 +1524,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,9 +1546,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#vpc_access_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Dict[Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1634,7 +1694,8 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[List[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> FlexibleAppVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1642,7 +1703,7 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionState.html">FlexibleAppVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionState.html">FlexibleAppVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1756,7 +1817,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,7 +1829,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1812,7 +1875,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1823,7 +1887,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1834,7 +1899,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1857,7 +1923,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type"><a href="#flexibleappversionhandler">List&lt;Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1868,7 +1935,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1893,7 +1961,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1904,7 +1973,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1926,7 +1996,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1971,7 +2042,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1982,7 +2054,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2050,6 +2123,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2072,7 +2147,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2090,7 +2166,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2101,7 +2178,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2146,7 +2224,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2157,7 +2236,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2168,7 +2248,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2191,7 +2272,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2202,7 +2284,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2227,7 +2310,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2238,7 +2322,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2260,7 +2345,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2305,7 +2391,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2316,7 +2403,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2384,6 +2472,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2406,7 +2496,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2424,7 +2515,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2435,7 +2527,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2480,7 +2573,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2491,7 +2585,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2502,7 +2597,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2525,7 +2621,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
         <span class="property-type"><a href="#flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2536,7 +2633,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2561,7 +2659,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2572,7 +2671,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2594,7 +2694,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2639,7 +2740,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2650,7 +2752,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2718,6 +2821,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2740,7 +2845,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2756,9 +2862,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#state_api_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionapiconfig">Dict[Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config]</a></span>
+        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2767,9 +2874,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#state_automatic_scaling_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>scaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2778,7 +2886,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#state_beta_settings_python" style="color: inherit; text-decoration: inherit;">beta_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
@@ -2812,9 +2920,10 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#state_deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeployment">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2823,9 +2932,10 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#state_endpoints_api_service_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>api_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Dict[Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service]</a></span>
+        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2834,9 +2944,10 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#state_entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionentrypoint">Dict[Flexible<wbr>App<wbr>Version<wbr>Entrypoint]</a></span>
+        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2845,7 +2956,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#state_env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
@@ -2856,10 +2967,11 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#state_handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2870,7 +2982,8 @@ The first matching URL handles the request and other request handlers are not at
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2893,9 +3006,10 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#state_liveness_check_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2904,9 +3018,10 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#state_manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionmanualscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2926,9 +3041,10 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionnetwork">Dict[Flexible<wbr>App<wbr>Version<wbr>Network]</a></span>
+        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2971,9 +3087,10 @@ If it is not provided, the provider project is used.
 <a href="#state_readiness_check_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2982,9 +3099,10 @@ If it is not provided, the provider project is used.
 <a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresources">Dict[Flexible<wbr>App<wbr>Version<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3052,6 +3170,8 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3072,9 +3192,10 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#state_vpc_access_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Dict[Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3130,6 +3251,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3141,6 +3264,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3152,6 +3277,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3192,6 +3318,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3203,6 +3331,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3214,6 +3344,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3254,6 +3385,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3265,6 +3398,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3276,6 +3411,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3309,13 +3445,15 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authfailaction_python">
-<a href="#authfailaction_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
+        <span id="auth_fail_action_python">
+<a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3327,17 +3465,20 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3384,7 +3525,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3408,7 +3550,8 @@ during which the collected usage would not be reliable. Default: 120s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3497,7 +3640,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3508,7 +3652,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3526,7 +3671,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3550,7 +3696,8 @@ during which the collected usage would not be reliable. Default: 120s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3639,7 +3786,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3650,7 +3798,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3668,7 +3817,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3692,7 +3842,8 @@ during which the collected usage would not be reliable. Default: 120s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3781,7 +3932,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3792,7 +3944,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3804,19 +3957,20 @@ Defaults to a runtime-specific value.
 
     <dt class="property-required"
             title="Required">
-        <span id="cpuutilization_python">
-<a href="#cpuutilization_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
+        <span id="cpu_utilization_python">
+<a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cooldownperiod_python">
-<a href="#cooldownperiod_python" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Period</a>
+        <span id="cool_down_period_python">
+<a href="#cool_down_period_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3828,19 +3982,20 @@ during which the collected usage would not be reliable. Default: 120s
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskutilization_python">
-<a href="#diskutilization_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Utilization</a>
+        <span id="disk_utilization_python">
+<a href="#disk_utilization_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconcurrentrequests_python">
-<a href="#maxconcurrentrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Requests</a>
+        <span id="max_concurrent_requests_python">
+<a href="#max_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3851,8 +4006,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleinstances_python">
-<a href="#maxidleinstances_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Instances</a>
+        <span id="max_idle_instances_python">
+<a href="#max_idle_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3862,8 +4017,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpendinglatency_python">
-<a href="#maxpendinglatency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Latency</a>
+        <span id="max_pending_latency_python">
+<a href="#max_pending_latency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>latency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3873,8 +4028,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtotalinstances_python">
-<a href="#maxtotalinstances_python" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Instances</a>
+        <span id="max_total_instances_python">
+<a href="#max_total_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3884,8 +4039,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minidleinstances_python">
-<a href="#minidleinstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Idle<wbr>Instances</a>
+        <span id="min_idle_instances_python">
+<a href="#min_idle_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>idle_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3895,8 +4050,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minpendinglatency_python">
-<a href="#minpendinglatency_python" style="color: inherit; text-decoration: inherit;">min<wbr>Pending<wbr>Latency</a>
+        <span id="min_pending_latency_python">
+<a href="#min_pending_latency_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pending_<wbr>latency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3906,8 +4061,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintotalinstances_python">
-<a href="#mintotalinstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Total<wbr>Instances</a>
+        <span id="min_total_instances_python">
+<a href="#min_total_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>total_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3917,24 +4072,26 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkutilization_python">
-<a href="#networkutilization_python" style="color: inherit; text-decoration: inherit;">network<wbr>Utilization</a>
+        <span id="network_utilization_python">
+<a href="#network_utilization_python" style="color: inherit; text-decoration: inherit;">network_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestutilization_python">
-<a href="#requestutilization_python" style="color: inherit; text-decoration: inherit;">request<wbr>Utilization</a>
+        <span id="request_utilization_python">
+<a href="#request_utilization_python" style="color: inherit; text-decoration: inherit;">request_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4051,8 +4208,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-required"
             title="Required">
-        <span id="targetutilization_python">
-<a href="#targetutilization_python" style="color: inherit; text-decoration: inherit;">target<wbr>Utilization</a>
+        <span id="target_utilization_python">
+<a href="#target_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4062,8 +4219,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aggregationwindowlength_python">
-<a href="#aggregationwindowlength_python" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window<wbr>Length</a>
+        <span id="aggregation_window_length_python">
+<a href="#aggregation_window_length_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>window_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4251,8 +4408,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreadbytespersecond_python">
-<a href="#targetreadbytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Read<wbr>Bytes<wbr>Per<wbr>Second</a>
+        <span id="target_read_bytes_per_second_python">
+<a href="#target_read_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>read_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4262,8 +4419,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreadopspersecond_python">
-<a href="#targetreadopspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Read<wbr>Ops<wbr>Per<wbr>Second</a>
+        <span id="target_read_ops_per_second_python">
+<a href="#target_read_ops_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>read_<wbr>ops_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4273,8 +4430,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetwritebytespersecond_python">
-<a href="#targetwritebytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Write<wbr>Bytes<wbr>Per<wbr>Second</a>
+        <span id="target_write_bytes_per_second_python">
+<a href="#target_write_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>write_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4284,8 +4441,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetwriteopspersecond_python">
-<a href="#targetwriteopspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Write<wbr>Ops<wbr>Per<wbr>Second</a>
+        <span id="target_write_ops_per_second_python">
+<a href="#target_write_ops_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>write_<wbr>ops_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4473,8 +4630,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreceivedbytespersecond_python">
-<a href="#targetreceivedbytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Received<wbr>Bytes<wbr>Per<wbr>Second</a>
+        <span id="target_received_bytes_per_second_python">
+<a href="#target_received_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>received_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4484,8 +4641,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreceivedpacketspersecond_python">
-<a href="#targetreceivedpacketspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Received<wbr>Packets<wbr>Per<wbr>Second</a>
+        <span id="target_received_packets_per_second_python">
+<a href="#target_received_packets_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>received_<wbr>packets_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4495,8 +4652,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsentbytespersecond_python">
-<a href="#targetsentbytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Sent<wbr>Bytes<wbr>Per<wbr>Second</a>
+        <span id="target_sent_bytes_per_second_python">
+<a href="#target_sent_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>sent_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4506,8 +4663,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsentpacketspersecond_python">
-<a href="#targetsentpacketspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Sent<wbr>Packets<wbr>Per<wbr>Second</a>
+        <span id="target_sent_packets_per_second_python">
+<a href="#target_sent_packets_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>sent_<wbr>packets_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4629,8 +4786,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetconcurrentrequests_python">
-<a href="#targetconcurrentrequests_python" style="color: inherit; text-decoration: inherit;">target<wbr>Concurrent<wbr>Requests</a>
+        <span id="target_concurrent_requests_python">
+<a href="#target_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">target_<wbr>concurrent_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4640,8 +4797,8 @@ Defaults to a runtime-specific value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetrequestcountpersecond_python">
-<a href="#targetrequestcountpersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Request<wbr>Count<wbr>Per<wbr>Second</a>
+        <span id="target_request_count_per_second_python">
+<a href="#target_request_count_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>request_<wbr>count_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4682,7 +4839,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4693,7 +4851,8 @@ Defaults to a runtime-specific value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4705,7 +4864,8 @@ Defaults to a runtime-specific value.
         <span class="property-type"><a href="#flexibleappversiondeploymentfile">List&lt;Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4716,7 +4876,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4734,7 +4895,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4745,7 +4907,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4757,7 +4920,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-type"><a href="#flexibleappversiondeploymentfile">[]Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4768,7 +4932,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4786,7 +4951,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4797,7 +4963,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4809,7 +4976,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-type"><a href="#flexibleappversiondeploymentfile">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4820,7 +4988,8 @@ All files must be readable using the credentials supplied with this call.  Struc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4832,13 +5001,14 @@ All files must be readable using the credentials supplied with this call.  Struc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudbuildoptions_python">
-<a href="#cloudbuildoptions_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Options</a>
+        <span id="cloud_build_options_python">
+<a href="#cloud_build_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4847,9 +5017,10 @@ All files must be readable using the credentials supplied with this call.  Struc
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4858,10 +5029,11 @@ All files must be readable using the credentials supplied with this call.  Struc
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentfile">List[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentfile">List[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4870,9 +5042,10 @@ All files must be readable using the credentials supplied with this call.  Struc
 <a href="#zip_python" style="color: inherit; text-decoration: inherit;">zip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4992,8 +5165,8 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-required"
             title="Required">
-        <span id="appyamlpath_python">
-<a href="#appyamlpath_python" style="color: inherit; text-decoration: inherit;">app<wbr>Yaml<wbr>Path</a>
+        <span id="app_yaml_path_python">
+<a href="#app_yaml_path_python" style="color: inherit; text-decoration: inherit;">app_<wbr>yaml_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5003,8 +5176,8 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudbuildtimeout_python">
-<a href="#cloudbuildtimeout_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Timeout</a>
+        <span id="cloud_build_timeout_python">
+<a href="#cloud_build_timeout_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5265,8 +5438,8 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceurl_python">
-<a href="#sourceurl_python" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
+        <span id="source_url_python">
+<a href="#source_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5276,8 +5449,8 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sha1sum_python">
-<a href="#sha1sum_python" style="color: inherit; text-decoration: inherit;">sha1Sum</a>
+        <span id="sha1_sum_python">
+<a href="#sha1_sum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>sum</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5399,8 +5572,8 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceurl_python">
-<a href="#sourceurl_python" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
+        <span id="source_url_python">
+<a href="#source_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5410,8 +5583,8 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filescount_python">
-<a href="#filescount_python" style="color: inherit; text-decoration: inherit;">files<wbr>Count</a>
+        <span id="files_count_python">
+<a href="#files_count_python" style="color: inherit; text-decoration: inherit;">files_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5491,6 +5664,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5547,6 +5722,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5603,6 +5780,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5641,8 +5820,8 @@ the configuration ID. In this case, configId must be omitted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletracesampling_python">
-<a href="#disabletracesampling_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Sampling</a>
+        <span id="disable_trace_sampling_python">
+<a href="#disable_trace_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>sampling</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5652,13 +5831,15 @@ the configuration ID. In this case, configId must be omitted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rolloutstrategy_python">
-<a href="#rolloutstrategy_python" style="color: inherit; text-decoration: inherit;">rollout<wbr>Strategy</a>
+        <span id="rollout_strategy_python">
+<a href="#rollout_strategy_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5785,6 +5966,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5796,6 +5979,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5807,6 +5992,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5829,6 +6015,7 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5840,7 +6027,8 @@ the configuration ID. In this case, configId must be omitted.
         <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5871,6 +6059,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5882,6 +6072,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5893,6 +6085,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5915,6 +6108,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5926,7 +6120,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5957,6 +6152,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5968,6 +6165,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5979,6 +6178,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6001,6 +6201,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6012,7 +6213,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6036,13 +6238,15 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authfailaction_python">
-<a href="#authfailaction_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
+        <span id="auth_fail_action_python">
+<a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6054,17 +6258,20 @@ All URLs that begin with this prefix are handled by this handler, using the port
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecthttpresponsecode_python">
-<a href="#redirecthttpresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
+        <span id="redirect_http_response_code_python">
+<a href="#redirect_http_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6073,38 +6280,40 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerscript">Dict[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="staticfiles_python">
-<a href="#staticfiles_python" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
+        <span id="static_files_python">
+<a href="#static_files_python" style="color: inherit; text-decoration: inherit;">static_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Dict[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlregex_python">
-<a href="#urlregex_python" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
+        <span id="url_regex_python">
+<a href="#url_regex_python" style="color: inherit; text-decoration: inherit;">url_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6194,8 +6403,8 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
     <dt class="property-required"
             title="Required">
-        <span id="scriptpath_python">
-<a href="#scriptpath_python" style="color: inherit; text-decoration: inherit;">script<wbr>Path</a>
+        <span id="script_path_python">
+<a href="#script_path_python" style="color: inherit; text-decoration: inherit;">script_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6503,8 +6712,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationreadable_python">
-<a href="#applicationreadable_python" style="color: inherit; text-decoration: inherit;">application<wbr>Readable</a>
+        <span id="application_readable_python">
+<a href="#application_readable_python" style="color: inherit; text-decoration: inherit;">application_<wbr>readable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6529,11 +6738,11 @@ Default is '0s'
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheaders_python">
-<a href="#httpheaders_python" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
+        <span id="http_headers_python">
+<a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
@@ -6541,8 +6750,8 @@ An object containing a list of "key:value" value pairs.".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mimetype_python">
-<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+        <span id="mime_type_python">
+<a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6565,8 +6774,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requirematchingfile_python">
-<a href="#requirematchingfile_python" style="color: inherit; text-decoration: inherit;">require<wbr>Matching<wbr>File</a>
+        <span id="require_matching_file_python">
+<a href="#require_matching_file_python" style="color: inherit; text-decoration: inherit;">require_<wbr>matching_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6576,8 +6785,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uploadpathregex_python">
-<a href="#uploadpathregex_python" style="color: inherit; text-decoration: inherit;">upload<wbr>Path<wbr>Regex</a>
+        <span id="upload_path_regex_python">
+<a href="#upload_path_regex_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>path_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6879,8 +7088,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkinterval_python">
-<a href="#checkinterval_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
+        <span id="check_interval_python">
+<a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6890,8 +7099,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6912,8 +7121,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialdelay_python">
-<a href="#initialdelay_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay</a>
+        <span id="initial_delay_python">
+<a href="#initial_delay_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6923,8 +7132,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7277,8 +7486,8 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardedports_python">
-<a href="#forwardedports_python" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ports</a>
+        <span id="forwarded_ports_python">
+<a href="#forwarded_ports_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7288,8 +7497,8 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancetag_python">
-<a href="#instancetag_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Tag</a>
+        <span id="instance_tag_python">
+<a href="#instance_tag_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7620,8 +7829,8 @@ The path can refer to text matched in groupings in the URL pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appstarttimeout_python">
-<a href="#appstarttimeout_python" style="color: inherit; text-decoration: inherit;">app<wbr>Start<wbr>Timeout</a>
+        <span id="app_start_timeout_python">
+<a href="#app_start_timeout_python" style="color: inherit; text-decoration: inherit;">app_<wbr>start_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7632,8 +7841,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkinterval_python">
-<a href="#checkinterval_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
+        <span id="check_interval_python">
+<a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7643,8 +7852,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7665,8 +7874,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7751,7 +7960,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresourcesvolume">List&lt;Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -7802,7 +8012,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresourcesvolume">[]Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -7853,7 +8064,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresourcesvolume">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume[]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -7876,8 +8088,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskgb_python">
-<a href="#diskgb_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
+        <span id="disk_gb_python">
+<a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7887,8 +8099,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memorygb_python">
-<a href="#memorygb_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7902,9 +8114,10 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresourcesvolume">List[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresourcesvolume">List[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -8065,8 +8278,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-required"
             title="Required">
-        <span id="sizegb_python">
-<a href="#sizegb_python" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
+        <span id="size_gb_python">
+<a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8076,8 +8289,8 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8193,6 +8406,6 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

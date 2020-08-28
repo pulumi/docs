@@ -21,295 +21,6 @@ To get more information about UptimeCheckConfig, see:
 > **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Uptime Check Config Http
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var http = new Gcp.Monitoring.UptimeCheckConfig("http", new Gcp.Monitoring.UptimeCheckConfigArgs
-        {
-            ContentMatchers = 
-            {
-                new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
-                {
-                    Content = "example",
-                },
-            },
-            DisplayName = "http-uptime-check",
-            HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
-            {
-                Path = "/some-path",
-                Port = 8010,
-            },
-            MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
-            {
-                Labels = 
-                {
-                    { "host", "192.168.1.1" },
-                    { "project_id", "my-project-name" },
-                },
-                Type = "uptime_url",
-            },
-            Timeout = "60s",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = monitoring.NewUptimeCheckConfig(ctx, "http", &monitoring.UptimeCheckConfigArgs{
-			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
-				&monitoring.UptimeCheckConfigContentMatcherArgs{
-					Content: pulumi.String("example"),
-				},
-			},
-			DisplayName: pulumi.String("http-uptime-check"),
-			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
-				Path: pulumi.String("/some-path"),
-				Port: pulumi.Int(8010),
-			},
-			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
-				Labels: pulumi.Map{
-					"host":       pulumi.String("192.168.1.1"),
-					"project_id": pulumi.String("my-project-name"),
-				},
-				Type: pulumi.String("uptime_url"),
-			},
-			Timeout: pulumi.String("60s"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http = gcp.monitoring.UptimeCheckConfig("http",
-    content_matchers=[{
-        "content": "example",
-    }],
-    display_name="http-uptime-check",
-    http_check={
-        "path": "/some-path",
-        "port": "8010",
-    },
-    monitored_resource={
-        "labels": {
-            "host": "192.168.1.1",
-            "project_id": "my-project-name",
-        },
-        "type": "uptime_url",
-    },
-    timeout="60s")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http = new gcp.monitoring.UptimeCheckConfig("http", {
-    contentMatchers: [{
-        content: "example",
-    }],
-    displayName: "http-uptime-check",
-    httpCheck: {
-        path: "/some-path",
-        port: 8010,
-    },
-    monitoredResource: {
-        labels: {
-            host: "192.168.1.1",
-            project_id: "my-project-name",
-        },
-        type: "uptime_url",
-    },
-    timeout: "60s",
-});
-```
-
-{{% /example %}}
-
-### Uptime Check Config Https
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var https = new Gcp.Monitoring.UptimeCheckConfig("https", new Gcp.Monitoring.UptimeCheckConfigArgs
-        {
-            ContentMatchers = 
-            {
-                new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
-                {
-                    Content = "example",
-                },
-            },
-            DisplayName = "https-uptime-check",
-            HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
-            {
-                Path = "/some-path",
-                Port = 443,
-                UseSsl = true,
-                ValidateSsl = true,
-            },
-            MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
-            {
-                Labels = 
-                {
-                    { "host", "192.168.1.1" },
-                    { "project_id", "my-project-name" },
-                },
-                Type = "uptime_url",
-            },
-            Timeout = "60s",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = monitoring.NewUptimeCheckConfig(ctx, "https", &monitoring.UptimeCheckConfigArgs{
-			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
-				&monitoring.UptimeCheckConfigContentMatcherArgs{
-					Content: pulumi.String("example"),
-				},
-			},
-			DisplayName: pulumi.String("https-uptime-check"),
-			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
-				Path:        pulumi.String("/some-path"),
-				Port:        pulumi.Int(443),
-				UseSsl:      pulumi.Bool(true),
-				ValidateSsl: pulumi.Bool(true),
-			},
-			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
-				Labels: pulumi.Map{
-					"host":       pulumi.String("192.168.1.1"),
-					"project_id": pulumi.String("my-project-name"),
-				},
-				Type: pulumi.String("uptime_url"),
-			},
-			Timeout: pulumi.String("60s"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-https = gcp.monitoring.UptimeCheckConfig("https",
-    content_matchers=[{
-        "content": "example",
-    }],
-    display_name="https-uptime-check",
-    http_check={
-        "path": "/some-path",
-        "port": "443",
-        "useSsl": True,
-        "validateSsl": True,
-    },
-    monitored_resource={
-        "labels": {
-            "host": "192.168.1.1",
-            "project_id": "my-project-name",
-        },
-        "type": "uptime_url",
-    },
-    timeout="60s")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const https = new gcp.monitoring.UptimeCheckConfig("https", {
-    contentMatchers: [{
-        content: "example",
-    }],
-    displayName: "https-uptime-check",
-    httpCheck: {
-        path: "/some-path",
-        port: 443,
-        useSsl: true,
-        validateSsl: true,
-    },
-    monitoredResource: {
-        labels: {
-            host: "192.168.1.1",
-            project_id: "my-project-name",
-        },
-        type: "uptime_url",
-    },
-    timeout: "60s",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a UptimeCheckConfig Resource {#create}
@@ -321,7 +32,7 @@ const https = new gcp.monitoring.UptimeCheckConfig("https", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#UptimeCheckConfig">UptimeCheckConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_matchers=None<span class="p">, </span>display_name=None<span class="p">, </span>http_check=None<span class="p">, </span>monitored_resource=None<span class="p">, </span>period=None<span class="p">, </span>project=None<span class="p">, </span>resource_group=None<span class="p">, </span>selected_regions=None<span class="p">, </span>tcp_check=None<span class="p">, </span>timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.UptimeCheckConfig">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[List[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -523,7 +234,8 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List&lt;Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,7 +246,8 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -545,7 +258,8 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,7 +293,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,7 +316,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -641,7 +357,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">[]Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -652,7 +369,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,7 +381,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -697,7 +416,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -719,7 +439,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -759,7 +480,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher[]</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -770,7 +492,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,7 +504,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -815,7 +539,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -837,7 +562,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -875,9 +601,10 @@ If it is not provided, the provider project is used.
 <a href="#content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,9 +613,10 @@ If it is not provided, the provider project is used.
 <a href="#http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Dict[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -897,9 +625,10 @@ If it is not provided, the provider project is used.
 <a href="#monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Dict[Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -931,9 +660,10 @@ If it is not provided, the provider project is used.
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Dict[Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,9 +683,10 @@ If it is not provided, the provider project is used.
 <a href="#tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Dict[Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1148,7 +879,8 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content_matchers=None<span class="p">, </span>display_name=None<span class="p">, </span>http_check=None<span class="p">, </span>monitored_resource=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>project=None<span class="p">, </span>resource_group=None<span class="p">, </span>selected_regions=None<span class="p">, </span>tcp_check=None<span class="p">, </span>timeout=None<span class="p">, </span>uptime_check_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[List[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uptime_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UptimeCheckConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1156,7 +888,7 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfigState.html">UptimeCheckConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfigState.html">UptimeCheckConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1270,7 +1002,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List&lt;Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1025,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1303,7 +1037,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1349,7 +1084,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1371,7 +1107,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1411,7 +1148,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">[]Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1433,7 +1171,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1183,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1490,7 +1230,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1512,7 +1253,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1552,7 +1294,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher[]</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1574,7 +1317,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1585,7 +1329,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1631,7 +1376,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1653,7 +1399,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1691,9 +1438,10 @@ If it is not provided, the provider project is used.
 <a href="#state_content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.  Structure is documented below.
+    <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1713,9 +1461,10 @@ If it is not provided, the provider project is used.
 <a href="#state_http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Dict[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1724,9 +1473,10 @@ If it is not provided, the provider project is used.
 <a href="#state_monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Dict[Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer  Structure is documented below.
+    <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,9 +1520,10 @@ If it is not provided, the provider project is used.
 <a href="#state_resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Dict[Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The group resource associated with the configuration.  Structure is documented below.
+    <dd>{{% md %}}The group resource associated with the configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1792,9 +1543,10 @@ If it is not provided, the provider project is used.
 <a href="#state_tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Dict[Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information needed to make a TCP check.  Structure is documented below.
+    <dd>{{% md %}}Contains information needed to make a TCP check.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1872,6 +1624,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+Default value is `CONTAINS_STRING`.
+Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1901,6 +1655,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+Default value is `CONTAINS_STRING`.
+Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1930,6 +1686,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+Default value is `CONTAINS_STRING`.
+Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1959,6 +1717,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+Default value is `CONTAINS_STRING`.
+Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1994,7 +1754,31 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_csharp">
+<a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
+Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2043,6 +1827,19 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestmethod_csharp">
+<a href="#requestmethod_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+Default value is `GET`.
+Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usessl_csharp">
 <a href="#usessl_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
 </span> 
@@ -2078,7 +1875,31 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_go">
+<a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
+Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2127,6 +1948,19 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestmethod_go">
+<a href="#requestmethod_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+Default value is `GET`.
+Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usessl_go">
 <a href="#usessl_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
 </span> 
@@ -2162,7 +1996,31 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_nodejs">
+<a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
+Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2211,6 +2069,19 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="requestmethod_nodejs">
+<a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+Default value is `GET`.
+Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usessl_nodejs">
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span> 
@@ -2240,13 +2111,37 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authinfo_python">
-<a href="#authinfo_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Info</a>
+        <span id="auth_info_python">
+<a href="#auth_info_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Dict[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.  Structure is documented below.
+    <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_python">
+<a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The content type to use for the check.
+Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2255,15 +2150,15 @@ If it is not provided, the provider project is used.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maskheaders_python">
-<a href="#maskheaders_python" style="color: inherit; text-decoration: inherit;">mask<wbr>Headers</a>
+        <span id="mask_headers_python">
+<a href="#mask_headers_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2295,8 +2190,21 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usessl_python">
-<a href="#usessl_python" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
+        <span id="request_method_python">
+<a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+Default value is `GET`.
+Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_ssl_python">
+<a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2306,8 +2214,8 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="validatessl_python">
-<a href="#validatessl_python" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssl</a>
+        <span id="validate_ssl_python">
+<a href="#validate_ssl_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2348,7 +2256,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The password to authenticate.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2377,7 +2286,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The password to authenticate.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2406,7 +2316,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The password to authenticate.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2435,7 +2346,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The password to authenticate.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The password to authenticate.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2567,7 +2479,7 @@ If it is not provided, the provider project is used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd>
@@ -2628,6 +2540,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
+Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2657,6 +2570,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
+Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2686,6 +2600,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
+Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2697,8 +2612,8 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupid_python">
-<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2708,13 +2623,14 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcetype_python">
-<a href="#resourcetype_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
+Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2825,6 +2741,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -20,104 +20,6 @@ Allows creation and management of an App Engine application.
 > **Warning:** All arguments including `iap.oauth2_client_secret` will be stored in the raw
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
-        {
-            ProjectId = "your-project-id",
-            OrgId = "1234567",
-        });
-        var app = new Gcp.AppEngine.Application("app", new Gcp.AppEngine.ApplicationArgs
-        {
-            Project = myProject.ProjectId,
-            LocationId = "us-central",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
-			ProjectId: pulumi.String("your-project-id"),
-			OrgId:     pulumi.String("1234567"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
-			Project:    myProject.ProjectId,
-			LocationId: pulumi.String("us-central"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_project = gcp.organizations.Project("myProject",
-    project_id="your-project-id",
-    org_id="1234567")
-app = gcp.appengine.Application("app",
-    project=my_project.project_id,
-    location_id="us-central")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myProject = new gcp.organizations.Project("myProject", {
-    projectId: "your-project-id",
-    orgId: "1234567",
-});
-const app = new gcp.appengine.Application("app", {
-    project: myProject.projectId,
-    locationId: "us-central",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Application Resource {#create}
@@ -129,7 +31,7 @@ const app = new gcp.appengine.Application("app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_domain=None<span class="p">, </span>database_type=None<span class="p">, </span>feature_settings=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[ApplicationFeatureSettingsArgs]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[ApplicationIapArgs]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -366,7 +268,7 @@ to serve the app from.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -453,7 +355,7 @@ to serve the app from.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -540,7 +442,7 @@ to serve the app from.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -602,7 +504,7 @@ to serve the app from.
 <a href="#feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">Dict[Application<wbr>Feature<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd>
@@ -613,7 +515,7 @@ to serve the app from.
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">Dict[Application<wbr>Iap]</a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd>
@@ -627,7 +529,7 @@ to serve the app from.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -1048,7 +950,8 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_id=None<span class="p">, </span>auth_domain=None<span class="p">, </span>code_bucket=None<span class="p">, </span>database_type=None<span class="p">, </span>default_bucket=None<span class="p">, </span>default_hostname=None<span class="p">, </span>feature_settings=None<span class="p">, </span>gcr_domain=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>url_dispatch_rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">code_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[ApplicationFeatureSettingsArgs]</span> = None<span class="p">, </span><span class="nx">gcr_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[ApplicationIapArgs]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url_dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationUrlDispatchRuleArgs]]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1056,7 +959,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1293,7 +1196,7 @@ to serve the app from.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -1457,7 +1360,7 @@ to serve the app from.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -1621,7 +1524,7 @@ to serve the app from.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -1726,7 +1629,7 @@ you may get a "Permission denied" error.
 <a href="#state_feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">Dict[Application<wbr>Feature<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd>
@@ -1748,7 +1651,7 @@ you may get a "Permission denied" error.
 <a href="#state_iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">Dict[Application<wbr>Iap]</a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd>
@@ -1785,7 +1688,7 @@ to serve the app from.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
-~>**NOTE**: GCP only accepts project ID, not project number. If you are using number,
+~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
 {{% /md %}}</dd>
 
@@ -1806,7 +1709,7 @@ you may get a "Permission denied" error.
 <a href="#state_url_dispatch_rules_python" style="color: inherit; text-decoration: inherit;">url_<wbr>dispatch_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 {{% /md %}}</dd>
@@ -1903,8 +1806,8 @@ and liveness checks.
 
     <dt class="property-required"
             title="Required">
-        <span id="splithealthchecks_python">
-<a href="#splithealthchecks_python" style="color: inherit; text-decoration: inherit;">split<wbr>Health<wbr>Checks</a>
+        <span id="split_health_checks_python">
+<a href="#split_health_checks_python" style="color: inherit; text-decoration: inherit;">split_<wbr>health_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2093,8 +1996,8 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientid_python">
-<a href="#oauth2clientid_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
+        <span id="oauth2_client_id_python">
+<a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2104,8 +2007,8 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientsecret_python">
-<a href="#oauth2clientsecret_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
+        <span id="oauth2_client_secret_python">
+<a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2126,8 +2029,8 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauth2clientsecretsha256_python">
-<a href="#oauth2clientsecretsha256_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
+        <span id="oauth2_client_secret_sha256_python">
+<a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2319,6 +2222,6 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

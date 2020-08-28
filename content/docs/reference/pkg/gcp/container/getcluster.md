@@ -12,120 +12,6 @@ meta_desc: "Explore the GetCluster function of the container module, including e
 
 Get info about a GKE cluster from its name and location.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myCluster = Output.Create(Gcp.Container.GetCluster.InvokeAsync(new Gcp.Container.GetClusterArgs
-        {
-            Name = "my-cluster",
-            Location = "us-east1-a",
-        }));
-        this.ClusterUsername = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Username);
-        this.ClusterPassword = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Password);
-        this.Endpoint = myCluster.Apply(myCluster => myCluster.Endpoint);
-        this.InstanceGroupUrls = myCluster.Apply(myCluster => myCluster.InstanceGroupUrls);
-        this.NodeConfig = myCluster.Apply(myCluster => myCluster.NodeConfigs);
-        this.NodePools = myCluster.Apply(myCluster => myCluster.NodePools);
-    }
-
-    [Output("clusterUsername")]
-    public Output<string> ClusterUsername { get; set; }
-    [Output("clusterPassword")]
-    public Output<string> ClusterPassword { get; set; }
-    [Output("endpoint")]
-    public Output<string> Endpoint { get; set; }
-    [Output("instanceGroupUrls")]
-    public Output<string> InstanceGroupUrls { get; set; }
-    [Output("nodeConfig")]
-    public Output<string> NodeConfig { get; set; }
-    [Output("nodePools")]
-    public Output<string> NodePools { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "us-east1-a"
-		myCluster, err := container.LookupCluster(ctx, &container.LookupClusterArgs{
-			Name:     "my-cluster",
-			Location: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("clusterUsername", myCluster.MasterAuths[0].Username)
-		ctx.Export("clusterPassword", myCluster.MasterAuths[0].Password)
-		ctx.Export("endpoint", myCluster.Endpoint)
-		ctx.Export("instanceGroupUrls", myCluster.InstanceGroupUrls)
-		ctx.Export("nodeConfig", myCluster.NodeConfigs)
-		ctx.Export("nodePools", myCluster.NodePools)
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_cluster = gcp.container.get_cluster(name="my-cluster",
-    location="us-east1-a")
-pulumi.export("clusterUsername", my_cluster.master_auths[0]["username"])
-pulumi.export("clusterPassword", my_cluster.master_auths[0]["password"])
-pulumi.export("endpoint", my_cluster.endpoint)
-pulumi.export("instanceGroupUrls", my_cluster.instance_group_urls)
-pulumi.export("nodeConfig", my_cluster.node_configs)
-pulumi.export("nodePools", my_cluster.node_pools)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myCluster = gcp.container.getCluster({
-    name: "my-cluster",
-    location: "us-east1-a",
-});
-export const clusterUsername = myCluster.then(myCluster => myCluster.masterAuths[0].username);
-export const clusterPassword = myCluster.then(myCluster => myCluster.masterAuths[0].password);
-export const endpoint = myCluster.then(myCluster => myCluster.endpoint);
-export const instanceGroupUrls = myCluster.then(myCluster => myCluster.instanceGroupUrls);
-export const nodeConfig = myCluster.then(myCluster => myCluster.nodeConfigs);
-export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetCluster {#using}
@@ -139,7 +25,7 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -529,6 +415,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="defaultsnatstatuses_csharp">
+<a href="#defaultsnatstatuses_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Snat<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdefaultsnatstatus">List&lt;Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -755,6 +651,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusternetworkpolicy">List&lt;Get<wbr>Cluster<wbr>Network<wbr>Policy&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkingmode_csharp">
+<a href="#networkingmode_csharp" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1047,6 +953,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="defaultsnatstatuses_go">
+<a href="#defaultsnatstatuses_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Snat<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdefaultsnatstatus">[]Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -1273,6 +1189,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusternetworkpolicy">[]Get<wbr>Cluster<wbr>Network<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkingmode_go">
+<a href="#networkingmode_go" style="color: inherit; text-decoration: inherit;">Networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1565,6 +1491,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="defaultsnatstatuses_nodejs">
+<a href="#defaultsnatstatuses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Snat<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdefaultsnatstatus">Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -1791,6 +1727,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusternetworkpolicy">Get<wbr>Cluster<wbr>Network<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="networkingmode_nodejs">
+<a href="#networkingmode_nodejs" style="color: inherit; text-decoration: inherit;">networking<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2083,6 +2029,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="default_snat_statuses_python">
+<a href="#default_snat_statuses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>snat_<wbr>statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterdefaultsnatstatus">List[Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -2314,6 +2270,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="networking_mode_python">
+<a href="#networking_mode_python" style="color: inherit; text-decoration: inherit;">networking_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="node_configs_python">
 <a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span> 
@@ -2408,7 +2374,7 @@ The following output properties are available:
 <a href="#resource_labels_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2866,101 +2832,101 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cloudrunconfigs_python">
-<a href="#cloudrunconfigs_python" style="color: inherit; text-decoration: inherit;">cloudrun<wbr>Configs</a>
+        <span id="cloudrun_configs_python">
+<a href="#cloudrun_configs_python" style="color: inherit; text-decoration: inherit;">cloudrun_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="configconnectorconfigs_python">
-<a href="#configconnectorconfigs_python" style="color: inherit; text-decoration: inherit;">config<wbr>Connector<wbr>Configs</a>
+        <span id="config_connector_configs_python">
+<a href="#config_connector_configs_python" style="color: inherit; text-decoration: inherit;">config_<wbr>connector_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="dnscacheconfigs_python">
-<a href="#dnscacheconfigs_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Cache<wbr>Configs</a>
+        <span id="dns_cache_configs_python">
+<a href="#dns_cache_configs_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cache_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="gcepersistentdiskcsidriverconfigs_python">
-<a href="#gcepersistentdiskcsidriverconfigs_python" style="color: inherit; text-decoration: inherit;">gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Configs</a>
+        <span id="gce_persistent_disk_csi_driver_configs_python">
+<a href="#gce_persistent_disk_csi_driver_configs_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk_<wbr>csi_<wbr>driver_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="horizontalpodautoscalings_python">
-<a href="#horizontalpodautoscalings_python" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Pod<wbr>Autoscalings</a>
+        <span id="horizontal_pod_autoscalings_python">
+<a href="#horizontal_pod_autoscalings_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscalings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="httploadbalancings_python">
-<a href="#httploadbalancings_python" style="color: inherit; text-decoration: inherit;">http<wbr>Load<wbr>Balancings</a>
+        <span id="http_load_balancings_python">
+<a href="#http_load_balancings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>load_<wbr>balancings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="istioconfigs_python">
-<a href="#istioconfigs_python" style="color: inherit; text-decoration: inherit;">istio<wbr>Configs</a>
+        <span id="istio_configs_python">
+<a href="#istio_configs_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="kalmconfigs_python">
-<a href="#kalmconfigs_python" style="color: inherit; text-decoration: inherit;">kalm<wbr>Configs</a>
+        <span id="kalm_configs_python">
+<a href="#kalm_configs_python" style="color: inherit; text-decoration: inherit;">kalm_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="kubernetesdashboards_python">
-<a href="#kubernetesdashboards_python" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Dashboards</a>
+        <span id="kubernetes_dashboards_python">
+<a href="#kubernetes_dashboards_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>dashboards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigkubernetesdashboard">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkubernetesdashboard">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="networkpolicyconfigs_python">
-<a href="#networkpolicyconfigs_python" style="color: inherit; text-decoration: inherit;">network<wbr>Policy<wbr>Configs</a>
+        <span id="network_policy_configs_python">
+<a href="#network_policy_configs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3942,8 +3908,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="securitygroup_python">
-<a href="#securitygroup_python" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
+        <span id="security_group_python">
+<a href="#security_group_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4118,18 +4084,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autoprovisioningdefaults_python">
-<a href="#autoprovisioningdefaults_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Defaults</a>
+        <span id="auto_provisioning_defaults_python">
+<a href="#auto_provisioning_defaults_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>defaults</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="autoscalingprofile_python">
-<a href="#autoscalingprofile_python" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Profile</a>
+        <span id="autoscaling_profile_python">
+<a href="#autoscaling_profile_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4148,11 +4114,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcelimits_python">
-<a href="#resourcelimits_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
+        <span id="resource_limits_python">
+<a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4304,8 +4270,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4480,8 +4446,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcetype_python">
-<a href="#resourcetype_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4682,8 +4648,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyname_python">
-<a href="#keyname_python" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4697,6 +4663,92 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusterdefaultsnatstatus">Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDefaultSnatStatus">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterDefaultSnatStatus">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterDefaultSnatStatus.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4928,8 +4980,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clusteripv4cidrblock_python">
-<a href="#clusteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="cluster_ipv4_cidr_block_python">
+<a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4938,8 +4990,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clustersecondaryrangename_python">
-<a href="#clustersecondaryrangename_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+        <span id="cluster_secondary_range_name_python">
+<a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4948,8 +5000,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeipv4cidrblock_python">
-<a href="#nodeipv4cidrblock_python" style="color: inherit; text-decoration: inherit;">node<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="node_ipv4_cidr_block_python">
+<a href="#node_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4958,8 +5010,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicesipv4cidrblock_python">
-<a href="#servicesipv4cidrblock_python" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
+        <span id="services_ipv4_cidr_block_python">
+<a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4968,8 +5020,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicessecondaryrangename_python">
-<a href="#servicessecondaryrangename_python" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
+        <span id="services_secondary_range_name_python">
+<a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4978,8 +5030,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subnetworkname_python">
-<a href="#subnetworkname_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Name</a>
+        <span id="subnetwork_name_python">
+<a href="#subnetwork_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5094,21 +5146,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dailymaintenancewindows_python">
-<a href="#dailymaintenancewindows_python" style="color: inherit; text-decoration: inherit;">daily<wbr>Maintenance<wbr>Windows</a>
+        <span id="daily_maintenance_windows_python">
+<a href="#daily_maintenance_windows_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>maintenance_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="recurringwindows_python">
-<a href="#recurringwindows_python" style="color: inherit; text-decoration: inherit;">recurring<wbr>Windows</a>
+        <span id="recurring_windows_python">
+<a href="#recurring_windows_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5230,8 +5282,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5376,8 +5428,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="endtime_python">
-<a href="#endtime_python" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5396,8 +5448,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5632,8 +5684,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5642,18 +5694,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcertificateconfigs_python">
-<a href="#clientcertificateconfigs_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Configs</a>
+        <span id="client_certificate_configs_python">
+<a href="#client_certificate_configs_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">List[Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">List[Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5662,8 +5714,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clustercacertificate_python">
-<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+        <span id="cluster_ca_certificate_python">
+<a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5768,8 +5820,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="issueclientcertificate_python">
-<a href="#issueclientcertificate_python" style="color: inherit; text-decoration: inherit;">issue<wbr>Client<wbr>Certificate</a>
+        <span id="issue_client_certificate_python">
+<a href="#issue_client_certificate_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5854,11 +5906,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cidrblocks_python">
-<a href="#cidrblocks_python" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
+        <span id="cidr_blocks_python">
+<a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">List[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">List[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6702,18 +6754,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bootdiskkmskey_python">
-<a href="#bootdiskkmskey_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="disktype_python">
-<a href="#disktype_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+        <span id="boot_disk_kms_key_python">
+<a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6732,18 +6774,28 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="guest_accelerators_python">
-<a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="imagetype_python">
-<a href="#imagetype_python" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+        <span id="guest_accelerators_python">
+<a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_type_python">
+<a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6756,14 +6808,14 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="localssdcount_python">
-<a href="#localssdcount_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6786,7 +6838,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6802,8 +6854,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6822,11 +6874,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sandboxconfigs_python">
-<a href="#sandboxconfigs_python" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Configs</a>
+        <span id="sandbox_configs_python">
+<a href="#sandbox_configs_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6842,11 +6894,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="shieldedinstanceconfigs_python">
-<a href="#shieldedinstanceconfigs_python" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Configs</a>
+        <span id="shielded_instance_configs_python">
+<a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6866,17 +6918,17 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigtaint">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigtaint">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="workloadmetadataconfigs_python">
-<a href="#workloadmetadataconfigs_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Configs</a>
+        <span id="workload_metadata_configs_python">
+<a href="#workload_metadata_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7084,8 +7136,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sandboxtype_python">
-<a href="#sandboxtype_python" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Type</a>
+        <span id="sandbox_type_python">
+<a href="#sandbox_type_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7200,8 +7252,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableintegritymonitoring_python">
-<a href="#enableintegritymonitoring_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7210,8 +7262,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enablesecureboot_python">
-<a href="#enablesecureboot_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7462,8 +7514,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodemetadata_python">
-<a href="#nodemetadata_python" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+        <span id="node_metadata_python">
+<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7885,7 +7937,7 @@ The following output properties are available:
 <a href="#autoscalings_python" style="color: inherit; text-decoration: inherit;">autoscalings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolautoscaling">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolautoscaling">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7915,7 +7967,7 @@ The following output properties are available:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolmanagement">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolmanagement">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7952,11 +8004,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeconfigs_python">
-<a href="#nodeconfigs_python" style="color: inherit; text-decoration: inherit;">node<wbr>Configs</a>
+        <span id="node_configs_python">
+<a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7986,7 +8038,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolupgradesetting">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8108,8 +8160,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxnodecount_python">
-<a href="#maxnodecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8118,8 +8170,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minnodecount_python">
-<a href="#minnodecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8234,8 +8286,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autorepair_python">
-<a href="#autorepair_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
+        <span id="auto_repair_python">
+<a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8244,8 +8296,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autoupgrade_python">
-<a href="#autoupgrade_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
+        <span id="auto_upgrade_python">
+<a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8840,18 +8892,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bootdiskkmskey_python">
-<a href="#bootdiskkmskey_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="disktype_python">
-<a href="#disktype_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+        <span id="boot_disk_kms_key_python">
+<a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8870,18 +8912,28 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="guest_accelerators_python">
-<a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="imagetype_python">
-<a href="#imagetype_python" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+        <span id="guest_accelerators_python">
+<a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_type_python">
+<a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8894,14 +8946,14 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="localssdcount_python">
-<a href="#localssdcount_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8924,7 +8976,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8940,8 +8992,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -8960,11 +9012,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sandboxconfigs_python">
-<a href="#sandboxconfigs_python" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Configs</a>
+        <span id="sandbox_configs_python">
+<a href="#sandbox_configs_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8980,11 +9032,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="shieldedinstanceconfigs_python">
-<a href="#shieldedinstanceconfigs_python" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Configs</a>
+        <span id="shielded_instance_configs_python">
+<a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9004,17 +9056,17 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="workloadmetadataconfigs_python">
-<a href="#workloadmetadataconfigs_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Configs</a>
+        <span id="workload_metadata_configs_python">
+<a href="#workload_metadata_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9222,8 +9274,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sandboxtype_python">
-<a href="#sandboxtype_python" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Type</a>
+        <span id="sandbox_type_python">
+<a href="#sandbox_type_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9338,8 +9390,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableintegritymonitoring_python">
-<a href="#enableintegritymonitoring_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9348,8 +9400,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enablesecureboot_python">
-<a href="#enablesecureboot_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9600,8 +9652,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodemetadata_python">
-<a href="#nodemetadata_python" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+        <span id="node_metadata_python">
+<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9716,8 +9768,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxsurge_python">
-<a href="#maxsurge_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
+        <span id="max_surge_python">
+<a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9726,8 +9778,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxunavailable_python">
-<a href="#maxunavailable_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+        <span id="max_unavailable_python">
+<a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10078,8 +10130,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableprivateendpoint_python">
-<a href="#enableprivateendpoint_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
+        <span id="enable_private_endpoint_python">
+<a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10088,8 +10140,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableprivatenodes_python">
-<a href="#enableprivatenodes_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Nodes</a>
+        <span id="enable_private_nodes_python">
+<a href="#enable_private_nodes_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10098,28 +10150,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="masterglobalaccessconfigs_python">
-<a href="#masterglobalaccessconfigs_python" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Configs</a>
+        <span id="master_global_access_configs_python">
+<a href="#master_global_access_configs_python" style="color: inherit; text-decoration: inherit;">master_<wbr>global_<wbr>access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="masteripv4cidrblock_python">
-<a href="#masteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="peeringname_python">
-<a href="#peeringname_python" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
+        <span id="master_ipv4_cidr_block_python">
+<a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10128,8 +10170,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privateendpoint_python">
-<a href="#privateendpoint_python" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+        <span id="peering_name_python">
+<a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10138,8 +10180,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicendpoint_python">
-<a href="#publicendpoint_python" style="color: inherit; text-decoration: inherit;">public<wbr>Endpoint</a>
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="public_endpoint_python">
+<a href="#public_endpoint_python" style="color: inherit; text-decoration: inherit;">public_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10456,18 +10508,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bigquerydestinations_python">
-<a href="#bigquerydestinations_python" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destinations</a>
+        <span id="bigquery_destinations_python">
+<a href="#bigquery_destinations_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">List[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">List[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="enablenetworkegressmetering_python">
-<a href="#enablenetworkegressmetering_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Network<wbr>Egress<wbr>Metering</a>
+        <span id="enable_network_egress_metering_python">
+<a href="#enable_network_egress_metering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>network_<wbr>egress_<wbr>metering</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10476,8 +10528,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableresourceconsumptionmetering_python">
-<a href="#enableresourceconsumptionmetering_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Resource<wbr>Consumption<wbr>Metering</a>
+        <span id="enable_resource_consumption_metering_python">
+<a href="#enable_resource_consumption_metering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>resource_<wbr>consumption_<wbr>metering</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10734,8 +10786,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="identitynamespace_python">
-<a href="#identitynamespace_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Namespace</a>
+        <span id="identity_namespace_python">
+<a href="#identity_namespace_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10760,6 +10812,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

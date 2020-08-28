@@ -12,96 +12,6 @@ meta_desc: "Explore the GetTestablePermissions function of the iam module, inclu
 
 Retrieve a list of testable permissions for a resource. Testable permissions mean the permissions that user can add or remove in a role at a given resource. The resource can be referenced either via the full resource name or via a URI.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var perms = Output.Create(Gcp.Iam.GetTestablePermissions.InvokeAsync(new Gcp.Iam.GetTestablePermissionsArgs
-        {
-            FullResourceName = "//cloudresourcemanager.googleapis.com/projects/my-project",
-            Stages = 
-            {
-                "GA",
-                "BETA",
-            },
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := iam.GetTestablePermissions(ctx, &iam.GetTestablePermissionsArgs{
-			FullResourceName: "//cloudresourcemanager.googleapis.com/projects/my-project",
-			Stages: []string{
-				"GA",
-				"BETA",
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-perms = gcp.iam.get_testable_permissions(full_resource_name="//cloudresourcemanager.googleapis.com/projects/my-project",
-    stages=[
-        "GA",
-        "BETA",
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const perms = pulumi.output(gcp.iam.getTestablePermissions({
-    fullResourceName: "//cloudresourcemanager.googleapis.com/projects/my-project",
-    stages: [
-        "GA",
-        "BETA",
-    ],
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetTestablePermissions {#using}
@@ -115,7 +25,7 @@ const perms = pulumi.output(gcp.iam.getTestablePermissions({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_testable_permissions(</span>custom_support_level=None<span class="p">, </span>full_resource_name=None<span class="p">, </span>stages=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_testable_permissions(</span><span class="nx">custom_support_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTestablePermissionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -765,8 +675,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="apidisabled_python">
-<a href="#apidisabled_python" style="color: inherit; text-decoration: inherit;">api<wbr>Disabled</a>
+        <span id="api_disabled_python">
+<a href="#api_disabled_python" style="color: inherit; text-decoration: inherit;">api_<wbr>disabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -776,8 +686,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customsupportlevel_python">
-<a href="#customsupportlevel_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Support<wbr>Level</a>
+        <span id="custom_support_level_python">
+<a href="#custom_support_level_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>support_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -836,6 +746,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

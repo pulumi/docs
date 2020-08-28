@@ -20,128 +20,6 @@ To get more information about Instance, see:
     * [Use with Kubernetes](https://cloud.google.com/filestore/docs/accessing-fileshares)
     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Filestore Instance Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var instance = new Gcp.Filestore.Instance("instance", new Gcp.Filestore.InstanceArgs
-        {
-            FileShares = new Gcp.Filestore.Inputs.InstanceFileSharesArgs
-            {
-                CapacityGb = 2660,
-                Name = "share1",
-            },
-            Networks = 
-            {
-                new Gcp.Filestore.Inputs.InstanceNetworkArgs
-                {
-                    Modes = 
-                    {
-                        "MODE_IPV4",
-                    },
-                    Network = "default",
-                },
-            },
-            Tier = "PREMIUM",
-            Zone = "us-central1-b",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
-			FileShares: &filestore.InstanceFileSharesArgs{
-				CapacityGb: pulumi.Int(2660),
-				Name:       pulumi.String("share1"),
-			},
-			Networks: filestore.InstanceNetworkArray{
-				&filestore.InstanceNetworkArgs{
-					Modes: pulumi.StringArray{
-						pulumi.String("MODE_IPV4"),
-					},
-					Network: pulumi.String("default"),
-				},
-			},
-			Tier: pulumi.String("PREMIUM"),
-			Zone: pulumi.String("us-central1-b"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-instance = gcp.filestore.Instance("instance",
-    file_shares={
-        "capacityGb": 2660,
-        "name": "share1",
-    },
-    networks=[{
-        "modes": ["MODE_IPV4"],
-        "network": "default",
-    }],
-    tier="PREMIUM",
-    zone="us-central1-b")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.filestore.Instance("instance", {
-    fileShares: {
-        capacityGb: 2660,
-        name: "share1",
-    },
-    networks: [{
-        modes: ["MODE_IPV4"],
-        network: "default",
-    }],
-    tier: "PREMIUM",
-    zone: "us-central1-b",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -153,7 +31,7 @@ const instance = new gcp.filestore.Instance("instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/filestore/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>file_shares=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>tier=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/filestore/#pulumi_gcp.filestore.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[InstanceFileSharesArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -334,7 +212,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -346,7 +225,8 @@ single file share is supported.  Structure is documented below.
         <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -358,6 +238,7 @@ only a single network is supported.  Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -432,7 +313,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -444,7 +326,8 @@ single file share is supported.  Structure is documented below.
         <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -456,6 +339,7 @@ only a single network is supported.  Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -530,7 +414,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -542,7 +427,8 @@ single file share is supported.  Structure is documented below.
         <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -554,6 +440,7 @@ only a single network is supported.  Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -625,10 +512,11 @@ If it is not provided, the provider project is used.
 <a href="#file_shares_python" style="color: inherit; text-decoration: inherit;">file_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Dict[Instance<wbr>File<wbr>Shares]</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -637,10 +525,11 @@ single file share is supported.  Structure is documented below.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -652,6 +541,7 @@ only a single network is supported.  Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -682,7 +572,7 @@ only a single network is supported.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
@@ -896,7 +786,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>description=None<span class="p">, </span>etag=None<span class="p">, </span>file_shares=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>tier=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[InstanceFileSharesArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -904,7 +795,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1052,7 +943,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1086,7 +978,8 @@ single file share is supported.  Structure is documented below.
         <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1110,6 +1003,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1172,7 +1066,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1206,7 +1101,8 @@ single file share is supported.  Structure is documented below.
         <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1230,6 +1126,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1189,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,7 +1224,8 @@ single file share is supported.  Structure is documented below.
         <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1350,6 +1249,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1409,10 +1309,11 @@ If it is not provided, the provider project is used.
 <a href="#state_file_shares_python" style="color: inherit; text-decoration: inherit;">file_<wbr>shares</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Dict[Instance<wbr>File<wbr>Shares]</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a
-single file share is supported.  Structure is documented below.
+single file share is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1421,7 +1322,7 @@ single file share is supported.  Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
@@ -1443,10 +1344,11 @@ single file share is supported.  Structure is documented below.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
-only a single network is supported.  Structure is documented below.
+only a single network is supported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1470,6 +1372,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
+Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1539,6 +1442,16 @@ for the standard tier, or 2560 GiB for the premium tier.
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexportoptions_csharp">
+<a href="#nfsexportoptions_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">List&lt;Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1568,6 +1481,16 @@ for the standard tier, or 2560 GiB for the premium tier.
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexportoptions_go">
+<a href="#nfsexportoptions_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">[]Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1599,6 +1522,16 @@ for the standard tier, or 2560 GiB for the premium tier.
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexportoptions_nodejs">
+<a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1608,8 +1541,8 @@ for the standard tier, or 2560 GiB for the premium tier.
 
     <dt class="property-required"
             title="Required">
-        <span id="capacitygb_python">
-<a href="#capacitygb_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Gb</a>
+        <span id="capacity_gb_python">
+<a href="#capacity_gb_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1627,6 +1560,330 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfs_export_options_python">
+<a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">List[Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="instancefilesharesnfsexportoption">Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFileSharesNfsExportOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFileSharesNfsExportOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceFileSharesNfsExportOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceFileSharesNfsExportOptionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.Inputs.InstanceFileSharesNfsExportOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Filestore.Outputs.InstanceFileSharesNfsExportOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessmode_csharp">
+<a href="#accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory,
+or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anongid_csharp">
+<a href="#anongid_csharp" style="color: inherit; text-decoration: inherit;">Anon<wbr>Gid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
+Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonuid_csharp">
+<a href="#anonuid_csharp" style="color: inherit; text-decoration: inherit;">Anon<wbr>Uid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
+Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipranges_csharp">
+<a href="#ipranges_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
+Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
+The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="squashmode_csharp">
+<a href="#squashmode_csharp" style="color: inherit; text-decoration: inherit;">Squash<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
+for not allowing root access. The default is NO_ROOT_SQUASH.
+Default value is `NO_ROOT_SQUASH`.
+Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessmode_go">
+<a href="#accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory,
+or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anongid_go">
+<a href="#anongid_go" style="color: inherit; text-decoration: inherit;">Anon<wbr>Gid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
+Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonuid_go">
+<a href="#anonuid_go" style="color: inherit; text-decoration: inherit;">Anon<wbr>Uid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
+Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipranges_go">
+<a href="#ipranges_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
+Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
+The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="squashmode_go">
+<a href="#squashmode_go" style="color: inherit; text-decoration: inherit;">Squash<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
+for not allowing root access. The default is NO_ROOT_SQUASH.
+Default value is `NO_ROOT_SQUASH`.
+Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessmode_nodejs">
+<a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory,
+or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anongid_nodejs">
+<a href="#anongid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Gid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
+Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonuid_nodejs">
+<a href="#anonuid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Uid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
+Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipranges_nodejs">
+<a href="#ipranges_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
+Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
+The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="squashmode_nodejs">
+<a href="#squashmode_nodejs" style="color: inherit; text-decoration: inherit;">squash<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
+for not allowing root access. The default is NO_ROOT_SQUASH.
+Default value is `NO_ROOT_SQUASH`.
+Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_mode_python">
+<a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory,
+or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anon_gid_python">
+<a href="#anon_gid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>gid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
+Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anon_uid_python">
+<a href="#anon_uid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>uid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
+Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_ranges_python">
+<a href="#ip_ranges_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
+Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
+The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="squash_mode_python">
+<a href="#squash_mode_python" style="color: inherit; text-decoration: inherit;">squash_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
+for not allowing root access. The default is NO_ROOT_SQUASH.
+Default value is `NO_ROOT_SQUASH`.
+Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1664,6 +1921,7 @@ for the standard tier, or 2560 GiB for the premium tier.
     </dt>
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
+Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1719,6 +1977,7 @@ addresses reserved for this instance.
     </dt>
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
+Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1774,6 +2033,7 @@ addresses reserved for this instance.
     </dt>
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
+Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1829,6 +2089,7 @@ addresses reserved for this instance.
     </dt>
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
+Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1885,6 +2146,6 @@ addresses reserved for this instance.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

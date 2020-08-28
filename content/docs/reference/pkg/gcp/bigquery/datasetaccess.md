@@ -24,263 +24,6 @@ To get more information about DatasetAccess, see:
 * How-to Guides
     * [Controlling access to datasets](https://cloud.google.com/bigquery/docs/dataset-access-controls)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Bigquery Dataset Access Basic User
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataset = new Gcp.BigQuery.Dataset("dataset", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "example_dataset",
-        });
-        var bqowner = new Gcp.ServiceAccount.Account("bqowner", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "bqowner",
-        });
-        var access = new Gcp.BigQuery.DatasetAccess("access", new Gcp.BigQuery.DatasetAccessArgs
-        {
-            DatasetId = dataset.DatasetId,
-            Role = "OWNER",
-            UserByEmail = bqowner.Email,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		dataset, err := bigquery.NewDataset(ctx, "dataset", &bigquery.DatasetArgs{
-			DatasetId: pulumi.String("example_dataset"),
-		})
-		if err != nil {
-			return err
-		}
-		bqowner, err := serviceAccount.NewAccount(ctx, "bqowner", &serviceAccount.AccountArgs{
-			AccountId: pulumi.String("bqowner"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
-			DatasetId:   dataset.DatasetId,
-			Role:        pulumi.String("OWNER"),
-			UserByEmail: bqowner.Email,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-dataset = gcp.bigquery.Dataset("dataset", dataset_id="example_dataset")
-bqowner = gcp.service_account.Account("bqowner", account_id="bqowner")
-access = gcp.bigquery.DatasetAccess("access",
-    dataset_id=dataset.dataset_id,
-    role="OWNER",
-    user_by_email=bqowner.email)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const dataset = new gcp.bigquery.Dataset("dataset", {datasetId: "example_dataset"});
-const bqowner = new gcp.serviceAccount.Account("bqowner", {accountId: "bqowner"});
-const access = new gcp.bigquery.DatasetAccess("access", {
-    datasetId: dataset.datasetId,
-    role: "OWNER",
-    userByEmail: bqowner.email,
-});
-```
-
-{{% /example %}}
-
-### Bigquery Dataset Access View
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @private = new Gcp.BigQuery.Dataset("private", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "example_dataset",
-        });
-        var publicDataset = new Gcp.BigQuery.Dataset("publicDataset", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "example_dataset2",
-        });
-        var publicTable = new Gcp.BigQuery.Table("publicTable", new Gcp.BigQuery.TableArgs
-        {
-            DatasetId = publicDataset.DatasetId,
-            TableId = "example_table",
-            View = new Gcp.BigQuery.Inputs.TableViewArgs
-            {
-                Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-                UseLegacySql = false,
-            },
-        });
-        var access = new Gcp.BigQuery.DatasetAccess("access", new Gcp.BigQuery.DatasetAccessArgs
-        {
-            DatasetId = @private.DatasetId,
-            View = new Gcp.BigQuery.Inputs.DatasetAccessViewArgs
-            {
-                ProjectId = publicTable.Project,
-                DatasetId = publicDataset.DatasetId,
-                TableId = publicTable.TableId,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		private, err := bigquery.NewDataset(ctx, "private", &bigquery.DatasetArgs{
-			DatasetId: pulumi.String("example_dataset"),
-		})
-		if err != nil {
-			return err
-		}
-		publicDataset, err := bigquery.NewDataset(ctx, "publicDataset", &bigquery.DatasetArgs{
-			DatasetId: pulumi.String("example_dataset2"),
-		})
-		if err != nil {
-			return err
-		}
-		publicTable, err := bigquery.NewTable(ctx, "publicTable", &bigquery.TableArgs{
-			DatasetId: publicDataset.DatasetId,
-			TableId:   pulumi.String("example_table"),
-			View: &bigquery.TableViewArgs{
-				Query:        pulumi.String("SELECT state FROM [lookerdata:cdc.project_tycho_reports]"),
-				UseLegacySql: pulumi.Bool(false),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
-			DatasetId: private.DatasetId,
-			View: &bigquery.DatasetAccessViewArgs{
-				ProjectId: publicTable.Project,
-				DatasetId: publicDataset.DatasetId,
-				TableId:   publicTable.TableId,
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-private = gcp.bigquery.Dataset("private", dataset_id="example_dataset")
-public_dataset = gcp.bigquery.Dataset("publicDataset", dataset_id="example_dataset2")
-public_table = gcp.bigquery.Table("publicTable",
-    dataset_id=public_dataset.dataset_id,
-    table_id="example_table",
-    view={
-        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        "useLegacySql": False,
-    })
-access = gcp.bigquery.DatasetAccess("access",
-    dataset_id=private.dataset_id,
-    view={
-        "project_id": public_table.project,
-        "dataset_id": public_dataset.dataset_id,
-        "table_id": public_table.table_id,
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const _private = new gcp.bigquery.Dataset("private", {datasetId: "example_dataset"});
-const publicDataset = new gcp.bigquery.Dataset("publicDataset", {datasetId: "example_dataset2"});
-const publicTable = new gcp.bigquery.Table("publicTable", {
-    datasetId: publicDataset.datasetId,
-    tableId: "example_table",
-    view: {
-        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        useLegacySql: false,
-    },
-});
-const access = new gcp.bigquery.DatasetAccess("access", {
-    datasetId: _private.datasetId,
-    view: {
-        projectId: publicTable.project,
-        datasetId: publicDataset.datasetId,
-        tableId: publicTable.tableId,
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DatasetAccess Resource {#create}
@@ -292,7 +35,7 @@ const access = new gcp.bigquery.DatasetAccess("access", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#DatasetAccess">DatasetAccess</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset_id=None<span class="p">, </span>domain=None<span class="p">, </span>group_by_email=None<span class="p">, </span>iam_member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>special_group=None<span class="p">, </span>user_by_email=None<span class="p">, </span>view=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DatasetAccess">DatasetAccess</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_member</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">special_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_by_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[DatasetAccessViewArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -573,7 +316,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -692,7 +436,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -811,7 +556,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -924,13 +670,14 @@ fred@example.com
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -953,6 +700,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="apiupdatedmember_csharp">
+<a href="#apiupdatedmember_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Updated<wbr>Member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -967,6 +726,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="apiupdatedmember_go">
+<a href="#apiupdatedmember_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Updated<wbr>Member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -987,6 +758,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="apiupdatedmember_nodejs">
+<a href="#apiupdatedmember_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Updated<wbr>Member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1001,6 +784,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="api_updated_member_python">
+<a href="#api_updated_member_python" style="color: inherit; text-decoration: inherit;">api_<wbr>updated_<wbr>member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1031,7 +826,8 @@ Get an existing DatasetAccess resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset_id=None<span class="p">, </span>domain=None<span class="p">, </span>group_by_email=None<span class="p">, </span>iam_member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>special_group=None<span class="p">, </span>user_by_email=None<span class="p">, </span>view=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_updated_member</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_by_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_member</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">special_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_by_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[DatasetAccessViewArgs]</span> = None<span class="p">) -&gt;</span> DatasetAccess</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1039,7 +835,7 @@ Get an existing DatasetAccess resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccess.html">DatasetAccess</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccessState.html">DatasetAccessState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccess.html">DatasetAccess</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetAccessState.html">DatasetAccessState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1144,6 +940,18 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_apiupdatedmember_csharp">
+<a href="#state_apiupdatedmember_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Updated<wbr>Member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1254,7 +1062,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1263,6 +1072,18 @@ needs to be granted again via an update operation.  Structure is documented belo
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_apiupdatedmember_go">
+<a href="#state_apiupdatedmember_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Updated<wbr>Member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1373,7 +1194,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1382,6 +1204,18 @@ needs to be granted again via an update operation.  Structure is documented belo
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_apiupdatedmember_nodejs">
+<a href="#state_apiupdatedmember_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Updated<wbr>Member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1492,7 +1326,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1501,6 +1336,18 @@ needs to be granted again via an update operation.  Structure is documented belo
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_api_updated_member_python">
+<a href="#state_api_updated_member_python" style="color: inherit; text-decoration: inherit;">api_<wbr>updated_<wbr>member</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, represents that that the iam_member in the config was translated to a different member type by the API, and is
+stored in state as a different member type
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1605,13 +1452,14 @@ fred@example.com
 <a href="#state_view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1826,6 +1674,6 @@ is 1,024 characters.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

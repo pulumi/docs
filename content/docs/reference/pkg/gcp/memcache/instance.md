@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the memcache module, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/memcache/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorized_network=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>memcache_parameters=None<span class="p">, </span>name=None<span class="p">, </span>node_config=None<span class="p">, </span>node_count=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>zones=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/memcache/#pulumi_gcp.memcache.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">memcache_parameters</span><span class="p">:</span> <span class="nx">Optional[InstanceMemcacheParametersArgs]</span> = None<span class="p">, </span><span class="nx">memcache_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -202,7 +202,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -269,7 +270,23 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memcacheversion_csharp">
+<a href="#memcacheversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,7 +339,8 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -389,7 +407,23 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memcacheversion_go">
+<a href="#memcacheversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -442,7 +476,8 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -509,7 +544,23 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memcacheversion_nodejs">
+<a href="#memcacheversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -560,9 +611,10 @@ provided, all zones will be used.
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenodeconfig">Dict[Instance<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -616,7 +668,7 @@ provided, all zones will be used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
@@ -627,9 +679,25 @@ provided, all zones will be used.
 <a href="#memcache_parameters_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancememcacheparameters">Dict[Instance<wbr>Memcache<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memcache_version_python">
+<a href="#memcache_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,6 +774,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="memcachefullversion_csharp">
+<a href="#memcachefullversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memcachenodes_csharp">
+<a href="#memcachenodes_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">List&lt;Instance<wbr>Memcache<wbr>Node&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -733,6 +823,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memcachefullversion_go">
+<a href="#memcachefullversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memcachenodes_go">
+<a href="#memcachenodes_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">[]Instance<wbr>Memcache<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -762,6 +874,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="memcachefullversion_nodejs">
+<a href="#memcachefullversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Full<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memcachenodes_nodejs">
+<a href="#memcachenodes_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">Instance<wbr>Memcache<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -790,6 +924,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="memcache_full_version_python">
+<a href="#memcache_full_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>full_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memcache_nodes_python">
+<a href="#memcache_nodes_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">List[Instance<wbr>Memcache<wbr>Node]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -809,7 +965,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authorized_network=None<span class="p">, </span>create_time=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>memcache_parameters=None<span class="p">, </span>name=None<span class="p">, </span>node_config=None<span class="p">, </span>node_count=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>zones=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">memcache_full_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memcache_nodes</span><span class="p">:</span> <span class="nx">Optional[List[InstanceMemcacheNodeArgs]]</span> = None<span class="p">, </span><span class="nx">memcache_parameters</span><span class="p">:</span> <span class="nx">Optional[InstanceMemcacheParametersArgs]</span> = None<span class="p">, </span><span class="nx">memcache_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -817,7 +974,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Memcache.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Memcache.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Memcache.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Memcache.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -970,13 +1127,51 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_memcachefullversion_csharp">
+<a href="#state_memcachefullversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcachenodes_csharp">
+<a href="#state_memcachenodes_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">List&lt;Instance<wbr>Memcache<wbr>Node<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_memcacheparameters_csharp">
 <a href="#state_memcacheparameters_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcacheversion_csharp">
+<a href="#state_memcacheversion_csharp" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -998,7 +1193,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,13 +1297,51 @@ provided, all zones will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_memcachefullversion_go">
+<a href="#state_memcachefullversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Full<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcachenodes_go">
+<a href="#state_memcachenodes_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">[]Instance<wbr>Memcache<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_memcacheparameters_go">
 <a href="#state_memcacheparameters_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcacheversion_go">
+<a href="#state_memcacheversion_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1129,7 +1363,8 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1232,13 +1467,51 @@ provided, all zones will be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_memcachefullversion_nodejs">
+<a href="#state_memcachefullversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Full<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcachenodes_nodejs">
+<a href="#state_memcachenodes_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">Instance<wbr>Memcache<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_memcacheparameters_nodejs">
 <a href="#state_memcacheparameters_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcacheversion_nodejs">
+<a href="#state_memcacheversion_nodejs" style="color: inherit; text-decoration: inherit;">memcache<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1260,7 +1533,8 @@ provided, all zones will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1356,9 +1630,31 @@ provided, all zones will be used.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcache_full_version_python">
+<a href="#state_memcache_full_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>full_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full version of memcached server running on this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcache_nodes_python">
+<a href="#state_memcache_nodes_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancememcachenode">List[Instance<wbr>Memcache<wbr>Node<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information about the instance state, if available.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1367,9 +1663,25 @@ provided, all zones will be used.
 <a href="#state_memcache_parameters_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancememcacheparameters">Dict[Instance<wbr>Memcache<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User-specified parameters for this memcache instance.  Structure is documented below.
+    <dd>{{% md %}}User-specified parameters for this memcache instance.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_memcache_version_python">
+<a href="#state_memcache_version_python" style="color: inherit; text-decoration: inherit;">memcache_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The major version of Memcached software. If not provided, latest supported version will be used.
+Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
+determined by our system based on the latest supported minor version.
+Default value is `MEMCACHE_1_5`.
+Possible values are `MEMCACHE_1_5`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1389,9 +1701,10 @@ provided, all zones will be used.
 <a href="#state_node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenodeconfig">Dict[Instance<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for memcache nodes.  Structure is documented below.
+    <dd>{{% md %}}Configuration for memcache nodes.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1453,6 +1766,252 @@ provided, all zones will be used.
 
 
 ## Supporting Types
+
+
+<h4 id="instancememcachenode">Instance<wbr>Memcache<wbr>Node</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceMemcacheNode">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/memcache?tab=doc#InstanceMemcacheNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Memcache.Outputs.InstanceMemcacheNode.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeid_csharp">
+<a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeid_go">
+<a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeid_nodejs">
+<a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</h4>
@@ -1581,7 +2140,7 @@ This is a unique ID associated with this set of parameters.
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined set of parameters to use in the memcache process.
 {{% /md %}}</dd>
@@ -1700,8 +2259,8 @@ This is a unique ID associated with this set of parameters.
 
     <dt class="property-required"
             title="Required">
-        <span id="cpucount_python">
-<a href="#cpucount_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Count</a>
+        <span id="cpu_count_python">
+<a href="#cpu_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1711,8 +2270,8 @@ This is a unique ID associated with this set of parameters.
 
     <dt class="property-required"
             title="Required">
-        <span id="memorysizemb_python">
-<a href="#memorysizemb_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Size<wbr>Mb</a>
+        <span id="memory_size_mb_python">
+<a href="#memory_size_mb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1738,6 +2297,6 @@ This is a unique ID associated with this set of parameters.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

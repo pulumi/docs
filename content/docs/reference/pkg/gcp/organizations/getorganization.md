@@ -12,77 +12,6 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Use this data source to get information about a Google Cloud Organization.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const org = gcp.organizations.getOrganization({
-    domain: "example.com",
-});
-const sales = new gcp.organizations.Folder("sales", {
-    displayName: "Sales",
-    parent: org.then(org => org.name),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-org = gcp.organizations.get_organization(domain="example.com")
-sales = gcp.organizations.Folder("sales",
-    display_name="Sales",
-    parent=org.name)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var org = Output.Create(Gcp.Organizations.GetOrganization.InvokeAsync(new Gcp.Organizations.GetOrganizationArgs
-        {
-            Domain = "example.com",
-        }));
-        var sales = new Gcp.Organizations.Folder("sales", new Gcp.Organizations.FolderArgs
-        {
-            DisplayName = "Sales",
-            Parent = org.Apply(org => org.Name),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "example.com"
-		org, err := organizations.GetOrganization(ctx, &organizations.GetOrganizationArgs{
-			Domain: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = organizations.NewFolder(ctx, "sales", &organizations.FolderArgs{
-			DisplayName: pulumi.String("Sales"),
-			Parent:      pulumi.String(org.Name),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetOrganization {#using}
@@ -96,7 +25,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_organization(</span>domain=None<span class="p">, </span>organization=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organization(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -633,6 +562,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

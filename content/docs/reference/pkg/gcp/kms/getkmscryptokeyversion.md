@@ -17,115 +17,6 @@ and
 
 A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myKeyRing = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
-        {
-            Name = "my-key-ring",
-            Location = "us-central1",
-        }));
-        var myCryptoKey = myKeyRing.Apply(myKeyRing => Output.Create(Gcp.Kms.GetKMSCryptoKey.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyArgs
-        {
-            Name = "my-crypto-key",
-            KeyRing = myKeyRing.SelfLink,
-        })));
-        var myCryptoKeyVersion = Output.Create(Gcp.Kms.GetKMSCryptoKeyVersion.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyVersionArgs
-        {
-            CryptoKey = data.Google_kms_key.My_key.Self_link,
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myKeyRing, err := kms.GetKMSKeyRing(ctx, &kms.GetKMSKeyRingArgs{
-			Name:     "my-key-ring",
-			Location: "us-central1",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err := kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
-			Name:    "my-crypto-key",
-			KeyRing: myKeyRing.SelfLink,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err := kms.GetKMSCryptoKeyVersion(ctx, &kms.GetKMSCryptoKeyVersionArgs{
-			CryptoKey: data.Google_kms_key.My_key.Self_link,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
-    location="us-central1")
-my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
-    key_ring=my_key_ring.self_link)
-my_crypto_key_version = gcp.kms.get_kms_crypto_key_version(crypto_key=data["google_kms_key"]["my_key"]["self_link"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myKeyRing = gcp.kms.getKMSKeyRing({
-    name: "my-key-ring",
-    location: "us-central1",
-});
-const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
-    name: "my-crypto-key",
-    keyRing: myKeyRing.selfLink,
-}));
-const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
-    cryptoKey: data.google_kms_key.my_key.self_link,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetKMSCryptoKeyVersion {#using}
@@ -139,7 +30,7 @@ const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kms_crypto_key_version(</span>crypto_key=None<span class="p">, </span>version=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kms_crypto_key_version(</span><span class="nx">crypto_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKMSCryptoKeyVersionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -588,7 +479,7 @@ The following output properties are available:
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Dict[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
@@ -772,6 +663,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

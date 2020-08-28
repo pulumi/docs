@@ -27,127 +27,6 @@ To get more information about NetworkEndpointGroup, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Network Endpoint Group
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
-        {
-            IpCidrRange = "10.0.0.0/16",
-            Region = "us-central1",
-            Network = defaultNetwork.Id,
-        });
-        var neg = new Gcp.Compute.NetworkEndpointGroup("neg", new Gcp.Compute.NetworkEndpointGroupArgs
-        {
-            Network = defaultNetwork.Id,
-            Subnetwork = defaultSubnetwork.Id,
-            DefaultPort = 90,
-            Zone = "us-central1-a",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
-			AutoCreateSubnetworks: pulumi.Bool(false),
-		})
-		if err != nil {
-			return err
-		}
-		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
-			IpCidrRange: pulumi.String("10.0.0.0/16"),
-			Region:      pulumi.String("us-central1"),
-			Network:     defaultNetwork.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewNetworkEndpointGroup(ctx, "neg", &compute.NetworkEndpointGroupArgs{
-			Network:     defaultNetwork.ID(),
-			Subnetwork:  defaultSubnetwork.ID(),
-			DefaultPort: pulumi.Int(90),
-			Zone:        pulumi.String("us-central1-a"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
-default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
-    ip_cidr_range="10.0.0.0/16",
-    region="us-central1",
-    network=default_network.id)
-neg = gcp.compute.NetworkEndpointGroup("neg",
-    network=default_network.id,
-    subnetwork=default_subnetwork.id,
-    default_port="90",
-    zone="us-central1-a")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
-const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
-    ipCidrRange: "10.0.0.0/16",
-    region: "us-central1",
-    network: defaultNetwork.id,
-});
-const neg = new gcp.compute.NetworkEndpointGroup("neg", {
-    network: defaultNetwork.id,
-    subnetwork: defaultSubnetwork.id,
-    defaultPort: "90",
-    zone: "us-central1-a",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NetworkEndpointGroup Resource {#create}
@@ -159,7 +38,7 @@ const neg = new gcp.compute.NetworkEndpointGroup("neg", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NetworkEndpointGroup">NetworkEndpointGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_port=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_endpoint_type=None<span class="p">, </span>project=None<span class="p">, </span>subnetwork=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.NetworkEndpointGroup">NetworkEndpointGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -393,6 +272,8 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,6 +379,8 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,6 +486,8 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,6 +593,8 @@ character, which cannot be a dash.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,7 +817,8 @@ Get an existing NetworkEndpointGroup resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_port=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_endpoint_type=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>size=None<span class="p">, </span>subnetwork=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkEndpointGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -938,7 +826,7 @@ Get an existing NetworkEndpointGroup resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkEndpointGroup.html">NetworkEndpointGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkEndpointGroupState.html">NetworkEndpointGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkEndpointGroup.html">NetworkEndpointGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkEndpointGroupState.html">NetworkEndpointGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1106,6 +994,8 @@ Uses "default" project network if unspecified.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1233,6 +1123,8 @@ Uses "default" project network if unspecified.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1360,6 +1252,8 @@ Uses "default" project network if unspecified.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,6 +1381,8 @@ Uses "default" project network if unspecified.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group.
+Default value is `GCE_VM_IP_PORT`.
+Possible values are `GCE_VM_IP_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1565,6 +1461,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

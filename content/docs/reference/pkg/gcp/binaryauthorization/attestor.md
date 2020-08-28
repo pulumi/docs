@@ -29,7 +29,7 @@ To get more information about Attestor, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#Attestor">Attestor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestation_authority_note=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#pulumi_gcp.binaryauthorization.Attestor">Attestor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority_note</span><span class="p">:</span> <span class="nx">Optional[AttestorAttestationAuthorityNoteArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -209,7 +209,8 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -262,7 +263,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -315,7 +317,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,9 +369,10 @@ If it is not provided, the provider project is used.
 <a href="#attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynote">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -504,7 +508,8 @@ Get an existing Attestor resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attestation_authority_note=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority_note</span><span class="p">:</span> <span class="nx">Optional[AttestorAttestationAuthorityNoteArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Attestor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -512,7 +517,7 @@ Get an existing Attestor resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Attestor.html">Attestor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.AttestorState.html">AttestorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Attestor.html">Attestor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.AttestorState.html">AttestorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -626,7 +631,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,7 +685,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -732,7 +739,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -783,9 +791,10 @@ If it is not provided, the provider project is used.
 <a href="#state_attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynote">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,7 +916,8 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -968,7 +978,8 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1029,7 +1040,8 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1041,8 +1053,8 @@ attestations exist.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="notereference_python">
-<a href="#notereference_python" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
+        <span id="note_reference_python">
+<a href="#note_reference_python" style="color: inherit; text-decoration: inherit;">note_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1058,8 +1070,8 @@ and that links to this Note.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="delegationserviceaccountemail_python">
-<a href="#delegationserviceaccountemail_python" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
+        <span id="delegation_service_account_email_python">
+<a href="#delegation_service_account_email_python" style="color: inherit; text-decoration: inherit;">delegation_<wbr>service_<wbr>account_<wbr>email</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1078,11 +1090,11 @@ different naming pattern.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickeys_python">
-<a href="#publickeys_python" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
+        <span id="public_keys_python">
+<a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Public keys that verify attestations signed by this attestor. This
 field may be updated.
@@ -1090,7 +1102,8 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1176,7 +1189,8 @@ See the documentation on publicKey cases below for details.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1244,7 +1258,8 @@ See the documentation on publicKey cases below for details.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1312,7 +1327,8 @@ See the documentation on publicKey cases below for details.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1324,8 +1340,8 @@ encoding of the public key.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="asciiarmoredpgppublickey_python">
-<a href="#asciiarmoredpgppublickey_python" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
+        <span id="ascii_armored_pgp_public_key_python">
+<a href="#ascii_armored_pgp_public_key_python" style="color: inherit; text-decoration: inherit;">ascii_<wbr>armored_<wbr>pgp_<wbr>public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1370,17 +1386,18 @@ See the documentation on publicKey cases below for details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pkixpublickey_python">
-<a href="#pkixpublickey_python" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
+        <span id="pkix_public_key_python">
+<a href="#pkix_public_key_python" style="color: inherit; text-decoration: inherit;">pkix_<wbr>public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1512,8 +1529,8 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickeypem_python">
-<a href="#publickeypem_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+        <span id="public_key_pem_python">
+<a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1524,8 +1541,8 @@ public key).
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signaturealgorithm_python">
-<a href="#signaturealgorithm_python" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+        <span id="signature_algorithm_python">
+<a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1555,6 +1572,6 @@ public key).
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -11,6 +11,7 @@ Explore the resources and functions of the organizations module in the GCP packa
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="accessapprovalsettings" title="AccessApprovalSettings"><span class="symbol resource"></span>AccessApprovalSettings</a></li>
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="iambinding" title="IAMBinding"><span class="symbol resource"></span>IAMBinding</a></li>
     <li><a href="iamcustomrole" title="IAMCustomRole"><span class="symbol resource"></span>IAMCustomRole</a></li>
@@ -40,9 +41,9 @@ Explore the resources and functions of the organizations module in the GCP packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.1</dd>
 </dl>
 
 

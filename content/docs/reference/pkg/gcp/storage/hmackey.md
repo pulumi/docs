@@ -27,90 +27,6 @@ On import, the `secret` value will not be retrieved.
 > **Warning:** All arguments including `secret` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Storage Hmac Key
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "my-svc-acc",
-        });
-        var key = new Gcp.Storage.HmacKey("key", new Gcp.Storage.HmacKeyArgs
-        {
-            ServiceAccountEmail = serviceAccount.Email,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceAccount, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
-			AccountId: pulumi.String("my-svc-acc"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = storage.NewHmacKey(ctx, "key", &storage.HmacKeyArgs{
-			ServiceAccountEmail: serviceAccount.Email,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
-key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const serviceAccount = new gcp.serviceAccount.Account("serviceAccount", {accountId: "my-svc-acc"});
-const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.email});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a HmacKey Resource {#create}
@@ -122,7 +38,7 @@ const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/storage/#HmacKey">HmacKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>project=None<span class="p">, </span>service_account_email=None<span class="p">, </span>state=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/storage/#pulumi_gcp.storage.HmacKey">HmacKey</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,6 +242,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,6 +285,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -408,6 +328,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -449,6 +371,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -725,7 +649,8 @@ Get an existing HmacKey resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_id=None<span class="p">, </span>project=None<span class="p">, </span>secret=None<span class="p">, </span>service_account_email=None<span class="p">, </span>state=None<span class="p">, </span>time_created=None<span class="p">, </span>updated=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HmacKey</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -733,7 +658,7 @@ Get an existing HmacKey resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.HmacKey.html">HmacKey</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.HmacKeyState.html">HmacKeyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.HmacKey.html">HmacKey</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.HmacKeyState.html">HmacKeyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -893,6 +818,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -978,6 +905,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1063,6 +992,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1148,6 +1079,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the key. Can be set to one of ACTIVE, INACTIVE.
+Default value is `ACTIVE`.
+Possible values are `ACTIVE` and `INACTIVE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,6 +1125,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -27,7 +27,7 @@ To get more information about ApplicationUrlDispatchRules, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#ApplicationUrlDispatchRules">ApplicationUrlDispatchRules</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dispatch_rules=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.ApplicationUrlDispatchRules">ApplicationUrlDispatchRules</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationUrlDispatchRulesDispatchRuleArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -207,7 +207,8 @@ The ApplicationUrlDispatchRules resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List&lt;Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -237,7 +238,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,7 +269,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -295,9 +298,10 @@ If it is not provided, the provider project is used.
 <a href="#dispatch_rules_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -410,7 +414,8 @@ Get an existing ApplicationUrlDispatchRules resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dispatch_rules=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationUrlDispatchRulesDispatchRuleArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApplicationUrlDispatchRules</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -418,7 +423,7 @@ Get an existing ApplicationUrlDispatchRules resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.ApplicationUrlDispatchRules.html">ApplicationUrlDispatchRules</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.ApplicationUrlDispatchRulesState.html">ApplicationUrlDispatchRulesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.ApplicationUrlDispatchRules.html">ApplicationUrlDispatchRules</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.ApplicationUrlDispatchRulesState.html">ApplicationUrlDispatchRulesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -532,7 +537,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List&lt;Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -562,7 +568,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -592,7 +599,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -620,9 +628,10 @@ If it is not provided, the provider project is used.
 <a href="#state_dispatch_rules_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -853,6 +862,6 @@ Defaults to matching all domains: "*".
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

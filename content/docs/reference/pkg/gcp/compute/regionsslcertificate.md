@@ -34,7 +34,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionSslCertificate">RegionSslCertificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>private_key=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionSslCertificate">RegionSslCertificate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,7 +216,8 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -227,7 +228,8 @@ The chain must include at least one intermediate cert.  **Note**: This property 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,7 +313,8 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -322,7 +325,8 @@ The chain must include at least one intermediate cert.  **Note**: This property 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,7 +410,8 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -417,7 +422,8 @@ The chain must include at least one intermediate cert.  **Note**: This property 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -501,7 +507,8 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -512,7 +519,8 @@ The chain must include at least one intermediate cert.  **Note**: This property 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,7 +817,8 @@ Get an existing RegionSslCertificate resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate=None<span class="p">, </span>certificate_id=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>private_key=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RegionSslCertificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -817,7 +826,7 @@ Get an existing RegionSslCertificate resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionSslCertificate.html">RegionSslCertificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionSslCertificateState.html">RegionSslCertificateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionSslCertificate.html">RegionSslCertificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionSslCertificateState.html">RegionSslCertificateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -933,7 +942,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1006,7 +1016,8 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1061,7 +1072,8 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,7 +1146,8 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1189,7 +1202,8 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1262,7 +1276,8 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1317,7 +1332,8 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
-The chain must include at least one intermediate cert.  **Note**: This property is sensitive and will not be displayed in the plan.
+The chain must include at least one intermediate cert.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,7 +1406,8 @@ specified prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The write-only private key in PEM format.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The write-only private key in PEM format.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1448,6 +1465,6 @@ If it is not provided, the provider region is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

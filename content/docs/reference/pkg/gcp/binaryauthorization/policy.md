@@ -29,7 +29,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admission_whitelist_patterns=None<span class="p">, </span>cluster_admission_rules=None<span class="p">, </span>default_admission_rule=None<span class="p">, </span>description=None<span class="p">, </span>global_policy_evaluation_mode=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#pulumi_gcp.binaryauthorization.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[List[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,7 +210,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -223,7 +224,8 @@ rule.  Structure is documented below.
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,6 +265,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,7 +296,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,7 +310,8 @@ rule.  Structure is documented below.
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -346,6 +351,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,7 +382,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -389,7 +396,8 @@ rule.  Structure is documented below.
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -429,6 +437,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,10 +465,11 @@ If it is not provided, the provider project is used.
 <a href="#default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,11 +478,12 @@ rule.  Structure is documented below.
 <a href="#admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,7 +492,7 @@ requests will always be permitted regardless of your admission rules.  Structure
 <a href="#cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -512,6 +523,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -624,7 +636,8 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admission_whitelist_patterns=None<span class="p">, </span>cluster_admission_rules=None<span class="p">, </span>default_admission_rule=None<span class="p">, </span>description=None<span class="p">, </span>global_policy_evaluation_mode=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[List[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -632,7 +645,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -748,7 +761,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -775,7 +789,8 @@ admission rule per cluster spec.
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,6 +815,7 @@ rule.  Structure is documented below.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -831,7 +847,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -858,7 +875,8 @@ admission rule per cluster spec.
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -883,6 +901,7 @@ rule.  Structure is documented below.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -914,7 +933,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -941,7 +961,8 @@ admission rule per cluster spec.
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -966,6 +987,7 @@ rule.  Structure is documented below.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -993,11 +1015,12 @@ If it is not provided, the provider project is used.
 <a href="#state_admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1006,7 +1029,7 @@ requests will always be permitted regardless of your admission rules.  Structure
 <a href="#state_cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1021,10 +1044,11 @@ admission rule per cluster spec.
 <a href="#state_default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1049,6 +1073,7 @@ rule.  Structure is documented below.
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1161,8 +1186,8 @@ part.
 
     <dt class="property-required"
             title="Required">
-        <span id="namepattern_python">
-<a href="#namepattern_python" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
+        <span id="name_pattern_python">
+<a href="#name_pattern_python" style="color: inherit; text-decoration: inherit;">name_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1218,6 +1243,7 @@ part.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1229,6 +1255,7 @@ part.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,6 +1303,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1287,6 +1315,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1334,6 +1363,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1345,6 +1375,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1385,30 +1416,32 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcementmode_python">
-<a href="#enforcementmode_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
+        <span id="enforcement_mode_python">
+<a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="evaluationmode_python">
-<a href="#evaluationmode_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
+        <span id="evaluation_mode_python">
+<a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requireattestationsbies_python">
-<a href="#requireattestationsbies_python" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
+        <span id="require_attestations_bies_python">
+<a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1457,6 +1490,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1468,6 +1502,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,6 +1539,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1515,6 +1551,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1551,6 +1588,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1562,6 +1600,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,30 +1630,32 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcementmode_python">
-<a href="#enforcementmode_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
+        <span id="enforcement_mode_python">
+<a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="evaluationmode_python">
-<a href="#evaluationmode_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
+        <span id="evaluation_mode_python">
+<a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requireattestationsbies_python">
-<a href="#requireattestationsbies_python" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
+        <span id="require_attestations_bies_python">
+<a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1647,6 +1688,6 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

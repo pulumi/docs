@@ -22,169 +22,6 @@ To get more information about NotificationChannel, see:
     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Notification Channel Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var basic = Output.Create(Gcp.Monitoring.GetNotificationChannel.InvokeAsync(new Gcp.Monitoring.GetNotificationChannelArgs
-        {
-            DisplayName = "Test Notification Channel",
-        }));
-        var alertPolicy = new Gcp.Monitoring.AlertPolicy("alertPolicy", new Gcp.Monitoring.AlertPolicyArgs
-        {
-            DisplayName = "My Alert Policy",
-            NotificationChannels = 
-            {
-                basic.Apply(basic => basic.Name),
-            },
-            Combiner = "OR",
-            Conditions = 
-            {
-                new Gcp.Monitoring.Inputs.AlertPolicyConditionArgs
-                {
-                    DisplayName = "test condition",
-                    Condition_threshold = 
-                    {
-                        { "filter", "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"" },
-                        { "duration", "60s" },
-                        { "comparison", "COMPARISON_GT" },
-                        { "aggregations", 
-                        {
-                            
-                            {
-                                { "alignmentPeriod", "60s" },
-                                { "perSeriesAligner", "ALIGN_RATE" },
-                            },
-                        } },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "Test Notification Channel"
-		basic, err := monitoring.LookupNotificationChannel(ctx, &monitoring.LookupNotificationChannelArgs{
-			DisplayName: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
-			DisplayName: pulumi.String("My Alert Policy"),
-			NotificationChannels: pulumi.StringArray{
-				pulumi.String(basic.Name),
-			},
-			Combiner: pulumi.String("OR"),
-			Conditions: monitoring.AlertPolicyConditionArray{
-				&monitoring.AlertPolicyConditionArgs{
-					DisplayName: pulumi.String("test condition"),
-					Condition_threshold: pulumi.Map{
-						"filter":     pulumi.String("metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""),
-						"duration":   pulumi.String("60s"),
-						"comparison": pulumi.String("COMPARISON_GT"),
-						"aggregations": pulumi.MapArray{
-							pulumi.Map{
-								"alignmentPeriod":  pulumi.String("60s"),
-								"perSeriesAligner": pulumi.String("ALIGN_RATE"),
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic = gcp.monitoring.get_notification_channel(display_name="Test Notification Channel")
-alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
-    display_name="My Alert Policy",
-    notification_channels=[basic.name],
-    combiner="OR",
-    conditions=[{
-        "display_name": "test condition",
-        "condition_threshold": {
-            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-            "duration": "60s",
-            "comparison": "COMPARISON_GT",
-            "aggregations": [{
-                "alignmentPeriod": "60s",
-                "perSeriesAligner": "ALIGN_RATE",
-            }],
-        },
-    }])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basic = gcp.monitoring.getNotificationChannel({
-    displayName: "Test Notification Channel",
-});
-const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
-    displayName: "My Alert Policy",
-    notificationChannels: [basic.then(basic => basic.name)],
-    combiner: "OR",
-    conditions: [{
-        displayName: "test condition",
-        condition_threshold: {
-            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-            duration: "60s",
-            comparison: "COMPARISON_GT",
-            aggregations: [{
-                alignmentPeriod: "60s",
-                perSeriesAligner: "ALIGN_RATE",
-            }],
-        },
-    }],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetNotificationChannel {#using}
@@ -198,7 +35,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_notification_channel(</span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>type=None<span class="p">, </span>user_labels=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_notification_channel(</span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNotificationChannelResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -434,7 +271,7 @@ If it is not provided, the provider project is used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels (corresponding to the
 NotificationChannelDescriptor schema) to filter the notification channels by.
@@ -469,7 +306,7 @@ If it is not provided, the provider project is used.
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-provided key-value labels to filter by.
 {{% /md %}}</dd>
@@ -925,7 +762,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -955,7 +792,7 @@ The following output properties are available:
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1103,8 +940,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authtoken_python">
-<a href="#authtoken_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
+        <span id="auth_token_python">
+<a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1123,8 +960,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicekey_python">
-<a href="#servicekey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
+        <span id="service_key_python">
+<a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1149,6 +986,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

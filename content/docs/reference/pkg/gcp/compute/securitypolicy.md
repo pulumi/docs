@@ -14,188 +14,6 @@ A Security Policy defines an IP blacklist or whitelist that protects load balanc
 see the [official documentation](https://cloud.google.com/armor/docs/configure-security-policies)
 and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policy = new Gcp.Compute.SecurityPolicy("policy", new Gcp.Compute.SecurityPolicyArgs
-        {
-            Rules = 
-            {
-                new Gcp.Compute.Inputs.SecurityPolicyRuleArgs
-                {
-                    Action = "deny(403)",
-                    Description = "Deny access to IPs in 9.9.9.0/24",
-                    Match = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchArgs
-                    {
-                        Config = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchConfigArgs
-                        {
-                            SrcIpRanges = 
-                            {
-                                "9.9.9.0/24",
-                            },
-                        },
-                        VersionedExpr = "SRC_IPS_V1",
-                    },
-                    Priority = 1000,
-                },
-                new Gcp.Compute.Inputs.SecurityPolicyRuleArgs
-                {
-                    Action = "allow",
-                    Description = "default rule",
-                    Match = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchArgs
-                    {
-                        Config = new Gcp.Compute.Inputs.SecurityPolicyRuleMatchConfigArgs
-                        {
-                            SrcIpRanges = 
-                            {
-                                "*",
-                            },
-                        },
-                        VersionedExpr = "SRC_IPS_V1",
-                    },
-                    Priority = 2147483647,
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewSecurityPolicy(ctx, "policy", &compute.SecurityPolicyArgs{
-			Rules: compute.SecurityPolicyRuleArray{
-				&compute.SecurityPolicyRuleArgs{
-					Action:      pulumi.String("deny(403)"),
-					Description: pulumi.String("Deny access to IPs in 9.9.9.0/24"),
-					Match: &compute.SecurityPolicyRuleMatchArgs{
-						Config: &compute.SecurityPolicyRuleMatchConfigArgs{
-							SrcIpRanges: pulumi.StringArray{
-								pulumi.String("9.9.9.0/24"),
-							},
-						},
-						VersionedExpr: pulumi.String("SRC_IPS_V1"),
-					},
-					Priority: pulumi.Int(1000),
-				},
-				&compute.SecurityPolicyRuleArgs{
-					Action:      pulumi.String("allow"),
-					Description: pulumi.String("default rule"),
-					Match: &compute.SecurityPolicyRuleMatchArgs{
-						Config: &compute.SecurityPolicyRuleMatchConfigArgs{
-							SrcIpRanges: pulumi.StringArray{
-								pulumi.String("*"),
-							},
-						},
-						VersionedExpr: pulumi.String("SRC_IPS_V1"),
-					},
-					Priority: pulumi.Int(2147483647),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-policy = gcp.compute.SecurityPolicy("policy", rules=[
-    {
-        "action": "deny(403)",
-        "description": "Deny access to IPs in 9.9.9.0/24",
-        "match": {
-            "config": {
-                "srcIpRanges": ["9.9.9.0/24"],
-            },
-            "versionedExpr": "SRC_IPS_V1",
-        },
-        "priority": "1000",
-    },
-    {
-        "action": "allow",
-        "description": "default rule",
-        "match": {
-            "config": {
-                "srcIpRanges": ["*"],
-            },
-            "versionedExpr": "SRC_IPS_V1",
-        },
-        "priority": "2147483647",
-    },
-])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const policy = new gcp.compute.SecurityPolicy("policy", {
-    rules: [
-        {
-            action: "deny(403)",
-            description: "Deny access to IPs in 9.9.9.0/24",
-            match: {
-                config: {
-                    srcIpRanges: ["9.9.9.0/24"],
-                },
-                versionedExpr: "SRC_IPS_V1",
-            },
-            priority: 1000,
-        },
-        {
-            action: "allow",
-            description: "default rule",
-            match: {
-                config: {
-                    srcIpRanges: ["*"],
-                },
-                versionedExpr: "SRC_IPS_V1",
-            },
-            priority: 2147483647,
-        },
-    ],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a SecurityPolicy Resource {#create}
@@ -207,7 +25,7 @@ const policy = new gcp.compute.SecurityPolicy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#SecurityPolicy">SecurityPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.SecurityPolicy">SecurityPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecurityPolicyRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -581,7 +399,7 @@ is not provided, the provider project is used.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">List[Security<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">List[Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -774,7 +592,8 @@ Get an existing SecurityPolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rules=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecurityPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -782,7 +601,7 @@ Get an existing SecurityPolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SecurityPolicy.html">SecurityPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SecurityPolicyState.html">SecurityPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SecurityPolicy.html">SecurityPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SecurityPolicyState.html">SecurityPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1167,7 +986,7 @@ is not provided, the provider project is used.
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">List[Security<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">List[Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -1438,7 +1257,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematch">Dict[Security<wbr>Policy<wbr>Rule<wbr>Match]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
@@ -1648,7 +1467,7 @@ Available options:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchconfig">Dict[Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
@@ -1661,7 +1480,7 @@ Structure is documented below.
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematchexpr">Dict[Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
@@ -1670,8 +1489,8 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="versionedexpr_python">
-<a href="#versionedexpr_python" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
+        <span id="versioned_expr_python">
+<a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1715,7 +1534,7 @@ Available options:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
-to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of '\*' matches all IPs
+to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
 {{% /md %}}</dd>
 
@@ -1735,7 +1554,7 @@ to match against inbound traffic. There is a limit of 5 IP ranges per rule. A va
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
-to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of '\*' matches all IPs
+to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
 {{% /md %}}</dd>
 
@@ -1755,7 +1574,7 @@ to match against inbound traffic. There is a limit of 5 IP ranges per rule. A va
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
-to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of '\*' matches all IPs
+to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
 {{% /md %}}</dd>
 
@@ -1768,14 +1587,14 @@ to match against inbound traffic. There is a limit of 5 IP ranges per rule. A va
 
     <dt class="property-required"
             title="Required">
-        <span id="srcipranges_python">
-<a href="#srcipranges_python" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
+        <span id="src_ip_ranges_python">
+<a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
-to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of '\*' matches all IPs
+to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
 {{% /md %}}</dd>
 
@@ -1891,6 +1710,6 @@ The application context of the containing message determines which well-known fe
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

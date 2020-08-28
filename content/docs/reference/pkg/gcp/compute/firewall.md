@@ -40,7 +40,7 @@ To get more information about Firewall, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Firewall">Firewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allows=None<span class="p">, </span>denies=None<span class="p">, </span>description=None<span class="p">, </span>destination_ranges=None<span class="p">, </span>direction=None<span class="p">, </span>disabled=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>source_ranges=None<span class="p">, </span>source_service_accounts=None<span class="p">, </span>source_tags=None<span class="p">, </span>target_service_accounts=None<span class="p">, </span>target_tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[List[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[List[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -233,7 +233,8 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -245,7 +246,8 @@ connection.  Structure is documented below.
         <span class="property-type"><a href="#firewalldeny">List&lt;Firewall<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -285,6 +287,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -301,17 +304,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_csharp">
+<a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -475,7 +490,8 @@ instances on the specified network.
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,7 +503,8 @@ connection.  Structure is documented below.
         <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -527,6 +544,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,17 +561,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_go">
+<a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -717,7 +747,8 @@ instances on the specified network.
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,7 +760,8 @@ connection.  Structure is documented below.
         <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -769,6 +801,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,17 +818,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_nodejs">
+<a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -955,11 +1000,12 @@ instances on the specified network.
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow]</a></span>
+        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,10 +1014,11 @@ connection.  Structure is documented below.
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny]</a></span>
+        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1011,6 +1058,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,17 +1075,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_config_python">
+<a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1359,7 +1419,8 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allows=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>denies=None<span class="p">, </span>description=None<span class="p">, </span>destination_ranges=None<span class="p">, </span>direction=None<span class="p">, </span>disabled=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>source_ranges=None<span class="p">, </span>source_service_accounts=None<span class="p">, </span>source_tags=None<span class="p">, </span>target_service_accounts=None<span class="p">, </span>target_tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[List[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[List[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1367,7 +1428,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1483,7 +1544,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1506,7 +1568,8 @@ connection.  Structure is documented below.
         <span class="property-type"><a href="#firewalldeny">List&lt;Firewall<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,6 +1609,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1562,17 +1626,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_csharp">
+<a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1747,7 +1823,8 @@ instances on the specified network.
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,7 +1847,8 @@ connection.  Structure is documented below.
         <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1810,6 +1888,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1826,17 +1905,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_go">
+<a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2011,7 +2102,8 @@ instances on the specified network.
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2034,7 +2126,8 @@ connection.  Structure is documented below.
         <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2074,6 +2167,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2090,17 +2184,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_nodejs">
+<a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2271,11 +2377,12 @@ instances on the specified network.
 <a href="#state_allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow]</a></span>
+        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2295,10 +2402,11 @@ connection.  Structure is documented below.
 <a href="#state_denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny]</a></span>
+        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2338,6 +2446,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2354,17 +2463,29 @@ not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_log_config_python">
+<a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2869,6 +2990,100 @@ Example inputs include: ["22"], ["80","443"], and
 
 
 
+<h4 id="firewalllogconfig">Firewall<wbr>Log<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallLogConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallLogConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.FirewallLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.FirewallLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 
@@ -2880,6 +3095,6 @@ Example inputs include: ["22"], ["80","443"], and
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

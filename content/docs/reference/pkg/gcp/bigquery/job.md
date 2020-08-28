@@ -13,752 +13,6 @@ meta_desc: "Explore the Job resource of the bigquery module, including examples,
 Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.
 Once a BigQuery job is created, it cannot be changed or deleted.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Bigquery Job Query
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bar = new Gcp.BigQuery.Dataset("bar", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "job_query_dataset",
-            FriendlyName = "test",
-            Description = "This is a test description",
-            Location = "US",
-        });
-        var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
-        {
-            DatasetId = bar.DatasetId,
-            TableId = "job_query_table",
-        });
-        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
-        {
-            JobId = "job_query",
-            Labels = 
-            {
-                { "example-label", "example-value" },
-            },
-            Query = new Gcp.BigQuery.Inputs.JobQueryArgs
-            {
-                Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-                Destination_table = 
-                {
-                    { "projectId", foo.Project },
-                    { "datasetId", foo.DatasetId },
-                    { "tableId", foo.TableId },
-                },
-                AllowLargeResults = true,
-                FlattenResults = true,
-                Script_options = 
-                {
-                    { "keyResultStatement", "LAST" },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		bar, err := bigquery.NewDataset(ctx, "bar", &bigquery.DatasetArgs{
-			DatasetId:    pulumi.String("job_query_dataset"),
-			FriendlyName: pulumi.String("test"),
-			Description:  pulumi.String("This is a test description"),
-			Location:     pulumi.String("US"),
-		})
-		if err != nil {
-			return err
-		}
-		foo, err := bigquery.NewTable(ctx, "foo", &bigquery.TableArgs{
-			DatasetId: bar.DatasetId,
-			TableId:   pulumi.String("job_query_table"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
-			JobId: pulumi.String("job_query"),
-			Labels: pulumi.Map{
-				"example-label": pulumi.String("example-value"),
-			},
-			Query: &bigquery.JobQueryArgs{
-				Query: pulumi.String("SELECT state FROM [lookerdata:cdc.project_tycho_reports]"),
-				Destination_table: pulumi.Map{
-					"projectId": foo.Project,
-					"datasetId": foo.DatasetId,
-					"tableId":   foo.TableId,
-				},
-				AllowLargeResults: pulumi.Bool(true),
-				FlattenResults:    pulumi.Bool(true),
-				Script_options: pulumi.Map{
-					"keyResultStatement": pulumi.String("LAST"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bar = gcp.bigquery.Dataset("bar",
-    dataset_id="job_query_dataset",
-    friendly_name="test",
-    description="This is a test description",
-    location="US")
-foo = gcp.bigquery.Table("foo",
-    dataset_id=bar.dataset_id,
-    table_id="job_query_table")
-job = gcp.bigquery.Job("job",
-    job_id="job_query",
-    labels={
-        "example-label": "example-value",
-    },
-    query={
-        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        "destination_table": {
-            "project_id": foo.project,
-            "dataset_id": foo.dataset_id,
-            "table_id": foo.table_id,
-        },
-        "allowLargeResults": True,
-        "flattenResults": True,
-        "script_options": {
-            "keyResultStatement": "LAST",
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bar = new gcp.bigquery.Dataset("bar", {
-    datasetId: "job_query_dataset",
-    friendlyName: "test",
-    description: "This is a test description",
-    location: "US",
-});
-const foo = new gcp.bigquery.Table("foo", {
-    datasetId: bar.datasetId,
-    tableId: "job_query_table",
-});
-const job = new gcp.bigquery.Job("job", {
-    jobId: "job_query",
-    labels: {
-        "example-label": "example-value",
-    },
-    query: {
-        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        destination_table: {
-            projectId: foo.project,
-            datasetId: foo.datasetId,
-            tableId: foo.tableId,
-        },
-        allowLargeResults: true,
-        flattenResults: true,
-        script_options: {
-            keyResultStatement: "LAST",
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-### Bigquery Job Query Table Reference
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bar = new Gcp.BigQuery.Dataset("bar", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "job_query_dataset",
-            FriendlyName = "test",
-            Description = "This is a test description",
-            Location = "US",
-        });
-        var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
-        {
-            DatasetId = bar.DatasetId,
-            TableId = "job_query_table",
-        });
-        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
-        {
-            JobId = "job_query",
-            Labels = 
-            {
-                { "example-label", "example-value" },
-            },
-            Query = new Gcp.BigQuery.Inputs.JobQueryArgs
-            {
-                Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-                Destination_table = 
-                {
-                    { "tableId", foo.Id },
-                },
-                Default_dataset = 
-                {
-                    { "datasetId", bar.Id },
-                },
-                AllowLargeResults = true,
-                FlattenResults = true,
-                Script_options = 
-                {
-                    { "keyResultStatement", "LAST" },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		bar, err := bigquery.NewDataset(ctx, "bar", &bigquery.DatasetArgs{
-			DatasetId:    pulumi.String("job_query_dataset"),
-			FriendlyName: pulumi.String("test"),
-			Description:  pulumi.String("This is a test description"),
-			Location:     pulumi.String("US"),
-		})
-		if err != nil {
-			return err
-		}
-		foo, err := bigquery.NewTable(ctx, "foo", &bigquery.TableArgs{
-			DatasetId: bar.DatasetId,
-			TableId:   pulumi.String("job_query_table"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
-			JobId: pulumi.String("job_query"),
-			Labels: pulumi.Map{
-				"example-label": pulumi.String("example-value"),
-			},
-			Query: &bigquery.JobQueryArgs{
-				Query: pulumi.String("SELECT state FROM [lookerdata:cdc.project_tycho_reports]"),
-				Destination_table: pulumi.Map{
-					"tableId": foo.ID(),
-				},
-				Default_dataset: pulumi.Map{
-					"datasetId": bar.ID(),
-				},
-				AllowLargeResults: pulumi.Bool(true),
-				FlattenResults:    pulumi.Bool(true),
-				Script_options: pulumi.Map{
-					"keyResultStatement": pulumi.String("LAST"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bar = gcp.bigquery.Dataset("bar",
-    dataset_id="job_query_dataset",
-    friendly_name="test",
-    description="This is a test description",
-    location="US")
-foo = gcp.bigquery.Table("foo",
-    dataset_id=bar.dataset_id,
-    table_id="job_query_table")
-job = gcp.bigquery.Job("job",
-    job_id="job_query",
-    labels={
-        "example-label": "example-value",
-    },
-    query={
-        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        "destination_table": {
-            "table_id": foo.id,
-        },
-        "default_dataset": {
-            "dataset_id": bar.id,
-        },
-        "allowLargeResults": True,
-        "flattenResults": True,
-        "script_options": {
-            "keyResultStatement": "LAST",
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bar = new gcp.bigquery.Dataset("bar", {
-    datasetId: "job_query_dataset",
-    friendlyName: "test",
-    description: "This is a test description",
-    location: "US",
-});
-const foo = new gcp.bigquery.Table("foo", {
-    datasetId: bar.datasetId,
-    tableId: "job_query_table",
-});
-const job = new gcp.bigquery.Job("job", {
-    jobId: "job_query",
-    labels: {
-        "example-label": "example-value",
-    },
-    query: {
-        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        destination_table: {
-            tableId: foo.id,
-        },
-        default_dataset: {
-            datasetId: bar.id,
-        },
-        allowLargeResults: true,
-        flattenResults: true,
-        script_options: {
-            keyResultStatement: "LAST",
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-### Bigquery Job Load
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var bar = new Gcp.BigQuery.Dataset("bar", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "job_load_dataset",
-            FriendlyName = "test",
-            Description = "This is a test description",
-            Location = "US",
-        });
-        var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
-        {
-            DatasetId = bar.DatasetId,
-            TableId = "job_load_table",
-        });
-        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
-        {
-            JobId = "job_load",
-            Labels = 
-            {
-                { "my_job", "load" },
-            },
-            Load = new Gcp.BigQuery.Inputs.JobLoadArgs
-            {
-                SourceUris = 
-                {
-                    "gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv",
-                },
-                Destination_table = 
-                {
-                    { "projectId", foo.Project },
-                    { "datasetId", foo.DatasetId },
-                    { "tableId", foo.TableId },
-                },
-                SkipLeadingRows = 1,
-                SchemaUpdateOptions = 
-                {
-                    "ALLOW_FIELD_RELAXATION",
-                    "ALLOW_FIELD_ADDITION",
-                },
-                WriteDisposition = "WRITE_APPEND",
-                Autodetect = true,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		bar, err := bigquery.NewDataset(ctx, "bar", &bigquery.DatasetArgs{
-			DatasetId:    pulumi.String("job_load_dataset"),
-			FriendlyName: pulumi.String("test"),
-			Description:  pulumi.String("This is a test description"),
-			Location:     pulumi.String("US"),
-		})
-		if err != nil {
-			return err
-		}
-		foo, err := bigquery.NewTable(ctx, "foo", &bigquery.TableArgs{
-			DatasetId: bar.DatasetId,
-			TableId:   pulumi.String("job_load_table"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
-			JobId: pulumi.String("job_load"),
-			Labels: pulumi.Map{
-				"my_job": pulumi.String("load"),
-			},
-			Load: &bigquery.JobLoadArgs{
-				SourceUris: pulumi.StringArray{
-					pulumi.String("gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"),
-				},
-				Destination_table: pulumi.Map{
-					"projectId": foo.Project,
-					"datasetId": foo.DatasetId,
-					"tableId":   foo.TableId,
-				},
-				SkipLeadingRows: pulumi.Int(1),
-				SchemaUpdateOptions: pulumi.StringArray{
-					pulumi.String("ALLOW_FIELD_RELAXATION"),
-					pulumi.String("ALLOW_FIELD_ADDITION"),
-				},
-				WriteDisposition: pulumi.String("WRITE_APPEND"),
-				Autodetect:       pulumi.Bool(true),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bar = gcp.bigquery.Dataset("bar",
-    dataset_id="job_load_dataset",
-    friendly_name="test",
-    description="This is a test description",
-    location="US")
-foo = gcp.bigquery.Table("foo",
-    dataset_id=bar.dataset_id,
-    table_id="job_load_table")
-job = gcp.bigquery.Job("job",
-    job_id="job_load",
-    labels={
-        "my_job": "load",
-    },
-    load={
-        "sourceUris": ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
-        "destination_table": {
-            "project_id": foo.project,
-            "dataset_id": foo.dataset_id,
-            "table_id": foo.table_id,
-        },
-        "skipLeadingRows": 1,
-        "schemaUpdateOptions": [
-            "ALLOW_FIELD_RELAXATION",
-            "ALLOW_FIELD_ADDITION",
-        ],
-        "writeDisposition": "WRITE_APPEND",
-        "autodetect": True,
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bar = new gcp.bigquery.Dataset("bar", {
-    datasetId: "job_load_dataset",
-    friendlyName: "test",
-    description: "This is a test description",
-    location: "US",
-});
-const foo = new gcp.bigquery.Table("foo", {
-    datasetId: bar.datasetId,
-    tableId: "job_load_table",
-});
-const job = new gcp.bigquery.Job("job", {
-    jobId: "job_load",
-    labels: {
-        my_job: "load",
-    },
-    load: {
-        sourceUris: ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
-        destination_table: {
-            projectId: foo.project,
-            datasetId: foo.datasetId,
-            tableId: foo.tableId,
-        },
-        skipLeadingRows: 1,
-        schemaUpdateOptions: [
-            "ALLOW_FIELD_RELAXATION",
-            "ALLOW_FIELD_ADDITION",
-        ],
-        writeDisposition: "WRITE_APPEND",
-        autodetect: true,
-    },
-});
-```
-
-{{% /example %}}
-
-### Bigquery Job Extract
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var source_oneDataset = new Gcp.BigQuery.Dataset("source-oneDataset", new Gcp.BigQuery.DatasetArgs
-        {
-            DatasetId = "job_extract_dataset",
-            FriendlyName = "test",
-            Description = "This is a test description",
-            Location = "US",
-        });
-        var source_oneTable = new Gcp.BigQuery.Table("source-oneTable", new Gcp.BigQuery.TableArgs
-        {
-            DatasetId = source_oneDataset.DatasetId,
-            TableId = "job_extract_table",
-            Schema = @"[
-  {
-    ""name"": ""name"",
-    ""type"": ""STRING"",
-    ""mode"": ""NULLABLE""
-  },
-  {
-    ""name"": ""post_abbr"",
-    ""type"": ""STRING"",
-    ""mode"": ""NULLABLE""
-  },
-  {
-    ""name"": ""date"",
-    ""type"": ""DATE"",
-    ""mode"": ""NULLABLE""
-  }
-]
-",
-        });
-        var dest = new Gcp.Storage.Bucket("dest", new Gcp.Storage.BucketArgs
-        {
-            ForceDestroy = true,
-        });
-        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
-        {
-            JobId = "job_extract",
-            Extract = new Gcp.BigQuery.Inputs.JobExtractArgs
-            {
-                DestinationUris = 
-                {
-                    dest.Url.Apply(url => $"{url}/extract"),
-                },
-                Source_table = 
-                {
-                    { "projectId", source_oneTable.Project },
-                    { "datasetId", source_oneTable.DatasetId },
-                    { "tableId", source_oneTable.TableId },
-                },
-                DestinationFormat = "NEWLINE_DELIMITED_JSON",
-                Compression = "GZIP",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-source_one_dataset = gcp.bigquery.Dataset("source-oneDataset",
-    dataset_id="job_extract_dataset",
-    friendly_name="test",
-    description="This is a test description",
-    location="US")
-source_one_table = gcp.bigquery.Table("source-oneTable",
-    dataset_id=source_one_dataset.dataset_id,
-    table_id="job_extract_table",
-    schema="""[
-  {
-    "name": "name",
-    "type": "STRING",
-    "mode": "NULLABLE"
-  },
-  {
-    "name": "post_abbr",
-    "type": "STRING",
-    "mode": "NULLABLE"
-  },
-  {
-    "name": "date",
-    "type": "DATE",
-    "mode": "NULLABLE"
-  }
-]
-""")
-dest = gcp.storage.Bucket("dest", force_destroy=True)
-job = gcp.bigquery.Job("job",
-    job_id="job_extract",
-    extract={
-        "destinationUris": [dest.url.apply(lambda url: f"{url}/extract")],
-        "source_table": {
-            "project_id": source_one_table.project,
-            "dataset_id": source_one_table.dataset_id,
-            "table_id": source_one_table.table_id,
-        },
-        "destinationFormat": "NEWLINE_DELIMITED_JSON",
-        "compression": "GZIP",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const source_oneDataset = new gcp.bigquery.Dataset("source-oneDataset", {
-    datasetId: "job_extract_dataset",
-    friendlyName: "test",
-    description: "This is a test description",
-    location: "US",
-});
-const source_oneTable = new gcp.bigquery.Table("source-oneTable", {
-    datasetId: source_oneDataset.datasetId,
-    tableId: "job_extract_table",
-    schema: `[
-  {
-    "name": "name",
-    "type": "STRING",
-    "mode": "NULLABLE"
-  },
-  {
-    "name": "post_abbr",
-    "type": "STRING",
-    "mode": "NULLABLE"
-  },
-  {
-    "name": "date",
-    "type": "DATE",
-    "mode": "NULLABLE"
-  }
-]
-`,
-});
-const dest = new gcp.storage.Bucket("dest", {forceDestroy: true});
-const job = new gcp.bigquery.Job("job", {
-    jobId: "job_extract",
-    extract: {
-        destinationUris: [pulumi.interpolate`${dest.url}/extract`],
-        source_table: {
-            projectId: source_oneTable.project,
-            datasetId: source_oneTable.datasetId,
-            tableId: source_oneTable.tableId,
-        },
-        destinationFormat: "NEWLINE_DELIMITED_JSON",
-        compression: "GZIP",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Job Resource {#create}
@@ -770,7 +24,7 @@ const job = new gcp.bigquery.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>copy=None<span class="p">, </span>extract=None<span class="p">, </span>job_id=None<span class="p">, </span>job_timeout_ms=None<span class="p">, </span>labels=None<span class="p">, </span>load=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>query=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Job">Job</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -961,7 +215,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,7 +227,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1005,7 +261,8 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1039,7 +296,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1068,7 +326,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1079,7 +338,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,7 +372,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1146,7 +407,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1175,7 +437,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1186,7 +449,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1219,7 +483,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1253,7 +518,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1280,9 +546,10 @@ If it is not provided, the provider project is used.
 <a href="#copy_python" style="color: inherit; text-decoration: inherit;">copy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Dict[Job<wbr>Copy]</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1291,9 +558,10 @@ If it is not provided, the provider project is used.
 <a href="#extract_python" style="color: inherit; text-decoration: inherit;">extract</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Dict[Job<wbr>Extract]</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1313,7 +581,7 @@ If it is not provided, the provider project is used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
@@ -1324,9 +592,10 @@ If it is not provided, the provider project is used.
 <a href="#load_python" style="color: inherit; text-decoration: inherit;">load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Dict[Job<wbr>Load]</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1358,9 +627,10 @@ If it is not provided, the provider project is used.
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Dict[Job<wbr>Query]</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1549,7 +819,8 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>copy=None<span class="p">, </span>extract=None<span class="p">, </span>job_id=None<span class="p">, </span>job_timeout_ms=None<span class="p">, </span>job_type=None<span class="p">, </span>labels=None<span class="p">, </span>load=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>query=None<span class="p">, </span>user_email=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">, </span><span class="nx">user_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1557,7 +828,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.JobState.html">JobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.JobState.html">JobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1671,7 +942,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1682,7 +954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1737,7 +1010,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1771,7 +1045,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1800,7 +1075,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1811,7 +1087,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1866,7 +1143,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1900,7 +1178,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1929,7 +1208,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1940,7 +1220,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1995,7 +1276,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2029,7 +1311,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2056,9 +1339,10 @@ If it is not provided, the provider project is used.
 <a href="#state_copy_python" style="color: inherit; text-decoration: inherit;">copy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Dict[Job<wbr>Copy]</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2067,9 +1351,10 @@ If it is not provided, the provider project is used.
 <a href="#state_extract_python" style="color: inherit; text-decoration: inherit;">extract</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Dict[Job<wbr>Extract]</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2111,7 +1396,7 @@ If it is not provided, the provider project is used.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
@@ -2122,9 +1407,10 @@ If it is not provided, the provider project is used.
 <a href="#state_load_python" style="color: inherit; text-decoration: inherit;">load</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Dict[Job<wbr>Load]</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2156,9 +1442,10 @@ If it is not provided, the provider project is used.
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Dict[Job<wbr>Query]</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2213,7 +1500,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopysourcetable">List&lt;Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2228,6 +1516,8 @@ If it is not provided, the provider project is used.
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2238,7 +1528,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2249,7 +1540,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2266,6 +1558,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2283,7 +1577,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopysourcetable">[]Job<wbr>Copy<wbr>Source<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2298,6 +1593,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2308,7 +1605,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2319,7 +1617,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2336,6 +1635,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2353,7 +1654,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopysourcetable">Job<wbr>Copy<wbr>Source<wbr>Table[]</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2368,6 +1670,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2378,7 +1682,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2389,7 +1694,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2406,6 +1712,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2417,19 +1725,20 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetables_python">
-<a href="#sourcetables_python" style="color: inherit; text-decoration: inherit;">source<wbr>Tables</a>
+        <span id="source_tables_python">
+<a href="#source_tables_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">List[Job<wbr>Copy<wbr>Source<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">List[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createdisposition_python">
-<a href="#createdisposition_python" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
+        <span id="create_disposition_python">
+<a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2438,34 +1747,38 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationencryptionconfiguration_python">
-<a href="#destinationencryptionconfiguration_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
+        <span id="destination_encryption_configuration_python">
+<a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Dict[Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationtable_python">
-<a href="#destinationtable_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
+        <span id="destination_table_python">
+<a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">Dict[Job<wbr>Copy<wbr>Destination<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="writedisposition_python">
-<a href="#writedisposition_python" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
+        <span id="write_disposition_python">
+<a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2476,6 +1789,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3028,7 +2343,8 @@ Default is ','
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3039,7 +2355,8 @@ Default is ','
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3127,7 +2444,8 @@ Default is ','
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3138,7 +2456,8 @@ Default is ','
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3226,7 +2545,8 @@ Default is ','
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3237,7 +2557,8 @@ Default is ','
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3260,8 +2581,8 @@ Default is ','
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationuris_python">
-<a href="#destinationuris_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Uris</a>
+        <span id="destination_uris_python">
+<a href="#destination_uris_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3283,8 +2604,8 @@ The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationformat_python">
-<a href="#destinationformat_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Format</a>
+        <span id="destination_format_python">
+<a href="#destination_format_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3296,8 +2617,8 @@ The default value for models is SAVED_MODEL.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3308,8 +2629,8 @@ Default is ','
 
     <dt class="property-optional"
             title="Optional">
-        <span id="printheader_python">
-<a href="#printheader_python" style="color: inherit; text-decoration: inherit;">print<wbr>Header</a>
+        <span id="print_header_python">
+<a href="#print_header_python" style="color: inherit; text-decoration: inherit;">print_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3319,30 +2640,32 @@ Default is ','
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcemodel_python">
-<a href="#sourcemodel_python" style="color: inherit; text-decoration: inherit;">source<wbr>Model</a>
+        <span id="source_model_python">
+<a href="#source_model_python" style="color: inherit; text-decoration: inherit;">source_<wbr>model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">Dict[Job<wbr>Extract<wbr>Source<wbr>Model]</a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcetable_python">
-<a href="#sourcetable_python" style="color: inherit; text-decoration: inherit;">source<wbr>Table</a>
+        <span id="source_table_python">
+<a href="#source_table_python" style="color: inherit; text-decoration: inherit;">source_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">Dict[Job<wbr>Extract<wbr>Source<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useavrologicaltypes_python">
-<a href="#useavrologicaltypes_python" style="color: inherit; text-decoration: inherit;">use<wbr>Avro<wbr>Logical<wbr>Types</a>
+        <span id="use_avro_logical_types_python">
+<a href="#use_avro_logical_types_python" style="color: inherit; text-decoration: inherit;">use_<wbr>avro_<wbr>logical_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3508,8 +2831,8 @@ Default is ','
 
     <dt class="property-required"
             title="Required">
-        <span id="modelid_python">
-<a href="#modelid_python" style="color: inherit; text-decoration: inherit;">model<wbr>Id</a>
+        <span id="model_id_python">
+<a href="#model_id_python" style="color: inherit; text-decoration: inherit;">model_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3743,7 +3066,8 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3810,6 +3134,8 @@ The default value is false.
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3820,7 +3146,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3972,7 +3299,8 @@ For orc, specify "ORC". The default value is CSV.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3989,6 +3317,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4006,7 +3336,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4073,6 +3404,8 @@ The default value is false.
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4083,7 +3416,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4235,7 +3569,8 @@ For orc, specify "ORC". The default value is CSV.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4252,6 +3587,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4269,7 +3606,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4336,6 +3674,8 @@ The default value is false.
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4346,7 +3686,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4498,7 +3839,8 @@ For orc, specify "ORC". The default value is CSV.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4515,6 +3857,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4526,19 +3870,20 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationtable_python">
-<a href="#destinationtable_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
+        <span id="destination_table_python">
+<a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">Dict[Job<wbr>Load<wbr>Destination<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceuris_python">
-<a href="#sourceuris_python" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
+        <span id="source_uris_python">
+<a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4553,8 +3898,8 @@ For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowjaggedrows_python">
-<a href="#allowjaggedrows_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
+        <span id="allow_jagged_rows_python">
+<a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4566,8 +3911,8 @@ an invalid error is returned in the job result. The default value is false. Only
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowquotednewlines_python">
-<a href="#allowquotednewlines_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
+        <span id="allow_quoted_newlines_python">
+<a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4589,8 +3934,8 @@ The default value is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createdisposition_python">
-<a href="#createdisposition_python" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
+        <span id="create_disposition_python">
+<a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4599,17 +3944,20 @@ The default value is false.
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationencryptionconfiguration_python">
-<a href="#destinationencryptionconfiguration_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
+        <span id="destination_encryption_configuration_python">
+<a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Dict[Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4627,8 +3975,8 @@ has been split using the values of the quote and fieldDelimiter properties.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4639,8 +3987,8 @@ Default is ','
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoreunknownvalues_python">
-<a href="#ignoreunknownvalues_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
+        <span id="ignore_unknown_values_python">
+<a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4655,8 +4003,8 @@ JSON: Named values that don't match any column names
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbadrecords_python">
-<a href="#maxbadrecords_python" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
+        <span id="max_bad_records_python">
+<a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4667,8 +4015,8 @@ an invalid error is returned in the job result. The default value is 0, which re
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nullmarker_python">
-<a href="#nullmarker_python" style="color: inherit; text-decoration: inherit;">null<wbr>Marker</a>
+        <span id="null_marker_python">
+<a href="#null_marker_python" style="color: inherit; text-decoration: inherit;">null_<wbr>marker</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4681,8 +4029,8 @@ an empty value.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectionfields_python">
-<a href="#projectionfields_python" style="color: inherit; text-decoration: inherit;">projection<wbr>Fields</a>
+        <span id="projection_fields_python">
+<a href="#projection_fields_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4708,8 +4056,8 @@ If your data contains quoted newline characters, you must also set the allowQuot
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaupdateoptions_python">
-<a href="#schemaupdateoptions_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
+        <span id="schema_update_options_python">
+<a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4724,8 +4072,8 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipleadingrows_python">
-<a href="#skipleadingrows_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
+        <span id="skip_leading_rows_python">
+<a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4742,8 +4090,8 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceformat_python">
-<a href="#sourceformat_python" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
+        <span id="source_format_python">
+<a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4759,15 +4107,16 @@ For orc, specify "ORC". The default value is CSV.
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">Dict[Job<wbr>Load<wbr>Time<wbr>Partitioning]</a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="writedisposition_python">
-<a href="#writedisposition_python" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
+        <span id="write_disposition_python">
+<a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4778,6 +4127,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5224,8 +4575,8 @@ but in OnePlatform the field will be treated as unset.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationms_python">
-<a href="#expirationms_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
+        <span id="expiration_ms_python">
+<a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5279,7 +4630,8 @@ A wrapper is used here because an empty string is an invalid value.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5307,6 +4659,8 @@ However, you must still set destinationTable when result size exceeds the allowe
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5317,7 +4671,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5328,7 +4683,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5339,7 +4695,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5398,6 +4755,8 @@ If unspecified, this will be set to your project default.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5424,7 +4783,8 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5460,7 +4820,8 @@ The default value is true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List&lt;Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5477,6 +4838,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5494,7 +4857,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5522,6 +4886,8 @@ However, you must still set destinationTable when result size exceeds the allowe
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5532,7 +4898,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5543,7 +4910,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5554,7 +4922,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5613,6 +4982,8 @@ If unspecified, this will be set to your project default.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5639,7 +5010,8 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5675,7 +5047,8 @@ The default value is true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">[]Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5692,6 +5065,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5709,7 +5084,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5737,6 +5113,8 @@ However, you must still set destinationTable when result size exceeds the allowe
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5747,7 +5125,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5758,7 +5137,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5769,7 +5149,8 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5828,6 +5209,8 @@ If unspecified, this will be set to your project default.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5854,7 +5237,8 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5890,7 +5274,8 @@ The default value is true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5907,6 +5292,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5924,13 +5311,14 @@ Creation, truncation and append actions occur as one atomic update upon job comp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowlargeresults_python">
-<a href="#allowlargeresults_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Large<wbr>Results</a>
+        <span id="allow_large_results_python">
+<a href="#allow_large_results_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>large_<wbr>results</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5942,8 +5330,8 @@ However, you must still set destinationTable when result size exceeds the allowe
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createdisposition_python">
-<a href="#createdisposition_python" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
+        <span id="create_disposition_python">
+<a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5952,45 +5340,50 @@ However, you must still set destinationTable when result size exceeds the allowe
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultdataset_python">
-<a href="#defaultdataset_python" style="color: inherit; text-decoration: inherit;">default<wbr>Dataset</a>
+        <span id="default_dataset_python">
+<a href="#default_dataset_python" style="color: inherit; text-decoration: inherit;">default_<wbr>dataset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">Dict[Job<wbr>Query<wbr>Default<wbr>Dataset]</a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationencryptionconfiguration_python">
-<a href="#destinationencryptionconfiguration_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
+        <span id="destination_encryption_configuration_python">
+<a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Dict[Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationtable_python">
-<a href="#destinationtable_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
+        <span id="destination_table_python">
+<a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">Dict[Job<wbr>Query<wbr>Destination<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flattenresults_python">
-<a href="#flattenresults_python" style="color: inherit; text-decoration: inherit;">flatten<wbr>Results</a>
+        <span id="flatten_results_python">
+<a href="#flatten_results_python" style="color: inherit; text-decoration: inherit;">flatten_<wbr>results</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6001,8 +5394,8 @@ allowLargeResults must be true if this is set to false. For standard SQL queries
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumbillingtier_python">
-<a href="#maximumbillingtier_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Billing<wbr>Tier</a>
+        <span id="maximum_billing_tier_python">
+<a href="#maximum_billing_tier_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>billing_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6013,8 +5406,8 @@ If unspecified, this will be set to your project default.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumbytesbilled_python">
-<a href="#maximumbytesbilled_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Billed</a>
+        <span id="maximum_bytes_billed_python">
+<a href="#maximum_bytes_billed_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>billed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6025,8 +5418,8 @@ If unspecified, this will be set to your project default.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parametermode_python">
-<a href="#parametermode_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Mode</a>
+        <span id="parameter_mode_python">
+<a href="#parameter_mode_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6043,12 +5436,14 @@ If unspecified, this will be set to your project default.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaupdateoptions_python">
-<a href="#schemaupdateoptions_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
+        <span id="schema_update_options_python">
+<a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6063,19 +5458,20 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scriptoptions_python">
-<a href="#scriptoptions_python" style="color: inherit; text-decoration: inherit;">script<wbr>Options</a>
+        <span id="script_options_python">
+<a href="#script_options_python" style="color: inherit; text-decoration: inherit;">script_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">Dict[Job<wbr>Query<wbr>Script<wbr>Options]</a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uselegacysql_python">
-<a href="#uselegacysql_python" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
+        <span id="use_legacy_sql_python">
+<a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6086,8 +5482,8 @@ If set to false, the query will use BigQuery's standard SQL.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usequerycache_python">
-<a href="#usequerycache_python" style="color: inherit; text-decoration: inherit;">use<wbr>Query<wbr>Cache</a>
+        <span id="use_query_cache_python">
+<a href="#use_query_cache_python" style="color: inherit; text-decoration: inherit;">use_<wbr>query_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6099,19 +5495,20 @@ The default value is true.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userdefinedfunctionresources_python">
-<a href="#userdefinedfunctionresources_python" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
+        <span id="user_defined_function_resources_python">
+<a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="writedisposition_python">
-<a href="#writedisposition_python" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
+        <span id="write_disposition_python">
+<a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6122,6 +5519,8 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -6569,6 +5968,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6610,6 +6010,7 @@ used to populate the schema and query results of the script job.
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6651,6 +6052,7 @@ used to populate the schema and query results of the script job.
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6684,20 +6086,21 @@ used to populate the schema and query results of the script job.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyresultstatement_python">
-<a href="#keyresultstatement_python" style="color: inherit; text-decoration: inherit;">key<wbr>Result<wbr>Statement</a>
+        <span id="key_result_statement_python">
+<a href="#key_result_statement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>result_<wbr>statement</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statementbytebudget_python">
-<a href="#statementbytebudget_python" style="color: inherit; text-decoration: inherit;">statement<wbr>Byte<wbr>Budget</a>
+        <span id="statement_byte_budget_python">
+<a href="#statement_byte_budget_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>byte_<wbr>budget</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6707,8 +6110,8 @@ used to populate the schema and query results of the script job.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statementtimeoutms_python">
-<a href="#statementtimeoutms_python" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout<wbr>Ms</a>
+        <span id="statement_timeout_ms_python">
+<a href="#statement_timeout_ms_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6833,8 +6236,8 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inlinecode_python">
-<a href="#inlinecode_python" style="color: inherit; text-decoration: inherit;">inline<wbr>Code</a>
+        <span id="inline_code_python">
+<a href="#inline_code_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6872,6 +6275,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -28,1023 +28,6 @@ To get more information about HealthCheck, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Health Check Tcp
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var tcp_health_check = new Gcp.Compute.HealthCheck("tcp-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
-            {
-                Port = 80,
-            },
-            TimeoutSec = 1,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "tcp-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
-				Port: pulumi.Int(80),
-			},
-			TimeoutSec: pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
-    check_interval_sec=1,
-    tcp_health_check={
-        "port": "80",
-    },
-    timeout_sec=1)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
-    checkIntervalSec: 1,
-    tcpHealthCheck: {
-        port: 80,
-    },
-    timeoutSec: 1,
-});
-```
-
-{{% /example %}}
-
-### Health Check Tcp Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var tcp_health_check = new Gcp.Compute.HealthCheck("tcp-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            Description = "Health check via tcp",
-            HealthyThreshold = 4,
-            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
-            {
-                PortName = "health-check-port",
-                PortSpecification = "USE_NAMED_PORT",
-                ProxyHeader = "NONE",
-                Request = "ARE YOU HEALTHY?",
-                Response = "I AM HEALTHY",
-            },
-            TimeoutSec = 1,
-            UnhealthyThreshold = 5,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "tcp-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			Description:      pulumi.String("Health check via tcp"),
-			HealthyThreshold: pulumi.Int(4),
-			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
-				PortName:          pulumi.String("health-check-port"),
-				PortSpecification: pulumi.String("USE_NAMED_PORT"),
-				ProxyHeader:       pulumi.String("NONE"),
-				Request:           pulumi.String("ARE YOU HEALTHY?"),
-				Response:          pulumi.String("I AM HEALTHY"),
-			},
-			TimeoutSec:         pulumi.Int(1),
-			UnhealthyThreshold: pulumi.Int(5),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
-    check_interval_sec=1,
-    description="Health check via tcp",
-    healthy_threshold=4,
-    tcp_health_check={
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request": "ARE YOU HEALTHY?",
-        "response": "I AM HEALTHY",
-    },
-    timeout_sec=1,
-    unhealthy_threshold=5)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via tcp",
-    healthyThreshold: 4,
-    tcpHealthCheck: {
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        request: "ARE YOU HEALTHY?",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
-
-{{% /example %}}
-
-### Health Check Ssl
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ssl_health_check = new Gcp.Compute.HealthCheck("ssl-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
-            {
-                Port = 443,
-            },
-            TimeoutSec = 1,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "ssl-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			SslHealthCheck: &compute.HealthCheckSslHealthCheckArgs{
-				Port: pulumi.Int(443),
-			},
-			TimeoutSec: pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
-    check_interval_sec=1,
-    ssl_health_check={
-        "port": "443",
-    },
-    timeout_sec=1)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
-    checkIntervalSec: 1,
-    sslHealthCheck: {
-        port: 443,
-    },
-    timeoutSec: 1,
-});
-```
-
-{{% /example %}}
-
-### Health Check Ssl Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ssl_health_check = new Gcp.Compute.HealthCheck("ssl-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            Description = "Health check via ssl",
-            HealthyThreshold = 4,
-            SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
-            {
-                PortName = "health-check-port",
-                PortSpecification = "USE_NAMED_PORT",
-                ProxyHeader = "NONE",
-                Request = "ARE YOU HEALTHY?",
-                Response = "I AM HEALTHY",
-            },
-            TimeoutSec = 1,
-            UnhealthyThreshold = 5,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "ssl-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			Description:      pulumi.String("Health check via ssl"),
-			HealthyThreshold: pulumi.Int(4),
-			SslHealthCheck: &compute.HealthCheckSslHealthCheckArgs{
-				PortName:          pulumi.String("health-check-port"),
-				PortSpecification: pulumi.String("USE_NAMED_PORT"),
-				ProxyHeader:       pulumi.String("NONE"),
-				Request:           pulumi.String("ARE YOU HEALTHY?"),
-				Response:          pulumi.String("I AM HEALTHY"),
-			},
-			TimeoutSec:         pulumi.Int(1),
-			UnhealthyThreshold: pulumi.Int(5),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
-    check_interval_sec=1,
-    description="Health check via ssl",
-    healthy_threshold=4,
-    ssl_health_check={
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request": "ARE YOU HEALTHY?",
-        "response": "I AM HEALTHY",
-    },
-    timeout_sec=1,
-    unhealthy_threshold=5)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via ssl",
-    healthyThreshold: 4,
-    sslHealthCheck: {
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        request: "ARE YOU HEALTHY?",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
-
-{{% /example %}}
-
-### Health Check Http
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var http_health_check = new Gcp.Compute.HealthCheck("http-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
-            {
-                Port = 80,
-            },
-            TimeoutSec = 1,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "http-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
-				Port: pulumi.Int(80),
-			},
-			TimeoutSec: pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http_health_check = gcp.compute.HealthCheck("http-health-check",
-    check_interval_sec=1,
-    http_health_check={
-        "port": 80,
-    },
-    timeout_sec=1)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
-    checkIntervalSec: 1,
-    httpHealthCheck: {
-        port: 80,
-    },
-    timeoutSec: 1,
-});
-```
-
-{{% /example %}}
-
-### Health Check Http Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var http_health_check = new Gcp.Compute.HealthCheck("http-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            Description = "Health check via http",
-            HealthyThreshold = 4,
-            HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
-            {
-                Host = "1.2.3.4",
-                PortName = "health-check-port",
-                PortSpecification = "USE_NAMED_PORT",
-                ProxyHeader = "NONE",
-                RequestPath = "/mypath",
-                Response = "I AM HEALTHY",
-            },
-            TimeoutSec = 1,
-            UnhealthyThreshold = 5,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "http-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			Description:      pulumi.String("Health check via http"),
-			HealthyThreshold: pulumi.Int(4),
-			HttpHealthCheck: &compute.HealthCheckHttpHealthCheckArgs{
-				Host:              pulumi.String("1.2.3.4"),
-				PortName:          pulumi.String("health-check-port"),
-				PortSpecification: pulumi.String("USE_NAMED_PORT"),
-				ProxyHeader:       pulumi.String("NONE"),
-				RequestPath:       pulumi.String("/mypath"),
-				Response:          pulumi.String("I AM HEALTHY"),
-			},
-			TimeoutSec:         pulumi.Int(1),
-			UnhealthyThreshold: pulumi.Int(5),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http_health_check = gcp.compute.HealthCheck("http-health-check",
-    check_interval_sec=1,
-    description="Health check via http",
-    healthy_threshold=4,
-    http_health_check={
-        "host": "1.2.3.4",
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request_path": "/mypath",
-        "response": "I AM HEALTHY",
-    },
-    timeout_sec=1,
-    unhealthy_threshold=5)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via http",
-    healthyThreshold: 4,
-    httpHealthCheck: {
-        host: "1.2.3.4",
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        requestPath: "/mypath",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
-
-{{% /example %}}
-
-### Health Check Https
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var https_health_check = new Gcp.Compute.HealthCheck("https-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
-            {
-                Port = 443,
-            },
-            TimeoutSec = 1,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "https-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			HttpsHealthCheck: &compute.HealthCheckHttpsHealthCheckArgs{
-				Port: pulumi.Int(443),
-			},
-			TimeoutSec: pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-https_health_check = gcp.compute.HealthCheck("https-health-check",
-    check_interval_sec=1,
-    https_health_check={
-        "port": "443",
-    },
-    timeout_sec=1)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
-    checkIntervalSec: 1,
-    httpsHealthCheck: {
-        port: 443,
-    },
-    timeoutSec: 1,
-});
-```
-
-{{% /example %}}
-
-### Health Check Https Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var https_health_check = new Gcp.Compute.HealthCheck("https-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            Description = "Health check via https",
-            HealthyThreshold = 4,
-            HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
-            {
-                Host = "1.2.3.4",
-                PortName = "health-check-port",
-                PortSpecification = "USE_NAMED_PORT",
-                ProxyHeader = "NONE",
-                RequestPath = "/mypath",
-                Response = "I AM HEALTHY",
-            },
-            TimeoutSec = 1,
-            UnhealthyThreshold = 5,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "https-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			Description:      pulumi.String("Health check via https"),
-			HealthyThreshold: pulumi.Int(4),
-			HttpsHealthCheck: &compute.HealthCheckHttpsHealthCheckArgs{
-				Host:              pulumi.String("1.2.3.4"),
-				PortName:          pulumi.String("health-check-port"),
-				PortSpecification: pulumi.String("USE_NAMED_PORT"),
-				ProxyHeader:       pulumi.String("NONE"),
-				RequestPath:       pulumi.String("/mypath"),
-				Response:          pulumi.String("I AM HEALTHY"),
-			},
-			TimeoutSec:         pulumi.Int(1),
-			UnhealthyThreshold: pulumi.Int(5),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-https_health_check = gcp.compute.HealthCheck("https-health-check",
-    check_interval_sec=1,
-    description="Health check via https",
-    healthy_threshold=4,
-    https_health_check={
-        "host": "1.2.3.4",
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request_path": "/mypath",
-        "response": "I AM HEALTHY",
-    },
-    timeout_sec=1,
-    unhealthy_threshold=5)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via https",
-    healthyThreshold: 4,
-    httpsHealthCheck: {
-        host: "1.2.3.4",
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        requestPath: "/mypath",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
-
-{{% /example %}}
-
-### Health Check Http2
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var http2_health_check = new Gcp.Compute.HealthCheck("http2-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
-            {
-                Port = 443,
-            },
-            TimeoutSec = 1,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "http2-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			Http2HealthCheck: &compute.HealthCheckHttp2HealthCheckArgs{
-				Port: pulumi.Int(443),
-			},
-			TimeoutSec: pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http2_health_check = gcp.compute.HealthCheck("http2-health-check",
-    check_interval_sec=1,
-    http2_health_check={
-        "port": "443",
-    },
-    timeout_sec=1)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
-    checkIntervalSec: 1,
-    http2HealthCheck: {
-        port: 443,
-    },
-    timeoutSec: 1,
-});
-```
-
-{{% /example %}}
-
-### Health Check Http2 Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var http2_health_check = new Gcp.Compute.HealthCheck("http2-health-check", new Gcp.Compute.HealthCheckArgs
-        {
-            CheckIntervalSec = 1,
-            Description = "Health check via http2",
-            HealthyThreshold = 4,
-            Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
-            {
-                Host = "1.2.3.4",
-                PortName = "health-check-port",
-                PortSpecification = "USE_NAMED_PORT",
-                ProxyHeader = "NONE",
-                RequestPath = "/mypath",
-                Response = "I AM HEALTHY",
-            },
-            TimeoutSec = 1,
-            UnhealthyThreshold = 5,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewHealthCheck(ctx, "http2-health-check", &compute.HealthCheckArgs{
-			CheckIntervalSec: pulumi.Int(1),
-			Description:      pulumi.String("Health check via http2"),
-			HealthyThreshold: pulumi.Int(4),
-			Http2HealthCheck: &compute.HealthCheckHttp2HealthCheckArgs{
-				Host:              pulumi.String("1.2.3.4"),
-				PortName:          pulumi.String("health-check-port"),
-				PortSpecification: pulumi.String("USE_NAMED_PORT"),
-				ProxyHeader:       pulumi.String("NONE"),
-				RequestPath:       pulumi.String("/mypath"),
-				Response:          pulumi.String("I AM HEALTHY"),
-			},
-			TimeoutSec:         pulumi.Int(1),
-			UnhealthyThreshold: pulumi.Int(5),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http2_health_check = gcp.compute.HealthCheck("http2-health-check",
-    check_interval_sec=1,
-    description="Health check via http2",
-    healthy_threshold=4,
-    http2_health_check={
-        "host": "1.2.3.4",
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request_path": "/mypath",
-        "response": "I AM HEALTHY",
-    },
-    timeout_sec=1,
-    unhealthy_threshold=5)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via http2",
-    healthyThreshold: 4,
-    http2HealthCheck: {
-        host: "1.2.3.4",
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        requestPath: "/mypath",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a HealthCheck Resource {#create}
@@ -1056,7 +39,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#HealthCheck">HealthCheck</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.HealthCheck">HealthCheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1254,6 +237,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpchealthcheck_csharp">
+<a href="#grpchealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthythreshold_csharp">
 <a href="#healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
 </span> 
@@ -1272,7 +267,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,7 +279,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1294,7 +291,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1345,7 +343,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1356,7 +355,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1417,6 +417,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpchealthcheck_go">
+<a href="#grpchealthcheck_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthythreshold_go">
 <a href="#healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
 </span> 
@@ -1435,7 +447,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1446,7 +459,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +471,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1508,7 +523,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +535,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1580,6 +597,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpchealthcheck_nodejs">
+<a href="#grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthythreshold_nodejs">
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span> 
@@ -1598,7 +627,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1609,7 +639,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1620,7 +651,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1671,7 +703,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1682,7 +715,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1743,6 +777,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpc_health_check_python">
+<a href="#grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthy_threshold_python">
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
@@ -1759,9 +805,10 @@ consecutive successes. The default value is 2.
 <a href="#http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Dict[Health<wbr>Check<wbr>Http2Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,9 +817,10 @@ consecutive successes. The default value is 2.
 <a href="#http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">Dict[Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1781,9 +829,10 @@ consecutive successes. The default value is 2.
 <a href="#https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Dict[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1792,7 +841,7 @@ consecutive successes. The default value is 2.
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
@@ -1832,9 +881,10 @@ If it is not provided, the provider project is used.
 <a href="#ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">Dict[Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1843,9 +893,10 @@ If it is not provided, the provider project is used.
 <a href="#tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">Dict[Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2103,7 +1154,8 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>check_interval_sec=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2111,7 +1163,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.HealthCheck.html">HealthCheck</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.HealthCheckState.html">HealthCheckState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.HealthCheck.html">HealthCheck</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.HealthCheckState.html">HealthCheckState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2254,6 +1306,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_grpchealthcheck_csharp">
+<a href="#state_grpchealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_healthythreshold_csharp">
 <a href="#state_healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
 </span> 
@@ -2272,7 +1336,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2283,7 +1348,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2294,7 +1360,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2356,7 +1423,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2367,7 +1435,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2450,6 +1519,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_grpchealthcheck_go">
+<a href="#state_grpchealthcheck_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Health<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_healthythreshold_go">
 <a href="#state_healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
 </span> 
@@ -2468,7 +1549,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2479,7 +1561,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2490,7 +1573,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2552,7 +1636,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2563,7 +1648,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2646,6 +1732,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_grpchealthcheck_nodejs">
+<a href="#state_grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_healthythreshold_nodejs">
 <a href="#state_healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span> 
@@ -2664,7 +1762,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2675,7 +1774,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2686,7 +1786,8 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2748,7 +1849,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2759,7 +1861,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2842,6 +1945,18 @@ you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_grpc_health_check_python">
+<a href="#state_grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_healthy_threshold_python">
 <a href="#state_healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
@@ -2858,9 +1973,10 @@ consecutive successes. The default value is 2.
 <a href="#state_http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Dict[Health<wbr>Check<wbr>Http2Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2869,9 +1985,10 @@ consecutive successes. The default value is 2.
 <a href="#state_http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">Dict[Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2880,9 +1997,10 @@ consecutive successes. The default value is 2.
 <a href="#state_https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Dict[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2891,7 +2009,7 @@ consecutive successes. The default value is 2.
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
@@ -2942,9 +2060,10 @@ If it is not provided, the provider project is used.
 <a href="#state_ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">Dict[Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2953,9 +2072,10 @@ If it is not provided, the provider project is used.
 <a href="#state_tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">Dict[Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3009,6 +2129,296 @@ consecutive failures. The default value is 2.
 ## Supporting Types
 
 
+<h4 id="healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckGrpcHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckGrpcHealthCheck">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckGrpcHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckGrpcHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckGrpcHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckGrpcHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpcservicename_csharp">
+<a href="#grpcservicename_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Service<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC service name for the health check.
+The value of grpcServiceName has the following meanings by convention:
+- Empty serviceName means the overall status of all services at the backend.
+- Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+The grpcServiceName can only be ASCII.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portname_csharp">
+<a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portspecification_csharp">
+<a href="#portspecification_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpcservicename_go">
+<a href="#grpcservicename_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Service<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC service name for the health check.
+The value of grpcServiceName has the following meanings by convention:
+- Empty serviceName means the overall status of all services at the backend.
+- Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+The grpcServiceName can only be ASCII.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portname_go">
+<a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portspecification_go">
+<a href="#portspecification_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpcservicename_nodejs">
+<a href="#grpcservicename_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC service name for the health check.
+The value of grpcServiceName has the following meanings by convention:
+- Empty serviceName means the overall status of all services at the backend.
+- Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+The grpcServiceName can only be ASCII.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portname_nodejs">
+<a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="portspecification_nodejs">
+<a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_service_name_python">
+<a href="#grpc_service_name_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC service name for the health check.
+The value of grpcServiceName has the following meanings by convention:
+- Empty serviceName means the overall status of all services at the backend.
+- Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
+The grpcServiceName can only be ASCII.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_name_python">
+<a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_specification_python">
+<a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttp2HealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttp2HealthCheck">output</a> API doc for this type.
@@ -3048,8 +2458,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3080,8 +2491,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3094,6 +2506,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3149,8 +2563,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3181,8 +2596,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3195,6 +2611,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3250,8 +2668,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3282,8 +2701,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3296,6 +2716,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3351,28 +2773,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="portspecification_python">
-<a href="#portspecification_python" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
-following values:
-* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
-* `USE_NAMED_PORT`: The `portName` is used for health checking.
-* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
-`portName` fields.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3389,6 +2792,27 @@ port_name are defined, port takes precedence.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_specification_python">
+<a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span> 
@@ -3397,6 +2821,8 @@ port_name are defined, port takes precedence.
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3470,8 +2896,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3502,8 +2929,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3516,6 +2944,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3571,8 +3001,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3603,8 +3034,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3617,6 +3049,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3672,8 +3106,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3704,8 +3139,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3718,6 +3154,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3773,28 +3211,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="portspecification_python">
-<a href="#portspecification_python" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
-following values:
-* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
-* `USE_NAMED_PORT`: The `portName` is used for health checking.
-* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
-`portName` fields.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3811,6 +3230,27 @@ port_name are defined, port takes precedence.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_specification_python">
+<a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span> 
@@ -3819,6 +3259,8 @@ port_name are defined, port takes precedence.
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3892,8 +3334,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3924,8 +3367,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3938,6 +3382,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3993,8 +3439,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4025,8 +3472,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4039,6 +3487,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4094,8 +3544,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4126,8 +3577,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4140,6 +3592,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4195,28 +3649,9 @@ check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="portspecification_python">
-<a href="#portspecification_python" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
-following values:
-* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
-* `USE_NAMED_PORT`: The `portName` is used for health checking.
-* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
-`portName` fields.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4233,6 +3668,27 @@ port_name are defined, port takes precedence.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_specification_python">
+<a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span> 
@@ -4241,6 +3697,8 @@ port_name are defined, port takes precedence.
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4395,8 +3853,9 @@ which means no health check logging will be done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4427,8 +3886,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4441,6 +3901,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4485,8 +3947,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4517,8 +3980,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4531,6 +3995,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4575,8 +4041,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4607,8 +4074,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4621,6 +4089,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4665,28 +4135,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="portspecification_python">
-<a href="#portspecification_python" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
-following values:
-* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
-* `USE_NAMED_PORT`: The `portName` is used for health checking.
-* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
-`portName` fields.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4703,6 +4154,27 @@ port_name are defined, port takes precedence.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_specification_python">
+<a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span> 
@@ -4711,6 +4183,8 @@ port_name are defined, port takes precedence.
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4773,8 +4247,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4805,8 +4280,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4819,6 +4295,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4863,8 +4341,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4895,8 +4374,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4909,6 +4389,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4953,8 +4435,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4985,8 +4468,9 @@ following values:
 network endpoint is used for health checking. For other backends, the
 port or named port specified in the Backend Service is used for health
 checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
+If not specified, gRPC health check follows behavior specified in `port` and
 `portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4999,6 +4483,8 @@ If not specified, HTTP2 health check follows behavior specified in `port` and
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5043,28 +4529,9 @@ can only be ASCII.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
-The default value is 443.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="portspecification_python">
-<a href="#portspecification_python" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
-following values:
-* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
-* `USE_NAMED_PORT`: The `portName` is used for health checking.
-* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
-network endpoint is used for health checking. For other backends, the
-port or named port specified in the Backend Service is used for health
-checking.
-If not specified, HTTP2 health check follows behavior specified in `port` and
-`portName` fields.
+    <dd>{{% md %}}The port number for the health check request.
+Must be specified if portName and portSpecification are not set
+or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5081,6 +4548,27 @@ port_name are defined, port takes precedence.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_specification_python">
+<a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, gRPC health check follows behavior specified in `port` and
+`portName` fields.
+Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span> 
@@ -5089,6 +4577,8 @@ port_name are defined, port takes precedence.
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
+Default value is `NONE`.
+Possible values are `NONE` and `PROXY_V1`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5136,6 +4626,6 @@ can only be ASCII.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 
