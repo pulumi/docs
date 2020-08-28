@@ -59,6 +59,14 @@ Duration: 7s
 "/docs/reference/cli/pulumi_stack_rm" >}}). Note that this removes the stack
 entirely from the Pulumi Service, along with all of its update history.
 
-Congratulations! You've successfully provisioned some cloud resources using Pulumi. On the next page we have collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
+Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+
+- Created a Pulumi new project.
+- Provisioned a new S3 Bucket.
+- Added an `index.html` file to your bucket.
+- Served the `index.html` as a static website.
+- Destroyed the resources you've provisioned.
+
+On the next page we have collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 
 {{< get-started-stepper >}}

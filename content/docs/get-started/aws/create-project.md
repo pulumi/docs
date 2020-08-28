@@ -12,6 +12,14 @@ menu:
 aliases: ["/docs/quickstart/aws/create-project/"]
 ---
 
+Now that you have set up your environment by installing Pulumi, installing your preferred language runtime, and configuring your AWS credentials, let's get started with creating your first Pulumi program. In this guide you will:
+
+- Create a new project.
+- Provision a new S3 Bucket.
+- Add an `index.html` file to your bucket.
+- Serve the `index.html` as a static website.
+- Destroy the resources you've provisioned.
+
 Let's get started with a new project in a new directory.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
