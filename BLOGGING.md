@@ -1,26 +1,39 @@
 # Writing and Publishing a Pulumi Blog Post
 
-So you're interested in contributing to the Pulumi blog? Great! Follow these steps to make it happen.
+So you're interested in contributing to the Pulumi blog? Great! Follow these
+steps to make it happen.
 
 ## Set Up Your Development Environment
 
-If you haven't already, clone this repository and [follow the instructions in the README](https://github.com/pulumi/docs#pulumi-documentation-site) to set up your environment and run the development web server. Once you're able to run
+If you haven't already, clone this repository and
+[follow the instructions in the README](https://github.com/pulumi/docs#pulumi-documentation-site)
+to set up your environment and run the development web server.
 
-```
+Once you're able to run:
+
+```zsh
 make serve
 ```
 
-and browse the site locally, you're ready to move on to the next section.
+If you can browse the site locally at http://localhost:1313/ then you are ready to
+proceed to the next section.
+
+> If you get a build error like `_index.md:1:1": plain HTML documents not supported`, double check
+> you are using the right version of `hugo` as described in `README.md`. ([#1091](https://github.com/pulumi/docs/issues/1091))
 
 ## Make a New Post
 
-1. Resist the temptation to copy-and-tweak an existing post! Instead, paste the following command into the terminal (at the root of the project) to generate a new one:
+1. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
+command into the terminal (at the root of the project). This will generate a new file,
+including all the required frontmatter parameters.
 
-   ```
+   ```zsh
    hugo new --kind blog-post blog/my-new-post
    ```
 
-   This will create a minimal post browsable at http://localhost:1313/blog/. You'll find the new post's source file at `content/blog/my-new-post/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
+   This will create a minimal post browsable at http://localhost:1313/blog/. You'll find the new
+   post's source file at `content/blog/my-new-post/_index.md` containing the set of
+   [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
 
    ```
    ---
@@ -173,7 +186,7 @@ For this reason, leaving the `draft` property `true` until you're actually ready
 
 ## Publishing Check List
 
-- [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: ```hugo new --kind blog-post blog/my-new-post```
+- [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: `hugo new --kind blog-post blog/my-new-post`
 - [ ] Drafts will not be published, so either set `draft: false` or or delete it.
 - [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
