@@ -26,27 +26,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_client_config = azure.core.get_client_config()
-example_account = azure.automation.Account("exampleAccount",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku=[{
-        "name": "Basic",
-    }])
-example_connection_service_principal = azure.automation.ConnectionServicePrincipal("exampleConnectionServicePrincipal",
-    resource_group_name=example_resource_group.name,
-    automation_account_name=example_account.name,
-    application_id="00000000-0000-0000-0000-000000000000",
-    tenant_id=example_client_config.tenant_id,
-    subscription_id=example_client_config.subscription_id,
-    certificate_thumbprint=(lambda path: open(path).read())("automation_certificate_test.thumb"))
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

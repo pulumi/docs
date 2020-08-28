@@ -106,7 +106,7 @@ const example = pulumi.output(azure.batch.getPool({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[GetPoolCertificate]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[GetPoolNetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[Dict[GetPoolStartTask]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[GetPoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[GetPoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[GetPoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -384,7 +384,7 @@ The following arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ The following arguments are supported:
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -405,7 +405,7 @@ The following arguments are supported:
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Dict[Get<wbr>Pool<wbr>Start<wbr>Task]</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1070,7 +1070,7 @@ The following output properties are available:
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1134,7 +1134,7 @@ The following output properties are available:
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Dict[Get<wbr>Pool<wbr>Start<wbr>Task]</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -1259,8 +1259,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="evaluationinterval_python">
-<a href="#evaluationinterval_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
+        <span id="evaluation_interval_python">
+<a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1470,8 +1470,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="storelocation_python">
-<a href="#storelocation_python" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
+        <span id="store_location_python">
+<a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1481,8 +1481,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storename_python">
-<a href="#storename_python" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
+        <span id="store_name_python">
+<a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1648,8 +1648,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="containerimagenames_python">
-<a href="#containerimagenames_python" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Names</a>
+        <span id="container_image_names_python">
+<a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1659,11 +1659,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="containerregistries_python">
-<a href="#containerregistries_python" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
+        <span id="container_registries_python">
+<a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd>
@@ -1837,8 +1837,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="registryserver_python">
-<a href="#registryserver_python" style="color: inherit; text-decoration: inherit;">registry<wbr>Server</a>
+        <span id="registry_server_python">
+<a href="#registry_server_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1848,8 +1848,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2004,8 +2004,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resizetimeout_python">
-<a href="#resizetimeout_python" style="color: inherit; text-decoration: inherit;">resize<wbr>Timeout</a>
+        <span id="resize_timeout_python">
+<a href="#resize_timeout_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2015,8 +2015,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetdedicatednodes_python">
-<a href="#targetdedicatednodes_python" style="color: inherit; text-decoration: inherit;">target<wbr>Dedicated<wbr>Nodes</a>
+        <span id="target_dedicated_nodes_python">
+<a href="#target_dedicated_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dedicated_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2026,8 +2026,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetlowprioritynodes_python">
-<a href="#targetlowprioritynodes_python" style="color: inherit; text-decoration: inherit;">target<wbr>Low<wbr>Priority<wbr>Nodes</a>
+        <span id="target_low_priority_nodes_python">
+<a href="#target_low_priority_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>low_<wbr>priority_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2149,11 +2149,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointconfiguration_python">
-<a href="#endpointconfiguration_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configuration</a>
+        <span id="endpoint_configuration_python">
+<a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
 {{% /md %}}</dd>
@@ -2393,8 +2393,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrange_python">
-<a href="#frontendportrange_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range</a>
+        <span id="frontend_port_range_python">
+<a href="#frontend_port_range_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2415,11 +2415,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="networksecuritygrouprules_python">
-<a href="#networksecuritygrouprules_python" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
+        <span id="network_security_group_rules_python">
+<a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
 {{% /md %}}</dd>
@@ -2859,8 +2859,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="commandline_python">
-<a href="#commandline_python" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
+        <span id="command_line_python">
+<a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2870,22 +2870,22 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcefiles_python">
-<a href="#resourcefiles_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
+        <span id="resource_files_python">
+<a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="useridentities_python">
-<a href="#useridentities_python" style="color: inherit; text-decoration: inherit;">user<wbr>Identities</a>
+        <span id="user_identities_python">
+<a href="#user_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2896,15 +2896,15 @@ The following output properties are available:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtaskretrycount_python">
-<a href="#maxtaskretrycount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Task<wbr>Retry<wbr>Count</a>
+        <span id="max_task_retry_count_python">
+<a href="#max_task_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>task_<wbr>retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2914,8 +2914,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitforsuccess_python">
-<a href="#waitforsuccess_python" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Success</a>
+        <span id="wait_for_success_python">
+<a href="#wait_for_success_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>success</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3169,8 +3169,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autostoragecontainername_python">
-<a href="#autostoragecontainername_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
+        <span id="auto_storage_container_name_python">
+<a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3180,8 +3180,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobprefix_python">
-<a href="#blobprefix_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
+        <span id="blob_prefix_python">
+<a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3191,8 +3191,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3213,8 +3213,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpurl_python">
-<a href="#httpurl_python" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
+        <span id="http_url_python">
+<a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3224,8 +3224,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="storagecontainerurl_python">
-<a href="#storagecontainerurl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
+        <span id="storage_container_url_python">
+<a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3347,19 +3347,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="autousers_python">
-<a href="#autousers_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Users</a>
+        <span id="auto_users_python">
+<a href="#auto_users_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3481,8 +3481,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="elevationlevel_python">
-<a href="#elevationlevel_python" style="color: inherit; text-decoration: inherit;">elevation<wbr>Level</a>
+        <span id="elevation_level_python">
+<a href="#elevation_level_python" style="color: inherit; text-decoration: inherit;">elevation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

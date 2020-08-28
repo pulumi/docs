@@ -668,7 +668,7 @@ The following output properties are available:
 <a href="#vnet_peerings_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>peerings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of name - virtual network id of the virtual network peerings.
 {{% /md %}}</dd>

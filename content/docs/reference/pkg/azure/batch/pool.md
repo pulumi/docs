@@ -23,7 +23,7 @@ Manages an Azure Batch pool.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/batch/#pulumi_azure.batch.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolAutoScale]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[PoolCertificate]]</span> = None<span class="p">, </span><span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolContainerConfiguration]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolFixedScale]]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolNetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolStartTask]]</span> = None<span class="p">, </span><span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolStorageImageReference]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/batch/#pulumi_azure.batch.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[PoolAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[PoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolContainerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[PoolFixedScaleArgs]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[PoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[PoolStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -780,7 +780,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Dict[Pool<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Dict[Pool<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">List[Pool<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#poolcertificate">List[Pool<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Dict[Pool<wbr>Container<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd>
@@ -846,7 +846,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Dict[Pool<wbr>Fixed<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom batch pool metadata.
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Dict[Pool<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd>
@@ -901,7 +901,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Dict[Pool<wbr>Start<wbr>Task]</a></span>
+        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolAutoScale]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[PoolCertificate]]</span> = None<span class="p">, </span><span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolContainerConfiguration]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolFixedScale]]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolNetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolStartTask]]</span> = None<span class="p">, </span><span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[PoolStorageImageReference]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[PoolAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[PoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolContainerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[PoolFixedScaleArgs]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[PoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[PoolStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1692,7 +1692,7 @@ The following state arguments are supported:
 <a href="#state_auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Dict[Pool<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd>
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">List[Pool<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#poolcertificate">List[Pool<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd>
@@ -1714,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Dict[Pool<wbr>Container<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd>
@@ -1736,7 +1736,7 @@ The following state arguments are supported:
 <a href="#state_fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Dict[Pool<wbr>Fixed<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd>
@@ -1758,7 +1758,7 @@ The following state arguments are supported:
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom batch pool metadata.
 {{% /md %}}</dd>
@@ -1780,7 +1780,7 @@ The following state arguments are supported:
 <a href="#state_network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Dict[Pool<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd>
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Dict[Pool<wbr>Start<wbr>Task]</a></span>
+        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -1834,7 +1834,7 @@ The following state arguments are supported:
 <a href="#state_storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Dict[Pool<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd>
@@ -1983,8 +1983,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationinterval_python">
-<a href="#evaluationinterval_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
+        <span id="evaluation_interval_python">
+<a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2183,8 +2183,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="storelocation_python">
-<a href="#storelocation_python" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
+        <span id="store_location_python">
+<a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2194,8 +2194,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storename_python">
-<a href="#storename_python" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
+        <span id="store_name_python">
+<a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2361,8 +2361,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerimagenames_python">
-<a href="#containerimagenames_python" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Names</a>
+        <span id="container_image_names_python">
+<a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2372,11 +2372,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerregistries_python">
-<a href="#containerregistries_python" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
+        <span id="container_registries_python">
+<a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">List[Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">List[Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd>
@@ -2550,8 +2550,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="registryserver_python">
-<a href="#registryserver_python" style="color: inherit; text-decoration: inherit;">registry<wbr>Server</a>
+        <span id="registry_server_python">
+<a href="#registry_server_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2561,8 +2561,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2717,8 +2717,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resizetimeout_python">
-<a href="#resizetimeout_python" style="color: inherit; text-decoration: inherit;">resize<wbr>Timeout</a>
+        <span id="resize_timeout_python">
+<a href="#resize_timeout_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2728,8 +2728,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdedicatednodes_python">
-<a href="#targetdedicatednodes_python" style="color: inherit; text-decoration: inherit;">target<wbr>Dedicated<wbr>Nodes</a>
+        <span id="target_dedicated_nodes_python">
+<a href="#target_dedicated_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dedicated_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2739,8 +2739,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetlowprioritynodes_python">
-<a href="#targetlowprioritynodes_python" style="color: inherit; text-decoration: inherit;">target<wbr>Low<wbr>Priority<wbr>Nodes</a>
+        <span id="target_low_priority_nodes_python">
+<a href="#target_low_priority_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>low_<wbr>priority_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2906,19 +2906,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointconfigurations_python">
-<a href="#endpointconfigurations_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
+        <span id="endpoint_configurations_python">
+<a href="#endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">List[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">List[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicips_python">
-<a href="#publicips_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ips</a>
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3150,8 +3150,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="frontendportrange_python">
-<a href="#frontendportrange_python" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range</a>
+        <span id="frontend_port_range_python">
+<a href="#frontend_port_range_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3183,11 +3183,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networksecuritygrouprules_python">
-<a href="#networksecuritygrouprules_python" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
+        <span id="network_security_group_rules_python">
+<a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is `25`. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -3616,8 +3616,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="commandline_python">
-<a href="#commandline_python" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
+        <span id="command_line_python">
+<a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3627,11 +3627,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="useridentity_python">
-<a href="#useridentity_python" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
+        <span id="user_identity_python">
+<a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentity">Dict[Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -3642,15 +3642,15 @@ The following state arguments are supported:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtaskretrycount_python">
-<a href="#maxtaskretrycount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Task<wbr>Retry<wbr>Count</a>
+        <span id="max_task_retry_count_python">
+<a href="#max_task_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>task_<wbr>retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3660,19 +3660,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcefiles_python">
-<a href="#resourcefiles_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
+        <span id="resource_files_python">
+<a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskresourcefile">List[Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File]</a></span>
+        <span class="property-type"><a href="#poolstarttaskresourcefile">List[Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitforsuccess_python">
-<a href="#waitforsuccess_python" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Success</a>
+        <span id="wait_for_success_python">
+<a href="#wait_for_success_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>success</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3926,8 +3926,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autostoragecontainername_python">
-<a href="#autostoragecontainername_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
+        <span id="auto_storage_container_name_python">
+<a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3937,8 +3937,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blobprefix_python">
-<a href="#blobprefix_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
+        <span id="blob_prefix_python">
+<a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3948,8 +3948,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3970,8 +3970,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpurl_python">
-<a href="#httpurl_python" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
+        <span id="http_url_python">
+<a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3981,8 +3981,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagecontainerurl_python">
-<a href="#storagecontainerurl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
+        <span id="storage_container_url_python">
+<a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4104,19 +4104,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autouser_python">
-<a href="#autouser_python" style="color: inherit; text-decoration: inherit;">auto<wbr>User</a>
+        <span id="auto_user_python">
+<a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Dict[Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User]</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4238,8 +4238,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="elevationlevel_python">
-<a href="#elevationlevel_python" style="color: inherit; text-decoration: inherit;">elevation<wbr>Level</a>
+        <span id="elevation_level_python">
+<a href="#elevation_level_python" style="color: inherit; text-decoration: inherit;">elevation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

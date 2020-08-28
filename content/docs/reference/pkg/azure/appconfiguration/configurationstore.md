@@ -114,7 +114,7 @@ const appconf = new azure.appconfiguration.ConfigurationStore("appconf", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appconfiguration/#pulumi_azure.appconfiguration.ConfigurationStore">ConfigurationStore</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appconfiguration/#pulumi_azure.appconfiguration.ConfigurationStore">ConfigurationStore</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -522,7 +522,7 @@ The ConfigurationStore resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -846,7 +846,7 @@ Get an existing ConfigurationStore resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_read_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStorePrimaryReadKey]]</span> = None<span class="p">, </span><span class="nx">primary_write_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStorePrimaryWriteKey]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_read_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStoreSecondaryReadKey]]</span> = None<span class="p">, </span><span class="nx">secondary_write_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStoreSecondaryWriteKey]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> ConfigurationStore</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_read_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStorePrimaryReadKeyArgs]]</span> = None<span class="p">, </span><span class="nx">primary_write_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStorePrimaryWriteKeyArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_read_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStoreSecondaryReadKeyArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_write_keys</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationStoreSecondaryWriteKeyArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ConfigurationStore</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1350,7 +1350,7 @@ The following state arguments are supported:
 <a href="#state_primary_read_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>read_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimaryreadkey">List[Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key]</a></span>
+        <span class="property-type"><a href="#configurationstoreprimaryreadkey">List[Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
 {{% /md %}}</dd>
@@ -1361,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_primary_write_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>write_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimarywritekey">List[Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key]</a></span>
+        <span class="property-type"><a href="#configurationstoreprimarywritekey">List[Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
 {{% /md %}}</dd>
@@ -1383,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_secondary_read_keys_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>read_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondaryreadkey">List[Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key]</a></span>
+        <span class="property-type"><a href="#configurationstoresecondaryreadkey">List[Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
 {{% /md %}}</dd>
@@ -1394,7 +1394,7 @@ The following state arguments are supported:
 <a href="#state_secondary_write_keys_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>write_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondarywritekey">List[Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key]</a></span>
+        <span class="property-type"><a href="#configurationstoresecondarywritekey">List[Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
 {{% /md %}}</dd>
@@ -1416,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

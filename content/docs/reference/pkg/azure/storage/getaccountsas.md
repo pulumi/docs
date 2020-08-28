@@ -145,29 +145,29 @@ example_account = azure.storage.Account("exampleAccount",
 example_account_sas = example_account.primary_connection_string.apply(lambda primary_connection_string: azure.storage.get_account_sas(connection_string=primary_connection_string,
     https_only=True,
     signed_version="2017-07-29",
-    resource_types={
-        "service": True,
-        "container": False,
-        "object": False,
-    },
-    services={
-        "blob": True,
-        "queue": False,
-        "table": False,
-        "file": False,
-    },
+    resource_types=azure.storage.GetAccountSASResourceTypesArgs(
+        service=True,
+        container=False,
+        object=False,
+    ),
+    services=azure.storage.GetAccountSASServicesArgs(
+        blob=True,
+        queue=False,
+        table=False,
+        file=False,
+    ),
     start="2018-03-21",
     expiry="2020-03-21",
-    permissions={
-        "read": True,
-        "write": True,
-        "delete": False,
-        "list": False,
-        "add": True,
-        "create": True,
-        "update": False,
-        "process": False,
-    }))
+    permissions=azure.storage.GetAccountSASPermissionsArgs(
+        read=True,
+        write=True,
+        delete=False,
+        list=False,
+        add=True,
+        create=True,
+        update=False,
+        process=False,
+    )))
 pulumi.export("sasUrlQueryString", example_account_sas.sas)
 ```
 
@@ -236,7 +236,7 @@ export const sasUrlQueryString = exampleAccountSAS.sas;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account_sas(</span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Dict[GetAccountSASPermissions]]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[Dict[GetAccountSASResourceTypes]]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Dict[GetAccountSASServices]]</span> = None<span class="p">, </span><span class="nx">signed_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountSASResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account_sas(</span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[GetAccountSASPermissionsArgs]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[GetAccountSASResourceTypesArgs]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[GetAccountSASServicesArgs]</span> = None<span class="p">, </span><span class="nx">signed_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountSASResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -574,7 +574,7 @@ The following arguments are supported:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaspermissions">Dict[Get<wbr>Account<wbr>SASPermissions]</a></span>
+        <span class="property-type"><a href="#getaccountsaspermissions">Get<wbr>Account<wbr>SASPermissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `permissions` block as defined below.
 {{% /md %}}</dd>
@@ -585,7 +585,7 @@ The following arguments are supported:
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsasresourcetypes">Dict[Get<wbr>Account<wbr>SASResource<wbr>Types]</a></span>
+        <span class="property-type"><a href="#getaccountsasresourcetypes">Get<wbr>Account<wbr>SASResource<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `resource_types` block as defined below.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The following arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsasservices">Dict[Get<wbr>Account<wbr>SASServices]</a></span>
+        <span class="property-type"><a href="#getaccountsasservices">Get<wbr>Account<wbr>SASServices<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `services` block as defined below.
 {{% /md %}}</dd>
@@ -1018,7 +1018,7 @@ The following output properties are available:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaspermissions">Dict[Get<wbr>Account<wbr>SASPermissions]</a></span>
+        <span class="property-type"><a href="#getaccountsaspermissions">Get<wbr>Account<wbr>SASPermissions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1028,7 +1028,7 @@ The following output properties are available:
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsasresourcetypes">Dict[Get<wbr>Account<wbr>SASResource<wbr>Types]</a></span>
+        <span class="property-type"><a href="#getaccountsasresourcetypes">Get<wbr>Account<wbr>SASResource<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsasservices">Dict[Get<wbr>Account<wbr>SASServices]</a></span>
+        <span class="property-type"><a href="#getaccountsasservices">Get<wbr>Account<wbr>SASServices</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

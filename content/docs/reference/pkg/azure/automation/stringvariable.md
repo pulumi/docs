@@ -26,23 +26,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
-example_account = azure.automation.Account("exampleAccount",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku=[{
-        "name": "Basic",
-    }])
-example_string_variable = azure.automation.StringVariable("exampleStringVariable",
-    resource_group_name=example_resource_group.name,
-    automation_account_name=example_account.name,
-    value="Hello, Basic Test.")
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

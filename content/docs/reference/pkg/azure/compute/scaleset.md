@@ -34,9 +34,9 @@ import pulumi_azure as azure
 
 example_image = azure.compute.Image("exampleImage")
 # ...
-example_scale_set = azure.compute.ScaleSet("exampleScaleSet", storage_profile_image_reference={
-    "id": example_image.id,
-})
+example_scale_set = azure.compute.ScaleSet("exampleScaleSet", storage_profile_image_reference=azure.compute.ScaleSetStorageProfileImageReferenceArgs(
+    id=example_image.id,
+))
 # ...
 ```
 ```csharp
@@ -298,10 +298,10 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    frontend_ip_configurations=[{
-        "name": "PublicIPAddress",
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    frontend_ip_configurations=[azure.lb.LoadBalancerFrontendIpConfigurationArgs(
+        name="PublicIPAddress",
+        public_ip_address_id=example_public_ip.id,
+    )])
 bpepool = azure.lb.BackendAddressPool("bpepool",
     resource_group_name=example_resource_group.name,
     loadbalancer_id=example_load_balancer.id)
@@ -324,58 +324,58 @@ example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
     resource_group_name=example_resource_group.name,
     automatic_os_upgrade=True,
     upgrade_policy_mode="Rolling",
-    rolling_upgrade_policy={
-        "maxBatchInstancePercent": 20,
-        "maxUnhealthyInstancePercent": 20,
-        "maxUnhealthyUpgradedInstancePercent": 5,
-        "pauseTimeBetweenBatches": "PT0S",
-    },
+    rolling_upgrade_policy=azure.compute.ScaleSetRollingUpgradePolicyArgs(
+        max_batch_instance_percent=20,
+        max_unhealthy_instance_percent=20,
+        max_unhealthy_upgraded_instance_percent=5,
+        pause_time_between_batches="PT0S",
+    ),
     health_probe_id=example_probe.id,
-    sku={
-        "name": "Standard_F2",
-        "tier": "Standard",
-        "capacity": 2,
-    },
-    storage_profile_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    storage_profile_os_disk={
-        "name": "",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "managedDiskType": "Standard_LRS",
-    },
-    storage_profile_data_disks=[{
-        "lun": 0,
-        "caching": "ReadWrite",
-        "create_option": "Empty",
-        "disk_size_gb": 10,
-    }],
-    os_profile={
-        "computer_name_prefix": "testvm",
-        "admin_username": "myadmin",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": True,
-        "sshKeys": [{
-            "path": "/home/myadmin/.ssh/authorized_keys",
-            "keyData": (lambda path: open(path).read())("~/.ssh/demo_key.pub"),
-        }],
-    },
-    network_profiles=[{
-        "name": "mynetworkprofile",
-        "primary": True,
-        "ip_configurations": [{
+    sku=azure.compute.ScaleSetSkuArgs(
+        name="Standard_F2",
+        tier="Standard",
+        capacity=2,
+    ),
+    storage_profile_image_reference=azure.compute.ScaleSetStorageProfileImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ),
+    storage_profile_os_disk=azure.compute.ScaleSetStorageProfileOsDiskArgs(
+        name="",
+        caching="ReadWrite",
+        create_option="FromImage",
+        managed_disk_type="Standard_LRS",
+    ),
+    storage_profile_data_disks=[azure.compute.ScaleSetStorageProfileDataDiskArgs(
+        lun=0,
+        caching="ReadWrite",
+        create_option="Empty",
+        disk_size_gb=10,
+    )],
+    os_profile=azure.compute.ScaleSetOsProfileArgs(
+        computer_name_prefix="testvm",
+        admin_username="myadmin",
+    ),
+    os_profile_linux_config=azure.compute.ScaleSetOsProfileLinuxConfigArgs(
+        disable_password_authentication=True,
+        ssh_keys=[azure.compute.ScaleSetOsProfileLinuxConfigSshKeyArgs(
+            path="/home/myadmin/.ssh/authorized_keys",
+            key_data=(lambda path: open(path).read())("~/.ssh/demo_key.pub"),
+        )],
+    ),
+    network_profiles=[azure.compute.ScaleSetNetworkProfileArgs(
+        name="mynetworkprofile",
+        primary=True,
+        ip_configurations=[{
             "name": "TestIPConfiguration",
             "primary": True,
             "subnet_id": example_subnet.id,
             "loadBalancerBackendAddressPoolIds": [bpepool.id],
             "loadBalancerInboundNatRulesIds": [lbnatpool.id],
         }],
-    }],
+    )],
     tags={
         "environment": "staging",
     })
@@ -657,43 +657,43 @@ example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
     location="West US",
     resource_group_name=example_resource_group.name,
     upgrade_policy_mode="Manual",
-    sku={
-        "name": "Standard_F2",
-        "tier": "Standard",
-        "capacity": 2,
-    },
-    os_profile={
-        "computer_name_prefix": "testvm",
-        "admin_username": "myadmin",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": True,
-        "sshKeys": [{
-            "path": "/home/myadmin/.ssh/authorized_keys",
-            "keyData": (lambda path: open(path).read())("~/.ssh/demo_key.pub"),
-        }],
-    },
-    network_profiles=[{
-        "name": "TestNetworkProfile",
-        "primary": True,
-        "ip_configurations": [{
+    sku=azure.compute.ScaleSetSkuArgs(
+        name="Standard_F2",
+        tier="Standard",
+        capacity=2,
+    ),
+    os_profile=azure.compute.ScaleSetOsProfileArgs(
+        computer_name_prefix="testvm",
+        admin_username="myadmin",
+    ),
+    os_profile_linux_config=azure.compute.ScaleSetOsProfileLinuxConfigArgs(
+        disable_password_authentication=True,
+        ssh_keys=[azure.compute.ScaleSetOsProfileLinuxConfigSshKeyArgs(
+            path="/home/myadmin/.ssh/authorized_keys",
+            key_data=(lambda path: open(path).read())("~/.ssh/demo_key.pub"),
+        )],
+    ),
+    network_profiles=[azure.compute.ScaleSetNetworkProfileArgs(
+        name="TestNetworkProfile",
+        primary=True,
+        ip_configurations=[{
             "name": "TestIPConfiguration",
             "primary": True,
             "subnet_id": example_subnet.id,
         }],
-    }],
-    storage_profile_os_disk={
-        "name": "osDiskProfile",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "vhdContainers": [pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}")],
-    },
-    storage_profile_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    })
+    )],
+    storage_profile_os_disk=azure.compute.ScaleSetStorageProfileOsDiskArgs(
+        name="osDiskProfile",
+        caching="ReadWrite",
+        create_option="FromImage",
+        vhd_containers=[pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}")],
+    ),
+    storage_profile_image_reference=azure.compute.ScaleSetStorageProfileImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ))
 ```
 
 {{% /example %}}
@@ -787,7 +787,7 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ScaleSet">ScaleSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetExtension]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileLinuxConfig]]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetOsProfileSecret]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileWindowsConfig]]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetPlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetRollingUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetSku]]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetStorageProfileDataDisk]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileImageReference]]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileOsDisk]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ScaleSet">ScaleSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[ScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetNetworkProfileArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ScaleSetSkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetStorageProfileDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1907,7 +1907,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">List[Scale<wbr>Set<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">List[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
@@ -1918,7 +1918,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
@@ -1940,7 +1940,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Dict[Scale<wbr>Set<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
@@ -1951,7 +1951,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_profile_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
@@ -1984,7 +1984,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Dict[Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
@@ -2006,7 +2006,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">List[Scale<wbr>Set<wbr>Extension]</a></span>
+        <span class="property-type"><a href="#scalesetextension">List[Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
@@ -2028,7 +2028,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Dict[Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2071,7 +2071,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
@@ -2082,7 +2082,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
@@ -2093,7 +2093,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
@@ -2115,7 +2115,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Dict[Scale<wbr>Set<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
@@ -2148,7 +2148,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Dict[Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
@@ -2170,7 +2170,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_profile_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
@@ -2181,7 +2181,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_profile_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
@@ -2192,7 +2192,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2307,7 +2307,7 @@ Get an existing ScaleSet resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetExtension]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileLinuxConfig]]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetOsProfileSecret]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileWindowsConfig]]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetPlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetRollingUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetSku]]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetStorageProfileDataDisk]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileImageReference]]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileOsDisk]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ScaleSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[ScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetNetworkProfileArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ScaleSetSkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetStorageProfileDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ScaleSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3380,7 +3380,7 @@ The following state arguments are supported:
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Dict[Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
@@ -3402,7 +3402,7 @@ The following state arguments are supported:
 <a href="#state_extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">List[Scale<wbr>Set<wbr>Extension]</a></span>
+        <span class="property-type"><a href="#scalesetextension">List[Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
@@ -3424,7 +3424,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Dict[Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3467,7 +3467,7 @@ The following state arguments are supported:
 <a href="#state_network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">List[Scale<wbr>Set<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">List[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
@@ -3478,7 +3478,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
@@ -3489,7 +3489,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
@@ -3500,7 +3500,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
@@ -3511,7 +3511,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
@@ -3533,7 +3533,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Dict[Scale<wbr>Set<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
@@ -3577,7 +3577,7 @@ The following state arguments are supported:
 <a href="#state_rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Dict[Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
@@ -3599,7 +3599,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Dict[Scale<wbr>Set<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
@@ -3610,7 +3610,7 @@ The following state arguments are supported:
 <a href="#state_storage_profile_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
@@ -3621,7 +3621,7 @@ The following state arguments are supported:
 <a href="#state_storage_profile_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
@@ -3632,7 +3632,7 @@ The following state arguments are supported:
 <a href="#state_storage_profile_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
@@ -3643,7 +3643,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3786,8 +3786,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="storageuri_python">
-<a href="#storageuri_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
+        <span id="storage_uri_python">
+<a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4357,8 +4357,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4659,7 +4659,7 @@ The following state arguments are supported:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">List[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">List[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd>
@@ -4688,8 +4688,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="acceleratednetworking_python">
-<a href="#acceleratednetworking_python" style="color: inherit; text-decoration: inherit;">accelerated<wbr>Networking</a>
+        <span id="accelerated_networking_python">
+<a href="#accelerated_networking_python" style="color: inherit; text-decoration: inherit;">accelerated_<wbr>networking</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4699,19 +4699,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnssettings_python">
-<a href="#dnssettings_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
+        <span id="dns_settings_python">
+<a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Dict[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipforwarding_python">
-<a href="#ipforwarding_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Forwarding</a>
+        <span id="ip_forwarding_python">
+<a href="#ip_forwarding_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>forwarding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5165,8 +5165,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationgatewaybackendaddresspoolids_python">
-<a href="#applicationgatewaybackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+        <span id="application_gateway_backend_address_pool_ids_python">
+<a href="#application_gateway_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5176,8 +5176,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationsecuritygroupids_python">
-<a href="#applicationsecuritygroupids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
+        <span id="application_security_group_ids_python">
+<a href="#application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5187,8 +5187,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerbackendaddresspoolids_python">
-<a href="#loadbalancerbackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+        <span id="load_balancer_backend_address_pool_ids_python">
+<a href="#load_balancer_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5198,8 +5198,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerinboundnatrulesids_python">
-<a href="#loadbalancerinboundnatrulesids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+        <span id="load_balancer_inbound_nat_rules_ids_python">
+<a href="#load_balancer_inbound_nat_rules_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5209,11 +5209,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressconfiguration_python">
-<a href="#publicipaddressconfiguration_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Configuration</a>
+        <span id="public_ip_address_configuration_python">
+<a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Dict[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd>
@@ -5376,8 +5376,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="idletimeout_python">
-<a href="#idletimeout_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
+        <span id="idle_timeout_python">
+<a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5743,11 +5743,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd>
@@ -5870,8 +5870,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5992,8 +5992,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6003,11 +6003,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd>
@@ -6126,8 +6126,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6137,8 +6137,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6326,19 +6326,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalunattendconfigs_python">
-<a href="#additionalunattendconfigs_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
+        <span id="additional_unattend_configs_python">
+<a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableautomaticupgrades_python">
-<a href="#enableautomaticupgrades_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
+        <span id="enable_automatic_upgrades_python">
+<a href="#enable_automatic_upgrades_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>upgrades</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6363,7 +6363,7 @@ The following state arguments are supported:
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd>
@@ -6570,8 +6570,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="pass_python">
-<a href="#pass_python" style="color: inherit; text-decoration: inherit;">pass</a>
+        <span id="pass__python">
+<a href="#pass__python" style="color: inherit; text-decoration: inherit;">pass_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6581,8 +6581,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="settingname_python">
-<a href="#settingname_python" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
+        <span id="setting_name_python">
+<a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6715,8 +6715,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7082,8 +7082,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbatchinstancepercent_python">
-<a href="#maxbatchinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
+        <span id="max_batch_instance_percent_python">
+<a href="#max_batch_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>batch_<wbr>instance_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7093,8 +7093,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxunhealthyinstancepercent_python">
-<a href="#maxunhealthyinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
+        <span id="max_unhealthy_instance_percent_python">
+<a href="#max_unhealthy_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>instance_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7104,8 +7104,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxunhealthyupgradedinstancepercent_python">
-<a href="#maxunhealthyupgradedinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
+        <span id="max_unhealthy_upgraded_instance_percent_python">
+<a href="#max_unhealthy_upgraded_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>upgraded_<wbr>instance_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7115,8 +7115,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pausetimebetweenbatches_python">
-<a href="#pausetimebetweenbatches_python" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
+        <span id="pause_time_between_batches_python">
+<a href="#pause_time_between_batches_python" style="color: inherit; text-decoration: inherit;">pause_<wbr>time_<wbr>between_<wbr>batches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7559,8 +7559,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manageddisktype_python">
-<a href="#manageddisktype_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
+        <span id="managed_disk_type_python">
+<a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8158,8 +8158,8 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manageddisktype_python">
-<a href="#manageddisktype_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
+        <span id="managed_disk_type_python">
+<a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8191,8 +8191,8 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdcontainers_python">
-<a href="#vhdcontainers_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Containers</a>
+        <span id="vhd_containers_python">
+<a href="#vhd_containers_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>containers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

@@ -122,10 +122,10 @@ example_express_route_circuit = azure.network.ExpressRouteCircuit("exampleExpres
     service_provider_name="Equinix",
     peering_location="Silicon Valley",
     bandwidth_in_mbps=50,
-    sku={
-        "tier": "Standard",
-        "family": "MeteredData",
-    },
+    sku=azure.network.ExpressRouteCircuitSkuArgs(
+        tier="Standard",
+        family="MeteredData",
+    ),
     allow_classic_operations=False,
     tags={
         "environment": "Production",

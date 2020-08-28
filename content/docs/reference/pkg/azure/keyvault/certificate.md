@@ -316,10 +316,10 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     resource_group_name=example_resource_group.name,
     tenant_id=current.tenant_id,
     sku_name="standard",
-    access_policies=[{
-        "tenant_id": current.tenant_id,
-        "object_id": current.object_id,
-        "certificate_permissions": [
+    access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
+        tenant_id=current.tenant_id,
+        object_id=current.object_id,
+        certificate_permissions=[
             "create",
             "delete",
             "deleteissuers",
@@ -333,7 +333,7 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
             "setissuers",
             "update",
         ],
-        "key_permissions": [
+        key_permissions=[
             "backup",
             "create",
             "decrypt",
@@ -351,7 +351,7 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
             "verify",
             "wrapKey",
         ],
-        "secret_permissions": [
+        secret_permissions=[
             "backup",
             "delete",
             "get",
@@ -361,36 +361,36 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
             "restore",
             "set",
         ],
-    }],
+    )],
     tags={
         "environment": "Production",
     })
 example_certificate = azure.keyvault.Certificate("exampleCertificate",
     key_vault_id=example_key_vault.id,
-    certificate_policy={
-        "issuerParameters": {
-            "name": "Self",
-        },
-        "key_properties": {
+    certificate_policy=azure.keyvault.CertificateCertificatePolicyArgs(
+        issuer_parameters=azure.keyvault.CertificateCertificatePolicyIssuerParametersArgs(
+            name="Self",
+        ),
+        key_properties={
             "exportable": True,
             "key_size": 2048,
             "key_type": "RSA",
             "reuseKey": True,
         },
-        "lifetimeActions": [{
-            "action": {
-                "actionType": "AutoRenew",
-            },
-            "trigger": {
-                "daysBeforeExpiry": 30,
-            },
-        }],
-        "secretProperties": {
-            "content_type": "application/x-pkcs12",
-        },
-        "x509CertificateProperties": {
-            "extendedKeyUsages": ["1.3.6.1.5.5.7.3.1"],
-            "keyUsages": [
+        lifetime_actions=[azure.keyvault.CertificateCertificatePolicyLifetimeActionArgs(
+            action=azure.keyvault.CertificateCertificatePolicyLifetimeActionActionArgs(
+                action_type="AutoRenew",
+            ),
+            trigger=azure.keyvault.CertificateCertificatePolicyLifetimeActionTriggerArgs(
+                days_before_expiry=30,
+            ),
+        )],
+        secret_properties=azure.keyvault.CertificateCertificatePolicySecretPropertiesArgs(
+            content_type="application/x-pkcs12",
+        ),
+        x509_certificate_properties=azure.keyvault.CertificateCertificatePolicyX509CertificatePropertiesArgs(
+            extended_key_usages=["1.3.6.1.5.5.7.3.1"],
+            key_usages=[
                 "cRLSign",
                 "dataEncipherment",
                 "digitalSignature",
@@ -398,16 +398,16 @@ example_certificate = azure.keyvault.Certificate("exampleCertificate",
                 "keyCertSign",
                 "keyEncipherment",
             ],
-            "subjectAlternativeNames": {
-                "dnsNames": [
+            subject_alternative_names=azure.keyvault.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs(
+                dns_names=[
                     "internal.contoso.com",
                     "domain.hello.world",
                 ],
-            },
-            "subject": "CN=hello-world",
-            "validityInMonths": 12,
-        },
-    })
+            ),
+            subject="CN=hello-world",
+            validity_in_months=12,
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -535,7 +535,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.Certificate">Certificate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[Dict[CertificateCertificate]]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[CertificateCertificatePolicy]]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.Certificate">Certificate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -899,7 +899,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Dict[Certificate<wbr>Certificate<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
@@ -921,7 +921,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Dict[Certificate<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd>
@@ -943,7 +943,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1267,7 +1267,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[Dict[CertificateCertificate]]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[List[CertificateCertificateAttribute]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[CertificateCertificatePolicy]]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[List[CertificateCertificateAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1738,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Dict[Certificate<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd>
@@ -1749,7 +1749,7 @@ The following state arguments are supported:
 <a href="#state_certificate_attributes_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificateattribute">List[Certificate<wbr>Certificate<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">List[Certificate<wbr>Certificate<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
 {{% /md %}}</dd>
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
 <a href="#state_certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Dict[Certificate<wbr>Certificate<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2263,8 +2263,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notbefore_python">
-<a href="#notbefore_python" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
+        <span id="not_before_python">
+<a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2274,8 +2274,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverylevel_python">
-<a href="#recoverylevel_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Level</a>
+        <span id="recovery_level_python">
+<a href="#recovery_level_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2507,11 +2507,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="issuerparameters_python">
-<a href="#issuerparameters_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
+        <span id="issuer_parameters_python">
+<a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
@@ -2522,40 +2522,40 @@ The following state arguments are supported:
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="secretproperties_python">
-<a href="#secretproperties_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
+        <span id="secret_properties_python">
+<a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lifetimeactions_python">
-<a href="#lifetimeactions_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
+        <span id="lifetime_actions_python">
+<a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">List[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">List[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="x509certificateproperties_python">
-<a href="#x509certificateproperties_python" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
+        <span id="x509_certificate_properties_python">
+<a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd>
@@ -2863,8 +2863,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="reusekey_python">
-<a href="#reusekey_python" style="color: inherit; text-decoration: inherit;">reuse<wbr>Key</a>
+        <span id="reuse_key_python">
+<a href="#reuse_key_python" style="color: inherit; text-decoration: inherit;">reuse_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2990,7 +2990,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
@@ -3001,7 +3001,7 @@ The following state arguments are supported:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
@@ -3087,8 +3087,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3210,8 +3210,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="daysbeforeexpiry_python">
-<a href="#daysbeforeexpiry_python" style="color: inherit; text-decoration: inherit;">days<wbr>Before<wbr>Expiry</a>
+        <span id="days_before_expiry_python">
+<a href="#days_before_expiry_python" style="color: inherit; text-decoration: inherit;">days_<wbr>before_<wbr>expiry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3221,8 +3221,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lifetimepercentage_python">
-<a href="#lifetimepercentage_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Percentage</a>
+        <span id="lifetime_percentage_python">
+<a href="#lifetime_percentage_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3533,8 +3533,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyusages_python">
-<a href="#keyusages_python" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
+        <span id="key_usages_python">
+<a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3555,8 +3555,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="validityinmonths_python">
-<a href="#validityinmonths_python" style="color: inherit; text-decoration: inherit;">validity<wbr>In<wbr>Months</a>
+        <span id="validity_in_months_python">
+<a href="#validity_in_months_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>in_<wbr>months</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3566,8 +3566,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedkeyusages_python">
-<a href="#extendedkeyusages_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usages</a>
+        <span id="extended_key_usages_python">
+<a href="#extended_key_usages_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usages</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3577,11 +3577,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subjectalternativenames_python">
-<a href="#subjectalternativenames_python" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
@@ -3733,8 +3733,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsnames_python">
-<a href="#dnsnames_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
+        <span id="dns_names_python">
+<a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

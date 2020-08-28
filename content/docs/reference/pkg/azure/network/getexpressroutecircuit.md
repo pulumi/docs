@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getexpressroutecircuitsku">Dict[Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#getexpressroutecircuitsku">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block for the ExpressRoute circuit as documented below.
 {{% /md %}}</dd>

@@ -168,23 +168,23 @@ example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
     address_prefix="10.1.0.0/24",
-    delegations=[{
-        "name": "delegation",
-        "serviceDelegation": {
-            "name": "Microsoft.ContainerInstance/containerGroups",
-            "actions": ["Microsoft.Network/virtualNetworks/subnets/action"],
-        },
-    }])
+    delegations=[azure.network.SubnetDelegationArgs(
+        name="delegation",
+        service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
+            name="Microsoft.ContainerInstance/containerGroups",
+            actions=["Microsoft.Network/virtualNetworks/subnets/action"],
+        ),
+    )])
 example_profile = azure.network.Profile("exampleProfile",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    container_network_interface={
-        "name": "examplecnic",
-        "ip_configurations": [{
+    container_network_interface=azure.network.ProfileContainerNetworkInterfaceArgs(
+        name="examplecnic",
+        ip_configurations=[{
             "name": "exampleipconfig",
             "subnet_id": example_subnet.id,
         }],
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -240,7 +240,7 @@ const exampleProfile = new azure.network.Profile("exampleProfile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_network_interface</span><span class="p">:</span> <span class="nx">Optional[Dict[ProfileContainerNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_network_interface</span><span class="p">:</span> <span class="nx">Optional[ProfileContainerNetworkInterfaceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -604,7 +604,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#container_network_interface_python" style="color: inherit; text-decoration: inherit;">container_<wbr>network_<wbr>interface</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterface">Dict[Profile<wbr>Container<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterface">Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `container_network_interface` block as documented below.
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ Get an existing Profile resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_network_interface</span><span class="p">:</span> <span class="nx">Optional[Dict[ProfileContainerNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">container_network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Profile</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_network_interface</span><span class="p">:</span> <span class="nx">Optional[ProfileContainerNetworkInterfaceArgs]</span> = None<span class="p">, </span><span class="nx">container_network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Profile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
 <a href="#state_container_network_interface_python" style="color: inherit; text-decoration: inherit;">container_<wbr>network_<wbr>interface</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterface">Dict[Profile<wbr>Container<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterface">Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `container_network_interface` block as documented below.
 {{% /md %}}</dd>
@@ -1190,7 +1190,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1321,7 +1321,7 @@ The following state arguments are supported:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">List[Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">List[Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as documented below.
 {{% /md %}}</dd>

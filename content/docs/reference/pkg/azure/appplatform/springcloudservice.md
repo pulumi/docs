@@ -137,17 +137,17 @@ example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpri
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     sku_name="S0",
-    config_server_git_setting={
-        "uri": "https://github.com/Azure-Samples/piggymetrics",
-        "label": "config",
-        "searchPaths": [
+    config_server_git_setting=azure.appplatform.SpringCloudServiceConfigServerGitSettingArgs(
+        uri="https://github.com/Azure-Samples/piggymetrics",
+        label="config",
+        search_paths=[
             "dir1",
             "dir2",
         ],
-    },
-    trace={
-        "instrumentation_key": example_insights.instrumentation_key,
-    },
+    ),
+    trace=azure.appplatform.SpringCloudServiceTraceArgs(
+        instrumentation_key=example_insights.instrumentation_key,
+    ),
     tags={
         "Env": "staging",
     })
@@ -202,7 +202,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#pulumi_azure.appplatform.SpringCloudService">SpringCloudService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[Dict[SpringCloudServiceConfigServerGitSetting]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[Dict[SpringCloudServiceTrace]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#pulumi_azure.appplatform.SpringCloudService">SpringCloudService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -643,7 +643,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#config_server_git_setting_python" style="color: inherit; text-decoration: inherit;">config_<wbr>server_<wbr>git_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd>
@@ -687,7 +687,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#trace_python" style="color: inherit; text-decoration: inherit;">trace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicetrace">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Trace]</a></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[Dict[SpringCloudServiceConfigServerGitSetting]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[Dict[SpringCloudServiceTrace]]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1174,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_config_server_git_setting_python" style="color: inherit; text-decoration: inherit;">config_<wbr>server_<wbr>git_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd>
@@ -1229,7 +1229,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1240,7 +1240,7 @@ The following state arguments are supported:
 <a href="#state_trace_python" style="color: inherit; text-decoration: inherit;">trace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicetrace">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Trace]</a></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd>
@@ -1510,11 +1510,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpbasicauth_python">
-<a href="#httpbasicauth_python" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
+        <span id="http_basic_auth_python">
+<a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1536,15 +1536,15 @@ The following state arguments are supported:
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">List[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">List[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchpaths_python">
-<a href="#searchpaths_python" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
+        <span id="search_paths_python">
+<a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1554,11 +1554,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshauth_python">
-<a href="#sshauth_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
+        <span id="ssh_auth_python">
+<a href="#ssh_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1998,11 +1998,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpbasicauth_python">
-<a href="#httpbasicauth_python" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
+        <span id="http_basic_auth_python">
+<a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd>
@@ -2031,8 +2031,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchpaths_python">
-<a href="#searchpaths_python" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
+        <span id="search_paths_python">
+<a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2042,11 +2042,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshauth_python">
-<a href="#sshauth_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
+        <span id="ssh_auth_python">
+<a href="#ssh_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Dict[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd>
@@ -2365,8 +2365,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatekey_python">
-<a href="#privatekey_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2376,8 +2376,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostkey_python">
-<a href="#hostkey_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key</a>
+        <span id="host_key_python">
+<a href="#host_key_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2387,8 +2387,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostkeyalgorithm_python">
-<a href="#hostkeyalgorithm_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Algorithm</a>
+        <span id="host_key_algorithm_python">
+<a href="#host_key_algorithm_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2398,8 +2398,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stricthostkeycheckingenabled_python">
-<a href="#stricthostkeycheckingenabled_python" style="color: inherit; text-decoration: inherit;">strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
+        <span id="strict_host_key_checking_enabled_python">
+<a href="#strict_host_key_checking_enabled_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>host_<wbr>key_<wbr>checking_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2587,8 +2587,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatekey_python">
-<a href="#privatekey_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2598,8 +2598,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostkey_python">
-<a href="#hostkey_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key</a>
+        <span id="host_key_python">
+<a href="#host_key_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2609,8 +2609,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostkeyalgorithm_python">
-<a href="#hostkeyalgorithm_python" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Algorithm</a>
+        <span id="host_key_algorithm_python">
+<a href="#host_key_algorithm_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2620,8 +2620,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stricthostkeycheckingenabled_python">
-<a href="#stricthostkeycheckingenabled_python" style="color: inherit; text-decoration: inherit;">strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
+        <span id="strict_host_key_checking_enabled_python">
+<a href="#strict_host_key_checking_enabled_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>host_<wbr>key_<wbr>checking_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

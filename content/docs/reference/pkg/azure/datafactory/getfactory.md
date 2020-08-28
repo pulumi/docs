@@ -616,7 +616,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
@@ -863,8 +863,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="branchname_python">
-<a href="#branchname_python" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -874,8 +874,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="giturl_python">
-<a href="#giturl_python" style="color: inherit; text-decoration: inherit;">git<wbr>Url</a>
+        <span id="git_url_python">
+<a href="#git_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -885,8 +885,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -896,8 +896,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1340,8 +1340,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="branchname_python">
-<a href="#branchname_python" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1351,8 +1351,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="projectname_python">
-<a href="#projectname_python" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1362,8 +1362,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1373,8 +1373,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

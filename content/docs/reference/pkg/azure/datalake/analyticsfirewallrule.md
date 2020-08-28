@@ -89,7 +89,7 @@ func main() {
 			return err
 		}
 		_, err = datalake.NewAnalyticsFirewallRule(ctx, "exampleAnalyticsFirewallRule", &datalake.AnalyticsFirewallRuleArgs{
-			AccountName:       pulumi.String(azurerm_data_lake_analytics.Example.Name),
+			AccountName:       pulumi.Any(azurerm_data_lake_analytics.Example.Name),
 			ResourceGroupName: exampleResourceGroup.Name,
 			StartIpAddress:    pulumi.String("1.2.3.4"),
 			EndIpAddress:      pulumi.String("2.3.4.5"),

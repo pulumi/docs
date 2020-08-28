@@ -77,7 +77,7 @@ import pulumi_azure as azure
 example = azure.devtest.get_virtual_network(name="example-network",
     lab_name="examplelab",
     resource_group_name="example-resource")
-pulumi.export("labSubnetName", example.allowed_subnets[0]["lab_subnet_name"])
+pulumi.export("labSubnetName", example.allowed_subnets[0].lab_subnet_name)
 ```
 
 {{% /example %}}
@@ -782,8 +782,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowpublicip_python">
-<a href="#allowpublicip_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
+        <span id="allow_public_ip_python">
+<a href="#allow_public_ip_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1045,8 +1045,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="useinvmcreationpermission_python">
-<a href="#useinvmcreationpermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
+        <span id="use_in_vm_creation_permission_python">
+<a href="#use_in_vm_creation_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>in_<wbr>vm_<wbr>creation_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1056,8 +1056,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usepublicipaddresspermission_python">
-<a href="#usepublicipaddresspermission_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
+        <span id="use_public_ip_address_permission_python">
+<a href="#use_public_ip_address_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip_<wbr>address_<wbr>permission</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1066,8 +1066,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworkpoolname_python">
-<a href="#virtualnetworkpoolname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
+        <span id="virtual_network_pool_name_python">
+<a href="#virtual_network_pool_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

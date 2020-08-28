@@ -890,7 +890,7 @@ The following output properties are available:
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings for the App Service.
 {{% /md %}}</dd>
@@ -1064,7 +1064,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2159,8 +2159,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="alwayson_python">
-<a href="#alwayson_python" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
+        <span id="always_on_python">
+<a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2170,8 +2170,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="appcommandline_python">
-<a href="#appcommandline_python" style="color: inherit; text-decoration: inherit;">app<wbr>Command<wbr>Line</a>
+        <span id="app_command_line_python">
+<a href="#app_command_line_python" style="color: inherit; text-decoration: inherit;">app_<wbr>command_<wbr>line</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2185,15 +2185,15 @@ The following output properties are available:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigcor">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigcor">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultdocuments_python">
-<a href="#defaultdocuments_python" style="color: inherit; text-decoration: inherit;">default<wbr>Documents</a>
+        <span id="default_documents_python">
+<a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2203,8 +2203,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dotnetframeworkversion_python">
-<a href="#dotnetframeworkversion_python" style="color: inherit; text-decoration: inherit;">dotnet<wbr>Framework<wbr>Version</a>
+        <span id="dotnet_framework_version_python">
+<a href="#dotnet_framework_version_python" style="color: inherit; text-decoration: inherit;">dotnet_<wbr>framework_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2214,8 +2214,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ftpsstate_python">
-<a href="#ftpsstate_python" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
+        <span id="ftps_state_python">
+<a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2225,8 +2225,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthcheckpath_python">
-<a href="#healthcheckpath_python" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
+        <span id="health_check_path_python">
+<a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2236,8 +2236,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="http2enabled_python">
-<a href="#http2enabled_python" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+        <span id="http2_enabled_python">
+<a href="#http2_enabled_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2247,19 +2247,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="iprestrictions_python">
-<a href="#iprestrictions_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
+        <span id="ip_restrictions_python">
+<a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigiprestriction">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigiprestriction">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="javacontainer_python">
-<a href="#javacontainer_python" style="color: inherit; text-decoration: inherit;">java<wbr>Container</a>
+        <span id="java_container_python">
+<a href="#java_container_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2269,8 +2269,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="javacontainerversion_python">
-<a href="#javacontainerversion_python" style="color: inherit; text-decoration: inherit;">java<wbr>Container<wbr>Version</a>
+        <span id="java_container_version_python">
+<a href="#java_container_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2280,8 +2280,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="javaversion_python">
-<a href="#javaversion_python" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
+        <span id="java_version_python">
+<a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2291,8 +2291,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="linuxfxversion_python">
-<a href="#linuxfxversion_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
+        <span id="linux_fx_version_python">
+<a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2302,8 +2302,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localmysqlenabled_python">
-<a href="#localmysqlenabled_python" style="color: inherit; text-decoration: inherit;">local<wbr>Mysql<wbr>Enabled</a>
+        <span id="local_mysql_enabled_python">
+<a href="#local_mysql_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>mysql_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2313,8 +2313,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="managedpipelinemode_python">
-<a href="#managedpipelinemode_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Pipeline<wbr>Mode</a>
+        <span id="managed_pipeline_mode_python">
+<a href="#managed_pipeline_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>pipeline_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2335,8 +2335,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="phpversion_python">
-<a href="#phpversion_python" style="color: inherit; text-decoration: inherit;">php<wbr>Version</a>
+        <span id="php_version_python">
+<a href="#php_version_python" style="color: inherit; text-decoration: inherit;">php_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2346,8 +2346,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="pythonversion_python">
-<a href="#pythonversion_python" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+        <span id="python_version_python">
+<a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2357,8 +2357,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="remotedebuggingenabled_python">
-<a href="#remotedebuggingenabled_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Enabled</a>
+        <span id="remote_debugging_enabled_python">
+<a href="#remote_debugging_enabled_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2368,8 +2368,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="remotedebuggingversion_python">
-<a href="#remotedebuggingversion_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Version</a>
+        <span id="remote_debugging_version_python">
+<a href="#remote_debugging_version_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2379,19 +2379,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="scmiprestrictions_python">
-<a href="#scmiprestrictions_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
+        <span id="scm_ip_restrictions_python">
+<a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scmtype_python">
-<a href="#scmtype_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
+        <span id="scm_type_python">
+<a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2401,8 +2401,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="scmusemainiprestriction_python">
-<a href="#scmusemainiprestriction_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+        <span id="scm_use_main_ip_restriction_python">
+<a href="#scm_use_main_ip_restriction_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>use_<wbr>main_<wbr>ip_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2412,8 +2412,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="use32bitworkerprocess_python">
-<a href="#use32bitworkerprocess_python" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
+        <span id="use32_bit_worker_process_python">
+<a href="#use32_bit_worker_process_python" style="color: inherit; text-decoration: inherit;">use32_<wbr>bit_<wbr>worker_<wbr>process</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2423,8 +2423,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="websocketsenabled_python">
-<a href="#websocketsenabled_python" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
+        <span id="websockets_enabled_python">
+<a href="#websockets_enabled_python" style="color: inherit; text-decoration: inherit;">websockets_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2434,8 +2434,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="windowsfxversion_python">
-<a href="#windowsfxversion_python" style="color: inherit; text-decoration: inherit;">windows<wbr>Fx<wbr>Version</a>
+        <span id="windows_fx_version_python">
+<a href="#windows_fx_version_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>fx_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2557,8 +2557,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2568,8 +2568,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportcredentials_python">
-<a href="#supportcredentials_python" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
+        <span id="support_credentials_python">
+<a href="#support_credentials_python" style="color: inherit; text-decoration: inherit;">support_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2648,6 +2648,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="virtualnetworksubnetid_csharp">
 <a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
 </span> 
@@ -2707,6 +2717,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2772,6 +2792,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="virtualnetworksubnetid_nodejs">
 <a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
 </span> 
@@ -2834,8 +2864,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworksubnetid_python">
-<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2914,6 +2954,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="virtualnetworksubnetid_csharp">
 <a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
 </span> 
@@ -2973,6 +3023,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3038,6 +3098,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="virtualnetworksubnetid_nodejs">
 <a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
 </span> 
@@ -3100,8 +3170,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnetworksubnetid_python">
-<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3459,8 +3539,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="manualintegration_python">
-<a href="#manualintegration_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+        <span id="manual_integration_python">
+<a href="#manual_integration_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>integration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3470,8 +3550,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repourl_python">
-<a href="#repourl_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
+        <span id="repo_url_python">
+<a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3481,8 +3561,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rollbackenabled_python">
-<a href="#rollbackenabled_python" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+        <span id="rollback_enabled_python">
+<a href="#rollback_enabled_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3492,8 +3572,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="usemercurial_python">
-<a href="#usemercurial_python" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+        <span id="use_mercurial_python">
+<a href="#use_mercurial_python" style="color: inherit; text-decoration: inherit;">use_<wbr>mercurial</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
