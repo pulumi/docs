@@ -380,7 +380,7 @@ django_site_service = aws.ecs.Service("django-site-service",
 ```
 
 To connect to our application, we export the DNS name of the Django balancer and open it
-in a browser window. 
+in a browser window.
 
 ```python
 pulumi.export("app-url", django_balancer.dns_name)
@@ -405,6 +405,3 @@ In this example, I described how to set up a basic Django voting application and
 Next week, we'll explore PostgreSQL, Express, React, and Node.js, and use them to create a simple application.
 
 The blog post's full code and an in-depth explanation for each component are on [Github](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
-
-
-
