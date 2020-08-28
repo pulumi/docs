@@ -14,7 +14,9 @@ We have used the Go example provided by Netlify CMS, made changes to make it wor
 
 <!--more-->
 
-## Clean up the Source Code
+Backend is code packages that allow Netlify CMS to communicate with code storaging system like Github, Gitlab, and Bitbucket. In our [example code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth), We used [Netlify CMS's Github backend](https://www.netlifycms.org/docs/github-backend/) of Netlify CMS to build the CMS. The OAuth Server's core code `cms-oauth/main.go` also enables authorization with backend Gitlab and Bitbucket. To do that simply change the callback URL to be `https://{{YOUR_OAUTH_SERVER_URL}}/callback/{{YOUR_BACKEND_NAME}}`. For more detail please refer to the "Environment Variable and Pulumi Stack Configuration" section.
+
+## Make Changes to Source Code
 
 The [OAuth Client source code provided by @igk1972](https://github.com/igk1972/netlify-cms-oauth-provider-go) provides `./dotenv/dotenv.go` which retrieves the environment variables from a file. The main.go is the body of the OAuth Client which uses the [markbetes goth](https://github.com/markbates/goth) to build the OAuth Provider. `./randstr/randstr.go` which generates a random string for the `SESSION_SECRET` environment variable that main.go is using. However, both functions could be done with Pulumi.
 
@@ -74,33 +76,12 @@ const appService = new awsx.ecs.FargateService("app-svc", {
 
 Therefore, we could safely remove those two folders `randstr` and `dotenv`.
 
-### Fixed Bugs
+### Specify the Github Scope
 
-We also fixed the bug in the `main.go` of the source code. In the script code on line 36:
+Source code didn't indicate the [github scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) when it is trying to use the github.New function to create a GitHub provider. The default for the Github scope if we don't specify in the github.New function is the ready-only access to the Github repos. Because we want CMS to make edits to the target repostiory, we need ready and write access.
 
-![window.opener.postMessage Bug in the Source Code](./window-opener-post-message-bug.jpg)
-
-The code forgot to stringify the result which cause windows fail to redirect. Thus we changed it to be:
-
-```go
-function recieveMessage(e) {
-      console.log("Recieve message:", e);
-      // send message to main window with da app
-      window.opener.postMessage(
-        "authorization:" + provider + ":" + status + ":" + JSON.stringify(result),
-        e.origin
-      );
-    }
-```
-
-Moreover, the code appends the value of the `HOST` environment variable to the Github callback links. The source code also appended `https://` in the font.
-![https at the front of links](./https-problem.jpg)
-If we already pass in the host domain of OAuth with `https://` then it would cause the redirect error as well because of the wrong link. Thus, we deleted all the `https://` in the front.
-
-Another issue for the source code is that it fails to indicate the [github scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) when it is trying to use the GitHub.New function to create a GitHub provider. If we didn't specify the scope as the third argument of github.New, then it means we only request for the read-only access to the provider. Thus we should specify to be repo and public repo.
-
-![github scope bug](./github-scope.jpg)
-We fixed this by specifying the GitHub scope as an environment variable `GITHUB_SCOPE` and the default value is `public_repo` which is to grant read and write access to all public repository. We can change this by adding an optional Pulumi configuration of GitHub scope to be the value of the desired scope. We can even add several scope values and separate them by a comma as a feature offered by `Github.New` function. The corresponding environment variable would be set during the creation of the Fargate Service inside the Pulumi program. Then main.go would read and parse `GITHUB_SCOPE` value and append to the argument of `Github.New` function.
+![github scope](./github-scope.jpg)
+Thus we specify the GitHub scope as an environment variable `GITHUB_SCOPE` and the default value is `public_repo` which is to grant read and write access to all public repository. We can change this by adding an optional Pulumi configuration of GitHub scope to be the value of the desired scope. We can even add several scope values and separate them by a comma as a feature offered by `Github.New` function. The corresponding environment variable would be set during the creation of the Fargate Service inside the Pulumi program. Then main.go would read and parse `GITHUB_SCOPE` value and append to the argument of `Github.New` function.
 
 ```go
 githubScope := os.Getenv("GITHUB_SCOPE")
@@ -206,6 +187,7 @@ new awsx.lb.ListenerRule("oauth-listener-rule", web, {
     }],
 });
 ```
+#### Environment Variable and Pulumi Stack Configuration
 
 Also, as mentioned previously, when building the Fargate service, we could pass in environment variables that act as a parameter to main.go.
 
@@ -255,8 +237,9 @@ For `HOST` we would pass in the link that we would want this OAuth Server to hav
 
 `SESSION_SECRET` is another environment variable to pass in main.go that we mention earlier. We generated value by using Pulumi's `random.RandomPassword` previously.
 
-To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAuth Application. Netlify have provided [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for that. For the Home Page Url should be the targetDomain that we build with our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). For the Authorization callback URL we should enter `https://{{the domain of your OAuth App}}/github/callback` which is specified by the main.go.
-
+To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAuth Application. Netlify have provided [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for that. 
+For the Home Page Url should be the targetDomain that we build with our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). 
+For the Authorization callback URL we should enter `https://{{the domain of your OAuth App}}/callback/github` which is specified by the main.go. 
 ```go
     github.New(
         os.Getenv("GITHUB_KEY"), os.Getenv("GITHUB_SECRET"),
@@ -265,6 +248,8 @@ To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAut
         "public_repo",
     )
 ```
+If you are using different storaging system like Bitbucket and Gitlab, you can specify callback url to be `https://{{the domain of your OAuth App}}/callback/{{ backend name }}` and relace `{{backend name}}` with `bitbucket` or `github` correspondingly.
+
 
 Then we can copy and paste the github key and secret as stack configuration as well.
 
@@ -327,13 +312,13 @@ function createAliasRecord(
 const aRecord = createAliasRecord(cmsStackConfig.targetDomain, alb);
 ```
 
-### Run infrastructure and Github Workflow
+Then we could run `pulumi up` to deploy all of this. 
 
-Then we could run `pulumi up` to deploy all of this. Similar to the cms folder we have to build the Github workflow under folder `cms-oauth/.github/workflows/build-and-deploy.yml`. The workflow is also using the repository secret that we set in the Github.
+### Github Workflow (Optional)
+
+Similar to the cms folder we have to build the Github workflow under folder `cms-oauth/.github/workflows/build-and-deploy.yml`. The workflow is also using the repository secret that we set in the Github.
 
 ![Github Secret](./github_secret.jpg)
-
-Also, similarly, `cms-OAuth/scripts` contain the script for assuming role functionality and if you are using IAM User's token to assume the role from the other repository then you could use this script.
 
 ## Last Step
 
@@ -364,7 +349,7 @@ People with correct access could now use and see the CMS.
 
 ![CMS](./cms.jpg)
 
-All codes of CMS and OAuth Client Server are available in [Pulumi's example repositories](https://github.com/pulumi/examples)'s [aws-ts-netlify-cms-and-oauth](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms).
+All codes of CMS and OAuth Client Server are available in [Pulumi's example repositories](https://github.com/pulumi/examples)'s [aws-ts-netlify-cms-and-oauth](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms-oauth).
 
 ---
 
