@@ -33,201 +33,6 @@ To get more information about Image, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/images)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Image Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Gcp.Compute.Image("example", new Gcp.Compute.ImageArgs
-        {
-            RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
-            {
-                Source = "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewImage(ctx, "example", &compute.ImageArgs{
-			RawDisk: &compute.ImageRawDiskArgs{
-				Source: pulumi.String("https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.compute.Image("example", raw_disk={
-    "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
-})
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.compute.Image("example", {
-    rawDisk: {
-        source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
-    },
-});
-```
-
-{{% /example %}}
-
-### Image Guest Os
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Gcp.Compute.Image("example", new Gcp.Compute.ImageArgs
-        {
-            GuestOsFeatures = 
-            {
-                new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
-                {
-                    Type = "SECURE_BOOT",
-                },
-                new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
-                {
-                    Type = "MULTI_IP_SUBNET",
-                },
-            },
-            RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
-            {
-                Source = "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewImage(ctx, "example", &compute.ImageArgs{
-			GuestOsFeatures: compute.ImageGuestOsFeatureArray{
-				&compute.ImageGuestOsFeatureArgs{
-					Type: pulumi.String("SECURE_BOOT"),
-				},
-				&compute.ImageGuestOsFeatureArgs{
-					Type: pulumi.String("MULTI_IP_SUBNET"),
-				},
-			},
-			RawDisk: &compute.ImageRawDiskArgs{
-				Source: pulumi.String("https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.compute.Image("example",
-    guest_os_features=[
-        {
-            "type": "SECURE_BOOT",
-        },
-        {
-            "type": "MULTI_IP_SUBNET",
-        },
-    ],
-    raw_disk={
-        "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.compute.Image("example", {
-    guestOsFeatures: [
-        {
-            type: "SECURE_BOOT",
-        },
-        {
-            type: "MULTI_IP_SUBNET",
-        },
-    ],
-    rawDisk: {
-        source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Image Resource {#create}
@@ -239,7 +44,7 @@ const example = new gcp.compute.Image("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Image">Image</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>family=None<span class="p">, </span>guest_os_features=None<span class="p">, </span>labels=None<span class="p">, </span>licenses=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>raw_disk=None<span class="p">, </span>source_disk=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Image">Image</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[List[ImageGuestOsFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">raw_disk</span><span class="p">:</span> <span class="nx">Optional[ImageRawDiskArgs]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -458,7 +263,8 @@ RFC1035.
         <span class="property-type"><a href="#imageguestosfeature">List&lt;Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,7 +326,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,6 +341,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceimage_csharp">
+<a href="#sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcesnapshot_csharp">
+<a href="#sourcesnapshot_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -590,7 +430,8 @@ RFC1035.
         <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -652,7 +493,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -666,6 +508,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceimage_go">
+<a href="#sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcesnapshot_go">
+<a href="#sourcesnapshot_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -722,7 +597,8 @@ RFC1035.
         <span class="property-type"><a href="#imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -784,7 +660,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -798,6 +675,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceimage_nodejs">
+<a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcesnapshot_nodejs">
+<a href="#sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -851,10 +761,11 @@ RFC1035.
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature]</a></span>
+        <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,7 +774,7 @@ Applicable only for bootable images.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
 {{% /md %}}</dd>
@@ -914,9 +825,10 @@ If it is not provided, the provider project is used.
 <a href="#raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerawdisk">Dict[Image<wbr>Raw<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,6 +842,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_image_python">
+<a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_snapshot_python">
+<a href="#source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -1206,7 +1151,8 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>archive_size_bytes=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>family=None<span class="p">, </span>guest_os_features=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>licenses=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>raw_disk=None<span class="p">, </span>self_link=None<span class="p">, </span>source_disk=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[List[ImageGuestOsFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">raw_disk</span><span class="p">:</span> <span class="nx">Optional[ImageRawDiskArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1214,7 +1160,7 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Image.html">Image</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ImageState.html">ImageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Image.html">Image</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ImageState.html">ImageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1389,7 +1335,8 @@ RFC1035.
         <span class="property-type"><a href="#imageguestosfeature">List&lt;Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1462,7 +1409,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,6 +1435,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceimage_csharp">
+<a href="#state_sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcesnapshot_csharp">
+<a href="#state_sourcesnapshot_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -1565,7 +1546,8 @@ RFC1035.
         <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1638,7 +1620,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1663,6 +1646,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceimage_go">
+<a href="#state_sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcesnapshot_go">
+<a href="#state_sourcesnapshot_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -1741,7 +1757,8 @@ RFC1035.
         <span class="property-type"><a href="#imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1814,7 +1831,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1839,6 +1857,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceimage_nodejs">
+<a href="#state_sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcesnapshot_nodejs">
+<a href="#state_sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -1914,10 +1965,11 @@ RFC1035.
 <a href="#state_guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature]</a></span>
+        <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
-Applicable only for bootable images.  Structure is documented below.
+Applicable only for bootable images.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1937,7 +1989,7 @@ Applicable only for bootable images.  Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
 {{% /md %}}</dd>
@@ -1988,9 +2040,10 @@ If it is not provided, the provider project is used.
 <a href="#state_raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerawdisk">Dict[Image<wbr>Raw<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
+    <dd>{{% md %}}The parameters of the raw disk image.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2015,6 +2068,39 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_source_image_python">
+<a href="#state_source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source image used to create this image. In order to create an image, you must provide the full or partial
+URL of one of the following:
+The selfLink URL
+This property
+The rawDisk.source URL
+The sourceDisk URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_source_snapshot_python">
+<a href="#state_source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL of the source snapshot used to create this image.
+In order to create an image, you must provide the full or partial URL of one of the following:
+The selfLink URL
+This property
+The sourceImage URL
+The rawDisk.source URL
+The sourceDisk URL
 {{% /md %}}</dd>
 
 </dl>
@@ -2059,6 +2145,7 @@ rawDisk.source property but not both to create an image.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, and `WINDOWS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2077,6 +2164,7 @@ rawDisk.source property but not both to create an image.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, and `WINDOWS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2095,6 +2183,7 @@ rawDisk.source property but not both to create an image.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, and `WINDOWS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2113,6 +2202,7 @@ rawDisk.source property but not both to create an image.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, and `WINDOWS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2165,6 +2255,8 @@ but not both.
 should be TAR. This is just a container and transmission format
 and not a runtime format. Provided by the client when the disk
 image is created.
+Default value is `TAR`.
+Possible values are `TAR`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2211,6 +2303,8 @@ but not both.
 should be TAR. This is just a container and transmission format
 and not a runtime format. Provided by the client when the disk
 image is created.
+Default value is `TAR`.
+Possible values are `TAR`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2257,6 +2351,8 @@ but not both.
 should be TAR. This is just a container and transmission format
 and not a runtime format. Provided by the client when the disk
 image is created.
+Default value is `TAR`.
+Possible values are `TAR`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2293,8 +2389,8 @@ but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containertype_python">
-<a href="#containertype_python" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
+        <span id="container_type_python">
+<a href="#container_type_python" style="color: inherit; text-decoration: inherit;">container_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2303,6 +2399,8 @@ but not both.
 should be TAR. This is just a container and transmission format
 and not a runtime format. Provided by the client when the disk
 image is created.
+Default value is `TAR`.
+Possible values are `TAR`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2335,6 +2433,6 @@ This is provided by the client when the disk image is created.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -12,9 +12,11 @@ Explore the resources and functions of the accesscontextmanager module in the GC
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="accesslevel" title="AccessLevel"><span class="symbol resource"></span>AccessLevel</a></li>
+    <li><a href="accesslevels" title="AccessLevels"><span class="symbol resource"></span>AccessLevels</a></li>
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="serviceperimeter" title="ServicePerimeter"><span class="symbol resource"></span>ServicePerimeter</a></li>
     <li><a href="serviceperimeterresource" title="ServicePerimeterResource"><span class="symbol resource"></span>ServicePerimeterResource</a></li>
+    <li><a href="serviceperimeters" title="ServicePerimeters"><span class="symbol resource"></span>ServicePerimeters</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,9 +26,9 @@ Explore the resources and functions of the accesscontextmanager module in the GC
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.1</dd>
 </dl>
 
 

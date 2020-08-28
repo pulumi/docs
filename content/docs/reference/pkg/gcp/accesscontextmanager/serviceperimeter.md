@@ -26,251 +26,6 @@ To get more information about ServicePerimeter, see:
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Access Context Manager Service Perimeter Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
-        {
-            Parent = "organizations/123456789",
-            Title = "my policy",
-        });
-        var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
-        {
-            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
-            Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
-            {
-                RestrictedServices = 
-                {
-                    "storage.googleapis.com",
-                },
-            },
-            Title = "restrict_storage",
-        });
-        var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
-        {
-            Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
-            {
-                Conditions = 
-                {
-                    new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
-                    {
-                        DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
-                        {
-                            OsConstraints = 
-                            {
-                                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
-                                {
-                                    OsType = "DESKTOP_CHROME_OS",
-                                },
-                            },
-                            RequireScreenLock = false,
-                        },
-                        Regions = 
-                        {
-                            "CH",
-                            "IT",
-                            "US",
-                        },
-                    },
-                },
-            },
-            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
-            Title = "chromeos_no_lock",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
-service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    status={
-        "restrictedServices": ["storage.googleapis.com"],
-    },
-    title="restrict_storage")
-access_level = gcp.accesscontextmanager.AccessLevel("access-level",
-    basic={
-        "conditions": [{
-            "devicePolicy": {
-                "osConstraints": [{
-                    "osType": "DESKTOP_CHROME_OS",
-                }],
-                "requireScreenLock": False,
-            },
-            "regions": [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    title="chromeos_no_lock")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
-    parent: "organizations/123456789",
-    title: "my policy",
-});
-const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    status: {
-        restrictedServices: ["storage.googleapis.com"],
-    },
-    title: "restrict_storage",
-});
-const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
-    basic: {
-        conditions: [{
-            devicePolicy: {
-                osConstraints: [{
-                    osType: "DESKTOP_CHROME_OS",
-                }],
-                requireScreenLock: false,
-            },
-            regions: [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    title: "chromeos_no_lock",
-});
-```
-
-{{% /example %}}
-
-### Access Context Manager Service Perimeter Dry Run
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
-        {
-            Parent = "organizations/123456789",
-            Title = "my policy",
-        });
-        var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
-        {
-            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
-            Spec = new Gcp.AccessContextManager.Inputs.ServicePerimeterSpecArgs
-            {
-                RestrictedServices = 
-                {
-                    "storage.googleapis.com",
-                },
-            },
-            Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
-            {
-                RestrictedServices = 
-                {
-                    "bigquery.googleapis.com",
-                },
-            },
-            Title = "restrict_bigquery_dryrun_storage",
-            UseExplicitDryRunSpec = true,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
-service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    spec={
-        "restrictedServices": ["storage.googleapis.com"],
-    },
-    status={
-        "restrictedServices": ["bigquery.googleapis.com"],
-    },
-    title="restrict_bigquery_dryrun_storage",
-    use_explicit_dry_run_spec=True)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
-    parent: "organizations/123456789",
-    title: "my policy",
-});
-const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    // Service 'storage.googleapis.com' will be in dry-run mode.
-    spec: {
-        restrictedServices: ["storage.googleapis.com"],
-    },
-    // Service 'bigquery.googleapis.com' will be restricted.
-    status: {
-        restrictedServices: ["bigquery.googleapis.com"],
-    },
-    title: "restrict_bigquery_dryrun_storage",
-    useExplicitDryRunSpec: true,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServicePerimeter Resource {#create}
@@ -282,7 +37,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#ServicePerimeter">ServicePerimeter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>perimeter_type=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, </span>title=None<span class="p">, </span>use_explicit_dry_run_spec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#pulumi_gcp.accesscontextmanager.ServicePerimeter">ServicePerimeter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterSpecArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterStatusArgs]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_explicit_dry_run_spec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -524,6 +279,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -537,7 +294,8 @@ themselves.
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,7 +308,8 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -649,6 +408,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,7 +423,8 @@ themselves.
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,7 +437,8 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -774,6 +537,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +552,8 @@ themselves.
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,7 +566,8 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,6 +666,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,12 +676,13 @@ themselves.
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspec">Dict[Service<wbr>Perimeter<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -921,11 +691,12 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatus">Dict[Service<wbr>Perimeter<wbr>Status]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1133,7 +904,8 @@ Get an existing ServicePerimeter resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>perimeter_type=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, </span>title=None<span class="p">, </span>update_time=None<span class="p">, </span>use_explicit_dry_run_spec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterSpecArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterStatusArgs]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_explicit_dry_run_spec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ServicePerimeter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1141,7 +913,7 @@ Get an existing ServicePerimeter resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeter.html">ServicePerimeter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeterState.html">ServicePerimeterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeter.html">ServicePerimeter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeterState.html">ServicePerimeterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1317,6 +1089,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1330,7 +1104,8 @@ themselves.
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1343,7 +1118,8 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1464,6 +1240,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1477,7 +1255,8 @@ themselves.
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1490,7 +1269,8 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,6 +1391,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,7 +1406,8 @@ themselves.
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1637,7 +1420,8 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1758,6 +1542,8 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1766,12 +1552,13 @@ themselves.
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspec">Dict[Service<wbr>Perimeter<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1780,11 +1567,12 @@ the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatus">Dict[Service<wbr>Perimeter<wbr>Status]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1917,7 +1705,8 @@ restrictions.
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1983,7 +1772,8 @@ restrictions.
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2049,7 +1839,8 @@ restrictions.
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2061,8 +1852,8 @@ Perimeter.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesslevels_python">
-<a href="#accesslevels_python" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
+        <span id="access_levels_python">
+<a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2093,8 +1884,8 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restrictedservices_python">
-<a href="#restrictedservices_python" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
+        <span id="restricted_services_python">
+<a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2108,14 +1899,15 @@ restrictions.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vpcaccessibleservices_python">
-<a href="#vpcaccessibleservices_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
+        <span id="vpc_accessible_services_python">
+<a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Dict[Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2238,8 +2030,8 @@ list of APIs specified in 'allowedServices'.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedservices_python">
-<a href="#allowedservices_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
+        <span id="allowed_services_python">
+<a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2250,8 +2042,8 @@ Must be empty unless `enableRestriction` is True.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablerestriction_python">
-<a href="#enablerestriction_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
+        <span id="enable_restriction_python">
+<a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2341,7 +2133,8 @@ restrictions.
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2407,7 +2200,8 @@ restrictions.
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2473,7 +2267,8 @@ restrictions.
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2485,8 +2280,8 @@ Perimeter.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesslevels_python">
-<a href="#accesslevels_python" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
+        <span id="access_levels_python">
+<a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2517,8 +2312,8 @@ Format: projects/{project_number}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restrictedservices_python">
-<a href="#restrictedservices_python" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
+        <span id="restricted_services_python">
+<a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2532,14 +2327,15 @@ restrictions.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vpcaccessibleservices_python">
-<a href="#vpcaccessibleservices_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
+        <span id="vpc_accessible_services_python">
+<a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Dict[Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2662,8 +2458,8 @@ list of APIs specified in 'allowedServices'.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedservices_python">
-<a href="#allowedservices_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
+        <span id="allowed_services_python">
+<a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2674,8 +2470,8 @@ Must be empty unless `enableRestriction` is True.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablerestriction_python">
-<a href="#enablerestriction_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
+        <span id="enable_restriction_python">
+<a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2702,6 +2498,6 @@ list of APIs specified in 'allowedServices'.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

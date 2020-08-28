@@ -20,97 +20,6 @@ To get more information about ManagedZone, see:
 * How-to Guides
     * [Managing Zones](https://cloud.google.com/dns/zones/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Dns Managed Zone Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example_zone = new Gcp.Dns.ManagedZone("example-zone", new Gcp.Dns.ManagedZoneArgs
-        {
-            Description = "Example DNS zone",
-            DnsName = "my-domain.com.",
-            Labels = 
-            {
-                { "foo", "bar" },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dns.NewManagedZone(ctx, "example-zone", &dns.ManagedZoneArgs{
-			Description: pulumi.String("Example DNS zone"),
-			DnsName:     pulumi.String("my-domain.com."),
-			Labels: pulumi.Map{
-				"foo": pulumi.String("bar"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_zone = gcp.dns.ManagedZone("example-zone",
-    description="Example DNS zone",
-    dns_name="my-domain.com.",
-    labels={
-        "foo": "bar",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example_zone = new gcp.dns.ManagedZone("example-zone", {
-    description: "Example DNS zone",
-    dnsName: "my-domain.com.",
-    labels: {
-        foo: "bar",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ManagedZone Resource {#create}
@@ -122,7 +31,7 @@ const example_zone = new gcp.dns.ManagedZone("example-zone", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#ManagedZone">ManagedZone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>service_directory_config=None<span class="p">, </span>visibility=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#pulumi_gcp.dns.ManagedZone">ManagedZone</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneDnssecConfigArgs]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneForwardingConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,7 +233,8 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -337,7 +247,8 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,7 +283,8 @@ Must be unique within the project.
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -384,7 +296,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,6 +346,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,7 +387,8 @@ while private zones are visible only to Virtual Private Cloud resources.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -485,7 +401,8 @@ while private zones are visible only to Virtual Private Cloud resources.
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,7 +437,8 @@ Must be unique within the project.
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,7 +450,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -581,6 +500,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -620,7 +541,8 @@ while private zones are visible only to Virtual Private Cloud resources.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -633,7 +555,8 @@ while private zones are visible only to Virtual Private Cloud resources.
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -668,7 +591,8 @@ Must be unique within the project.
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -680,7 +604,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,6 +654,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -766,9 +693,10 @@ while private zones are visible only to Virtual Private Cloud resources.
 <a href="#dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,11 +705,12 @@ while private zones are visible only to Virtual Private Cloud resources.
 <a href="#forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -790,7 +719,7 @@ to forward to.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
 {{% /md %}}</dd>
@@ -813,10 +742,11 @@ Must be unique within the project.
 <a href="#peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -825,10 +755,11 @@ zone. The value of this field contains the network to peer with.  Structure is d
 <a href="#private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,7 +793,7 @@ to networks listed under `private_visibility_config`.
 <a href="#service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
@@ -877,6 +808,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1021,7 +954,8 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>name_servers=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>service_directory_config=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneDnssecConfigArgs]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneForwardingConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedZone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1029,7 +963,7 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneState.html">ManagedZoneState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneState.html">ManagedZoneState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1165,7 +1099,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,7 +1113,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1224,7 +1160,8 @@ Must be unique within the project.
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,7 +1173,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,6 +1223,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1324,7 +1264,8 @@ while private zones are visible only to Virtual Private Cloud resources.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1337,7 +1278,8 @@ while private zones are visible only to Virtual Private Cloud resources.
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1383,7 +1325,8 @@ Must be unique within the project.
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1395,7 +1338,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,6 +1388,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1483,7 +1429,8 @@ while private zones are visible only to Virtual Private Cloud resources.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1496,7 +1443,8 @@ while private zones are visible only to Virtual Private Cloud resources.
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1542,7 +1490,8 @@ Must be unique within the project.
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1554,7 +1503,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1603,6 +1553,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1640,9 +1592,10 @@ while private zones are visible only to Virtual Private Cloud resources.
 <a href="#state_dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}DNSSEC configuration  Structure is documented below.
+    <dd>{{% md %}}DNSSEC configuration
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1651,11 +1604,12 @@ while private zones are visible only to Virtual Private Cloud resources.
 <a href="#state_forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to.  Structure is documented below.
+to forward to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1664,7 +1618,7 @@ to forward to.  Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
 {{% /md %}}</dd>
@@ -1698,10 +1652,11 @@ Must be unique within the project.
 <a href="#state_peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with.  Structure is documented below.
+zone. The value of this field contains the network to peer with.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1710,10 +1665,11 @@ zone. The value of this field contains the network to peer with.  Structure is d
 <a href="#state_private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from.  Structure is documented below.
+resources that the zone is visible from.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1747,7 +1703,7 @@ to networks listed under `private_visibility_config`.
 <a href="#state_service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config]</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd>
@@ -1762,6 +1718,8 @@ to networks listed under `private_visibility_config`.
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
+Default value is `public`.
+Possible values are `private` and `public`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1808,7 +1766,8 @@ while private zones are visible only to Virtual Private Cloud resources.
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
 you must also provide one for the other.
-default_key_specs can only be updated when the state is `off`.  Structure is documented below.
+default_key_specs can only be updated when the state is `off`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1832,6 +1791,7 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
     </dt>
     <dd>{{% md %}}Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is `off`.
+Possible values are `nsec` and `nsec3`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1843,6 +1803,7 @@ non_existence can only be updated when the state is `off`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in
+Possible values are `off`, `on`, and `transfer`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1863,7 +1824,8 @@ non_existence can only be updated when the state is `off`.
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
 you must also provide one for the other.
-default_key_specs can only be updated when the state is `off`.  Structure is documented below.
+default_key_specs can only be updated when the state is `off`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1887,6 +1849,7 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
     </dt>
     <dd>{{% md %}}Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is `off`.
+Possible values are `nsec` and `nsec3`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1898,6 +1861,7 @@ non_existence can only be updated when the state is `off`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in
+Possible values are `off`, `on`, and `transfer`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1918,7 +1882,8 @@ non_existence can only be updated when the state is `off`.
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
 you must also provide one for the other.
-default_key_specs can only be updated when the state is `off`.  Structure is documented below.
+default_key_specs can only be updated when the state is `off`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1942,6 +1907,7 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
     </dt>
     <dd>{{% md %}}Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is `off`.
+Possible values are `nsec` and `nsec3`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1953,6 +1919,7 @@ non_existence can only be updated when the state is `off`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in
+Possible values are `off`, `on`, and `transfer`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1964,16 +1931,17 @@ non_existence can only be updated when the state is `off`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultkeyspecs_python">
-<a href="#defaultkeyspecs_python" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
+        <span id="default_key_specs_python">
+<a href="#default_key_specs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
 you must also provide one for the other.
-default_key_specs can only be updated when the state is `off`.  Structure is documented below.
+default_key_specs can only be updated when the state is `off`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1989,14 +1957,15 @@ default_key_specs can only be updated when the state is `off`.  Structure is doc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nonexistence_python">
-<a href="#nonexistence_python" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
+        <span id="non_existence_python">
+<a href="#non_existence_python" style="color: inherit; text-decoration: inherit;">non_<wbr>existence</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is `off`.
+Possible values are `nsec` and `nsec3`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2008,6 +1977,7 @@ non_existence can only be updated when the state is `off`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in
+Possible values are `off`, `on`, and `transfer`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2044,6 +2014,7 @@ non_existence can only be updated when the state is `off`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key
+Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2071,6 +2042,7 @@ Point flag set and, when active, will only be used to sign
 resource record sets of type DNSKEY. Zone signing keys do
 not have the Secure Entry Point flag set and will be used
 to sign all other types of resource record sets.
+Possible values are `keySigning` and `zoneSigning`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2100,6 +2072,7 @@ to sign all other types of resource record sets.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key
+Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2127,6 +2100,7 @@ Point flag set and, when active, will only be used to sign
 resource record sets of type DNSKEY. Zone signing keys do
 not have the Secure Entry Point flag set and will be used
 to sign all other types of resource record sets.
+Possible values are `keySigning` and `zoneSigning`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2156,6 +2130,7 @@ to sign all other types of resource record sets.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key
+Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2183,6 +2158,7 @@ Point flag set and, when active, will only be used to sign
 resource record sets of type DNSKEY. Zone signing keys do
 not have the Secure Entry Point flag set and will be used
 to sign all other types of resource record sets.
+Possible values are `keySigning` and `zoneSigning`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2212,12 +2188,13 @@ to sign all other types of resource record sets.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key
+Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keylength_python">
-<a href="#keylength_python" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
+        <span id="key_length_python">
+<a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2227,8 +2204,8 @@ to sign all other types of resource record sets.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keytype_python">
-<a href="#keytype_python" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
+        <span id="key_type_python">
+<a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2239,6 +2216,7 @@ Point flag set and, when active, will only be used to sign
 resource record sets of type DNSKEY. Zone signing keys do
 not have the Secure Entry Point flag set and will be used
 to sign all other types of resource record sets.
+Possible values are `keySigning` and `zoneSigning`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2287,7 +2265,8 @@ to sign all other types of resource record sets.
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
-one target is given.  Structure is documented below.
+one target is given.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2307,7 +2286,8 @@ one target is given.  Structure is documented below.
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
-one target is given.  Structure is documented below.
+one target is given.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2327,7 +2307,8 @@ one target is given.  Structure is documented below.
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
-one target is given.  Structure is documented below.
+one target is given.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2339,15 +2320,16 @@ one target is given.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="targetnameservers_python">
-<a href="#targetnameservers_python" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
+        <span id="target_name_servers_python">
+<a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
-one target is given.  Structure is documented below.
+one target is given.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2397,6 +2379,7 @@ one target is given.  Structure is documented below.
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+Possible values are `default` and `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2428,6 +2411,7 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+Possible values are `default` and `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2459,6 +2443,7 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+Possible values are `default` and `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2470,8 +2455,8 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span id="ipv4address_python">
-<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2481,8 +2466,8 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardingpath_python">
-<a href="#forwardingpath_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
+        <span id="forwarding_path_python">
+<a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2490,6 +2475,7 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
     <dd>{{% md %}}Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+Possible values are `default` and `private`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2525,7 +2511,8 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network with which to peer.  Structure is documented below.
+    <dd>{{% md %}}The network with which to peer.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2543,7 +2530,8 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}The network with which to peer.  Structure is documented below.
+    <dd>{{% md %}}The network with which to peer.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2561,7 +2549,8 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}The network with which to peer.  Structure is documented below.
+    <dd>{{% md %}}The network with which to peer.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2573,13 +2562,14 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
     <dt class="property-required"
             title="Required">
-        <span id="targetnetwork_python">
-<a href="#targetnetwork_python" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
+        <span id="target_network_python">
+<a href="#target_network_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network]</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The network with which to peer.  Structure is documented below.
+    <dd>{{% md %}}The network with which to peer.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2669,8 +2659,8 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 
     <dt class="property-required"
             title="Required">
-        <span id="networkurl_python">
-<a href="#networkurl_python" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+        <span id="network_url_python">
+<a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2765,7 +2755,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd>
@@ -2857,8 +2847,8 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 
     <dt class="property-required"
             title="Required">
-        <span id="networkurl_python">
-<a href="#networkurl_python" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
+        <span id="network_url_python">
+<a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2901,7 +2891,8 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2919,7 +2910,8 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
-    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2937,7 +2929,8 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
-    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2953,9 +2946,10 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Dict[Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace]</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The namespace associated with the zone.  Structure is documented below.
+    <dd>{{% md %}}The namespace associated with the zone.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3051,8 +3045,8 @@ Ignored for `public` visibility zones.
 
     <dt class="property-required"
             title="Required">
-        <span id="namespaceurl_python">
-<a href="#namespaceurl_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Url</a>
+        <span id="namespace_url_python">
+<a href="#namespace_url_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3082,6 +3076,6 @@ Ignored for `public` visibility zones.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

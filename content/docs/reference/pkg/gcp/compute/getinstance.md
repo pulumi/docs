@@ -15,85 +15,6 @@ Get information about a VM instance resource within GCE. For more information se
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var appserver = Output.Create(Gcp.Compute.GetInstance.InvokeAsync(new Gcp.Compute.GetInstanceArgs
-        {
-            Name = "primary-application-server",
-            Zone = "us-central1-a",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "primary-application-server"
-		opt1 := "us-central1-a"
-		_, err := compute.LookupInstance(ctx, &compute.LookupInstanceArgs{
-			Name: &opt0,
-			Zone: &opt1,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-appserver = gcp.compute.get_instance(name="primary-application-server",
-    zone="us-central1-a")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const appserver = pulumi.output(gcp.compute.getInstance({
-    name: "primary-application-server",
-    zone: "us-central1-a",
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetInstance {#using}
@@ -107,7 +28,7 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -409,6 +330,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="confidentialinstanceconfigs_csharp">
+<a href="#confidentialinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">List&lt;Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -772,6 +703,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="confidentialinstanceconfigs_go">
+<a href="#confidentialinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">[]Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="cpuplatform_go">
 <a href="#cpuplatform_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Platform</a>
 </span> 
@@ -1129,6 +1070,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="confidentialinstanceconfigs_nodejs">
+<a href="#confidentialinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1492,6 +1443,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="confidential_instance_configs_python">
+<a href="#confidential_instance_configs_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">List[Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="cpu_platform_python">
 <a href="#cpu_platform_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>platform</a>
 </span> 
@@ -1613,7 +1574,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
@@ -1635,7 +1596,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd>
@@ -2058,8 +2019,8 @@ under `/dev/disk/by-id/`
 
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeyraw_python">
-<a href="#diskencryptionkeyraw_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
+        <span id="disk_encryption_key_raw_python">
+<a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2068,8 +2029,8 @@ under `/dev/disk/by-id/`
 
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeysha256_python">
-<a href="#diskencryptionkeysha256_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
+        <span id="disk_encryption_key_sha256_python">
+<a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2078,8 +2039,8 @@ under `/dev/disk/by-id/`
 
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2417,8 +2378,8 @@ Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="autodelete_python">
-<a href="#autodelete_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
+        <span id="auto_delete_python">
+<a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2440,8 +2401,8 @@ under `/dev/disk/by-id/`
 
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeyraw_python">
-<a href="#diskencryptionkeyraw_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
+        <span id="disk_encryption_key_raw_python">
+<a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2450,8 +2411,8 @@ under `/dev/disk/by-id/`
 
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeysha256_python">
-<a href="#diskencryptionkeysha256_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
+        <span id="disk_encryption_key_sha256_python">
+<a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2460,11 +2421,11 @@ under `/dev/disk/by-id/`
 
     <dt class="property-required"
             title="Required">
-        <span id="initializeparams_python">
-<a href="#initializeparams_python" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
+        <span id="initialize_params_python">
+<a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param]</a></span>
+        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
@@ -2472,8 +2433,8 @@ Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2697,7 +2658,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
@@ -2723,6 +2684,92 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getinstanceconfidentialinstanceconfig">Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceConfidentialInstanceConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceConfidentialInstanceConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceConfidentialInstanceConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_csharp">
+<a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_go">
+<a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_nodejs">
+<a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_confidential_compute_python">
+<a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3140,11 +3187,11 @@ instance can be accessed via the Internet. Structure documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="accessconfigs_python">
-<a href="#accessconfigs_python" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
+        <span id="access_configs_python">
+<a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
@@ -3152,11 +3199,11 @@ instance can be accessed via the Internet. Structure documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="aliasipranges_python">
-<a href="#aliasipranges_python" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
+        <span id="alias_ip_ranges_python">
+<a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd>
@@ -3185,8 +3232,8 @@ instance can be accessed via the Internet. Structure documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="networkip_python">
-<a href="#networkip_python" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
+        <span id="network_ip_python">
+<a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3207,8 +3254,8 @@ instance can be accessed via the Internet. Structure documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="subnetworkproject_python">
-<a href="#subnetworkproject_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
+        <span id="subnetwork_project_python">
+<a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3366,8 +3413,8 @@ network ip.
 
     <dt class="property-required"
             title="Required">
-        <span id="natip_python">
-<a href="#natip_python" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
+        <span id="nat_ip_python">
+<a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3389,8 +3436,8 @@ network ip.
 
     <dt class="property-required"
             title="Required">
-        <span id="publicptrdomainname_python">
-<a href="#publicptrdomainname_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
+        <span id="public_ptr_domain_name_python">
+<a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3529,8 +3576,8 @@ range.
 
     <dt class="property-required"
             title="Required">
-        <span id="subnetworkrangename_python">
-<a href="#subnetworkrangename_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
+        <span id="subnetwork_range_name_python">
+<a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3756,8 +3803,8 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
     <dt class="property-required"
             title="Required">
-        <span id="automaticrestart_python">
-<a href="#automaticrestart_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
+        <span id="automatic_restart_python">
+<a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3768,8 +3815,8 @@ restarted if it was terminated by Compute Engine (not a user).
 
     <dt class="property-required"
             title="Required">
-        <span id="minnodecpus_python">
-<a href="#minnodecpus_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
+        <span id="min_node_cpus_python">
+<a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3778,18 +3825,18 @@ restarted if it was terminated by Compute Engine (not a user).
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeaffinities_python">
-<a href="#nodeaffinities_python" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
+        <span id="node_affinities_python">
+<a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="onhostmaintenance_python">
-<a href="#onhostmaintenance_python" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
+        <span id="on_host_maintenance_python">
+<a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4338,8 +4385,8 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
     <dt class="property-required"
             title="Required">
-        <span id="enableintegritymonitoring_python">
-<a href="#enableintegritymonitoring_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4348,8 +4395,8 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
     <dt class="property-required"
             title="Required">
-        <span id="enablesecureboot_python">
-<a href="#enablesecureboot_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4358,8 +4405,8 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
     <dt class="property-required"
             title="Required">
-        <span id="enablevtpm_python">
-<a href="#enablevtpm_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
+        <span id="enable_vtpm_python">
+<a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4384,6 +4431,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

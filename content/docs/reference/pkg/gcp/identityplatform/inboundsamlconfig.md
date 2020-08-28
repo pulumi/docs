@@ -27,7 +27,7 @@ the marketplace prior to using this resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/identityplatform/#InboundSamlConfig">InboundSamlConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>idp_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>sp_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/identityplatform/#pulumi_gcp.identityplatform.InboundSamlConfig">InboundSamlConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idp_config</span><span class="p">:</span> <span class="nx">Optional[InboundSamlConfigIdpConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sp_config</span><span class="p">:</span> <span class="nx">Optional[InboundSamlConfigSpConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -218,7 +218,8 @@ The InboundSamlConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -230,7 +231,8 @@ The InboundSamlConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -295,7 +297,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -307,7 +310,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,7 +376,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -384,7 +389,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,9 +453,10 @@ If it is not provided, the provider project is used.
 <a href="#idp_config_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigidpconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -458,10 +465,11 @@ If it is not provided, the provider project is used.
 <a href="#sp_config_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigspconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,7 +606,8 @@ Get an existing InboundSamlConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>idp_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>sp_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idp_config</span><span class="p">:</span> <span class="nx">Optional[InboundSamlConfigIdpConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sp_config</span><span class="p">:</span> <span class="nx">Optional[InboundSamlConfigSpConfigArgs]</span> = None<span class="p">) -&gt;</span> InboundSamlConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -606,7 +615,7 @@ Get an existing InboundSamlConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.InboundSamlConfig.html">InboundSamlConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.InboundSamlConfigState.html">InboundSamlConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.InboundSamlConfig.html">InboundSamlConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.InboundSamlConfigState.html">InboundSamlConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -742,7 +751,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -779,7 +789,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -819,7 +830,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,7 +868,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -896,7 +909,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,7 +947,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -971,9 +986,10 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
 <a href="#state_idp_config_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigidpconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,10 +1023,11 @@ If it is not provided, the provider project is used.
 <a href="#state_sp_config_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigspconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
+and accept an authentication assertion issued by a SAML identity provider.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1054,7 +1071,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">List&lt;Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1105,7 +1123,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">[]Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1156,7 +1175,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate[]</a></span>
     </dt>
-    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1201,19 +1221,20 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
 
     <dt class="property-required"
             title="Required">
-        <span id="idpcertificates_python">
-<a href="#idpcertificates_python" style="color: inherit; text-decoration: inherit;">idp<wbr>Certificates</a>
+        <span id="idp_certificates_python">
+<a href="#idp_certificates_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="idpentityid_python">
-<a href="#idpentityid_python" style="color: inherit; text-decoration: inherit;">idp<wbr>Entity<wbr>Id</a>
+        <span id="idp_entity_id_python">
+<a href="#idp_entity_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1223,8 +1244,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
 
     <dt class="property-required"
             title="Required">
-        <span id="ssourl_python">
-<a href="#ssourl_python" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
+        <span id="sso_url_python">
+<a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1234,8 +1255,8 @@ and accept an authentication assertion issued by a SAML identity provider.  Stru
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signrequest_python">
-<a href="#signrequest_python" style="color: inherit; text-decoration: inherit;">sign<wbr>Request</a>
+        <span id="sign_request_python">
+<a href="#sign_request_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1327,8 +1348,8 @@ The x509 certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span id="x509certificate_python">
-<a href="#x509certificate_python" style="color: inherit; text-decoration: inherit;">x509Certificate</a>
+        <span id="x509_certificate_python">
+<a href="#x509_certificate_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1382,7 +1403,8 @@ The x509 certificate
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">List&lt;Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
-The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1423,7 +1445,8 @@ The IDP's certificate data to verify the signature in the SAMLResponse issued by
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">[]Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}-
-The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1464,7 +1487,8 @@ The IDP's certificate data to verify the signature in the SAMLResponse issued by
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}-
-The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,8 +1511,8 @@ The IDP's certificate data to verify the signature in the SAMLResponse issued by
 
     <dt class="property-optional"
             title="Optional">
-        <span id="callbackuri_python">
-<a href="#callbackuri_python" style="color: inherit; text-decoration: inherit;">callback<wbr>Uri</a>
+        <span id="callback_uri_python">
+<a href="#callback_uri_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1498,20 +1522,21 @@ The IDP's certificate data to verify the signature in the SAMLResponse issued by
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spcertificates_python">
-<a href="#spcertificates_python" style="color: inherit; text-decoration: inherit;">sp<wbr>Certificates</a>
+        <span id="sp_certificates_python">
+<a href="#sp_certificates_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
-The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spentityid_python">
-<a href="#spentityid_python" style="color: inherit; text-decoration: inherit;">sp<wbr>Entity<wbr>Id</a>
+        <span id="sp_entity_id_python">
+<a href="#sp_entity_id_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1603,8 +1628,8 @@ The x509 certificate
 
     <dt class="property-optional"
             title="Optional">
-        <span id="x509certificate_python">
-<a href="#x509certificate_python" style="color: inherit; text-decoration: inherit;">x509Certificate</a>
+        <span id="x509_certificate_python">
+<a href="#x509_certificate_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1631,6 +1656,6 @@ The x509 certificate
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

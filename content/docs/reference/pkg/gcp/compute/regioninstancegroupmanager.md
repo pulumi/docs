@@ -28,7 +28,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceG
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionInstanceGroupManager">RegionInstanceGroupManager</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>distribution_policy_zones=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>stateful_disks=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionInstanceGroupManager">RegionInstanceGroupManager</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[List[RegionInstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[List[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[List[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -764,7 +764,7 @@ name.
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerversion">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerversion">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -777,7 +777,7 @@ Structure is documented below.
 <a href="#auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -824,7 +824,7 @@ group. You can specify one or more values. For more information, see the [offici
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -848,7 +848,7 @@ is not provided, the provider project is used.
 <a href="#stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ not affect existing instances.
 <a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 {{% /md %}}</dd>
@@ -1131,7 +1131,8 @@ Get an existing RegionInstanceGroupManager resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>distribution_policy_zones=None<span class="p">, </span>fingerprint=None<span class="p">, </span>instance_group=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>stateful_disks=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distribution_policy_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[List[RegionInstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[List[RegionInstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[RegionInstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[List[RegionInstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> RegionInstanceGroupManager</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1139,7 +1140,7 @@ Get an existing RegionInstanceGroupManager resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionInstanceGroupManager.html">RegionInstanceGroupManager</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionInstanceGroupManagerState.html">RegionInstanceGroupManagerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionInstanceGroupManager.html">RegionInstanceGroupManager</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionInstanceGroupManagerState.html">RegionInstanceGroupManagerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1881,7 +1882,7 @@ continue trying until it times out.
 <a href="#state_auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
@@ -1966,7 +1967,7 @@ group. You can specify one or more values. For more information, see the [offici
 <a href="#state_named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagernamedport">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -2012,7 +2013,7 @@ is not provided, the provider project is used.
 <a href="#state_stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerstatefuldisk">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
 {{% /md %}}</dd>
@@ -2047,7 +2048,7 @@ not affect existing instances.
 <a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 {{% /md %}}</dd>
@@ -2058,7 +2059,7 @@ not affect existing instances.
 <a href="#state_versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerversion">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerversion">List[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -2203,8 +2204,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span id="healthcheck_python">
-<a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
+        <span id="health_check_python">
+<a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2214,8 +2215,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span id="initialdelaysec_python">
-<a href="#initialdelaysec_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
+        <span id="initial_delay_sec_python">
+<a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2487,8 +2488,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleterule_python">
-<a href="#deleterule_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+        <span id="delete_rule_python">
+<a href="#delete_rule_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2833,8 +2834,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instanceredistributiontype_python">
-<a href="#instanceredistributiontype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Redistribution<wbr>Type</a>
+        <span id="instance_redistribution_type_python">
+<a href="#instance_redistribution_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>redistribution_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2844,8 +2845,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxsurgefixed_python">
-<a href="#maxsurgefixed_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Fixed</a>
+        <span id="max_surge_fixed_python">
+<a href="#max_surge_fixed_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge_<wbr>fixed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2855,8 +2856,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxsurgepercent_python">
-<a href="#maxsurgepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Percent</a>
+        <span id="max_surge_percent_python">
+<a href="#max_surge_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2866,8 +2867,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxunavailablefixed_python">
-<a href="#maxunavailablefixed_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Fixed</a>
+        <span id="max_unavailable_fixed_python">
+<a href="#max_unavailable_fixed_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>fixed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2877,8 +2878,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxunavailablepercent_python">
-<a href="#maxunavailablepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Percent</a>
+        <span id="max_unavailable_percent_python">
+<a href="#max_unavailable_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2888,8 +2889,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minreadysec_python">
-<a href="#minreadysec_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ready<wbr>Sec</a>
+        <span id="min_ready_sec_python">
+<a href="#min_ready_sec_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ready_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3045,8 +3046,8 @@ it applies autohealing policies to new instances or recently recreated instances
 
     <dt class="property-required"
             title="Required">
-        <span id="instancetemplate_python">
-<a href="#instancetemplate_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
+        <span id="instance_template_python">
+<a href="#instance_template_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3071,7 +3072,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regioninstancegroupmanagerversiontargetsize">Dict[Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size]</a></span>
+        <span class="property-type"><a href="#regioninstancegroupmanagerversiontargetsize">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 {{% /md %}}</dd>
@@ -3236,6 +3237,6 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

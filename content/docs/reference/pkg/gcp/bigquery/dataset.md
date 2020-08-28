@@ -29,7 +29,7 @@ To get more information about Dataset, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Dataset">Dataset</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accesses=None<span class="p">, </span>dataset_id=None<span class="p">, </span>default_encryption_configuration=None<span class="p">, </span>default_partition_expiration_ms=None<span class="p">, </span>default_table_expiration_ms=None<span class="p">, </span>delete_contents_on_destroy=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Dataset">Dataset</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accesses</span><span class="p">:</span> <span class="nx">Optional[List[DatasetAccessArgs]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[DatasetDefaultEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">delete_contents_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -220,7 +220,8 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List&lt;Dataset<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -233,7 +234,8 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,7 +359,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -370,7 +373,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -494,7 +498,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">Dataset<wbr>Access[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -507,7 +512,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -629,9 +635,10 @@ If it is not provided, the provider project is used.
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access]</a></span>
+        <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,11 +647,12 @@ If it is not provided, the provider project is used.
 <a href="#default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dict[Dataset<wbr>Default<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,7 +720,7 @@ destroying the resource will fail if tables are present.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
@@ -1016,7 +1024,8 @@ Get an existing Dataset resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accesses=None<span class="p">, </span>creation_time=None<span class="p">, </span>dataset_id=None<span class="p">, </span>default_encryption_configuration=None<span class="p">, </span>default_partition_expiration_ms=None<span class="p">, </span>default_table_expiration_ms=None<span class="p">, </span>delete_contents_on_destroy=None<span class="p">, </span>description=None<span class="p">, </span>etag=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>last_modified_time=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accesses</span><span class="p">:</span> <span class="nx">Optional[List[DatasetAccessArgs]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[DatasetDefaultEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">delete_contents_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dataset</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1024,7 +1033,7 @@ Get an existing Dataset resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Dataset.html">Dataset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetState.html">DatasetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Dataset.html">Dataset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetState.html">DatasetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1138,7 +1147,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List&lt;Dataset<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1173,7 +1183,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1319,7 +1330,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,7 +1366,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1500,7 +1513,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">Dataset<wbr>Access[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1535,7 +1549,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1679,9 +1694,10 @@ If it is not provided, the provider project is used.
 <a href="#state_accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access]</a></span>
+        <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1712,11 +1728,12 @@ If it is not provided, the provider project is used.
 <a href="#state_default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dict[Dataset<wbr>Default<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
-this value, unless table creation request (or query) overrides the key.  Structure is documented below.
+this value, unless table creation request (or query) overrides the key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1795,7 +1812,7 @@ destroying the resource will fail if tables are present.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
@@ -1954,7 +1971,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2038,7 +2056,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2122,7 +2141,8 @@ fred@example.com
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2200,13 +2220,14 @@ fred@example.com
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation.  Structure is documented below.
+needs to be granted again via an update operation.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2511,6 +2532,6 @@ access to this encryption key.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

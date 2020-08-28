@@ -12,109 +12,6 @@ meta_desc: "Explore the GetImageVersions function of the composer module, includ
 
 Provides access to available Cloud Composer versions in a region for a given project.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var all = Output.Create(Gcp.Composer.GetImageVersions.InvokeAsync());
-        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
-        {
-            Region = "us-central1",
-            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
-            {
-                Software_config = 
-                {
-                    { "imageVersion", all.Apply(all => all.ImageVersions[0].ImageVersionId) },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		all, err := composer.GetImageVersions(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		_, err = composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
-			Region: pulumi.String("us-central1"),
-			Config: &composer.EnvironmentConfigArgs{
-				Software_config: pulumi.Map{
-					"imageVersion": pulumi.String(all.ImageVersions[0].ImageVersionId),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-all = gcp.composer.get_image_versions()
-test = gcp.composer.Environment("test",
-    region="us-central1",
-    config={
-        "software_config": {
-            "imageVersion": all.image_versions[0]["imageVersionId"],
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const all = gcp.composer.getImageVersions({});
-const test = new gcp.composer.Environment("test", {
-    region: "us-central1",
-    config: {
-        software_config: {
-            imageVersion: all.then(all => all.imageVersions[0].imageVersionId),
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetImageVersions {#using}
@@ -128,7 +25,7 @@ const test = new gcp.composer.Environment("test", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_image_versions(</span>project=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image_versions(</span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageVersionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -599,8 +496,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="imageversionid_python">
-<a href="#imageversionid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Id</a>
+        <span id="image_version_id_python">
+<a href="#image_version_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -610,8 +507,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedpythonversions_python">
-<a href="#supportedpythonversions_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Python<wbr>Versions</a>
+        <span id="supported_python_versions_python">
+<a href="#supported_python_versions_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>python_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -637,6 +534,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

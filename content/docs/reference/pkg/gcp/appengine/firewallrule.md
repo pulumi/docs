@@ -19,131 +19,6 @@ To get more information about FirewallRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### App Engine Firewall Rule Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
-        {
-            ProjectId = "ae-project",
-            OrgId = "123456789",
-        });
-        var app = new Gcp.AppEngine.Application("app", new Gcp.AppEngine.ApplicationArgs
-        {
-            Project = myProject.ProjectId,
-            LocationId = "us-central",
-        });
-        var rule = new Gcp.AppEngine.FirewallRule("rule", new Gcp.AppEngine.FirewallRuleArgs
-        {
-            Project = app.Project,
-            Priority = 1000,
-            Action = "ALLOW",
-            SourceRange = "*",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
-			ProjectId: pulumi.String("ae-project"),
-			OrgId:     pulumi.String("123456789"),
-		})
-		if err != nil {
-			return err
-		}
-		app, err := appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
-			Project:    myProject.ProjectId,
-			LocationId: pulumi.String("us-central"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = appengine.NewFirewallRule(ctx, "rule", &appengine.FirewallRuleArgs{
-			Project:     app.Project,
-			Priority:    pulumi.Int(1000),
-			Action:      pulumi.String("ALLOW"),
-			SourceRange: pulumi.String("*"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_project = gcp.organizations.Project("myProject",
-    project_id="ae-project",
-    org_id="123456789")
-app = gcp.appengine.Application("app",
-    project=my_project.project_id,
-    location_id="us-central")
-rule = gcp.appengine.FirewallRule("rule",
-    project=app.project,
-    priority=1000,
-    action="ALLOW",
-    source_range="*")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myProject = new gcp.organizations.Project("myProject", {
-    projectId: "ae-project",
-    orgId: "123456789",
-});
-const app = new gcp.appengine.Application("app", {
-    project: myProject.projectId,
-    locationId: "us-central",
-});
-const rule = new gcp.appengine.FirewallRule("rule", {
-    project: app.project,
-    priority: 1000,
-    action: "ALLOW",
-    sourceRange: "*",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}
@@ -155,7 +30,7 @@ const rule = new gcp.appengine.FirewallRule("rule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#FirewallRule">FirewallRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>source_range=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.FirewallRule">FirewallRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -336,6 +211,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -403,6 +279,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -470,6 +347,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -537,6 +415,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -686,7 +565,8 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>source_range=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirewallRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -694,7 +574,7 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FirewallRule.html">FirewallRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FirewallRuleState.html">FirewallRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FirewallRule.html">FirewallRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FirewallRuleState.html">FirewallRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -809,6 +689,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -876,6 +757,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -943,6 +825,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1010,6 +893,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
+Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1081,6 +965,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

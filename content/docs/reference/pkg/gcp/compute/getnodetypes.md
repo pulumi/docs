@@ -13,99 +13,6 @@ meta_desc: "Explore the GetNodeTypes function of the compute module, including e
 Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var central1b = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
-        {
-            Zone = "us-central1-b",
-        }));
-        var tmpl = new Gcp.Compute.NodeTemplate("tmpl", new Gcp.Compute.NodeTemplateArgs
-        {
-            Region = "us-central1",
-            NodeType = data.Google_compute_node_types.Types.Names[0],
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "us-central1-b"
-		_, err := compute.GetNodeTypes(ctx, &compute.GetNodeTypesArgs{
-			Zone: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewNodeTemplate(ctx, "tmpl", &compute.NodeTemplateArgs{
-			Region:   pulumi.String("us-central1"),
-			NodeType: pulumi.String(data.Google_compute_node_types.Types.Names[0]),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-central1b = gcp.compute.get_node_types(zone="us-central1-b")
-tmpl = gcp.compute.NodeTemplate("tmpl",
-    region="us-central1",
-    node_type=data["google_compute_node_types"]["types"]["names"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const central1b = gcp.compute.getNodeTypes({
-    zone: "us-central1-b",
-});
-const tmpl = new gcp.compute.NodeTemplate("tmpl", {
-    region: "us-central1",
-    nodeType: data.google_compute_node_types.types.names[0],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetNodeTypes {#using}
@@ -119,7 +26,7 @@ const tmpl = new gcp.compute.NodeTemplate("tmpl", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_node_types(</span>project=None<span class="p">, </span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_node_types(</span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodeTypesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -492,6 +399,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

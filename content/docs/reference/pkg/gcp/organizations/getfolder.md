@@ -12,88 +12,6 @@ meta_desc: "Explore the GetFolder function of the organizations module, includin
 
 Use this data source to get information about a Google Cloud Folder.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myFolder1 = gcp.organizations.getFolder({
-    folder: "folders/12345",
-    lookupOrganization: true,
-});
-const myFolder2 = gcp.organizations.getFolder({
-    folder: "folders/23456",
-});
-export const myFolder1Organization = myFolder1.then(myFolder1 => myFolder1.organization);
-export const myFolder2Parent = myFolder2.then(myFolder2 => myFolder2.parent);
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_folder1 = gcp.organizations.get_folder(folder="folders/12345",
-    lookup_organization=True)
-my_folder2 = gcp.organizations.get_folder(folder="folders/23456")
-pulumi.export("myFolder1Organization", my_folder1.organization)
-pulumi.export("myFolder2Parent", my_folder2.parent)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myFolder1 = Output.Create(Gcp.Organizations.GetFolder.InvokeAsync(new Gcp.Organizations.GetFolderArgs
-        {
-            Folder = "folders/12345",
-            LookupOrganization = true,
-        }));
-        var myFolder2 = Output.Create(Gcp.Organizations.GetFolder.InvokeAsync(new Gcp.Organizations.GetFolderArgs
-        {
-            Folder = "folders/23456",
-        }));
-        this.MyFolder1Organization = myFolder1.Apply(myFolder1 => myFolder1.Organization);
-        this.MyFolder2Parent = myFolder2.Apply(myFolder2 => myFolder2.Parent);
-    }
-
-    [Output("myFolder1Organization")]
-    public Output<string> MyFolder1Organization { get; set; }
-    [Output("myFolder2Parent")]
-    public Output<string> MyFolder2Parent { get; set; }
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := true
-		myFolder1, err := organizations.LookupFolder(ctx, &organizations.LookupFolderArgs{
-			Folder:             "folders/12345",
-			LookupOrganization: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		myFolder2, err := organizations.LookupFolder(ctx, &organizations.LookupFolderArgs{
-			Folder: "folders/23456",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("myFolder1Organization", myFolder1.Organization)
-		ctx.Export("myFolder2Parent", myFolder2.Parent)
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetFolder {#using}
@@ -107,7 +25,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_folder(</span>folder=None<span class="p">, </span>lookup_organization=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_folder(</span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lookup_organization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFolderResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -297,6 +215,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="folderid_csharp">
+<a href="#folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -393,6 +321,16 @@ The following output properties are available:
             title="">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="folderid_go">
+<a href="#folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -505,6 +443,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="folderid_nodejs">
+<a href="#folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -609,6 +557,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="folder_id_python">
+<a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -690,6 +648,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

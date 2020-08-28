@@ -20,144 +20,6 @@ To get more information about Index, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Firestore Index Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var my_index = new Gcp.Firestore.Index("my-index", new Gcp.Firestore.IndexArgs
-        {
-            Collection = "chatrooms",
-            Fields = 
-            {
-                new Gcp.Firestore.Inputs.IndexFieldArgs
-                {
-                    FieldPath = "name",
-                    Order = "ASCENDING",
-                },
-                new Gcp.Firestore.Inputs.IndexFieldArgs
-                {
-                    FieldPath = "description",
-                    Order = "DESCENDING",
-                },
-                new Gcp.Firestore.Inputs.IndexFieldArgs
-                {
-                    FieldPath = "__name__",
-                    Order = "DESCENDING",
-                },
-            },
-            Project = "my-project-name",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = firestore.NewIndex(ctx, "my-index", &firestore.IndexArgs{
-			Collection: pulumi.String("chatrooms"),
-			Fields: firestore.IndexFieldArray{
-				&firestore.IndexFieldArgs{
-					FieldPath: pulumi.String("name"),
-					Order:     pulumi.String("ASCENDING"),
-				},
-				&firestore.IndexFieldArgs{
-					FieldPath: pulumi.String("description"),
-					Order:     pulumi.String("DESCENDING"),
-				},
-				&firestore.IndexFieldArgs{
-					FieldPath: pulumi.String("__name__"),
-					Order:     pulumi.String("DESCENDING"),
-				},
-			},
-			Project: pulumi.String("my-project-name"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_index = gcp.firestore.Index("my-index",
-    collection="chatrooms",
-    fields=[
-        {
-            "fieldPath": "name",
-            "order": "ASCENDING",
-        },
-        {
-            "fieldPath": "description",
-            "order": "DESCENDING",
-        },
-        {
-            "fieldPath": "__name__",
-            "order": "DESCENDING",
-        },
-    ],
-    project="my-project-name")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_index = new gcp.firestore.Index("my-index", {
-    collection: "chatrooms",
-    fields: [
-        {
-            fieldPath: "name",
-            order: "ASCENDING",
-        },
-        {
-            fieldPath: "description",
-            order: "DESCENDING",
-        },
-        {
-            fieldPath: "__name__",
-            order: "DESCENDING",
-        },
-    ],
-    project: "my-project-name",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Index Resource {#create}
@@ -169,7 +31,7 @@ const my_index = new gcp.firestore.Index("my-index", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/firestore/#Index">Index</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collection=None<span class="p">, </span>database=None<span class="p">, </span>fields=None<span class="p">, </span>project=None<span class="p">, </span>query_scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/firestore/#pulumi_gcp.firestore.Index">Index</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[IndexFieldArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -365,7 +227,8 @@ the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,6 +263,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -433,7 +298,8 @@ the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,6 +334,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -501,7 +369,8 @@ the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -536,6 +405,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -562,14 +433,15 @@ If it is not provided, the provider project is used.
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">List[Index<wbr>Field]</a></span>
+        <span class="property-type"><a href="#indexfield">List[Index<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. The last field entry is always for
 the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -604,6 +476,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -752,7 +626,8 @@ Get an existing Index resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>collection=None<span class="p">, </span>database=None<span class="p">, </span>fields=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>query_scope=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[IndexFieldArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Index</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -760,7 +635,7 @@ Get an existing Index resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.Index.html">Index</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.IndexState.html">IndexState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.Index.html">Index</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.IndexState.html">IndexState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -901,7 +776,8 @@ the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,6 +813,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -981,7 +859,8 @@ the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1017,6 +896,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1061,7 +942,8 @@ the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1097,6 +979,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1134,14 +1018,15 @@ If it is not provided, the provider project is used.
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">List[Index<wbr>Field]</a></span>
+        <span class="property-type"><a href="#indexfield">List[Index<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. The last field entry is always for
 the field path `__name__`. If, on creation, `__name__` was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
-ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
+ordered `"ASCENDING"` (unless explicitly specified otherwise).
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1177,6 +1062,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run.
+Default value is `COLLECTION`.
+Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1222,6 +1109,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
+Possible values are `CONTAINS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,6 +1133,7 @@ be specified.
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
+Possible values are `ASCENDING` and `DESCENDING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1264,6 +1153,7 @@ Only one of `order` and `arrayConfig` can be specified.
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
+Possible values are `CONTAINS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1287,6 +1177,7 @@ be specified.
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
+Possible values are `ASCENDING` and `DESCENDING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1306,6 +1197,7 @@ Only one of `order` and `arrayConfig` can be specified.
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
+Possible values are `CONTAINS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1329,6 +1221,7 @@ be specified.
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
+Possible values are `ASCENDING` and `DESCENDING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1340,20 +1233,21 @@ Only one of `order` and `arrayConfig` can be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="arrayconfig_python">
-<a href="#arrayconfig_python" style="color: inherit; text-decoration: inherit;">array<wbr>Config</a>
+        <span id="array_config_python">
+<a href="#array_config_python" style="color: inherit; text-decoration: inherit;">array_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
+Possible values are `CONTAINS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fieldpath_python">
-<a href="#fieldpath_python" style="color: inherit; text-decoration: inherit;">field<wbr>Path</a>
+        <span id="field_path_python">
+<a href="#field_path_python" style="color: inherit; text-decoration: inherit;">field_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1371,6 +1265,7 @@ be specified.
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
+Possible values are `ASCENDING` and `DESCENDING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1391,6 +1286,6 @@ Only one of `order` and `arrayConfig` can be specified.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

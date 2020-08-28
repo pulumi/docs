@@ -31,7 +31,7 @@ To get more information about RegionPerInstanceConfig, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionPerInstanceConfig">RegionPerInstanceConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>minimal_action=None<span class="p">, </span>most_disruptive_allowed_action=None<span class="p">, </span>name=None<span class="p">, </span>preserved_state=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>region_instance_group_manager=None<span class="p">, </span>remove_instance_state_on_destroy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionPerInstanceConfig">RegionPerInstanceConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">minimal_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">most_disruptive_allowed_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preserved_state</span><span class="p">:</span> <span class="nx">Optional[RegionPerInstanceConfigPreservedStateArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_instance_group_manager</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remove_instance_state_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,7 +276,8 @@ Default is `REPLACE`. Possible values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -384,7 +385,8 @@ Default is `REPLACE`. Possible values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,7 +494,8 @@ Default is `REPLACE`. Possible values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,9 +601,10 @@ Default is `REPLACE`. Possible values are:
 <a href="#preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Dict[Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State]</a></span>
+        <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -726,7 +730,8 @@ Get an existing RegionPerInstanceConfig resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>minimal_action=None<span class="p">, </span>most_disruptive_allowed_action=None<span class="p">, </span>name=None<span class="p">, </span>preserved_state=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>region_instance_group_manager=None<span class="p">, </span>remove_instance_state_on_destroy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">minimal_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">most_disruptive_allowed_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preserved_state</span><span class="p">:</span> <span class="nx">Optional[RegionPerInstanceConfigPreservedStateArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_instance_group_manager</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remove_instance_state_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> RegionPerInstanceConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -734,7 +739,7 @@ Get an existing RegionPerInstanceConfig resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionPerInstanceConfig.html">RegionPerInstanceConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionPerInstanceConfigState.html">RegionPerInstanceConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionPerInstanceConfig.html">RegionPerInstanceConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionPerInstanceConfigState.html">RegionPerInstanceConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -891,7 +896,8 @@ Default is `REPLACE`. Possible values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,7 +1005,8 @@ Default is `REPLACE`. Possible values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1107,7 +1114,8 @@ Default is `REPLACE`. Possible values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1213,9 +1221,10 @@ Default is `REPLACE`. Possible values are:
 <a href="#state_preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Dict[Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State]</a></span>
+        <span class="property-type"><a href="#regionperinstanceconfigpreservedstate">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The preserved state for this instance.  Structure is documented below.
+    <dd>{{% md %}}The preserved state for this instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1306,7 +1315,8 @@ State will be removed on the next instance recreation or update.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">List&lt;Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Stateful disks for the instance.  Structure is documented below.
+    <dd>{{% md %}}Stateful disks for the instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1335,7 +1345,8 @@ State will be removed on the next instance recreation or update.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">[]Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}Stateful disks for the instance.  Structure is documented below.
+    <dd>{{% md %}}Stateful disks for the instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1364,7 +1375,8 @@ State will be removed on the next instance recreation or update.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}Stateful disks for the instance.  Structure is documented below.
+    <dd>{{% md %}}Stateful disks for the instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1391,9 +1403,10 @@ State will be removed on the next instance recreation or update.
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">List[Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">List[Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Stateful disks for the instance.  Structure is documented below.
+    <dd>{{% md %}}Stateful disks for the instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1402,7 +1415,7 @@ State will be removed on the next instance recreation or update.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Preserved metadata defined for this instance. This is a list of key->value pairs.
 {{% /md %}}</dd>
@@ -1468,6 +1481,8 @@ The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 `NEVER` detatch the disk when the VM is deleted, but not delete the disk.
 `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
 deleted from the instance group.
+Default value is `NEVER`.
+Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1479,6 +1494,8 @@ deleted from the instance group.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1524,6 +1541,8 @@ The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 `NEVER` detatch the disk when the VM is deleted, but not delete the disk.
 `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
 deleted from the instance group.
+Default value is `NEVER`.
+Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1535,6 +1554,8 @@ deleted from the instance group.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1580,6 +1601,8 @@ The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 `NEVER` detatch the disk when the VM is deleted, but not delete the disk.
 `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
 deleted from the instance group.
+Default value is `NEVER`.
+Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,6 +1614,8 @@ deleted from the instance group.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1625,8 +1650,8 @@ deleted from the instance group.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleterule_python">
-<a href="#deleterule_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
+        <span id="delete_rule_python">
+<a href="#delete_rule_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1636,6 +1661,8 @@ The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 `NEVER` detatch the disk when the VM is deleted, but not delete the disk.
 `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently
 deleted from the instance group.
+Default value is `NEVER`.
+Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1647,6 +1674,8 @@ deleted from the instance group.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
+Default value is `READ_WRITE`.
+Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1667,6 +1696,6 @@ deleted from the instance group.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

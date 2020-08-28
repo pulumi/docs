@@ -15,85 +15,6 @@ See [the official documentation](https://cloud.google.com/storage/docs/key-terms
 and
 [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var picture = Output.Create(Gcp.Storage.GetBucketObject.InvokeAsync(new Gcp.Storage.GetBucketObjectArgs
-        {
-            Bucket = "image-store",
-            Name = "folder/butterfly01.jpg",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "image-store"
-		opt1 := "folder/butterfly01.jpg"
-		_, err := storage.LookupBucketObject(ctx, &storage.LookupBucketObjectArgs{
-			Bucket: &opt0,
-			Name:   &opt1,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-picture = gcp.storage.get_bucket_object(bucket="image-store",
-    name="folder/butterfly01.jpg")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const picture = pulumi.output(gcp.storage.getBucketObject({
-    bucket: "image-store",
-    name: "folder/butterfly01.jpg",
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetBucketObject {#using}
@@ -107,7 +28,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bucket_object(</span>bucket=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bucket_object(</span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketObjectResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -374,6 +295,17 @@ directive to specify caching behavior of object data. If omitted and object is a
 
     <dt class="property-"
             title="">
+        <span id="medialink_csharp">
+<a href="#medialink_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) A url reference to download this object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -422,7 +354,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`. If not provided, this defaults to the bucket's default
+Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd>
 
@@ -564,6 +496,17 @@ directive to specify caching behavior of object data. If omitted and object is a
 
     <dt class="property-"
             title="">
+        <span id="medialink_go">
+<a href="#medialink_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) A url reference to download this object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -612,7 +555,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`. If not provided, this defaults to the bucket's default
+Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd>
 
@@ -754,6 +697,17 @@ directive to specify caching behavior of object data. If omitted and object is a
 
     <dt class="property-"
             title="">
+        <span id="medialink_nodejs">
+<a href="#medialink_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) A url reference to download this object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
@@ -802,7 +756,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`. If not provided, this defaults to the bucket's default
+Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd>
 
@@ -944,11 +898,22 @@ directive to specify caching behavior of object data. If omitted and object is a
 
     <dt class="property-"
             title="">
+        <span id="media_link_python">
+<a href="#media_link_python" style="color: inherit; text-decoration: inherit;">media_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) A url reference to download this object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -992,7 +957,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`. If not provided, this defaults to the bucket's default
+Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd>
 
@@ -1034,6 +999,6 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

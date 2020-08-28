@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gcp/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_context_manager_custom_endpoint=None<span class="p">, </span>access_token=None<span class="p">, </span>app_engine_custom_endpoint=None<span class="p">, </span>artifact_registry_custom_endpoint=None<span class="p">, </span>batching=None<span class="p">, </span>big_query_custom_endpoint=None<span class="p">, </span>bigquery_connection_custom_endpoint=None<span class="p">, </span>bigquery_data_transfer_custom_endpoint=None<span class="p">, </span>bigquery_reservation_custom_endpoint=None<span class="p">, </span>bigtable_custom_endpoint=None<span class="p">, </span>billing_custom_endpoint=None<span class="p">, </span>binary_authorization_custom_endpoint=None<span class="p">, </span>cloud_billing_custom_endpoint=None<span class="p">, </span>cloud_build_custom_endpoint=None<span class="p">, </span>cloud_functions_custom_endpoint=None<span class="p">, </span>cloud_iot_custom_endpoint=None<span class="p">, </span>cloud_run_custom_endpoint=None<span class="p">, </span>cloud_scheduler_custom_endpoint=None<span class="p">, </span>cloud_tasks_custom_endpoint=None<span class="p">, </span>composer_custom_endpoint=None<span class="p">, </span>compute_beta_custom_endpoint=None<span class="p">, </span>compute_custom_endpoint=None<span class="p">, </span>container_analysis_custom_endpoint=None<span class="p">, </span>container_beta_custom_endpoint=None<span class="p">, </span>container_custom_endpoint=None<span class="p">, </span>credentials=None<span class="p">, </span>data_catalog_custom_endpoint=None<span class="p">, </span>data_fusion_custom_endpoint=None<span class="p">, </span>dataflow_custom_endpoint=None<span class="p">, </span>dataproc_beta_custom_endpoint=None<span class="p">, </span>dataproc_custom_endpoint=None<span class="p">, </span>datastore_custom_endpoint=None<span class="p">, </span>deployment_manager_custom_endpoint=None<span class="p">, </span>dialogflow_custom_endpoint=None<span class="p">, </span>dns_beta_custom_endpoint=None<span class="p">, </span>dns_custom_endpoint=None<span class="p">, </span>filestore_custom_endpoint=None<span class="p">, </span>firebase_custom_endpoint=None<span class="p">, </span>firestore_custom_endpoint=None<span class="p">, </span>game_services_custom_endpoint=None<span class="p">, </span>healthcare_custom_endpoint=None<span class="p">, </span>iam_credentials_custom_endpoint=None<span class="p">, </span>iam_custom_endpoint=None<span class="p">, </span>iap_custom_endpoint=None<span class="p">, </span>identity_platform_custom_endpoint=None<span class="p">, </span>kms_custom_endpoint=None<span class="p">, </span>logging_custom_endpoint=None<span class="p">, </span>memcache_custom_endpoint=None<span class="p">, </span>ml_engine_custom_endpoint=None<span class="p">, </span>monitoring_custom_endpoint=None<span class="p">, </span>network_management_custom_endpoint=None<span class="p">, </span>notebooks_custom_endpoint=None<span class="p">, </span>os_login_custom_endpoint=None<span class="p">, </span>project=None<span class="p">, </span>pubsub_custom_endpoint=None<span class="p">, </span>redis_custom_endpoint=None<span class="p">, </span>region=None<span class="p">, </span>request_timeout=None<span class="p">, </span>resource_manager_custom_endpoint=None<span class="p">, </span>resource_manager_v2beta1_custom_endpoint=None<span class="p">, </span>runtime_config_custom_endpoint=None<span class="p">, </span>runtimeconfig_custom_endpoint=None<span class="p">, </span>scopes=None<span class="p">, </span>secret_manager_custom_endpoint=None<span class="p">, </span>security_center_custom_endpoint=None<span class="p">, </span>security_scanner_custom_endpoint=None<span class="p">, </span>service_directory_custom_endpoint=None<span class="p">, </span>service_management_custom_endpoint=None<span class="p">, </span>service_networking_custom_endpoint=None<span class="p">, </span>service_usage_custom_endpoint=None<span class="p">, </span>source_repo_custom_endpoint=None<span class="p">, </span>spanner_custom_endpoint=None<span class="p">, </span>sql_custom_endpoint=None<span class="p">, </span>storage_custom_endpoint=None<span class="p">, </span>storage_transfer_custom_endpoint=None<span class="p">, </span>tpu_custom_endpoint=None<span class="p">, </span>user_project_override=None<span class="p">, </span>vpc_access_custom_endpoint=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/#pulumi_gcp.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_approval_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_context_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">active_directory_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_engine_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_registry_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batching</span><span class="p">:</span> <span class="nx">Optional[ProviderBatchingArgs]</span> = None<span class="p">, </span><span class="nx">big_query_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigquery_connection_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigquery_data_transfer_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigquery_reservation_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigtable_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">binary_authorization_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_asset_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_billing_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_build_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_functions_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_identity_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_iot_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_run_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_scheduler_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_tasks_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">composer_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_beta_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_analysis_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_beta_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_catalog_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_fusion_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataflow_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataproc_beta_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataproc_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialogflow_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_beta_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filestore_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firebase_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firestore_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_services_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthcare_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_credentials_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity_platform_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memcache_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ml_engine_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_management_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notebooks_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_config_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_login_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pubsub_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_manager_v2beta1_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_config_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtimeconfig_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">secret_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_center_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_scanner_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_directory_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_management_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_networking_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_usage_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_repo_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spanner_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_transfer_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_project_override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_access_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,6 +200,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accessapprovalcustomendpoint_csharp">
+<a href="#accessapprovalcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Approval<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="accesscontextmanagercustomendpoint_csharp">
 <a href="#accesscontextmanagercustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Context<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -212,6 +222,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorycustomendpoint_csharp">
+<a href="#activedirectorycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -320,6 +340,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cloudassetcustomendpoint_csharp">
+<a href="#cloudassetcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Asset<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cloudbillingcustomendpoint_csharp">
 <a href="#cloudbillingcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Billing<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -342,6 +372,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudfunctionscustomendpoint_csharp">
 <a href="#cloudfunctionscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Functions<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudidentitycustomendpoint_csharp">
+<a href="#cloudidentitycustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Identity<wbr>Custom<wbr>Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -720,6 +760,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="osconfigcustomendpoint_csharp">
+<a href="#osconfigcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Config<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="oslogincustomendpoint_csharp">
 <a href="#oslogincustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Login<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -997,6 +1047,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accessapprovalcustomendpoint_go">
+<a href="#accessapprovalcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Approval<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="accesscontextmanagercustomendpoint_go">
 <a href="#accesscontextmanagercustomendpoint_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Context<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -1009,6 +1069,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorycustomendpoint_go">
+<a href="#activedirectorycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1117,6 +1187,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cloudassetcustomendpoint_go">
+<a href="#cloudassetcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Asset<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cloudbillingcustomendpoint_go">
 <a href="#cloudbillingcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Billing<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -1139,6 +1219,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudfunctionscustomendpoint_go">
 <a href="#cloudfunctionscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Functions<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudidentitycustomendpoint_go">
+<a href="#cloudidentitycustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Identity<wbr>Custom<wbr>Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1517,6 +1607,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="osconfigcustomendpoint_go">
+<a href="#osconfigcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Config<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="oslogincustomendpoint_go">
 <a href="#oslogincustomendpoint_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Login<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -1794,6 +1894,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accessapprovalcustomendpoint_nodejs">
+<a href="#accessapprovalcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Approval<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="accesscontextmanagercustomendpoint_nodejs">
 <a href="#accesscontextmanagercustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Context<wbr>Manager<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -1806,6 +1916,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorycustomendpoint_nodejs">
+<a href="#activedirectorycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Custom<wbr>Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1914,6 +2034,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cloudassetcustomendpoint_nodejs">
+<a href="#cloudassetcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Asset<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cloudbillingcustomendpoint_nodejs">
 <a href="#cloudbillingcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Billing<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -1936,6 +2066,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudfunctionscustomendpoint_nodejs">
 <a href="#cloudfunctionscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Functions<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudidentitycustomendpoint_nodejs">
+<a href="#cloudidentitycustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Identity<wbr>Custom<wbr>Endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2314,6 +2454,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="osconfigcustomendpoint_nodejs">
+<a href="#osconfigcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Config<wbr>Custom<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="oslogincustomendpoint_nodejs">
 <a href="#oslogincustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Login<wbr>Custom<wbr>Endpoint</a>
 </span> 
@@ -2591,6 +2741,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="access_approval_custom_endpoint_python">
+<a href="#access_approval_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>approval_<wbr>custom_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="access_context_manager_custom_endpoint_python">
 <a href="#access_context_manager_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>context_<wbr>manager_<wbr>custom_<wbr>endpoint</a>
 </span> 
@@ -2603,6 +2763,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_directory_custom_endpoint_python">
+<a href="#active_directory_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>custom_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2635,7 +2805,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#batching_python" style="color: inherit; text-decoration: inherit;">batching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerbatching">Dict[Provider<wbr>Batching]</a></span>
+        <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2711,6 +2881,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cloud_asset_custom_endpoint_python">
+<a href="#cloud_asset_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>asset_<wbr>custom_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cloud_billing_custom_endpoint_python">
 <a href="#cloud_billing_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>billing_<wbr>custom_<wbr>endpoint</a>
 </span> 
@@ -2733,6 +2913,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloud_functions_custom_endpoint_python">
 <a href="#cloud_functions_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>functions_<wbr>custom_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloud_identity_custom_endpoint_python">
+<a href="#cloud_identity_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>identity_<wbr>custom_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3103,6 +3293,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="notebooks_custom_endpoint_python">
 <a href="#notebooks_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">notebooks_<wbr>custom_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_config_custom_endpoint_python">
+<a href="#os_config_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">os_<wbr>config_<wbr>custom_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3575,8 +3775,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablebatching_python">
-<a href="#enablebatching_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Batching</a>
+        <span id="enable_batching_python">
+<a href="#enable_batching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>batching</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3585,8 +3785,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendafter_python">
-<a href="#sendafter_python" style="color: inherit; text-decoration: inherit;">send<wbr>After</a>
+        <span id="send_after_python">
+<a href="#send_after_python" style="color: inherit; text-decoration: inherit;">send_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3611,6 +3811,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -20,243 +20,6 @@ Three different resources help you manage your IAM policy for Runtime Configurat
 
 > **Note:** `gcp.runtimeconfig.ConfigIamBinding` resources **can be** used in conjunction with `gcp.runtimeconfig.ConfigIamMember` resources **only if** they do not grant privilege to the same role.
 
-## google\_runtimeconfig\_config\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/viewer",
-        members: ["user:jane@example.com"],
-    }],
-});
-const policy = new gcp.runtimeconfig.ConfigIamPolicy("policy", {
-    project: google_runtimeconfig_config.config.project,
-    config: google_runtimeconfig_config.config.name,
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-admin = gcp.organizations.get_iam_policy(binding=[{
-    "role": "roles/viewer",
-    "members": ["user:jane@example.com"],
-}])
-policy = gcp.runtimeconfig.ConfigIamPolicy("policy",
-    project=google_runtimeconfig_config["config"]["project"],
-    config=google_runtimeconfig_config["config"]["name"],
-    policy_data=admin.policy_data)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
-        {
-            Binding = 
-            {
-                
-                {
-                    { "role", "roles/viewer" },
-                    { "members", 
-                    {
-                        "user:jane@example.com",
-                    } },
-                },
-            },
-        }));
-        var policy = new Gcp.RuntimeConfig.ConfigIamPolicy("policy", new Gcp.RuntimeConfig.ConfigIamPolicyArgs
-        {
-            Project = google_runtimeconfig_config.Config.Project,
-            Config = google_runtimeconfig_config.Config.Name,
-            PolicyData = admin.Apply(admin => admin.PolicyData),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/runtimeconfig"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			Binding: []map[string]interface{}{
-				map[string]interface{}{
-					"role": "roles/viewer",
-					"members": []string{
-						"user:jane@example.com",
-					},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = runtimeconfig.NewConfigIamPolicy(ctx, "policy", &runtimeconfig.ConfigIamPolicyArgs{
-			Project:    pulumi.String(google_runtimeconfig_config.Config.Project),
-			Config:     pulumi.String(google_runtimeconfig_config.Config.Name),
-			PolicyData: pulumi.String(admin.PolicyData),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_runtimeconfig\_config\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const binding = new gcp.runtimeconfig.ConfigIamBinding("binding", {
-    project: google_runtimeconfig_config.config.project,
-    config: google_runtimeconfig_config.config.name,
-    role: "roles/viewer",
-    members: ["user:jane@example.com"],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-binding = gcp.runtimeconfig.ConfigIamBinding("binding",
-    project=google_runtimeconfig_config["config"]["project"],
-    config=google_runtimeconfig_config["config"]["name"],
-    role="roles/viewer",
-    members=["user:jane@example.com"])
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var binding = new Gcp.RuntimeConfig.ConfigIamBinding("binding", new Gcp.RuntimeConfig.ConfigIamBindingArgs
-        {
-            Project = google_runtimeconfig_config.Config.Project,
-            Config = google_runtimeconfig_config.Config.Name,
-            Role = "roles/viewer",
-            Members = 
-            {
-                "user:jane@example.com",
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/runtimeconfig"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = runtimeconfig.NewConfigIamBinding(ctx, "binding", &runtimeconfig.ConfigIamBindingArgs{
-			Project: pulumi.String(google_runtimeconfig_config.Config.Project),
-			Config:  pulumi.String(google_runtimeconfig_config.Config.Name),
-			Role:    pulumi.String("roles/viewer"),
-			Members: pulumi.StringArray{
-				pulumi.String("user:jane@example.com"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_runtimeconfig\_config\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const member = new gcp.runtimeconfig.ConfigIamMember("member", {
-    project: google_runtimeconfig_config.config.project,
-    config: google_runtimeconfig_config.config.name,
-    role: "roles/viewer",
-    member: "user:jane@example.com",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-member = gcp.runtimeconfig.ConfigIamMember("member",
-    project=google_runtimeconfig_config["config"]["project"],
-    config=google_runtimeconfig_config["config"]["name"],
-    role="roles/viewer",
-    member="user:jane@example.com")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var member = new Gcp.RuntimeConfig.ConfigIamMember("member", new Gcp.RuntimeConfig.ConfigIamMemberArgs
-        {
-            Project = google_runtimeconfig_config.Config.Project,
-            Config = google_runtimeconfig_config.Config.Name,
-            Role = "roles/viewer",
-            Member = "user:jane@example.com",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/runtimeconfig"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = runtimeconfig.NewConfigIamMember(ctx, "member", &runtimeconfig.ConfigIamMemberArgs{
-			Project: pulumi.String(google_runtimeconfig_config.Config.Project),
-			Config:  pulumi.String(google_runtimeconfig_config.Config.Name),
-			Role:    pulumi.String("roles/viewer"),
-			Member:  pulumi.String("user:jane@example.com"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Create a ConfigIamBinding Resource {#create}
@@ -268,7 +31,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/runtimeconfig/#ConfigIamBinding">ConfigIamBinding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>config=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/runtimeconfig/#pulumi_gcp.runtimeconfig.ConfigIamBinding">ConfigIamBinding</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ConfigIamBindingConditionArgs]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -669,7 +432,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configiambindingcondition">Dict[Config<wbr>Iam<wbr>Binding<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#configiambindingcondition">Config<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -827,7 +590,8 @@ Get an existing ConfigIamBinding resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition=None<span class="p">, </span>config=None<span class="p">, </span>etag=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ConfigIamBindingConditionArgs]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ConfigIamBinding</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -835,7 +599,7 @@ Get an existing ConfigIamBinding resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.RuntimeConfig.ConfigIamBinding.html">ConfigIamBinding</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.RuntimeConfig.ConfigIamBindingState.html">ConfigIamBindingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.RuntimeConfig.ConfigIamBinding.html">ConfigIamBinding</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.RuntimeConfig.ConfigIamBindingState.html">ConfigIamBindingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1169,7 +933,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configiambindingcondition">Dict[Config<wbr>Iam<wbr>Binding<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#configiambindingcondition">Config<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1422,6 +1186,6 @@ If it is not provided, the project will be parsed from the identifier of the par
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

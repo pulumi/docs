@@ -23,105 +23,6 @@ To get more information about BackendService, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Backend Service Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
-        {
-            RequestPath = "/",
-            CheckIntervalSec = 1,
-            TimeoutSec = 1,
-        });
-        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
-        {
-            HealthChecks = 
-            {
-                defaultHttpHealthCheck.Id,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
-			RequestPath:      pulumi.String("/"),
-			CheckIntervalSec: pulumi.Int(1),
-			TimeoutSec:       pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
-			HealthChecks: pulumi.String(pulumi.String{
-				defaultHttpHealthCheck.ID(),
-			}),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
-    request_path="/",
-    check_interval_sec=1,
-    timeout_sec=1)
-default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
-    requestPath: "/",
-    checkIntervalSec: 1,
-    timeoutSec: 1,
-});
-const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a BackendService Resource {#create}
@@ -129,19 +30,19 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendService">BackendService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendServiceArgs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendService">BackendService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendServiceArgs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#BackendService">BackendService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>cdn_policy=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>custom_request_headers=None<span class="p">, </span>description=None<span class="p">, </span>enable_cdn=None<span class="p">, </span>health_checks=None<span class="p">, </span>iap=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>security_policy=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.BackendService">BackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendService">NewBackendService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceArgs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendService">BackendService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendService">NewBackendService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceArgs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendService">BackendService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendService.html">BackendService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendServiceArgs.html">BackendServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendService.html">BackendService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendServiceArgs.html">BackendServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +60,7 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
     </dd>
   
     <dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#BackendServiceArgs">BackendServiceArgs</a></span>
@@ -228,7 +129,7 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
     </dd>
   
     <dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceArgs">BackendServiceArgs</a></span>
@@ -267,7 +168,7 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
     </dd>
   
     <dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendServiceArgs.html">BackendServiceArgs</a></span>
@@ -305,20 +206,6 @@ The BackendService resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="healthchecks_csharp">
-<a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
-for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
-For internal load balancing, a URL to a HealthCheck resource must be specified instead.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="affinitycookiettlsec_csharp">
@@ -342,7 +229,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicebackend">List&lt;Backend<wbr>Service<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,7 +241,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -365,7 +254,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -395,7 +285,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,13 +326,29 @@ Provide this property when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="healthchecks_csharp">
+<a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+for health checking this BackendService. Currently at most one health
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
+For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="iap_csharp">
 <a href="#iap_csharp" style="color: inherit; text-decoration: inherit;">Iap</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -455,6 +362,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,6 +396,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,7 +408,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,7 +433,8 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -561,6 +473,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,6 +497,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -604,20 +518,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthchecks_go">
-<a href="#healthchecks_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
-for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
-For internal load balancing, a URL to a HealthCheck resource must be specified instead.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -642,7 +542,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicebackend">[]Backend<wbr>Service<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -653,7 +554,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -665,7 +567,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +598,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,13 +639,29 @@ Provide this property when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="healthchecks_go">
+<a href="#healthchecks_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+for health checking this BackendService. Currently at most one health
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
+For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="iap_go">
 <a href="#iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -755,6 +675,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,6 +709,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -798,7 +721,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,7 +746,8 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,6 +786,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -884,6 +810,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,20 +831,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthchecks_nodejs">
-<a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
-for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
-For internal load balancing, a URL to a HealthCheck resource must be specified instead.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -942,7 +855,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicebackend">Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,7 +867,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,7 +880,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -995,7 +911,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1035,13 +952,29 @@ Provide this property when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="healthchecks_nodejs">
+<a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+for health checking this BackendService. Currently at most one health
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
+For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="iap_nodejs">
 <a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1055,6 +988,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,6 +1022,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1098,7 +1034,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1122,7 +1059,8 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1161,6 +1099,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1184,6 +1123,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1204,20 +1144,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="health_checks_python">
-<a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
-for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
-For internal load balancing, a URL to a HealthCheck resource must be specified instead.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1240,9 +1166,10 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">List[Backend<wbr>Service<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#backendservicebackend">List[Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1251,9 +1178,10 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Dict[Backend<wbr>Service<wbr>Cdn<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1262,10 +1190,11 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">Dict[Backend<wbr>Service<wbr>Circuit<wbr>Breakers]</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1286,7 +1215,7 @@ connections, but still work to finish started).
 <a href="#consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -1295,7 +1224,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1335,13 +1265,29 @@ Provide this property when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="health_checks_python">
+<a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+for health checking this BackendService. Currently at most one health
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
+For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="iap_python">
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Dict[Backend<wbr>Service<wbr>Iap]</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,6 +1301,8 @@ Provide this property when you create the resource.
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,6 +1335,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1395,10 +1344,11 @@ INTERNAL_SELF_MANAGED.
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Dict[Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,11 +1368,12 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
 <a href="#outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">Dict[Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1461,6 +1412,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1484,6 +1436,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1728,7 +1681,8 @@ Get an existing BackendService resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>cdn_policy=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>custom_request_headers=None<span class="p">, </span>description=None<span class="p">, </span>enable_cdn=None<span class="p">, </span>fingerprint=None<span class="p">, </span>health_checks=None<span class="p">, </span>iap=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>security_policy=None<span class="p">, </span>self_link=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> BackendService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1736,7 +1690,7 @@ Get an existing BackendService resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendService.html">BackendService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendServiceState.html">BackendServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendService.html">BackendService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.BackendServiceState.html">BackendServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1865,7 +1819,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicebackend">List&lt;Backend<wbr>Service<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1876,7 +1831,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1888,7 +1844,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1918,7 +1875,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1988,7 +1946,8 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
 For internal load balancing, a URL to a HealthCheck resource must be specified instead.
 {{% /md %}}</dd>
 
@@ -2000,7 +1959,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2014,6 +1974,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2046,6 +2008,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2057,7 +2020,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2081,7 +2045,8 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2120,6 +2085,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2154,6 +2120,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2198,7 +2165,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicebackend">[]Backend<wbr>Service<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2209,7 +2177,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2221,7 +2190,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2251,7 +2221,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2321,7 +2292,8 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
 For internal load balancing, a URL to a HealthCheck resource must be specified instead.
 {{% /md %}}</dd>
 
@@ -2333,7 +2305,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2347,6 +2320,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2379,6 +2354,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2390,7 +2366,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2414,7 +2391,8 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2453,6 +2431,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2487,6 +2466,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2531,7 +2511,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicebackend">Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2542,7 +2523,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2554,7 +2536,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2584,7 +2567,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2654,7 +2638,8 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
 For internal load balancing, a URL to a HealthCheck resource must be specified instead.
 {{% /md %}}</dd>
 
@@ -2666,7 +2651,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2680,6 +2666,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2712,6 +2700,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2723,7 +2712,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2747,7 +2737,8 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2786,6 +2777,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2820,6 +2812,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2862,9 +2855,10 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">List[Backend<wbr>Service<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#backendservicebackend">List[Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The set of backends that serve this BackendService.  Structure is documented below.
+    <dd>{{% md %}}The set of backends that serve this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2873,9 +2867,10 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Dict[Backend<wbr>Service<wbr>Cdn<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud CDN configuration for this BackendService.  Structure is documented below.
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2884,10 +2879,11 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">Dict[Backend<wbr>Service<wbr>Circuit<wbr>Breakers]</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2908,7 +2904,7 @@ connections, but still work to finish started).
 <a href="#state_consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -2917,7 +2913,8 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH.  Structure is documented below.
+set to MAGLEV or RING_HASH.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2987,7 +2984,8 @@ Provide this property when you create the resource.
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
-check can be specified, and a health check is required.
+check can be specified.
+A health check must be specified unless the backend service uses an internet NEG as a backend.
 For internal load balancing, a URL to a HealthCheck resource must be specified instead.
 {{% /md %}}</dd>
 
@@ -2997,9 +2995,10 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#state_iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Dict[Backend<wbr>Service<wbr>Iap]</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy  Structure is documented below.
+    <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3013,6 +3012,8 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3045,6 +3046,7 @@ build times and host selection times. For more information about
 Maglev, refer to https://ai.google/research/pubs/pub44824
 This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
+Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3053,10 +3055,11 @@ INTERNAL_SELF_MANAGED.
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Dict[Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
+If logging is enabled, logs will be exported to Stackdriver.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3076,11 +3079,12 @@ If logging is enabled, logs will be exported to Stackdriver.  Structure is docum
 <a href="#state_outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">Dict[Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.  Structure is documented below.
+to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3119,6 +3123,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
+Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, and `SSL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3153,6 +3158,7 @@ types and may result in errors if used with the GA API.
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
+Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3236,6 +3242,8 @@ partial URL.
 For global HTTP(S) or TCP/SSL load balancing, the default is
 UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
 and CONNECTION (for TCP/SSL).
+Default value is `UTILIZATION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3409,6 +3417,8 @@ partial URL.
 For global HTTP(S) or TCP/SSL load balancing, the default is
 UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
 and CONNECTION (for TCP/SSL).
+Default value is `UTILIZATION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3582,6 +3592,8 @@ partial URL.
 For global HTTP(S) or TCP/SSL load balancing, the default is
 UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
 and CONNECTION (for TCP/SSL).
+Default value is `UTILIZATION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3745,8 +3757,8 @@ partial URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="balancingmode_python">
-<a href="#balancingmode_python" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
+        <span id="balancing_mode_python">
+<a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3755,12 +3767,14 @@ partial URL.
 For global HTTP(S) or TCP/SSL load balancing, the default is
 UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
 and CONNECTION (for TCP/SSL).
+Default value is `UTILIZATION`.
+Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="capacityscaler_python">
-<a href="#capacityscaler_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
+        <span id="capacity_scaler_python">
+<a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3787,8 +3801,8 @@ Provide this property when you create the resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnections_python">
-<a href="#maxconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3799,8 +3813,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionsperendpoint_python">
-<a href="#maxconnectionsperendpoint_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
+        <span id="max_connections_per_endpoint_python">
+<a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3815,8 +3829,8 @@ maxConnections or maxConnectionsPerEndpoint must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionsperinstance_python">
-<a href="#maxconnectionsperinstance_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
+        <span id="max_connections_per_instance_python">
+<a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3831,8 +3845,8 @@ maxConnectionsPerInstance must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrate_python">
-<a href="#maxrate_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
+        <span id="max_rate_python">
+<a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3846,8 +3860,8 @@ group type, must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrateperendpoint_python">
-<a href="#maxrateperendpoint_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
+        <span id="max_rate_per_endpoint_python">
+<a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3860,8 +3874,8 @@ either maxRate or maxRatePerEndpoint must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrateperinstance_python">
-<a href="#maxrateperinstance_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
+        <span id="max_rate_per_instance_python">
+<a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3874,8 +3888,8 @@ either maxRate or maxRatePerInstance must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxutilization_python">
-<a href="#maxutilization_python" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
+        <span id="max_utilization_python">
+<a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3918,7 +3932,8 @@ range is [0.0, 1.0].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.  Structure is documented below.
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3955,7 +3970,8 @@ responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.  Structure is documented below.
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3992,7 +4008,8 @@ responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.  Structure is documented below.
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4023,19 +4040,20 @@ responses will not be altered.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachekeypolicy_python">
-<a href="#cachekeypolicy_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
+        <span id="cache_key_policy_python">
+<a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Dict[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.  Structure is documented below.
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signedurlcachemaxagesec_python">
-<a href="#signedurlcachemaxagesec_python" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
+        <span id="signed_url_cache_max_age_sec_python">
+<a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4303,8 +4321,8 @@ delimiters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includehost_python">
-<a href="#includehost_python" style="color: inherit; text-decoration: inherit;">include<wbr>Host</a>
+        <span id="include_host_python">
+<a href="#include_host_python" style="color: inherit; text-decoration: inherit;">include_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4314,8 +4332,8 @@ delimiters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeprotocol_python">
-<a href="#includeprotocol_python" style="color: inherit; text-decoration: inherit;">include<wbr>Protocol</a>
+        <span id="include_protocol_python">
+<a href="#include_protocol_python" style="color: inherit; text-decoration: inherit;">include_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4325,8 +4343,8 @@ delimiters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includequerystring_python">
-<a href="#includequerystring_python" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
+        <span id="include_query_string_python">
+<a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4341,8 +4359,8 @@ key entirely.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystringblacklists_python">
-<a href="#querystringblacklists_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Blacklists</a>
+        <span id="query_string_blacklists_python">
+<a href="#query_string_blacklists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4356,8 +4374,8 @@ delimiters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystringwhitelists_python">
-<a href="#querystringwhitelists_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Whitelists</a>
+        <span id="query_string_whitelists_python">
+<a href="#query_string_whitelists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4636,19 +4654,19 @@ Defaults to 3.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecttimeout_python">
-<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Dict[Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnections_python">
-<a href="#maxconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4659,8 +4677,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpendingrequests_python">
-<a href="#maxpendingrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
+        <span id="max_pending_requests_python">
+<a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4671,8 +4689,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrequests_python">
-<a href="#maxrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
+        <span id="max_requests_python">
+<a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4683,8 +4701,8 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxrequestsperconnection_python">
-<a href="#maxrequestsperconnection_python" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
+        <span id="max_requests_per_connection_python">
+<a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4697,8 +4715,8 @@ will effectively disable keep alive.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxretries_python">
-<a href="#maxretries_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4889,7 +4907,8 @@ less than one second are represented with a 0 `seconds` field and a positive
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4938,7 +4957,8 @@ Defaults to 1024.
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4987,7 +5007,8 @@ Defaults to 1024.
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5027,22 +5048,23 @@ Defaults to 1024.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpcookie_python">
-<a href="#httpcookie_python" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
+        <span id="http_cookie_python">
+<a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE.  Structure is documented below.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheadername_python">
-<a href="#httpheadername_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
+        <span id="http_header_name_python">
+<a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5053,8 +5075,8 @@ This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumringsize_python">
-<a href="#minimumringsize_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
+        <span id="minimum_ring_size_python">
+<a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5122,7 +5144,8 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5162,7 +5185,8 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5202,7 +5226,8 @@ Defaults to 1024.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5240,9 +5265,10 @@ Defaults to 1024.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.  Structure is documented below.
+    <dd>{{% md %}}Lifetime of the cookie.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5435,7 +5461,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5447,7 +5474,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -5476,7 +5504,8 @@ OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and w
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5488,7 +5517,8 @@ OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and w
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -5517,7 +5547,8 @@ OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and w
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5529,7 +5560,8 @@ OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and w
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -5541,8 +5573,8 @@ OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and w
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientid_python">
-<a href="#oauth2clientid_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
+        <span id="oauth2_client_id_python">
+<a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5552,25 +5584,27 @@ OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and w
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientsecret_python">
-<a href="#oauth2clientsecret_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
+        <span id="oauth2_client_secret_python">
+<a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}OAuth2 Client Secret for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}OAuth2 Client Secret for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauth2clientsecretsha256_python">
-<a href="#oauth2clientsecretsha256_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
+        <span id="oauth2_client_secret_sha256_python">
+<a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}-
-OAuth2 Client Secret SHA-256 for IAP  **Note**: This property is sensitive and will not be displayed in the plan.
+OAuth2 Client Secret SHA-256 for IAP
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
 
 </dl>
@@ -5707,8 +5741,8 @@ The default value is 1.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplerate_python">
-<a href="#samplerate_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
+        <span id="sample_rate_python">
+<a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5754,7 +5788,8 @@ The default value is 1.0.
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5831,7 +5866,8 @@ disable ejection or to ramp it up slowly. Defaults to 100.
         <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5908,7 +5944,8 @@ runtime value should be 1900. Defaults to 1900.
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5985,7 +6022,8 @@ disable ejection or to ramp it up slowly. Defaults to 100.
         <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6062,7 +6100,8 @@ runtime value should be 1900. Defaults to 1900.
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6139,7 +6178,8 @@ disable ejection or to ramp it up slowly. Defaults to 100.
         <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6208,21 +6248,22 @@ runtime value should be 1900. Defaults to 1900.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseejectiontime_python">
-<a href="#baseejectiontime_python" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
+        <span id="base_ejection_time_python">
+<a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Dict[Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s.  Structure is documented below.
+30000ms or 30s.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consecutiveerrors_python">
-<a href="#consecutiveerrors_python" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
+        <span id="consecutive_errors_python">
+<a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6234,8 +6275,8 @@ Defaults to 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consecutivegatewayfailure_python">
-<a href="#consecutivegatewayfailure_python" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
+        <span id="consecutive_gateway_failure_python">
+<a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6247,8 +6288,8 @@ gateway failure ejection occurs. Defaults to 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcingconsecutiveerrors_python">
-<a href="#enforcingconsecutiveerrors_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
+        <span id="enforcing_consecutive_errors_python">
+<a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6260,8 +6301,8 @@ ejection or to ramp it up slowly. Defaults to 100.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcingconsecutivegatewayfailure_python">
-<a href="#enforcingconsecutivegatewayfailure_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
+        <span id="enforcing_consecutive_gateway_failure_python">
+<a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6273,8 +6314,8 @@ used to disable ejection or to ramp it up slowly. Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enforcingsuccessrate_python">
-<a href="#enforcingsuccessrate_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
+        <span id="enforcing_success_rate_python">
+<a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6290,16 +6331,17 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Dict[Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds.  Structure is documented below.
+ejections as well as hosts being returned to service. Defaults to 10 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxejectionpercent_python">
-<a href="#maxejectionpercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
+        <span id="max_ejection_percent_python">
+<a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6310,8 +6352,8 @@ that can be ejected. Defaults to 10%.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successrateminimumhosts_python">
-<a href="#successrateminimumhosts_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
+        <span id="success_rate_minimum_hosts_python">
+<a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6324,8 +6366,8 @@ cluster. Defaults to 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successraterequestvolume_python">
-<a href="#successraterequestvolume_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
+        <span id="success_rate_request_volume_python">
+<a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6339,8 +6381,8 @@ to 100.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successratestdevfactor_python">
-<a href="#successratestdevfactor_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
+        <span id="success_rate_stdev_factor_python">
+<a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6663,6 +6705,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

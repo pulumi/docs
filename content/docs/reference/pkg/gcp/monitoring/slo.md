@@ -36,7 +36,7 @@ To get more information about Slo, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#Slo">Slo</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>windows_based_sli=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.Slo">Slo</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -244,7 +244,8 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,6 +258,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,7 +298,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -337,7 +340,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -383,7 +387,8 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,6 +401,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,7 +441,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,7 +483,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -522,7 +530,8 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -535,6 +544,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,7 +584,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -615,7 +626,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -654,14 +666,15 @@ to be met. 0 < goal <= 0.999
 <a href="#basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,6 +687,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -705,7 +719,7 @@ If it is not provided, the provider project is used.
 <a href="#request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli]</a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -713,7 +727,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -745,7 +760,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -754,7 +769,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -903,7 +919,8 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>request_based_sli=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>windows_based_sli=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">) -&gt;</span> Slo</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -911,7 +928,7 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Slo.html">Slo</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.SloState.html">SloState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Slo.html">Slo</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.SloState.html">SloState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1030,7 +1047,8 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1043,6 +1061,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1106,7 +1125,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1158,7 +1178,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1181,7 +1202,8 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1194,6 +1216,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1257,7 +1280,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1309,7 +1333,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1332,7 +1357,8 @@ Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1345,6 +1371,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,7 +1435,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1460,7 +1488,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1476,14 +1505,15 @@ Exactly one of the following must be set:
 <a href="#state_basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
 SLIs are used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1496,6 +1526,7 @@ Exactly one of the following must be set:
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
+Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1551,7 +1582,7 @@ If it is not provided, the provider project is used.
 <a href="#state_request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli]</a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -1559,7 +1590,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service's
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1602,7 +1634,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -1611,7 +1643,8 @@ A SLI describes a good service. It is used to measure and calculate
 the quality of the Service's performance with respect to a single
 aspect of service quality.
 Exactly one of the following must be set:
-`basic_sli`, `request_based_sli`, `windows_based_sli`  Structure is documented below.
+`basic_sli`, `request_based_sli`, `windows_based_sli`
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1655,7 +1688,8 @@ Exactly one of the following must be set:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1721,7 +1755,8 @@ field will result in an error.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1787,7 +1822,8 @@ field will result in an error.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1851,9 +1887,10 @@ field will result in an error.
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicslilatency">Dict[Slo<wbr>Basic<wbr>Sli<wbr>Latency]</a></span>
+        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2039,7 +2076,8 @@ this service that return in no more than threshold.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2054,7 +2092,8 @@ measuring good service and total service.  Structure is documented below.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2076,7 +2115,8 @@ will be assumed.  Structure is documented below.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2091,7 +2131,8 @@ measuring good service and total service.  Structure is documented below.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2113,7 +2154,8 @@ will be assumed.  Structure is documented below.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2128,7 +2170,8 @@ measuring good service and total service.  Structure is documented below.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2140,32 +2183,34 @@ will be assumed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="distributioncut_python">
-<a href="#distributioncut_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
+        <span id="distribution_cut_python">
+<a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut]</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="goodtotalratio_python">
-<a href="#goodtotalratio_python" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
+        <span id="good_total_ratio_python">
+<a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio]</a></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2220,7 +2265,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2257,7 +2303,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2294,7 +2341,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2306,8 +2354,8 @@ just one of min or max. Summed value `X` should satisfy
 
     <dt class="property-required"
             title="Required">
-        <span id="distributionfilter_python">
-<a href="#distributionfilter_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
+        <span id="distribution_filter_python">
+<a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2324,14 +2372,15 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Dict[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range]</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2682,8 +2731,8 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="badservicefilter_python">
-<a href="#badservicefilter_python" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
+        <span id="bad_service_filter_python">
+<a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2700,8 +2749,8 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="goodservicefilter_python">
-<a href="#goodservicefilter_python" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
+        <span id="good_service_filter_python">
+<a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2716,8 +2765,8 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalservicefilter_python">
-<a href="#totalservicefilter_python" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
+        <span id="total_service_filter_python">
+<a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2781,7 +2830,8 @@ appear in the window. One of `good_bad_metric_filter`,
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2798,7 +2848,8 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2815,7 +2866,8 @@ Summed value `X` of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2864,7 +2916,8 @@ appear in the window. One of `good_bad_metric_filter`,
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2881,7 +2934,8 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2898,7 +2952,8 @@ Summed value `X` of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2947,7 +3002,8 @@ appear in the window. One of `good_bad_metric_filter`,
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2964,7 +3020,8 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2981,7 +3038,8 @@ Summed value `X` of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3006,8 +3064,8 @@ integer fraction of a day and at least 60s.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="goodbadmetricfilter_python">
-<a href="#goodbadmetricfilter_python" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
+        <span id="good_bad_metric_filter_python">
+<a href="#good_bad_metric_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>bad_<wbr>metric_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3021,25 +3079,26 @@ appear in the window. One of `good_bad_metric_filter`,
 
     <dt class="property-optional"
             title="Optional">
-        <span id="goodtotalratiothreshold_python">
-<a href="#goodtotalratiothreshold_python" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
+        <span id="good_total_ratio_threshold_python">
+<a href="#good_total_ratio_threshold_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricmeaninrange_python">
-<a href="#metricmeaninrange_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
+        <span id="metric_mean_in_range_python">
+<a href="#metric_mean_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>mean_<wbr>in_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *averaged* across returned streams.
@@ -3047,16 +3106,17 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricsuminrange_python">
-<a href="#metricsuminrange_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
+        <span id="metric_sum_in_range_python">
+<a href="#metric_sum_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>sum_<wbr>in_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
@@ -3064,13 +3124,14 @@ Summed value `X` of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
-`metric_sum_in_range` must be set for `windows_based_sli`.  Structure is documented below.
+`metric_sum_in_range` must be set for `windows_based_sli`.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="windowperiod_python">
-<a href="#windowperiod_python" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
+        <span id="window_period_python">
+<a href="#window_period_python" style="color: inherit; text-decoration: inherit;">window_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3113,7 +3174,8 @@ integer fraction of a day and at least 60s.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3124,7 +3186,8 @@ integer fraction of a day and at least 60s.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3155,7 +3218,8 @@ this service that return in no more than threshold.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
     </dt>
-    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3166,7 +3230,8 @@ this service that return in no more than threshold.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
     </dt>
-    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3197,7 +3262,8 @@ this service that return in no more than threshold.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
     </dt>
-    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3208,7 +3274,8 @@ this service that return in no more than threshold.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
     </dt>
-    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3233,13 +3300,14 @@ this service that return in no more than threshold.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basicsliperformance_python">
-<a href="#basicsliperformance_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
+        <span id="basic_sli_performance_python">
+<a href="#basic_sli_performance_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli_<wbr>performance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3248,9 +3316,10 @@ this service that return in no more than threshold.
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.  Structure is documented below.
+    <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3299,7 +3368,8 @@ this service that return in no more than threshold.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3365,7 +3435,8 @@ field will result in an error.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3431,7 +3502,8 @@ field will result in an error.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3495,9 +3567,10 @@ field will result in an error.
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+    <dd>{{% md %}}Parameters for a latency threshold SLI.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3683,7 +3756,8 @@ this service that return in no more than threshold.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3698,7 +3772,8 @@ measuring good service and total service.  Structure is documented below.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3720,7 +3795,8 @@ will be assumed.  Structure is documented below.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3735,7 +3811,8 @@ measuring good service and total service.  Structure is documented below.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3757,7 +3834,8 @@ will be assumed.  Structure is documented below.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3772,7 +3850,8 @@ measuring good service and total service.  Structure is documented below.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3784,32 +3863,34 @@ will be assumed.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="distributioncut_python">
-<a href="#distributioncut_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
+        <span id="distribution_cut_python">
+<a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service.  Structure is documented below.
+measuring good service and total service.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="goodtotalratio_python">
-<a href="#goodtotalratio_python" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
+        <span id="good_total_ratio_python">
+<a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
-will be assumed.  Structure is documented below.
+will be assumed.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3864,7 +3945,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3901,7 +3983,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3938,7 +4021,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3950,8 +4034,8 @@ just one of min or max. Summed value `X` should satisfy
 
     <dt class="property-required"
             title="Required">
-        <span id="distributionfilter_python">
-<a href="#distributionfilter_python" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
+        <span id="distribution_filter_python">
+<a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3968,14 +4052,15 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4326,8 +4411,8 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="badservicefilter_python">
-<a href="#badservicefilter_python" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
+        <span id="bad_service_filter_python">
+<a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4344,8 +4429,8 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="goodservicefilter_python">
-<a href="#goodservicefilter_python" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
+        <span id="good_service_filter_python">
+<a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4360,8 +4445,8 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="totalservicefilter_python">
-<a href="#totalservicefilter_python" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
+        <span id="total_service_filter_python">
+<a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4412,7 +4497,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4452,7 +4538,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4492,7 +4579,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4525,20 +4613,21 @@ Summed value `X` should satisfy
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="timeseries_python">
-<a href="#timeseries_python" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
+        <span id="time_series_python">
+<a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4740,7 +4829,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4780,7 +4870,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4820,7 +4911,8 @@ will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4853,20 +4945,21 @@ Summed value `X` should satisfy
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Dict[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
 that range.min <= x < range.max. inclusive of min and
 exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.  Structure is documented below.
+`range.min <= X < range.max` for a good window.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="timeseries_python">
-<a href="#timeseries_python" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
+        <span id="time_series_python">
+<a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5048,6 +5141,6 @@ will be set to "-infinity", defining an open range
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

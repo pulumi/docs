@@ -12,97 +12,6 @@ meta_desc: "Explore the GetCertificate function of the compute module, including
 
 Get info about a Google Compute SSL Certificate from its name.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myCert = Output.Create(Gcp.Compute.GetCertificate.InvokeAsync(new Gcp.Compute.GetCertificateArgs
-        {
-            Name = "my-cert",
-        }));
-        this.Certificate = myCert.Apply(myCert => myCert.Certificate);
-        this.CertificateId = myCert.Apply(myCert => myCert.CertificateId);
-        this.SelfLink = myCert.Apply(myCert => myCert.SelfLink);
-    }
-
-    [Output("certificate")]
-    public Output<string> Certificate { get; set; }
-    [Output("certificateId")]
-    public Output<string> CertificateId { get; set; }
-    [Output("selfLink")]
-    public Output<string> SelfLink { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myCert, err := compute.GetCertificate(ctx, &compute.GetCertificateArgs{
-			Name: "my-cert",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("certificate", myCert.Certificate)
-		ctx.Export("certificateId", myCert.CertificateId)
-		ctx.Export("selfLink", myCert.SelfLink)
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_cert = gcp.compute.get_certificate(name="my-cert")
-pulumi.export("certificate", my_cert.certificate)
-pulumi.export("certificateId", my_cert.certificate_id)
-pulumi.export("selfLink", my_cert.self_link)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myCert = gcp.compute.getCertificate({
-    name: "my-cert",
-});
-export const certificate = myCert.then(myCert => myCert.certificate);
-export const certificateId = myCert.then(myCert => myCert.certificateId);
-export const selfLink = myCert.then(myCert => myCert.selfLink);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetCertificate {#using}
@@ -116,7 +25,7 @@ export const selfLink = myCert.then(myCert => myCert.selfLink);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificate(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -717,6 +626,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

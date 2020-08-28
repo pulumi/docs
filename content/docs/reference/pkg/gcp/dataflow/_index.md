@@ -11,6 +11,7 @@ Explore the resources and functions of the dataflow module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="flextemplatejob" title="FlexTemplateJob"><span class="symbol resource"></span>FlexTemplateJob</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
 </ul>
 
@@ -21,9 +22,9 @@ Explore the resources and functions of the dataflow module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.1</dd>
 </dl>
 
 

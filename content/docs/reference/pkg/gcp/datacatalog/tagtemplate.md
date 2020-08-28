@@ -19,248 +19,6 @@ To get more information about TagTemplate, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Data Catalog Tag Template Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var basicTagTemplate = new Gcp.DataCatalog.TagTemplate("basicTagTemplate", new Gcp.DataCatalog.TagTemplateArgs
-        {
-            DisplayName = "Demo Tag Template",
-            Fields = 
-            {
-                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
-                {
-                    DisplayName = "Source of data asset",
-                    FieldId = "source",
-                    IsRequired = true,
-                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
-                    {
-                        PrimitiveType = "STRING",
-                    },
-                },
-                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
-                {
-                    DisplayName = "Number of rows in the data asset",
-                    FieldId = "num_rows",
-                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
-                    {
-                        PrimitiveType = "DOUBLE",
-                    },
-                },
-                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
-                {
-                    DisplayName = "PII type",
-                    FieldId = "pii_type",
-                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
-                    {
-                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
-                        {
-                            AllowedValues = 
-                            {
-                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
-                                {
-                                    DisplayName = "EMAIL",
-                                },
-                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
-                                {
-                                    DisplayName = "SOCIAL SECURITY NUMBER",
-                                },
-                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
-                                {
-                                    DisplayName = "NONE",
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-            ForceDelete = false,
-            Region = "us-central1",
-            TagTemplateId = "my_template",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = datacatalog.NewTagTemplate(ctx, "basicTagTemplate", &datacatalog.TagTemplateArgs{
-			DisplayName: pulumi.String("Demo Tag Template"),
-			Fields: datacatalog.TagTemplateFieldArray{
-				&datacatalog.TagTemplateFieldArgs{
-					DisplayName: pulumi.String("Source of data asset"),
-					FieldId:     pulumi.String("source"),
-					IsRequired:  pulumi.Bool(true),
-					Type: &datacatalog.TagTemplateFieldTypeArgs{
-						PrimitiveType: pulumi.String("STRING"),
-					},
-				},
-				&datacatalog.TagTemplateFieldArgs{
-					DisplayName: pulumi.String("Number of rows in the data asset"),
-					FieldId:     pulumi.String("num_rows"),
-					Type: &datacatalog.TagTemplateFieldTypeArgs{
-						PrimitiveType: pulumi.String("DOUBLE"),
-					},
-				},
-				&datacatalog.TagTemplateFieldArgs{
-					DisplayName: pulumi.String("PII type"),
-					FieldId:     pulumi.String("pii_type"),
-					Type: &datacatalog.TagTemplateFieldTypeArgs{
-						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
-							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
-								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
-									DisplayName: pulumi.String("EMAIL"),
-								},
-								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
-									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
-								},
-								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
-									DisplayName: pulumi.String("NONE"),
-								},
-							},
-						},
-					},
-				},
-			},
-			ForceDelete:   pulumi.Bool(false),
-			Region:        pulumi.String("us-central1"),
-			TagTemplateId: pulumi.String("my_template"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic_tag_template = gcp.datacatalog.TagTemplate("basicTagTemplate",
-    display_name="Demo Tag Template",
-    fields=[
-        {
-            "display_name": "Source of data asset",
-            "fieldId": "source",
-            "isRequired": True,
-            "type": {
-                "primitiveType": "STRING",
-            },
-        },
-        {
-            "display_name": "Number of rows in the data asset",
-            "fieldId": "num_rows",
-            "type": {
-                "primitiveType": "DOUBLE",
-            },
-        },
-        {
-            "display_name": "PII type",
-            "fieldId": "pii_type",
-            "type": {
-                "enumType": {
-                    "allowedValues": [
-                        {
-                            "display_name": "EMAIL",
-                        },
-                        {
-                            "display_name": "SOCIAL SECURITY NUMBER",
-                        },
-                        {
-                            "display_name": "NONE",
-                        },
-                    ],
-                },
-            },
-        },
-    ],
-    force_delete="false",
-    region="us-central1",
-    tag_template_id="my_template")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basicTagTemplate = new gcp.datacatalog.TagTemplate("basic_tag_template", {
-    displayName: "Demo Tag Template",
-    fields: [
-        {
-            displayName: "Source of data asset",
-            fieldId: "source",
-            isRequired: true,
-            type: {
-                primitiveType: "STRING",
-            },
-        },
-        {
-            displayName: "Number of rows in the data asset",
-            fieldId: "num_rows",
-            type: {
-                primitiveType: "DOUBLE",
-            },
-        },
-        {
-            displayName: "PII type",
-            fieldId: "pii_type",
-            type: {
-                enumType: {
-                    allowedValues: [
-                        {
-                            displayName: "EMAIL",
-                        },
-                        {
-                            displayName: "SOCIAL SECURITY NUMBER",
-                        },
-                        {
-                            displayName: "NONE",
-                        },
-                    ],
-                },
-            },
-        },
-    ],
-    forceDelete: false,
-    region: "us-central1",
-    tagTemplateId: "my_template",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a TagTemplate Resource {#create}
@@ -272,7 +30,7 @@ const basicTagTemplate = new gcp.datacatalog.TagTemplate("basic_tag_template", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#TagTemplate">TagTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>fields=None<span class="p">, </span>force_delete=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>tag_template_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#pulumi_gcp.datacatalog.TagTemplate">TagTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[TagTemplateFieldArgs]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +210,8 @@ The TagTemplate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefield">List&lt;Tag<wbr>Template<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -526,7 +285,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefield">[]Tag<wbr>Template<wbr>Field</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -600,7 +360,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefield">Tag<wbr>Template<wbr>Field[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -672,9 +433,10 @@ If it is not provided, the provider project is used.
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefield">List[Tag<wbr>Template<wbr>Field]</a></span>
+        <span class="property-type"><a href="#tagtemplatefield">List[Tag<wbr>Template<wbr>Field<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -879,7 +641,8 @@ Get an existing TagTemplate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>fields=None<span class="p">, </span>force_delete=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>tag_template_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[TagTemplateFieldArgs]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TagTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -887,7 +650,7 @@ Get an existing TagTemplate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagTemplate.html">TagTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagTemplateState.html">TagTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagTemplate.html">TagTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagTemplateState.html">TagTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1012,7 +775,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefield">List&lt;Tag<wbr>Template<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1098,7 +862,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefield">[]Tag<wbr>Template<wbr>Field</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1184,7 +949,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefield">Tag<wbr>Template<wbr>Field[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1268,9 +1034,10 @@ If it is not provided, the provider project is used.
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefield">List[Tag<wbr>Template<wbr>Field]</a></span>
+        <span class="property-type"><a href="#tagtemplatefield">List[Tag<wbr>Template<wbr>Field<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.
+    <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1382,7 +1149,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The type of value this tag field can contain.  Structure is documented below.
+    <dd>{{% md %}}The type of value this tag field can contain.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1458,7 +1226,8 @@ Multiple fields can have the same order, and field orders within a tag do not ha
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of value this tag field can contain.  Structure is documented below.
+    <dd>{{% md %}}The type of value this tag field can contain.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1534,7 +1303,8 @@ Multiple fields can have the same order, and field orders within a tag do not ha
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of value this tag field can contain.  Structure is documented below.
+    <dd>{{% md %}}The type of value this tag field can contain.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1593,8 +1363,8 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldid_python">
-<a href="#fieldid_python" style="color: inherit; text-decoration: inherit;">field<wbr>Id</a>
+        <span id="field_id_python">
+<a href="#field_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1608,9 +1378,10 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtype">Dict[Tag<wbr>Template<wbr>Field<wbr>Type]</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The type of value this tag field can contain.  Structure is documented below.
+    <dd>{{% md %}}The type of value this tag field can contain.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1626,8 +1397,8 @@ Multiple fields can have the same order, and field orders within a tag do not ha
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isrequired_python">
-<a href="#isrequired_python" style="color: inherit; text-decoration: inherit;">is<wbr>Required</a>
+        <span id="is_required_python">
+<a href="#is_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>required</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1694,7 +1465,8 @@ Multiple fields can have the same order, and field orders within a tag do not ha
         <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
-Exactly one of `primitive_type` or `enum_type` must be set  Structure is documented below.
+Exactly one of `primitive_type` or `enum_type` must be set
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1707,6 +1479,7 @@ Exactly one of `primitive_type` or `enum_type` must be set  Structure is documen
     </dt>
     <dd>{{% md %}}Represents primitive types - string, bool etc.
 Exactly one of `primitive_type` or `enum_type` must be set
+Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1725,7 +1498,8 @@ Exactly one of `primitive_type` or `enum_type` must be set
         <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
-Exactly one of `primitive_type` or `enum_type` must be set  Structure is documented below.
+Exactly one of `primitive_type` or `enum_type` must be set
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1738,6 +1512,7 @@ Exactly one of `primitive_type` or `enum_type` must be set  Structure is documen
     </dt>
     <dd>{{% md %}}Represents primitive types - string, bool etc.
 Exactly one of `primitive_type` or `enum_type` must be set
+Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1756,7 +1531,8 @@ Exactly one of `primitive_type` or `enum_type` must be set
         <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
-Exactly one of `primitive_type` or `enum_type` must be set  Structure is documented below.
+Exactly one of `primitive_type` or `enum_type` must be set
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1769,6 +1545,7 @@ Exactly one of `primitive_type` or `enum_type` must be set  Structure is documen
     </dt>
     <dd>{{% md %}}Represents primitive types - string, bool etc.
 Exactly one of `primitive_type` or `enum_type` must be set
+Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1780,26 +1557,28 @@ Exactly one of `primitive_type` or `enum_type` must be set
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enumtype_python">
-<a href="#enumtype_python" style="color: inherit; text-decoration: inherit;">enum<wbr>Type</a>
+        <span id="enum_type_python">
+<a href="#enum_type_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Dict[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type]</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtype">Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents an enum type.
-Exactly one of `primitive_type` or `enum_type` must be set  Structure is documented below.
+Exactly one of `primitive_type` or `enum_type` must be set
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="primitivetype_python">
-<a href="#primitivetype_python" style="color: inherit; text-decoration: inherit;">primitive<wbr>Type</a>
+        <span id="primitive_type_python">
+<a href="#primitive_type_python" style="color: inherit; text-decoration: inherit;">primitive_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Represents primitive types - string, bool etc.
 Exactly one of `primitive_type` or `enum_type` must be set
+Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1839,7 +1618,8 @@ Exactly one of `primitive_type` or `enum_type` must be set
 values must be case-insensitively unique within this set. Currently,
 enum values can only be added to the list of allowed values. Deletion
 and renaming of enum values are not supported.
-Can have up to 500 allowed values.  Structure is documented below.
+Can have up to 500 allowed values.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1861,7 +1641,8 @@ Can have up to 500 allowed values.  Structure is documented below.
 values must be case-insensitively unique within this set. Currently,
 enum values can only be added to the list of allowed values. Deletion
 and renaming of enum values are not supported.
-Can have up to 500 allowed values.  Structure is documented below.
+Can have up to 500 allowed values.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1883,7 +1664,8 @@ Can have up to 500 allowed values.  Structure is documented below.
 values must be case-insensitively unique within this set. Currently,
 enum values can only be added to the list of allowed values. Deletion
 and renaming of enum values are not supported.
-Can have up to 500 allowed values.  Structure is documented below.
+Can have up to 500 allowed values.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1895,17 +1677,18 @@ Can have up to 500 allowed values.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedvalues_python">
-<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+        <span id="allowed_values_python">
+<a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">List[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value]</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">List[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed values for this enum. The display names of the
 values must be case-insensitively unique within this set. Currently,
 enum values can only be added to the list of allowed values. Deletion
 and renaming of enum values are not supported.
-Can have up to 500 allowed values.  Structure is documented below.
+Can have up to 500 allowed values.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2016,6 +1799,6 @@ Can have up to 500 allowed values.  Structure is documented below.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

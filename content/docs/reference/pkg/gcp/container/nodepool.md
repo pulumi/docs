@@ -25,7 +25,7 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#NodePool">NodePool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling=None<span class="p">, </span>cluster=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>location=None<span class="p">, </span>management=None<span class="p">, </span>max_pods_per_node=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>node_config=None<span class="p">, </span>node_count=None<span class="p">, </span>node_locations=None<span class="p">, </span>project=None<span class="p">, </span>upgrade_settings=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.NodePool">NodePool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[NodePoolAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[NodePoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,9 +228,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,9 +411,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -596,9 +594,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,7 +763,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#autoscaling_python" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Dict[Node<wbr>Pool<wbr>Autoscaling]</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -780,9 +777,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +798,7 @@ this will force recreation of the resource.
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Dict[Node<wbr>Pool<wbr>Management]</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -853,7 +849,7 @@ with the specified prefix. Conflicts with `name`.
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Dict[Node<wbr>Pool<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -903,7 +899,7 @@ the provider-configured project will be used.
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Dict[Node<wbr>Pool<wbr>Upgrade<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -1068,7 +1064,8 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscaling=None<span class="p">, </span>cluster=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>instance_group_urls=None<span class="p">, </span>location=None<span class="p">, </span>management=None<span class="p">, </span>max_pods_per_node=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>node_config=None<span class="p">, </span>node_count=None<span class="p">, </span>node_locations=None<span class="p">, </span>project=None<span class="p">, </span>upgrade_settings=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[NodePoolAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[NodePoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1076,7 +1073,7 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.NodePool.html">NodePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.NodePoolState.html">NodePoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.NodePool.html">NodePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.NodePoolState.html">NodePoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1213,9 +1210,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,9 +1404,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1603,9 +1598,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1773,7 +1767,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#state_autoscaling_python" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Dict[Node<wbr>Pool<wbr>Autoscaling]</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -1798,9 +1792,8 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
+Changing this will force recreation of the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1831,7 +1824,7 @@ this will force recreation of the resource.
 <a href="#state_management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Dict[Node<wbr>Pool<wbr>Management]</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -1882,7 +1875,7 @@ with the specified prefix. Conflicts with `name`.
 <a href="#state_node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Dict[Node<wbr>Pool<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -1932,7 +1925,7 @@ the provider-configured project will be used.
 <a href="#state_upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Dict[Node<wbr>Pool<wbr>Upgrade<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -2080,8 +2073,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-required"
             title="Required">
-        <span id="maxnodecount_python">
-<a href="#maxnodecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
+        <span id="max_node_count_python">
+<a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2091,8 +2084,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-required"
             title="Required">
-        <span id="minnodecount_python">
-<a href="#minnodecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
+        <span id="min_node_count_python">
+<a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2215,8 +2208,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autorepair_python">
-<a href="#autorepair_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
+        <span id="auto_repair_python">
+<a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2226,8 +2219,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoupgrade_python">
-<a href="#autoupgrade_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
+        <span id="auto_upgrade_python">
+<a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2823,18 +2816,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootdiskkmskey_python">
-<a href="#bootdiskkmskey_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="disktype_python">
-<a href="#disktype_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+        <span id="boot_disk_kms_key_python">
+<a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2853,18 +2836,28 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="guest_accelerators_python">
-<a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagetype_python">
-<a href="#imagetype_python" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+        <span id="guest_accelerators_python">
+<a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_type_python">
+<a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2877,14 +2870,14 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localssdcount_python">
-<a href="#localssdcount_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2907,7 +2900,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2923,8 +2916,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2943,11 +2936,11 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sandboxconfig_python">
-<a href="#sandboxconfig_python" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
+        <span id="sandbox_config_python">
+<a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Dict[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2967,7 +2960,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Dict[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2987,17 +2980,17 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadmetadataconfig_python">
-<a href="#workloadmetadataconfig_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
+        <span id="workload_metadata_config_python">
+<a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Dict[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3205,8 +3198,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-required"
             title="Required">
-        <span id="sandboxtype_python">
-<a href="#sandboxtype_python" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Type</a>
+        <span id="sandbox_type_python">
+<a href="#sandbox_type_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3321,8 +3314,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableintegritymonitoring_python">
-<a href="#enableintegritymonitoring_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3331,8 +3324,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablesecureboot_python">
-<a href="#enablesecureboot_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3583,8 +3576,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-required"
             title="Required">
-        <span id="nodemetadata_python">
-<a href="#nodemetadata_python" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
+        <span id="node_metadata_python">
+<a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3717,8 +3710,8 @@ parallel. Can be set to 0 or greater.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxsurge_python">
-<a href="#maxsurge_python" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
+        <span id="max_surge_python">
+<a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3730,8 +3723,8 @@ Can be set to 0 or greater.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxunavailable_python">
-<a href="#maxunavailable_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+        <span id="max_unavailable_python">
+<a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3759,6 +3752,6 @@ parallel. Can be set to 0 or greater.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

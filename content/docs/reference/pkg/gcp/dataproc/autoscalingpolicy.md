@@ -23,7 +23,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#pulumi_gcp.dataproc.AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyBasicAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicySecondaryWorkerConfigArgs]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyWorkerConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,7 +216,8 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -251,7 +252,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -262,7 +264,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -293,7 +296,8 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,7 +332,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -339,7 +344,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -370,7 +376,8 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -405,7 +412,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,7 +424,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -445,9 +454,10 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,9 +490,10 @@ If it is not provided, the provider project is used.
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,9 +502,10 @@ If it is not provided, the provider project is used.
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -638,7 +650,8 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyBasicAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicySecondaryWorkerConfigArgs]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyWorkerConfigArgs]</span> = None<span class="p">) -&gt;</span> AutoscalingPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +659,7 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyState.html">AutoscalingPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyState.html">AutoscalingPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -760,7 +773,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -819,7 +833,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,7 +845,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -848,7 +864,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,7 +924,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -918,7 +936,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -936,7 +955,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -995,7 +1015,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1006,7 +1027,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1022,9 +1044,10 @@ If it is not provided, the provider project is used.
 <a href="#state_basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1081,9 +1104,10 @@ If it is not provided, the provider project is used.
 <a href="#state_secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1092,9 +1116,10 @@ If it is not provided, the provider project is used.
 <a href="#state_worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1138,7 +1163,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1169,7 +1195,8 @@ Bounds: [2m, 1d]. Default: 2m.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1200,7 +1227,8 @@ Bounds: [2m, 1d]. Default: 2m.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1225,19 +1253,20 @@ Bounds: [2m, 1d]. Default: 2m.
 
     <dt class="property-required"
             title="Required">
-        <span id="yarnconfig_python">
-<a href="#yarnconfig_python" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
+        <span id="yarn_config_python">
+<a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cooldownperiod_python">
-<a href="#cooldownperiod_python" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
+        <span id="cooldown_period_python">
+<a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1523,8 +1552,8 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-required"
             title="Required">
-        <span id="gracefuldecommissiontimeout_python">
-<a href="#gracefuldecommissiontimeout_python" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+        <span id="graceful_decommission_timeout_python">
+<a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1537,8 +1566,8 @@ Bounds: [0s, 1d].
 
     <dt class="property-required"
             title="Required">
-        <span id="scaledownfactor_python">
-<a href="#scaledownfactor_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
+        <span id="scale_down_factor_python">
+<a href="#scale_down_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1553,8 +1582,8 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleupfactor_python">
-<a href="#scaleupfactor_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
+        <span id="scale_up_factor_python">
+<a href="#scale_up_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1569,8 +1598,8 @@ Bounds: [0.0, 1.0].
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledownminworkerfraction_python">
-<a href="#scaledownminworkerfraction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
+        <span id="scale_down_min_worker_fraction_python">
+<a href="#scale_down_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1584,8 +1613,8 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaleupminworkerfraction_python">
-<a href="#scaleupminworkerfraction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
+        <span id="scale_up_min_worker_fraction_python">
+<a href="#scale_up_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1796,8 +1825,8 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstances_python">
-<a href="#mininstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+        <span id="min_instances_python">
+<a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2026,8 +2055,8 @@ Bounds: [minInstances, ). Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstances_python">
-<a href="#mininstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
+        <span id="min_instances_python">
+<a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2075,6 +2104,6 @@ only on primary workers, the cluster will use primary workers only and no second
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

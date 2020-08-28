@@ -20,87 +20,6 @@ to be functional.
 
 > Subnets IP ranges across peered VPC networks cannot overlap.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.Compute.Network("default", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var other = new Gcp.Compute.Network("other", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var peering1 = new Gcp.Compute.NetworkPeering("peering1", new Gcp.Compute.NetworkPeeringArgs
-        {
-            Network = @default.Id,
-            PeerNetwork = other.Id,
-        });
-        var peering2 = new Gcp.Compute.NetworkPeering("peering2", new Gcp.Compute.NetworkPeeringArgs
-        {
-            Network = other.Id,
-            PeerNetwork = @default.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.Network("default", auto_create_subnetworks="false")
-other = gcp.compute.Network("other", auto_create_subnetworks="false")
-peering1 = gcp.compute.NetworkPeering("peering1",
-    network=default.id,
-    peer_network=other.id)
-peering2 = gcp.compute.NetworkPeering("peering2",
-    network=other.id,
-    peer_network=default.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const _default = new gcp.compute.Network("default", {autoCreateSubnetworks: "false"});
-const other = new gcp.compute.Network("other", {autoCreateSubnetworks: "false"});
-const peering1 = new gcp.compute.NetworkPeering("peering1", {
-    network: _default.id,
-    peerNetwork: other.id,
-});
-const peering2 = new gcp.compute.NetworkPeering("peering2", {
-    network: other.id,
-    peerNetwork: _default.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NetworkPeering Resource {#create}
@@ -112,7 +31,7 @@ const peering2 = new gcp.compute.NetworkPeering("peering2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NetworkPeering">NetworkPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>export_custom_routes=None<span class="p">, </span>export_subnet_routes_with_public_ip=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>import_subnet_routes_with_public_ip=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>peer_network=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.NetworkPeering">NetworkPeering</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">export_subnet_routes_with_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">import_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">import_subnet_routes_with_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,7 +256,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -422,7 +341,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -507,7 +426,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -592,7 +511,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -807,7 +726,8 @@ Get an existing NetworkPeering resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>export_custom_routes=None<span class="p">, </span>export_subnet_routes_with_public_ip=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>import_subnet_routes_with_public_ip=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>peer_network=None<span class="p">, </span>state=None<span class="p">, </span>state_details=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">export_subnet_routes_with_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">import_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">import_subnet_routes_with_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_details</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkPeering</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -815,7 +735,7 @@ Get an existing NetworkPeering resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeering.html">NetworkPeering</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeeringState.html">NetworkPeeringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeering.html">NetworkPeering</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeeringState.html">NetworkPeeringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -951,7 +871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +979,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1087,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1275,7 +1195,7 @@ may belong to a different project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+    <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1366,6 +1286,6 @@ may belong to a different project.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 
