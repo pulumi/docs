@@ -55,6 +55,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
           # AWS_SESSION_TOKEN is optional.
           AWS_SESSION_TOKEN: ${{ secrets.CI_AWS_SESSION_TOKEN }}
+          CI_ASSUME_ROLE_ARN: ${{ secrets.CI_ASSUME_ROLE_ARN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           PULUMI_STACK_NAME: ${{ secrets.PULUMI_STACK_NAME }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
