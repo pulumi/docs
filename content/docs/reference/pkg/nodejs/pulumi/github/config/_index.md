@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/github | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/github package."
-git_sha: "eddee008b24eebe0ae897efe911f4df9f31514ce"
+git_sha: "7e357c7b4406ef66bb05c6add8eac177c09c0967"
 block_external_search_index: true
 ---
 
@@ -32,7 +32,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="anonymous" data-link-title="anonymous">
-    <a href="https://github.com/pulumi/pulumi-github/blob/eddee008b24eebe0ae897efe911f4df9f31514ce/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-github/blob/7e357c7b4406ef66bb05c6add8eac177c09c0967/sdk/nodejs/config/vars.ts#L13">
         let <strong>anonymous</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ Authenticate without a token. When `anonymous`is true, the provider will not be 
 authentication.
 
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-github/blob/eddee008b24eebe0ae897efe911f4df9f31514ce/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-github/blob/7e357c7b4406ef66bb05c6add8eac177c09c0967/sdk/nodejs/config/vars.ts#L17">
         let <strong>baseUrl</strong>
     </a>
 </h3>
@@ -53,14 +53,14 @@ authentication.
 The GitHub Base API URL
 
 <h3 class="pdoc-module-header" id="individual" data-link-title="individual">
-    <a href="https://github.com/pulumi/pulumi-github/blob/eddee008b24eebe0ae897efe911f4df9f31514ce/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-github/blob/7e357c7b4406ef66bb05c6add8eac177c09c0967/sdk/nodejs/config/vars.ts#L18">
         let <strong>individual</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> individual: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;individual&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-github/blob/eddee008b24eebe0ae897efe911f4df9f31514ce/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-github/blob/7e357c7b4406ef66bb05c6add8eac177c09c0967/sdk/nodejs/config/vars.ts#L22">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ The GitHub Base API URL
 Whether server should be accessed without verifying the TLS certificate.
 
 <h3 class="pdoc-module-header" id="organization" data-link-title="organization">
-    <a href="https://github.com/pulumi/pulumi-github/blob/eddee008b24eebe0ae897efe911f4df9f31514ce/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-github/blob/7e357c7b4406ef66bb05c6add8eac177c09c0967/sdk/nodejs/config/vars.ts#L26">
         let <strong>organization</strong>
     </a>
 </h3>
@@ -80,7 +80,7 @@ Whether server should be accessed without verifying the TLS certificate.
 The GitHub organization name to manage. If `individual` is false, `organization` is required.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-github/blob/eddee008b24eebe0ae897efe911f4df9f31514ce/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-github/blob/7e357c7b4406ef66bb05c6add8eac177c09c0967/sdk/nodejs/config/vars.ts#L30">
         let <strong>token</strong>
     </a>
 </h3>
