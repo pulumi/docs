@@ -41,7 +41,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sampleDs, err := slb.GetListeners(ctx, &slb.GetListenersArgs{
+			LoadBalancerId: alicloud_slb.Sample_slb.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbListenerProtocol", sampleDs.SlbListeners[0].Protocol)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +71,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 sample_ds = alicloud.slb.get_listeners(load_balancer_id=alicloud_slb["sample_slb"]["id"])
-pulumi.export("firstSlbListenerProtocol", sample_ds.slb_listeners[0]["protocol"])
+pulumi.export("firstSlbListenerProtocol", sample_ds.slb_listeners[0].protocol)
 ```
 
 {{% /example %}}
@@ -84,7 +105,7 @@ export const firstSlbListenerProtocol = sampleDs.slbListeners[0].protocol;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_listeners(</span>description_regex=None<span class="p">, </span>frontend_port=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>output_file=None<span class="p">, </span>protocol=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_listeners(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetListenersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -2043,8 +2064,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cacertificateid_python">
-<a href="#cacertificateid_python" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate<wbr>Id</a>
+        <span id="ca_certificate_id_python">
+<a href="#ca_certificate_id_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2131,17 +2152,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthcheckconnecttimeout_python">
-<a href="#healthcheckconnecttimeout_python" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Connect<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Amount of time in seconds to wait for the response for a health check.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="health_check_python">
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
@@ -2160,6 +2170,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Port used for health check.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="health_check_connect_timeout_python">
+<a href="#health_check_connect_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>connect_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Amount of time in seconds to wait for the response for a health check.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2307,8 +2328,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="securitystatus_python">
-<a href="#securitystatus_python" style="color: inherit; text-decoration: inherit;">security<wbr>Status</a>
+        <span id="security_status_python">
+<a href="#security_status_python" style="color: inherit; text-decoration: inherit;">security_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2405,8 +2426,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xforwardedforslbid_python">
-<a href="#xforwardedforslbid_python" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>For<wbr>Slb<wbr>Id</a>
+        <span id="x_forwarded_for_python">
+<a href="#x_forwarded_for_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>for</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the HTTP header field "X-Forwarded-For" is added or not; it allows the backend server to know about the user's IP address. Possible values are `on` and `off`. Only available when the protocol is `http` or `https`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="x_forwarded_for_slb_id_python">
+<a href="#x_forwarded_for_slb_id_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>for_<wbr>slb_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2416,8 +2448,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xforwardedforslbip_python">
-<a href="#xforwardedforslbip_python" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>For<wbr>Slb<wbr>Ip</a>
+        <span id="x_forwarded_for_slb_ip_python">
+<a href="#x_forwarded_for_slb_ip_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>for_<wbr>slb_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2427,24 +2459,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="xforwardedforslbproto_python">
-<a href="#xforwardedforslbproto_python" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>For<wbr>Slb<wbr>Proto</a>
+        <span id="x_forwarded_for_slb_proto_python">
+<a href="#x_forwarded_for_slb_proto_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>for_<wbr>slb_<wbr>proto</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicate whether the HTTP header field "X-Forwarded-For_proto" is added or not; it allows the backend server to know about the user's protocol. Possible values are `on` and `off`. Only available when the protocol is `http` or `https`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="x_forwarded_for_python">
-<a href="#x_forwarded_for_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>for</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the HTTP header field "X-Forwarded-For" is added or not; it allows the backend server to know about the user's IP address. Possible values are `on` and `off`. Only available when the protocol is `http` or `https`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2465,6 +2486,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

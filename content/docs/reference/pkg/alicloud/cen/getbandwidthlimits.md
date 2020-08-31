@@ -44,7 +44,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bwl, err := cen.GetBandwidthLimits(ctx, &cen.GetBandwidthLimitsArgs{
+			InstanceIds: []string{
+				"cen-id1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstCenBandwidthLimitsLocalRegionId", bwl.Limits[0].LocalRegionId)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +76,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 bwl = alicloud.cen.get_bandwidth_limits(instance_ids=["cen-id1"])
-pulumi.export("firstCenBandwidthLimitsLocalRegionId", bwl.limits[0]["localRegionId"])
+pulumi.export("firstCenBandwidthLimitsLocalRegionId", bwl.limits[0].local_region_id)
 ```
 
 {{% /example %}}
@@ -87,7 +110,7 @@ export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bandwidth_limits(</span>instance_ids=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bandwidth_limits(</span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBandwidthLimitsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -667,8 +690,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localregionid_python">
-<a href="#localregionid_python" style="color: inherit; text-decoration: inherit;">local<wbr>Region<wbr>Id</a>
+        <span id="local_region_id_python">
+<a href="#local_region_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -678,8 +701,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oppositeregionid_python">
-<a href="#oppositeregionid_python" style="color: inherit; text-decoration: inherit;">opposite<wbr>Region<wbr>Id</a>
+        <span id="opposite_region_id_python">
+<a href="#opposite_region_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -716,6 +739,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

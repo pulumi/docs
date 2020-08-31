@@ -14,6 +14,105 @@ This resouce used to create a dedicated host and store its initial version. For 
 
 > **NOTE:** Available in 1.91.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.Ecs.DedicatedHost("default", new AliCloud.Ecs.DedicatedHostArgs
+        {
+            DedicatedHostName = "dedicated_host_name",
+            DedicatedHostType = "ddh.g5",
+            Description = "From_Terraform",
+            Tags = 
+            {
+                { "Create", "Terraform" },
+                { "For", "DDH" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.NewDedicatedHost(ctx, "_default", &ecs.DedicatedHostArgs{
+			DedicatedHostName: pulumi.String("dedicated_host_name"),
+			DedicatedHostType: pulumi.String("ddh.g5"),
+			Description:       pulumi.String("From_Terraform"),
+			Tags: pulumi.StringMap{
+				"Create": pulumi.String("Terraform"),
+				"For":    pulumi.String("DDH"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.ecs.DedicatedHost("default",
+    dedicated_host_name="dedicated_host_name",
+    dedicated_host_type="ddh.g5",
+    description="From_Terraform",
+    tags={
+        "Create": "Terraform",
+        "For": "DDH",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultDedicatedHost = new alicloud.ecs.DedicatedHost("default", {
+    dedicatedHostName: "dedicated_host_name",
+    dedicatedHostType: "ddh.g5",
+    description: "From_Terraform",
+    tags: {
+        Create: "Terraform",
+        For: "DDH",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedHost Resource {#create}
@@ -25,7 +124,7 @@ This resouce used to create a dedicated host and store its initial version. For 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.DedicatedHost">DedicatedHost</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action_on_maintenance=None<span class="p">, </span>auto_placement=None<span class="p">, </span>auto_release_time=None<span class="p">, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>dedicated_host_name=None<span class="p">, </span>dedicated_host_type=None<span class="p">, </span>description=None<span class="p">, </span>detail_fee=None<span class="p">, </span>dry_run=None<span class="p">, </span>expired_time=None<span class="p">, </span>network_attributes=None<span class="p">, </span>payment_type=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>sale_cycle=None<span class="p">, </span>tags=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.DedicatedHost">DedicatedHost</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_on_maintenance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_placement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_release_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dedicated_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detail_fee</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expired_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_attributes</span><span class="p">:</span> <span class="nx">Optional[List[DedicatedHostNetworkAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sale_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -906,7 +1005,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#network_attributes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostnetworkattribute">List[Dedicated<wbr>Host<wbr>Network<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#dedicatedhostnetworkattribute">List[Dedicated<wbr>Host<wbr>Network<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}dedicated host network parameters. contains the following attributes:
 {{% /md %}}</dd>
@@ -950,7 +1049,7 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1108,7 +1207,8 @@ Get an existing DedicatedHost resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action_on_maintenance=None<span class="p">, </span>auto_placement=None<span class="p">, </span>auto_release_time=None<span class="p">, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>dedicated_host_name=None<span class="p">, </span>dedicated_host_type=None<span class="p">, </span>description=None<span class="p">, </span>detail_fee=None<span class="p">, </span>dry_run=None<span class="p">, </span>expired_time=None<span class="p">, </span>network_attributes=None<span class="p">, </span>payment_type=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>sale_cycle=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_on_maintenance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_placement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_release_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dedicated_host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detail_fee</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expired_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_attributes</span><span class="p">:</span> <span class="nx">Optional[List[DedicatedHostNetworkAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sale_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DedicatedHost</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1116,7 +1216,7 @@ Get an existing DedicatedHost resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.DedicatedHost.html">DedicatedHost</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.DedicatedHostState.html">DedicatedHostState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.DedicatedHost.html">DedicatedHost</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.DedicatedHostState.html">DedicatedHostState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1964,7 +2064,7 @@ The following state arguments are supported:
 <a href="#state_network_attributes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostnetworkattribute">List[Dedicated<wbr>Host<wbr>Network<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#dedicatedhostnetworkattribute">List[Dedicated<wbr>Host<wbr>Network<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}dedicated host network parameters. contains the following attributes:
 {{% /md %}}</dd>
@@ -2019,7 +2119,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2157,8 +2257,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="slbudptimeout_python">
-<a href="#slbudptimeout_python" style="color: inherit; text-decoration: inherit;">slb<wbr>Udp<wbr>Timeout</a>
+        <span id="slb_udp_timeout_python">
+<a href="#slb_udp_timeout_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>udp_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2168,8 +2268,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="udptimeout_python">
-<a href="#udptimeout_python" style="color: inherit; text-decoration: inherit;">udp<wbr>Timeout</a>
+        <span id="udp_timeout_python">
+<a href="#udp_timeout_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2195,6 +2295,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -14,6 +14,38 @@ This data source provides availability zones for Gpdb that can be accessed by an
 
 > **NOTE:** Available in v1.73.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const zonesIds = alicloud.gpdb.getZones({});
+// Create an Gpdb instance with the first matched zone
+const hbase = new alicloud.hbase.Instance("hbase", {availabilityZone: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
+// Other properties...
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZones {#using}
@@ -27,7 +59,7 @@ This data source provides availability zones for Gpdb that can be accessed by an
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_zones(</span>multi=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zones(</span><span class="nx">multi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZonesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -541,8 +573,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="multizoneids_python">
-<a href="#multizoneids_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
+        <span id="multi_zone_ids_python">
+<a href="#multi_zone_ids_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -568,6 +600,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

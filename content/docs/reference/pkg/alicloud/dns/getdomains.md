@@ -42,7 +42,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "^hegu"
+		opt1 := "domains.txt"
+		domainsDs, err := dns.GetDomains(ctx, &dns.GetDomainsArgs{
+			DomainNameRegex: &opt0,
+			OutputFile:      &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDomainId", domainsDs.Domains[0].DomainId)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +76,7 @@ import pulumi_alicloud as alicloud
 
 domains_ds = alicloud.dns.get_domains(domain_name_regex="^hegu",
     output_file="domains.txt")
-pulumi.export("firstDomainId", domains_ds.domains[0]["domain_id"])
+pulumi.export("firstDomainId", domains_ds.domains[0].domain_id)
 ```
 
 {{% /example %}}
@@ -87,7 +111,7 @@ export const firstDomainId = domainsDs.domains[0].domainId;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domains(</span>ali_domain=None<span class="p">, </span>domain_name_regex=None<span class="p">, </span>group_id=None<span class="p">, </span>group_name_regex=None<span class="p">, </span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>key_word=None<span class="p">, </span>lang=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>search_mode=None<span class="p">, </span>starmark=None<span class="p">, </span>tags=None<span class="p">, </span>version_code=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domains(</span><span class="nx">ali_domain</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">domain_name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_word</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lang</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starmark</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">version_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -131,7 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain name. 
+    <dd>{{% md %}}A regex string to filter results by the domain name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -291,7 +315,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain name. 
+    <dd>{{% md %}}A regex string to filter results by the domain name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -451,7 +475,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain name. 
+    <dd>{{% md %}}A regex string to filter results by the domain name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,7 +635,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain name. 
+    <dd>{{% md %}}A regex string to filter results by the domain name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,7 +753,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1487,7 +1511,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2210,8 +2234,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="alidomain_python">
-<a href="#alidomain_python" style="color: inherit; text-decoration: inherit;">ali<wbr>Domain</a>
+        <span id="ali_domain_python">
+<a href="#ali_domain_python" style="color: inherit; text-decoration: inherit;">ali_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2287,8 +2311,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="inblackhole_python">
-<a href="#inblackhole_python" style="color: inherit; text-decoration: inherit;">in<wbr>Black<wbr>Hole</a>
+        <span id="in_black_hole_python">
+<a href="#in_black_hole_python" style="color: inherit; text-decoration: inherit;">in_<wbr>black_<wbr>hole</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2298,8 +2322,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="inclean_python">
-<a href="#inclean_python" style="color: inherit; text-decoration: inherit;">in<wbr>Clean</a>
+        <span id="in_clean_python">
+<a href="#in_clean_python" style="color: inherit; text-decoration: inherit;">in_<wbr>clean</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2320,8 +2344,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="linetype_python">
-<a href="#linetype_python" style="color: inherit; text-decoration: inherit;">line<wbr>Type</a>
+        <span id="line_type_python">
+<a href="#line_type_python" style="color: inherit; text-decoration: inherit;">line_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2330,8 +2354,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minttl_python">
-<a href="#minttl_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+        <span id="min_ttl_python">
+<a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2341,8 +2365,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="punycode_python">
-<a href="#punycode_python" style="color: inherit; text-decoration: inherit;">puny<wbr>Code</a>
+        <span id="puny_code_python">
+<a href="#puny_code_python" style="color: inherit; text-decoration: inherit;">puny_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2352,8 +2376,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="recordlinetreejson_python">
-<a href="#recordlinetreejson_python" style="color: inherit; text-decoration: inherit;">record<wbr>Line<wbr>Tree<wbr>Json</a>
+        <span id="record_line_tree_json_python">
+<a href="#record_line_tree_json_python" style="color: inherit; text-decoration: inherit;">record_<wbr>line_<wbr>tree_<wbr>json</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2363,8 +2387,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionlines_python">
-<a href="#regionlines_python" style="color: inherit; text-decoration: inherit;">region<wbr>Lines</a>
+        <span id="region_lines_python">
+<a href="#region_lines_python" style="color: inherit; text-decoration: inherit;">region_<wbr>lines</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2385,8 +2409,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="slavedns_python">
-<a href="#slavedns_python" style="color: inherit; text-decoration: inherit;">slave<wbr>Dns</a>
+        <span id="slave_dns_python">
+<a href="#slave_dns_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>dns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2400,7 +2424,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2444,6 +2468,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

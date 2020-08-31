@@ -51,7 +51,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "1"
+		opt1 := "rg-acfmwvv********"
+		opt2 := "waf-cloud"
+		_default, err := waf.GetInstances(ctx, &waf.GetInstancesArgs{
+			Ids: []string{
+				"waf-cn-09k********",
+			},
+			Status:          &opt0,
+			ResourceGroupId: &opt1,
+			InstanceSource:  &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("theFirstWafInstanceId", _default.Instances[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,7 +92,7 @@ default = alicloud.waf.get_instances(ids=["waf-cn-09k********"],
     status="1",
     resource_group_id="rg-acfmwvv********",
     instance_source="waf-cloud")
-pulumi.export("theFirstWafInstanceId", default.instances[0]["id"])
+pulumi.export("theFirstWafInstanceId", default.instances[0].id)
 ```
 
 {{% /example %}}
@@ -99,7 +128,7 @@ export const theFirstWafInstanceId = _default.then(_default => _default.instance
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>instance_source=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -132,7 +161,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of WAF instance IDs. 
+    <dd>{{% md %}}A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -193,7 +222,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of WAF instance IDs. 
+    <dd>{{% md %}}A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,7 +283,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of WAF instance IDs. 
+    <dd>{{% md %}}A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -315,7 +344,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of WAF instance IDs. 
+    <dd>{{% md %}}A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,7 +429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A list of WAF instance IDs. 
+    <dd>{{% md %}}(Optional) A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -481,7 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A list of WAF instance IDs. 
+    <dd>{{% md %}}(Optional) A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -562,7 +591,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A list of WAF instance IDs. 
+    <dd>{{% md %}}(Optional) A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -643,7 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A list of WAF instance IDs. 
+    <dd>{{% md %}}(Optional) A list of WAF instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1046,8 +1075,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enddate_python">
-<a href="#enddate_python" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
+        <span id="end_date_python">
+<a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1068,8 +1097,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="indebt_python">
-<a href="#indebt_python" style="color: inherit; text-decoration: inherit;">in<wbr>Debt</a>
+        <span id="in_debt_python">
+<a href="#in_debt_python" style="color: inherit; text-decoration: inherit;">in_<wbr>debt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1101,8 +1130,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="remainday_python">
-<a href="#remainday_python" style="color: inherit; text-decoration: inherit;">remain<wbr>Day</a>
+        <span id="remain_day_python">
+<a href="#remain_day_python" style="color: inherit; text-decoration: inherit;">remain_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1160,6 +1189,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

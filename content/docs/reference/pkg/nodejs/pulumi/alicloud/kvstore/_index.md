@@ -3,7 +3,7 @@ title: "Module kvstore"
 title_tag: "Module kvstore | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "kvstore"
 meta_desc: "Explore members of the kvstore module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "defe40500a6bcc54fb2373512cd0091abe87d61b"
 block_external_search_index: true
 ---
 
@@ -51,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L49">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -63,8 +63,6 @@ Provides a kvstore account resource and used to manage databases.
 > **NOTE:** Available in 1.66.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,7 +100,7 @@ const account = new alicloud.kvstore.Account("account", {
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -116,7 +114,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -127,14 +125,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -145,7 +143,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L82">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L80">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +151,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Operation account requiring a uniqueness check. It may consist of lower case letters, numbers, and underlines, and must start with a letter and have no more than 16 characters.
 
 <h4 class="pdoc-member-header" id="Account-accountPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L86">property <b>accountPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L84">property <b>accountPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -161,7 +159,7 @@ Operation account requiring a uniqueness check. It may consist of lower case let
 Operation password. It may consist of letters, digits, or underlines, with a length of 6 to 32 characters. You have to specify one of `accountPassword` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="Account-accountPrivilege">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L94">property <b>accountPrivilege</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L92">property <b>accountPrivilege</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountPrivilege: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +171,7 @@ The privilege of account access database. Valid values:
 Only for Redis which engine version is 4.0 and architecture type is standard
 
 <h4 class="pdoc-member-header" id="Account-accountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L100">property <b>accountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L98">property <b>accountType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -183,7 +181,7 @@ Privilege type of account.
 Default to Normal.
 
 <h4 class="pdoc-member-header" id="Account-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L104">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L102">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,7 +189,7 @@ Default to Normal.
 Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -200,7 +198,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L108">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L106">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +206,7 @@ deployments and may be missing (undefined) during planning phases.
 The Id of instance in which account belongs. (The engine version of instance must be 4.0 or 4.0+)
 
 <h4 class="pdoc-member-header" id="Account-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L112">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L110">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -216,7 +214,7 @@ The Id of instance in which account belongs. (The engine version of instance mus
 An KMS encrypts password used to a KVStore account. If the `accountPassword` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="Account-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L116">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L114">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +222,7 @@ An KMS encrypts password used to a KVStore account. If the `accountPassword` is 
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a KVStore account with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -233,7 +231,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BackupPolicy" data-link-title="BackupPolicy">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L53">
         Resource <strong>BackupPolicy</strong>
     </a>
 </h3>
@@ -244,7 +242,7 @@ Provides a backup policy for ApsaraDB Redis / Memcache instance resource.
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -286,7 +284,7 @@ const defaultBackupPolicy = new alicloud.kvstore.BackupPolicy("default", {
 ```
 
 <h4 class="pdoc-member-header" id="BackupPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -300,7 +298,7 @@ Create a BackupPolicy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BackupPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -311,14 +309,14 @@ Get an existing BackupPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BackupPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BackupPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -329,7 +327,7 @@ Returns true if the given object is an instance of BackupPolicy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BackupPolicy-backupPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L84">property <b>backupPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L84">property <b>backupPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupPeriods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -337,7 +335,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Backup Cycle. Allowed values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 
 <h4 class="pdoc-member-header" id="BackupPolicy-backupTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L88">property <b>backupTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L88">property <b>backupTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +343,7 @@ Backup Cycle. Allowed values: Monday, Tuesday, Wednesday, Thursday, Friday, Satu
 Backup time, in the format of HH:mmZ- HH:mm Z
 
 <h4 class="pdoc-member-header" id="BackupPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -354,7 +352,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BackupPolicy-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L92">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L92">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +360,7 @@ deployments and may be missing (undefined) during planning phases.
 The id of ApsaraDB for Redis or Memcache intance.
 
 <h4 class="pdoc-member-header" id="BackupPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -371,7 +369,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L46">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -382,7 +380,7 @@ Provides an ApsaraDB Redis / Memcache instance resource. A DB instance is an iso
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -415,7 +413,7 @@ const defaultInstance = new alicloud.kvstore.Instance("default", {
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L166"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L166"> <b>constructor</b></a>
 </h4>
 
 
@@ -429,7 +427,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -440,14 +438,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -458,7 +456,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L77">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L77">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -466,7 +464,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether to renewal a DB instance automatically or not. It is valid when instanceChargeType is `PrePaid`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="Instance-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L81">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L81">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -474,7 +472,7 @@ Whether to renewal a DB instance automatically or not. It is valid when instance
 Auto-renewal period of an instance, in the unit of the month. It is valid when instanceChargeType is `PrePaid`. Valid value:[1~12], Default to 1.
 
 <h4 class="pdoc-member-header" id="Instance-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L85">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L85">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +480,7 @@ Auto-renewal period of an instance, in the unit of the month. It is valid when i
 The Zone to launch the DB instance.
 
 <h4 class="pdoc-member-header" id="Instance-backupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L89">property <b>backupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L89">property <b>backupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -490,7 +488,7 @@ The Zone to launch the DB instance.
 If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
 
 <h4 class="pdoc-member-header" id="Instance-connectionDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L93">property <b>connectionDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L93">property <b>connectionDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -498,7 +496,7 @@ If an instance created based on a backup set generated by another instance is va
 Instance connection domain (only Intranet access supported).
 
 <h4 class="pdoc-member-header" id="Instance-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L97">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L97">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -506,7 +504,7 @@ Instance connection domain (only Intranet access supported).
 Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -515,7 +513,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L101">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L101">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -523,12 +521,12 @@ deployments and may be missing (undefined) during planning phases.
 Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="Instance-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L102">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L102">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L106">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L106">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -536,7 +534,7 @@ Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`.
 The name of DB instance. It a string of 2 to 256 characters.
 
 <h4 class="pdoc-member-header" id="Instance-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L110">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L110">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -544,7 +542,7 @@ The name of DB instance. It a string of 2 to 256 characters.
 The engine to use: `Redis` or `Memcache`. Defaults to `Redis`.
 
 <h4 class="pdoc-member-header" id="Instance-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L114">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L114">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -552,7 +550,7 @@ The engine to use: `Redis` or `Memcache`. Defaults to `Redis`.
 An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="Instance-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L118">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L118">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -560,7 +558,7 @@ An KMS encrypts password used to a instance. If the `password` is filled in, thi
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating instance with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="Instance-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L122">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L122">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintainEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +566,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="Instance-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L126">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L126">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintainStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +574,7 @@ The end time of the operation and maintenance time period of the instance, in th
 The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="Instance-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L130">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L130">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceParameter'>InstanceParameter</a>[]&gt;;</code></pre>
@@ -584,7 +582,7 @@ The start time of the operation and maintenance time period of the instance, in 
 Set of parameters needs to be set after instance was launched. Available parameters can refer to the latest docs [Instance configurations table](https://www.alibabacloud.com/help/doc-detail/61209.htm) .
 
 <h4 class="pdoc-member-header" id="Instance-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L134">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L134">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -592,7 +590,7 @@ Set of parameters needs to be set after instance was launched. Available paramet
 The password of the DB instance. The password is a string of 8 to 30 characters and must contain uppercase letters, lowercase letters, and numbers.
 
 <h4 class="pdoc-member-header" id="Instance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L138">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L138">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -600,7 +598,7 @@ The password of the DB instance. The password is a string of 8 to 30 characters 
 The duration that you will buy DB instance (in month). It is valid when instanceChargeType is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 
 <h4 class="pdoc-member-header" id="Instance-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L142">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L142">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +606,7 @@ The duration that you will buy DB instance (in month). It is valid when instance
 Set the instance's private IP.
 
 <h4 class="pdoc-member-header" id="Instance-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L146">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L146">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -616,7 +614,7 @@ Set the instance's private IP.
 The ID of resource group which the resource belongs.
 
 <h4 class="pdoc-member-header" id="Instance-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L150">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L150">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +622,7 @@ The ID of resource group which the resource belongs.
 The Security Group ID of ECS.
 
 <h4 class="pdoc-member-header" id="Instance-securityIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L154">property <b>securityIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L154">property <b>securityIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -632,7 +630,7 @@ The Security Group ID of ECS.
 Set the instance's IP whitelist of the default security group.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L158">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L158">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -640,7 +638,7 @@ Set the instance's IP whitelist of the default security group.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -649,7 +647,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-vpcAuthMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L162">property <b>vpcAuthMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L162">property <b>vpcAuthMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcAuthMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +655,7 @@ deployments.
 Only meaningful if instanceType is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
 
 <h4 class="pdoc-member-header" id="Instance-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L166">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L166">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -667,7 +665,7 @@ The ID of VSwitch.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getInstanceClasses" data-link-title="getInstanceClasses">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L34">
         Function <strong>getInstanceClasses</strong>
     </a>
 </h3>
@@ -681,8 +679,6 @@ This data source provides the KVStore instance classes resource available info o
 > **NOTE:** Available in v1.49.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -703,7 +699,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasse
 ```
 
 <h3 class="pdoc-module-header" id="getInstanceEngines" data-link-title="getInstanceEngines">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L34">
         Function <strong>getInstanceEngines</strong>
     </a>
 </h3>
@@ -717,8 +713,6 @@ This data source provides the KVStore instance engines resource available info o
 > **NOTE:** Available in v1.51.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -739,7 +733,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngine
 ```
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L13">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -752,7 +746,7 @@ The `alicloud.kvstore.getInstances` data source provides a collection of kvstore
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.
 
 <h3 class="pdoc-module-header" id="getZones" data-link-title="getZones">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L26">
         Function <strong>getZones</strong>
     </a>
 </h3>
@@ -767,8 +761,6 @@ This data source provides availability zones for KVStore that can be accessed by
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -782,7 +774,7 @@ const kvstore = new alicloud.kvstore.Instance("kvstore", {availabilityZone: zone
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L211">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -792,7 +784,7 @@ const kvstore = new alicloud.kvstore.Instance("kvstore", {availabilityZone: zone
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L217">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L215">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +792,7 @@ The set of arguments for constructing a Account resource.
 Operation account requiring a uniqueness check. It may consist of lower case letters, numbers, and underlines, and must start with a letter and have no more than 16 characters.
 
 <h4 class="pdoc-member-header" id="AccountArgs-accountPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L221">property <b>accountPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L219">property <b>accountPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,7 +800,7 @@ Operation account requiring a uniqueness check. It may consist of lower case let
 Operation password. It may consist of letters, digits, or underlines, with a length of 6 to 32 characters. You have to specify one of `accountPassword` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="AccountArgs-accountPrivilege">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L229">property <b>accountPrivilege</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L227">property <b>accountPrivilege</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountPrivilege?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +812,7 @@ The privilege of account access database. Valid values:
 Only for Redis which engine version is 4.0 and architecture type is standard
 
 <h4 class="pdoc-member-header" id="AccountArgs-accountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L235">property <b>accountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L233">property <b>accountType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -830,7 +822,7 @@ Privilege type of account.
 Default to Normal.
 
 <h4 class="pdoc-member-header" id="AccountArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L239">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L237">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -838,7 +830,7 @@ Default to Normal.
 Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
 
 <h4 class="pdoc-member-header" id="AccountArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L243">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L241">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +838,7 @@ Database description. It cannot begin with https://. It must start with a Chines
 The Id of instance in which account belongs. (The engine version of instance must be 4.0 or 4.0+)
 
 <h4 class="pdoc-member-header" id="AccountArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L247">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L245">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,7 +846,7 @@ The Id of instance in which account belongs. (The engine version of instance mus
 An KMS encrypts password used to a KVStore account. If the `accountPassword` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="AccountArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L251">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L249">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -862,7 +854,7 @@ An KMS encrypts password used to a KVStore account. If the `accountPassword` is 
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a KVStore account with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L167">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -872,7 +864,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L173">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L171">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +872,7 @@ Input properties used for looking up and filtering Account resources.
 Operation account requiring a uniqueness check. It may consist of lower case letters, numbers, and underlines, and must start with a letter and have no more than 16 characters.
 
 <h4 class="pdoc-member-header" id="AccountState-accountPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L177">property <b>accountPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L175">property <b>accountPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +880,7 @@ Operation account requiring a uniqueness check. It may consist of lower case let
 Operation password. It may consist of letters, digits, or underlines, with a length of 6 to 32 characters. You have to specify one of `accountPassword` and `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="AccountState-accountPrivilege">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L185">property <b>accountPrivilege</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L183">property <b>accountPrivilege</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountPrivilege?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -900,7 +892,7 @@ The privilege of account access database. Valid values:
 Only for Redis which engine version is 4.0 and architecture type is standard
 
 <h4 class="pdoc-member-header" id="AccountState-accountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L191">property <b>accountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L189">property <b>accountType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -910,7 +902,7 @@ Privilege type of account.
 Default to Normal.
 
 <h4 class="pdoc-member-header" id="AccountState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L195">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L193">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -918,7 +910,7 @@ Default to Normal.
 Database description. It cannot begin with https://. It must start with a Chinese character or English letter. It can include Chinese and English characters, underlines (_), hyphens (-), and numbers. The length may be 2-256 characters.
 
 <h4 class="pdoc-member-header" id="AccountState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L199">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L197">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +918,7 @@ Database description. It cannot begin with https://. It must start with a Chines
 The Id of instance in which account belongs. (The engine version of instance must be 4.0 or 4.0+)
 
 <h4 class="pdoc-member-header" id="AccountState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L203">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L201">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +926,7 @@ The Id of instance in which account belongs. (The engine version of instance mus
 An KMS encrypts password used to a KVStore account. If the `accountPassword` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="AccountState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/account.ts#L207">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/account.ts#L205">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -942,7 +934,7 @@ An KMS encrypts password used to a KVStore account. If the `accountPassword` is 
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a KVStore account with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h3 class="pdoc-module-header" id="BackupPolicyArgs" data-link-title="BackupPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L150">
         interface <strong>BackupPolicyArgs</strong>
     </a>
 </h3>
@@ -952,7 +944,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The set of arguments for constructing a BackupPolicy resource.
 
 <h4 class="pdoc-member-header" id="BackupPolicyArgs-backupPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L154">property <b>backupPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L154">property <b>backupPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -960,7 +952,7 @@ The set of arguments for constructing a BackupPolicy resource.
 Backup Cycle. Allowed values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 
 <h4 class="pdoc-member-header" id="BackupPolicyArgs-backupTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L158">property <b>backupTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L158">property <b>backupTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -968,7 +960,7 @@ Backup Cycle. Allowed values: Monday, Tuesday, Wednesday, Thursday, Friday, Satu
 Backup time, in the format of HH:mmZ- HH:mm Z
 
 <h4 class="pdoc-member-header" id="BackupPolicyArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L162">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L162">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -976,7 +968,7 @@ Backup time, in the format of HH:mmZ- HH:mm Z
 The id of ApsaraDB for Redis or Memcache intance.
 
 <h3 class="pdoc-module-header" id="BackupPolicyState" data-link-title="BackupPolicyState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L132">
         interface <strong>BackupPolicyState</strong>
     </a>
 </h3>
@@ -986,7 +978,7 @@ The id of ApsaraDB for Redis or Memcache intance.
 Input properties used for looking up and filtering BackupPolicy resources.
 
 <h4 class="pdoc-member-header" id="BackupPolicyState-backupPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L136">property <b>backupPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L136">property <b>backupPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -994,7 +986,7 @@ Input properties used for looking up and filtering BackupPolicy resources.
 Backup Cycle. Allowed values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 
 <h4 class="pdoc-member-header" id="BackupPolicyState-backupTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L140">property <b>backupTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L140">property <b>backupTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1002,7 +994,7 @@ Backup Cycle. Allowed values: Monday, Tuesday, Wednesday, Thursday, Friday, Satu
 Backup time, in the format of HH:mmZ- HH:mm Z
 
 <h4 class="pdoc-member-header" id="BackupPolicyState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/backupPolicy.ts#L144">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/backupPolicy.ts#L144">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1010,7 +1002,7 @@ Backup time, in the format of HH:mmZ- HH:mm Z
 The id of ApsaraDB for Redis or Memcache intance.
 
 <h3 class="pdoc-module-header" id="GetInstanceClassesArgs" data-link-title="GetInstanceClassesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L63">
         interface <strong>GetInstanceClassesArgs</strong>
     </a>
 </h3>
@@ -1020,7 +1012,7 @@ The id of ApsaraDB for Redis or Memcache intance.
 A collection of arguments for invoking getInstanceClasses.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-architecture">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L69">property <b>architecture</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L67">property <b>architecture</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>architecture?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1028,7 +1020,7 @@ A collection of arguments for invoking getInstanceClasses.
 The KVStore instance system architecture required by the user. Valid values: `standard`, `cluster` and `rwsplit`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-editionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L73">property <b>editionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L71">property <b>editionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editionType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1036,7 +1028,7 @@ The KVStore instance system architecture required by the user. Valid values: `st
 The KVStore instance edition type required by the user. Valid values: `Community` and `Enterprise`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L77">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L75">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1044,7 +1036,7 @@ The KVStore instance edition type required by the user. Valid values: `Community
 Database type. Options are `Redis`, `Memcache`. Default to `Redis`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L81">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L79">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1052,7 +1044,7 @@ Database type. Options are `Redis`, `Memcache`. Default to `Redis`.
 Database version required by the user. Value options of Redis can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/60873.htm) `EngineVersion`. Value of Memcache should be empty.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L85">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L83">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1060,7 +1052,7 @@ Database version required by the user. Value options of Redis can refer to the l
 Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PrePaid`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L89">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L87">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1068,12 +1060,12 @@ Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Defau
 The KVStore instance node type required by the user. Valid values: `double`, `single`, `readone`, `readthree` and `readfive`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L90">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L88">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L96">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L94">property <b>packageType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1085,7 +1077,7 @@ The parameter &#39;package_type&#39; has been deprecated from 1.68.0.
 It has been deprecated from 1.68.0.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-performanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L102">property <b>performanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L100">property <b>performanceType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1097,7 +1089,7 @@ The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.
 It has been deprecated from 1.68.0.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-seriesType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L106">property <b>seriesType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L104">property <b>seriesType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>seriesType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1105,7 +1097,7 @@ It has been deprecated from 1.68.0.
 The KVStore instance series type required by the user. Valid values: `enhancedPerformanceType` and `hybridStorage`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-shardNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L110">property <b>shardNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L108">property <b>shardNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardNumber?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1113,12 +1105,12 @@ The KVStore instance series type required by the user. Valid values: `enhancedPe
 The number of shard.Valid values: `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-sortedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L111">property <b>sortedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L109">property <b>sortedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortedBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L117">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L115">property <b>storageType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1130,7 +1122,7 @@ The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.
 It has been deprecated from 1.68.0.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L121">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L119">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1138,7 +1130,7 @@ It has been deprecated from 1.68.0.
 The Zone to launch the KVStore instance.
 
 <h3 class="pdoc-module-header" id="GetInstanceClassesResult" data-link-title="GetInstanceClassesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L125">
         interface <strong>GetInstanceClassesResult</strong>
     </a>
 </h3>
@@ -1148,12 +1140,12 @@ The Zone to launch the KVStore instance.
 A collection of values returned by getInstanceClasses.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-architecture">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L128">property <b>architecture</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L126">property <b>architecture</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>architecture?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-classes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L132">property <b>classes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L130">property <b>classes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>classes: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesClass'>GetInstanceClassesClass</a>[];</code></pre>
@@ -1161,22 +1153,22 @@ A collection of values returned by getInstanceClasses.
 A list of KVStore available instance classes when the `sortedBy` is "Price". include:
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-editionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L133">property <b>editionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L131">property <b>editionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editionType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L134">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L132">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L135">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L133">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L139">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L137">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1184,12 +1176,12 @@ A list of KVStore available instance classes when the `sortedBy` is "Price". inc
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L140">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L138">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-instanceClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L144">property <b>instanceClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L142">property <b>instanceClasses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClasses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1197,17 +1189,17 @@ The provider-assigned unique ID for this managed resource.
 A list of KVStore available instance classes.
 
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L145">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L143">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L146">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L144">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L150">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L148">property <b>packageType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1216,7 +1208,7 @@ The parameter &#39;package_type&#39; has been deprecated from 1.68.0.
 </div>
 <pre class="highlight"><code><span class='kd'></span>packageType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-performanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L154">property <b>performanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L152">property <b>performanceType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1225,22 +1217,22 @@ The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.
 </div>
 <pre class="highlight"><code><span class='kd'></span>performanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-seriesType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L155">property <b>seriesType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L153">property <b>seriesType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>seriesType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-shardNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L156">property <b>shardNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L154">property <b>shardNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardNumber?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-sortedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L157">property <b>sortedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L155">property <b>sortedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortedBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L161">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L159">property <b>storageType</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1249,12 +1241,12 @@ The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.
 </div>
 <pre class="highlight"><code><span class='kd'></span>storageType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceClassesResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceClasses.ts#L162">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceClasses.ts#L160">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstanceEnginesArgs" data-link-title="GetInstanceEnginesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L54">
         interface <strong>GetInstanceEnginesArgs</strong>
     </a>
 </h3>
@@ -1264,7 +1256,7 @@ The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.
 A collection of arguments for invoking getInstanceEngines.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L60">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L58">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1272,7 +1264,7 @@ A collection of arguments for invoking getInstanceEngines.
 Database type. Options are `Redis`, `Memcache`. Default to `Redis`.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L64">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L62">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1280,7 +1272,7 @@ Database type. Options are `Redis`, `Memcache`. Default to `Redis`.
 Database version required by the user. Value options of Redis can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/60873.htm) `EngineVersion`. Value of Memcache should be empty.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L68">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L66">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1288,12 +1280,12 @@ Database version required by the user. Value options of Redis can refer to the l
 Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PrePaid`.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L69">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L67">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceEnginesArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L73">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L71">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1301,7 +1293,7 @@ Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Defau
 The Zone to launch the KVStore instance.
 
 <h3 class="pdoc-module-header" id="GetInstanceEnginesResult" data-link-title="GetInstanceEnginesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L77">
         interface <strong>GetInstanceEnginesResult</strong>
     </a>
 </h3>
@@ -1311,7 +1303,7 @@ The Zone to launch the KVStore instance.
 A collection of values returned by getInstanceEngines.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L83">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L81">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1319,7 +1311,7 @@ A collection of values returned by getInstanceEngines.
 Database type.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L87">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L85">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1327,7 +1319,7 @@ Database type.
 KVStore Instance version.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1335,12 +1327,12 @@ KVStore Instance version.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L92">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L90">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-instanceEngines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L96">property <b>instanceEngines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L94">property <b>instanceEngines</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceEngines: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceEnginesInstanceEngine'>GetInstanceEnginesInstanceEngine</a>[];</code></pre>
@@ -1348,12 +1340,12 @@ The provider-assigned unique ID for this managed resource.
 A list of KVStore available instance engines. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L97">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L95">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceEnginesResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstanceEngines.ts#L101">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstanceEngines.ts#L99">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1361,7 +1353,7 @@ A list of KVStore available instance engines. Each element contains the followin
 The Zone to launch the KVStore instance.
 
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L38">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -1371,7 +1363,7 @@ The Zone to launch the KVStore instance.
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L42">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L42">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1379,7 +1371,7 @@ A collection of arguments for invoking getInstances.
 A list of RKV instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L47">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L47">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1388,7 +1380,7 @@ Type of the applied ApsaraDB for Redis instance.
 For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L51">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L51">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1396,7 +1388,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1404,12 +1396,12 @@ Database type. Options are `Memcache`, and `Redis`. If no value is specified, al
 A regex string to apply to the instance name.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L60">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L60">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1417,7 +1409,7 @@ A regex string to apply to the instance name.
 Status of the instance.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L64">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L64">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1425,7 +1417,7 @@ Status of the instance.
 Query the instance bound to the tag. The format of the incoming value is `json` string, including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `{"key1":"value1"}`.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L68">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L68">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1433,7 +1425,7 @@ Query the instance bound to the tag. The format of the incoming value is `json` 
 Used to retrieve instances belong to specified VPC.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L72">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L72">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1441,7 +1433,7 @@ Used to retrieve instances belong to specified VPC.
 Used to retrieve instances belong to specified `vswitch` resources.
 
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L78">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -1451,7 +1443,7 @@ Used to retrieve instances belong to specified `vswitch` resources.
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1459,7 +1451,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L86">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L86">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1467,12 +1459,12 @@ The provider-assigned unique ID for this managed resource.
 A list of RKV instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L87">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L87">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L93">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L93">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1482,7 +1474,7 @@ A list of RKV instance IDs.
 For more information, see [Instance type table](https://www.alibabacloud.com/help/doc-detail/61135.htm).
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L97">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L97">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -1490,22 +1482,22 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 A list of RKV instances. Its every element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L98">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L98">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L99">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L99">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L100">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L100">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L104">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L104">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1513,12 +1505,12 @@ A list of RKV instances. Its every element contains the following attributes:
 Status of the instance.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L105">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L109">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L109">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1526,7 +1518,7 @@ Status of the instance.
 VPC ID the instance belongs to.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getInstances.ts#L113">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getInstances.ts#L113">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1534,7 +1526,7 @@ VPC ID the instance belongs to.
 VSwitch ID the instance belongs to.
 
 <h3 class="pdoc-module-header" id="GetZonesArgs" data-link-title="GetZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L45">
         interface <strong>GetZonesArgs</strong>
     </a>
 </h3>
@@ -1544,7 +1536,7 @@ VSwitch ID the instance belongs to.
 A collection of arguments for invoking getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L51">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L49">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1552,7 +1544,7 @@ A collection of arguments for invoking getZones.
 Filter the results by a specific instance charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-multi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L55">property <b>multi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L53">property <b>multi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1560,12 +1552,12 @@ Filter the results by a specific instance charge type. Valid values: `PrePaid` a
 Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch KVStore instances.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetZonesResult" data-link-title="GetZonesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L60">
         interface <strong>GetZonesResult</strong>
     </a>
 </h3>
@@ -1575,7 +1567,7 @@ Indicate whether the zones can be used in a multi AZ configuration. Default to `
 A collection of values returned by getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1583,7 +1575,7 @@ A collection of values returned by getZones.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L70">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L68">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1591,22 +1583,22 @@ The provider-assigned unique ID for this managed resource.
 A list of zone IDs.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L71">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L69">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-multi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L72">property <b>multi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L70">property <b>multi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L71">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/getZones.ts#L77">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/getZones.ts#L75">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone'>GetZonesZone</a>[];</code></pre>
@@ -1614,7 +1606,7 @@ A list of zone IDs.
 A list of availability zones. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L347">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L347">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -1624,7 +1616,7 @@ A list of availability zones. Each element contains the following attributes:
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L351">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L351">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1632,7 +1624,7 @@ The set of arguments for constructing a Instance resource.
 Whether to renewal a DB instance automatically or not. It is valid when instanceChargeType is `PrePaid`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L355">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L355">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1640,7 +1632,7 @@ Whether to renewal a DB instance automatically or not. It is valid when instance
 Auto-renewal period of an instance, in the unit of the month. It is valid when instanceChargeType is `PrePaid`. Valid value:[1~12], Default to 1.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L359">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L359">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1648,7 +1640,7 @@ Auto-renewal period of an instance, in the unit of the month. It is valid when i
 The Zone to launch the DB instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-backupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L363">property <b>backupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L363">property <b>backupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1656,7 +1648,7 @@ The Zone to launch the DB instance.
 If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L367">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L367">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1664,7 +1656,7 @@ If an instance created based on a backup set generated by another instance is va
 Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L371">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L371">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1672,12 +1664,12 @@ Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8
 Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L372">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L372">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L376">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L376">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1685,7 +1677,7 @@ Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`.
 The name of DB instance. It a string of 2 to 256 characters.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L380">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L380">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1693,7 +1685,7 @@ The name of DB instance. It a string of 2 to 256 characters.
 The engine to use: `Redis` or `Memcache`. Defaults to `Redis`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L384">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L384">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1701,7 +1693,7 @@ The engine to use: `Redis` or `Memcache`. Defaults to `Redis`.
 An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L388">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L388">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1709,7 +1701,7 @@ An KMS encrypts password used to a instance. If the `password` is filled in, thi
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating instance with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L392">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L392">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1717,7 +1709,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L396">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L396">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1725,7 +1717,7 @@ The end time of the operation and maintenance time period of the instance, in th
 The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L400">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L400">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#InstanceParameter'>InstanceParameter</a>&gt;[]&gt;;</code></pre>
@@ -1733,7 +1725,7 @@ The start time of the operation and maintenance time period of the instance, in 
 Set of parameters needs to be set after instance was launched. Available parameters can refer to the latest docs [Instance configurations table](https://www.alibabacloud.com/help/doc-detail/61209.htm) .
 
 <h4 class="pdoc-member-header" id="InstanceArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L404">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L404">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1741,7 +1733,7 @@ Set of parameters needs to be set after instance was launched. Available paramet
 The password of the DB instance. The password is a string of 8 to 30 characters and must contain uppercase letters, lowercase letters, and numbers.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L408">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L408">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1749,7 +1741,7 @@ The password of the DB instance. The password is a string of 8 to 30 characters 
 The duration that you will buy DB instance (in month). It is valid when instanceChargeType is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L412">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L412">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1757,7 +1749,7 @@ The duration that you will buy DB instance (in month). It is valid when instance
 Set the instance's private IP.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L416">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L416">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1765,7 +1757,7 @@ Set the instance's private IP.
 The ID of resource group which the resource belongs.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L420">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L420">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1773,7 +1765,7 @@ The ID of resource group which the resource belongs.
 The Security Group ID of ECS.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-securityIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L424">property <b>securityIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L424">property <b>securityIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1781,7 +1773,7 @@ The Security Group ID of ECS.
 Set the instance's IP whitelist of the default security group.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L428">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L428">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1789,7 +1781,7 @@ Set the instance's IP whitelist of the default security group.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-vpcAuthMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L432">property <b>vpcAuthMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L432">property <b>vpcAuthMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAuthMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1797,7 +1789,7 @@ A mapping of tags to assign to the resource.
 Only meaningful if instanceType is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L436">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L436">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1805,7 +1797,7 @@ Only meaningful if instanceType is `Redis` and network type is VPC. Valid values
 The ID of VSwitch.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L248">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -1815,7 +1807,7 @@ The ID of VSwitch.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L252">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L252">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1823,7 +1815,7 @@ Input properties used for looking up and filtering Instance resources.
 Whether to renewal a DB instance automatically or not. It is valid when instanceChargeType is `PrePaid`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="InstanceState-autoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L256">property <b>autoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L256">property <b>autoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1831,7 +1823,7 @@ Whether to renewal a DB instance automatically or not. It is valid when instance
 Auto-renewal period of an instance, in the unit of the month. It is valid when instanceChargeType is `PrePaid`. Valid value:[1~12], Default to 1.
 
 <h4 class="pdoc-member-header" id="InstanceState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L260">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L260">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1839,7 +1831,7 @@ Auto-renewal period of an instance, in the unit of the month. It is valid when i
 The Zone to launch the DB instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-backupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L264">property <b>backupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L264">property <b>backupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1847,7 +1839,7 @@ The Zone to launch the DB instance.
 If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
 
 <h4 class="pdoc-member-header" id="InstanceState-connectionDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L268">property <b>connectionDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L268">property <b>connectionDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1855,7 +1847,7 @@ If an instance created based on a backup set generated by another instance is va
 Instance connection domain (only Intranet access supported).
 
 <h4 class="pdoc-member-header" id="InstanceState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L272">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L272">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1863,7 +1855,7 @@ Instance connection domain (only Intranet access supported).
 Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L276">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L276">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1871,12 +1863,12 @@ Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8
 Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="InstanceState-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L277">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L277">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L281">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L281">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1884,7 +1876,7 @@ Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`.
 The name of DB instance. It a string of 2 to 256 characters.
 
 <h4 class="pdoc-member-header" id="InstanceState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L285">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L285">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1892,7 +1884,7 @@ The name of DB instance. It a string of 2 to 256 characters.
 The engine to use: `Redis` or `Memcache`. Defaults to `Redis`.
 
 <h4 class="pdoc-member-header" id="InstanceState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L289">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L289">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,7 +1892,7 @@ The engine to use: `Redis` or `Memcache`. Defaults to `Redis`.
 An KMS encrypts password used to a instance. If the `password` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="InstanceState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L293">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L293">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1908,7 +1900,7 @@ An KMS encrypts password used to a instance. If the `password` is filled in, thi
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating instance with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="InstanceState-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L297">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L297">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1916,7 +1908,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceState-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L301">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L301">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1924,7 +1916,7 @@ The end time of the operation and maintenance time period of the instance, in th
 The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L305">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L305">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#InstanceParameter'>InstanceParameter</a>&gt;[]&gt;;</code></pre>
@@ -1932,7 +1924,7 @@ The start time of the operation and maintenance time period of the instance, in 
 Set of parameters needs to be set after instance was launched. Available parameters can refer to the latest docs [Instance configurations table](https://www.alibabacloud.com/help/doc-detail/61209.htm) .
 
 <h4 class="pdoc-member-header" id="InstanceState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L309">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L309">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1940,7 +1932,7 @@ Set of parameters needs to be set after instance was launched. Available paramet
 The password of the DB instance. The password is a string of 8 to 30 characters and must contain uppercase letters, lowercase letters, and numbers.
 
 <h4 class="pdoc-member-header" id="InstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L313">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L313">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1948,7 +1940,7 @@ The password of the DB instance. The password is a string of 8 to 30 characters 
 The duration that you will buy DB instance (in month). It is valid when instanceChargeType is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 
 <h4 class="pdoc-member-header" id="InstanceState-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L317">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L317">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1956,7 +1948,7 @@ The duration that you will buy DB instance (in month). It is valid when instance
 Set the instance's private IP.
 
 <h4 class="pdoc-member-header" id="InstanceState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L321">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L321">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1964,7 +1956,7 @@ Set the instance's private IP.
 The ID of resource group which the resource belongs.
 
 <h4 class="pdoc-member-header" id="InstanceState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L325">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L325">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +1964,7 @@ The ID of resource group which the resource belongs.
 The Security Group ID of ECS.
 
 <h4 class="pdoc-member-header" id="InstanceState-securityIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L329">property <b>securityIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L329">property <b>securityIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1980,7 +1972,7 @@ The Security Group ID of ECS.
 Set the instance's IP whitelist of the default security group.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L333">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L333">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1988,7 +1980,7 @@ Set the instance's IP whitelist of the default security group.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceState-vpcAuthMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L337">property <b>vpcAuthMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L337">property <b>vpcAuthMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcAuthMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1996,7 +1988,7 @@ A mapping of tags to assign to the resource.
 Only meaningful if instanceType is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
 
 <h4 class="pdoc-member-header" id="InstanceState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/kvstore/instance.ts#L341">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/kvstore/instance.ts#L341">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

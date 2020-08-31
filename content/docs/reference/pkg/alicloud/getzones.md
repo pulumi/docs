@@ -46,7 +46,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cloud_ssd"
+		opt1 := "ecs.n4.large"
+		zonesDs, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory: &opt0,
+			AvailableInstanceType: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewInstance(ctx, "instance", &ecs.InstanceArgs{
+			AvailabilityZone: pulumi.String(zonesDs.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,7 +87,7 @@ import pulumi_alicloud as alicloud
 zones_ds = alicloud.get_zones(available_disk_category="cloud_ssd",
     available_instance_type="ecs.n4.large")
 # Create an ECS instance with the first matched zone
-instance = alicloud.ecs.Instance("instance", availability_zone=zones_ds.zones[0]["id"])
+instance = alicloud.ecs.Instance("instance", availability_zone=zones_ds.zones[0].id)
 ```
 
 {{% /example %}}
@@ -95,7 +125,7 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_zones(</span>available_disk_category=None<span class="p">, </span>available_instance_type=None<span class="p">, </span>available_resource_creation=None<span class="p">, </span>available_slb_address_ip_version=None<span class="p">, </span>available_slb_address_type=None<span class="p">, </span>enable_details=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>multi=None<span class="p">, </span>network_type=None<span class="p">, </span>output_file=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zones(</span><span class="nx">available_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_resource_creation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_slb_address_ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_slb_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZonesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1534,8 +1564,8 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span id="availablediskcategories_python">
-<a href="#availablediskcategories_python" style="color: inherit; text-decoration: inherit;">available<wbr>Disk<wbr>Categories</a>
+        <span id="available_disk_categories_python">
+<a href="#available_disk_categories_python" style="color: inherit; text-decoration: inherit;">available_<wbr>disk_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1545,8 +1575,8 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span id="availableinstancetypes_python">
-<a href="#availableinstancetypes_python" style="color: inherit; text-decoration: inherit;">available<wbr>Instance<wbr>Types</a>
+        <span id="available_instance_types_python">
+<a href="#available_instance_types_python" style="color: inherit; text-decoration: inherit;">available_<wbr>instance_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1556,8 +1586,8 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span id="availableresourcecreations_python">
-<a href="#availableresourcecreations_python" style="color: inherit; text-decoration: inherit;">available<wbr>Resource<wbr>Creations</a>
+        <span id="available_resource_creations_python">
+<a href="#available_resource_creations_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resource_<wbr>creations</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1579,8 +1609,8 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span id="localname_python">
-<a href="#localname_python" style="color: inherit; text-decoration: inherit;">local<wbr>Name</a>
+        <span id="local_name_python">
+<a href="#local_name_python" style="color: inherit; text-decoration: inherit;">local_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1590,8 +1620,8 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span id="multizoneids_python">
-<a href="#multizoneids_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
+        <span id="multi_zone_ids_python">
+<a href="#multi_zone_ids_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1601,8 +1631,8 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 
     <dt class="property-required"
             title="Required">
-        <span id="slbslavezoneids_python">
-<a href="#slbslavezoneids_python" style="color: inherit; text-decoration: inherit;">slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+        <span id="slb_slave_zone_ids_python">
+<a href="#slb_slave_zone_ids_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>slave_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1628,6 +1658,6 @@ Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

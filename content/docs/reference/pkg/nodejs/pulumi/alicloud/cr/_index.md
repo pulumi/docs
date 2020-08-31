@@ -3,7 +3,7 @@ title: "Module cr"
 title_tag: "Module cr | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cr"
 meta_desc: "Explore members of the cr module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "defe40500a6bcc54fb2373512cd0091abe87d61b"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Namespace" data-link-title="Namespace">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L28">
         Resource <strong>Namespace</strong>
     </a>
 </h3>
@@ -57,20 +57,20 @@ This resource will help you to manager Container Registry namespaces.
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const myNamespace = new alicloud.cr.Namespace("my-namespace", {
+const my_namespace = new alicloud.cr.Namespace("my-namespace", {
     autoCreate: false,
     defaultVisibility: "PUBLIC",
 });
 ```
 
 <h4 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Create a Namespace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -95,14 +95,14 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Returns true if the given object is an instance of Namespace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Namespace-autoCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L59">property <b>autoCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L59">property <b>autoCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.
 
 <h4 class="pdoc-member-header" id="Namespace-defaultVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L63">property <b>defaultVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L63">property <b>defaultVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultVisibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 `PUBLIC` or `PRIVATE`, default repository visibility in this namespace.
 
 <h4 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Namespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of Container Registry namespace.
 
 <h4 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -155,7 +155,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Repo" data-link-title="Repo">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L36">
         Resource <strong>Repo</strong>
     </a>
 </h3>
@@ -170,17 +170,17 @@ This resource will help you to manager Container Registry repositories.
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const myNamespace = new alicloud.cr.Namespace("my-namespace", {
+const my_namespace = new alicloud.cr.Namespace("my-namespace", {
     autoCreate: false,
     defaultVisibility: "PUBLIC",
 });
-const myRepo = new alicloud.cr.Repo("my-repo", {
+const my_repo = new alicloud.cr.Repo("my-repo", {
     detail: "this is a public repo",
     namespace: my_namespace.name,
     repoType: "PUBLIC",
@@ -189,7 +189,7 @@ const myRepo = new alicloud.cr.Repo("my-repo", {
 ```
 
 <h4 class="pdoc-member-header" id="Repo-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -203,7 +203,7 @@ Create a Repo resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Repo-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -214,14 +214,14 @@ Get an existing Repo resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Repo-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Repo-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -232,7 +232,7 @@ Returns true if the given object is an instance of Repo.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Repo-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L67">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L67">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The repository specific information. MarkDown format is supported, and the length limit is 2000.
 
 <h4 class="pdoc-member-header" id="Repo-domainList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L71">property <b>domainList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L71">property <b>domainList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#RepoDomainList'>RepoDomainList</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ The repository specific information. MarkDown format is supported, and the lengt
 The repository domain list.
 
 <h4 class="pdoc-member-header" id="Repo-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -257,7 +257,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Repo-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of container registry repository.
 
 <h4 class="pdoc-member-header" id="Repo-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L79">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L79">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ Name of container registry repository.
 Name of container registry namespace where repository is located.
 
 <h4 class="pdoc-member-header" id="Repo-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L83">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L83">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repoType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ Name of container registry namespace where repository is located.
 `PUBLIC` or `PRIVATE`, repo's visibility.
 
 <h4 class="pdoc-member-header" id="Repo-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L87">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L87">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>summary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Name of container registry namespace where repository is located.
 The repository general information. It can contain 1 to 80 characters.
 
 <h4 class="pdoc-member-header" id="Repo-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -300,7 +300,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getNamespaces" data-link-title="getNamespaces">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L29">
         Function <strong>getNamespaces</strong>
     </a>
 </h3>
@@ -314,8 +314,6 @@ This data source provides a list Container Registry namespaces on Alibaba Cloud.
 > **NOTE:** Available in v1.35.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -331,7 +329,7 @@ export const output = myNamespaces.namespaces;
 ```
 
 <h3 class="pdoc-module-header" id="getRepos" data-link-title="getRepos">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L29">
         Function <strong>getRepos</strong>
     </a>
 </h3>
@@ -345,8 +343,6 @@ This data source provides a list Container Registry repositories on Alibaba Clou
 > **NOTE:** Available in v1.35.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -364,7 +360,7 @@ export const output = myRepos.repos;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetNamespacesArgs" data-link-title="GetNamespacesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L47">
         interface <strong>GetNamespacesArgs</strong>
     </a>
 </h3>
@@ -374,7 +370,7 @@ export const output = myRepos.repos;
 A collection of arguments for invoking getNamespaces.
 
 <h4 class="pdoc-member-header" id="GetNamespacesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L53">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L51">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -382,12 +378,12 @@ A collection of arguments for invoking getNamespaces.
 A regex string to filter results by namespace name.
 
 <h4 class="pdoc-member-header" id="GetNamespacesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L54">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L52">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetNamespacesResult" data-link-title="GetNamespacesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L58">
         interface <strong>GetNamespacesResult</strong>
     </a>
 </h3>
@@ -397,7 +393,7 @@ A regex string to filter results by namespace name.
 A collection of values returned by getNamespaces.
 
 <h4 class="pdoc-member-header" id="GetNamespacesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -405,7 +401,7 @@ A collection of values returned by getNamespaces.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNamespacesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L68">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L66">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -413,12 +409,12 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Container Registry namespaces. Its element is a namespace name.
 
 <h4 class="pdoc-member-header" id="GetNamespacesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L69">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L67">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNamespacesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L73">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L71">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -426,7 +422,7 @@ A list of matched Container Registry namespaces. Its element is a namespace name
 A list of namespace names.
 
 <h4 class="pdoc-member-header" id="GetNamespacesResult-namespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L77">property <b>namespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L75">property <b>namespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaces: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNamespacesNamespace'>GetNamespacesNamespace</a>[];</code></pre>
@@ -434,12 +430,12 @@ A list of namespace names.
 A list of matched Container Registry namespaces. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetNamespacesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getNamespaces.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getNamespaces.ts#L76">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetReposArgs" data-link-title="GetReposArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L49">
         interface <strong>GetReposArgs</strong>
     </a>
 </h3>
@@ -449,7 +445,7 @@ A list of matched Container Registry namespaces. Each element contains the follo
 A collection of arguments for invoking getRepos.
 
 <h4 class="pdoc-member-header" id="GetReposArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L55">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L53">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -457,7 +453,7 @@ A collection of arguments for invoking getRepos.
 Boolean, false by default, only repository attributes are exported. Set to true if domain list and tags belong to this repository are needed. See `tags` in attributes.
 
 <h4 class="pdoc-member-header" id="GetReposArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L59">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -465,7 +461,7 @@ Boolean, false by default, only repository attributes are exported. Set to true 
 A regex string to filter results by repository name.
 
 <h4 class="pdoc-member-header" id="GetReposArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L63">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L61">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -473,12 +469,12 @@ A regex string to filter results by repository name.
 Name of container registry namespace where the repositories are located in.
 
 <h4 class="pdoc-member-header" id="GetReposArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L64">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L62">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetReposResult" data-link-title="GetReposResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L68">
         interface <strong>GetReposResult</strong>
     </a>
 </h3>
@@ -488,12 +484,12 @@ Name of container registry namespace where the repositories are located in.
 A collection of values returned by getRepos.
 
 <h4 class="pdoc-member-header" id="GetReposResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L71">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L69">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetReposResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -501,7 +497,7 @@ A collection of values returned by getRepos.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetReposResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L77">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -509,12 +505,12 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Container Registry Repositories. Its element is set to `names`.
 
 <h4 class="pdoc-member-header" id="GetReposResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L78">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetReposResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L84">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -522,7 +518,7 @@ A list of matched Container Registry Repositories. Its element is set to `names`
 A list of repository names.
 
 <h4 class="pdoc-member-header" id="GetReposResult-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L88">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L86">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -530,12 +526,12 @@ A list of repository names.
 Name of container registry namespace where repo is located.
 
 <h4 class="pdoc-member-header" id="GetReposResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L89">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L87">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetReposResult-repos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/getRepos.ts#L93">property <b>repos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/getRepos.ts#L91">property <b>repos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repos: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetReposRepo'>GetReposRepo</a>[];</code></pre>
@@ -543,7 +539,7 @@ Name of container registry namespace where repo is located.
 A list of matched Container Registry Namespaces. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="NamespaceArgs" data-link-title="NamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L128">
         interface <strong>NamespaceArgs</strong>
     </a>
 </h3>
@@ -553,7 +549,7 @@ A list of matched Container Registry Namespaces. Each element contains the follo
 The set of arguments for constructing a Namespace resource.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-autoCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L132">property <b>autoCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L132">property <b>autoCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -561,7 +557,7 @@ The set of arguments for constructing a Namespace resource.
 Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-defaultVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L136">property <b>defaultVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L136">property <b>defaultVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVisibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +565,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 `PUBLIC` or `PRIVATE`, default repository visibility in this namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +573,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 Name of Container Registry namespace.
 
 <h3 class="pdoc-module-header" id="NamespaceState" data-link-title="NamespaceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L110">
         interface <strong>NamespaceState</strong>
     </a>
 </h3>
@@ -587,7 +583,7 @@ Name of Container Registry namespace.
 Input properties used for looking up and filtering Namespace resources.
 
 <h4 class="pdoc-member-header" id="NamespaceState-autoCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L114">property <b>autoCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L114">property <b>autoCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -595,7 +591,7 @@ Input properties used for looking up and filtering Namespace resources.
 Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.
 
 <h4 class="pdoc-member-header" id="NamespaceState-defaultVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L118">property <b>defaultVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L118">property <b>defaultVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVisibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -603,7 +599,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 `PUBLIC` or `PRIVATE`, default repository visibility in this namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/namespace.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/namespace.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +607,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 Name of Container Registry namespace.
 
 <h3 class="pdoc-module-header" id="RepoArgs" data-link-title="RepoArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L169">
         interface <strong>RepoArgs</strong>
     </a>
 </h3>
@@ -621,7 +617,7 @@ Name of Container Registry namespace.
 The set of arguments for constructing a Repo resource.
 
 <h4 class="pdoc-member-header" id="RepoArgs-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L173">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L173">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +625,7 @@ The set of arguments for constructing a Repo resource.
 The repository specific information. MarkDown format is supported, and the length limit is 2000.
 
 <h4 class="pdoc-member-header" id="RepoArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +633,7 @@ The repository specific information. MarkDown format is supported, and the lengt
 Name of container registry repository.
 
 <h4 class="pdoc-member-header" id="RepoArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L181">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L181">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -645,7 +641,7 @@ Name of container registry repository.
 Name of container registry namespace where repository is located.
 
 <h4 class="pdoc-member-header" id="RepoArgs-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L185">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L185">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -653,7 +649,7 @@ Name of container registry namespace where repository is located.
 `PUBLIC` or `PRIVATE`, repo's visibility.
 
 <h4 class="pdoc-member-header" id="RepoArgs-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L189">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L189">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>summary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -661,7 +657,7 @@ Name of container registry namespace where repository is located.
 The repository general information. It can contain 1 to 80 characters.
 
 <h3 class="pdoc-module-header" id="RepoState" data-link-title="RepoState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L139">
         interface <strong>RepoState</strong>
     </a>
 </h3>
@@ -671,7 +667,7 @@ The repository general information. It can contain 1 to 80 characters.
 Input properties used for looking up and filtering Repo resources.
 
 <h4 class="pdoc-member-header" id="RepoState-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L143">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L143">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -679,7 +675,7 @@ Input properties used for looking up and filtering Repo resources.
 The repository specific information. MarkDown format is supported, and the length limit is 2000.
 
 <h4 class="pdoc-member-header" id="RepoState-domainList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L147">property <b>domainList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L147">property <b>domainList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#RepoDomainList'>RepoDomainList</a>&gt;;</code></pre>
@@ -687,7 +683,7 @@ The repository specific information. MarkDown format is supported, and the lengt
 The repository domain list.
 
 <h4 class="pdoc-member-header" id="RepoState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -695,7 +691,7 @@ The repository domain list.
 Name of container registry repository.
 
 <h4 class="pdoc-member-header" id="RepoState-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L155">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L155">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -703,7 +699,7 @@ Name of container registry repository.
 Name of container registry namespace where repository is located.
 
 <h4 class="pdoc-member-header" id="RepoState-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L159">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L159">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +707,7 @@ Name of container registry namespace where repository is located.
 `PUBLIC` or `PRIVATE`, repo's visibility.
 
 <h4 class="pdoc-member-header" id="RepoState-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cr/repo.ts#L163">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cr/repo.ts#L163">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>summary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

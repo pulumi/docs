@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the mongodb module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/mongodb/#pulumi_alicloud.mongodb.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>db_instance_storage=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>maintain_end_time=None<span class="p">, </span>maintain_start_time=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>replication_factor=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>ssl_action=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/mongodb/#pulumi_alicloud.mongodb.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_instance_storage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">replication_factor</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_ip_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ssl_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -437,7 +437,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -690,7 +690,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -943,7 +943,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1049,7 +1049,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 <a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
 {{% /md %}}</dd>
@@ -1159,7 +1159,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1196,7 +1196,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1429,7 +1429,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>db_instance_storage=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>maintain_end_time=None<span class="p">, </span>maintain_start_time=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>replica_set_name=None<span class="p">, </span>replication_factor=None<span class="p">, </span>retention_period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>ssl_action=None<span class="p">, </span>ssl_status=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_instance_storage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">replica_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_factor</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_ip_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ssl_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1437,7 +1438,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MongoDB.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1819,7 +1820,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2105,7 +2106,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2391,7 +2392,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2497,7 +2498,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 <a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
 {{% /md %}}</dd>
@@ -2640,7 +2641,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2677,7 +2678,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. it supports multiple zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud..getZones`.
+The multiple zone ID can be retrieved by setting `multi` to "true" in the data source `alicloud.getZones`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2700,6 +2701,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

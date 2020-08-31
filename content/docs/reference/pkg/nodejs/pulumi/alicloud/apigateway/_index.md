@@ -3,7 +3,7 @@ title: "Module apigateway"
 title_tag: "Module apigateway | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "apigateway"
 meta_desc: "Explore members of the apigateway module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "defe40500a6bcc54fb2373512cd0091abe87d61b"
 block_external_search_index: true
 ---
 
@@ -54,14 +54,14 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Api" data-link-title="Api">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L9">
         Resource <strong>Api</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Api</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Api-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -75,7 +75,7 @@ Create a Api resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Api-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -86,14 +86,14 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Api-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Api-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -104,7 +104,7 @@ Returns true if the given object is an instance of Api.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Api-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L40">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L40">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,7 +112,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the api of api gateway.
 
 <h4 class="pdoc-member-header" id="Api-authType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L44">property <b>authType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L44">property <b>authType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ The ID of the api of api gateway.
 The authorization Type including APP and ANONYMOUS. Defaults to null.
 
 <h4 class="pdoc-member-header" id="Api-constantParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L48">property <b>constantParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L48">property <b>constantParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>constantParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiConstantParameter'>ApiConstantParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ The authorization Type including APP and ANONYMOUS. Defaults to null.
 constant_parameters defines the constant parameters of the api.
 
 <h4 class="pdoc-member-header" id="Api-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -136,7 +136,7 @@ constant_parameters defines the constant parameters of the api.
 The description of Constant parameter.
 
 <h4 class="pdoc-member-header" id="Api-fcServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L56">property <b>fcServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L56">property <b>fcServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fcServiceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiFcServiceConfig'>ApiFcServiceConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ The description of Constant parameter.
 fc_service_config defines the config when serviceType selected 'FunctionCompute'.
 
 <h4 class="pdoc-member-header" id="Api-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L60">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L60">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ fc_service_config defines the config when serviceType selected 'FunctionCompute'
 The api gateway that the api belongs to. Defaults to null.
 
 <h4 class="pdoc-member-header" id="Api-httpServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L64">property <b>httpServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L64">property <b>httpServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpServiceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiHttpServiceConfig'>ApiHttpServiceConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ The api gateway that the api belongs to. Defaults to null.
 http_service_config defines the config when serviceType selected 'HTTP'.
 
 <h4 class="pdoc-member-header" id="Api-httpVpcServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L68">property <b>httpVpcServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L68">property <b>httpVpcServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpVpcServiceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiHttpVpcServiceConfig'>ApiHttpVpcServiceConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ http_service_config defines the config when serviceType selected 'HTTP'.
 http_vpc_service_config defines the config when serviceType selected 'HTTP-VPC'.
 
 <h4 class="pdoc-member-header" id="Api-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -177,7 +177,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Api-mockServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L72">property <b>mockServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L72">property <b>mockServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mockServiceConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiMockServiceConfig'>ApiMockServiceConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ deployments and may be missing (undefined) during planning phases.
 http_service_config defines the config when serviceType selected 'MOCK'.
 
 <h4 class="pdoc-member-header" id="Api-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ http_service_config defines the config when serviceType selected 'MOCK'.
 System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 
 <h4 class="pdoc-member-header" id="Api-requestConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L80">property <b>requestConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L80">property <b>requestConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiRequestConfig'>ApiRequestConfig</a>&gt;;</code></pre>
@@ -201,7 +201,7 @@ System parameter name which supports values including in [system parameter list]
 Request_config defines how users can send requests to your API.
 
 <h4 class="pdoc-member-header" id="Api-requestParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L84">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L84">property <b>requestParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiRequestParameter'>ApiRequestParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ Request_config defines how users can send requests to your API.
 request_parameters defines the request parameters of the api.
 
 <h4 class="pdoc-member-header" id="Api-serviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L88">property <b>serviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L88">property <b>serviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ request_parameters defines the request parameters of the api.
 The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 
 <h4 class="pdoc-member-header" id="Api-stageNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L92">property <b>stageNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L92">property <b>stageNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stageNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 
 <h4 class="pdoc-member-header" id="Api-systemParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L96">property <b>systemParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L96">property <b>systemParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApiSystemParameter'>ApiSystemParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 system_parameters defines the system parameters of the api.
 
 <h4 class="pdoc-member-header" id="Api-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -242,14 +242,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="App" data-link-title="App">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L7">
         Resource <strong>App</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>App</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="App-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L46"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L46"> <b>constructor</b></a>
 </h4>
 
 
@@ -263,7 +263,7 @@ Create a App resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="App-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -274,14 +274,14 @@ Get an existing App resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="App-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="App-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -292,7 +292,7 @@ Returns true if the given object is an instance of App.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="App-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L38">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L38">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the app. Defaults to null.
 
 <h4 class="pdoc-member-header" id="App-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -309,7 +309,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="App-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the app.
 
 <h4 class="pdoc-member-header" id="App-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L46">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L46">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ The name of the app.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="App-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -334,14 +334,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AppAttachment" data-link-title="AppAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L7">
         Resource <strong>AppAttachment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>AppAttachment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="AppAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
@@ -355,7 +355,7 @@ Create a AppAttachment resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AppAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -366,14 +366,14 @@ Get an existing AppAttachment resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AppAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AppAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -384,7 +384,7 @@ Returns true if the given object is an instance of AppAttachment.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AppAttachment-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L38">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L38">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -392,7 +392,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The apiId that app apply to access.
 
 <h4 class="pdoc-member-header" id="AppAttachment-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L42">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L42">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ The apiId that app apply to access.
 The app that apply to the authorization.
 
 <h4 class="pdoc-member-header" id="AppAttachment-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L46">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L46">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -408,7 +408,7 @@ The app that apply to the authorization.
 The group that the api belongs to.
 
 <h4 class="pdoc-member-header" id="AppAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -417,7 +417,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AppAttachment-stageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L50">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L50">property <b>stageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ deployments and may be missing (undefined) during planning phases.
 Stage that the app apply to access.
 
 <h4 class="pdoc-member-header" id="AppAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -434,14 +434,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L7">
         Resource <strong>Group</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Group</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
@@ -455,7 +455,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -466,14 +466,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -484,7 +484,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L38">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L38">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the api gateway group. Defaults to null.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -501,7 +501,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the api gateway group. Defaults to null.
 
 <h4 class="pdoc-member-header" id="Group-subDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L46">property <b>subDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L46">property <b>subDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The name of the api gateway group. Defaults to null.
 (Available in 1.69.0+)	Second-level domain name automatically assigned to the API group.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -526,7 +526,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Group-vpcDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L50">property <b>vpcDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L50">property <b>vpcDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,14 +534,14 @@ deployments.
 (Available in 1.69.0+)	Second-level VPC domain name automatically assigned to the API group.
 
 <h3 class="pdoc-module-header" id="VpcAccess" data-link-title="VpcAccess">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L7">
         Resource <strong>VpcAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>VpcAccess</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="VpcAccess-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
@@ -555,7 +555,7 @@ Create a VpcAccess resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcAccess-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -566,14 +566,14 @@ Get an existing VpcAccess resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcAccess-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcAccess-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -584,7 +584,7 @@ Returns true if the given object is an instance of VpcAccess.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcAccess-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -593,7 +593,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcAccess-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L38">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L38">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +601,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the instance in VPC (ECS/Server Load Balance).
 
 <h4 class="pdoc-member-header" id="VpcAccess-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ ID of the instance in VPC (ECS/Server Load Balance).
 The name of the vpc authorization.
 
 <h4 class="pdoc-member-header" id="VpcAccess-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L46">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L46">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -617,7 +617,7 @@ The name of the vpc authorization.
 ID of the port corresponding to the instance.
 
 <h4 class="pdoc-member-header" id="VpcAccess-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -626,7 +626,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VpcAccess-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L50">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L50">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ The vpc id of the vpc authorization.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getApis" data-link-title="getApis">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L25">
         Function <strong>getApis</strong>
     </a>
 </h3>
@@ -648,8 +648,6 @@ The vpc id of the vpc authorization.
 This data source provides the apis of the current Alibaba Cloud user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -663,7 +661,7 @@ export const firstApiId = alicloud_api_gateway_apis_data_apigatway.apis.0.id;
 ```
 
 <h3 class="pdoc-module-header" id="getApps" data-link-title="getApps">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L25">
         Function <strong>getApps</strong>
     </a>
 </h3>
@@ -675,8 +673,6 @@ export const firstApiId = alicloud_api_gateway_apis_data_apigatway.apis.0.id;
 This data source provides the apps of the current Alibaba Cloud user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -690,7 +686,7 @@ export const firstAppId = dataApigatway.apps[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getGroups" data-link-title="getGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L25">
         Function <strong>getGroups</strong>
     </a>
 </h3>
@@ -702,8 +698,6 @@ export const firstAppId = dataApigatway.apps[0].id;
 This data source provides the api groups of the current Alibaba Cloud user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -719,7 +713,7 @@ export const firstGroupId = dataApigatway.groups[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApiArgs" data-link-title="ApiArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L238">
         interface <strong>ApiArgs</strong>
     </a>
 </h3>
@@ -729,7 +723,7 @@ export const firstGroupId = dataApigatway.groups[0].id;
 The set of arguments for constructing a Api resource.
 
 <h4 class="pdoc-member-header" id="ApiArgs-authType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L242">property <b>authType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L242">property <b>authType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +731,7 @@ The set of arguments for constructing a Api resource.
 The authorization Type including APP and ANONYMOUS. Defaults to null.
 
 <h4 class="pdoc-member-header" id="ApiArgs-constantParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L246">property <b>constantParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L246">property <b>constantParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>constantParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiConstantParameter'>ApiConstantParameter</a>&gt;[]&gt;;</code></pre>
@@ -745,7 +739,7 @@ The authorization Type including APP and ANONYMOUS. Defaults to null.
 constant_parameters defines the constant parameters of the api.
 
 <h4 class="pdoc-member-header" id="ApiArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L250">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L250">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +747,7 @@ constant_parameters defines the constant parameters of the api.
 The description of Constant parameter.
 
 <h4 class="pdoc-member-header" id="ApiArgs-fcServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L254">property <b>fcServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L254">property <b>fcServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fcServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiFcServiceConfig'>ApiFcServiceConfig</a>&gt;;</code></pre>
@@ -761,7 +755,7 @@ The description of Constant parameter.
 fc_service_config defines the config when serviceType selected 'FunctionCompute'.
 
 <h4 class="pdoc-member-header" id="ApiArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L258">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L258">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +763,7 @@ fc_service_config defines the config when serviceType selected 'FunctionCompute'
 The api gateway that the api belongs to. Defaults to null.
 
 <h4 class="pdoc-member-header" id="ApiArgs-httpServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L262">property <b>httpServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L262">property <b>httpServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiHttpServiceConfig'>ApiHttpServiceConfig</a>&gt;;</code></pre>
@@ -777,7 +771,7 @@ The api gateway that the api belongs to. Defaults to null.
 http_service_config defines the config when serviceType selected 'HTTP'.
 
 <h4 class="pdoc-member-header" id="ApiArgs-httpVpcServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L266">property <b>httpVpcServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L266">property <b>httpVpcServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpVpcServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiHttpVpcServiceConfig'>ApiHttpVpcServiceConfig</a>&gt;;</code></pre>
@@ -785,7 +779,7 @@ http_service_config defines the config when serviceType selected 'HTTP'.
 http_vpc_service_config defines the config when serviceType selected 'HTTP-VPC'.
 
 <h4 class="pdoc-member-header" id="ApiArgs-mockServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L270">property <b>mockServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L270">property <b>mockServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mockServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiMockServiceConfig'>ApiMockServiceConfig</a>&gt;;</code></pre>
@@ -793,7 +787,7 @@ http_vpc_service_config defines the config when serviceType selected 'HTTP-VPC'.
 http_service_config defines the config when serviceType selected 'MOCK'.
 
 <h4 class="pdoc-member-header" id="ApiArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L274">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L274">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -801,7 +795,7 @@ http_service_config defines the config when serviceType selected 'MOCK'.
 System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 
 <h4 class="pdoc-member-header" id="ApiArgs-requestConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L278">property <b>requestConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L278">property <b>requestConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiRequestConfig'>ApiRequestConfig</a>&gt;;</code></pre>
@@ -809,7 +803,7 @@ System parameter name which supports values including in [system parameter list]
 Request_config defines how users can send requests to your API.
 
 <h4 class="pdoc-member-header" id="ApiArgs-requestParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L282">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L282">property <b>requestParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiRequestParameter'>ApiRequestParameter</a>&gt;[]&gt;;</code></pre>
@@ -817,7 +811,7 @@ Request_config defines how users can send requests to your API.
 request_parameters defines the request parameters of the api.
 
 <h4 class="pdoc-member-header" id="ApiArgs-serviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L286">property <b>serviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L286">property <b>serviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +819,7 @@ request_parameters defines the request parameters of the api.
 The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 
 <h4 class="pdoc-member-header" id="ApiArgs-stageNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L290">property <b>stageNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L290">property <b>stageNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stageNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -833,7 +827,7 @@ The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 
 <h4 class="pdoc-member-header" id="ApiArgs-systemParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L294">property <b>systemParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L294">property <b>systemParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiSystemParameter'>ApiSystemParameter</a>&gt;[]&gt;;</code></pre>
@@ -841,7 +835,7 @@ Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 system_parameters defines the system parameters of the api.
 
 <h3 class="pdoc-module-header" id="ApiState" data-link-title="ApiState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L172">
         interface <strong>ApiState</strong>
     </a>
 </h3>
@@ -851,7 +845,7 @@ system_parameters defines the system parameters of the api.
 Input properties used for looking up and filtering Api resources.
 
 <h4 class="pdoc-member-header" id="ApiState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L176">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L176">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -859,7 +853,7 @@ Input properties used for looking up and filtering Api resources.
 The ID of the api of api gateway.
 
 <h4 class="pdoc-member-header" id="ApiState-authType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L180">property <b>authType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L180">property <b>authType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -867,7 +861,7 @@ The ID of the api of api gateway.
 The authorization Type including APP and ANONYMOUS. Defaults to null.
 
 <h4 class="pdoc-member-header" id="ApiState-constantParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L184">property <b>constantParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L184">property <b>constantParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>constantParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiConstantParameter'>ApiConstantParameter</a>&gt;[]&gt;;</code></pre>
@@ -875,7 +869,7 @@ The authorization Type including APP and ANONYMOUS. Defaults to null.
 constant_parameters defines the constant parameters of the api.
 
 <h4 class="pdoc-member-header" id="ApiState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L188">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L188">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -883,7 +877,7 @@ constant_parameters defines the constant parameters of the api.
 The description of Constant parameter.
 
 <h4 class="pdoc-member-header" id="ApiState-fcServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L192">property <b>fcServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L192">property <b>fcServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fcServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiFcServiceConfig'>ApiFcServiceConfig</a>&gt;;</code></pre>
@@ -891,7 +885,7 @@ The description of Constant parameter.
 fc_service_config defines the config when serviceType selected 'FunctionCompute'.
 
 <h4 class="pdoc-member-header" id="ApiState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L196">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L196">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -899,7 +893,7 @@ fc_service_config defines the config when serviceType selected 'FunctionCompute'
 The api gateway that the api belongs to. Defaults to null.
 
 <h4 class="pdoc-member-header" id="ApiState-httpServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L200">property <b>httpServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L200">property <b>httpServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiHttpServiceConfig'>ApiHttpServiceConfig</a>&gt;;</code></pre>
@@ -907,7 +901,7 @@ The api gateway that the api belongs to. Defaults to null.
 http_service_config defines the config when serviceType selected 'HTTP'.
 
 <h4 class="pdoc-member-header" id="ApiState-httpVpcServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L204">property <b>httpVpcServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L204">property <b>httpVpcServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpVpcServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiHttpVpcServiceConfig'>ApiHttpVpcServiceConfig</a>&gt;;</code></pre>
@@ -915,7 +909,7 @@ http_service_config defines the config when serviceType selected 'HTTP'.
 http_vpc_service_config defines the config when serviceType selected 'HTTP-VPC'.
 
 <h4 class="pdoc-member-header" id="ApiState-mockServiceConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L208">property <b>mockServiceConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L208">property <b>mockServiceConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mockServiceConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiMockServiceConfig'>ApiMockServiceConfig</a>&gt;;</code></pre>
@@ -923,7 +917,7 @@ http_vpc_service_config defines the config when serviceType selected 'HTTP-VPC'.
 http_service_config defines the config when serviceType selected 'MOCK'.
 
 <h4 class="pdoc-member-header" id="ApiState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L212">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -931,7 +925,7 @@ http_service_config defines the config when serviceType selected 'MOCK'.
 System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 
 <h4 class="pdoc-member-header" id="ApiState-requestConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L216">property <b>requestConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L216">property <b>requestConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiRequestConfig'>ApiRequestConfig</a>&gt;;</code></pre>
@@ -939,7 +933,7 @@ System parameter name which supports values including in [system parameter list]
 Request_config defines how users can send requests to your API.
 
 <h4 class="pdoc-member-header" id="ApiState-requestParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L220">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L220">property <b>requestParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiRequestParameter'>ApiRequestParameter</a>&gt;[]&gt;;</code></pre>
@@ -947,7 +941,7 @@ Request_config defines how users can send requests to your API.
 request_parameters defines the request parameters of the api.
 
 <h4 class="pdoc-member-header" id="ApiState-serviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L224">property <b>serviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L224">property <b>serviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -955,7 +949,7 @@ request_parameters defines the request parameters of the api.
 The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 
 <h4 class="pdoc-member-header" id="ApiState-stageNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L228">property <b>stageNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L228">property <b>stageNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stageNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -963,7 +957,7 @@ The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 
 <h4 class="pdoc-member-header" id="ApiState-systemParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/api.ts#L232">property <b>systemParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/api.ts#L232">property <b>systemParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApiSystemParameter'>ApiSystemParameter</a>&gt;[]&gt;;</code></pre>
@@ -971,7 +965,7 @@ Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 system_parameters defines the system parameters of the api.
 
 <h3 class="pdoc-module-header" id="AppArgs" data-link-title="AppArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L101">
         interface <strong>AppArgs</strong>
     </a>
 </h3>
@@ -981,7 +975,7 @@ system_parameters defines the system parameters of the api.
 The set of arguments for constructing a App resource.
 
 <h4 class="pdoc-member-header" id="AppArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L105">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -989,7 +983,7 @@ The set of arguments for constructing a App resource.
 The description of the app. Defaults to null.
 
 <h4 class="pdoc-member-header" id="AppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -997,7 +991,7 @@ The description of the app. Defaults to null.
 The name of the app.
 
 <h4 class="pdoc-member-header" id="AppArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L113">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L113">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1005,7 +999,7 @@ The name of the app.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="AppAttachmentArgs" data-link-title="AppAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L123">
         interface <strong>AppAttachmentArgs</strong>
     </a>
 </h3>
@@ -1015,7 +1009,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a AppAttachment resource.
 
 <h4 class="pdoc-member-header" id="AppAttachmentArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L127">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L127">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1023,7 +1017,7 @@ The set of arguments for constructing a AppAttachment resource.
 The apiId that app apply to access.
 
 <h4 class="pdoc-member-header" id="AppAttachmentArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L131">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L131">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1031,7 +1025,7 @@ The apiId that app apply to access.
 The app that apply to the authorization.
 
 <h4 class="pdoc-member-header" id="AppAttachmentArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L135">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L135">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1039,7 +1033,7 @@ The app that apply to the authorization.
 The group that the api belongs to.
 
 <h4 class="pdoc-member-header" id="AppAttachmentArgs-stageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L139">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L139">property <b>stageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1047,7 +1041,7 @@ The group that the api belongs to.
 Stage that the app apply to access.
 
 <h3 class="pdoc-module-header" id="AppAttachmentState" data-link-title="AppAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L101">
         interface <strong>AppAttachmentState</strong>
     </a>
 </h3>
@@ -1057,7 +1051,7 @@ Stage that the app apply to access.
 Input properties used for looking up and filtering AppAttachment resources.
 
 <h4 class="pdoc-member-header" id="AppAttachmentState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L105">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L105">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1065,7 +1059,7 @@ Input properties used for looking up and filtering AppAttachment resources.
 The apiId that app apply to access.
 
 <h4 class="pdoc-member-header" id="AppAttachmentState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L109">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L109">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1073,7 +1067,7 @@ The apiId that app apply to access.
 The app that apply to the authorization.
 
 <h4 class="pdoc-member-header" id="AppAttachmentState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L113">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L113">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1075,7 @@ The app that apply to the authorization.
 The group that the api belongs to.
 
 <h4 class="pdoc-member-header" id="AppAttachmentState-stageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/appAttachment.ts#L117">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/appAttachment.ts#L117">property <b>stageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1089,7 +1083,7 @@ The group that the api belongs to.
 Stage that the app apply to access.
 
 <h3 class="pdoc-module-header" id="AppState" data-link-title="AppState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L83">
         interface <strong>AppState</strong>
     </a>
 </h3>
@@ -1099,7 +1093,7 @@ Stage that the app apply to access.
 Input properties used for looking up and filtering App resources.
 
 <h4 class="pdoc-member-header" id="AppState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L87">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L87">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +1101,7 @@ Input properties used for looking up and filtering App resources.
 The description of the app. Defaults to null.
 
 <h4 class="pdoc-member-header" id="AppState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +1109,7 @@ The description of the app. Defaults to null.
 The name of the app.
 
 <h4 class="pdoc-member-header" id="AppState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/app.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/app.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1123,7 +1117,7 @@ The name of the app.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetApisArgs" data-link-title="GetApisArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L46">
         interface <strong>GetApisArgs</strong>
     </a>
 </h3>
@@ -1133,7 +1127,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getApis.
 
 <h4 class="pdoc-member-header" id="GetApisArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L54">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L52">property <b>apiId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1145,7 +1139,7 @@ Field &#39;api_id&#39; has been deprecated from provider version 1.52.2. New fie
 (It has been deprecated from version 1.52.2, and use field 'ids' to replace.) ID of the specified API.
 
 <h4 class="pdoc-member-header" id="GetApisArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L58">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L56">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1153,7 +1147,7 @@ Field &#39;api_id&#39; has been deprecated from provider version 1.52.2. New fie
 ID of the specified group.
 
 <h4 class="pdoc-member-header" id="GetApisArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L62">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L60">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1161,7 +1155,7 @@ ID of the specified group.
 A list of api IDs.
 
 <h4 class="pdoc-member-header" id="GetApisArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L66">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L64">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1169,12 +1163,12 @@ A list of api IDs.
 A regex string to filter api gateway apis by name.
 
 <h4 class="pdoc-member-header" id="GetApisArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L67">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L65">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetApisResult" data-link-title="GetApisResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L71">
         interface <strong>GetApisResult</strong>
     </a>
 </h3>
@@ -1184,7 +1178,7 @@ A regex string to filter api gateway apis by name.
 A collection of values returned by getApis.
 
 <h4 class="pdoc-member-header" id="GetApisResult-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L77">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L75">property <b>apiId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1193,7 +1187,7 @@ Field &#39;api_id&#39; has been deprecated from provider version 1.52.2. New fie
 </div>
 <pre class="highlight"><code><span class='kd'></span>apiId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApisResult-apis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L81">property <b>apis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L79">property <b>apis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apis: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetApisApi'>GetApisApi</a>[];</code></pre>
@@ -1201,7 +1195,7 @@ Field &#39;api_id&#39; has been deprecated from provider version 1.52.2. New fie
 A list of apis. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetApisResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L85">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L83">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1209,7 +1203,7 @@ A list of apis. Each element contains the following attributes:
 The group id that the apis belong to.
 
 <h4 class="pdoc-member-header" id="GetApisResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1217,7 +1211,7 @@ The group id that the apis belong to.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetApisResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L93">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L91">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1225,12 +1219,12 @@ The provider-assigned unique ID for this managed resource.
 A list of api IDs.
 
 <h4 class="pdoc-member-header" id="GetApisResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L94">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L92">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApisResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L98">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L96">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1238,12 +1232,12 @@ A list of api IDs.
 A list of api names.
 
 <h4 class="pdoc-member-header" id="GetApisResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApis.ts#L99">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApis.ts#L97">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAppsArgs" data-link-title="GetAppsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L45">
         interface <strong>GetAppsArgs</strong>
     </a>
 </h3>
@@ -1253,7 +1247,7 @@ A list of api names.
 A collection of arguments for invoking getApps.
 
 <h4 class="pdoc-member-header" id="GetAppsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L51">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L49">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1261,7 +1255,7 @@ A collection of arguments for invoking getApps.
 A list of app IDs.
 
 <h4 class="pdoc-member-header" id="GetAppsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L53">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1269,12 +1263,12 @@ A list of app IDs.
 A regex string to filter apps by name.
 
 <h4 class="pdoc-member-header" id="GetAppsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAppsArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L60">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L58">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1282,7 +1276,7 @@ A regex string to filter apps by name.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetAppsResult" data-link-title="GetAppsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L64">
         interface <strong>GetAppsResult</strong>
     </a>
 </h3>
@@ -1292,7 +1286,7 @@ A mapping of tags to assign to the resource.
 A collection of values returned by getApps.
 
 <h4 class="pdoc-member-header" id="GetAppsResult-apps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L70">property <b>apps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L68">property <b>apps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apps: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAppsApp'>GetAppsApp</a>[];</code></pre>
@@ -1300,7 +1294,7 @@ A collection of values returned by getApps.
 A list of apps. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAppsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1308,7 +1302,7 @@ A list of apps. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAppsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L76">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1316,12 +1310,12 @@ The provider-assigned unique ID for this managed resource.
 A list of app IDs.
 
 <h4 class="pdoc-member-header" id="GetAppsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L77">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAppsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L81">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1329,17 +1323,17 @@ A list of app IDs.
 A list of app names.
 
 <h4 class="pdoc-member-header" id="GetAppsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L82">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAppsResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getApps.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getApps.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetGroupsArgs" data-link-title="GetGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L44">
         interface <strong>GetGroupsArgs</strong>
     </a>
 </h3>
@@ -1349,7 +1343,7 @@ A list of app names.
 A collection of arguments for invoking getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L50">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L48">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1357,7 +1351,7 @@ A collection of arguments for invoking getGroups.
 A list of api group IDs.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L54">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L52">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1365,12 +1359,12 @@ A list of api group IDs.
 A regex string to filter api gateway groups by name.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L55">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetGroupsResult" data-link-title="GetGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L59">
         interface <strong>GetGroupsResult</strong>
     </a>
 </h3>
@@ -1380,7 +1374,7 @@ A regex string to filter api gateway groups by name.
 A collection of values returned by getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L65">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L63">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup'>GetGroupsGroup</a>[];</code></pre>
@@ -1388,7 +1382,7 @@ A collection of values returned by getGroups.
 A list of api groups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1396,7 +1390,7 @@ A list of api groups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L73">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L71">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1404,12 +1398,12 @@ The provider-assigned unique ID for this managed resource.
 A list of api group IDs.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L74">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L72">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L78">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L76">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1417,12 +1411,12 @@ A list of api group IDs.
 A list of api group names.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/getGroups.ts#L79">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/getGroups.ts#L77">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L114">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -1432,7 +1426,7 @@ A list of api group names.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1440,7 +1434,7 @@ The set of arguments for constructing a Group resource.
 The description of the api gateway group. Defaults to null.
 
 <h4 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1448,7 +1442,7 @@ The description of the api gateway group. Defaults to null.
 The name of the api gateway group. Defaults to null.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L92">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -1458,7 +1452,7 @@ The name of the api gateway group. Defaults to null.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L96">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L96">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1466,7 +1460,7 @@ Input properties used for looking up and filtering Group resources.
 The description of the api gateway group. Defaults to null.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1474,7 +1468,7 @@ The description of the api gateway group. Defaults to null.
 The name of the api gateway group. Defaults to null.
 
 <h4 class="pdoc-member-header" id="GroupState-subDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L104">property <b>subDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L104">property <b>subDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1476,7 @@ The name of the api gateway group. Defaults to null.
 (Available in 1.69.0+)	Second-level domain name automatically assigned to the API group.
 
 <h4 class="pdoc-member-header" id="GroupState-vpcDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/group.ts#L108">property <b>vpcDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/group.ts#L108">property <b>vpcDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1490,7 +1484,7 @@ The name of the api gateway group. Defaults to null.
 (Available in 1.69.0+)	Second-level VPC domain name automatically assigned to the API group.
 
 <h3 class="pdoc-module-header" id="VpcAccessArgs" data-link-title="VpcAccessArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L120">
         interface <strong>VpcAccessArgs</strong>
     </a>
 </h3>
@@ -1500,7 +1494,7 @@ The name of the api gateway group. Defaults to null.
 The set of arguments for constructing a VpcAccess resource.
 
 <h4 class="pdoc-member-header" id="VpcAccessArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L124">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L124">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1508,7 +1502,7 @@ The set of arguments for constructing a VpcAccess resource.
 ID of the instance in VPC (ECS/Server Load Balance).
 
 <h4 class="pdoc-member-header" id="VpcAccessArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1510,7 @@ ID of the instance in VPC (ECS/Server Load Balance).
 The name of the vpc authorization.
 
 <h4 class="pdoc-member-header" id="VpcAccessArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L132">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L132">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1524,7 +1518,7 @@ The name of the vpc authorization.
 ID of the port corresponding to the instance.
 
 <h4 class="pdoc-member-header" id="VpcAccessArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L136">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L136">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1526,7 @@ ID of the port corresponding to the instance.
 The vpc id of the vpc authorization.
 
 <h3 class="pdoc-module-header" id="VpcAccessState" data-link-title="VpcAccessState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L98">
         interface <strong>VpcAccessState</strong>
     </a>
 </h3>
@@ -1542,7 +1536,7 @@ The vpc id of the vpc authorization.
 Input properties used for looking up and filtering VpcAccess resources.
 
 <h4 class="pdoc-member-header" id="VpcAccessState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L102">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L102">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1544,7 @@ Input properties used for looking up and filtering VpcAccess resources.
 ID of the instance in VPC (ECS/Server Load Balance).
 
 <h4 class="pdoc-member-header" id="VpcAccessState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1558,7 +1552,7 @@ ID of the instance in VPC (ECS/Server Load Balance).
 The name of the vpc authorization.
 
 <h4 class="pdoc-member-header" id="VpcAccessState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L110">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L110">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1566,7 +1560,7 @@ The name of the vpc authorization.
 ID of the port corresponding to the instance.
 
 <h4 class="pdoc-member-header" id="VpcAccessState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/apigateway/vpcAccess.ts#L114">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/apigateway/vpcAccess.ts#L114">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

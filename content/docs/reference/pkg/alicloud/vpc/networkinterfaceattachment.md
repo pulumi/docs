@@ -14,221 +14,6 @@ Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to a
 
 For information about Elastic Network Interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.Collections.Generic;
-using System.Linq;
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var name = config.Get("name") ?? "networkInterfaceAttachment";
-        var number = config.Get("number") ?? "2";
-        var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
-        {
-            CidrBlock = "192.168.0.0/24",
-        });
-        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
-        {
-            AvailableResourceCreation = "VSwitch",
-        }));
-        var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
-        {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "192.168.0.0/24",
-            VpcId = vpc.Id,
-        });
-        var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
-        {
-            VpcId = vpc.Id,
-        });
-        var instanceType = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
-        {
-            AvailabilityZone = defaultZones.Zones[0].Id,
-            EniAmount = 2,
-        })));
-        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
-        {
-            MostRecent = true,
-            NameRegex = "^ubuntu_18.*64",
-            Owners = "system",
-        }));
-        var instance = new List<AliCloud.Ecs.Instance>();
-        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            instance.Add(new AliCloud.Ecs.Instance($"instance-{range.Value}", new AliCloud.Ecs.InstanceArgs
-            {
-                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-                ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-                InstanceName = name,
-                InstanceType = instanceType.Apply(instanceType => instanceType.InstanceTypes[0].Id),
-                InternetMaxBandwidthOut = 10,
-                SecurityGroups = 
-                {
-                    @group.Id,
-                },
-                SystemDiskCategory = "cloud_efficiency",
-                VswitchId = vswitch.Id,
-            }));
-        }
-        var @interface = new List<AliCloud.Vpc.NetworkInterface>();
-        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            @interface.Add(new AliCloud.Vpc.NetworkInterface($"interface-{range.Value}", new AliCloud.Vpc.NetworkInterfaceArgs
-            {
-                SecurityGroups = 
-                {
-                    @group.Id,
-                },
-                VswitchId = vswitch.Id,
-            }));
-        }
-        var attachment = new List<AliCloud.Vpc.NetworkInterfaceAttachment>();
-        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            attachment.Add(new AliCloud.Vpc.NetworkInterfaceAttachment($"attachment-{range.Value}", new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
-            {
-                InstanceId = instance.Select(__item => __item.Id).ToList()[range.Index],
-                NetworkInterfaceId = @interface.Select(__item => __item.Id).ToList()[range.Index],
-            }));
-        }
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "networkInterfaceAttachment"
-number = config.get("number")
-if number is None:
-    number = "2"
-vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/24")
-default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
-vswitch = alicloud.vpc.Switch("vswitch",
-    availability_zone=default_zones.zones[0]["id"],
-    cidr_block="192.168.0.0/24",
-    vpc_id=vpc.id)
-group = alicloud.ecs.SecurityGroup("group", vpc_id=vpc.id)
-instance_type = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
-    eni_amount=2)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
-    owners="system")
-instance = []
-for range in [{"value": i} for i in range(0, number)]:
-    instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
-        availability_zone=default_zones.zones[0]["id"],
-        image_id=default_images.images[0]["id"],
-        instance_name=name,
-        instance_type=instance_type.instance_types[0]["id"],
-        internet_max_bandwidth_out=10,
-        security_groups=[group.id],
-        system_disk_category="cloud_efficiency",
-        vswitch_id=vswitch.id))
-interface = []
-for range in [{"value": i} for i in range(0, number)]:
-    interface.append(alicloud.vpc.NetworkInterface(f"interface-{range['value']}",
-        security_groups=[group.id],
-        vswitch_id=vswitch.id))
-attachment = []
-for range in [{"value": i} for i in range(0, number)]:
-    attachment.append(alicloud.vpc.NetworkInterfaceAttachment(f"attachment-{range['value']}",
-        instance_id=[__item.id for __item in instance][range["index"]],
-        network_interface_id=[__item.id for __item in interface][range["index"]]))
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const config = new pulumi.Config();
-const name = config.get("name") || "networkInterfaceAttachment";
-const number = config.get("number") || "2";
-
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "192.168.0.0/24",
-});
-const defaultZones = pulumi.output(alicloud.getZones({
-    availableResourceCreation: "VSwitch",
-}, { async: true }));
-const vswitch = new alicloud.vpc.Switch("vswitch", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "192.168.0.0/24",
-    vpcId: vpc.id,
-});
-const group = new alicloud.ecs.SecurityGroup("group", {
-    vpcId: vpc.id,
-});
-const instanceType = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
-    eniAmount: 2,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
-    nameRegex: "^ubuntu_18.*64",
-    owners: "system",
-}, { async: true }));
-const instance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < number; i++) {
-    instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
-        availabilityZone: defaultZones.zones[0].id,
-        imageId: defaultImages.images[0].id,
-        instanceName: name,
-        instanceType: instanceType.instanceTypes[0].id,
-        internetMaxBandwidthOut: 10,
-        securityGroups: [group.id],
-        systemDiskCategory: "cloud_efficiency",
-        vswitchId: vswitch.id,
-    }));
-}
-const interfaceNetworkInterface: alicloud.vpc.NetworkInterface[] = [];
-for (let i = 0; i < number; i++) {
-    interfaceNetworkInterface.push(new alicloud.vpc.NetworkInterface(`interface-${i}`, {
-        securityGroups: [group.id],
-        vswitchId: vswitch.id,
-    }));
-}
-const attachment: alicloud.vpc.NetworkInterfaceAttachment[] = [];
-for (let i = 0; i < number; i++) {
-    attachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`attachment-${i}`, {
-        instanceId: pulumi.all(instance.map(v => v.id)).apply(id => id.map(v => v)[i]),
-        networkInterfaceId: pulumi.all(interfaceNetworkInterface.map(v => v.id)).apply(id => id.map(v => v)[i]),
-    }));
-}
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NetworkInterfaceAttachment Resource {#create}
@@ -240,7 +25,7 @@ for (let i = 0; i < number; i++) {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkInterfaceAttachment">NetworkInterfaceAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkInterfaceAttachment">NetworkInterfaceAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -619,7 +404,8 @@ Get an existing NetworkInterfaceAttachment resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>instance_id=None<span class="p">, </span>network_interface_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkInterfaceAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -627,7 +413,7 @@ Get an existing NetworkInterfaceAttachment resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkInterfaceAttachment.html">NetworkInterfaceAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkInterfaceAttachmentState.html">NetworkInterfaceAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkInterfaceAttachment.html">NetworkInterfaceAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkInterfaceAttachmentState.html">NetworkInterfaceAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -862,6 +648,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -60,7 +60,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ddos"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ddos.NewSchedulerRule(ctx, "example", &ddos.SchedulerRuleArgs{
+			RuleName: pulumi.String("tf-testacc7929727******"),
+			RuleType: pulumi.Int(3),
+			Rules: ddos.SchedulerRuleRuleArray{
+				&ddos.SchedulerRuleRuleArgs{
+					Priority:  pulumi.Int(100),
+					RegionId:  pulumi.String("cn-hangzhou"),
+					Type:      pulumi.String("A"),
+					Value:     pulumi.String("170.33.2.125"),
+					ValueType: pulumi.Int(3),
+				},
+				&ddos.SchedulerRuleRuleArgs{
+					Priority:  pulumi.Int(50),
+					RegionId:  pulumi.String("cn-hangzhou"),
+					Type:      pulumi.String("A"),
+					Value:     pulumi.String("170.33.14.193"),
+					ValueType: pulumi.Int(1),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,20 +109,20 @@ example = alicloud.ddos.SchedulerRule("example",
     rule_name="tf-testacc7929727******",
     rule_type=3,
     rules=[
-        {
-            "priority": "100",
-            "regionId": "cn-hangzhou",
-            "type": "A",
-            "value": "170.33.2.125",
-            "valueType": "3",
-        },
-        {
-            "priority": "50",
-            "regionId": "cn-hangzhou",
-            "type": "A",
-            "value": "170.33.14.193",
-            "valueType": "1",
-        },
+        alicloud.ddos.SchedulerRuleRuleArgs(
+            priority=100,
+            region_id="cn-hangzhou",
+            type="A",
+            value="170.33.2.125",
+            value_type=3,
+        ),
+        alicloud.ddos.SchedulerRuleRuleArgs(
+            priority=50,
+            region_id="cn-hangzhou",
+            type="A",
+            value="170.33.14.193",
+            value_type=1,
+        ),
     ])
 ```
 
@@ -133,7 +170,7 @@ const example = new alicloud.ddos.SchedulerRule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ddos/#pulumi_alicloud.ddos.SchedulerRule">SchedulerRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>param=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>rule_name=None<span class="p">, </span>rule_type=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ddos/#pulumi_alicloud.ddos.SchedulerRule">SchedulerRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">param</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_type</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SchedulerRuleRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -561,7 +598,7 @@ The SchedulerRule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerrulerule">List[Scheduler<wbr>Rule<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#schedulerrulerule">List[Scheduler<wbr>Rule<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The details of the common filter interaction rule, expressed as a JSON string. The structure is as follows:
 `Type`: String type, required, the address format of the linkage resource. Valid values:
@@ -740,7 +777,8 @@ Get an existing SchedulerRule resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cname=None<span class="p">, </span>param=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>rule_name=None<span class="p">, </span>rule_type=None<span class="p">, </span>rules=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">param</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_type</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SchedulerRuleRuleArgs]]</span> = None<span class="p">) -&gt;</span> SchedulerRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -748,7 +786,7 @@ Get an existing SchedulerRule resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ddos.SchedulerRule.html">SchedulerRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ddos.SchedulerRuleState.html">SchedulerRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ddos.SchedulerRule.html">SchedulerRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ddos.SchedulerRuleState.html">SchedulerRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1175,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerrulerule">List[Scheduler<wbr>Rule<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#schedulerrulerule">List[Scheduler<wbr>Rule<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The details of the common filter interaction rule, expressed as a JSON string. The structure is as follows:
 `Type`: String type, required, the address format of the linkage resource. Valid values:
@@ -1437,8 +1475,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1477,8 +1515,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuetype_python">
-<a href="#valuetype_python" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
+        <span id="value_type_python">
+<a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1503,6 +1541,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

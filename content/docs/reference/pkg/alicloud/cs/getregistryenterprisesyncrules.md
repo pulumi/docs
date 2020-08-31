@@ -48,7 +48,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "test-namespace"
+		opt1 := "test-repo"
+		opt2 := "cri-yyy"
+		opt3 := "test-rule"
+		mySyncRules, err := cs.GetRegistryEnterpriseSyncRules(ctx, &cs.GetRegistryEnterpriseSyncRulesArgs{
+			InstanceId:       "cri-xxx",
+			NamespaceName:    &opt0,
+			RepoName:         &opt1,
+			TargetInstanceId: &opt2,
+			NameRegex:        &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		var splat0 []string
+		for _, val0 := range mySyncRules.Rules {
+			splat0 = append(splat0, val0.Id)
+		}
+		ctx.Export("output", splat0)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,7 +94,7 @@ my_sync_rules = alicloud.cs.get_registry_enterprise_sync_rules(instance_id="cri-
     repo_name="test-repo",
     target_instance_id="cri-yyy",
     name_regex="test-rule")
-pulumi.export("output", [__item["id"] for __item in my_sync_rules.rules])
+pulumi.export("output", [__item.id for __item in my_sync_rules.rules])
 ```
 
 {{% /example %}}
@@ -98,7 +131,7 @@ export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__it
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_registry_enterprise_sync_rules(</span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>namespace_name=None<span class="p">, </span>output_file=None<span class="p">, </span>repo_name=None<span class="p">, </span>target_instance_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_enterprise_sync_rules(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistryEnterpriseSyncRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1481,8 +1514,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1499,17 +1532,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="synctrigger_python">
-<a href="#synctrigger_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Trigger</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1532,6 +1554,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sync_trigger_python">
+<a href="#sync_trigger_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>trigger</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1607,6 +1640,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

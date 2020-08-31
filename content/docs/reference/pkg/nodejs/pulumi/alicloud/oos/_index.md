@@ -3,7 +3,7 @@ title: "Module oos"
 title_tag: "Module oos | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "oos"
 meta_desc: "Explore members of the oos module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "defe40500a6bcc54fb2373512cd0091abe87d61b"
 block_external_search_index: true
 ---
 
@@ -17,16 +17,22 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="#Execution"><span class="symbol resource"></span>Execution</a></li>
     <li><a href="#Template"><span class="symbol resource"></span>Template</a></li>
 </ul>
 
 <h3>Functions</h3>
 <ul class="api">
+    <li><a href="#getExecutions"><span class="symbol function"></span>getExecutions</a></li>
     <li><a href="#getTemplates"><span class="symbol function"></span>getTemplates</a></li>
 </ul>
 
 <h3>Others</h3>
 <ul class="api">
+    <li><a href="#ExecutionArgs"><span class="symbol api"></span>ExecutionArgs</a></li>
+    <li><a href="#ExecutionState"><span class="symbol api"></span>ExecutionState</a></li>
+    <li><a href="#GetExecutionsArgs"><span class="symbol api"></span>GetExecutionsArgs</a></li>
+    <li><a href="#GetExecutionsResult"><span class="symbol api"></span>GetExecutionsResult</a></li>
     <li><a href="#GetTemplatesArgs"><span class="symbol api"></span>GetTemplatesArgs</a></li>
     <li><a href="#GetTemplatesResult"><span class="symbol api"></span>GetTemplatesResult</a></li>
     <li><a href="#TemplateArgs"><span class="symbol api"></span>TemplateArgs</a></li>
@@ -35,8 +41,285 @@ block_external_search_index: true
 
 
 <h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="Execution" data-link-title="Execution">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L56">
+        Resource <strong>Execution</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Execution</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a OOS Execution resource. For information about Alicloud OOS Execution and how to use it, see [What is Resource Alicloud OOS Execution](https://www.alibabacloud.com/help/doc-detail/120771.htm).
+
+> **NOTE:** Available in 1.93.0+.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const _default = new alicloud.oos.Template("default", {
+    content: `  {
+    "FormatVersion": "OOS-2019-06-01",
+    "Description": "Update Describe instances of given status",
+    "Parameters":{
+      "Status":{
+        "Type": "String",
+        "Description": "(Required) The status of the Ecs instance."
+      }
+    },
+    "Tasks": [
+      {
+        "Properties" :{
+          "Parameters":{
+            "Status": "{{ Status }}"
+          },
+          "API": "DescribeInstances",
+          "Service": "Ecs"
+        },
+        "Name": "foo",
+        "Action": "ACS::ExecuteApi"
+      }]
+  }
+`,
+    templateName: "test-name",
+    versionName: "test",
+    tags: {
+        Created: "TF",
+        For: "acceptance Test",
+    },
+});
+const example = new alicloud.oos.Execution("example", {
+    templateName: _default.templateName,
+    description: "From TF Test",
+    parameters: "				{\"Status\":\"Running\"}\n",
+});
+```
+
+<h4 class="pdoc-member-header" id="Execution-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L163"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Execution(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ExecutionArgs'>ExecutionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a Execution resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="Execution-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L66">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ExecutionState'>ExecutionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Execution'>Execution</a></code></pre>
+
+
+Get an existing Execution resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="Execution-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L56">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="Execution-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L77">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Execution</code></pre>
+
+
+Returns true if the given object is an instance of Execution.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="Execution-counters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L87">property <b>counters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>counters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The counters of OOS Execution.
+
+<h4 class="pdoc-member-header" id="Execution-createDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L91">property <b>createDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>createDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was created.
+
+<h4 class="pdoc-member-header" id="Execution-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L95">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The description of OOS Execution.
+
+<h4 class="pdoc-member-header" id="Execution-endDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L99">property <b>endDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>endDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was ended.
+
+<h4 class="pdoc-member-header" id="Execution-executedBy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L103">property <b>executedBy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>executedBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The user who execute the template.
+
+<h4 class="pdoc-member-header" id="Execution-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L56">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="Execution-isParent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L107">property <b>isParent</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>isParent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to include subtasks.
+
+<h4 class="pdoc-member-header" id="Execution-loopMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L111">property <b>loopMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>loopMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The loop mode of OOS Execution.
+
+<h4 class="pdoc-member-header" id="Execution-mode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L115">property <b>mode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The mode of OOS Execution. Valid: `Automatic`, `Debug`. Default to `Automatic`.
+
+<h4 class="pdoc-member-header" id="Execution-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L119">property <b>outputs</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The outputs of OOS Execution.
+
+<h4 class="pdoc-member-header" id="Execution-parameters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L123">property <b>parameters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The parameters required by the template. Default to `{}`.
+
+<h4 class="pdoc-member-header" id="Execution-parentExecutionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L127">property <b>parentExecutionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>parentExecutionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The id of parent execution.
+
+<h4 class="pdoc-member-header" id="Execution-ramRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L131">property <b>ramRole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>ramRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The role that executes the current template.
+
+<h4 class="pdoc-member-header" id="Execution-safetyCheck">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L135">property <b>safetyCheck</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>safetyCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The mode of safety check.
+
+<h4 class="pdoc-member-header" id="Execution-startDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L139">property <b>startDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>startDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was started.
+
+<h4 class="pdoc-member-header" id="Execution-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L143">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The status of OOS Execution.
+
+<h4 class="pdoc-member-header" id="Execution-statusMessage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L147">property <b>statusMessage</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>statusMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The message of status.
+
+<h4 class="pdoc-member-header" id="Execution-templateId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L151">property <b>templateId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>templateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of template.
+
+<h4 class="pdoc-member-header" id="Execution-templateName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L155">property <b>templateName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of execution template.
+
+<h4 class="pdoc-member-header" id="Execution-templateVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L159">property <b>templateVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>templateVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The version of execution template.
+
+<h4 class="pdoc-member-header" id="Execution-updateDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L163">property <b>updateDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>updateDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was updated.
+
+<h4 class="pdoc-member-header" id="Execution-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L56">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="Template" data-link-title="Template">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L51">
         Resource <strong>Template</strong>
     </a>
 </h3>
@@ -49,13 +332,11 @@ Provides a OOS Template resource. For information about Alicloud OOS Template an
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const example = new alicloud.OosTemplate("example", {
+const example = new alicloud.oos.Template("example", {
     content: `  {
     "FormatVersion": "OOS-2019-06-01",
     "Description": "Update Describe instances of given status",
@@ -79,17 +360,17 @@ const example = new alicloud.OosTemplate("example", {
       }]
   }
   `,
-    tags: [{
+    tags: {
         Created: "TF",
         For: "acceptance Test",
-    }],
+    },
     templateName: "test-name",
     versionName: "test",
 });
 ```
 
 <h4 class="pdoc-member-header" id="Template-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L142"> <b>constructor</b></a>
 </h4>
 
 
@@ -103,7 +384,7 @@ Create a Template resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Template-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -114,14 +395,14 @@ Get an existing Template resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Template-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Template-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -132,7 +413,7 @@ Returns true if the given object is an instance of Template.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Template-autoDeleteExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L84">property <b>autoDeleteExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L82">property <b>autoDeleteExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoDeleteExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -140,7 +421,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When deleting a template, whether to delete its related executions. Default to `false`.
 
 <h4 class="pdoc-member-header" id="Template-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L88">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L86">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -148,7 +429,7 @@ When deleting a template, whether to delete its related executions. Default to `
 The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 
 <h4 class="pdoc-member-header" id="Template-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L92">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L90">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +437,7 @@ The content of the template. The template must be in the JSON or YAML format. Ma
 The creator of the template.
 
 <h4 class="pdoc-member-header" id="Template-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L96">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L94">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +445,7 @@ The creator of the template.
 The time when the template is created.
 
 <h4 class="pdoc-member-header" id="Template-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L98">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +453,7 @@ The time when the template is created.
 The description of the template.
 
 <h4 class="pdoc-member-header" id="Template-hasTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L104">property <b>hasTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L102">property <b>hasTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hasTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -180,7 +461,7 @@ The description of the template.
 Is it triggered successfully.
 
 <h4 class="pdoc-member-header" id="Template-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -189,7 +470,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Template-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L108">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L106">property <b>shareType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shareType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +478,7 @@ deployments and may be missing (undefined) during planning phases.
 The sharing type of the template. The sharing type of templates created by users are set to Private. The sharing type of common templates provided by OOS are set to Public.
 
 <h4 class="pdoc-member-header" id="Template-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L110">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +486,7 @@ The sharing type of the template. The sharing type of templates created by users
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Template-templateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L116">property <b>templateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L114">property <b>templateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +494,7 @@ A mapping of tags to assign to the resource.
 The format of the template. The format can be JSON or YAML. The system automatically identifies the format.
 
 <h4 class="pdoc-member-header" id="Template-templateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L120">property <b>templateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L118">property <b>templateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +502,7 @@ The format of the template. The format can be JSON or YAML. The system automatic
 The id of OOS Template.
 
 <h4 class="pdoc-member-header" id="Template-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L124">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L122">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +510,7 @@ The id of OOS Template.
 The name of the template. The template name can be up to 200 characters in length. The name can contain letters, digits, hyphens (-), and underscores (_). It cannot start with `ALIYUN`, `ACS`, `ALIBABA`, or `ALICLOUD`.
 
 <h4 class="pdoc-member-header" id="Template-templateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L128">property <b>templateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L126">property <b>templateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +518,7 @@ The name of the template. The template name can be up to 200 characters in lengt
 The type of OOS Template. `Automation` means the implementation of Alibaba Cloud API template, `Package` means represents a template for installing software.
 
 <h4 class="pdoc-member-header" id="Template-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L132">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L130">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +526,7 @@ The type of OOS Template. `Automation` means the implementation of Alibaba Cloud
 The version of OOS Template.
 
 <h4 class="pdoc-member-header" id="Template-updatedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L136">property <b>updatedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L134">property <b>updatedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +534,7 @@ The version of OOS Template.
 The user who updated the template.
 
 <h4 class="pdoc-member-header" id="Template-updatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L140">property <b>updatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L138">property <b>updatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +542,7 @@ The user who updated the template.
 The time when the template was updated.
 
 <h4 class="pdoc-member-header" id="Template-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +551,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Template-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L144">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L142">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -279,8 +560,37 @@ The name of template version.
 
 
 <h2 id="functions">Functions</h2>
+<h3 class="pdoc-module-header" id="getExecutions" data-link-title="getExecutions">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L29">
+        Function <strong>getExecutions</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getExecutions(args?: <a href='#GetExecutionsArgs'>GetExecutionsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetExecutionsResult'>GetExecutionsResult</a>&gt;</code></pre>
+
+
+This data source provides a list of OOS Executions in an Alibaba Cloud account according to the specified filters.
+
+> **NOTE:** Available in v1.93.0+.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = pulumi.output(alicloud.oos.getExecutions({
+    ids: ["execution_id"],
+    status: "Success",
+    templateName: "name",
+}, { async: true }));
+
+export const firstExecutionId = example.executions[0].id;
+```
+
 <h3 class="pdoc-module-header" id="getTemplates" data-link-title="getTemplates">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L33">
         Function <strong>getTemplates</strong>
     </a>
 </h3>
@@ -295,29 +605,528 @@ This data source provides a list of OOS Templates in an Alibaba Cloud account ac
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const example = pulumi.output(alicloud.OosTemplates({
+const example = pulumi.output(alicloud.oos.getTemplates({
     hasTrigger: false,
     nameRegex: "test",
     shareType: "Private",
-    tags: [{
+    tags: {
         Created: "TF",
         For: "template Test",
-    }],
+    },
 }, { async: true }));
 
-export const firstTemplateName = example.templates.0.templateName;
+export const firstTemplateName = example.templates[0].templateName;
 ```
 
 
 <h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="ExecutionArgs" data-link-title="ExecutionArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L323">
+        interface <strong>ExecutionArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ExecutionArgs</span></code></pre>
+
+The set of arguments for constructing a Execution resource.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L327">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The description of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-loopMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L331">property <b>loopMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loopMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The loop mode of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-mode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L335">property <b>mode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mode of OOS Execution. Valid: `Automatic`, `Debug`. Default to `Automatic`.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-parameters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L339">property <b>parameters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The parameters required by the template. Default to `{}`.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-parentExecutionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L343">property <b>parentExecutionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>parentExecutionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of parent execution.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-safetyCheck">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L347">property <b>safetyCheck</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>safetyCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mode of safety check.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-templateName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L351">property <b>templateName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of execution template.
+
+<h4 class="pdoc-member-header" id="ExecutionArgs-templateVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L355">property <b>templateVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The version of execution template.
+
+<h3 class="pdoc-module-header" id="ExecutionState" data-link-title="ExecutionState">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L237">
+        interface <strong>ExecutionState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ExecutionState</span></code></pre>
+
+Input properties used for looking up and filtering Execution resources.
+
+<h4 class="pdoc-member-header" id="ExecutionState-counters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L241">property <b>counters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>counters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The counters of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionState-createDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L245">property <b>createDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>createDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was created.
+
+<h4 class="pdoc-member-header" id="ExecutionState-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L249">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The description of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionState-endDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L253">property <b>endDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was ended.
+
+<h4 class="pdoc-member-header" id="ExecutionState-executedBy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L257">property <b>executedBy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>executedBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The user who execute the template.
+
+<h4 class="pdoc-member-header" id="ExecutionState-isParent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L261">property <b>isParent</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isParent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to include subtasks.
+
+<h4 class="pdoc-member-header" id="ExecutionState-loopMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L265">property <b>loopMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loopMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The loop mode of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionState-mode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L269">property <b>mode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mode of OOS Execution. Valid: `Automatic`, `Debug`. Default to `Automatic`.
+
+<h4 class="pdoc-member-header" id="ExecutionState-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L273">property <b>outputs</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The outputs of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionState-parameters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L277">property <b>parameters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The parameters required by the template. Default to `{}`.
+
+<h4 class="pdoc-member-header" id="ExecutionState-parentExecutionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L281">property <b>parentExecutionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>parentExecutionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of parent execution.
+
+<h4 class="pdoc-member-header" id="ExecutionState-ramRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L285">property <b>ramRole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ramRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The role that executes the current template.
+
+<h4 class="pdoc-member-header" id="ExecutionState-safetyCheck">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L289">property <b>safetyCheck</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>safetyCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The mode of safety check.
+
+<h4 class="pdoc-member-header" id="ExecutionState-startDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L293">property <b>startDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was started.
+
+<h4 class="pdoc-member-header" id="ExecutionState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L297">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The status of OOS Execution.
+
+<h4 class="pdoc-member-header" id="ExecutionState-statusMessage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L301">property <b>statusMessage</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>statusMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The message of status.
+
+<h4 class="pdoc-member-header" id="ExecutionState-templateId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L305">property <b>templateId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of template.
+
+<h4 class="pdoc-member-header" id="ExecutionState-templateName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L309">property <b>templateName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of execution template.
+
+<h4 class="pdoc-member-header" id="ExecutionState-templateVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L313">property <b>templateVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The version of execution template.
+
+<h4 class="pdoc-member-header" id="ExecutionState-updateDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/execution.ts#L317">property <b>updateDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>updateDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the execution was updated.
+
+<h3 class="pdoc-module-header" id="GetExecutionsArgs" data-link-title="GetExecutionsArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L62">
+        interface <strong>GetExecutionsArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetExecutionsArgs</span></code></pre>
+
+A collection of arguments for invoking getExecutions.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-category">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L66">property <b>category</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>category?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The category of template. Valid: `AlarmTrigger`, `EventTrigger`, `Other` and `TimerTrigger`.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-endDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L70">property <b>endDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endDate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The time when the execution was ended.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-endDateAfter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L74">property <b>endDateAfter</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endDateAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Execution whose end time is less than or equal to the specified time.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-executedBy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L78">property <b>executedBy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>executedBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The user who execute the template.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L82">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of OOS Execution ids.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-includeChildExecution">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L86">property <b>includeChildExecution</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includeChildExecution?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+Whether to include sub-execution.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-mode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L90">property <b>mode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The mode of OOS Execution. Valid: `Automatic`, `Debug`.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L91">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-parentExecutionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L95">property <b>parentExecutionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>parentExecutionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The id of parent OOS Execution.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-ramRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L99">property <b>ramRole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ramRole?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The role that executes the current template.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-sortField">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L103">property <b>sortField</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sortField?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The sort field.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-sortOrder">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L107">property <b>sortOrder</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sortOrder?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The sort order.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-startDateAfter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L111">property <b>startDateAfter</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>startDateAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The execution whose start time is greater than or equal to the specified time.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-startDateBefore">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L115">property <b>startDateBefore</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>startDateBefore?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The execution with start time less than or equal to the specified time.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L119">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Status of OOS Execution. Valid: `Cancelled`, `Failed`, `Queued`, `Running`, `Started`, `Success`, `Waiting`.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L123">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+A mapping of tags to assign to the resource.
+
+<h4 class="pdoc-member-header" id="GetExecutionsArgs-templateName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L127">property <b>templateName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of execution template.
+
+<h3 class="pdoc-module-header" id="GetExecutionsResult" data-link-title="GetExecutionsResult">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L133">
+        interface <strong>GetExecutionsResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetExecutionsResult</span></code></pre>
+
+A collection of values returned by getExecutions.
+
+<h4 class="pdoc-member-header" id="GetExecutionsResult-category">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L134">property <b>category</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>category?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-endDate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L135">property <b>endDate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endDate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-endDateAfter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L136">property <b>endDateAfter</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endDateAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-executedBy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L137">property <b>executedBy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>executedBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-executions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L141">property <b>executions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>executions: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetExecutionsExecution'>GetExecutionsExecution</a>[];</code></pre>
+
+A list of OOS Executions. Each element contains the following attributes:
+
+<h4 class="pdoc-member-header" id="GetExecutionsResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L145">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetExecutionsResult-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L149">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of OOS Execution ids.
+
+<h4 class="pdoc-member-header" id="GetExecutionsResult-includeChildExecution">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L150">property <b>includeChildExecution</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includeChildExecution?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-mode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L151">property <b>mode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>mode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L152">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-parentExecutionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L153">property <b>parentExecutionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>parentExecutionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-ramRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L154">property <b>ramRole</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ramRole?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-sortField">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L155">property <b>sortField</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sortField?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-sortOrder">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L156">property <b>sortOrder</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sortOrder?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-startDateAfter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L157">property <b>startDateAfter</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>startDateAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-startDateBefore">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L158">property <b>startDateBefore</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>startDateBefore?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L159">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L160">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+<h4 class="pdoc-member-header" id="GetExecutionsResult-templateName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getExecutions.ts#L161">property <b>templateName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>templateName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTemplatesArgs" data-link-title="GetTemplatesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L63">
         interface <strong>GetTemplatesArgs</strong>
     </a>
 </h3>
@@ -327,7 +1136,7 @@ export const firstTemplateName = example.templates.0.templateName;
 A collection of arguments for invoking getTemplates.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-category">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L69">property <b>category</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L67">property <b>category</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>category?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -335,7 +1144,7 @@ A collection of arguments for invoking getTemplates.
 The category of template.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L73">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L71">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -343,7 +1152,7 @@ The category of template.
 The creator of the template.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L77">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L75">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -351,7 +1160,7 @@ The creator of the template.
 The template whose creation time is less than or equal to the specified time. The format is: YYYY-MM-DDThh:mm::ssZ.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-createdDateAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L81">property <b>createdDateAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L79">property <b>createdDateAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDateAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -359,7 +1168,7 @@ The template whose creation time is less than or equal to the specified time. Th
 Create a template whose time is greater than or equal to the specified time. The format is: YYYY-MM-DDThh:mm:ssZ.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-hasTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L85">property <b>hasTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L83">property <b>hasTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hasTrigger?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -367,7 +1176,7 @@ Create a template whose time is greater than or equal to the specified time. The
 Is it triggered successfully.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L89">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L87">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -375,7 +1184,7 @@ Is it triggered successfully.
 A list of OOS Template ids. Each element in the list is same as template_name.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L93">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L91">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -383,12 +1192,12 @@ A list of OOS Template ids. Each element in the list is same as template_name.
 A regex string to filter the results by the template_name.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L94">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L92">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L98">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L96">property <b>shareType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -396,7 +1205,7 @@ A regex string to filter the results by the template_name.
 The sharing type of the template. Valid values: `Private`, `Public`.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-sortField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L102">property <b>sortField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L100">property <b>sortField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortField?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -404,7 +1213,7 @@ The sharing type of the template. Valid values: `Private`, `Public`.
 Sort field. Valid values: `TotalExecutionCount`, `Popularity`, `TemplateName` and `CreatedDate`. Default to `TotalExecutionCount`.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-sortOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L106">property <b>sortOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L104">property <b>sortOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortOrder?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -412,7 +1221,7 @@ Sort field. Valid values: `TotalExecutionCount`, `Popularity`, `TemplateName` an
 Sort order. Valid values: `Ascending`, `Descending`. Default to `Descending`
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L110">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L108">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -420,7 +1229,7 @@ Sort order. Valid values: `Ascending`, `Descending`. Default to `Descending`
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-templateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L114">property <b>templateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L112">property <b>templateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -428,7 +1237,7 @@ A mapping of tags to assign to the resource.
 The format of the template. Valid values: `JSON`, `YAML`.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-templateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L118">property <b>templateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L116">property <b>templateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -436,7 +1245,7 @@ The format of the template. Valid values: `JSON`, `YAML`.
 The type of OOS Template.
 
 <h3 class="pdoc-module-header" id="GetTemplatesResult" data-link-title="GetTemplatesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L122">
         interface <strong>GetTemplatesResult</strong>
     </a>
 </h3>
@@ -446,32 +1255,32 @@ The type of OOS Template.
 A collection of values returned by getTemplates.
 
 <h4 class="pdoc-member-header" id="GetTemplatesResult-category">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L125">property <b>category</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L123">property <b>category</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>category?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L126">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L124">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L127">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L125">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-createdDateAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L128">property <b>createdDateAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L126">property <b>createdDateAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDateAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-hasTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L129">property <b>hasTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L127">property <b>hasTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hasTrigger?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L133">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L131">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -479,7 +1288,7 @@ A collection of values returned by getTemplates.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTemplatesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L137">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L135">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -487,47 +1296,47 @@ The provider-assigned unique ID for this managed resource.
 A list of OOS Template ids. Each element in the list is same as template_name.
 
 <h4 class="pdoc-member-header" id="GetTemplatesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L138">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L136">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L139">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L137">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L140">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L138">property <b>shareType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-sortField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L141">property <b>sortField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L139">property <b>sortField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortField?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-sortOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L142">property <b>sortOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L140">property <b>sortOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortOrder?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L143">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L141">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-templateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L144">property <b>templateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L142">property <b>templateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-templateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L145">property <b>templateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L143">property <b>templateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-templates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/getTemplates.ts#L149">property <b>templates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/getTemplates.ts#L147">property <b>templates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templates: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTemplatesTemplate'>GetTemplatesTemplate</a>[];</code></pre>
@@ -535,7 +1344,7 @@ A list of OOS Template ids. Each element in the list is same as template_name.
 A list of OOS Templates. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="TemplateArgs" data-link-title="TemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L281">
         interface <strong>TemplateArgs</strong>
     </a>
 </h3>
@@ -545,7 +1354,7 @@ A list of OOS Templates. Each element contains the following attributes:
 The set of arguments for constructing a Template resource.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-autoDeleteExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L287">property <b>autoDeleteExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L285">property <b>autoDeleteExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteExecutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -553,7 +1362,7 @@ The set of arguments for constructing a Template resource.
 When deleting a template, whether to delete its related executions. Default to `false`.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L291">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L289">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +1370,7 @@ When deleting a template, whether to delete its related executions. Default to `
 The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L295">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L293">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -569,7 +1378,7 @@ The content of the template. The template must be in the JSON or YAML format. Ma
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L299">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L297">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +1386,7 @@ A mapping of tags to assign to the resource.
 The name of the template. The template name can be up to 200 characters in length. The name can contain letters, digits, hyphens (-), and underscores (_). It cannot start with `ALIYUN`, `ACS`, `ALIBABA`, or `ALICLOUD`.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L303">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L301">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -585,7 +1394,7 @@ The name of the template. The template name can be up to 200 characters in lengt
 The name of template version.
 
 <h3 class="pdoc-module-header" id="TemplateState" data-link-title="TemplateState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L211">
         interface <strong>TemplateState</strong>
     </a>
 </h3>
@@ -595,7 +1404,7 @@ The name of template version.
 Input properties used for looking up and filtering Template resources.
 
 <h4 class="pdoc-member-header" id="TemplateState-autoDeleteExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L217">property <b>autoDeleteExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L215">property <b>autoDeleteExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteExecutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -603,7 +1412,7 @@ Input properties used for looking up and filtering Template resources.
 When deleting a template, whether to delete its related executions. Default to `false`.
 
 <h4 class="pdoc-member-header" id="TemplateState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L221">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L219">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +1420,7 @@ When deleting a template, whether to delete its related executions. Default to `
 The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 
 <h4 class="pdoc-member-header" id="TemplateState-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L225">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L223">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -619,7 +1428,7 @@ The content of the template. The template must be in the JSON or YAML format. Ma
 The creator of the template.
 
 <h4 class="pdoc-member-header" id="TemplateState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L229">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L227">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +1436,7 @@ The creator of the template.
 The time when the template is created.
 
 <h4 class="pdoc-member-header" id="TemplateState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L233">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L231">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -635,7 +1444,7 @@ The time when the template is created.
 The description of the template.
 
 <h4 class="pdoc-member-header" id="TemplateState-hasTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L237">property <b>hasTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L235">property <b>hasTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hasTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -643,7 +1452,7 @@ The description of the template.
 Is it triggered successfully.
 
 <h4 class="pdoc-member-header" id="TemplateState-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L241">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L239">property <b>shareType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -651,7 +1460,7 @@ Is it triggered successfully.
 The sharing type of the template. The sharing type of templates created by users are set to Private. The sharing type of common templates provided by OOS are set to Public.
 
 <h4 class="pdoc-member-header" id="TemplateState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L245">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L243">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -659,7 +1468,7 @@ The sharing type of the template. The sharing type of templates created by users
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L249">property <b>templateFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L247">property <b>templateFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +1476,7 @@ A mapping of tags to assign to the resource.
 The format of the template. The format can be JSON or YAML. The system automatically identifies the format.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L253">property <b>templateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L251">property <b>templateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +1484,7 @@ The format of the template. The format can be JSON or YAML. The system automatic
 The id of OOS Template.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L257">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L255">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +1492,7 @@ The id of OOS Template.
 The name of the template. The template name can be up to 200 characters in length. The name can contain letters, digits, hyphens (-), and underscores (_). It cannot start with `ALIYUN`, `ACS`, `ALIBABA`, or `ALICLOUD`.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L261">property <b>templateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L259">property <b>templateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +1500,7 @@ The name of the template. The template name can be up to 200 characters in lengt
 The type of OOS Template. `Automation` means the implementation of Alibaba Cloud API template, `Package` means represents a template for installing software.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L265">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L263">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +1508,7 @@ The type of OOS Template. `Automation` means the implementation of Alibaba Cloud
 The version of OOS Template.
 
 <h4 class="pdoc-member-header" id="TemplateState-updatedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L269">property <b>updatedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L267">property <b>updatedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +1516,7 @@ The version of OOS Template.
 The user who updated the template.
 
 <h4 class="pdoc-member-header" id="TemplateState-updatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L273">property <b>updatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L271">property <b>updatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +1524,7 @@ The user who updated the template.
 The time when the template was updated.
 
 <h4 class="pdoc-member-header" id="TemplateState-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/oos/template.ts#L277">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/oos/template.ts#L275">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

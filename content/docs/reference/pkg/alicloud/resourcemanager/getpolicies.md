@@ -45,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "tftest"
+		opt1 := "Custom"
+		example, err := resourcemanager.GetPolicies(ctx, &resourcemanager.GetPoliciesArgs{
+			DescriptionRegex: "tftest_policy",
+			NameRegex:        &opt0,
+			PolicyType:       &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstPolicyId", example.Policies[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,7 +81,7 @@ import pulumi_alicloud as alicloud
 example = alicloud.resourcemanager.get_policies(description_regex="tftest_policy",
     name_regex="tftest",
     policy_type="Custom")
-pulumi.export("firstPolicyId", example.policies[0]["id"])
+pulumi.export("firstPolicyId", example.policies[0].id)
 ```
 
 {{% /example %}}
@@ -92,7 +117,7 @@ export const firstPolicyId = example.policies[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_policies(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>policy_type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policies(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoliciesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1073,6 +1098,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -51,7 +51,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "KVStore"
+		resourcesZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "Redis"
+		opt2 := "5.0"
+		opt3 := "PrePaid"
+		opt4 := "./engines.txt"
+		resourcesInstanceEngines, err := kvstore.GetInstanceEngines(ctx, &kvstore.GetInstanceEnginesArgs{
+			Engine:             &opt1,
+			EngineVersion:      &opt2,
+			InstanceChargeType: &opt3,
+			OutputFile:         &opt4,
+			ZoneId:             resourcesZones.Zones[0].Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstKvstoreInstanceClass", resourcesInstanceEngines.InstanceEngines[0].Engine)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,8 +101,8 @@ resources_instance_engines = alicloud.kvstore.get_instance_engines(engine="Redis
     engine_version="5.0",
     instance_charge_type="PrePaid",
     output_file="./engines.txt",
-    zone_id=resources_zones.zones[0]["id"])
-pulumi.export("firstKvstoreInstanceClass", resources_instance_engines.instance_engines[0]["engine"])
+    zone_id=resources_zones.zones[0].id)
+pulumi.export("firstKvstoreInstanceClass", resources_instance_engines.instance_engines[0].engine)
 ```
 
 {{% /example %}}
@@ -106,7 +143,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngine
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_engines(</span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>output_file=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_engines(</span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceEnginesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -911,6 +948,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -38,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sampleDs, err := slb.GetServerCertificates(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbServerCertificateId", sampleDs.Certificates[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -47,7 +66,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 sample_ds = alicloud.slb.get_server_certificates()
-pulumi.export("firstSlbServerCertificateId", sample_ds.certificates[0]["id"])
+pulumi.export("firstSlbServerCertificateId", sample_ds.certificates[0].id)
 ```
 
 {{% /example %}}
@@ -79,7 +98,7 @@ export const firstSlbServerCertificateId = sampleDs.certificates[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_server_certificates(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server_certificates(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerCertificatesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -336,7 +355,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -721,7 +740,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Available in v1.66.0+) A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1265,8 +1284,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1276,8 +1295,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createdtime_python">
-<a href="#createdtime_python" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1287,24 +1306,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createdtimestamp_python">
-<a href="#createdtimestamp_python" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
+        <span id="created_timestamp_python">
+<a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Server certificate created timestamp.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="expiredtimestamp_python">
-<a href="#expiredtimestamp_python" style="color: inherit; text-decoration: inherit;">expired<wbr>Timestamp</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Server certificate expired timestamp.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1316,6 +1324,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Server certificate expired time.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expired_timestamp_python">
+<a href="#expired_timestamp_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Server certificate expired timestamp.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1342,8 +1361,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isalicloudcertificate_python">
-<a href="#isalicloudcertificate_python" style="color: inherit; text-decoration: inherit;">is<wbr>Alicloud<wbr>Certificate</a>
+        <span id="is_alicloud_certificate_python">
+<a href="#is_alicloud_certificate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>alicloud_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1363,8 +1382,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subjectalternativenames_python">
-<a href="#subjectalternativenames_python" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1389,7 +1408,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1412,6 +1431,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

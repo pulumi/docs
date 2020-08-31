@@ -48,7 +48,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "USER"
+		opt1 := "NORMAL"
+		dmsEnterpriseUsersDs, err := dms.GetEnterpriseUsers(ctx, &dms.GetEnterpriseUsersArgs{
+			Ids: []string{
+				"uid",
+			},
+			Role:   &opt0,
+			Status: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstUserId", dmsEnterpriseUsersDs.Users[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,7 +86,7 @@ import pulumi_alicloud as alicloud
 dms_enterprise_users_ds = alicloud.dms.get_enterprise_users(ids=["uid"],
     role="USER",
     status="NORMAL")
-pulumi.export("firstUserId", dms_enterprise_users_ds.users[0]["id"])
+pulumi.export("firstUserId", dms_enterprise_users_ds.users[0].id)
 ```
 
 {{% /example %}}
@@ -96,7 +123,7 @@ export const firstUserId = dmsEnterpriseUsersDs.users[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_enterprise_users(</span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>role=None<span class="p">, </span>search_key=None<span class="p">, </span>status=None<span class="p">, </span>tid=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_enterprise_users(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tid</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnterpriseUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1160,8 +1187,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="parentuid_python">
-<a href="#parentuid_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Uid</a>
+        <span id="parent_uid_python">
+<a href="#parent_uid_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1171,11 +1198,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="roleids_python">
-<a href="#roleids_python" style="color: inherit; text-decoration: inherit;">role<wbr>Ids</a>
+        <span id="role_ids_python">
+<a href="#role_ids_python" style="color: inherit; text-decoration: inherit;">role_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}The list ids of the role that the user plays.
 {{% /md %}}</dd>
@@ -1214,8 +1241,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userid_python">
-<a href="#userid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1241,6 +1268,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

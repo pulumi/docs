@@ -14,6 +14,42 @@ This data source provides the Market product items of Alibaba Cloud.
 
 > **NOTE:** Available in 1.64.0+
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultProducts = pulumi.output(alicloud.marketplace.getProducts({
+    categoryId: "53690006",
+    productType: "SERVICE",
+    sort: "created_on-desc",
+}, { async: true }));
+
+export const firstProductCode = defaultProducts.productItems.0.code;
+export const productCodes = defaultProducts.ids!;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetProducts {#using}
@@ -27,7 +63,7 @@ This data source provides the Market product items of Alibaba Cloud.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_products(</span>category_id=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>product_type=None<span class="p">, </span>search_term=None<span class="p">, </span>sort=None<span class="p">, </span>suggested_price=None<span class="p">, </span>supplier_id=None<span class="p">, </span>supplier_name_keyword=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_products(</span><span class="nx">category_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_term</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sort</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suggested_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">supplier_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">supplier_name_keyword</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -60,7 +96,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -176,7 +212,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -292,7 +328,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,7 +444,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1093,7 +1129,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1265,7 +1301,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1437,7 +1473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1603,13 +1639,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="categoryid_python">
-<a href="#categoryid_python" style="color: inherit; text-decoration: inherit;">category<wbr>Id</a>
+        <span id="category_id_python">
+<a href="#category_id_python" style="color: inherit; text-decoration: inherit;">category_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm). 
+    <dd>{{% md %}}The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1625,8 +1661,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deliverydate_python">
-<a href="#deliverydate_python" style="color: inherit; text-decoration: inherit;">delivery<wbr>Date</a>
+        <span id="delivery_date_python">
+<a href="#delivery_date_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1636,8 +1672,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deliveryway_python">
-<a href="#deliveryway_python" style="color: inherit; text-decoration: inherit;">delivery<wbr>Way</a>
+        <span id="delivery_way_python">
+<a href="#delivery_way_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>way</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1647,8 +1683,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="imageurl_python">
-<a href="#imageurl_python" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
+        <span id="image_url_python">
+<a href="#image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1669,8 +1705,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="operationsystem_python">
-<a href="#operationsystem_python" style="color: inherit; text-decoration: inherit;">operation<wbr>System</a>
+        <span id="operation_system_python">
+<a href="#operation_system_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>system</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1691,8 +1727,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="shortdescription_python">
-<a href="#shortdescription_python" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
+        <span id="short_description_python">
+<a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1702,8 +1738,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="suggestedprice_python">
-<a href="#suggestedprice_python" style="color: inherit; text-decoration: inherit;">suggested<wbr>Price</a>
+        <span id="suggested_price_python">
+<a href="#suggested_price_python" style="color: inherit; text-decoration: inherit;">suggested_<wbr>price</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1713,8 +1749,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supplierid_python">
-<a href="#supplierid_python" style="color: inherit; text-decoration: inherit;">supplier<wbr>Id</a>
+        <span id="supplier_id_python">
+<a href="#supplier_id_python" style="color: inherit; text-decoration: inherit;">supplier_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1724,8 +1760,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="suppliername_python">
-<a href="#suppliername_python" style="color: inherit; text-decoration: inherit;">supplier<wbr>Name</a>
+        <span id="supplier_name_python">
+<a href="#supplier_name_python" style="color: inherit; text-decoration: inherit;">supplier_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1746,8 +1782,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targeturl_python">
-<a href="#targeturl_python" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
+        <span id="target_url_python">
+<a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1757,8 +1793,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="warrantydate_python">
-<a href="#warrantydate_python" style="color: inherit; text-decoration: inherit;">warranty<wbr>Date</a>
+        <span id="warranty_date_python">
+<a href="#warranty_date_python" style="color: inherit; text-decoration: inherit;">warranty_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1784,6 +1820,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

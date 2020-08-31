@@ -44,7 +44,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "fake-cgw-id"
+		opt1 := "/tmp/vpnconn"
+		opt2 := "fake-vpn-id"
+		_, err := vpn.GetConnections(ctx, &vpn.GetConnectionsArgs{
+			CustomerGatewayId: &opt0,
+			Ids: []string{
+				"fake-conn-id",
+			},
+			OutputFile:   &opt1,
+			VpnGatewayId: &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +118,7 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_connections(</span>customer_gateway_id=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connections(</span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1216,8 +1244,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="remotesubnet_python">
-<a href="#remotesubnet_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
+        <span id="remote_subnet_python">
+<a href="#remote_subnet_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnet</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1253,7 +1281,7 @@ The following output properties are available:
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
@@ -1264,7 +1292,7 @@ The following output properties are available:
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
@@ -1302,7 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1313,7 +1341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1324,7 +1352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1346,7 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1357,7 +1385,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1379,7 +1407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,7 +1436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1419,7 +1447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1430,7 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1452,7 +1480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1463,7 +1491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1485,7 +1513,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1514,7 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,7 +1553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,7 +1564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1558,7 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1569,7 +1597,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,7 +1619,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1614,41 +1642,41 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeauthalg_python">
-<a href="#ikeauthalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
+        <span id="ike_auth_alg_python">
+<a href="#ike_auth_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>auth_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeencalg_python">
-<a href="#ikeencalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
+        <span id="ike_enc_alg_python">
+<a href="#ike_enc_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>enc_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikelifetime_python">
-<a href="#ikelifetime_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
+        <span id="ike_lifetime_python">
+<a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikelocalid_python">
-<a href="#ikelocalid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
+        <span id="ike_local_id_python">
+<a href="#ike_local_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>local_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1658,30 +1686,30 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikemode_python">
-<a href="#ikemode_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
+        <span id="ike_mode_python">
+<a href="#ike_mode_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikepfs_python">
-<a href="#ikepfs_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
+        <span id="ike_pfs_python">
+<a href="#ike_pfs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>pfs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeremoteid_python">
-<a href="#ikeremoteid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
+        <span id="ike_remote_id_python">
+<a href="#ike_remote_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>remote_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1691,13 +1719,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeversion_python">
-<a href="#ikeversion_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
+        <span id="ike_version_python">
+<a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1744,7 +1772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1755,7 +1783,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1766,7 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1777,7 +1805,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
 
 </dl>
@@ -1795,7 +1823,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1806,7 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1817,7 +1845,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1828,7 +1856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
 
 </dl>
@@ -1846,7 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1857,7 +1885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1868,7 +1896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1879,7 +1907,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
 
 </dl>
@@ -1891,46 +1919,46 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecauthalg_python">
-<a href="#ipsecauthalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
+        <span id="ipsec_auth_alg_python">
+<a href="#ipsec_auth_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>auth_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecencalg_python">
-<a href="#ipsecencalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
+        <span id="ipsec_enc_alg_python">
+<a href="#ipsec_enc_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>enc_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipseclifetime_python">
-<a href="#ipseclifetime_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
+        <span id="ipsec_lifetime_python">
+<a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecpfs_python">
-<a href="#ipsecpfs_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
+        <span id="ipsec_pfs_python">
+<a href="#ipsec_pfs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>pfs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
 
 </dl>
@@ -1951,6 +1979,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

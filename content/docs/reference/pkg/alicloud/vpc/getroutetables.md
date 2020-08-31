@@ -14,97 +14,6 @@ This data source provides a list of Route Tables owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.36.0+.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var name = config.Get("name") ?? "route-tables-datasource-example-name";
-        var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
-        {
-            CidrBlock = "172.16.0.0/12",
-        });
-        var fooRouteTable = new AliCloud.Vpc.RouteTable("fooRouteTable", new AliCloud.Vpc.RouteTableArgs
-        {
-            Description = name,
-            VpcId = fooNetwork.Id,
-        });
-        var fooRouteTables = fooRouteTable.Id.Apply(id => AliCloud.Vpc.GetRouteTables.InvokeAsync(new AliCloud.Vpc.GetRouteTablesArgs
-        {
-            Ids = 
-            {
-                id,
-            },
-        }));
-        this.RouteTableIds = fooRouteTables.Apply(fooRouteTables => fooRouteTables.Ids);
-    }
-
-    [Output("routeTableIds")]
-    public Output<string> RouteTableIds { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-config = pulumi.Config()
-name = config.get("name")
-if name is None:
-    name = "route-tables-datasource-example-name"
-foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
-foo_route_table = alicloud.vpc.RouteTable("fooRouteTable",
-    description=name,
-    vpc_id=foo_network.id)
-foo_route_tables = foo_route_table.id.apply(lambda id: alicloud.vpc.get_route_tables(ids=[id]))
-pulumi.export("routeTableIds", foo_route_tables.ids)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const config = new pulumi.Config();
-const name = config.get("name") || "route-tables-datasource-example-name";
-
-const fooNetwork = new alicloud.vpc.Network("foo", {
-    cidrBlock: "172.16.0.0/12",
-});
-const fooRouteTable = new alicloud.vpc.RouteTable("foo", {
-    description: name,
-    vpcId: fooNetwork.id,
-});
-const fooRouteTables = fooRouteTable.id.apply(id => alicloud.vpc.getRouteTables({
-    ids: [id],
-}, { async: true }));
-
-export const routeTableIds = fooRouteTables.ids!;
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetRouteTables {#using}
@@ -118,7 +27,7 @@ export const routeTableIds = fooRouteTables.ids!;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_route_tables(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -408,7 +317,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -831,7 +740,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1141,8 +1050,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="routetabletype_python">
-<a href="#routetabletype_python" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Type</a>
+        <span id="route_table_type_python">
+<a href="#route_table_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1179,6 +1088,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

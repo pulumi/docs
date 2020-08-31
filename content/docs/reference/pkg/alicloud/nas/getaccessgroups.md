@@ -45,7 +45,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "tf-testAccAccessGroupsdatasource"
+		opt1 := "^foo"
+		opt2 := "Classic"
+		ag, err := nas.GetAccessGroups(ctx, &nas.GetAccessGroupsArgs{
+			Description: &opt0,
+			NameRegex:   &opt1,
+			Type:        &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("alicloudNasAccessGroupsId", ag.Groups[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,7 +82,7 @@ import pulumi_alicloud as alicloud
 ag = alicloud.nas.get_access_groups(description="tf-testAccAccessGroupsdatasource",
     name_regex="^foo",
     type="Classic")
-pulumi.export("alicloudNasAccessGroupsId", ag.groups[0]["id"])
+pulumi.export("alicloudNasAccessGroupsId", ag.groups[0].id)
 ```
 
 {{% /example %}}
@@ -92,7 +118,7 @@ export const alicloudNasAccessGroupsId = ag.groups[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_access_groups(</span>description=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_groups(</span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -136,7 +162,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter AccessGroups by name. 
+    <dd>{{% md %}}A regex string to filter AccessGroups by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -186,7 +212,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter AccessGroups by name. 
+    <dd>{{% md %}}A regex string to filter AccessGroups by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,7 +262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter AccessGroups by name. 
+    <dd>{{% md %}}A regex string to filter AccessGroups by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,7 +312,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter AccessGroups by name. 
+    <dd>{{% md %}}A regex string to filter AccessGroups by name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -936,8 +962,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mounttargetcount_python">
-<a href="#mounttargetcount_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Count</a>
+        <span id="mount_target_count_python">
+<a href="#mount_target_count_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -947,8 +973,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rulecount_python">
-<a href="#rulecount_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Count</a>
+        <span id="rule_count_python">
+<a href="#rule_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -985,6 +1011,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

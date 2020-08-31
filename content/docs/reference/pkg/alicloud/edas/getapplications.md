@@ -47,7 +47,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/edas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "application.txt"
+		applications, err := edas.GetApplications(ctx, &edas.GetApplicationsArgs{
+			Ids: []string{
+				"xxx",
+			},
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstApplicationName", applications.Applications[0].AppName)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,7 +82,7 @@ import pulumi_alicloud as alicloud
 
 applications = alicloud.edas.get_applications(ids=["xxx"],
     output_file="application.txt")
-pulumi.export("firstApplicationName", applications.applications[0]["appName"])
+pulumi.export("firstApplicationName", applications.applications[0].app_name)
 ```
 
 {{% /example %}}
@@ -91,7 +116,7 @@ export const firstApplicationName = applications.then(applications => applicatio
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_applications(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_applications(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -124,7 +149,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -135,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -163,7 +188,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -174,7 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -202,7 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -213,7 +238,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -241,7 +266,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -252,7 +277,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1078,17 +1103,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="appname_python">
-<a href="#appname_python" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span> 
@@ -1100,8 +1114,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="applicationtype_python">
-<a href="#applicationtype_python" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
+        <span id="app_name_python">
+<a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="application_type_python">
+<a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1111,8 +1136,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="buildpackageid_python">
-<a href="#buildpackageid_python" style="color: inherit; text-decoration: inherit;">build<wbr>Package<wbr>Id</a>
+        <span id="build_package_id_python">
+<a href="#build_package_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>package_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1166,8 +1191,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="instancecount_python">
-<a href="#instancecount_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
+        <span id="instance_count_python">
+<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1177,8 +1202,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1188,24 +1213,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="runninginstancecount_python">
-<a href="#runninginstancecount_python" style="color: inherit; text-decoration: inherit;">running<wbr>Instance<wbr>Count</a>
+        <span id="running_instance_count_python">
+<a href="#running_instance_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_python">
-<a href="#slbport_python" style="color: inherit; text-decoration: inherit;">slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1230,6 +1244,17 @@ The following output properties are available:
     <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="slb_port_python">
+<a href="#slb_port_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The port of intranet SLB.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1248,6 +1273,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -46,7 +46,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := dns.GetAlidnsDomainGroups(ctx, &dns.GetAlidnsDomainGroupsArgs{
+			Ids: []string{
+				"c5ef2bc43064445787adf182af2****",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDomainGroupId", example.Groups[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -55,7 +78,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 example = alicloud.dns.get_alidns_domain_groups(ids=["c5ef2bc43064445787adf182af2****"])
-pulumi.export("firstDomainGroupId", example.groups[0]["id"])
+pulumi.export("firstDomainGroupId", example.groups[0].id)
 ```
 
 {{% /example %}}
@@ -89,7 +112,7 @@ export const firstDomainGroupId = example.groups[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_alidns_domain_groups(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_alidns_domain_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAlidnsDomainGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -133,7 +156,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain group name. 
+    <dd>{{% md %}}A regex string to filter results by the domain group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -172,7 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain group name. 
+    <dd>{{% md %}}A regex string to filter results by the domain group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -211,7 +234,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain group name. 
+    <dd>{{% md %}}A regex string to filter results by the domain group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -250,7 +273,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the domain group name. 
+    <dd>{{% md %}}A regex string to filter results by the domain group name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -313,7 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance IDs. 
+    <dd>{{% md %}}A list of instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -384,7 +407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance IDs. 
+    <dd>{{% md %}}A list of instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -455,7 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance IDs. 
+    <dd>{{% md %}}A list of instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -526,7 +549,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance IDs. 
+    <dd>{{% md %}}A list of instance IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -806,6 +829,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

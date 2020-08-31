@@ -42,7 +42,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/pvtz"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := alicloud_pvtz_zone_record.Foo.Value
+		recordsDs, err := pvtz.GetZoneRecords(ctx, &pvtz.GetZoneRecordsArgs{
+			Keyword: &opt0,
+			ZoneId:  alicloud_pvtz_zone.Basic.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstRecordId", recordsDs.Records[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +75,7 @@ import pulumi_alicloud as alicloud
 
 records_ds = alicloud.pvtz.get_zone_records(keyword=alicloud_pvtz_zone_record["foo"]["value"],
     zone_id=alicloud_pvtz_zone["basic"]["id"])
-pulumi.export("firstRecordId", records_ds.records[0]["id"])
+pulumi.export("firstRecordId", records_ds.records[0].id)
 ```
 
 {{% /example %}}
@@ -87,7 +110,7 @@ export const firstRecordId = recordsDs.records[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_zone_records(</span>ids=None<span class="p">, </span>keyword=None<span class="p">, </span>output_file=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zone_records(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">keyword</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZoneRecordsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -972,6 +995,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

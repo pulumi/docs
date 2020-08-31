@@ -17,6 +17,7 @@ Explore the resources and functions of the edas module in the AliCloud package.
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="deploygroup" title="DeployGroup"><span class="symbol resource"></span>DeployGroup</a></li>
     <li><a href="instanceclusterattachment" title="InstanceClusterAttachment"><span class="symbol resource"></span>InstanceClusterAttachment</a></li>
+    <li><a href="k8scluster" title="K8sCluster"><span class="symbol resource"></span>K8sCluster</a></li>
     <li><a href="slbattachment" title="SlbAttachment"><span class="symbol resource"></span>SlbAttachment</a></li>
 </ul>
 
@@ -34,9 +35,9 @@ Explore the resources and functions of the edas module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
+	<dd>2.14.0</dd>
 </dl>
 
 

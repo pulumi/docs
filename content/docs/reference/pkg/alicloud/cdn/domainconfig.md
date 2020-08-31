@@ -66,7 +66,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cdn"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		domain, err := cdn.NewDomainNew(ctx, "domain", &cdn.DomainNewArgs{
+			CdnType:    pulumi.String("web"),
+			DomainName: pulumi.String(fmt.Sprintf("%v%v%v", "tf-testacc", "%", "d.xiaozhu.com")),
+			Scope:      pulumi.String("overseas"),
+			Sources: &cdn.DomainNewSourcesArgs{
+				Content:  pulumi.String("1.1.1.1"),
+				Port:     pulumi.Int(80),
+				Priority: pulumi.Int(20),
+				Type:     pulumi.String("ipaddr"),
+				Weight:   pulumi.Int(15),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cdn.NewDomainConfig(ctx, "config", &cdn.DomainConfigArgs{
+			DomainName: domain.DomainName,
+			FunctionArgs: cdn.DomainConfigFunctionArgArray{
+				&cdn.DomainConfigFunctionArgArgs{
+					ArgName:  pulumi.String("ip_list"),
+					ArgValue: pulumi.String("110.110.110.110"),
+				},
+			},
+			FunctionName: pulumi.String("ip_allow_list_set"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,19 +123,19 @@ domain = alicloud.cdn.DomainNew("domain",
     cdn_type="web",
     domain_name="tf-testacc%d.xiaozhu.com",
     scope="overseas",
-    sources={
-        "content": "1.1.1.1",
-        "port": 80,
-        "priority": "20",
-        "type": "ipaddr",
-        "weight": "15",
-    })
+    sources=alicloud.cdn.DomainNewSourcesArgs(
+        content="1.1.1.1",
+        port=80,
+        priority=20,
+        type="ipaddr",
+        weight=15,
+    ))
 config = alicloud.cdn.DomainConfig("config",
     domain_name=domain.domain_name,
-    function_args=[{
-        "argName": "ip_list",
-        "argValue": "110.110.110.110",
-    }],
+    function_args=[alicloud.cdn.DomainConfigFunctionArgArgs(
+        arg_name="ip_list",
+        arg_value="110.110.110.110",
+    )],
     function_name="ip_allow_list_set")
 ```
 
@@ -140,7 +184,7 @@ const config = new alicloud.cdn.DomainConfig("config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.DomainConfig">DomainConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_name=None<span class="p">, </span>function_args=None<span class="p">, </span>function_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.DomainConfig">DomainConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_args</span><span class="p">:</span> <span class="nx">Optional[List[DomainConfigFunctionArgArgs]]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -449,7 +493,7 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#function_args_python" style="color: inherit; text-decoration: inherit;">function_<wbr>args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg]</a></span>
+        <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The args of the domain config.
 {{% /md %}}</dd>
@@ -563,7 +607,8 @@ Get an existing DomainConfig resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain_name=None<span class="p">, </span>function_args=None<span class="p">, </span>function_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_args</span><span class="p">:</span> <span class="nx">Optional[List[DomainConfigFunctionArgArgs]]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DomainConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +616,7 @@ Get an existing DomainConfig resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cdn.DomainConfig.html">DomainConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cdn.DomainConfigState.html">DomainConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cdn.DomainConfig.html">DomainConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cdn.DomainConfigState.html">DomainConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -814,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_function_args_python" style="color: inherit; text-decoration: inherit;">function_<wbr>args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg]</a></span>
+        <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The args of the domain config.
 {{% /md %}}</dd>
@@ -952,8 +997,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="argname_python">
-<a href="#argname_python" style="color: inherit; text-decoration: inherit;">arg<wbr>Name</a>
+        <span id="arg_name_python">
+<a href="#arg_name_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -963,8 +1008,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="argvalue_python">
-<a href="#argvalue_python" style="color: inherit; text-decoration: inherit;">arg<wbr>Value</a>
+        <span id="arg_value_python">
+<a href="#arg_value_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -990,6 +1035,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

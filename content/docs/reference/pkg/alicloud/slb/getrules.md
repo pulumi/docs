@@ -42,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sampleDs, err := slb.GetRules(ctx, &slb.GetRulesArgs{
+			FrontendPort:   80,
+			LoadBalancerId: alicloud_slb.Sample_slb.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbRuleId", sampleDs.SlbRules[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +74,7 @@ import pulumi_alicloud as alicloud
 
 sample_ds = alicloud.slb.get_rules(frontend_port=80,
     load_balancer_id=alicloud_slb["sample_slb"]["id"])
-pulumi.export("firstSlbRuleId", sample_ds.slb_rules[0]["id"])
+pulumi.export("firstSlbRuleId", sample_ds.slb_rules[0].id)
 ```
 
 {{% /example %}}
@@ -87,7 +109,7 @@ export const firstSlbRuleId = sampleDs.slbRules[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_rules(</span>frontend_port=None<span class="p">, </span>ids=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rules(</span><span class="nx">frontend_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1016,6 +1038,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

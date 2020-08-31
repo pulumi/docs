@@ -59,7 +59,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rocketmq"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultInstance, err := rocketmq.NewInstance(ctx, "defaultInstance", &rocketmq.InstanceArgs{
+			Remark: pulumi.String("default_ons_instance_remark"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultTopic, err := rocketmq.NewTopic(ctx, "defaultTopic", &rocketmq.TopicArgs{
+			InstanceId:  defaultInstance.ID(),
+			MessageType: pulumi.Int(0),
+			Remark:      pulumi.String("dafault_ons_topic_remark"),
+			Topic:       pulumi.String(topic),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstTopicName", topicsDs.ApplyT(func(topicsDs rocketmq.GetTopicsResult) (string, error) {
+			return topicsDs.Topics[0].Topic, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,7 +115,7 @@ default_topic = alicloud.rocketmq.Topic("defaultTopic",
 topics_ds = default_topic.instance_id.apply(lambda instance_id: alicloud.rocketmq.get_topics(instance_id=instance_id,
     name_regex=topic,
     output_file="topics.txt"))
-pulumi.export("firstTopicName", topics_ds.topics[0]["topic"])
+pulumi.export("firstTopicName", topics_ds.topics[0].topic)
 ```
 
 {{% /example %}}
@@ -132,7 +164,7 @@ export const firstTopicName = topicsDs.topics[0].topic;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_topics(</span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_topics(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTopicsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -176,7 +208,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -215,7 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,7 +286,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,7 +325,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,8 +960,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="independentnaming_python">
-<a href="#independentnaming_python" style="color: inherit; text-decoration: inherit;">independent<wbr>Naming</a>
+        <span id="independent_naming_python">
+<a href="#independent_naming_python" style="color: inherit; text-decoration: inherit;">independent_<wbr>naming</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -972,8 +1004,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="relationname_python">
-<a href="#relationname_python" style="color: inherit; text-decoration: inherit;">relation<wbr>Name</a>
+        <span id="relation_name_python">
+<a href="#relation_name_python" style="color: inherit; text-decoration: inherit;">relation_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1021,6 +1053,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

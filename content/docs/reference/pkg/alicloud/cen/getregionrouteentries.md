@@ -42,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entry, err := cen.GetRegionRouteEntries(ctx, &cen.GetRegionRouteEntriesArgs{
+			InstanceId: "cen-id1",
+			RegionId:   "cn-beijing",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstRegionRouteEntriesRouteEntryCidrBlock", entry.Entries[0].CidrBlock)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +74,7 @@ import pulumi_alicloud as alicloud
 
 entry = alicloud.cen.get_region_route_entries(instance_id="cen-id1",
     region_id="cn-beijing")
-pulumi.export("firstRegionRouteEntriesRouteEntryCidrBlock", entry.entries[0]["cidr_block"])
+pulumi.export("firstRegionRouteEntriesRouteEntryCidrBlock", entry.entries[0].cidr_block)
 ```
 
 {{% /example %}}
@@ -87,7 +109,7 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_region_route_entries(</span>instance_id=None<span class="p">, </span>output_file=None<span class="p">, </span>region_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_region_route_entries(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegionRouteEntriesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -740,8 +762,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthopid_python">
-<a href="#nexthopid_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Id</a>
+        <span id="next_hop_id_python">
+<a href="#next_hop_id_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -751,8 +773,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthopregionid_python">
-<a href="#nexthopregionid_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Region<wbr>Id</a>
+        <span id="next_hop_region_id_python">
+<a href="#next_hop_region_id_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -762,8 +784,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthoptype_python">
-<a href="#nexthoptype_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
+        <span id="next_hop_type_python">
+<a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -800,6 +822,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -70,6 +70,12 @@ class MyStack : Stack
         {
             InterfaceId = initiate.Id,
             OppositeInterfaceId = opposite.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "alicloud_router_interface_connection.bar",
+            },
         });
         var barRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection("barRouterInterfaceConnection", new AliCloud.Vpc.RouterInterfaceConnectionArgs
         {
@@ -84,7 +90,74 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		barNetwork, err := vpc.NewNetwork(ctx, "barNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("192.168.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		initiate, err := vpc.NewRouterInterface(ctx, "initiate", &vpc.RouterInterfaceArgs{
+			Description:        pulumi.String(name),
+			InstanceChargeType: pulumi.String("PostPaid"),
+			OppositeRegion:     pulumi.String(region),
+			Role:               pulumi.String("InitiatingSide"),
+			RouterId:           fooNetwork.RouterId,
+			RouterType:         pulumi.String("VRouter"),
+			Specification:      pulumi.String("Large.2"),
+		})
+		if err != nil {
+			return err
+		}
+		opposite, err := vpc.NewRouterInterface(ctx, "opposite", &vpc.RouterInterfaceArgs{
+			Description:    pulumi.String(fmt.Sprintf("%v%v", name, "-opposite")),
+			OppositeRegion: pulumi.String(region),
+			Role:           pulumi.String("AcceptingSide"),
+			RouterId:       barNetwork.RouterId,
+			RouterType:     pulumi.String("VRouter"),
+			Specification:  pulumi.String("Large.1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = vpc.NewRouterInterfaceConnection(ctx, "fooRouterInterfaceConnection", &vpc.RouterInterfaceConnectionArgs{
+			InterfaceId:         initiate.ID(),
+			OppositeInterfaceId: opposite.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"alicloud_router_interface_connection.bar",
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = vpc.NewRouterInterfaceConnection(ctx, "barRouterInterfaceConnection", &vpc.RouterInterfaceConnectionArgs{
+			InterfaceId:         opposite.ID(),
+			OppositeInterfaceId: initiate.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,7 +192,8 @@ opposite = alicloud.vpc.RouterInterface("opposite",
 # A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
 foo_router_interface_connection = alicloud.vpc.RouterInterfaceConnection("fooRouterInterfaceConnection",
     interface_id=initiate.id,
-    opposite_interface_id=opposite.id)
+    opposite_interface_id=opposite.id,
+    opts=ResourceOptions(depends_on=["alicloud_router_interface_connection.bar"]))
 bar_router_interface_connection = alicloud.vpc.RouterInterfaceConnection("barRouterInterfaceConnection",
     interface_id=opposite.id,
     opposite_interface_id=initiate.id)
@@ -185,7 +259,7 @@ const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.RouterInterfaceConnection">RouterInterfaceConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>interface_id=None<span class="p">, </span>opposite_interface_id=None<span class="p">, </span>opposite_interface_owner_id=None<span class="p">, </span>opposite_router_id=None<span class="p">, </span>opposite_router_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.RouterInterfaceConnection">RouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -692,7 +766,8 @@ Get an existing RouterInterfaceConnection resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>interface_id=None<span class="p">, </span>opposite_interface_id=None<span class="p">, </span>opposite_interface_owner_id=None<span class="p">, </span>opposite_router_id=None<span class="p">, </span>opposite_router_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouterInterfaceConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +775,7 @@ Get an existing RouterInterfaceConnection resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnection.html">RouterInterfaceConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnectionState.html">RouterInterfaceConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnection.html">RouterInterfaceConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnectionState.html">RouterInterfaceConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1063,6 +1138,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -49,7 +49,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_default, err := marketplace.GetProduct(ctx, &marketplace.GetProductArgs{
+			ProductCode: "cmapi022206",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("productName", _default.Products[0].Name)
+		ctx.Export("firstProductSkuCode", _default.Products[0].Skuses[0].SkuCode)
+		ctx.Export("firstProductPackageVersion", _default.Products[0].Skuses[0].PackageVersions[0].PackageVersion)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,9 +81,9 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 default = alicloud.marketplace.get_product(product_code="cmapi022206")
-pulumi.export("productName", default.products[0]["name"])
-pulumi.export("firstProductSkuCode", default.products[0]["skuses"][0]["skuCode"])
-pulumi.export("firstProductPackageVersion", default.products[0]["skuses"][0]["packageVersions"][0]["package_version"])
+pulumi.export("productName", default.products[0].name)
+pulumi.export("firstProductSkuCode", default.products[0].skuses[0].sku_code)
+pulumi.export("firstProductPackageVersion", default.products[0].skuses[0].package_versions[0].package_version)
 ```
 
 {{% /example %}}
@@ -96,7 +119,7 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_product(</span>available_region=None<span class="p">, </span>product_code=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">available_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -662,7 +685,7 @@ The following output properties are available:
 <a href="#skuses_python" style="color: inherit; text-decoration: inherit;">skuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskus">List[Get<wbr>Product<wbr>Product<wbr>Skus]</a></span>
+        <span class="property-type"><a href="#getproductproductskus">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing sku attributes of an object. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -851,26 +874,26 @@ The following output properties are available:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskusimage">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image]</a></span>
+        <span class="property-type"><a href="#getproductproductskusimage">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom ECS images, Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="packageversions_python">
-<a href="#packageversions_python" style="color: inherit; text-decoration: inherit;">package<wbr>Versions</a>
+        <span id="package_versions_python">
+<a href="#package_versions_python" style="color: inherit; text-decoration: inherit;">package_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskuspackageversion">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version]</a></span>
+        <span class="property-type"><a href="#getproductproductskuspackageversion">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of package version details of this product sku, Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="skucode_python">
-<a href="#skucode_python" style="color: inherit; text-decoration: inherit;">sku<wbr>Code</a>
+        <span id="sku_code_python">
+<a href="#sku_code_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -880,8 +903,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="skuname_python">
-<a href="#skuname_python" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+        <span id="sku_name_python">
+<a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1058,8 +1081,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1181,8 +1204,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="packagename_python">
-<a href="#packagename_python" style="color: inherit; text-decoration: inherit;">package<wbr>Name</a>
+        <span id="package_name_python">
+<a href="#package_name_python" style="color: inherit; text-decoration: inherit;">package_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1219,6 +1242,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

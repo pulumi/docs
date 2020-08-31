@@ -51,7 +51,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "KVStore"
+		resourcesZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "Redis"
+		opt2 := "5.0"
+		opt3 := "PrePaid"
+		opt4 := "./classes.txt"
+		resourcesInstanceClasses, err := kvstore.GetInstanceClasses(ctx, &kvstore.GetInstanceClassesArgs{
+			Engine:             &opt1,
+			EngineVersion:      &opt2,
+			InstanceChargeType: &opt3,
+			OutputFile:         &opt4,
+			ZoneId:             resourcesZones.Zones[0].Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstKvstoreInstanceClass", resourcesInstanceClasses.InstanceClasses)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,7 +101,7 @@ resources_instance_classes = alicloud.kvstore.get_instance_classes(engine="Redis
     engine_version="5.0",
     instance_charge_type="PrePaid",
     output_file="./classes.txt",
-    zone_id=resources_zones.zones[0]["id"])
+    zone_id=resources_zones.zones[0].id)
 pulumi.export("firstKvstoreInstanceClass", resources_instance_classes.instance_classes)
 ```
 
@@ -106,7 +143,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasse
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_classes(</span>architecture=None<span class="p">, </span>edition_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>node_type=None<span class="p">, </span>output_file=None<span class="p">, </span>package_type=None<span class="p">, </span>performance_type=None<span class="p">, </span>series_type=None<span class="p">, </span>shard_number=None<span class="p">, </span>sorted_by=None<span class="p">, </span>storage_type=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_classes(</span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">performance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">series_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_number</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceClassesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -237,7 +274,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -280,7 +317,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
 </dl>
@@ -396,7 +433,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -439,7 +476,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
 </dl>
@@ -555,7 +592,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -598,7 +635,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
 </dl>
@@ -714,7 +751,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -757,7 +794,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}It has been deprecated from 1.68.0. 
+    <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;storage_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd>
 
 </dl>
@@ -1647,6 +1684,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

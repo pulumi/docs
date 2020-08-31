@@ -16,109 +16,6 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 
 > **NOTE:** Available in 1.82.0+ .
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var domain = new AliCloud.Waf.Domain("domain", new AliCloud.Waf.DomainArgs
-        {
-            ClusterType = "PhysicalCluster",
-            Domain = "www.aliyun.com",
-            Http2Ports = 443,
-            HttpPorts = 80,
-            HttpToUserIp = "Off",
-            HttpsPorts = 443,
-            HttpsRedirect = "Off",
-            InstanceId = "waf-123455",
-            IsAccessProduct = "On",
-            LoadBalancing = "IpHash",
-            LogHeaders = 
-            {
-                new AliCloud.Waf.Inputs.DomainLogHeaderArgs
-                {
-                    Key = "foo",
-                    Value = "http",
-                },
-            },
-            SourceIps = 
-            {
-                "1.1.1.1",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-domain = alicloud.waf.Domain("domain",
-    cluster_type="PhysicalCluster",
-    domain="www.aliyun.com",
-    http2_ports=443,
-    http_ports=80,
-    http_to_user_ip="Off",
-    https_ports=443,
-    https_redirect="Off",
-    instance_id="waf-123455",
-    is_access_product="On",
-    load_balancing="IpHash",
-    log_headers=[{
-        "key": "foo",
-        "value": "http",
-    }],
-    source_ips=["1.1.1.1"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const domain = new alicloud.waf.Domain("domain", {
-    clusterType: "PhysicalCluster",
-    domain: "www.aliyun.com",
-    http2Ports: "443",
-    httpPorts: "80",
-    httpToUserIp: "Off",
-    httpsPorts: "443",
-    httpsRedirect: "Off",
-    instanceId: "waf-123455",
-    isAccessProduct: "On",
-    loadBalancing: "IpHash",
-    logHeaders: [{
-        key: "foo",
-        value: "http",
-    }],
-    sourceIps: ["1.1.1.1"],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Domain Resource {#create}
@@ -130,7 +27,7 @@ const domain = new alicloud.waf.Domain("domain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/waf/#pulumi_alicloud.waf.Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_type=None<span class="p">, </span>connection_time=None<span class="p">, </span>domain=None<span class="p">, </span>http2_ports=None<span class="p">, </span>http_ports=None<span class="p">, </span>http_to_user_ip=None<span class="p">, </span>https_ports=None<span class="p">, </span>https_redirect=None<span class="p">, </span>instance_id=None<span class="p">, </span>is_access_product=None<span class="p">, </span>load_balancing=None<span class="p">, </span>log_headers=None<span class="p">, </span>read_time=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>source_ips=None<span class="p">, </span>write_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/waf/#pulumi_alicloud.waf.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -999,7 +896,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header]</a></span>
+        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -1221,7 +1118,8 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_type=None<span class="p">, </span>cname=None<span class="p">, </span>connection_time=None<span class="p">, </span>domain=None<span class="p">, </span>http2_ports=None<span class="p">, </span>http_ports=None<span class="p">, </span>http_to_user_ip=None<span class="p">, </span>https_ports=None<span class="p">, </span>https_redirect=None<span class="p">, </span>instance_id=None<span class="p">, </span>is_access_product=None<span class="p">, </span>load_balancing=None<span class="p">, </span>log_headers=None<span class="p">, </span>read_time=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>source_ips=None<span class="p">, </span>status=None<span class="p">, </span>write_time=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1229,7 +1127,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.Domain.html">Domain</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.DomainState.html">DomainState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.Domain.html">Domain</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.DomainState.html">DomainState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2095,7 +1993,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header]</a></span>
+        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -2308,6 +2206,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

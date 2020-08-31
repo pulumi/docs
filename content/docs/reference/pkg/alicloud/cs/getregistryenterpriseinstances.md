@@ -44,7 +44,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "my-instances"
+		opt1 := "my-instances-json"
+		myInstances, err := cs.GetRegistryEnterpriseInstances(ctx, &cs.GetRegistryEnterpriseInstancesArgs{
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("output", myInstances.Instances)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +114,7 @@ export const output = myInstances.instances;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_registry_enterprise_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_enterprise_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistryEnterpriseInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -967,8 +991,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="namespacequota_python">
-<a href="#namespacequota_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Quota</a>
+        <span id="namespace_quota_python">
+<a href="#namespace_quota_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -978,8 +1002,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="namespaceusage_python">
-<a href="#namespaceusage_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Usage</a>
+        <span id="namespace_usage_python">
+<a href="#namespace_usage_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>usage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -989,8 +1013,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicendpoints_python">
-<a href="#publicendpoints_python" style="color: inherit; text-decoration: inherit;">public<wbr>Endpoints</a>
+        <span id="public_endpoints_python">
+<a href="#public_endpoints_python" style="color: inherit; text-decoration: inherit;">public_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1011,8 +1035,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repoquota_python">
-<a href="#repoquota_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Quota</a>
+        <span id="repo_quota_python">
+<a href="#repo_quota_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1022,8 +1046,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="repousage_python">
-<a href="#repousage_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Usage</a>
+        <span id="repo_usage_python">
+<a href="#repo_usage_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>usage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1044,8 +1068,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpcendpoints_python">
-<a href="#vpcendpoints_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoints</a>
+        <span id="vpc_endpoints_python">
+<a href="#vpc_endpoints_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1071,6 +1095,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

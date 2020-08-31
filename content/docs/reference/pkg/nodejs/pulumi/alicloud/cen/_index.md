@@ -3,7 +3,7 @@ title: "Module cen"
 title_tag: "Module cen | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cen"
 meta_desc: "Explore members of the cen module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "defe40500a6bcc54fb2373512cd0091abe87d61b"
 block_external_search_index: true
 ---
 
@@ -87,7 +87,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="BandwidthLimit" data-link-title="BandwidthLimit">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L71">
         Resource <strong>BandwidthLimit</strong>
     </a>
 </h3>
@@ -102,7 +102,7 @@ For information about CEN and how to use it, see [Cross-region interconnection b
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -133,16 +133,16 @@ const bwp = new alicloud.cen.BandwidthPackage("bwp", {
         "China",
     ],
 });
-const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwpAttach", {
+const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwp_attach", {
     bandwidthPackageId: bwp.id,
     instanceId: cen.id,
 });
-const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpcAttach1", {
+const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpc_attach_1", {
     childInstanceId: vpc1.id,
     childInstanceRegionId: "eu-central-1",
     instanceId: cen.id,
 });
-const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpcAttach2", {
+const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpc_attach_2", {
     childInstanceId: vpc2.id,
     childInstanceRegionId: "cn-shanghai",
     instanceId: cen.id,
@@ -158,7 +158,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -172,7 +172,7 @@ Create a BandwidthLimit resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -183,14 +183,14 @@ Get an existing BandwidthLimit resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -201,7 +201,7 @@ Returns true if the given object is an instance of BandwidthLimit.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-bandwidthLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L102">property <b>bandwidthLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L102">property <b>bandwidthLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidthLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The bandwidth configured for the interconnected regions communication.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -218,7 +218,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L106">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L106">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-regionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L110">property <b>regionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L110">property <b>regionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -234,7 +234,7 @@ The ID of the CEN.
 List of the two regions to interconnect. Must be two different regions.
 
 <h4 class="pdoc-member-header" id="BandwidthLimit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -243,7 +243,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BandwidthPackage" data-link-title="BandwidthPackage">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L29">
         Resource <strong>BandwidthPackage</strong>
     </a>
 </h3>
@@ -256,7 +256,7 @@ For information about CEN and how to use it, see [Manage bandwidth packages](htt
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -272,7 +272,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -286,7 +286,7 @@ Create a BandwidthPackage resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -297,14 +297,14 @@ Get an existing BandwidthPackage resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -315,7 +315,7 @@ Returns true if the given object is an instance of BandwidthPackage.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L60">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L60">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-chargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L64">property <b>chargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L64">property <b>chargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>chargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set
 The description of the bandwidth package. Default to null.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-expiredTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L72">property <b>expiredTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L72">property <b>expiredTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiredTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ The description of the bandwidth package. Default to null.
 The time of the bandwidth package to expire.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-geographicRegionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L76">property <b>geographicRegionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L76">property <b>geographicRegionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>geographicRegionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -355,7 +355,7 @@ The time of the bandwidth package to expire.
 List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -364,7 +364,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -372,7 +372,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the bandwidth package. Defaults to null.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L84">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L84">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -380,7 +380,7 @@ The name of the bandwidth package. Defaults to null.
 The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L88">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 The status of the bandwidth, including "InUse" and "Idle".
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -397,7 +397,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BandwidthPackageAttachment" data-link-title="BandwidthPackageAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">
         Resource <strong>BandwidthPackageAttachment</strong>
     </a>
 </h3>
@@ -408,7 +408,7 @@ Provides a CEN bandwidth package attachment resource. The resource can be used t
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -432,7 +432,7 @@ const foo = new alicloud.cen.BandwidthPackageAttachment("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -446,7 +446,7 @@ Create a BandwidthPackageAttachment resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -457,14 +457,14 @@ Get an existing BandwidthPackageAttachment resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -475,7 +475,7 @@ Returns true if the given object is an instance of BandwidthPackageAttachment.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-bandwidthPackageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L66">property <b>bandwidthPackageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L66">property <b>bandwidthPackageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidthPackageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the bandwidth package.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -492,7 +492,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L70">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L70">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -509,14 +509,50 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FlowLog" data-link-title="FlowLog">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L43">
         Resource <strong>FlowLog</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>FlowLog</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+This resource used to create a flow log function in Cloud Enterprise Network (CEN).
+By using the flow log function, you can capture the traffic data of the network instances in different regions of a CEN.
+You can also use the data aggregated in flow logs to analyze cross-region traffic flows, minimize traffic costs, and troubleshoot network faults.
+
+For information about CEN flow log and how to use it, see [Manage CEN flowlog](https://www.alibabacloud.com/help/doc-detail/123006.htm).
+
+> **NOTE:** Available in 1.73.0+
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a cen flowlog resource and use it to publish a route entry pointing to an ECS.
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
+const defaultProject = new alicloud.log.Project("defaultProject", {description: "create by terraform"});
+const defaultStore = new alicloud.log.Store("defaultStore", {
+    project: defaultProject.name,
+    retentionPeriod: 3650,
+    shardCount: 3,
+    autoSplit: true,
+    maxSplitShardCount: 60,
+    appendMeta: true,
+});
+const defaultFlowLog = new alicloud.cen.FlowLog("defaultFlowLog", {
+    flowLogName: "my-flowlog",
+    cenId: defaultInstance.id,
+    projectName: defaultProject.name,
+    logStoreName: defaultStore.name,
+});
+```
+
 <h4 class="pdoc-member-header" id="FlowLog-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -530,7 +566,7 @@ Create a FlowLog resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FlowLog-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -541,14 +577,14 @@ Get an existing FlowLog resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FlowLog-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlowLog-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -559,7 +595,7 @@ Returns true if the given object is an instance of FlowLog.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FlowLog-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L38">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L74">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +603,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the CEN Instance.
 
 <h4 class="pdoc-member-header" id="FlowLog-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L42">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L78">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -575,7 +611,7 @@ The ID of the CEN Instance.
 The description of flowlog.
 
 <h4 class="pdoc-member-header" id="FlowLog-flowLogName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L46">property <b>flowLogName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L82">property <b>flowLogName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>flowLogName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -583,7 +619,7 @@ The description of flowlog.
 The name of flowlog.
 
 <h4 class="pdoc-member-header" id="FlowLog-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -592,7 +628,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FlowLog-logStoreName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L50">property <b>logStoreName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L86">property <b>logStoreName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logStoreName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +636,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log store which is in the  `projectName` SLS project.
 
 <h4 class="pdoc-member-header" id="FlowLog-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L54">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L90">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +644,7 @@ The name of the log store which is in the  `projectName` SLS project.
 The name of the SLS project.
 
 <h4 class="pdoc-member-header" id="FlowLog-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L58">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L94">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -616,7 +652,7 @@ The name of the SLS project.
 The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active".
 
 <h4 class="pdoc-member-header" id="FlowLog-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -625,7 +661,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L25">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -638,7 +674,7 @@ For information about CEN and how to use it, see [What is Cloud Enterprise Netwo
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -650,7 +686,7 @@ const cen = new alicloud.cen.Instance("cen", {
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -664,7 +700,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -675,14 +711,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -693,7 +729,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -701,7 +737,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the CEN instance. Defaults to null. The description must be 2 to 256 characters in length. It must start with a letter, and cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -710,7 +746,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -718,7 +754,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="Instance-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L64">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L64">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protectionLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +762,7 @@ The name of the CEN instance. Defaults to null. The name must be 2 to 128 charac
 (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping.
 
 <h4 class="pdoc-member-header" id="Instance-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L68">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L68">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -734,7 +770,7 @@ The name of the CEN instance. Defaults to null. The name must be 2 to 128 charac
 The Cen Instance current status.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L72">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -742,7 +778,7 @@ The Cen Instance current status.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -751,14 +787,42 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InstanceAttachment" data-link-title="InstanceAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L35">
         Resource <strong>InstanceAttachment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>InstanceAttachment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a CEN child instance attachment resource.
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+// Create a new instance-attachment and use it to attach one child instance to a new CEN
+const name = config.get("name") || "tf-testAccCenInstanceAttachmentBasic";
+
+const cen = new alicloud.cen.Instance("cen", {
+    description: "terraform01",
+});
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "192.168.0.0/16",
+});
+const foo = new alicloud.cen.InstanceAttachment("foo", {
+    childInstanceId: vpc.id,
+    childInstanceRegionId: "cn-beijing",
+    instanceId: cen.id,
+});
+```
+
 <h4 class="pdoc-member-header" id="InstanceAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -772,7 +836,7 @@ Create a InstanceAttachment resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -783,14 +847,14 @@ Get an existing InstanceAttachment resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -801,7 +865,7 @@ Returns true if the given object is an instance of InstanceAttachment.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-childInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L38">property <b>childInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L66">property <b>childInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>childInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +873,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the child instance to attach.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-childInstanceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L42">property <b>childInstanceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L70">property <b>childInstanceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>childInstanceOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +881,7 @@ The ID of the child instance to attach.
 The uid of the child instance. Only used when attach a child instance of other account.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-childInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L46">property <b>childInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L74">property <b>childInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>childInstanceRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +889,7 @@ The uid of the child instance. Only used when attach a child instance of other a
 The region ID of the child instance to attach.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -834,7 +898,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L50">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L78">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -842,7 +906,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -851,7 +915,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InstanceGrant" data-link-title="InstanceGrant">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L49">
         Resource <strong>InstanceGrant</strong>
     </a>
 </h3>
@@ -864,7 +928,7 @@ For more information about how to use it, see [Attach a network in a different a
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -900,7 +964,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="InstanceGrant-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -914,7 +978,7 @@ Create a InstanceGrant resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -925,14 +989,14 @@ Get an existing InstanceGrant resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InstanceGrant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -943,7 +1007,7 @@ Returns true if the given object is an instance of InstanceGrant.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L80">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L80">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +1015,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-cenOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L84">property <b>cenOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L84">property <b>cenOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +1023,7 @@ The ID of the CEN.
 The owner UID of the  CEN which the child instance granted to.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-childInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L88">property <b>childInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L88">property <b>childInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>childInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +1031,7 @@ The owner UID of the  CEN which the child instance granted to.
 The ID of the child instance to grant.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -976,7 +1040,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InstanceGrant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -985,7 +1049,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PrivateZone" data-link-title="PrivateZone">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L41">
         Resource <strong>PrivateZone</strong>
     </a>
 </h3>
@@ -1002,7 +1066,7 @@ For information about CEN Private Zone and how to use it, see [Manage CEN Privat
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1026,7 +1090,7 @@ const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
 ```
 
 <h4 class="pdoc-member-header" id="PrivateZone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -1040,7 +1104,7 @@ Create a PrivateZone resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PrivateZone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -1051,14 +1115,14 @@ Get an existing PrivateZone resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PrivateZone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PrivateZone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1069,7 +1133,7 @@ Returns true if the given object is an instance of PrivateZone.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PrivateZone-accessRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L72">property <b>accessRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L72">property <b>accessRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1077,7 +1141,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 
 <h4 class="pdoc-member-header" id="PrivateZone-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L76">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L76">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1085,7 +1149,7 @@ The access region. The access region is the region of the cloud resource that ac
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="PrivateZone-hostRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L80">property <b>hostRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L80">property <b>hostRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1093,7 +1157,7 @@ The ID of the CEN instance.
 The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 
 <h4 class="pdoc-member-header" id="PrivateZone-hostVpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L84">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L84">property <b>hostVpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostVpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1101,7 +1165,7 @@ The service region. The service region is the target region of the PrivateZone s
 The VPC that belongs to the service region.
 
 <h4 class="pdoc-member-header" id="PrivateZone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1110,7 +1174,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PrivateZone-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L88">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1118,7 +1182,7 @@ deployments and may be missing (undefined) during planning phases.
 The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 
 <h4 class="pdoc-member-header" id="PrivateZone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1127,7 +1191,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RouteEntry" data-link-title="RouteEntry">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L81">
         Resource <strong>RouteEntry</strong>
     </a>
 </h3>
@@ -1140,7 +1204,7 @@ For information about CEN route entries publishment and how to use it, see [Mana
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1153,7 +1217,7 @@ const hz = new alicloud.Provider("hz", {
     region: "cn-hangzhou",
 });
 const defaultZones = pulumi.output(alicloud.getZones({
-    availableDiskCategory: "cloudEfficiency",
+    availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
 }, { provider: hz, async: true }));
 const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
@@ -1185,7 +1249,7 @@ const defaultInstance = new alicloud.ecs.Instance("default", {
     internetChargeType: "PayByTraffic",
     internetMaxBandwidthOut: 5,
     securityGroups: [defaultSecurityGroup.id],
-    systemDiskCategory: "cloudEfficiency",
+    systemDiskCategory: "cloud_efficiency",
     vswitchId: defaultSwitch.id,
 }, { provider: hz });
 const cen = new alicloud.cen.Instance("cen", {});
@@ -1208,7 +1272,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="RouteEntry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
@@ -1222,7 +1286,7 @@ Create a RouteEntry resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RouteEntry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L91">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L91">method <b>get</b></a>
 </h4>
 
 
@@ -1233,14 +1297,14 @@ Get an existing RouteEntry resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RouteEntry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L81">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L81">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RouteEntry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L102">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L102">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1251,7 +1315,7 @@ Returns true if the given object is an instance of RouteEntry.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RouteEntry-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L112">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L112">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1323,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The destination CIDR block of the route entry to publish.
 
 <h4 class="pdoc-member-header" id="RouteEntry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1268,7 +1332,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RouteEntry-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L116">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L116">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1276,7 +1340,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="RouteEntry-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L120">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L120">property <b>routeTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1284,7 +1348,7 @@ The ID of the CEN.
 The route table of the attached VBR or VPC.
 
 <h4 class="pdoc-member-header" id="RouteEntry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L81">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L81">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1293,7 +1357,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RouteMap" data-link-title="RouteMap">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L78">
         Resource <strong>RouteMap</strong>
     </a>
 </h3>
@@ -1310,17 +1374,17 @@ For information about CEN Route Map and how to use it, see [Manage CEN Route Map
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const defaultInstance = new alicloud.cen.Instance("default", {});
-const vpc00Region = new alicloud.Provider("vpc00Region", {
+const vpc00Region = new alicloud.Provider("vpc00_region", {
     region: "cn-hangzhou",
 });
-const vpc01Region = new alicloud.Provider("vpc01Region", {
+const vpc01Region = new alicloud.Provider("vpc01_region", {
     region: "cn-shanghai",
 });
 const vpc00 = new alicloud.vpc.Network("vpc00", {
@@ -1371,7 +1435,7 @@ const defaultRouteMap = new alicloud.cen.RouteMap("default", {
 ```
 
 <h4 class="pdoc-member-header" id="RouteMap-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L218"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L218"> <b>constructor</b></a>
 </h4>
 
 
@@ -1385,7 +1449,7 @@ Create a RouteMap resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RouteMap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L88">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L88">method <b>get</b></a>
 </h4>
 
 
@@ -1396,14 +1460,14 @@ Get an existing RouteMap resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RouteMap-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L78">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L78">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RouteMap-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L99">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L99">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1414,7 +1478,7 @@ Returns true if the given object is an instance of RouteMap.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RouteMap-asPathMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L109">property <b>asPathMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L109">property <b>asPathMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>asPathMatchMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1422,7 +1486,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMap-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L113">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L113">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1430,7 +1494,7 @@ A match statement. It indicates the mode in which the AS path attribute is match
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="RouteMap-cenRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L117">property <b>cenRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L117">property <b>cenRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1438,7 +1502,7 @@ The ID of the CEN instance.
 The ID of the region to which the CEN instance belongs.
 
 <h4 class="pdoc-member-header" id="RouteMap-cidrMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L121">property <b>cidrMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L121">property <b>cidrMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrMatchMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1446,7 +1510,7 @@ The ID of the region to which the CEN instance belongs.
 A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMap-communityMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L125">property <b>communityMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L125">property <b>communityMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>communityMatchMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1454,7 +1518,7 @@ A match statement. It indicates the mode in which the prefix attribute is matche
 A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMap-communityOperateMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L129">property <b>communityOperateMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L129">property <b>communityOperateMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>communityOperateMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1462,7 +1526,7 @@ A match statement. It indicates the mode in which the community attribute is mat
 An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 
 <h4 class="pdoc-member-header" id="RouteMap-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L133">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L133">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1470,7 +1534,7 @@ An action statement. It indicates the mode in which the community attribute is o
 The description of the route map.
 
 <h4 class="pdoc-member-header" id="RouteMap-destinationChildInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L137">property <b>destinationChildInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L137">property <b>destinationChildInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationChildInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1478,7 +1542,7 @@ The description of the route map.
 A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 
 <h4 class="pdoc-member-header" id="RouteMap-destinationCidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L141">property <b>destinationCidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L141">property <b>destinationCidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationCidrBlocks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1486,7 +1550,7 @@ A match statement that indicates the list of destination instance types. Valid v
 A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 
 <h4 class="pdoc-member-header" id="RouteMap-destinationInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L145">property <b>destinationInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L145">property <b>destinationInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationInstanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1494,7 +1558,7 @@ A match statement that indicates the prefix list. The prefix is in the CIDR form
 A match statement that indicates the list of IDs of the destination instances.
 
 <h4 class="pdoc-member-header" id="RouteMap-destinationInstanceIdsReverseMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L149">property <b>destinationInstanceIdsReverseMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L149">property <b>destinationInstanceIdsReverseMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationInstanceIdsReverseMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1502,7 +1566,7 @@ A match statement that indicates the list of IDs of the destination instances.
 Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 
 <h4 class="pdoc-member-header" id="RouteMap-destinationRouteTableIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L153">property <b>destinationRouteTableIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L153">property <b>destinationRouteTableIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationRouteTableIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1510,7 +1574,7 @@ Indicates whether to enable the reverse match method for the DestinationInstance
 A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 
 <h4 class="pdoc-member-header" id="RouteMap-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1519,7 +1583,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RouteMap-mapResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L157">property <b>mapResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L157">property <b>mapResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mapResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1527,7 +1591,7 @@ deployments and may be missing (undefined) during planning phases.
 The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 
 <h4 class="pdoc-member-header" id="RouteMap-matchAsns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L161">property <b>matchAsns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L161">property <b>matchAsns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>matchAsns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1535,7 +1599,7 @@ The action that is performed to a route if the route matches all the match condi
 A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 
 <h4 class="pdoc-member-header" id="RouteMap-matchCommunitySets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L165">property <b>matchCommunitySets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L165">property <b>matchCommunitySets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>matchCommunitySets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1543,7 +1607,7 @@ A match statement that indicates the AS path list. The AS path is a well-known m
 A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 
 <h4 class="pdoc-member-header" id="RouteMap-nextPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L169">property <b>nextPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L169">property <b>nextPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nextPriority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1551,7 +1615,7 @@ A match statement that indicates the community set. The format of each community
 The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 
 <h4 class="pdoc-member-header" id="RouteMap-operateCommunitySets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L173">property <b>operateCommunitySets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L173">property <b>operateCommunitySets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operateCommunitySets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1559,7 +1623,7 @@ The priority of the next route map that is associated with the current route map
 An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 
 <h4 class="pdoc-member-header" id="RouteMap-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L177">property <b>preference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L177">property <b>preference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1567,7 +1631,7 @@ An action statement that operates the community attribute. The format of each co
 An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 
 <h4 class="pdoc-member-header" id="RouteMap-prependAsPaths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L181">property <b>prependAsPaths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L181">property <b>prependAsPaths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>prependAsPaths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1575,7 +1639,7 @@ An action statement that modifies the priority of the route. Value range: 1 to 1
 An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 
 <h4 class="pdoc-member-header" id="RouteMap-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L185">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L185">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1583,12 +1647,12 @@ An action statement that indicates an AS path is prepended when the regional gat
 The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 
 <h4 class="pdoc-member-header" id="RouteMap-routeMapId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L186">property <b>routeMapId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L186">property <b>routeMapId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeMapId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteMap-routeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L190">property <b>routeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L190">property <b>routeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1596,7 +1660,7 @@ The priority of the route map. Value range: 1 to 100. A lower value indicates a 
 A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 
 <h4 class="pdoc-member-header" id="RouteMap-sourceChildInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L194">property <b>sourceChildInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L194">property <b>sourceChildInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceChildInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1604,7 +1668,7 @@ A match statement that indicates the list of route types. Valid values: ["System
 A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 
 <h4 class="pdoc-member-header" id="RouteMap-sourceInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L198">property <b>sourceInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L198">property <b>sourceInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceInstanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1612,7 +1676,7 @@ A match statement that indicates the list of source instance types. Valid values
 A match statement that indicates the list of IDs of the source instances.
 
 <h4 class="pdoc-member-header" id="RouteMap-sourceInstanceIdsReverseMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L202">property <b>sourceInstanceIdsReverseMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L202">property <b>sourceInstanceIdsReverseMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceInstanceIdsReverseMatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1620,7 +1684,7 @@ A match statement that indicates the list of IDs of the source instances.
 Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 
 <h4 class="pdoc-member-header" id="RouteMap-sourceRegionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L206">property <b>sourceRegionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L206">property <b>sourceRegionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRegionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1628,7 +1692,7 @@ Indicates whether to enable the reverse match method for the SourceInstanceIds m
 A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 
 <h4 class="pdoc-member-header" id="RouteMap-sourceRouteTableIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L210">property <b>sourceRouteTableIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L210">property <b>sourceRouteTableIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRouteTableIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1636,7 +1700,7 @@ A match statement that indicates the list of IDs of the source regions. You can 
 A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 
 <h4 class="pdoc-member-header" id="RouteMap-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L214">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L214">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1644,7 +1708,7 @@ A match statement that indicates the list of IDs of the source route tables. You
 (Computed) The status of route map. Valid values: ["Creating", "Active", "Deleting"].
 
 <h4 class="pdoc-member-header" id="RouteMap-transmitDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L218">property <b>transmitDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L218">property <b>transmitDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transmitDirection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1652,7 +1716,7 @@ A match statement that indicates the list of IDs of the source route tables. You
 The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 
 <h4 class="pdoc-member-header" id="RouteMap-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L78">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L78">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1661,7 +1725,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VbrHealthCheck" data-link-title="VbrHealthCheck">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L40">
         Resource <strong>VbrHealthCheck</strong>
     </a>
 </h3>
@@ -1677,7 +1741,7 @@ For information about CEN VBR HealthCheck and how to use it, see [Manage CEN VBR
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1701,7 +1765,7 @@ const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
 ```
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -1715,7 +1779,7 @@ Create a VbrHealthCheck resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1726,14 +1790,14 @@ Get an existing VbrHealthCheck resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1744,7 +1808,7 @@ Returns true if the given object is an instance of VbrHealthCheck.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L71">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L71">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1752,7 +1816,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-healthCheckInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L75">property <b>healthCheckInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L75">property <b>healthCheckInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1760,7 +1824,7 @@ The ID of the CEN instance.
 Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-healthCheckSourceIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L79">property <b>healthCheckSourceIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L79">property <b>healthCheckSourceIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckSourceIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1768,7 +1832,7 @@ Specifies the interval at which the health check sends continuous detection pack
 The source IP address of health checks.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-healthCheckTargetIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L83">property <b>healthCheckTargetIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L83">property <b>healthCheckTargetIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckTargetIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1776,7 +1840,7 @@ The source IP address of health checks.
 The destination IP address of health checks.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-healthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L87">property <b>healthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L87">property <b>healthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1784,7 +1848,7 @@ The destination IP address of health checks.
 Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1793,7 +1857,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1802,7 +1866,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-vbrInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L91">property <b>vbrInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L91">property <b>vbrInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vbrInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1810,7 +1874,7 @@ deployments.
 The ID of the VBR.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-vbrInstanceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L95">property <b>vbrInstanceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L95">property <b>vbrInstanceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vbrInstanceOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1818,7 +1882,7 @@ The ID of the VBR.
 The ID of the account to which the VBR belongs.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheck-vbrInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L99">property <b>vbrInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L99">property <b>vbrInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vbrInstanceRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1828,7 +1892,7 @@ The ID of the region to which the VBR belongs.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getBandwidthLimits" data-link-title="getBandwidthLimits">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L25">
         Function <strong>getBandwidthLimits</strong>
     </a>
 </h3>
@@ -1840,8 +1904,6 @@ The ID of the region to which the VBR belongs.
 This data source provides CEN Bandwidth Limits available to the user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1855,7 +1917,7 @@ export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 ```
 
 <h3 class="pdoc-module-header" id="getBandwidthPackages" data-link-title="getBandwidthPackages">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L26">
         Function <strong>getBandwidthPackages</strong>
     </a>
 </h3>
@@ -1867,8 +1929,6 @@ export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 This data source provides CEN Bandwidth Packages available to the user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1883,7 +1943,7 @@ export const firstCenBandwidthPackageId = bwp.packages[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getFlowlogs" data-link-title="getFlowlogs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L30">
         Function <strong>getFlowlogs</strong>
     </a>
 </h3>
@@ -1898,7 +1958,7 @@ This data source provides CEN flow logs available to the user.
 
 #### Example Usage
 
-
+Basic Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1913,7 +1973,7 @@ export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 ```
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L26">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -1925,8 +1985,6 @@ export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 This data source provides CEN instances available to the user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1941,7 +1999,7 @@ export const firstCenInstanceId = cenInstancesDs.instances[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getPrivateZones" data-link-title="getPrivateZones">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L29">
         Function <strong>getPrivateZones</strong>
     </a>
 </h3>
@@ -1955,8 +2013,6 @@ This data source provides CEN Private Zones available to the user.
 > **NOTE:** Available in v1.88.0+.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1972,7 +2028,7 @@ export const firstCenPrivateZonesId = thisPrivateZones.zones[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getRegionRouteEntries" data-link-title="getRegionRouteEntries">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L26">
         Function <strong>getRegionRouteEntries</strong>
     </a>
 </h3>
@@ -1984,8 +2040,6 @@ export const firstCenPrivateZonesId = thisPrivateZones.zones[0].id;
 This data source provides CEN Regional Route Entries available to the user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2000,7 +2054,7 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 ```
 
 <h3 class="pdoc-module-header" id="getRouteEntries" data-link-title="getRouteEntries">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L26">
         Function <strong>getRouteEntries</strong>
     </a>
 </h3>
@@ -2012,8 +2066,6 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 This data source provides CEN Route Entries available to the user.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2028,7 +2080,7 @@ export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```
 
 <h3 class="pdoc-module-header" id="getRouteMaps" data-link-title="getRouteMaps">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L32">
         Function <strong>getRouteMaps</strong>
     </a>
 </h3>
@@ -2043,8 +2095,6 @@ This data source provides CEN Route Maps available to the user.
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -2052,7 +2102,7 @@ import * as alicloud from "@pulumi/alicloud";
 const thisRouteMaps = pulumi.output(alicloud.cen.getRouteMaps({
     cenId: "cen-ihdlgo87ai********",
     cenRegionId: "cn-hangzhou",
-    descriptionRegex: "datasourceTest",
+    descriptionRegex: "datasource_test",
     ids: ["cenrmap-bnh97kb3mn********"],
     status: "Active",
     transmitDirection: "RegionIn",
@@ -2064,7 +2114,7 @@ export const firstCenRouteMapId = thisRouteMaps.maps[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BandwidthLimitArgs" data-link-title="BandwidthLimitArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L174">
         interface <strong>BandwidthLimitArgs</strong>
     </a>
 </h3>
@@ -2074,7 +2124,7 @@ export const firstCenRouteMapId = thisRouteMaps.maps[0].id;
 The set of arguments for constructing a BandwidthLimit resource.
 
 <h4 class="pdoc-member-header" id="BandwidthLimitArgs-bandwidthLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L178">property <b>bandwidthLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L178">property <b>bandwidthLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2082,7 +2132,7 @@ The set of arguments for constructing a BandwidthLimit resource.
 The bandwidth configured for the interconnected regions communication.
 
 <h4 class="pdoc-member-header" id="BandwidthLimitArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L182">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L182">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2090,7 +2140,7 @@ The bandwidth configured for the interconnected regions communication.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="BandwidthLimitArgs-regionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L186">property <b>regionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L186">property <b>regionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2098,7 +2148,7 @@ The ID of the CEN.
 List of the two regions to interconnect. Must be two different regions.
 
 <h3 class="pdoc-module-header" id="BandwidthLimitState" data-link-title="BandwidthLimitState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L156">
         interface <strong>BandwidthLimitState</strong>
     </a>
 </h3>
@@ -2108,7 +2158,7 @@ List of the two regions to interconnect. Must be two different regions.
 Input properties used for looking up and filtering BandwidthLimit resources.
 
 <h4 class="pdoc-member-header" id="BandwidthLimitState-bandwidthLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L160">property <b>bandwidthLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L160">property <b>bandwidthLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2116,7 +2166,7 @@ Input properties used for looking up and filtering BandwidthLimit resources.
 The bandwidth configured for the interconnected regions communication.
 
 <h4 class="pdoc-member-header" id="BandwidthLimitState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L164">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L164">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2124,7 +2174,7 @@ The bandwidth configured for the interconnected regions communication.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="BandwidthLimitState-regionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthLimit.ts#L168">property <b>regionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthLimit.ts#L168">property <b>regionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2132,7 +2182,7 @@ The ID of the CEN.
 List of the two regions to interconnect. Must be two different regions.
 
 <h3 class="pdoc-module-header" id="BandwidthPackageArgs" data-link-title="BandwidthPackageArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L179">
         interface <strong>BandwidthPackageArgs</strong>
     </a>
 </h3>
@@ -2142,7 +2192,7 @@ List of the two regions to interconnect. Must be two different regions.
 The set of arguments for constructing a BandwidthPackage resource.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L183">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L183">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2150,7 +2200,7 @@ The set of arguments for constructing a BandwidthPackage resource.
 The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-chargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L187">property <b>chargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L187">property <b>chargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2158,7 +2208,7 @@ The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L191">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L191">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2166,7 +2216,7 @@ The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set
 The description of the bandwidth package. Default to null.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-geographicRegionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L195">property <b>geographicRegionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L195">property <b>geographicRegionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geographicRegionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2174,7 +2224,7 @@ The description of the bandwidth package. Default to null.
 List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2182,7 +2232,7 @@ List of the two areas to connect. Valid value: China | North-America | Asia-Paci
 The name of the bandwidth package. Defaults to null.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L203">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L203">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2190,7 +2240,7 @@ The name of the bandwidth package. Defaults to null.
 The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 
 <h3 class="pdoc-module-header" id="BandwidthPackageAttachmentArgs" data-link-title="BandwidthPackageAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L125">
         interface <strong>BandwidthPackageAttachmentArgs</strong>
     </a>
 </h3>
@@ -2200,7 +2250,7 @@ The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 The set of arguments for constructing a BandwidthPackageAttachment resource.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachmentArgs-bandwidthPackageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L129">property <b>bandwidthPackageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L129">property <b>bandwidthPackageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthPackageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2208,7 +2258,7 @@ The set of arguments for constructing a BandwidthPackageAttachment resource.
 The ID of the bandwidth package.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachmentArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L133">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L133">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2216,7 +2266,7 @@ The ID of the bandwidth package.
 The ID of the CEN.
 
 <h3 class="pdoc-module-header" id="BandwidthPackageAttachmentState" data-link-title="BandwidthPackageAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L111">
         interface <strong>BandwidthPackageAttachmentState</strong>
     </a>
 </h3>
@@ -2226,7 +2276,7 @@ The ID of the CEN.
 Input properties used for looking up and filtering BandwidthPackageAttachment resources.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachmentState-bandwidthPackageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L115">property <b>bandwidthPackageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L115">property <b>bandwidthPackageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthPackageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2234,7 +2284,7 @@ Input properties used for looking up and filtering BandwidthPackageAttachment re
 The ID of the bandwidth package.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageAttachmentState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L119">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackageAttachment.ts#L119">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2242,7 +2292,7 @@ The ID of the bandwidth package.
 The ID of the CEN.
 
 <h3 class="pdoc-module-header" id="BandwidthPackageState" data-link-title="BandwidthPackageState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L141">
         interface <strong>BandwidthPackageState</strong>
     </a>
 </h3>
@@ -2252,7 +2302,7 @@ The ID of the CEN.
 Input properties used for looking up and filtering BandwidthPackage resources.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L145">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L145">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2260,7 +2310,7 @@ Input properties used for looking up and filtering BandwidthPackage resources.
 The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-chargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L149">property <b>chargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L149">property <b>chargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2268,7 +2318,7 @@ The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L153">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L153">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2276,7 +2326,7 @@ The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set
 The description of the bandwidth package. Default to null.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-expiredTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L157">property <b>expiredTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L157">property <b>expiredTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiredTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2284,7 +2334,7 @@ The description of the bandwidth package. Default to null.
 The time of the bandwidth package to expire.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-geographicRegionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L161">property <b>geographicRegionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L161">property <b>geographicRegionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geographicRegionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2292,7 +2342,7 @@ The time of the bandwidth package to expire.
 List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L165">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2300,7 +2350,7 @@ List of the two areas to connect. Valid value: China | North-America | Asia-Paci
 The name of the bandwidth package. Defaults to null.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L169">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L169">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2308,7 +2358,7 @@ The name of the bandwidth package. Defaults to null.
 The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/bandwidthPackage.ts#L173">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/bandwidthPackage.ts#L173">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2316,7 +2366,7 @@ The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 The status of the bandwidth, including "InUse" and "Idle".
 
 <h3 class="pdoc-module-header" id="FlowLogArgs" data-link-title="FlowLogArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L176">
         interface <strong>FlowLogArgs</strong>
     </a>
 </h3>
@@ -2326,7 +2376,7 @@ The status of the bandwidth, including "InUse" and "Idle".
 The set of arguments for constructing a FlowLog resource.
 
 <h4 class="pdoc-member-header" id="FlowLogArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L144">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L180">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2334,7 +2384,7 @@ The set of arguments for constructing a FlowLog resource.
 The ID of the CEN Instance.
 
 <h4 class="pdoc-member-header" id="FlowLogArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L148">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2342,7 +2392,7 @@ The ID of the CEN Instance.
 The description of flowlog.
 
 <h4 class="pdoc-member-header" id="FlowLogArgs-flowLogName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L152">property <b>flowLogName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L188">property <b>flowLogName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowLogName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2350,7 +2400,7 @@ The description of flowlog.
 The name of flowlog.
 
 <h4 class="pdoc-member-header" id="FlowLogArgs-logStoreName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L156">property <b>logStoreName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L192">property <b>logStoreName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStoreName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2358,7 +2408,7 @@ The name of flowlog.
 The name of the log store which is in the  `projectName` SLS project.
 
 <h4 class="pdoc-member-header" id="FlowLogArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L160">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L196">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2366,7 +2416,7 @@ The name of the log store which is in the  `projectName` SLS project.
 The name of the SLS project.
 
 <h4 class="pdoc-member-header" id="FlowLogArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L164">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L200">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2374,7 +2424,7 @@ The name of the SLS project.
 The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active".
 
 <h3 class="pdoc-module-header" id="FlowLogState" data-link-title="FlowLogState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L146">
         interface <strong>FlowLogState</strong>
     </a>
 </h3>
@@ -2384,7 +2434,7 @@ The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active"
 Input properties used for looking up and filtering FlowLog resources.
 
 <h4 class="pdoc-member-header" id="FlowLogState-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L114">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L150">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2392,7 +2442,7 @@ Input properties used for looking up and filtering FlowLog resources.
 The ID of the CEN Instance.
 
 <h4 class="pdoc-member-header" id="FlowLogState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L154">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2450,7 @@ The ID of the CEN Instance.
 The description of flowlog.
 
 <h4 class="pdoc-member-header" id="FlowLogState-flowLogName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L122">property <b>flowLogName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L158">property <b>flowLogName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowLogName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2408,7 +2458,7 @@ The description of flowlog.
 The name of flowlog.
 
 <h4 class="pdoc-member-header" id="FlowLogState-logStoreName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L126">property <b>logStoreName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L162">property <b>logStoreName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStoreName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2416,7 +2466,7 @@ The name of flowlog.
 The name of the log store which is in the  `projectName` SLS project.
 
 <h4 class="pdoc-member-header" id="FlowLogState-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L130">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L166">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2424,7 +2474,7 @@ The name of the log store which is in the  `projectName` SLS project.
 The name of the SLS project.
 
 <h4 class="pdoc-member-header" id="FlowLogState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/flowLog.ts#L134">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/flowLog.ts#L170">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2432,7 +2482,7 @@ The name of the SLS project.
 The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active".
 
 <h3 class="pdoc-module-header" id="GetBandwidthLimitsArgs" data-link-title="GetBandwidthLimitsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L43">
         interface <strong>GetBandwidthLimitsArgs</strong>
     </a>
 </h3>
@@ -2442,7 +2492,7 @@ The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active"
 A collection of arguments for invoking getBandwidthLimits.
 
 <h4 class="pdoc-member-header" id="GetBandwidthLimitsArgs-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L49">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L47">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2450,12 +2500,12 @@ A collection of arguments for invoking getBandwidthLimits.
 A list of CEN instances IDs.
 
 <h4 class="pdoc-member-header" id="GetBandwidthLimitsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L50">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L48">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetBandwidthLimitsResult" data-link-title="GetBandwidthLimitsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L54">
         interface <strong>GetBandwidthLimitsResult</strong>
     </a>
 </h3>
@@ -2465,7 +2515,7 @@ A list of CEN instances IDs.
 A collection of values returned by getBandwidthLimits.
 
 <h4 class="pdoc-member-header" id="GetBandwidthLimitsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2473,12 +2523,12 @@ A collection of values returned by getBandwidthLimits.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBandwidthLimitsResult-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L61">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L59">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthLimitsResult-limits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L65">property <b>limits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L63">property <b>limits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limits: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBandwidthLimitsLimit'>GetBandwidthLimitsLimit</a>[];</code></pre>
@@ -2486,12 +2536,12 @@ The provider-assigned unique ID for this managed resource.
 A list of CEN Bandwidth Limits. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetBandwidthLimitsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthLimits.ts#L66">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthLimits.ts#L64">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetBandwidthPackagesArgs" data-link-title="GetBandwidthPackagesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L46">
         interface <strong>GetBandwidthPackagesArgs</strong>
     </a>
 </h3>
@@ -2501,7 +2551,7 @@ A list of CEN Bandwidth Limits. Each element contains the following attributes:
 A collection of arguments for invoking getBandwidthPackages.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L50">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2509,7 +2559,7 @@ A collection of arguments for invoking getBandwidthPackages.
 Limit search to a list of specific CEN Bandwidth Package IDs.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L56">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L54">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2517,7 +2567,7 @@ Limit search to a list of specific CEN Bandwidth Package IDs.
 ID of a CEN instance.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L60">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L58">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2525,12 +2575,12 @@ ID of a CEN instance.
 A regex string to filter CEN Bandwidth Package by name.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L61">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetBandwidthPackagesResult" data-link-title="GetBandwidthPackagesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L65">
         interface <strong>GetBandwidthPackagesResult</strong>
     </a>
 </h3>
@@ -2540,7 +2590,7 @@ A regex string to filter CEN Bandwidth Package by name.
 A collection of values returned by getBandwidthPackages.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2548,12 +2598,12 @@ A collection of values returned by getBandwidthPackages.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L72">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L70">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L76">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L74">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2561,22 +2611,22 @@ The provider-assigned unique ID for this managed resource.
 ID of CEN instance that owns the CEN Bandwidth Package.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L77">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L78">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L76">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L79">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L77">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-packages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getBandwidthPackages.ts#L83">property <b>packages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getBandwidthPackages.ts#L81">property <b>packages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packages: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBandwidthPackagesPackage'>GetBandwidthPackagesPackage</a>[];</code></pre>
@@ -2584,7 +2634,7 @@ ID of CEN instance that owns the CEN Bandwidth Package.
 A list of CEN bandwidth package. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetFlowlogsArgs" data-link-title="GetFlowlogsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L54">
         interface <strong>GetFlowlogsArgs</strong>
     </a>
 </h3>
@@ -2594,7 +2644,7 @@ A list of CEN bandwidth package. Each element contains the following attributes:
 A collection of arguments for invoking getFlowlogs.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L58">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L58">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2602,7 +2652,7 @@ A collection of arguments for invoking getFlowlogs.
 The ID of the CEN Instance.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2610,7 +2660,7 @@ The ID of the CEN Instance.
 The description of flowlog.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L66">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L66">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2618,7 +2668,7 @@ The description of flowlog.
 A list of CEN flow log IDs.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-logStoreName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L70">property <b>logStoreName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L70">property <b>logStoreName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStoreName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2626,7 +2676,7 @@ A list of CEN flow log IDs.
 The name of the log store which is in the  `projectName` SLS project.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L74">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L74">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2634,12 +2684,12 @@ The name of the log store which is in the  `projectName` SLS project.
 A regex string to filter CEN flow logs by name.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L75">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L75">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L79">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L79">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2647,7 +2697,7 @@ A regex string to filter CEN flow logs by name.
 The name of the SLS project.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L83">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L83">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2655,7 +2705,7 @@ The name of the SLS project.
 The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active".
 
 <h3 class="pdoc-module-header" id="GetFlowlogsResult" data-link-title="GetFlowlogsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L89">
         interface <strong>GetFlowlogsResult</strong>
     </a>
 </h3>
@@ -2665,7 +2715,7 @@ The status of flowlog. Valid values: ["Active", "Inactive"]. Default to "Active"
 A collection of values returned by getFlowlogs.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L93">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L93">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2673,7 +2723,7 @@ A collection of values returned by getFlowlogs.
 The ID of the CEN Instance.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L97">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L97">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2681,12 +2731,12 @@ The ID of the CEN Instance.
 The description of flowlog.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-flowlogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L98">property <b>flowlogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L98">property <b>flowlogs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flowlogs: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFlowlogsFlowlog'>GetFlowlogsFlowlog</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L102">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2694,7 +2744,7 @@ The description of flowlog.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L106">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L106">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2702,7 +2752,7 @@ The provider-assigned unique ID for this managed resource.
 A list of CEN flow log IDs.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-logStoreName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L110">property <b>logStoreName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L110">property <b>logStoreName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStoreName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2710,12 +2760,12 @@ A list of CEN flow log IDs.
 The name of the log store which is in the  `projectName` SLS project.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L111">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L111">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L115">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L115">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2723,12 +2773,12 @@ The name of the log store which is in the  `projectName` SLS project.
 A list of CEN flow log names.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L116">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L116">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L120">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L120">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2736,7 +2786,7 @@ A list of CEN flow log names.
 The name of the SLS project.
 
 <h4 class="pdoc-member-header" id="GetFlowlogsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getFlowlogs.ts#L124">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getFlowlogs.ts#L124">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2744,7 +2794,7 @@ The name of the SLS project.
 The status of flowlog.
 
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L46">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -2754,7 +2804,7 @@ The status of flowlog.
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L50">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2762,7 +2812,7 @@ A collection of arguments for invoking getInstances.
 A list of CEN instances IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L54">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2770,12 +2820,12 @@ A list of CEN instances IDs.
 A regex string to filter CEN instances by name.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L55">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L61">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L59">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -2783,7 +2833,7 @@ A regex string to filter CEN instances by name.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L65">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -2793,7 +2843,7 @@ A mapping of tags to assign to the resource.
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2801,7 +2851,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L75">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L73">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2809,7 +2859,7 @@ The provider-assigned unique ID for this managed resource.
 A list of CEN instances IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L79">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L77">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -2817,12 +2867,12 @@ A list of CEN instances IDs.
 A list of CEN instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L78">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L84">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2830,12 +2880,12 @@ A list of CEN instances. Each element contains the following attributes:
 A list of CEN instances names.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L85">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L83">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getInstances.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getInstances.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -2843,7 +2893,7 @@ A list of CEN instances names.
 A map of tags assigned to the Cen Instance.
 
 <h3 class="pdoc-module-header" id="GetPrivateZonesArgs" data-link-title="GetPrivateZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L49">
         interface <strong>GetPrivateZonesArgs</strong>
     </a>
 </h3>
@@ -2853,7 +2903,7 @@ A map of tags assigned to the Cen Instance.
 A collection of arguments for invoking getPrivateZones.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L55">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L53">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2861,7 +2911,7 @@ A collection of arguments for invoking getPrivateZones.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesArgs-hostRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L59">property <b>hostRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L57">property <b>hostRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRegionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2869,7 +2919,7 @@ The ID of the CEN instance.
 The service region. The service region is the target region of the PrivateZone service accessed through CEN.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L64">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L62">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2878,12 +2928,12 @@ A list of CEN private zone IDs.
 * `hostRegionId ` - (Optional) The service region is the target region of the PrivateZone service accessed through CEN.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L65">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L63">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPrivateZonesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L69">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L67">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2891,7 +2941,7 @@ A list of CEN private zone IDs.
 The status of the PrivateZone service, including `Creating`, `Active` and `Deleting`.
 
 <h3 class="pdoc-module-header" id="GetPrivateZonesResult" data-link-title="GetPrivateZonesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L73">
         interface <strong>GetPrivateZonesResult</strong>
     </a>
 </h3>
@@ -2901,7 +2951,7 @@ The status of the PrivateZone service, including `Creating`, `Active` and `Delet
 A collection of values returned by getPrivateZones.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L79">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L77">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2909,7 +2959,7 @@ A collection of values returned by getPrivateZones.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-hostRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L83">property <b>hostRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L81">property <b>hostRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRegionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2917,7 +2967,7 @@ The ID of the CEN instance.
 The service region. The service region is the target region of the PrivateZone service accessed through CEN.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2925,7 +2975,7 @@ The service region. The service region is the target region of the PrivateZone s
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L91">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L89">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2933,12 +2983,12 @@ The provider-assigned unique ID for this managed resource.
 A list of CEN private zone IDs.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L92">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L90">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L96">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L94">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2946,7 +2996,7 @@ A list of CEN private zone IDs.
 The status of the PrivateZone service.
 
 <h4 class="pdoc-member-header" id="GetPrivateZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getPrivateZones.ts#L100">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getPrivateZones.ts#L98">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPrivateZonesZone'>GetPrivateZonesZone</a>[];</code></pre>
@@ -2954,7 +3004,7 @@ The status of the PrivateZone service.
 A list of CEN private zones. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetRegionRouteEntriesArgs" data-link-title="GetRegionRouteEntriesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L44">
         interface <strong>GetRegionRouteEntriesArgs</strong>
     </a>
 </h3>
@@ -2964,7 +3014,7 @@ A list of CEN private zones. Each element contains the following attributes:
 A collection of arguments for invoking getRegionRouteEntries.
 
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L50">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L48">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2972,12 +3022,12 @@ A collection of arguments for invoking getRegionRouteEntries.
 ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L51">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L49">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesArgs-regionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L55">property <b>regionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L53">property <b>regionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2985,7 +3035,7 @@ ID of the CEN instance.
 ID of the region.
 
 <h3 class="pdoc-module-header" id="GetRegionRouteEntriesResult" data-link-title="GetRegionRouteEntriesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L59">
         interface <strong>GetRegionRouteEntriesResult</strong>
     </a>
 </h3>
@@ -2995,7 +3045,7 @@ ID of the region.
 A collection of values returned by getRegionRouteEntries.
 
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesResult-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L65">property <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L63">property <b>entries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entries: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegionRouteEntriesEntry'>GetRegionRouteEntriesEntry</a>[];</code></pre>
@@ -3003,7 +3053,7 @@ A collection of values returned by getRegionRouteEntries.
 A list of CEN Route Entries. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3011,22 +3061,22 @@ A list of CEN Route Entries. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L70">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L68">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L71">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L69">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionRouteEntriesResult-regionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRegionRouteEntries.ts#L72">property <b>regionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRegionRouteEntries.ts#L70">property <b>regionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRouteEntriesArgs" data-link-title="GetRouteEntriesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L45">
         interface <strong>GetRouteEntriesArgs</strong>
     </a>
 </h3>
@@ -3036,7 +3086,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRouteEntries.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L51">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L49">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3044,7 +3094,7 @@ A collection of arguments for invoking getRouteEntries.
 The destination CIDR block of the route entry to query.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L55">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L53">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3052,12 +3102,12 @@ The destination CIDR block of the route entry to query.
 ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteEntriesArgs-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L60">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L58">property <b>routeTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3065,7 +3115,7 @@ ID of the CEN instance.
 ID of the route table of the VPC or VBR.
 
 <h3 class="pdoc-module-header" id="GetRouteEntriesResult" data-link-title="GetRouteEntriesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L64">
         interface <strong>GetRouteEntriesResult</strong>
     </a>
 </h3>
@@ -3075,7 +3125,7 @@ ID of the route table of the VPC or VBR.
 A collection of values returned by getRouteEntries.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesResult-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L70">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L68">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3083,7 +3133,7 @@ A collection of values returned by getRouteEntries.
 The destination CIDR block of the conflicted route entry.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesResult-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L74">property <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L72">property <b>entries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entries: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouteEntriesEntry'>GetRouteEntriesEntry</a>[];</code></pre>
@@ -3091,7 +3141,7 @@ The destination CIDR block of the conflicted route entry.
 A list of CEN Route Entries. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3099,7 +3149,7 @@ A list of CEN Route Entries. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L82">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L80">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3107,12 +3157,12 @@ The provider-assigned unique ID for this managed resource.
 ID of the CEN child instance.
 
 <h4 class="pdoc-member-header" id="GetRouteEntriesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L83">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L81">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteEntriesResult-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteEntries.ts#L87">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteEntries.ts#L85">property <b>routeTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3120,7 +3170,7 @@ ID of the CEN child instance.
 ID of the route table.
 
 <h3 class="pdoc-module-header" id="GetRouteMapsArgs" data-link-title="GetRouteMapsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L54">
         interface <strong>GetRouteMapsArgs</strong>
     </a>
 </h3>
@@ -3130,7 +3180,7 @@ ID of the route table.
 A collection of arguments for invoking getRouteMaps.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L60">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L58">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3138,7 +3188,7 @@ A collection of arguments for invoking getRouteMaps.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-cenRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L64">property <b>cenRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L62">property <b>cenRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenRegionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3146,7 +3196,7 @@ The ID of the CEN instance.
 The ID of the region to which the CEN instance belongs.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L68">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L66">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3154,7 +3204,7 @@ The ID of the region to which the CEN instance belongs.
 A regex string to filter CEN route map by description.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L72">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L70">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3162,12 +3212,12 @@ A regex string to filter CEN route map by description.
 A list of CEN route map IDs.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L71">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L77">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L75">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3175,7 +3225,7 @@ A list of CEN route map IDs.
 The status of the route map, including `Creating`, `Active` and `Deleting`.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsArgs-transmitDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L81">property <b>transmitDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L79">property <b>transmitDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transmitDirection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3183,7 +3233,7 @@ The status of the route map, including `Creating`, `Active` and `Deleting`.
 The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
 
 <h3 class="pdoc-module-header" id="GetRouteMapsResult" data-link-title="GetRouteMapsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L85">
         interface <strong>GetRouteMapsResult</strong>
     </a>
 </h3>
@@ -3193,7 +3243,7 @@ The direction in which the route map is applied, including `RegionIn` and `Regio
 A collection of values returned by getRouteMaps.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L91">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L89">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3201,7 +3251,7 @@ A collection of values returned by getRouteMaps.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-cenRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L95">property <b>cenRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L93">property <b>cenRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenRegionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3209,12 +3259,12 @@ The ID of the CEN instance.
 The ID of the region to which the CEN instance belongs.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-descriptionRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L96">property <b>descriptionRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L94">property <b>descriptionRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L100">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L98">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3222,7 +3272,7 @@ The ID of the region to which the CEN instance belongs.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L104">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L102">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3230,7 +3280,7 @@ The provider-assigned unique ID for this managed resource.
 A list of CEN route map IDs.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-maps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L108">property <b>maps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L106">property <b>maps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maps: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouteMapsMap'>GetRouteMapsMap</a>[];</code></pre>
@@ -3238,12 +3288,12 @@ A list of CEN route map IDs.
 A list of CEN instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L109">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L107">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L113">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L111">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3251,7 +3301,7 @@ A list of CEN instances. Each element contains the following attributes:
 The status of the route map.
 
 <h4 class="pdoc-member-header" id="GetRouteMapsResult-transmitDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/getRouteMaps.ts#L117">property <b>transmitDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/getRouteMaps.ts#L115">property <b>transmitDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transmitDirection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3259,7 +3309,7 @@ The status of the route map.
 The direction in which the route map is applied.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L139">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -3269,7 +3319,7 @@ The direction in which the route map is applied.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L143">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L143">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3277,7 +3327,7 @@ The set of arguments for constructing a Instance resource.
 The description of the CEN instance. Defaults to null. The description must be 2 to 256 characters in length. It must start with a letter, and cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3285,7 +3335,7 @@ The description of the CEN instance. Defaults to null. The description must be 2
 The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L151">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L151">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protectionLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3293,7 +3343,7 @@ The name of the CEN instance. Defaults to null. The name must be 2 to 128 charac
 (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3301,7 +3351,7 @@ The name of the CEN instance. Defaults to null. The name must be 2 to 128 charac
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="InstanceAttachmentArgs" data-link-title="InstanceAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L148">
         interface <strong>InstanceAttachmentArgs</strong>
     </a>
 </h3>
@@ -3311,7 +3361,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a InstanceAttachment resource.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-childInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L124">property <b>childInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L152">property <b>childInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3319,7 +3369,7 @@ The set of arguments for constructing a InstanceAttachment resource.
 The ID of the child instance to attach.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-childInstanceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L128">property <b>childInstanceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L156">property <b>childInstanceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3327,7 +3377,7 @@ The ID of the child instance to attach.
 The uid of the child instance. Only used when attach a child instance of other account.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-childInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L132">property <b>childInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L160">property <b>childInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3335,7 +3385,7 @@ The uid of the child instance. Only used when attach a child instance of other a
 The region ID of the child instance to attach.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L136">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L164">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3343,7 +3393,7 @@ The region ID of the child instance to attach.
 The ID of the CEN.
 
 <h3 class="pdoc-module-header" id="InstanceAttachmentState" data-link-title="InstanceAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L126">
         interface <strong>InstanceAttachmentState</strong>
     </a>
 </h3>
@@ -3353,7 +3403,7 @@ The ID of the CEN.
 Input properties used for looking up and filtering InstanceAttachment resources.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-childInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L102">property <b>childInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L130">property <b>childInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3361,7 +3411,7 @@ Input properties used for looking up and filtering InstanceAttachment resources.
 The ID of the child instance to attach.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-childInstanceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L106">property <b>childInstanceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L134">property <b>childInstanceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3369,7 +3419,7 @@ The ID of the child instance to attach.
 The uid of the child instance. Only used when attach a child instance of other account.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-childInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L110">property <b>childInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L138">property <b>childInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3377,7 +3427,7 @@ The uid of the child instance. Only used when attach a child instance of other a
 The region ID of the child instance to attach.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceAttachment.ts#L114">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceAttachment.ts#L142">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3385,7 +3435,7 @@ The region ID of the child instance to attach.
 The ID of the CEN.
 
 <h3 class="pdoc-module-header" id="InstanceGrantArgs" data-link-title="InstanceGrantArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L152">
         interface <strong>InstanceGrantArgs</strong>
     </a>
 </h3>
@@ -3395,7 +3445,7 @@ The ID of the CEN.
 The set of arguments for constructing a InstanceGrant resource.
 
 <h4 class="pdoc-member-header" id="InstanceGrantArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L156">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L156">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3403,7 +3453,7 @@ The set of arguments for constructing a InstanceGrant resource.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="InstanceGrantArgs-cenOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L160">property <b>cenOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L160">property <b>cenOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenOwnerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3411,7 +3461,7 @@ The ID of the CEN.
 The owner UID of the  CEN which the child instance granted to.
 
 <h4 class="pdoc-member-header" id="InstanceGrantArgs-childInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L164">property <b>childInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L164">property <b>childInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3419,7 +3469,7 @@ The owner UID of the  CEN which the child instance granted to.
 The ID of the child instance to grant.
 
 <h3 class="pdoc-module-header" id="InstanceGrantState" data-link-title="InstanceGrantState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L134">
         interface <strong>InstanceGrantState</strong>
     </a>
 </h3>
@@ -3429,7 +3479,7 @@ The ID of the child instance to grant.
 Input properties used for looking up and filtering InstanceGrant resources.
 
 <h4 class="pdoc-member-header" id="InstanceGrantState-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L138">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L138">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3437,7 +3487,7 @@ Input properties used for looking up and filtering InstanceGrant resources.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="InstanceGrantState-cenOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L142">property <b>cenOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L142">property <b>cenOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3445,7 +3495,7 @@ The ID of the CEN.
 The owner UID of the  CEN which the child instance granted to.
 
 <h4 class="pdoc-member-header" id="InstanceGrantState-childInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instanceGrant.ts#L146">property <b>childInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instanceGrant.ts#L146">property <b>childInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3453,7 +3503,7 @@ The owner UID of the  CEN which the child instance granted to.
 The ID of the child instance to grant.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L113">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -3463,7 +3513,7 @@ The ID of the child instance to grant.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L117">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L117">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3471,7 +3521,7 @@ Input properties used for looking up and filtering Instance resources.
 The description of the CEN instance. Defaults to null. The description must be 2 to 256 characters in length. It must start with a letter, and cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3479,7 +3529,7 @@ The description of the CEN instance. Defaults to null. The description must be 2
 The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="InstanceState-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L125">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L125">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protectionLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3487,7 +3537,7 @@ The name of the CEN instance. Defaults to null. The name must be 2 to 128 charac
 (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping.
 
 <h4 class="pdoc-member-header" id="InstanceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L129">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L129">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3495,7 +3545,7 @@ The name of the CEN instance. Defaults to null. The name must be 2 to 128 charac
 The Cen Instance current status.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/instance.ts#L133">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/instance.ts#L133">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3503,7 +3553,7 @@ The Cen Instance current status.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="PrivateZoneArgs" data-link-title="PrivateZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L167">
         interface <strong>PrivateZoneArgs</strong>
     </a>
 </h3>
@@ -3513,7 +3563,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a PrivateZone resource.
 
 <h4 class="pdoc-member-header" id="PrivateZoneArgs-accessRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L171">property <b>accessRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L171">property <b>accessRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3521,7 +3571,7 @@ The set of arguments for constructing a PrivateZone resource.
 The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 
 <h4 class="pdoc-member-header" id="PrivateZoneArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L175">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L175">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3529,7 +3579,7 @@ The access region. The access region is the region of the cloud resource that ac
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="PrivateZoneArgs-hostRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L179">property <b>hostRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L179">property <b>hostRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3537,7 +3587,7 @@ The ID of the CEN instance.
 The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 
 <h4 class="pdoc-member-header" id="PrivateZoneArgs-hostVpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L183">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L183">property <b>hostVpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostVpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3545,7 +3595,7 @@ The service region. The service region is the target region of the PrivateZone s
 The VPC that belongs to the service region.
 
 <h3 class="pdoc-module-header" id="PrivateZoneState" data-link-title="PrivateZoneState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L141">
         interface <strong>PrivateZoneState</strong>
     </a>
 </h3>
@@ -3555,7 +3605,7 @@ The VPC that belongs to the service region.
 Input properties used for looking up and filtering PrivateZone resources.
 
 <h4 class="pdoc-member-header" id="PrivateZoneState-accessRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L145">property <b>accessRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L145">property <b>accessRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3563,7 +3613,7 @@ Input properties used for looking up and filtering PrivateZone resources.
 The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 
 <h4 class="pdoc-member-header" id="PrivateZoneState-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L149">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L149">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3571,7 +3621,7 @@ The access region. The access region is the region of the cloud resource that ac
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="PrivateZoneState-hostRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L153">property <b>hostRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L153">property <b>hostRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3579,7 +3629,7 @@ The ID of the CEN instance.
 The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 
 <h4 class="pdoc-member-header" id="PrivateZoneState-hostVpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L157">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L157">property <b>hostVpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostVpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3587,7 +3637,7 @@ The service region. The service region is the target region of the PrivateZone s
 The VPC that belongs to the service region.
 
 <h4 class="pdoc-member-header" id="PrivateZoneState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/privateZone.ts#L161">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/privateZone.ts#L161">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3595,7 +3645,7 @@ The VPC that belongs to the service region.
 The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 
 <h3 class="pdoc-module-header" id="RouteEntryArgs" data-link-title="RouteEntryArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L184">
         interface <strong>RouteEntryArgs</strong>
     </a>
 </h3>
@@ -3605,7 +3655,7 @@ The status of the PrivateZone service. Valid values: ["Creating", "Active", "Del
 The set of arguments for constructing a RouteEntry resource.
 
 <h4 class="pdoc-member-header" id="RouteEntryArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L188">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L188">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3613,7 +3663,7 @@ The set of arguments for constructing a RouteEntry resource.
 The destination CIDR block of the route entry to publish.
 
 <h4 class="pdoc-member-header" id="RouteEntryArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L192">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L192">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3621,7 +3671,7 @@ The destination CIDR block of the route entry to publish.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="RouteEntryArgs-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L196">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L196">property <b>routeTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3629,7 +3679,7 @@ The ID of the CEN.
 The route table of the attached VBR or VPC.
 
 <h3 class="pdoc-module-header" id="RouteEntryState" data-link-title="RouteEntryState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L166">
         interface <strong>RouteEntryState</strong>
     </a>
 </h3>
@@ -3639,7 +3689,7 @@ The route table of the attached VBR or VPC.
 Input properties used for looking up and filtering RouteEntry resources.
 
 <h4 class="pdoc-member-header" id="RouteEntryState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L170">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L170">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3647,7 +3697,7 @@ Input properties used for looking up and filtering RouteEntry resources.
 The destination CIDR block of the route entry to publish.
 
 <h4 class="pdoc-member-header" id="RouteEntryState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L174">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L174">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3655,7 +3705,7 @@ The destination CIDR block of the route entry to publish.
 The ID of the CEN.
 
 <h4 class="pdoc-member-header" id="RouteEntryState-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeEntry.ts#L178">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeEntry.ts#L178">property <b>routeTableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3663,7 +3713,7 @@ The ID of the CEN.
 The route table of the attached VBR or VPC.
 
 <h3 class="pdoc-module-header" id="RouteMapArgs" data-link-title="RouteMapArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L441">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L441">
         interface <strong>RouteMapArgs</strong>
     </a>
 </h3>
@@ -3673,7 +3723,7 @@ The route table of the attached VBR or VPC.
 The set of arguments for constructing a RouteMap resource.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-asPathMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L445">property <b>asPathMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L445">property <b>asPathMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>asPathMatchMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3681,7 +3731,7 @@ The set of arguments for constructing a RouteMap resource.
 A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L449">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L449">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3689,7 +3739,7 @@ A match statement. It indicates the mode in which the AS path attribute is match
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-cenRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L453">property <b>cenRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L453">property <b>cenRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3697,7 +3747,7 @@ The ID of the CEN instance.
 The ID of the region to which the CEN instance belongs.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-cidrMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L457">property <b>cidrMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L457">property <b>cidrMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrMatchMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3705,7 +3755,7 @@ The ID of the region to which the CEN instance belongs.
 A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-communityMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L461">property <b>communityMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L461">property <b>communityMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>communityMatchMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3713,7 +3763,7 @@ A match statement. It indicates the mode in which the prefix attribute is matche
 A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-communityOperateMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L465">property <b>communityOperateMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L465">property <b>communityOperateMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>communityOperateMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3721,7 +3771,7 @@ A match statement. It indicates the mode in which the community attribute is mat
 An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L469">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L469">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3729,7 +3779,7 @@ An action statement. It indicates the mode in which the community attribute is o
 The description of the route map.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-destinationChildInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L473">property <b>destinationChildInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L473">property <b>destinationChildInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationChildInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3737,7 +3787,7 @@ The description of the route map.
 A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-destinationCidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L477">property <b>destinationCidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L477">property <b>destinationCidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationCidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3745,7 +3795,7 @@ A match statement that indicates the list of destination instance types. Valid v
 A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-destinationInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L481">property <b>destinationInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L481">property <b>destinationInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationInstanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3753,7 +3803,7 @@ A match statement that indicates the prefix list. The prefix is in the CIDR form
 A match statement that indicates the list of IDs of the destination instances.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-destinationInstanceIdsReverseMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L485">property <b>destinationInstanceIdsReverseMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L485">property <b>destinationInstanceIdsReverseMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationInstanceIdsReverseMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3761,7 +3811,7 @@ A match statement that indicates the list of IDs of the destination instances.
 Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-destinationRouteTableIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L489">property <b>destinationRouteTableIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L489">property <b>destinationRouteTableIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationRouteTableIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3769,7 +3819,7 @@ Indicates whether to enable the reverse match method for the DestinationInstance
 A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-mapResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L493">property <b>mapResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L493">property <b>mapResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3777,7 +3827,7 @@ A match statement that indicates the list of IDs of the destination route tables
 The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-matchAsns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L497">property <b>matchAsns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L497">property <b>matchAsns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchAsns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3785,7 +3835,7 @@ The action that is performed to a route if the route matches all the match condi
 A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-matchCommunitySets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L501">property <b>matchCommunitySets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L501">property <b>matchCommunitySets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchCommunitySets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3793,7 +3843,7 @@ A match statement that indicates the AS path list. The AS path is a well-known m
 A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-nextPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L505">property <b>nextPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L505">property <b>nextPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextPriority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3801,7 +3851,7 @@ A match statement that indicates the community set. The format of each community
 The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-operateCommunitySets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L509">property <b>operateCommunitySets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L509">property <b>operateCommunitySets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operateCommunitySets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3809,7 +3859,7 @@ The priority of the next route map that is associated with the current route map
 An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L513">property <b>preference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L513">property <b>preference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3817,7 +3867,7 @@ An action statement that operates the community attribute. The format of each co
 An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-prependAsPaths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L517">property <b>prependAsPaths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L517">property <b>prependAsPaths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prependAsPaths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3825,7 +3875,7 @@ An action statement that modifies the priority of the route. Value range: 1 to 1
 An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L521">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L521">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3833,7 +3883,7 @@ An action statement that indicates an AS path is prepended when the regional gat
 The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-routeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L525">property <b>routeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L525">property <b>routeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3841,7 +3891,7 @@ The priority of the route map. Value range: 1 to 100. A lower value indicates a 
 A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-sourceChildInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L529">property <b>sourceChildInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L529">property <b>sourceChildInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceChildInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3849,7 +3899,7 @@ A match statement that indicates the list of route types. Valid values: ["System
 A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-sourceInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L533">property <b>sourceInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L533">property <b>sourceInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceInstanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3857,7 +3907,7 @@ A match statement that indicates the list of source instance types. Valid values
 A match statement that indicates the list of IDs of the source instances.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-sourceInstanceIdsReverseMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L537">property <b>sourceInstanceIdsReverseMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L537">property <b>sourceInstanceIdsReverseMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceInstanceIdsReverseMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3865,7 +3915,7 @@ A match statement that indicates the list of IDs of the source instances.
 Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-sourceRegionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L541">property <b>sourceRegionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L541">property <b>sourceRegionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3873,7 +3923,7 @@ Indicates whether to enable the reverse match method for the SourceInstanceIds m
 A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-sourceRouteTableIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L545">property <b>sourceRouteTableIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L545">property <b>sourceRouteTableIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRouteTableIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3881,7 +3931,7 @@ A match statement that indicates the list of IDs of the source regions. You can 
 A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 
 <h4 class="pdoc-member-header" id="RouteMapArgs-transmitDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L549">property <b>transmitDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L549">property <b>transmitDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transmitDirection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3889,7 +3939,7 @@ A match statement that indicates the list of IDs of the source route tables. You
 The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 
 <h3 class="pdoc-module-header" id="RouteMapState" data-link-title="RouteMapState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L322">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L322">
         interface <strong>RouteMapState</strong>
     </a>
 </h3>
@@ -3899,7 +3949,7 @@ The direction in which the route map is applied. Valid values: ["RegionIn", "Reg
 Input properties used for looking up and filtering RouteMap resources.
 
 <h4 class="pdoc-member-header" id="RouteMapState-asPathMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L326">property <b>asPathMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L326">property <b>asPathMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>asPathMatchMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3907,7 +3957,7 @@ Input properties used for looking up and filtering RouteMap resources.
 A match statement. It indicates the mode in which the AS path attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L330">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L330">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3915,7 +3965,7 @@ A match statement. It indicates the mode in which the AS path attribute is match
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="RouteMapState-cenRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L334">property <b>cenRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L334">property <b>cenRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3923,7 +3973,7 @@ The ID of the CEN instance.
 The ID of the region to which the CEN instance belongs.
 
 <h4 class="pdoc-member-header" id="RouteMapState-cidrMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L338">property <b>cidrMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L338">property <b>cidrMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrMatchMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3931,7 +3981,7 @@ The ID of the region to which the CEN instance belongs.
 A match statement. It indicates the mode in which the prefix attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-communityMatchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L342">property <b>communityMatchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L342">property <b>communityMatchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>communityMatchMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3939,7 +3989,7 @@ A match statement. It indicates the mode in which the prefix attribute is matche
 A match statement. It indicates the mode in which the community attribute is matched. Valid values: ["Include", "Complete"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-communityOperateMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L346">property <b>communityOperateMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L346">property <b>communityOperateMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>communityOperateMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3947,7 +3997,7 @@ A match statement. It indicates the mode in which the community attribute is mat
 An action statement. It indicates the mode in which the community attribute is operated. Valid values: ["Additive", "Replace"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L350">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L350">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3955,7 +4005,7 @@ An action statement. It indicates the mode in which the community attribute is o
 The description of the route map.
 
 <h4 class="pdoc-member-header" id="RouteMapState-destinationChildInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L354">property <b>destinationChildInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L354">property <b>destinationChildInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationChildInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3963,7 +4013,7 @@ The description of the route map.
 A match statement that indicates the list of destination instance types. Valid values: ["VPC", "VBR", "CCN"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-destinationCidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L358">property <b>destinationCidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L358">property <b>destinationCidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationCidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3971,7 +4021,7 @@ A match statement that indicates the list of destination instance types. Valid v
 A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 
 <h4 class="pdoc-member-header" id="RouteMapState-destinationInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L362">property <b>destinationInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L362">property <b>destinationInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationInstanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3979,7 +4029,7 @@ A match statement that indicates the prefix list. The prefix is in the CIDR form
 A match statement that indicates the list of IDs of the destination instances.
 
 <h4 class="pdoc-member-header" id="RouteMapState-destinationInstanceIdsReverseMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L366">property <b>destinationInstanceIdsReverseMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L366">property <b>destinationInstanceIdsReverseMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationInstanceIdsReverseMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3987,7 +4037,7 @@ A match statement that indicates the list of IDs of the destination instances.
 Indicates whether to enable the reverse match method for the DestinationInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 
 <h4 class="pdoc-member-header" id="RouteMapState-destinationRouteTableIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L370">property <b>destinationRouteTableIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L370">property <b>destinationRouteTableIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationRouteTableIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3995,7 +4045,7 @@ Indicates whether to enable the reverse match method for the DestinationInstance
 A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 
 <h4 class="pdoc-member-header" id="RouteMapState-mapResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L374">property <b>mapResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L374">property <b>mapResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapResult?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4003,7 +4053,7 @@ A match statement that indicates the list of IDs of the destination route tables
 The action that is performed to a route if the route matches all the match conditions. Valid values: ["Permit", "Deny"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-matchAsns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L378">property <b>matchAsns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L378">property <b>matchAsns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchAsns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4011,7 +4061,7 @@ The action that is performed to a route if the route matches all the match condi
 A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 
 <h4 class="pdoc-member-header" id="RouteMapState-matchCommunitySets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L382">property <b>matchCommunitySets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L382">property <b>matchCommunitySets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchCommunitySets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4019,7 +4069,7 @@ A match statement that indicates the AS path list. The AS path is a well-known m
 A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 
 <h4 class="pdoc-member-header" id="RouteMapState-nextPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L386">property <b>nextPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L386">property <b>nextPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextPriority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4027,7 +4077,7 @@ A match statement that indicates the community set. The format of each community
 The priority of the next route map that is associated with the current route map. Value range: 1 to 100.
 
 <h4 class="pdoc-member-header" id="RouteMapState-operateCommunitySets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L390">property <b>operateCommunitySets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L390">property <b>operateCommunitySets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operateCommunitySets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4035,7 +4085,7 @@ The priority of the next route map that is associated with the current route map
 An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 
 <h4 class="pdoc-member-header" id="RouteMapState-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L394">property <b>preference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L394">property <b>preference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4043,7 +4093,7 @@ An action statement that operates the community attribute. The format of each co
 An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 
 <h4 class="pdoc-member-header" id="RouteMapState-prependAsPaths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L398">property <b>prependAsPaths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L398">property <b>prependAsPaths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prependAsPaths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4051,7 +4101,7 @@ An action statement that modifies the priority of the route. Value range: 1 to 1
 An action statement that indicates an AS path is prepended when the regional gateway receives or advertises a route.
 
 <h4 class="pdoc-member-header" id="RouteMapState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L402">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L402">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4059,12 +4109,12 @@ An action statement that indicates an AS path is prepended when the regional gat
 The priority of the route map. Value range: 1 to 100. A lower value indicates a higher priority.
 
 <h4 class="pdoc-member-header" id="RouteMapState-routeMapId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L403">property <b>routeMapId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L403">property <b>routeMapId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeMapId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RouteMapState-routeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L407">property <b>routeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L407">property <b>routeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4072,7 +4122,7 @@ The priority of the route map. Value range: 1 to 100. A lower value indicates a 
 A match statement that indicates the list of route types. Valid values: ["System", "Custom", "BGP"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-sourceChildInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L411">property <b>sourceChildInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L411">property <b>sourceChildInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceChildInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4080,7 +4130,7 @@ A match statement that indicates the list of route types. Valid values: ["System
 A match statement that indicates the list of source instance types. Valid values: ["VPC", "VBR", "CCN"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-sourceInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L415">property <b>sourceInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L415">property <b>sourceInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceInstanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4088,7 +4138,7 @@ A match statement that indicates the list of source instance types. Valid values
 A match statement that indicates the list of IDs of the source instances.
 
 <h4 class="pdoc-member-header" id="RouteMapState-sourceInstanceIdsReverseMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L419">property <b>sourceInstanceIdsReverseMatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L419">property <b>sourceInstanceIdsReverseMatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceInstanceIdsReverseMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4096,7 +4146,7 @@ A match statement that indicates the list of IDs of the source instances.
 Indicates whether to enable the reverse match method for the SourceInstanceIds match condition. Valid values: ["false", "true"]. Default to "false".
 
 <h4 class="pdoc-member-header" id="RouteMapState-sourceRegionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L423">property <b>sourceRegionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L423">property <b>sourceRegionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4104,7 +4154,7 @@ Indicates whether to enable the reverse match method for the SourceInstanceIds m
 A match statement that indicates the list of IDs of the source regions. You can enter a maximum of 32 region IDs.
 
 <h4 class="pdoc-member-header" id="RouteMapState-sourceRouteTableIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L427">property <b>sourceRouteTableIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L427">property <b>sourceRouteTableIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRouteTableIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4112,7 +4162,7 @@ A match statement that indicates the list of IDs of the source regions. You can 
 A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 
 <h4 class="pdoc-member-header" id="RouteMapState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L431">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L431">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4120,7 +4170,7 @@ A match statement that indicates the list of IDs of the source route tables. You
 (Computed) The status of route map. Valid values: ["Creating", "Active", "Deleting"].
 
 <h4 class="pdoc-member-header" id="RouteMapState-transmitDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/routeMap.ts#L435">property <b>transmitDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/routeMap.ts#L435">property <b>transmitDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transmitDirection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4128,7 +4178,7 @@ A match statement that indicates the list of IDs of the source route tables. You
 The direction in which the route map is applied. Valid values: ["RegionIn", "RegionOut"].
 
 <h3 class="pdoc-module-header" id="VbrHealthCheckArgs" data-link-title="VbrHealthCheckArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L196">
         interface <strong>VbrHealthCheckArgs</strong>
     </a>
 </h3>
@@ -4138,7 +4188,7 @@ The direction in which the route map is applied. Valid values: ["RegionIn", "Reg
 The set of arguments for constructing a VbrHealthCheck resource.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L200">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L200">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4146,7 +4196,7 @@ The set of arguments for constructing a VbrHealthCheck resource.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-healthCheckInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L204">property <b>healthCheckInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L204">property <b>healthCheckInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4154,7 +4204,7 @@ The ID of the CEN instance.
 Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-healthCheckSourceIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L208">property <b>healthCheckSourceIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L208">property <b>healthCheckSourceIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckSourceIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4162,7 +4212,7 @@ Specifies the interval at which the health check sends continuous detection pack
 The source IP address of health checks.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-healthCheckTargetIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L212">property <b>healthCheckTargetIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L212">property <b>healthCheckTargetIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckTargetIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4170,7 +4220,7 @@ The source IP address of health checks.
 The destination IP address of health checks.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-healthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L216">property <b>healthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L216">property <b>healthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4178,7 +4228,7 @@ The destination IP address of health checks.
 Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-vbrInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L220">property <b>vbrInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L220">property <b>vbrInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vbrInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4186,7 +4236,7 @@ Specifies the number of probe messages sent by the health check. Default value: 
 The ID of the VBR.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-vbrInstanceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L224">property <b>vbrInstanceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L224">property <b>vbrInstanceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vbrInstanceOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4194,7 +4244,7 @@ The ID of the VBR.
 The ID of the account to which the VBR belongs.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckArgs-vbrInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L228">property <b>vbrInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L228">property <b>vbrInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vbrInstanceRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4202,7 +4252,7 @@ The ID of the account to which the VBR belongs.
 The ID of the region to which the VBR belongs.
 
 <h3 class="pdoc-module-header" id="VbrHealthCheckState" data-link-title="VbrHealthCheckState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L158">
         interface <strong>VbrHealthCheckState</strong>
     </a>
 </h3>
@@ -4212,7 +4262,7 @@ The ID of the region to which the VBR belongs.
 Input properties used for looking up and filtering VbrHealthCheck resources.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-cenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L162">property <b>cenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L162">property <b>cenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4220,7 +4270,7 @@ Input properties used for looking up and filtering VbrHealthCheck resources.
 The ID of the CEN instance.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-healthCheckInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L166">property <b>healthCheckInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L166">property <b>healthCheckInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4228,7 +4278,7 @@ The ID of the CEN instance.
 Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-healthCheckSourceIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L170">property <b>healthCheckSourceIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L170">property <b>healthCheckSourceIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckSourceIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4236,7 +4286,7 @@ Specifies the interval at which the health check sends continuous detection pack
 The source IP address of health checks.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-healthCheckTargetIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L174">property <b>healthCheckTargetIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L174">property <b>healthCheckTargetIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckTargetIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4244,7 +4294,7 @@ The source IP address of health checks.
 The destination IP address of health checks.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-healthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L178">property <b>healthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L178">property <b>healthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4252,7 +4302,7 @@ The destination IP address of health checks.
 Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-vbrInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L182">property <b>vbrInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L182">property <b>vbrInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vbrInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4260,7 +4310,7 @@ Specifies the number of probe messages sent by the health check. Default value: 
 The ID of the VBR.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-vbrInstanceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L186">property <b>vbrInstanceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L186">property <b>vbrInstanceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vbrInstanceOwnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4268,7 +4318,7 @@ The ID of the VBR.
 The ID of the account to which the VBR belongs.
 
 <h4 class="pdoc-member-header" id="VbrHealthCheckState-vbrInstanceRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/cen/vbrHealthCheck.ts#L190">property <b>vbrInstanceRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/defe40500a6bcc54fb2373512cd0091abe87d61b/sdk/nodejs/cen/vbrHealthCheck.ts#L190">property <b>vbrInstanceRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vbrInstanceRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -54,17 +54,26 @@ class MyStack : Stack
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.hz",
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
             AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             CidrBlock = "172.16.0.0/21",
             VpcId = vpc.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.hz",
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
             Description = "foo",
             VpcId = vpc.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.hz",
         });
         var defaultInstance = new AliCloud.Ecs.Instance("defaultInstance", new AliCloud.Ecs.InstanceArgs
         {
@@ -79,6 +88,9 @@ class MyStack : Stack
             },
             SystemDiskCategory = "cloud_efficiency",
             VswitchId = defaultSwitch.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.hz",
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
@@ -88,6 +100,12 @@ class MyStack : Stack
             ChildInstanceId = vpc.Id,
             ChildInstanceRegionId = "cn-hangzhou",
             InstanceId = cen.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "alicloud_vswitch.default",
+            },
         });
         var route = new AliCloud.Vpc.RouteEntry("route", new AliCloud.Vpc.RouteEntryArgs
         {
@@ -95,12 +113,22 @@ class MyStack : Stack
             NexthopId = defaultInstance.Id,
             NexthopType = "Instance",
             RouteTableId = vpc.RouteTableId,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.hz",
         });
         var foo = new AliCloud.Cen.RouteEntry("foo", new AliCloud.Cen.RouteEntryArgs
         {
             CidrBlock = route.DestinationCidrblock,
             InstanceId = cen.Id,
             RouteTableId = vpc.RouteTableId,
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.hz",
+            DependsOn = 
+            {
+                "alicloud_cen_instance_attachment.attach",
+            },
         });
     }
 
@@ -110,7 +138,131 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newalicloud(ctx, "hz", &providers.alicloudArgs{
+			Region: pulumi.String("cn-hangzhou"),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "cloud_efficiency"
+		opt1 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := defaultZones.Zones[0].Id
+		opt3 := 1
+		opt4 := 2
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			CpuCoreCount:     &opt3,
+			MemorySize:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt5 := true
+		opt6 := "^ubuntu_18.*64"
+		opt7 := "system"
+		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			MostRecent: &opt5,
+			NameRegex:  &opt6,
+			Owners:     &opt7,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		}, pulumi.Provider("alicloud.hz"))
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			VpcId:            vpc.ID(),
+		}, pulumi.Provider("alicloud.hz"))
+		if err != nil {
+			return err
+		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			Description: pulumi.String("foo"),
+			VpcId:       vpc.ID(),
+		}, pulumi.Provider("alicloud.hz"))
+		if err != nil {
+			return err
+		}
+		defaultInstance, err := ecs.NewInstance(ctx, "defaultInstance", &ecs.InstanceArgs{
+			ImageId:                 pulumi.String(defaultImages.Images[0].Id),
+			InstanceName:            pulumi.String(name),
+			InstanceType:            pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			InternetChargeType:      pulumi.String("PayByTraffic"),
+			InternetMaxBandwidthOut: pulumi.Int(5),
+			SecurityGroups: pulumi.StringArray{
+				defaultSecurityGroup.ID(),
+			},
+			SystemDiskCategory: pulumi.String("cloud_efficiency"),
+			VswitchId:          defaultSwitch.ID(),
+		}, pulumi.Provider("alicloud.hz"))
+		if err != nil {
+			return err
+		}
+		cen, err := cen.NewInstance(ctx, "cen", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "attach", &cen.InstanceAttachmentArgs{
+			ChildInstanceId:       vpc.ID(),
+			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
+			InstanceId:            cen.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"alicloud_vswitch.default",
+		}))
+		if err != nil {
+			return err
+		}
+		route, err := vpc.NewRouteEntry(ctx, "route", &vpc.RouteEntryArgs{
+			DestinationCidrblock: pulumi.String("11.0.0.0/16"),
+			NexthopId:            defaultInstance.ID(),
+			NexthopType:          pulumi.String("Instance"),
+			RouteTableId:         vpc.RouteTableId,
+		}, pulumi.Provider("alicloud.hz"))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewRouteEntry(ctx, "foo", &cen.RouteEntryArgs{
+			CidrBlock:    route.DestinationCidrblock,
+			InstanceId:   cen.ID(),
+			RouteTableId: vpc.RouteTableId,
+		}, pulumi.Provider("alicloud.hz"), pulumi.DependsOn([]pulumi.Resource{
+			"alicloud_cen_instance_attachment.attach",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -126,43 +278,51 @@ if name is None:
     name = "tf-testAccCenRouteEntryConfig"
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     cpu_core_count=1,
     memory_size=2)
 default_images = alicloud.ecs.get_images(most_recent=True,
     name_regex="^ubuntu_18.*64",
     owners="system")
-vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12")
+vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12",
+opts=ResourceOptions(provider="alicloud.hz"))
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/21",
-    vpc_id=vpc.id)
+    vpc_id=vpc.id,
+    opts=ResourceOptions(provider="alicloud.hz"))
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup",
     description="foo",
-    vpc_id=vpc.id)
+    vpc_id=vpc.id,
+    opts=ResourceOptions(provider="alicloud.hz"))
 default_instance = alicloud.ecs.Instance("defaultInstance",
-    image_id=default_images.images[0]["id"],
+    image_id=default_images.images[0].id,
     instance_name=name,
-    instance_type=default_instance_types.instance_types[0]["id"],
+    instance_type=default_instance_types.instance_types[0].id,
     internet_charge_type="PayByTraffic",
     internet_max_bandwidth_out=5,
     security_groups=[default_security_group.id],
     system_disk_category="cloud_efficiency",
-    vswitch_id=default_switch.id)
+    vswitch_id=default_switch.id,
+    opts=ResourceOptions(provider="alicloud.hz"))
 cen = alicloud.cen.Instance("cen")
 attach = alicloud.cen.InstanceAttachment("attach",
     child_instance_id=vpc.id,
     child_instance_region_id="cn-hangzhou",
-    instance_id=cen.id)
+    instance_id=cen.id,
+    opts=ResourceOptions(depends_on=["alicloud_vswitch.default"]))
 route = alicloud.vpc.RouteEntry("route",
     destination_cidrblock="11.0.0.0/16",
     nexthop_id=default_instance.id,
     nexthop_type="Instance",
-    route_table_id=vpc.route_table_id)
+    route_table_id=vpc.route_table_id,
+    opts=ResourceOptions(provider="alicloud.hz"))
 foo = alicloud.cen.RouteEntry("foo",
     cidr_block=route.destination_cidrblock,
     instance_id=cen.id,
-    route_table_id=vpc.route_table_id)
+    route_table_id=vpc.route_table_id,
+    opts=ResourceOptions(provider="alicloud.hz",
+        depends_on=["alicloud_cen_instance_attachment.attach"]))
 ```
 
 {{% /example %}}
@@ -248,7 +408,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteEntry">RouteEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteEntry">RouteEntry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -671,7 +831,8 @@ Get an existing RouteEntry resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>route_table_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouteEntry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -679,7 +840,7 @@ Get an existing RouteEntry resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntryState.html">RouteEntryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntryState.html">RouteEntryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -958,6 +1119,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

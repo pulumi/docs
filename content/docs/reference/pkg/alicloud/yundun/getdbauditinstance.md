@@ -24,7 +24,7 @@ meta_desc: "Explore the GetDBAuditInstance function of the yundun module, includ
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_db_audit_instance(</span>description_regex=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_db_audit_instance(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDBAuditInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -228,7 +228,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -921,8 +921,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatedomain_python">
-<a href="#privatedomain_python" style="color: inherit; text-decoration: inherit;">private<wbr>Domain</a>
+        <span id="private_domain_python">
+<a href="#private_domain_python" style="color: inherit; text-decoration: inherit;">private_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -931,8 +931,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicdomain_python">
-<a href="#publicdomain_python" style="color: inherit; text-decoration: inherit;">public<wbr>Domain</a>
+        <span id="public_domain_python">
+<a href="#public_domain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -941,8 +941,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicnetworkaccess_python">
-<a href="#publicnetworkaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -951,8 +951,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="uservswitchid_python">
-<a href="#uservswitchid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Vswitch<wbr>Id</a>
+        <span id="user_vswitch_id_python">
+<a href="#user_vswitch_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>vswitch_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -965,7 +965,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -987,6 +987,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

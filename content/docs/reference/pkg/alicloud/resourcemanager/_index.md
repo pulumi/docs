@@ -15,6 +15,7 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="handshake" title="Handshake"><span class="symbol resource"></span>Handshake</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="policyattachment" title="PolicyAttachment"><span class="symbol resource"></span>PolicyAttachment</a></li>
     <li><a href="policyversion" title="PolicyVersion"><span class="symbol resource"></span>PolicyVersion</a></li>
     <li><a href="resourcedirectory" title="ResourceDirectory"><span class="symbol resource"></span>ResourceDirectory</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
@@ -27,6 +28,7 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="getfolders" title="GetFolders"><span class="symbol function"></span>GetFolders</a></li>
     <li><a href="gethandshakes" title="GetHandshakes"><span class="symbol function"></span>GetHandshakes</a></li>
     <li><a href="getpolicies" title="GetPolicies"><span class="symbol function"></span>GetPolicies</a></li>
+    <li><a href="getpolicyattachments" title="GetPolicyAttachments"><span class="symbol function"></span>GetPolicyAttachments</a></li>
     <li><a href="getpolicyversions" title="GetPolicyVersions"><span class="symbol function"></span>GetPolicyVersions</a></li>
     <li><a href="getresourcedirectories" title="GetResourceDirectories"><span class="symbol function"></span>GetResourceDirectories</a></li>
     <li><a href="getresourcegroups" title="GetResourceGroups"><span class="symbol function"></span>GetResourceGroups</a></li>
@@ -40,9 +42,9 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
+	<dd>2.14.0</dd>
 </dl>
 
 

@@ -14,6 +14,175 @@ Provides a OOS Template resource. For information about Alicloud OOS Template an
 
 > **NOTE:** Available in 1.92.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AliCloud.Oos.Template("example", new AliCloud.Oos.TemplateArgs
+        {
+            Content = @"  {
+    ""FormatVersion"": ""OOS-2019-06-01"",
+    ""Description"": ""Update Describe instances of given status"",
+    ""Parameters"":{
+      ""Status"":{
+        ""Type"": ""String"",
+        ""Description"": ""(Required) The status of the Ecs instance.""
+      }
+    },
+    ""Tasks"": [
+      {
+        ""Properties"" :{
+          ""Parameters"":{
+            ""Status"": ""{{ Status }}""
+          },
+          ""API"": ""DescribeInstances"",
+          ""Service"": ""Ecs""
+        },
+        ""Name"": ""foo"",
+        ""Action"": ""ACS::ExecuteApi""
+      }]
+  }
+  
+",
+            Tags = 
+            {
+                { "Created", "TF" },
+                { "For", "acceptance Test" },
+            },
+            TemplateName = "test-name",
+            VersionName = "test",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oos"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := oos.NewTemplate(ctx, "example", &oos.TemplateArgs{
+			Content: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"FormatVersion\": \"OOS-2019-06-01\",\n", "    \"Description\": \"Update Describe instances of given status\",\n", "    \"Parameters\":{\n", "      \"Status\":{\n", "        \"Type\": \"String\",\n", "        \"Description\": \"(Required) The status of the Ecs instance.\"\n", "      }\n", "    },\n", "    \"Tasks\": [\n", "      {\n", "        \"Properties\" :{\n", "          \"Parameters\":{\n", "            \"Status\": \"{{ Status }}\"\n", "          },\n", "          \"API\": \"DescribeInstances\",\n", "          \"Service\": \"Ecs\"\n", "        },\n", "        \"Name\": \"foo\",\n", "        \"Action\": \"ACS::ExecuteApi\"\n", "      }]\n", "  }\n", "  \n")),
+			Tags: pulumi.StringMap{
+				"Created": pulumi.String("TF"),
+				"For":     pulumi.String("acceptance Test"),
+			},
+			TemplateName: pulumi.String("test-name"),
+			VersionName:  pulumi.String("test"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.oos.Template("example",
+    content="""  {
+    "FormatVersion": "OOS-2019-06-01",
+    "Description": "Update Describe instances of given status",
+    "Parameters":{
+      "Status":{
+        "Type": "String",
+        "Description": "(Required) The status of the Ecs instance."
+      }
+    },
+    "Tasks": [
+      {
+        "Properties" :{
+          "Parameters":{
+            "Status": "{{ Status }}"
+          },
+          "API": "DescribeInstances",
+          "Service": "Ecs"
+        },
+        "Name": "foo",
+        "Action": "ACS::ExecuteApi"
+      }]
+  }
+  
+""",
+    tags={
+        "Created": "TF",
+        "For": "acceptance Test",
+    },
+    template_name="test-name",
+    version_name="test")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.oos.Template("example", {
+    content: `  {
+    "FormatVersion": "OOS-2019-06-01",
+    "Description": "Update Describe instances of given status",
+    "Parameters":{
+      "Status":{
+        "Type": "String",
+        "Description": "(Required) The status of the Ecs instance."
+      }
+    },
+    "Tasks": [
+      {
+        "Properties" :{
+          "Parameters":{
+            "Status": "{{ Status }}"
+          },
+          "API": "DescribeInstances",
+          "Service": "Ecs"
+        },
+        "Name": "foo",
+        "Action": "ACS::ExecuteApi"
+      }]
+  }
+  `,
+    tags: {
+        Created: "TF",
+        For: "acceptance Test",
+    },
+    templateName: "test-name",
+    versionName: "test",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Template Resource {#create}
@@ -25,7 +194,7 @@ Provides a OOS Template resource. For information about Alicloud OOS Template an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oos/#pulumi_alicloud.oos.Template">Template</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_delete_executions=None<span class="p">, </span>content=None<span class="p">, </span>tags=None<span class="p">, </span>template_name=None<span class="p">, </span>version_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oos/#pulumi_alicloud.oos.Template">Template</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_delete_executions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -205,7 +374,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -267,7 +436,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -329,7 +498,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -391,7 +560,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -422,7 +591,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1020,7 +1189,8 @@ Get an existing Template resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_delete_executions=None<span class="p">, </span>content=None<span class="p">, </span>created_by=None<span class="p">, </span>created_date=None<span class="p">, </span>description=None<span class="p">, </span>has_trigger=None<span class="p">, </span>share_type=None<span class="p">, </span>tags=None<span class="p">, </span>template_format=None<span class="p">, </span>template_id=None<span class="p">, </span>template_name=None<span class="p">, </span>template_type=None<span class="p">, </span>template_version=None<span class="p">, </span>updated_by=None<span class="p">, </span>updated_date=None<span class="p">, </span>version_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_delete_executions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_trigger</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">share_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">template_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Template</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1028,7 +1198,7 @@ Get an existing Template resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.Template.html">Template</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.TemplateState.html">TemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.Template.html">Template</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.TemplateState.html">TemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1153,7 +1323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1336,7 +1506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +1689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1702,7 +1872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB. 
+    <dd>{{% md %}}The content of the template. The template must be in the JSON or YAML format. Maximum size: 64 KB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1766,7 +1936,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1879,6 +2049,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

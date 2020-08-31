@@ -85,7 +85,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "tf-testAcc-snapshot"
+		_, err := ecs.GetSnapshots(ctx, &ecs.GetSnapshotsArgs{
+			Ids: []string{
+				"s-123456890abcdef",
+			},
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -127,7 +151,7 @@ const snapshots = pulumi.output(alicloud.ecs.getSnapshots({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_snapshots(</span>disk_id=None<span class="p">, </span>encrypted=None<span class="p">, </span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>source_disk_type=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>usage=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snapshots(</span><span class="nx">disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnapshotsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -643,7 +667,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the snapshot.
 {{% /md %}}</dd>
@@ -1316,7 +1340,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the snapshot.
 {{% /md %}}</dd>
@@ -1966,8 +1990,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="remaintime_python">
-<a href="#remaintime_python" style="color: inherit; text-decoration: inherit;">remain<wbr>Time</a>
+        <span id="remain_time_python">
+<a href="#remain_time_python" style="color: inherit; text-decoration: inherit;">remain_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1988,8 +2012,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcediskid_python">
-<a href="#sourcediskid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Id</a>
+        <span id="source_disk_id_python">
+<a href="#source_disk_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1999,8 +2023,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedisksize_python">
-<a href="#sourcedisksize_python" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Size</a>
+        <span id="source_disk_size_python">
+<a href="#source_disk_size_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2010,8 +2034,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedisktype_python">
-<a href="#sourcedisktype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Type</a>
+        <span id="source_disk_type_python">
+<a href="#source_disk_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2068,6 +2092,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

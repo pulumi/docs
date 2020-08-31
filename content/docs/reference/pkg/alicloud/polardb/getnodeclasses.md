@@ -50,7 +50,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "PolarDB"
+		resourcesZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "MySQL"
+		opt2 := "5.6"
+		opt3 := resourcesZones.Zones[0].Id
+		resourcesNodeClasses, err := polardb.GetNodeClasses(ctx, &polardb.GetNodeClassesArgs{
+			DbType:    &opt1,
+			DbVersion: &opt2,
+			PayType:   "Postpaid",
+			ZoneId:    &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstPolardbNodeClass", resourcesNodeClasses.Classes)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,7 +97,7 @@ resources_zones = alicloud.get_zones(available_resource_creation="PolarDB")
 resources_node_classes = alicloud.polardb.get_node_classes(db_type="MySQL",
     db_version="5.6",
     pay_type="Postpaid",
-    zone_id=resources_zones.zones[0]["id"])
+    zone_id=resources_zones.zones[0].id)
 pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
 ```
 
@@ -103,7 +138,7 @@ export const firstPolardbNodeClass = resourcesNodeClasses.classes;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_node_classes(</span>db_node_class=None<span class="p">, </span>db_type=None<span class="p">, </span>db_version=None<span class="p">, </span>output_file=None<span class="p">, </span>pay_type=None<span class="p">, </span>region_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_node_classes(</span><span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodeClassesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -990,11 +1025,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedengines_python">
-<a href="#supportedengines_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Engines</a>
+        <span id="supported_engines_python">
+<a href="#supported_engines_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>engines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd>
@@ -1124,11 +1159,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="availableresources_python">
-<a href="#availableresources_python" style="color: inherit; text-decoration: inherit;">available<wbr>Resources</a>
+        <span id="available_resources_python">
+<a href="#available_resources_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd>
@@ -1252,6 +1287,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -46,7 +46,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "MySQL"
+		opt1 := "5.6"
+		opt2 := "PostPaid"
+		opt3 := "./engines.txt"
+		resources, err := rds.GetInstanceEngines(ctx, &rds.GetInstanceEnginesArgs{
+			Engine:             &opt0,
+			EngineVersion:      &opt1,
+			InstanceChargeType: &opt2,
+			OutputFile:         &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDbCategory", resources.InstanceEngines[0].Category)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,7 +86,7 @@ resources = alicloud.rds.get_instance_engines(engine="MySQL",
     engine_version="5.6",
     instance_charge_type="PostPaid",
     output_file="./engines.txt")
-pulumi.export("firstDbCategory", resources.instance_engines[0]["category"])
+pulumi.export("firstDbCategory", resources.instance_engines[0].category)
 ```
 
 {{% /example %}}
@@ -95,7 +123,7 @@ export const firstDbCategory = resources.instanceEngines[0].category;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_engines(</span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>multi_zone=None<span class="p">, </span>output_file=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_engines(</span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceEnginesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -997,11 +1025,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="zoneids_python">
-<a href="#zoneids_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Ids</a>
+        <span id="zone_ids_python">
+<a href="#zone_ids_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceenginesinstanceenginezoneid">List[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine<wbr>Zone<wbr>Id]</a></span>
+        <span class="property-type"><a href="#getinstanceenginesinstanceenginezoneid">List[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine<wbr>Zone<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the DB instance.
 {{% /md %}}</dd>
@@ -1131,8 +1159,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subzoneids_python">
-<a href="#subzoneids_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Zone<wbr>Ids</a>
+        <span id="sub_zone_ids_python">
+<a href="#sub_zone_ids_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1158,6 +1186,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

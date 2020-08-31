@@ -45,7 +45,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ram"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "group1"
+		opt1 := "^user"
+		opt2 := "users.txt"
+		opt3 := "AliyunACSDefaultAccess"
+		opt4 := "Custom"
+		usersDs, err := ram.GetUsers(ctx, &ram.GetUsersArgs{
+			GroupName:  &opt0,
+			NameRegex:  &opt1,
+			OutputFile: &opt2,
+			PolicyName: &opt3,
+			PolicyType: &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstUserId", usersDs.Users[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,7 +88,7 @@ users_ds = alicloud.ram.get_users(group_name="group1",
     output_file="users.txt",
     policy_name="AliyunACSDefaultAccess",
     policy_type="Custom")
-pulumi.export("firstUserId", users_ds.users[0]["id"])
+pulumi.export("firstUserId", users_ds.users[0].id)
 ```
 
 {{% /example %}}
@@ -96,7 +126,7 @@ export const firstUserId = usersDs.users[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_users(</span>group_name=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>policy_name=None<span class="p">, </span>policy_type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -129,7 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group. 
+    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -140,7 +170,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram user IDs. 
+    <dd>{{% md %}}- A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -201,7 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group. 
+    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -212,7 +242,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram user IDs. 
+    <dd>{{% md %}}- A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -273,7 +303,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group. 
+    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,7 +314,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram user IDs. 
+    <dd>{{% md %}}- A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -345,7 +375,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group. 
+    <dd>{{% md %}}Filter results by a specific group name. Returned users are in the specified group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,7 +386,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram user IDs. 
+    <dd>{{% md %}}- A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,7 +471,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user IDs. 
+    <dd>{{% md %}}A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -452,7 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user names. 
+    <dd>{{% md %}}A list of ram user names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -542,7 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user IDs. 
+    <dd>{{% md %}}A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -553,7 +583,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user names. 
+    <dd>{{% md %}}A list of ram user names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -643,7 +673,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user IDs. 
+    <dd>{{% md %}}A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -654,7 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user names. 
+    <dd>{{% md %}}A list of ram user names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -744,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user IDs. 
+    <dd>{{% md %}}A list of ram user IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -755,7 +785,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram user names. 
+    <dd>{{% md %}}A list of ram user names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1021,6 +1051,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

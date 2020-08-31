@@ -75,7 +75,70 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "VSwitch"
+		_default, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		fooSwitch, err := vpc.NewSwitch(ctx, "fooSwitch", &vpc.SwitchArgs{
+			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			VpcId:            fooNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		fooNatGateway, err := vpc.NewNatGateway(ctx, "fooNatGateway", &vpc.NatGatewayArgs{
+			Specification: pulumi.String("Small"),
+			VpcId:         fooNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		fooEip, err := ecs.NewEip(ctx, "fooEip", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewEipAssociation(ctx, "fooEipAssociation", &ecs.EipAssociationArgs{
+			AllocationId: fooEip.ID(),
+			InstanceId:   fooNatGateway.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		fooSnatEntry, err := vpc.NewSnatEntry(ctx, "fooSnatEntry", &vpc.SnatEntryArgs{
+			SnatIp:          fooEip.IpAddress,
+			SnatTableId:     fooNatGateway.SnatTableIds,
+			SourceVswitchId: fooSwitch.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +153,7 @@ if name is None:
 default = alicloud.get_zones(available_resource_creation="VSwitch")
 foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
 foo_switch = alicloud.vpc.Switch("fooSwitch",
-    availability_zone=default.zones[0]["id"],
+    availability_zone=default.zones[0].id,
     cidr_block="172.16.0.0/21",
     vpc_id=foo_network.id)
 foo_nat_gateway = alicloud.vpc.NatGateway("fooNatGateway",
@@ -164,7 +227,7 @@ const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vp
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_snat_entries(</span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>snat_ip=None<span class="p">, </span>snat_table_id=None<span class="p">, </span>source_cidr=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snat_entries(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snat_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnatEntriesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1013,6 +1076,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

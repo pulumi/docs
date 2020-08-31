@@ -191,7 +191,7 @@ import pulumi_alicloud as alicloud
 
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     eni_amount=2)
 image = alicloud.ecs.get_images(most_recent=True,
     name_regex="^ubuntu_18.*64",
@@ -205,20 +205,20 @@ if number is None:
     number = "1"
 main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
 main_switch = alicloud.vpc.Switch("mainSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/16",
     vpc_id=main_network.id)
 group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
 instance_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     instance_instance.append(alicloud.ecs.Instance(f"instanceInstance-{range['value']}",
-        availability_zone=default_zones.zones[0]["id"],
-        image_id=image.images[0]["id"],
+        availability_zone=default_zones.zones[0].id,
+        image_id=image.images[0].id,
         instance_charge_type="PostPaid",
         instance_name=name,
-        instance_type=default_instance_types.instance_types[0]["id"],
+        instance_type=default_instance_types.instance_types[0].id,
         internet_charge_type="PayByTraffic",
-        internet_max_bandwidth_out="10",
+        internet_max_bandwidth_out=10,
         security_groups=[group_security_group.id],
         system_disk_category="cloud_efficiency",
         vswitch_id=main_switch.id))
@@ -238,23 +238,23 @@ for range in [{"value": i} for i in range(0, number)]:
 group_master_slave_server_group = alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup",
     load_balancer_id=instance_load_balancer.id,
     servers=[
-        {
-            "port": 100,
-            "serverId": instance_instance[0].id,
-            "server_type": "Master",
-            "weight": 100,
-        },
-        {
-            "port": 100,
-            "serverId": instance_instance[1].id,
-            "server_type": "Slave",
-            "weight": 100,
-        },
+        alicloud.slb.MasterSlaveServerGroupServerArgs(
+            port=100,
+            server_id=instance_instance[0].id,
+            server_type="Master",
+            weight=100,
+        ),
+        alicloud.slb.MasterSlaveServerGroupServerArgs(
+            port=100,
+            server_id=instance_instance[1].id,
+            server_type="Slave",
+            weight=100,
+        ),
     ])
 tcp = alicloud.slb.Listener("tcp",
-    bandwidth="10",
+    bandwidth=10,
     established_timeout=600,
-    frontend_port="22",
+    frontend_port=22,
     health_check_connect_port=20,
     health_check_http_code="http_2xx",
     health_check_interval=5,
@@ -388,7 +388,7 @@ const tcp = new alicloud.slb.Listener("tcp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.MasterSlaveServerGroup">MasterSlaveServerGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.MasterSlaveServerGroup">MasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">servers</span><span class="p">:</span> <span class="nx">Optional[List[MasterSlaveServerGroupServerArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -590,7 +590,7 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -641,7 +641,7 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -692,7 +692,7 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -743,7 +743,7 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -752,7 +752,7 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
@@ -855,7 +855,8 @@ Get an existing MasterSlaveServerGroup resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">servers</span><span class="p">:</span> <span class="nx">Optional[List[MasterSlaveServerGroupServerArgs]]</span> = None<span class="p">) -&gt;</span> MasterSlaveServerGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -863,7 +864,7 @@ Get an existing MasterSlaveServerGroup resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroupState.html">MasterSlaveServerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroupState.html">MasterSlaveServerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -999,7 +1000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1050,7 +1051,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,7 +1102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1152,7 +1153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1161,7 +1162,7 @@ The following state arguments are supported:
 <a href="#state_servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
@@ -1382,8 +1383,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="serverid_python">
-<a href="#serverid_python" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
+        <span id="server_id_python">
+<a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1438,6 +1439,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

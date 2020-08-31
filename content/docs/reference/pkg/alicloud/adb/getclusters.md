@@ -45,7 +45,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/adb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "am-\\w+"
+		adbClustersDs, err := adb.GetClusters(ctx, &adb.GetClustersArgs{
+			DescriptionRegex: &opt0,
+			Status:           "Running",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstAdbClusterId", adbClustersDs.Clusters[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -55,7 +78,7 @@ import pulumi_alicloud as alicloud
 
 adb_clusters_ds = alicloud.adb.get_clusters(description_regex="am-\\w+",
     status="Running")
-pulumi.export("firstAdbClusterId", adb_clusters_ds.clusters[0]["id"])
+pulumi.export("firstAdbClusterId", adb_clusters_ds.clusters[0].id)
 ```
 
 {{% /example %}}
@@ -90,7 +113,7 @@ export const firstAdbClusterId = adbClustersDs.clusters[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_clusters(</span>description_regex=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_clusters(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClustersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -134,7 +157,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -186,7 +209,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,7 +261,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -290,7 +313,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,7 +332,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -355,7 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster descriptions. 
+    <dd>{{% md %}}A list of ADB cluster descriptions.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -377,7 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -436,7 +459,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster descriptions. 
+    <dd>{{% md %}}A list of ADB cluster descriptions.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -458,7 +481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -517,7 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster descriptions. 
+    <dd>{{% md %}}A list of ADB cluster descriptions.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -539,7 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -598,7 +621,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster descriptions. 
+    <dd>{{% md %}}A list of ADB cluster descriptions.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -620,7 +643,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ADB cluster IDs. 
+    <dd>{{% md %}}A list of ADB cluster IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -649,7 +672,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1301,8 +1324,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lockmode_python">
-<a href="#lockmode_python" style="color: inherit; text-decoration: inherit;">lock<wbr>Mode</a>
+        <span id="lock_mode_python">
+<a href="#lock_mode_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1323,8 +1346,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1383,6 +1406,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

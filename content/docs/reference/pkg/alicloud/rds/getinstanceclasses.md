@@ -46,7 +46,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "MySQL"
+		opt1 := "5.6"
+		opt2 := "PostPaid"
+		opt3 := "./classes.txt"
+		resources, err := rds.GetInstanceClasses(ctx, &rds.GetInstanceClassesArgs{
+			Engine:             &opt0,
+			EngineVersion:      &opt1,
+			InstanceChargeType: &opt2,
+			OutputFile:         &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDbInstanceClass", resources.InstanceClasses[0].InstanceClass)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -58,7 +86,7 @@ resources = alicloud.rds.get_instance_classes(engine="MySQL",
     engine_version="5.6",
     instance_charge_type="PostPaid",
     output_file="./classes.txt")
-pulumi.export("firstDbInstanceClass", resources.instance_classes[0]["instance_class"])
+pulumi.export("firstDbInstanceClass", resources.instance_classes[0].instance_class)
 ```
 
 {{% /example %}}
@@ -95,7 +123,7 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_classes(</span>category=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>multi_zone=None<span class="p">, </span>output_file=None<span class="p">, </span>sorted_by=None<span class="p">, </span>storage_type=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_classes(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceClassesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1350,22 +1378,22 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="storagerange_python">
-<a href="#storagerange_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Range</a>
+        <span id="storage_range_python">
+<a href="#storage_range_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclassstoragerange">Dict[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range]</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclassstoragerange">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DB Instance available storage range.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="zoneids_python">
-<a href="#zoneids_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Ids</a>
+        <span id="zone_ids_python">
+<a href="#zone_ids_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">List[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id]</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">List[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the DB instance.
 {{% /md %}}</dd>
@@ -1673,8 +1701,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subzoneids_python">
-<a href="#subzoneids_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Zone<wbr>Ids</a>
+        <span id="sub_zone_ids_python">
+<a href="#sub_zone_ids_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1700,6 +1728,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

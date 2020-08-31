@@ -41,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		currentRegionDs, err := alicloud.GetRegions(ctx, &alicloud.GetRegionsArgs{
+			Current: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("currentRegionId", currentRegionDs.Regions[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +72,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 current_region_ds = alicloud.get_regions(current=True)
-pulumi.export("currentRegionId", current_region_ds.regions[0]["id"])
+pulumi.export("currentRegionId", current_region_ds.regions[0].id)
 ```
 
 {{% /example %}}
@@ -84,7 +106,7 @@ export const currentRegionId = currentRegionDs.regions[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_regions(</span>current=None<span class="p">, </span>name=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_regions(</span><span class="nx">current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -712,8 +734,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localname_python">
-<a href="#localname_python" style="color: inherit; text-decoration: inherit;">local<wbr>Name</a>
+        <span id="local_name_python">
+<a href="#local_name_python" style="color: inherit; text-decoration: inherit;">local_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -723,8 +745,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -749,6 +771,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 
