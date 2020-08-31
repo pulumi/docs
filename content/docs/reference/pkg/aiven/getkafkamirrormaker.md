@@ -24,7 +24,7 @@ meta_desc: "Explore the GetKafkaMirrorMaker function of the Aiven package, inclu
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kafka_mirror_maker(</span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_mirror_maker(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[GetKafkaMirrorMakerComponentArgs]]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[GetKafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetKafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[GetKafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaMirrorMakerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -678,7 +678,7 @@ The following arguments are supported:
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakercomponent">List[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Component]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakercomponent">List[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -688,7 +688,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormaker">Dict[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormaker">Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -698,7 +698,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormakeruserconfig">Dict[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormakeruserconfig">Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -758,7 +758,7 @@ The following arguments are supported:
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakerserviceintegration">List[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakerserviceintegration">List[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1503,7 +1503,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormaker">Dict[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormaker">Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1613,7 +1613,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormakeruserconfig">Dict[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormakeruserconfig">Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1961,8 +1961,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="kafkaauthenticationmethod_python">
-<a href="#kafkaauthenticationmethod_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
+        <span id="kafka_authentication_method_python">
+<a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2117,8 +2117,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2131,7 +2131,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Dict[Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker]</a></span>
+        <span class="property-type"><a href="#getkafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2303,8 +2303,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshgroupsenabled_python">
-<a href="#refreshgroupsenabled_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Enabled</a>
+        <span id="refresh_groups_enabled_python">
+<a href="#refresh_groups_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2313,8 +2313,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshgroupsintervalseconds_python">
-<a href="#refreshgroupsintervalseconds_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Interval<wbr>Seconds</a>
+        <span id="refresh_groups_interval_seconds_python">
+<a href="#refresh_groups_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2323,8 +2323,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtopicsenabled_python">
-<a href="#refreshtopicsenabled_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Enabled</a>
+        <span id="refresh_topics_enabled_python">
+<a href="#refresh_topics_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2333,8 +2333,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtopicsintervalseconds_python">
-<a href="#refreshtopicsintervalseconds_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
+        <span id="refresh_topics_interval_seconds_python">
+<a href="#refresh_topics_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

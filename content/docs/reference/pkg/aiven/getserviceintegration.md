@@ -24,7 +24,7 @@ meta_desc: "Explore the GetServiceIntegration function of the Aiven package, inc
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service_integration(</span>destination_endpoint_id=None<span class="p">, </span>destination_service_name=None<span class="p">, </span>integration_type=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>logs_user_config=None<span class="p">, </span>mirrormaker_user_config=None<span class="p">, </span>project=None<span class="p">, </span>source_endpoint_id=None<span class="p">, </span>source_service_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration(</span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -428,7 +428,7 @@ The following arguments are supported:
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -438,7 +438,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -448,7 +448,7 @@ The following arguments are supported:
 <a href="#logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -458,7 +458,7 @@ The following arguments are supported:
 <a href="#mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -923,7 +923,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -933,7 +933,7 @@ The following output properties are available:
 <a href="#logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -943,7 +943,7 @@ The following output properties are available:
 <a href="#mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1045,7 +1045,7 @@ The following output properties are available:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfigkafkaconnect">Dict[Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1217,8 +1217,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configstoragetopic_python">
-<a href="#configstoragetopic_python" style="color: inherit; text-decoration: inherit;">config<wbr>Storage<wbr>Topic</a>
+        <span id="config_storage_topic_python">
+<a href="#config_storage_topic_python" style="color: inherit; text-decoration: inherit;">config_<wbr>storage_<wbr>topic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1227,8 +1227,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupid_python">
-<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1237,8 +1237,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetstoragetopic_python">
-<a href="#offsetstoragetopic_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Storage<wbr>Topic</a>
+        <span id="offset_storage_topic_python">
+<a href="#offset_storage_topic_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>storage_<wbr>topic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1247,8 +1247,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statusstoragetopic_python">
-<a href="#statusstoragetopic_python" style="color: inherit; text-decoration: inherit;">status<wbr>Storage<wbr>Topic</a>
+        <span id="status_storage_topic_python">
+<a href="#status_storage_topic_python" style="color: inherit; text-decoration: inherit;">status_<wbr>storage_<wbr>topic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1333,8 +1333,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clusteralias_python">
-<a href="#clusteralias_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Alias</a>
+        <span id="cluster_alias_python">
+<a href="#cluster_alias_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>alias</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1449,8 +1449,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="elasticsearchindexdaysmax_python">
-<a href="#elasticsearchindexdaysmax_python" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Index<wbr>Days<wbr>Max</a>
+        <span id="elasticsearch_index_days_max_python">
+<a href="#elasticsearch_index_days_max_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>index_<wbr>days_<wbr>max</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1459,8 +1459,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="elasticsearchindexprefix_python">
-<a href="#elasticsearchindexprefix_python" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Index<wbr>Prefix</a>
+        <span id="elasticsearch_index_prefix_python">
+<a href="#elasticsearch_index_prefix_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>index_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1545,8 +1545,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mirrormakerwhitelist_python">
-<a href="#mirrormakerwhitelist_python" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>Whitelist</a>
+        <span id="mirrormaker_whitelist_python">
+<a href="#mirrormaker_whitelist_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>whitelist</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

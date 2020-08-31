@@ -24,7 +24,7 @@ meta_desc: "Explore the GetInfluxDb function of the Aiven package, including exa
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_influx_db(</span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_influx_db(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[GetInfluxDbComponentArgs]]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[GetInfluxDbInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[GetInfluxDbInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[GetInfluxDbServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInfluxDbResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -678,7 +678,7 @@ The following arguments are supported:
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbcomponent">List[Get<wbr>Influx<wbr>Db<wbr>Component]</a></span>
+        <span class="property-type"><a href="#getinfluxdbcomponent">List[Get<wbr>Influx<wbr>Db<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -688,7 +688,7 @@ The following arguments are supported:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbinfluxdb">Dict[Get<wbr>Influx<wbr>Db<wbr>Influxdb]</a></span>
+        <span class="property-type"><a href="#getinfluxdbinfluxdb">Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -698,7 +698,7 @@ The following arguments are supported:
 <a href="#influxdb_user_config_python" style="color: inherit; text-decoration: inherit;">influxdb_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfig">Dict[Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfig">Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -758,7 +758,7 @@ The following arguments are supported:
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbserviceintegration">List[Get<wbr>Influx<wbr>Db<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#getinfluxdbserviceintegration">List[Get<wbr>Influx<wbr>Db<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1503,7 +1503,7 @@ The following output properties are available:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbinfluxdb">Dict[Get<wbr>Influx<wbr>Db<wbr>Influxdb]</a></span>
+        <span class="property-type"><a href="#getinfluxdbinfluxdb">Get<wbr>Influx<wbr>Db<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1613,7 +1613,7 @@ The following output properties are available:
 <a href="#influxdb_user_config_python" style="color: inherit; text-decoration: inherit;">influxdb_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfig">Dict[Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfig">Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1961,8 +1961,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="kafkaauthenticationmethod_python">
-<a href="#kafkaauthenticationmethod_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
+        <span id="kafka_authentication_method_python">
+<a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2293,8 +2293,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customdomain_python">
-<a href="#customdomain_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2303,8 +2303,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2313,28 +2313,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfigprivateaccess">Dict[Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfigprivateaccess">Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfigpublicaccess">Dict[Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getinfluxdbinfluxdbuserconfigpublicaccess">Get<wbr>Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetoforkfrom_python">
-<a href="#servicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

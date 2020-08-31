@@ -77,9 +77,9 @@ import pulumi
 import pulumi_aiven as aiven
 
 myendpoint = aiven.ServiceIntegrationEndpoint("myendpoint",
-    datadog_user_config={
-        "datadogApiKey": "<DATADOG_API_KEY>",
-    },
+    datadog_user_config=aiven.ServiceIntegrationEndpointDatadogUserConfigArgs(
+        datadog_api_key="<DATADOG_API_KEY>",
+    ),
     endpoint_name="<ENDPOINT_NAME>",
     endpoint_type="datadog",
     project=aiven_project["myproject"]["project"])
@@ -117,7 +117,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegrationEndpoint">ServiceIntegrationEndpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datadog_user_config=None<span class="p">, </span>endpoint_name=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>external_elasticsearch_logs_user_config=None<span class="p">, </span>project=None<span class="p">, </span>prometheus_user_config=None<span class="p">, </span>rsyslog_user_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegrationEndpoint">ServiceIntegrationEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -580,7 +580,7 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
 {{% /md %}}</dd>
@@ -591,7 +591,7 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
 {{% /md %}}</dd>
@@ -602,7 +602,7 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
 {{% /md %}}</dd>
@@ -726,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
 {{% /md %}}</dd>
@@ -760,7 +760,8 @@ Get an existing ServiceIntegrationEndpoint resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>datadog_user_config=None<span class="p">, </span>endpoint_config=None<span class="p">, </span>endpoint_name=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>external_elasticsearch_logs_user_config=None<span class="p">, </span>project=None<span class="p">, </span>prometheus_user_config=None<span class="p">, </span>rsyslog_user_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">) -&gt;</span> ServiceIntegrationEndpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -768,7 +769,7 @@ Get an existing ServiceIntegrationEndpoint resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegrationEndpoint.html">ServiceIntegrationEndpoint</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..ServiceIntegrationEndpointState.html">ServiceIntegrationEndpointState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegrationEndpoint.html">ServiceIntegrationEndpoint</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..ServiceIntegrationEndpointState.html">ServiceIntegrationEndpointState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1165,7 +1166,7 @@ The following state arguments are supported:
 <a href="#state_datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
 {{% /md %}}</dd>
@@ -1176,7 +1177,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
 {{% /md %}}</dd>
@@ -1209,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
 {{% /md %}}</dd>
@@ -1231,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
 {{% /md %}}</dd>
@@ -1242,7 +1243,7 @@ The following state arguments are supported:
 <a href="#state_rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Dict[Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
 {{% /md %}}</dd>
@@ -1423,8 +1424,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datadogapikey_python">
-<a href="#datadogapikey_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
+        <span id="datadog_api_key_python">
+<a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1433,8 +1434,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disableconsumerstats_python">
-<a href="#disableconsumerstats_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Consumer<wbr>Stats</a>
+        <span id="disable_consumer_stats_python">
+<a href="#disable_consumer_stats_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>consumer_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1443,8 +1444,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpartitioncontexts_python">
-<a href="#maxpartitioncontexts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Contexts</a>
+        <span id="max_partition_contexts_python">
+<a href="#max_partition_contexts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>contexts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1669,8 +1670,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexdaysmax_python">
-<a href="#indexdaysmax_python" style="color: inherit; text-decoration: inherit;">index<wbr>Days<wbr>Max</a>
+        <span id="index_days_max_python">
+<a href="#index_days_max_python" style="color: inherit; text-decoration: inherit;">index_<wbr>days_<wbr>max</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1679,8 +1680,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexprefix_python">
-<a href="#indexprefix_python" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
+        <span id="index_prefix_python">
+<a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1815,8 +1816,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basicauthpassword_python">
-<a href="#basicauthpassword_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
+        <span id="basic_auth_password_python">
+<a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1825,8 +1826,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="basicauthusername_python">
-<a href="#basicauthusername_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
+        <span id="basic_auth_username_python">
+<a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

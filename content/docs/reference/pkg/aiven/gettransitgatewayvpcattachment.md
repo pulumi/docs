@@ -24,7 +24,7 @@ meta_desc: "Explore the GetTransitGatewayVpcAttachment function of the Aiven pac
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_transit_gateway_vpc_attachment(</span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>user_peer_network_cidrs=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_transit_gateway_vpc_attachment(</span><span class="nx">peer_cloud_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_vpc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_info</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">user_peer_network_cidrs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTransitGatewayVpcAttachmentResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -378,7 +378,7 @@ The following arguments are supported:
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">state_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -763,7 +763,7 @@ The following output properties are available:
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">state_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

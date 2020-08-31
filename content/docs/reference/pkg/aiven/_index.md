@@ -80,6 +80,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getprojectvpc" title="GetProjectVpc"><span class="symbol function"></span>GetProjectVpc</a></li>
     <li><a href="getredis" title="GetRedis"><span class="symbol function"></span>GetRedis</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getservicecomponent" title="GetServiceComponent"><span class="symbol function"></span>GetServiceComponent</a></li>
     <li><a href="getserviceintegration" title="GetServiceIntegration"><span class="symbol function"></span>GetServiceIntegration</a></li>
     <li><a href="getserviceintegrationendpoint" title="GetServiceIntegrationEndpoint"><span class="symbol function"></span>GetServiceIntegrationEndpoint</a></li>
     <li><a href="getserviceuser" title="GetServiceUser"><span class="symbol function"></span>GetServiceUser</a></li>
@@ -96,7 +97,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 

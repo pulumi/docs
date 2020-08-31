@@ -101,7 +101,7 @@ const myservice = aiven.getService({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service(</span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[GetServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[GetServiceComponentArgs]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[GetServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GetServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[GetServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[GetServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[GetServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[GetServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -561,7 +561,7 @@ The following arguments are supported:
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component</a></span>
+        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1285,7 +1285,7 @@ The following arguments are supported:
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandra">Dict[Get<wbr>Service<wbr>Cassandra]</a></span>
+        <span class="property-type"><a href="#getservicecassandra">Get<wbr>Service<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1295,7 +1295,7 @@ The following arguments are supported:
 <a href="#cassandra_user_config_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfig">Dict[Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfig">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1315,7 +1315,7 @@ The following arguments are supported:
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">List[Get<wbr>Service<wbr>Component]</a></span>
+        <span class="property-type"><a href="#getservicecomponent">List[Get<wbr>Service<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1325,7 +1325,7 @@ The following arguments are supported:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearch">Dict[Get<wbr>Service<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1335,7 +1335,7 @@ The following arguments are supported:
 <a href="#elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Dict[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1345,7 +1345,7 @@ The following arguments are supported:
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafana">Dict[Get<wbr>Service<wbr>Grafana]</a></span>
+        <span class="property-type"><a href="#getservicegrafana">Get<wbr>Service<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1355,7 +1355,7 @@ The following arguments are supported:
 <a href="#grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfig">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfig">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1365,7 +1365,7 @@ The following arguments are supported:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdb">Dict[Get<wbr>Service<wbr>Influxdb]</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1375,7 +1375,7 @@ The following arguments are supported:
 <a href="#influxdb_user_config_python" style="color: inherit; text-decoration: inherit;">influxdb_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Dict[Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1385,7 +1385,7 @@ The following arguments are supported:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafka">Dict[Get<wbr>Service<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#getservicekafka">Get<wbr>Service<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1395,7 +1395,7 @@ The following arguments are supported:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnect">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1405,7 +1405,7 @@ The following arguments are supported:
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1415,7 +1415,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormaker">Dict[Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker]</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1425,7 +1425,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1435,7 +1435,7 @@ The following arguments are supported:
 <a href="#kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1465,7 +1465,7 @@ The following arguments are supported:
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysql">Dict[Get<wbr>Service<wbr>Mysql]</a></span>
+        <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1475,7 +1475,7 @@ The following arguments are supported:
 <a href="#mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfig">Dict[Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1485,7 +1485,7 @@ The following arguments are supported:
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepg">Dict[Get<wbr>Service<wbr>Pg]</a></span>
+        <span class="property-type"><a href="#getservicepg">Get<wbr>Service<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1495,7 +1495,7 @@ The following arguments are supported:
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfig">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfig">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1525,7 +1525,7 @@ The following arguments are supported:
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredis">Dict[Get<wbr>Service<wbr>Redis]</a></span>
+        <span class="property-type"><a href="#getserviceredis">Get<wbr>Service<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1535,7 +1535,7 @@ The following arguments are supported:
 <a href="#redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfig">Dict[Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfig">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1555,7 +1555,7 @@ The following arguments are supported:
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceserviceintegration">List[Get<wbr>Service<wbr>Service<wbr>Integration]</a></span>
+        <span class="property-type"><a href="#getserviceserviceintegration">List[Get<wbr>Service<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2053,7 +2053,7 @@ The following output properties are available:
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component</a></span>
+        <span class="property-type"><a href="#getservicecomponent">[]Get<wbr>Service<wbr>Component<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2819,7 +2819,7 @@ The following output properties are available:
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandra">Dict[Get<wbr>Service<wbr>Cassandra]</a></span>
+        <span class="property-type"><a href="#getservicecassandra">Get<wbr>Service<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2839,7 +2839,7 @@ The following output properties are available:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearch">Dict[Get<wbr>Service<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearch">Get<wbr>Service<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2849,7 +2849,7 @@ The following output properties are available:
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafana">Dict[Get<wbr>Service<wbr>Grafana]</a></span>
+        <span class="property-type"><a href="#getservicegrafana">Get<wbr>Service<wbr>Grafana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2870,7 +2870,7 @@ The following output properties are available:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdb">Dict[Get<wbr>Service<wbr>Influxdb]</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdb">Get<wbr>Service<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2880,7 +2880,7 @@ The following output properties are available:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafka">Dict[Get<wbr>Service<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#getservicekafka">Get<wbr>Service<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2890,7 +2890,7 @@ The following output properties are available:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnect">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2900,7 +2900,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormaker">Dict[Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker]</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2910,7 +2910,7 @@ The following output properties are available:
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysql">Dict[Get<wbr>Service<wbr>Mysql]</a></span>
+        <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2920,7 +2920,7 @@ The following output properties are available:
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepg">Dict[Get<wbr>Service<wbr>Pg]</a></span>
+        <span class="property-type"><a href="#getservicepg">Get<wbr>Service<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2940,7 +2940,7 @@ The following output properties are available:
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredis">Dict[Get<wbr>Service<wbr>Redis]</a></span>
+        <span class="property-type"><a href="#getserviceredis">Get<wbr>Service<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3020,7 +3020,7 @@ The following output properties are available:
 <a href="#cassandra_user_config_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfig">Dict[Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfig">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3040,7 +3040,7 @@ The following output properties are available:
 <a href="#elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Dict[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3050,7 +3050,7 @@ The following output properties are available:
 <a href="#grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfig">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfig">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3060,7 +3060,7 @@ The following output properties are available:
 <a href="#influxdb_user_config_python" style="color: inherit; text-decoration: inherit;">influxdb_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Dict[Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3070,7 +3070,7 @@ The following output properties are available:
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3080,7 +3080,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3090,7 +3090,7 @@ The following output properties are available:
 <a href="#kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3120,7 +3120,7 @@ The following output properties are available:
 <a href="#mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfig">Dict[Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3130,7 +3130,7 @@ The following output properties are available:
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfig">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfig">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3160,7 +3160,7 @@ The following output properties are available:
 <a href="#redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfig">Dict[Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfig">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3398,8 +3398,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3408,8 +3408,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="migratesstableloader_python">
-<a href="#migratesstableloader_python" style="color: inherit; text-decoration: inherit;">migrate<wbr>Sstableloader</a>
+        <span id="migrate_sstableloader_python">
+<a href="#migrate_sstableloader_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>sstableloader</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3418,28 +3418,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigprivateaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigpublicaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetoforkfrom_python">
-<a href="#servicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3631,7 +3631,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceComponentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceComponent">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceComponentTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceComponentType">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceComponentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceComponent.html">output</a> API doc for this type.
@@ -3896,8 +3896,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="kafkaauthenticationmethod_python">
-<a href="#kafkaauthenticationmethod_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
+        <span id="kafka_authentication_method_python">
+<a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4022,8 +4022,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="kibanauri_python">
-<a href="#kibanauri_python" style="color: inherit; text-decoration: inherit;">kibana<wbr>Uri</a>
+        <span id="kibana_uri_python">
+<a href="#kibana_uri_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4438,8 +4438,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customdomain_python">
-<a href="#customdomain_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4448,8 +4448,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablereplicationfactoradjustment_python">
-<a href="#disablereplicationfactoradjustment_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
+        <span id="disable_replication_factor_adjustment_python">
+<a href="#disable_replication_factor_adjustment_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>replication_<wbr>factor_<wbr>adjustment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4462,14 +4462,14 @@ The following output properties are available:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigelasticsearch">Dict[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="elasticsearchversion_python">
-<a href="#elasticsearchversion_python" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Version</a>
+        <span id="elasticsearch_version_python">
+<a href="#elasticsearch_version_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4478,18 +4478,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexpatterns_python">
-<a href="#indexpatterns_python" style="color: inherit; text-decoration: inherit;">index<wbr>Patterns</a>
+        <span id="index_patterns_python">
+<a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindexpattern">List[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindexpattern">List[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4502,14 +4502,14 @@ The following output properties are available:
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigkibana">Dict[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigkibana">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxindexcount_python">
-<a href="#maxindexcount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
+        <span id="max_index_count_python">
+<a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4518,28 +4518,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivateaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigpublicaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverybasebackupname_python">
-<a href="#recoverybasebackupname_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
+        <span id="recovery_basebackup_name_python">
+<a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4548,8 +4548,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetoforkfrom_python">
-<a href="#servicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5324,8 +5324,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionautocreateindexenabled_python">
-<a href="#actionautocreateindexenabled_python" style="color: inherit; text-decoration: inherit;">action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
+        <span id="action_auto_create_index_enabled_python">
+<a href="#action_auto_create_index_enabled_python" style="color: inherit; text-decoration: inherit;">action_<wbr>auto_<wbr>create_<wbr>index_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5334,8 +5334,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actiondestructiverequiresname_python">
-<a href="#actiondestructiverequiresname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Destructive<wbr>Requires<wbr>Name</a>
+        <span id="action_destructive_requires_name_python">
+<a href="#action_destructive_requires_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>destructive_<wbr>requires_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5344,8 +5344,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpmaxcontentlength_python">
-<a href="#httpmaxcontentlength_python" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Content<wbr>Length</a>
+        <span id="http_max_content_length_python">
+<a href="#http_max_content_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>content_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5354,8 +5354,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpmaxheadersize_python">
-<a href="#httpmaxheadersize_python" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Header<wbr>Size</a>
+        <span id="http_max_header_size_python">
+<a href="#http_max_header_size_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>header_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5364,8 +5364,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpmaxinitiallinelength_python">
-<a href="#httpmaxinitiallinelength_python" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
+        <span id="http_max_initial_line_length_python">
+<a href="#http_max_initial_line_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>initial_<wbr>line_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5374,8 +5374,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indicesfielddatacachesize_python">
-<a href="#indicesfielddatacachesize_python" style="color: inherit; text-decoration: inherit;">indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
+        <span id="indices_fielddata_cache_size_python">
+<a href="#indices_fielddata_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>fielddata_<wbr>cache_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5384,8 +5384,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indicesmemoryindexbuffersize_python">
-<a href="#indicesmemoryindexbuffersize_python" style="color: inherit; text-decoration: inherit;">indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
+        <span id="indices_memory_index_buffer_size_python">
+<a href="#indices_memory_index_buffer_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>memory_<wbr>index_<wbr>buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5394,8 +5394,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indicesqueriescachesize_python">
-<a href="#indicesqueriescachesize_python" style="color: inherit; text-decoration: inherit;">indices<wbr>Queries<wbr>Cache<wbr>Size</a>
+        <span id="indices_queries_cache_size_python">
+<a href="#indices_queries_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>queries_<wbr>cache_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5404,8 +5404,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indicesqueryboolmaxclausecount_python">
-<a href="#indicesqueryboolmaxclausecount_python" style="color: inherit; text-decoration: inherit;">indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
+        <span id="indices_query_bool_max_clause_count_python">
+<a href="#indices_query_bool_max_clause_count_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>query_<wbr>bool_<wbr>max_<wbr>clause_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5414,8 +5414,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reindexremotewhitelists_python">
-<a href="#reindexremotewhitelists_python" style="color: inherit; text-decoration: inherit;">reindex<wbr>Remote<wbr>Whitelists</a>
+        <span id="reindex_remote_whitelists_python">
+<a href="#reindex_remote_whitelists_python" style="color: inherit; text-decoration: inherit;">reindex_<wbr>remote_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5424,8 +5424,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="searchmaxbuckets_python">
-<a href="#searchmaxbuckets_python" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
+        <span id="search_max_buckets_python">
+<a href="#search_max_buckets_python" style="color: inherit; text-decoration: inherit;">search_<wbr>max_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5434,8 +5434,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolanalyzequeuesize_python">
-<a href="#threadpoolanalyzequeuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
+        <span id="thread_pool_analyze_queue_size_python">
+<a href="#thread_pool_analyze_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>queue_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5444,8 +5444,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolanalyzesize_python">
-<a href="#threadpoolanalyzesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
+        <span id="thread_pool_analyze_size_python">
+<a href="#thread_pool_analyze_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5454,8 +5454,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolforcemergesize_python">
-<a href="#threadpoolforcemergesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
+        <span id="thread_pool_force_merge_size_python">
+<a href="#thread_pool_force_merge_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>force_<wbr>merge_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5464,8 +5464,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolgetqueuesize_python">
-<a href="#threadpoolgetqueuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
+        <span id="thread_pool_get_queue_size_python">
+<a href="#thread_pool_get_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>queue_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5474,8 +5474,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolgetsize_python">
-<a href="#threadpoolgetsize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Size</a>
+        <span id="thread_pool_get_size_python">
+<a href="#thread_pool_get_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5484,8 +5484,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolindexqueuesize_python">
-<a href="#threadpoolindexqueuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Queue<wbr>Size</a>
+        <span id="thread_pool_index_queue_size_python">
+<a href="#thread_pool_index_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>queue_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5494,8 +5494,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolindexsize_python">
-<a href="#threadpoolindexsize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Size</a>
+        <span id="thread_pool_index_size_python">
+<a href="#thread_pool_index_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5504,8 +5504,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolsearchqueuesize_python">
-<a href="#threadpoolsearchqueuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
+        <span id="thread_pool_search_queue_size_python">
+<a href="#thread_pool_search_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>queue_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5514,8 +5514,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolsearchsize_python">
-<a href="#threadpoolsearchsize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Size</a>
+        <span id="thread_pool_search_size_python">
+<a href="#thread_pool_search_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5524,8 +5524,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolsearchthrottledqueuesize_python">
-<a href="#threadpoolsearchthrottledqueuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
+        <span id="thread_pool_search_throttled_queue_size_python">
+<a href="#thread_pool_search_throttled_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>queue_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5534,8 +5534,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolsearchthrottledsize_python">
-<a href="#threadpoolsearchthrottledsize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
+        <span id="thread_pool_search_throttled_size_python">
+<a href="#thread_pool_search_throttled_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5544,8 +5544,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolwritequeuesize_python">
-<a href="#threadpoolwritequeuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
+        <span id="thread_pool_write_queue_size_python">
+<a href="#thread_pool_write_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>queue_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5554,8 +5554,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadpoolwritesize_python">
-<a href="#threadpoolwritesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Size</a>
+        <span id="thread_pool_write_size_python">
+<a href="#thread_pool_write_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5670,8 +5670,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxindexcount_python">
-<a href="#maxindexcount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
+        <span id="max_index_count_python">
+<a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5826,8 +5826,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="elasticsearchrequesttimeout_python">
-<a href="#elasticsearchrequesttimeout_python" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Request<wbr>Timeout</a>
+        <span id="elasticsearch_request_timeout_python">
+<a href="#elasticsearch_request_timeout_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>request_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5846,8 +5846,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxoldspacesize_python">
-<a href="#maxoldspacesize_python" style="color: inherit; text-decoration: inherit;">max<wbr>Old<wbr>Space<wbr>Size</a>
+        <span id="max_old_space_size_python">
+<a href="#max_old_space_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>old_<wbr>space_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7014,8 +7014,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertingenabled_python">
-<a href="#alertingenabled_python" style="color: inherit; text-decoration: inherit;">alerting<wbr>Enabled</a>
+        <span id="alerting_enabled_python">
+<a href="#alerting_enabled_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7024,8 +7024,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertingerrorortimeout_python">
-<a href="#alertingerrorortimeout_python" style="color: inherit; text-decoration: inherit;">alerting<wbr>Error<wbr>Or<wbr>Timeout</a>
+        <span id="alerting_error_or_timeout_python">
+<a href="#alerting_error_or_timeout_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>error_<wbr>or_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7034,8 +7034,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertingnodataornullvalues_python">
-<a href="#alertingnodataornullvalues_python" style="color: inherit; text-decoration: inherit;">alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
+        <span id="alerting_nodata_or_nullvalues_python">
+<a href="#alerting_nodata_or_nullvalues_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>nodata_<wbr>or_<wbr>nullvalues</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7044,8 +7044,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowembedding_python">
-<a href="#allowembedding_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Embedding</a>
+        <span id="allow_embedding_python">
+<a href="#allow_embedding_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>embedding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7054,8 +7054,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authbasicenabled_python">
-<a href="#authbasicenabled_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Basic<wbr>Enabled</a>
+        <span id="auth_basic_enabled_python">
+<a href="#auth_basic_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>basic_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7064,58 +7064,48 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authgenericoauth_python">
-<a href="#authgenericoauth_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Generic<wbr>Oauth</a>
+        <span id="auth_generic_oauth_python">
+<a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgenericoauth">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgenericoauth">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authgithub_python">
-<a href="#authgithub_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Github</a>
+        <span id="auth_github_python">
+<a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgithub">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgithub">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authgitlab_python">
-<a href="#authgitlab_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Gitlab</a>
+        <span id="auth_gitlab_python">
+<a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgitlab">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgitlab">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authgoogle_python">
-<a href="#authgoogle_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Google</a>
+        <span id="auth_google_python">
+<a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgoogle">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgoogle">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiesamesite_python">
-<a href="#cookiesamesite_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Samesite</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="customdomain_python">
-<a href="#customdomain_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+        <span id="cookie_samesite_python">
+<a href="#cookie_samesite_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>samesite</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7124,8 +7114,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dashboardsversionstokeep_python">
-<a href="#dashboardsversionstokeep_python" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7134,8 +7124,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataproxysenduserheader_python">
-<a href="#dataproxysenduserheader_python" style="color: inherit; text-decoration: inherit;">dataproxy<wbr>Send<wbr>User<wbr>Header</a>
+        <span id="dashboards_versions_to_keep_python">
+<a href="#dashboards_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7144,8 +7134,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataproxytimeout_python">
-<a href="#dataproxytimeout_python" style="color: inherit; text-decoration: inherit;">dataproxy<wbr>Timeout</a>
+        <span id="dataproxy_send_user_header_python">
+<a href="#dataproxy_send_user_header_python" style="color: inherit; text-decoration: inherit;">dataproxy_<wbr>send_<wbr>user_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7154,8 +7144,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablegravatar_python">
-<a href="#disablegravatar_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Gravatar</a>
+        <span id="dataproxy_timeout_python">
+<a href="#dataproxy_timeout_python" style="color: inherit; text-decoration: inherit;">dataproxy_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7164,8 +7154,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="editorscanadmin_python">
-<a href="#editorscanadmin_python" style="color: inherit; text-decoration: inherit;">editors<wbr>Can<wbr>Admin</a>
+        <span id="disable_gravatar_python">
+<a href="#disable_gravatar_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gravatar</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7174,18 +7164,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="externalimagestorage_python">
-<a href="#externalimagestorage_python" style="color: inherit; text-decoration: inherit;">external<wbr>Image<wbr>Storage</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigexternalimagestorage">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="googleanalyticsuaid_python">
-<a href="#googleanalyticsuaid_python" style="color: inherit; text-decoration: inherit;">google<wbr>Analytics<wbr>Ua<wbr>Id</a>
+        <span id="editors_can_admin_python">
+<a href="#editors_can_admin_python" style="color: inherit; text-decoration: inherit;">editors_<wbr>can_<wbr>admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7194,8 +7174,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="external_image_storage_python">
+<a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigexternalimagestorage">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="google_analytics_ua_id_python">
+<a href="#google_analytics_ua_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>analytics_<wbr>ua_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7204,8 +7204,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricsenabled_python">
-<a href="#metricsenabled_python" style="color: inherit; text-decoration: inherit;">metrics<wbr>Enabled</a>
+        <span id="metrics_enabled_python">
+<a href="#metrics_enabled_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7214,48 +7214,38 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigprivateaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigpublicaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smtpserver_python">
-<a href="#smtpserver_python" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
+        <span id="smtp_server_python">
+<a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigsmtpserver">Dict[Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server]</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigsmtpserver">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userautoassignorg_python">
-<a href="#userautoassignorg_python" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="userautoassignorgrole_python">
-<a href="#userautoassignorgrole_python" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org<wbr>Role</a>
+        <span id="user_auto_assign_org_python">
+<a href="#user_auto_assign_org_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7264,8 +7254,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewerscanedit_python">
-<a href="#viewerscanedit_python" style="color: inherit; text-decoration: inherit;">viewers<wbr>Can<wbr>Edit</a>
+        <span id="user_auto_assign_org_role_python">
+<a href="#user_auto_assign_org_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org_<wbr>role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="viewers_can_edit_python">
+<a href="#viewers_can_edit_python" style="color: inherit; text-decoration: inherit;">viewers_<wbr>can_<wbr>edit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7620,8 +7620,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowsignup_python">
-<a href="#allowsignup_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
+        <span id="allow_sign_up_python">
+<a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7630,8 +7630,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloweddomains_python">
-<a href="#alloweddomains_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
+        <span id="allowed_domains_python">
+<a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7640,8 +7640,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedorganizations_python">
-<a href="#allowedorganizations_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Organizations</a>
+        <span id="allowed_organizations_python">
+<a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7650,8 +7650,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apiurl_python">
-<a href="#apiurl_python" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
+        <span id="api_url_python">
+<a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7660,8 +7660,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authurl_python">
-<a href="#authurl_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
+        <span id="auth_url_python">
+<a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7670,8 +7670,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientid_python">
-<a href="#clientid_python" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7680,8 +7680,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7710,8 +7710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenurl_python">
-<a href="#tokenurl_python" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
+        <span id="token_url_python">
+<a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7916,8 +7916,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowsignup_python">
-<a href="#allowsignup_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
+        <span id="allow_sign_up_python">
+<a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7926,8 +7926,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedorganizations_python">
-<a href="#allowedorganizations_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Organizations</a>
+        <span id="allowed_organizations_python">
+<a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7936,8 +7936,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientid_python">
-<a href="#clientid_python" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7946,8 +7946,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7956,8 +7956,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="teamids_python">
-<a href="#teamids_python" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
+        <span id="team_ids_python">
+<a href="#team_ids_python" style="color: inherit; text-decoration: inherit;">team_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -8222,8 +8222,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowsignup_python">
-<a href="#allowsignup_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
+        <span id="allow_sign_up_python">
+<a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8232,8 +8232,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedgroups_python">
-<a href="#allowedgroups_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Groups</a>
+        <span id="allowed_groups_python">
+<a href="#allowed_groups_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -8242,8 +8242,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apiurl_python">
-<a href="#apiurl_python" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
+        <span id="api_url_python">
+<a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8252,8 +8252,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authurl_python">
-<a href="#authurl_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
+        <span id="auth_url_python">
+<a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8262,8 +8262,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientid_python">
-<a href="#clientid_python" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8272,8 +8272,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8282,8 +8282,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenurl_python">
-<a href="#tokenurl_python" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
+        <span id="token_url_python">
+<a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8458,8 +8458,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowsignup_python">
-<a href="#allowsignup_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
+        <span id="allow_sign_up_python">
+<a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8468,8 +8468,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloweddomains_python">
-<a href="#alloweddomains_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
+        <span id="allowed_domains_python">
+<a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -8478,8 +8478,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientid_python">
-<a href="#clientid_python" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8488,8 +8488,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8674,8 +8674,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bucketurl_python">
-<a href="#bucketurl_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Url</a>
+        <span id="bucket_url_python">
+<a href="#bucket_url_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8694,8 +8694,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9132,8 +9132,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromaddress_python">
-<a href="#fromaddress_python" style="color: inherit; text-decoration: inherit;">from<wbr>Address</a>
+        <span id="from_address_python">
+<a href="#from_address_python" style="color: inherit; text-decoration: inherit;">from_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9142,8 +9142,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromname_python">
-<a href="#fromname_python" style="color: inherit; text-decoration: inherit;">from<wbr>Name</a>
+        <span id="from_name_python">
+<a href="#from_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9182,8 +9182,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipverify_python">
-<a href="#skipverify_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Verify</a>
+        <span id="skip_verify_python">
+<a href="#skip_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9484,8 +9484,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customdomain_python">
-<a href="#customdomain_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9494,8 +9494,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -9504,28 +9504,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivateaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigpublicaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetoforkfrom_python">
-<a href="#servicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9922,8 +9922,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connecturi_python">
-<a href="#connecturi_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Uri</a>
+        <span id="connect_uri_python">
+<a href="#connect_uri_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9932,8 +9932,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resturi_python">
-<a href="#resturi_python" style="color: inherit; text-decoration: inherit;">rest<wbr>Uri</a>
+        <span id="rest_uri_python">
+<a href="#rest_uri_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9942,8 +9942,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="schemaregistryuri_python">
-<a href="#schemaregistryuri_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Uri</a>
+        <span id="schema_registry_uri_python">
+<a href="#schema_registry_uri_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10118,8 +10118,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10132,27 +10132,27 @@ The following output properties are available:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigkafkaconnect">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10444,8 +10444,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectorclientconfigoverridepolicy_python">
-<a href="#connectorclientconfigoverridepolicy_python" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+        <span id="connector_client_config_override_policy_python">
+<a href="#connector_client_config_override_policy_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>client_<wbr>config_<wbr>override_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10454,8 +10454,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerautooffsetreset_python">
-<a href="#consumerautooffsetreset_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+        <span id="consumer_auto_offset_reset_python">
+<a href="#consumer_auto_offset_reset_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>auto_<wbr>offset_<wbr>reset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10464,8 +10464,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerisolationlevel_python">
-<a href="#consumerisolationlevel_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+        <span id="consumer_isolation_level_python">
+<a href="#consumer_isolation_level_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>isolation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10474,8 +10474,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumermaxpollintervalms_python">
-<a href="#consumermaxpollintervalms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
+        <span id="consumer_max_poll_interval_ms_python">
+<a href="#consumer_max_poll_interval_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>interval_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10484,8 +10484,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumermaxpollrecords_python">
-<a href="#consumermaxpollrecords_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Records</a>
+        <span id="consumer_max_poll_records_python">
+<a href="#consumer_max_poll_records_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10494,8 +10494,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetflushintervalms_python">
-<a href="#offsetflushintervalms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Interval<wbr>Ms</a>
+        <span id="offset_flush_interval_ms_python">
+<a href="#offset_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>interval_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10504,8 +10504,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetflushtimeoutms_python">
-<a href="#offsetflushtimeoutms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+        <span id="offset_flush_timeout_ms_python">
+<a href="#offset_flush_timeout_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10514,8 +10514,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeoutms_python">
-<a href="#sessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+        <span id="session_timeout_ms_python">
+<a href="#session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10882,8 +10882,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10896,7 +10896,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Dict[Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker]</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11068,8 +11068,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshgroupsenabled_python">
-<a href="#refreshgroupsenabled_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Enabled</a>
+        <span id="refresh_groups_enabled_python">
+<a href="#refresh_groups_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11078,8 +11078,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshgroupsintervalseconds_python">
-<a href="#refreshgroupsintervalseconds_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Interval<wbr>Seconds</a>
+        <span id="refresh_groups_interval_seconds_python">
+<a href="#refresh_groups_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11088,8 +11088,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtopicsenabled_python">
-<a href="#refreshtopicsenabled_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Enabled</a>
+        <span id="refresh_topics_enabled_python">
+<a href="#refresh_topics_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11098,8 +11098,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="refreshtopicsintervalseconds_python">
-<a href="#refreshtopicsintervalseconds_python" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
+        <span id="refresh_topics_interval_seconds_python">
+<a href="#refresh_topics_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11514,8 +11514,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customdomain_python">
-<a href="#customdomain_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11524,8 +11524,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -11538,57 +11538,17 @@ The following output properties are available:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafka">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafka">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafkaauthenticationmethods_python">
-<a href="#kafkaauthenticationmethods_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Methods</a>
+        <span id="kafka_authentication_methods_python">
+<a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkaauthenticationmethods">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkaconnectconfig_python">
-<a href="#kafkaconnectconfig_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkaconnectconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkarest_python">
-<a href="#kafkarest_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkarestconfig_python">
-<a href="#kafkarestconfig_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkarestconfig">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="kafkaversion_python">
-<a href="#kafkaversion_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkaauthenticationmethods">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11604,28 +11564,68 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="kafka_connect_config_python">
+<a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkaconnectconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="kafka_rest_python">
+<a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaregistry_python">
-<a href="#schemaregistry_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
+        <span id="kafka_rest_config_python">
+<a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkarestconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_version_python">
+<a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_registry_python">
+<a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12400,8 +12400,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autocreatetopicsenable_python">
-<a href="#autocreatetopicsenable_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Topics<wbr>Enable</a>
+        <span id="auto_create_topics_enable_python">
+<a href="#auto_create_topics_enable_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>topics_<wbr>enable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12410,8 +12410,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressiontype_python">
-<a href="#compressiontype_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
+        <span id="compression_type_python">
+<a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12420,8 +12420,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectionsmaxidlems_python">
-<a href="#connectionsmaxidlems_python" style="color: inherit; text-decoration: inherit;">connections<wbr>Max<wbr>Idle<wbr>Ms</a>
+        <span id="connections_max_idle_ms_python">
+<a href="#connections_max_idle_ms_python" style="color: inherit; text-decoration: inherit;">connections_<wbr>max_<wbr>idle_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12430,8 +12430,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultreplicationfactor_python">
-<a href="#defaultreplicationfactor_python" style="color: inherit; text-decoration: inherit;">default<wbr>Replication<wbr>Factor</a>
+        <span id="default_replication_factor_python">
+<a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12440,8 +12440,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupmaxsessiontimeoutms_python">
-<a href="#groupmaxsessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
+        <span id="group_max_session_timeout_ms_python">
+<a href="#group_max_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>max_<wbr>session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12450,8 +12450,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupminsessiontimeoutms_python">
-<a href="#groupminsessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">group<wbr>Min<wbr>Session<wbr>Timeout<wbr>Ms</a>
+        <span id="group_min_session_timeout_ms_python">
+<a href="#group_min_session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>min_<wbr>session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12460,8 +12460,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanermaxcompactionlagms_python">
-<a href="#logcleanermaxcompactionlagms_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+        <span id="log_cleaner_max_compaction_lag_ms_python">
+<a href="#log_cleaner_max_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>max_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12470,8 +12470,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanermincleanableratio_python">
-<a href="#logcleanermincleanableratio_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Min<wbr>Cleanable<wbr>Ratio</a>
+        <span id="log_cleaner_min_cleanable_ratio_python">
+<a href="#log_cleaner_min_cleanable_ratio_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>min_<wbr>cleanable_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12480,8 +12480,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanermincompactionlagms_python">
-<a href="#logcleanermincompactionlagms_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleaner<wbr>Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
+        <span id="log_cleaner_min_compaction_lag_ms_python">
+<a href="#log_cleaner_min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleaner_<wbr>min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12490,8 +12490,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logcleanuppolicy_python">
-<a href="#logcleanuppolicy_python" style="color: inherit; text-decoration: inherit;">log<wbr>Cleanup<wbr>Policy</a>
+        <span id="log_cleanup_policy_python">
+<a href="#log_cleanup_policy_python" style="color: inherit; text-decoration: inherit;">log_<wbr>cleanup_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12500,8 +12500,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logmessagetimestampdifferencemaxms_python">
-<a href="#logmessagetimestampdifferencemaxms_python" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
+        <span id="log_message_timestamp_difference_max_ms_python">
+<a href="#log_message_timestamp_difference_max_ms_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>timestamp_<wbr>difference_<wbr>max_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12510,8 +12510,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logmessagetimestamptype_python">
-<a href="#logmessagetimestamptype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Message<wbr>Timestamp<wbr>Type</a>
+        <span id="log_message_timestamp_type_python">
+<a href="#log_message_timestamp_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>message_<wbr>timestamp_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12520,8 +12520,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logretentionbytes_python">
-<a href="#logretentionbytes_python" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Bytes</a>
+        <span id="log_retention_bytes_python">
+<a href="#log_retention_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12530,8 +12530,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logretentionhours_python">
-<a href="#logretentionhours_python" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Hours</a>
+        <span id="log_retention_hours_python">
+<a href="#log_retention_hours_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12540,8 +12540,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logsegmentbytes_python">
-<a href="#logsegmentbytes_python" style="color: inherit; text-decoration: inherit;">log<wbr>Segment<wbr>Bytes</a>
+        <span id="log_segment_bytes_python">
+<a href="#log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12550,8 +12550,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconnectionsperip_python">
-<a href="#maxconnectionsperip_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Ip</a>
+        <span id="max_connections_per_ip_python">
+<a href="#max_connections_per_ip_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12560,8 +12560,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxincrementalfetchsessioncacheslots_python">
-<a href="#maxincrementalfetchsessioncacheslots_python" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
+        <span id="max_incremental_fetch_session_cache_slots_python">
+<a href="#max_incremental_fetch_session_cache_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>incremental_<wbr>fetch_<wbr>session_<wbr>cache_<wbr>slots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12570,8 +12570,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagemaxbytes_python">
-<a href="#messagemaxbytes_python" style="color: inherit; text-decoration: inherit;">message<wbr>Max<wbr>Bytes</a>
+        <span id="message_max_bytes_python">
+<a href="#message_max_bytes_python" style="color: inherit; text-decoration: inherit;">message_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12580,8 +12580,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numpartitions_python">
-<a href="#numpartitions_python" style="color: inherit; text-decoration: inherit;">num<wbr>Partitions</a>
+        <span id="num_partitions_python">
+<a href="#num_partitions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>partitions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12590,8 +12590,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetsretentionminutes_python">
-<a href="#offsetsretentionminutes_python" style="color: inherit; text-decoration: inherit;">offsets<wbr>Retention<wbr>Minutes</a>
+        <span id="offsets_retention_minutes_python">
+<a href="#offsets_retention_minutes_python" style="color: inherit; text-decoration: inherit;">offsets_<wbr>retention_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12600,8 +12600,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="producerpurgatorypurgeintervalrequests_python">
-<a href="#producerpurgatorypurgeintervalrequests_python" style="color: inherit; text-decoration: inherit;">producer<wbr>Purgatory<wbr>Purge<wbr>Interval<wbr>Requests</a>
+        <span id="producer_purgatory_purge_interval_requests_python">
+<a href="#producer_purgatory_purge_interval_requests_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>purgatory_<wbr>purge_<wbr>interval_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12610,8 +12610,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicafetchmaxbytes_python">
-<a href="#replicafetchmaxbytes_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Fetch<wbr>Max<wbr>Bytes</a>
+        <span id="replica_fetch_max_bytes_python">
+<a href="#replica_fetch_max_bytes_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>fetch_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12620,8 +12620,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicafetchresponsemaxbytes_python">
-<a href="#replicafetchresponsemaxbytes_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Fetch<wbr>Response<wbr>Max<wbr>Bytes</a>
+        <span id="replica_fetch_response_max_bytes_python">
+<a href="#replica_fetch_response_max_bytes_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>fetch_<wbr>response_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12630,8 +12630,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="socketrequestmaxbytes_python">
-<a href="#socketrequestmaxbytes_python" style="color: inherit; text-decoration: inherit;">socket<wbr>Request<wbr>Max<wbr>Bytes</a>
+        <span id="socket_request_max_bytes_python">
+<a href="#socket_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13052,8 +13052,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectorclientconfigoverridepolicy_python">
-<a href="#connectorclientconfigoverridepolicy_python" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+        <span id="connector_client_config_override_policy_python">
+<a href="#connector_client_config_override_policy_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>client_<wbr>config_<wbr>override_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13062,8 +13062,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerautooffsetreset_python">
-<a href="#consumerautooffsetreset_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+        <span id="consumer_auto_offset_reset_python">
+<a href="#consumer_auto_offset_reset_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>auto_<wbr>offset_<wbr>reset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13072,8 +13072,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerisolationlevel_python">
-<a href="#consumerisolationlevel_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+        <span id="consumer_isolation_level_python">
+<a href="#consumer_isolation_level_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>isolation_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13082,8 +13082,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumermaxpollintervalms_python">
-<a href="#consumermaxpollintervalms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
+        <span id="consumer_max_poll_interval_ms_python">
+<a href="#consumer_max_poll_interval_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>interval_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13092,8 +13092,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumermaxpollrecords_python">
-<a href="#consumermaxpollrecords_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Records</a>
+        <span id="consumer_max_poll_records_python">
+<a href="#consumer_max_poll_records_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>max_<wbr>poll_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13102,8 +13102,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetflushintervalms_python">
-<a href="#offsetflushintervalms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Interval<wbr>Ms</a>
+        <span id="offset_flush_interval_ms_python">
+<a href="#offset_flush_interval_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>interval_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13112,8 +13112,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="offsetflushtimeoutms_python">
-<a href="#offsetflushtimeoutms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+        <span id="offset_flush_timeout_ms_python">
+<a href="#offset_flush_timeout_ms_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>flush_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13122,8 +13122,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeoutms_python">
-<a href="#sessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+        <span id="session_timeout_ms_python">
+<a href="#session_timeout_ms_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13358,8 +13358,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerenableautocommit_python">
-<a href="#consumerenableautocommit_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Enable<wbr>Auto<wbr>Commit</a>
+        <span id="consumer_enable_auto_commit_python">
+<a href="#consumer_enable_auto_commit_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>enable_<wbr>auto_<wbr>commit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13368,8 +13368,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerrequestmaxbytes_python">
-<a href="#consumerrequestmaxbytes_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Request<wbr>Max<wbr>Bytes</a>
+        <span id="consumer_request_max_bytes_python">
+<a href="#consumer_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13378,8 +13378,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consumerrequesttimeoutms_python">
-<a href="#consumerrequesttimeoutms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Request<wbr>Timeout<wbr>Ms</a>
+        <span id="consumer_request_timeout_ms_python">
+<a href="#consumer_request_timeout_ms_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>request_<wbr>timeout_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13388,8 +13388,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="produceracks_python">
-<a href="#produceracks_python" style="color: inherit; text-decoration: inherit;">producer<wbr>Acks</a>
+        <span id="producer_acks_python">
+<a href="#producer_acks_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>acks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13398,8 +13398,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="producerlingerms_python">
-<a href="#producerlingerms_python" style="color: inherit; text-decoration: inherit;">producer<wbr>Linger<wbr>Ms</a>
+        <span id="producer_linger_ms_python">
+<a href="#producer_linger_ms_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>linger_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13408,8 +13408,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="simpleconsumerpoolsizemax_python">
-<a href="#simpleconsumerpoolsizemax_python" style="color: inherit; text-decoration: inherit;">simpleconsumer<wbr>Pool<wbr>Size<wbr>Max</a>
+        <span id="simpleconsumer_pool_size_max_python">
+<a href="#simpleconsumer_pool_size_max_python" style="color: inherit; text-decoration: inherit;">simpleconsumer_<wbr>pool_<wbr>size_<wbr>max</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13710,8 +13710,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafkarest_python">
-<a href="#kafkarest_python" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
+        <span id="kafka_connect_python">
+<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13720,8 +13720,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kafka_connect_python">
-<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
+        <span id="kafka_rest_python">
+<a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13740,8 +13740,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaregistry_python">
-<a href="#schemaregistry_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
+        <span id="schema_registry_python">
+<a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14126,8 +14126,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpassword_python">
-<a href="#adminpassword_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
+        <span id="admin_password_python">
+<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14136,8 +14136,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminusername_python">
-<a href="#adminusername_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+        <span id="admin_username_python">
+<a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14146,8 +14146,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backuphour_python">
-<a href="#backuphour_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Hour</a>
+        <span id="backup_hour_python">
+<a href="#backup_hour_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14156,8 +14156,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupminute_python">
-<a href="#backupminute_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Minute</a>
+        <span id="backup_minute_python">
+<a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14166,8 +14166,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -14180,14 +14180,14 @@ The following output properties are available:
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigmysql">Dict[Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql]</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigmysql">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mysqlversion_python">
-<a href="#mysqlversion_python" style="color: inherit; text-decoration: inherit;">mysql<wbr>Version</a>
+        <span id="mysql_version_python">
+<a href="#mysql_version_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14196,28 +14196,28 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigprivateaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigpublicaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverytargettime_python">
-<a href="#recoverytargettime_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Time</a>
+        <span id="recovery_target_time_python">
+<a href="#recovery_target_time_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14226,8 +14226,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicetoforkfrom_python">
-<a href="#servicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14912,8 +14912,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecttimeout_python">
-<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14922,8 +14922,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaulttimezone_python">
-<a href="#defaulttimezone_python" style="color: inherit; text-decoration: inherit;">default<wbr>Time<wbr>Zone</a>
+        <span id="default_time_zone_python">
+<a href="#default_time_zone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>time_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14932,8 +14932,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupconcatmaxlen_python">
-<a href="#groupconcatmaxlen_python" style="color: inherit; text-decoration: inherit;">group<wbr>Concat<wbr>Max<wbr>Len</a>
+        <span id="group_concat_max_len_python">
+<a href="#group_concat_max_len_python" style="color: inherit; text-decoration: inherit;">group_<wbr>concat_<wbr>max_<wbr>len</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14942,8 +14942,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="informationschemastatsexpiry_python">
-<a href="#informationschemastatsexpiry_python" style="color: inherit; text-decoration: inherit;">information<wbr>Schema<wbr>Stats<wbr>Expiry</a>
+        <span id="information_schema_stats_expiry_python">
+<a href="#information_schema_stats_expiry_python" style="color: inherit; text-decoration: inherit;">information_<wbr>schema_<wbr>stats_<wbr>expiry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14952,8 +14952,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodbftmintokensize_python">
-<a href="#innodbftmintokensize_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Ft<wbr>Min<wbr>Token<wbr>Size</a>
+        <span id="innodb_ft_min_token_size_python">
+<a href="#innodb_ft_min_token_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>ft_<wbr>min_<wbr>token_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14962,8 +14962,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodbftserverstopwordtable_python">
-<a href="#innodbftserverstopwordtable_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Ft<wbr>Server<wbr>Stopword<wbr>Table</a>
+        <span id="innodb_ft_server_stopword_table_python">
+<a href="#innodb_ft_server_stopword_table_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>ft_<wbr>server_<wbr>stopword_<wbr>table</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14972,8 +14972,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodblockwaittimeout_python">
-<a href="#innodblockwaittimeout_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Lock<wbr>Wait<wbr>Timeout</a>
+        <span id="innodb_lock_wait_timeout_python">
+<a href="#innodb_lock_wait_timeout_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>lock_<wbr>wait_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14982,8 +14982,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodblogbuffersize_python">
-<a href="#innodblogbuffersize_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Log<wbr>Buffer<wbr>Size</a>
+        <span id="innodb_log_buffer_size_python">
+<a href="#innodb_log_buffer_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>log_<wbr>buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14992,8 +14992,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodbonlinealterlogmaxsize_python">
-<a href="#innodbonlinealterlogmaxsize_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
+        <span id="innodb_online_alter_log_max_size_python">
+<a href="#innodb_online_alter_log_max_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>online_<wbr>alter_<wbr>log_<wbr>max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15002,8 +15002,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodbprintalldeadlocks_python">
-<a href="#innodbprintalldeadlocks_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
+        <span id="innodb_print_all_deadlocks_python">
+<a href="#innodb_print_all_deadlocks_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>print_<wbr>all_<wbr>deadlocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15012,8 +15012,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="innodbrollbackontimeout_python">
-<a href="#innodbrollbackontimeout_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
+        <span id="innodb_rollback_on_timeout_python">
+<a href="#innodb_rollback_on_timeout_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>rollback_<wbr>on_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15022,8 +15022,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="interactivetimeout_python">
-<a href="#interactivetimeout_python" style="color: inherit; text-decoration: inherit;">interactive<wbr>Timeout</a>
+        <span id="interactive_timeout_python">
+<a href="#interactive_timeout_python" style="color: inherit; text-decoration: inherit;">interactive_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15032,8 +15032,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxallowedpacket_python">
-<a href="#maxallowedpacket_python" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Packet</a>
+        <span id="max_allowed_packet_python">
+<a href="#max_allowed_packet_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>packet</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15042,8 +15042,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxheaptablesize_python">
-<a href="#maxheaptablesize_python" style="color: inherit; text-decoration: inherit;">max<wbr>Heap<wbr>Table<wbr>Size</a>
+        <span id="max_heap_table_size_python">
+<a href="#max_heap_table_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>heap_<wbr>table_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15052,8 +15052,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="netreadtimeout_python">
-<a href="#netreadtimeout_python" style="color: inherit; text-decoration: inherit;">net<wbr>Read<wbr>Timeout</a>
+        <span id="net_read_timeout_python">
+<a href="#net_read_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>read_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15062,8 +15062,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="netwritetimeout_python">
-<a href="#netwritetimeout_python" style="color: inherit; text-decoration: inherit;">net<wbr>Write<wbr>Timeout</a>
+        <span id="net_write_timeout_python">
+<a href="#net_write_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>write_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15072,8 +15072,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sortbuffersize_python">
-<a href="#sortbuffersize_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Buffer<wbr>Size</a>
+        <span id="sort_buffer_size_python">
+<a href="#sort_buffer_size_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15082,8 +15082,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sqlmode_python">
-<a href="#sqlmode_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Mode</a>
+        <span id="sql_mode_python">
+<a href="#sql_mode_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15092,8 +15092,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sqlrequireprimarykey_python">
-<a href="#sqlrequireprimarykey_python" style="color: inherit; text-decoration: inherit;">sql<wbr>Require<wbr>Primary<wbr>Key</a>
+        <span id="sql_require_primary_key_python">
+<a href="#sql_require_primary_key_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>require_<wbr>primary_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15102,8 +15102,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tmptablesize_python">
-<a href="#tmptablesize_python" style="color: inherit; text-decoration: inherit;">tmp<wbr>Table<wbr>Size</a>
+        <span id="tmp_table_size_python">
+<a href="#tmp_table_size_python" style="color: inherit; text-decoration: inherit;">tmp_<wbr>table_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15112,8 +15112,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waittimeout_python">
-<a href="#waittimeout_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Timeout</a>
+        <span id="wait_timeout_python">
+<a href="#wait_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -15700,8 +15700,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="replicauri_python">
-<a href="#replicauri_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Uri</a>
+        <span id="replica_uri_python">
+<a href="#replica_uri_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16386,8 +16386,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpassword_python">
-<a href="#adminpassword_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
+        <span id="admin_password_python">
+<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16396,8 +16396,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminusername_python">
-<a href="#adminusername_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
+        <span id="admin_username_python">
+<a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16406,8 +16406,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backuphour_python">
-<a href="#backuphour_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Hour</a>
+        <span id="backup_hour_python">
+<a href="#backup_hour_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16416,8 +16416,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupminute_python">
-<a href="#backupminute_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Minute</a>
+        <span id="backup_minute_python">
+<a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16426,8 +16426,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -16440,14 +16440,14 @@ The following output properties are available:
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpg">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpg">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pgreadreplica_python">
-<a href="#pgreadreplica_python" style="color: inherit; text-decoration: inherit;">pg<wbr>Read<wbr>Replica</a>
+        <span id="pg_read_replica_python">
+<a href="#pg_read_replica_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>read_<wbr>replica</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16456,8 +16456,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pgservicetoforkfrom_python">
-<a href="#pgservicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">pg<wbr>Service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="pg_service_to_fork_from_python">
+<a href="#pg_service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16466,8 +16466,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pgversion_python">
-<a href="#pgversion_python" style="color: inherit; text-decoration: inherit;">pg<wbr>Version</a>
+        <span id="pg_version_python">
+<a href="#pg_version_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16480,7 +16480,7 @@ The following output properties are available:
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpgbouncer">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpgbouncer">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16490,44 +16490,34 @@ The following output properties are available:
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpglookout">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpglookout">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigprivateaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpublicaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverytargettime_python">
-<a href="#recoverytargettime_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicetoforkfrom_python">
-<a href="#servicetoforkfrom_python" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+        <span id="recovery_target_time_python">
+<a href="#recovery_target_time_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16536,8 +16526,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedbufferspercentage_python">
-<a href="#sharedbufferspercentage_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Buffers<wbr>Percentage</a>
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16546,8 +16536,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="synchronousreplication_python">
-<a href="#synchronousreplication_python" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
+        <span id="shared_buffers_percentage_python">
+<a href="#shared_buffers_percentage_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>buffers_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synchronous_replication_python">
+<a href="#synchronous_replication_python" style="color: inherit; text-decoration: inherit;">synchronous_<wbr>replication</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -16560,7 +16560,7 @@ The following output properties are available:
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigtimescaledb">Dict[Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb]</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigtimescaledb">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16576,8 +16576,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workmem_python">
-<a href="#workmem_python" style="color: inherit; text-decoration: inherit;">work<wbr>Mem</a>
+        <span id="work_mem_python">
+<a href="#work_mem_python" style="color: inherit; text-decoration: inherit;">work_<wbr>mem</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17592,8 +17592,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumanalyzescalefactor_python">
-<a href="#autovacuumanalyzescalefactor_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Analyze<wbr>Scale<wbr>Factor</a>
+        <span id="autovacuum_analyze_scale_factor_python">
+<a href="#autovacuum_analyze_scale_factor_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>analyze_<wbr>scale_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17602,8 +17602,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumanalyzethreshold_python">
-<a href="#autovacuumanalyzethreshold_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Analyze<wbr>Threshold</a>
+        <span id="autovacuum_analyze_threshold_python">
+<a href="#autovacuum_analyze_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>analyze_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17612,8 +17612,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumfreezemaxage_python">
-<a href="#autovacuumfreezemaxage_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Freeze<wbr>Max<wbr>Age</a>
+        <span id="autovacuum_freeze_max_age_python">
+<a href="#autovacuum_freeze_max_age_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>freeze_<wbr>max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17622,8 +17622,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuummaxworkers_python">
-<a href="#autovacuummaxworkers_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Max<wbr>Workers</a>
+        <span id="autovacuum_max_workers_python">
+<a href="#autovacuum_max_workers_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>max_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17632,8 +17632,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumnaptime_python">
-<a href="#autovacuumnaptime_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Naptime</a>
+        <span id="autovacuum_naptime_python">
+<a href="#autovacuum_naptime_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>naptime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17642,8 +17642,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumvacuumcostdelay_python">
-<a href="#autovacuumvacuumcostdelay_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Cost<wbr>Delay</a>
+        <span id="autovacuum_vacuum_cost_delay_python">
+<a href="#autovacuum_vacuum_cost_delay_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>cost_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17652,8 +17652,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumvacuumcostlimit_python">
-<a href="#autovacuumvacuumcostlimit_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Cost<wbr>Limit</a>
+        <span id="autovacuum_vacuum_cost_limit_python">
+<a href="#autovacuum_vacuum_cost_limit_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>cost_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17662,8 +17662,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumvacuumscalefactor_python">
-<a href="#autovacuumvacuumscalefactor_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Scale<wbr>Factor</a>
+        <span id="autovacuum_vacuum_scale_factor_python">
+<a href="#autovacuum_vacuum_scale_factor_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>scale_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17672,8 +17672,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autovacuumvacuumthreshold_python">
-<a href="#autovacuumvacuumthreshold_python" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Threshold</a>
+        <span id="autovacuum_vacuum_threshold_python">
+<a href="#autovacuum_vacuum_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17682,8 +17682,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlocktimeout_python">
-<a href="#deadlocktimeout_python" style="color: inherit; text-decoration: inherit;">deadlock<wbr>Timeout</a>
+        <span id="deadlock_timeout_python">
+<a href="#deadlock_timeout_python" style="color: inherit; text-decoration: inherit;">deadlock_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17692,8 +17692,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="idleintransactionsessiontimeout_python">
-<a href="#idleintransactionsessiontimeout_python" style="color: inherit; text-decoration: inherit;">idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
+        <span id="idle_in_transaction_session_timeout_python">
+<a href="#idle_in_transaction_session_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>in_<wbr>transaction_<wbr>session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17712,8 +17712,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logautovacuumminduration_python">
-<a href="#logautovacuumminduration_python" style="color: inherit; text-decoration: inherit;">log<wbr>Autovacuum<wbr>Min<wbr>Duration</a>
+        <span id="log_autovacuum_min_duration_python">
+<a href="#log_autovacuum_min_duration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>autovacuum_<wbr>min_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17722,8 +17722,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logerrorverbosity_python">
-<a href="#logerrorverbosity_python" style="color: inherit; text-decoration: inherit;">log<wbr>Error<wbr>Verbosity</a>
+        <span id="log_error_verbosity_python">
+<a href="#log_error_verbosity_python" style="color: inherit; text-decoration: inherit;">log_<wbr>error_<wbr>verbosity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17732,8 +17732,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logmindurationstatement_python">
-<a href="#logmindurationstatement_python" style="color: inherit; text-decoration: inherit;">log<wbr>Min<wbr>Duration<wbr>Statement</a>
+        <span id="log_min_duration_statement_python">
+<a href="#log_min_duration_statement_python" style="color: inherit; text-decoration: inherit;">log_<wbr>min_<wbr>duration_<wbr>statement</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17742,8 +17742,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxlockspertransaction_python">
-<a href="#maxlockspertransaction_python" style="color: inherit; text-decoration: inherit;">max<wbr>Locks<wbr>Per<wbr>Transaction</a>
+        <span id="max_locks_per_transaction_python">
+<a href="#max_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>locks_<wbr>per_<wbr>transaction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17752,8 +17752,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxparallelworkers_python">
-<a href="#maxparallelworkers_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Workers</a>
+        <span id="max_parallel_workers_python">
+<a href="#max_parallel_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17762,8 +17762,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxparallelworkerspergather_python">
-<a href="#maxparallelworkerspergather_python" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Workers<wbr>Per<wbr>Gather</a>
+        <span id="max_parallel_workers_per_gather_python">
+<a href="#max_parallel_workers_per_gather_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>workers_<wbr>per_<wbr>gather</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17772,8 +17772,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpredlockspertransaction_python">
-<a href="#maxpredlockspertransaction_python" style="color: inherit; text-decoration: inherit;">max<wbr>Pred<wbr>Locks<wbr>Per<wbr>Transaction</a>
+        <span id="max_pred_locks_per_transaction_python">
+<a href="#max_pred_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pred_<wbr>locks_<wbr>per_<wbr>transaction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17782,8 +17782,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpreparedtransactions_python">
-<a href="#maxpreparedtransactions_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prepared<wbr>Transactions</a>
+        <span id="max_prepared_transactions_python">
+<a href="#max_prepared_transactions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prepared_<wbr>transactions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17792,8 +17792,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxstackdepth_python">
-<a href="#maxstackdepth_python" style="color: inherit; text-decoration: inherit;">max<wbr>Stack<wbr>Depth</a>
+        <span id="max_stack_depth_python">
+<a href="#max_stack_depth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stack_<wbr>depth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17802,8 +17802,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxstandbyarchivedelay_python">
-<a href="#maxstandbyarchivedelay_python" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Archive<wbr>Delay</a>
+        <span id="max_standby_archive_delay_python">
+<a href="#max_standby_archive_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>archive_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17812,8 +17812,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxstandbystreamingdelay_python">
-<a href="#maxstandbystreamingdelay_python" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
+        <span id="max_standby_streaming_delay_python">
+<a href="#max_standby_streaming_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>streaming_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17822,8 +17822,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxworkerprocesses_python">
-<a href="#maxworkerprocesses_python" style="color: inherit; text-decoration: inherit;">max<wbr>Worker<wbr>Processes</a>
+        <span id="max_worker_processes_python">
+<a href="#max_worker_processes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>worker_<wbr>processes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17832,8 +17832,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pgstatstatementstrack_python">
-<a href="#pgstatstatementstrack_python" style="color: inherit; text-decoration: inherit;">pg<wbr>Stat<wbr>Statements<wbr>Track</a>
+        <span id="pg_stat_statements_track_python">
+<a href="#pg_stat_statements_track_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>stat_<wbr>statements_<wbr>track</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17842,8 +17842,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tempfilelimit_python">
-<a href="#tempfilelimit_python" style="color: inherit; text-decoration: inherit;">temp<wbr>File<wbr>Limit</a>
+        <span id="temp_file_limit_python">
+<a href="#temp_file_limit_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>file_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17862,8 +17862,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackactivityquerysize_python">
-<a href="#trackactivityquerysize_python" style="color: inherit; text-decoration: inherit;">track<wbr>Activity<wbr>Query<wbr>Size</a>
+        <span id="track_activity_query_size_python">
+<a href="#track_activity_query_size_python" style="color: inherit; text-decoration: inherit;">track_<wbr>activity_<wbr>query_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17872,8 +17872,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackcommittimestamp_python">
-<a href="#trackcommittimestamp_python" style="color: inherit; text-decoration: inherit;">track<wbr>Commit<wbr>Timestamp</a>
+        <span id="track_commit_timestamp_python">
+<a href="#track_commit_timestamp_python" style="color: inherit; text-decoration: inherit;">track_<wbr>commit_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17882,8 +17882,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trackfunctions_python">
-<a href="#trackfunctions_python" style="color: inherit; text-decoration: inherit;">track<wbr>Functions</a>
+        <span id="track_functions_python">
+<a href="#track_functions_python" style="color: inherit; text-decoration: inherit;">track_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17892,8 +17892,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="walsendertimeout_python">
-<a href="#walsendertimeout_python" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
+        <span id="wal_sender_timeout_python">
+<a href="#wal_sender_timeout_python" style="color: inherit; text-decoration: inherit;">wal_<wbr>sender_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -17902,8 +17902,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="walwriterdelay_python">
-<a href="#walwriterdelay_python" style="color: inherit; text-decoration: inherit;">wal<wbr>Writer<wbr>Delay</a>
+        <span id="wal_writer_delay_python">
+<a href="#wal_writer_delay_python" style="color: inherit; text-decoration: inherit;">wal_<wbr>writer_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18018,8 +18018,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignorestartupparameters_python">
-<a href="#ignorestartupparameters_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Startup<wbr>Parameters</a>
+        <span id="ignore_startup_parameters_python">
+<a href="#ignore_startup_parameters_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>startup_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -18028,8 +18028,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverresetqueryalways_python">
-<a href="#serverresetqueryalways_python" style="color: inherit; text-decoration: inherit;">server<wbr>Reset<wbr>Query<wbr>Always</a>
+        <span id="server_reset_query_always_python">
+<a href="#server_reset_query_always_python" style="color: inherit; text-decoration: inherit;">server_<wbr>reset_<wbr>query_<wbr>always</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18114,8 +18114,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxfailoverreplicationtimelag_python">
-<a href="#maxfailoverreplicationtimelag_python" style="color: inherit; text-decoration: inherit;">max<wbr>Failover<wbr>Replication<wbr>Time<wbr>Lag</a>
+        <span id="max_failover_replication_time_lag_python">
+<a href="#max_failover_replication_time_lag_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failover_<wbr>replication_<wbr>time_<wbr>lag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18532,8 +18532,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbackgroundworkers_python">
-<a href="#maxbackgroundworkers_python" style="color: inherit; text-decoration: inherit;">max<wbr>Background<wbr>Workers</a>
+        <span id="max_background_workers_python">
+<a href="#max_background_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>background_<wbr>workers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18888,8 +18888,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfilters_python">
-<a href="#ipfilters_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
+        <span id="ip_filters_python">
+<a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -18902,44 +18902,34 @@ The following output properties are available:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigmigration">Dict[Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration]</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigmigration">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaccess_python">
-<a href="#privateaccess_python" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
+        <span id="private_access_python">
+<a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigprivateaccess">Dict[Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigprivateaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccess_python">
-<a href="#publicaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
+        <span id="public_access_python">
+<a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigpublicaccess">Dict[Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigpublicaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redislfudecaytime_python">
-<a href="#redislfudecaytime_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="redislfulogfactor_python">
-<a href="#redislfulogfactor_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Log<wbr>Factor</a>
+        <span id="redis_lfu_decay_time_python">
+<a href="#redis_lfu_decay_time_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>lfu_<wbr>decay_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18948,8 +18938,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redismaxmemorypolicy_python">
-<a href="#redismaxmemorypolicy_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Maxmemory<wbr>Policy</a>
+        <span id="redis_lfu_log_factor_python">
+<a href="#redis_lfu_log_factor_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>lfu_<wbr>log_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18958,8 +18948,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redisnotifykeyspaceevents_python">
-<a href="#redisnotifykeyspaceevents_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Notify<wbr>Keyspace<wbr>Events</a>
+        <span id="redis_maxmemory_policy_python">
+<a href="#redis_maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>maxmemory_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18968,8 +18958,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redisssl_python">
-<a href="#redisssl_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Ssl</a>
+        <span id="redis_notify_keyspace_events_python">
+<a href="#redis_notify_keyspace_events_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>notify_<wbr>keyspace_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -18978,8 +18968,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redistimeout_python">
-<a href="#redistimeout_python" style="color: inherit; text-decoration: inherit;">redis<wbr>Timeout</a>
+        <span id="redis_ssl_python">
+<a href="#redis_ssl_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>ssl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_timeout_python">
+<a href="#redis_timeout_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
