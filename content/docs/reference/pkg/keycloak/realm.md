@@ -22,7 +22,7 @@ meta_desc: "Explore the Realm resource of the Keycloak package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.Realm">Realm</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_code_lifespan=None<span class="p">, </span>access_code_lifespan_login=None<span class="p">, </span>access_code_lifespan_user_action=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_token_lifespan_for_implicit_flow=None<span class="p">, </span>account_theme=None<span class="p">, </span>action_token_generated_by_admin_lifespan=None<span class="p">, </span>action_token_generated_by_user_lifespan=None<span class="p">, </span>admin_theme=None<span class="p">, </span>attributes=None<span class="p">, </span>browser_flow=None<span class="p">, </span>client_authentication_flow=None<span class="p">, </span>default_signature_algorithm=None<span class="p">, </span>direct_grant_flow=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_html=None<span class="p">, </span>docker_authentication_flow=None<span class="p">, </span>duplicate_emails_allowed=None<span class="p">, </span>edit_username_allowed=None<span class="p">, </span>email_theme=None<span class="p">, </span>enabled=None<span class="p">, </span>internationalization=None<span class="p">, </span>login_theme=None<span class="p">, </span>login_with_email_allowed=None<span class="p">, </span>offline_session_idle_timeout=None<span class="p">, </span>offline_session_max_lifespan=None<span class="p">, </span>password_policy=None<span class="p">, </span>realm=None<span class="p">, </span>refresh_token_max_reuse=None<span class="p">, </span>registration_allowed=None<span class="p">, </span>registration_email_as_username=None<span class="p">, </span>registration_flow=None<span class="p">, </span>remember_me=None<span class="p">, </span>reset_credentials_flow=None<span class="p">, </span>reset_password_allowed=None<span class="p">, </span>revoke_refresh_token=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_server=None<span class="p">, </span>ssl_required=None<span class="p">, </span>sso_session_idle_timeout=None<span class="p">, </span>sso_session_max_lifespan=None<span class="p">, </span>user_managed_access=None<span class="p">, </span>verify_email=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.Realm">Realm</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_code_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_user_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">browser_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_grant_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duplicate_emails_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">edit_username_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internationalization</span><span class="p">:</span> <span class="nx">Optional[RealmInternationalizationArgs]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_with_email_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">registration_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_email_as_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remember_me</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reset_credentials_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_password_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">revoke_refresh_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[RealmSecurityDefensesArgs]</span> = None<span class="p">, </span><span class="nx">smtp_server</span><span class="p">:</span> <span class="nx">Optional[RealmSmtpServerArgs]</span> = None<span class="p">, </span><span class="nx">ssl_required</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_managed_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1641,7 +1641,7 @@ and notUsername(undefined)"
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1765,7 +1765,7 @@ and notUsername(undefined)"
 <a href="#internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realminternationalization">Dict[Realm<wbr>Internationalization]</a></span>
+        <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ and notUsername(undefined)"
 <a href="#security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefenses">Dict[Realm<wbr>Security<wbr>Defenses]</a></span>
+        <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1920,7 +1920,7 @@ and notUsername(undefined)"
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserver">Dict[Realm<wbr>Smtp<wbr>Server]</a></span>
+        <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2113,7 +2113,8 @@ Get an existing Realm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_code_lifespan=None<span class="p">, </span>access_code_lifespan_login=None<span class="p">, </span>access_code_lifespan_user_action=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_token_lifespan_for_implicit_flow=None<span class="p">, </span>account_theme=None<span class="p">, </span>action_token_generated_by_admin_lifespan=None<span class="p">, </span>action_token_generated_by_user_lifespan=None<span class="p">, </span>admin_theme=None<span class="p">, </span>attributes=None<span class="p">, </span>browser_flow=None<span class="p">, </span>client_authentication_flow=None<span class="p">, </span>default_signature_algorithm=None<span class="p">, </span>direct_grant_flow=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_html=None<span class="p">, </span>docker_authentication_flow=None<span class="p">, </span>duplicate_emails_allowed=None<span class="p">, </span>edit_username_allowed=None<span class="p">, </span>email_theme=None<span class="p">, </span>enabled=None<span class="p">, </span>internal_id=None<span class="p">, </span>internationalization=None<span class="p">, </span>login_theme=None<span class="p">, </span>login_with_email_allowed=None<span class="p">, </span>offline_session_idle_timeout=None<span class="p">, </span>offline_session_max_lifespan=None<span class="p">, </span>password_policy=None<span class="p">, </span>realm=None<span class="p">, </span>refresh_token_max_reuse=None<span class="p">, </span>registration_allowed=None<span class="p">, </span>registration_email_as_username=None<span class="p">, </span>registration_flow=None<span class="p">, </span>remember_me=None<span class="p">, </span>reset_credentials_flow=None<span class="p">, </span>reset_password_allowed=None<span class="p">, </span>revoke_refresh_token=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_server=None<span class="p">, </span>ssl_required=None<span class="p">, </span>sso_session_idle_timeout=None<span class="p">, </span>sso_session_max_lifespan=None<span class="p">, </span>user_managed_access=None<span class="p">, </span>verify_email=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_code_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_user_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">browser_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_grant_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duplicate_emails_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">edit_username_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalization</span><span class="p">:</span> <span class="nx">Optional[RealmInternationalizationArgs]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_with_email_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">registration_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_email_as_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remember_me</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reset_credentials_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_password_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">revoke_refresh_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[RealmSecurityDefensesArgs]</span> = None<span class="p">, </span><span class="nx">smtp_server</span><span class="p">:</span> <span class="nx">Optional[RealmSmtpServerArgs]</span> = None<span class="p">, </span><span class="nx">ssl_required</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_managed_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Realm</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2121,7 +2122,7 @@ Get an existing Realm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Realm.html">Realm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak..RealmState.html">RealmState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Realm.html">Realm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak..RealmState.html">RealmState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3694,7 +3695,7 @@ and notUsername(undefined)"
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3828,7 +3829,7 @@ and notUsername(undefined)"
 <a href="#state_internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realminternationalization">Dict[Realm<wbr>Internationalization]</a></span>
+        <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3983,7 +3984,7 @@ and notUsername(undefined)"
 <a href="#state_security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefenses">Dict[Realm<wbr>Security<wbr>Defenses]</a></span>
+        <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3993,7 +3994,7 @@ and notUsername(undefined)"
 <a href="#state_smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserver">Dict[Realm<wbr>Smtp<wbr>Server]</a></span>
+        <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4164,8 +4165,8 @@ and notUsername(undefined)"
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultlocale_python">
-<a href="#defaultlocale_python" style="color: inherit; text-decoration: inherit;">default<wbr>Locale</a>
+        <span id="default_locale_python">
+<a href="#default_locale_python" style="color: inherit; text-decoration: inherit;">default_<wbr>locale</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4174,8 +4175,8 @@ and notUsername(undefined)"
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedlocales_python">
-<a href="#supportedlocales_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Locales</a>
+        <span id="supported_locales_python">
+<a href="#supported_locales_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>locales</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4290,11 +4291,11 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bruteforcedetection_python">
-<a href="#bruteforcedetection_python" style="color: inherit; text-decoration: inherit;">brute<wbr>Force<wbr>Detection</a>
+        <span id="brute_force_detection_python">
+<a href="#brute_force_detection_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>detection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Dict[Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4304,7 +4305,7 @@ and notUsername(undefined)"
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefensesheaders">Dict[Realm<wbr>Security<wbr>Defenses<wbr>Headers]</a></span>
+        <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4566,8 +4567,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failureresettimeseconds_python">
-<a href="#failureresettimeseconds_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Reset<wbr>Time<wbr>Seconds</a>
+        <span id="failure_reset_time_seconds_python">
+<a href="#failure_reset_time_seconds_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reset_<wbr>time_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4576,8 +4577,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxfailurewaitseconds_python">
-<a href="#maxfailurewaitseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Wait<wbr>Seconds</a>
+        <span id="max_failure_wait_seconds_python">
+<a href="#max_failure_wait_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4586,8 +4587,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxloginfailures_python">
-<a href="#maxloginfailures_python" style="color: inherit; text-decoration: inherit;">max<wbr>Login<wbr>Failures</a>
+        <span id="max_login_failures_python">
+<a href="#max_login_failures_python" style="color: inherit; text-decoration: inherit;">max_<wbr>login_<wbr>failures</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4596,8 +4597,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumquickloginwaitseconds_python">
-<a href="#minimumquickloginwaitseconds_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Quick<wbr>Login<wbr>Wait<wbr>Seconds</a>
+        <span id="minimum_quick_login_wait_seconds_python">
+<a href="#minimum_quick_login_wait_seconds_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>quick_<wbr>login_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4606,8 +4607,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="permanentlockout_python">
-<a href="#permanentlockout_python" style="color: inherit; text-decoration: inherit;">permanent<wbr>Lockout</a>
+        <span id="permanent_lockout_python">
+<a href="#permanent_lockout_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>lockout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4616,8 +4617,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="quicklogincheckmilliseconds_python">
-<a href="#quicklogincheckmilliseconds_python" style="color: inherit; text-decoration: inherit;">quick<wbr>Login<wbr>Check<wbr>Milli<wbr>Seconds</a>
+        <span id="quick_login_check_milli_seconds_python">
+<a href="#quick_login_check_milli_seconds_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>login_<wbr>check_<wbr>milli_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4626,8 +4627,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitincrementseconds_python">
-<a href="#waitincrementseconds_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Increment<wbr>Seconds</a>
+        <span id="wait_increment_seconds_python">
+<a href="#wait_increment_seconds_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>increment_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4892,8 +4893,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contentsecuritypolicy_python">
-<a href="#contentsecuritypolicy_python" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy</a>
+        <span id="content_security_policy_python">
+<a href="#content_security_policy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4902,8 +4903,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contentsecuritypolicyreportonly_python">
-<a href="#contentsecuritypolicyreportonly_python" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy<wbr>Report<wbr>Only</a>
+        <span id="content_security_policy_report_only_python">
+<a href="#content_security_policy_report_only_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy_<wbr>report_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4912,8 +4913,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stricttransportsecurity_python">
-<a href="#stricttransportsecurity_python" style="color: inherit; text-decoration: inherit;">strict<wbr>Transport<wbr>Security</a>
+        <span id="strict_transport_security_python">
+<a href="#strict_transport_security_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>transport_<wbr>security</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4922,8 +4923,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xcontenttypeoptions_python">
-<a href="#xcontenttypeoptions_python" style="color: inherit; text-decoration: inherit;">x<wbr>Content<wbr>Type<wbr>Options</a>
+        <span id="x_content_type_options_python">
+<a href="#x_content_type_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>content_<wbr>type_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4932,8 +4933,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xframeoptions_python">
-<a href="#xframeoptions_python" style="color: inherit; text-decoration: inherit;">x<wbr>Frame<wbr>Options</a>
+        <span id="x_frame_options_python">
+<a href="#x_frame_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>frame_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4942,8 +4943,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xrobotstag_python">
-<a href="#xrobotstag_python" style="color: inherit; text-decoration: inherit;">x<wbr>Robots<wbr>Tag</a>
+        <span id="x_robots_tag_python">
+<a href="#x_robots_tag_python" style="color: inherit; text-decoration: inherit;">x_<wbr>robots_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4952,8 +4953,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="xxssprotection_python">
-<a href="#xxssprotection_python" style="color: inherit; text-decoration: inherit;">x<wbr>Xss<wbr>Protection</a>
+        <span id="x_xss_protection_python">
+<a href="#x_xss_protection_python" style="color: inherit; text-decoration: inherit;">x_<wbr>xss_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5308,8 +5309,8 @@ and notUsername(undefined)"
 
     <dt class="property-required"
             title="Required">
-        <span id="from_python">
-<a href="#from_python" style="color: inherit; text-decoration: inherit;">from</a>
+        <span id="from__python">
+<a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5332,14 +5333,14 @@ and notUsername(undefined)"
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserverauth">Dict[Realm<wbr>Smtp<wbr>Server<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="envelopefrom_python">
-<a href="#envelopefrom_python" style="color: inherit; text-decoration: inherit;">envelope<wbr>From</a>
+        <span id="envelope_from_python">
+<a href="#envelope_from_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5348,8 +5349,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromdisplayname_python">
-<a href="#fromdisplayname_python" style="color: inherit; text-decoration: inherit;">from<wbr>Display<wbr>Name</a>
+        <span id="from_display_name_python">
+<a href="#from_display_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5368,8 +5369,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replyto_python">
-<a href="#replyto_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
+        <span id="reply_to_python">
+<a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5378,8 +5379,8 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replytodisplayname_python">
-<a href="#replytodisplayname_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Display<wbr>Name</a>
+        <span id="reply_to_display_name_python">
+<a href="#reply_to_display_name_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

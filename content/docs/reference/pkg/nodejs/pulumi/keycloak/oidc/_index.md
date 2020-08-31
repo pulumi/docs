@@ -3,7 +3,7 @@ title: "Module oidc"
 title_tag: "Module oidc | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "oidc"
 meta_desc: "Explore members of the oidc module in the @pulumi/keycloak package."
-git_sha: "9cc246c8795cb4e22cb42a5f8807cb2457d25a7b"
+git_sha: "4cf18b3420d44b48908d3b78052298738354daa4"
 block_external_search_index: true
 ---
 
@@ -33,14 +33,14 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="GoogleIdentityProvider" data-link-title="GoogleIdentityProvider">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">
         Resource <strong>GoogleIdentityProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GoogleIdentityProvider</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L136"> <b>constructor</b></a>
 </h4>
 
 
@@ -54,7 +54,7 @@ Create a GoogleIdentityProvider resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -65,14 +65,14 @@ Get an existing GoogleIdentityProvider resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Returns true if the given object is an instance of GoogleIdentityProvider.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-acceptsPromptNoneForwardFromClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L40">property <b>acceptsPromptNoneForwardFromClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L40">property <b>acceptsPromptNoneForwardFromClient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceptsPromptNoneForwardFromClient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -93,7 +93,7 @@ case that client sends a request with prompt=none and user is not yet authentica
 returned to client, but the request with prompt=none will be forwarded to this identity provider.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L44">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L44">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addReadTokenRoleOnCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -101,7 +101,7 @@ returned to client, but the request with prompt=none will be forwarded to this i
 Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L49">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L49">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -110,7 +110,7 @@ The alias uniquely identifies an identity provider and it is also used to build 
 is computed and always google
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L53">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L53">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticateByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -118,7 +118,7 @@ is computed and always google
 Enable/disable authenticate users by default.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L57">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L57">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ Enable/disable authenticate users by default.
 Client ID.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L61">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L61">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ Client ID.
 Client Secret.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L66">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L66">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ The scopes to be sent when asking for authorization. See the documentation for p
 value'. Default: 'openid profile email'
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-disableUserInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L70">property <b>disableUserInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L70">property <b>disableUserInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableUserInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ value'. Default: 'openid profile email'
 Disable usage of User Info service to obtain additional user information? Default is to use this OIDC service.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L74">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L74">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ Disable usage of User Info service to obtain additional user information? Defaul
 Not used by this provider, Will be implicitly Google
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L78">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L78">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -167,12 +167,12 @@ Not used by this provider, Will be implicitly Google
 Enable/disable this identity provider.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L79">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L79">property <b>extraConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extraConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L84">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L84">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firstBrokerLoginFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ Alias of authentication flow, which is triggered after first login with this ide
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L88">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L88">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideOnLoginPage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
 Hide On Login Page.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-hostedDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L93">property <b>hostedDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L93">property <b>hostedDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ Set 'hd' query parameter when logging in with Google. Google will list accounts 
 that the returned identity token has a claim for this domain. When '*' is entered, any hosted account can be used.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -207,7 +207,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-internalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L97">property <b>internalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L97">property <b>internalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ deployments and may be missing (undefined) during planning phases.
 Internal Identity Provider Id
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L102">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L102">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ If true, users cannot log in through this provider. They can only link to this p
 want to allow login from the provider, but want to integrate with a provider
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L109">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L109">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postBrokerLoginFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -235,7 +235,7 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L113">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L113">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>providerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -243,7 +243,7 @@ authenticator implementations must assume that user is already set in ClientSess
 provider id, is always google, unless you have a extended custom implementation
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L117">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L117">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -251,7 +251,7 @@ provider id, is always google, unless you have a extended custom implementation
 Realm Name
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-requestRefreshToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L123">property <b>requestRefreshToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L123">property <b>requestRefreshToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestRefreshToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ back. Useful if planning to use Token Exchange to retrieve Google token to acces
 the browser.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L127">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L127">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storeToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ the browser.
 Enable/disable if tokens must be stored after authenticating users.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L131">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L131">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trustEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ Enable/disable if tokens must be stored after authenticating users.
 If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -286,7 +286,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProvider-useUserIpParam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L136">property <b>useUserIpParam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L136">property <b>useUserIpParam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useUserIpParam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -295,14 +295,14 @@ Set 'userIp' query parameter when invoking on Google's User Info service. This w
 Google is throttling access to the User Info service.
 
 <h3 class="pdoc-module-header" id="IdentityProvider" data-link-title="IdentityProvider">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L7">
         Resource <strong>IdentityProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IdentityProvider</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="IdentityProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L150"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L150"> <b>constructor</b></a>
 </h4>
 
 
@@ -316,7 +316,7 @@ Create a IdentityProvider resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -327,14 +327,14 @@ Get an existing IdentityProvider resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IdentityProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -345,7 +345,7 @@ Returns true if the given object is an instance of IdentityProvider.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-acceptsPromptNoneForwardFromClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L40">property <b>acceptsPromptNoneForwardFromClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L40">property <b>acceptsPromptNoneForwardFromClient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceptsPromptNoneForwardFromClient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ case that client sends a request with prompt=none and user is not yet authentica
 returned to client, but the request with prompt=none will be forwarded to this identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L44">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L44">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addReadTokenRoleOnCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ returned to client, but the request with prompt=none will be forwarded to this i
 Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L48">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L48">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ Enable/disable if new users can read any stored tokens. This assigns the broker.
 The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L52">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L52">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticateByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The alias uniquely identifies an identity provider and it is also used to build 
 Enable/disable authenticate users by default.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L56">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L56">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Enable/disable authenticate users by default.
 OIDC authorization URL.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-backchannelSupported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L60">property <b>backchannelSupported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L60">property <b>backchannelSupported</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backchannelSupported: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ OIDC authorization URL.
 Does the external IDP support backchannel logout?
 
 <h4 class="pdoc-member-header" id="IdentityProvider-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L64">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L64">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ Does the external IDP support backchannel logout?
 Client ID.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L68">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L68">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,7 +411,7 @@ Client ID.
 Client Secret.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L72">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L72">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ Client Secret.
 The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to 'openid'.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L76">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L76">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ The scopes to be sent when asking for authorization. It can be a space-separated
 Friendly name for Identity Providers.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L80">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L80">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -435,12 +435,12 @@ Friendly name for Identity Providers.
 Enable/disable this identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L81">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L81">property <b>extraConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extraConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IdentityProvider-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L86">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L86">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firstBrokerLoginFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -449,7 +449,7 @@ Alias of authentication flow, which is triggered after first login with this ide
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L90">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L90">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideOnLoginPage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -457,7 +457,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
 Hide On Login Page.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -466,7 +466,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-internalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L94">property <b>internalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L94">property <b>internalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ deployments and may be missing (undefined) during planning phases.
 Internal Identity Provider Id
 
 <h4 class="pdoc-member-header" id="IdentityProvider-jwksUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L98">property <b>jwksUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L98">property <b>jwksUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jwksUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ Internal Identity Provider Id
 JSON Web Key Set URL
 
 <h4 class="pdoc-member-header" id="IdentityProvider-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L103">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L103">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ If true, users cannot log in through this provider. They can only link to this p
 want to allow login from the provider, but want to integrate with a provider
 
 <h4 class="pdoc-member-header" id="IdentityProvider-loginHint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L107">property <b>loginHint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L107">property <b>loginHint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loginHint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -499,7 +499,7 @@ want to allow login from the provider, but want to integrate with a provider
 Login Hint.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-logoutUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L111">property <b>logoutUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L111">property <b>logoutUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logoutUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -507,7 +507,7 @@ Login Hint.
 Logout URL
 
 <h4 class="pdoc-member-header" id="IdentityProvider-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L118">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L118">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postBrokerLoginFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L122">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L122">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>providerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ authenticator implementations must assume that user is already set in ClientSess
 provider id, is always oidc, unless you have a custom implementation
 
 <h4 class="pdoc-member-header" id="IdentityProvider-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L126">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L126">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ provider id, is always oidc, unless you have a custom implementation
 Realm Name
 
 <h4 class="pdoc-member-header" id="IdentityProvider-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L130">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L130">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storeToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ Realm Name
 Enable/disable if tokens must be stored after authenticating users.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L134">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L134">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ Enable/disable if tokens must be stored after authenticating users.
 Token URL.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L138">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L138">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trustEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ Token URL.
 If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-uiLocales">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L142">property <b>uiLocales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L142">property <b>uiLocales</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uiLocales: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ If enabled then email provided by this provider is not verified even if verifica
 Pass current locale to identity provider
 
 <h4 class="pdoc-member-header" id="IdentityProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -575,7 +575,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-userInfoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L146">property <b>userInfoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L146">property <b>userInfoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userInfoUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ deployments.
 User Info URL
 
 <h4 class="pdoc-member-header" id="IdentityProvider-validateSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L150">property <b>validateSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L150">property <b>validateSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validateSignature: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ Enable/disable signature validation of external IDP signatures.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GoogleIdentityProviderArgs" data-link-title="GoogleIdentityProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L330">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L330">
         interface <strong>GoogleIdentityProviderArgs</strong>
     </a>
 </h3>
@@ -604,7 +604,7 @@ Enable/disable signature validation of external IDP signatures.
 The set of arguments for constructing a GoogleIdentityProvider resource.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-acceptsPromptNoneForwardFromClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L336">property <b>acceptsPromptNoneForwardFromClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L336">property <b>acceptsPromptNoneForwardFromClient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptsPromptNoneForwardFromClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -614,7 +614,7 @@ case that client sends a request with prompt=none and user is not yet authentica
 returned to client, but the request with prompt=none will be forwarded to this identity provider.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L340">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L340">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addReadTokenRoleOnCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -622,7 +622,7 @@ returned to client, but the request with prompt=none will be forwarded to this i
 Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L344">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L344">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticateByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -630,7 +630,7 @@ Enable/disable if new users can read any stored tokens. This assigns the broker.
 Enable/disable authenticate users by default.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L348">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L348">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -638,7 +638,7 @@ Enable/disable authenticate users by default.
 Client ID.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L352">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L352">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -646,7 +646,7 @@ Client ID.
 Client Secret.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L357">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L357">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -655,7 +655,7 @@ The scopes to be sent when asking for authorization. See the documentation for p
 value'. Default: 'openid profile email'
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-disableUserInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L361">property <b>disableUserInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L361">property <b>disableUserInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableUserInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -663,7 +663,7 @@ value'. Default: 'openid profile email'
 Disable usage of User Info service to obtain additional user information? Default is to use this OIDC service.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L365">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L365">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -671,12 +671,12 @@ Disable usage of User Info service to obtain additional user information? Defaul
 Enable/disable this identity provider.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L366">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L366">property <b>extraConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L371">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L371">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -685,7 +685,7 @@ Alias of authentication flow, which is triggered after first login with this ide
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L375">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L375">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideOnLoginPage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
 Hide On Login Page.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-hostedDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L380">property <b>hostedDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L380">property <b>hostedDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -702,7 +702,7 @@ Set 'hd' query parameter when logging in with Google. Google will list accounts 
 that the returned identity token has a claim for this domain. When '*' is entered, any hosted account can be used.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L385">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L385">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ If true, users cannot log in through this provider. They can only link to this p
 want to allow login from the provider, but want to integrate with a provider
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L392">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L392">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L396">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L396">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ authenticator implementations must assume that user is already set in ClientSess
 provider id, is always google, unless you have a extended custom implementation
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L400">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L400">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ provider id, is always google, unless you have a extended custom implementation
 Realm Name
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-requestRefreshToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L406">property <b>requestRefreshToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L406">property <b>requestRefreshToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestRefreshToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -748,7 +748,7 @@ back. Useful if planning to use Token Exchange to retrieve Google token to acces
 the browser.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L410">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L410">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storeToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -756,7 +756,7 @@ the browser.
 Enable/disable if tokens must be stored after authenticating users.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L414">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L414">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -764,7 +764,7 @@ Enable/disable if tokens must be stored after authenticating users.
 If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderArgs-useUserIpParam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L419">property <b>useUserIpParam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L419">property <b>useUserIpParam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useUserIpParam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ Set 'userIp' query parameter when invoking on Google's User Info service. This w
 Google is throttling access to the User Info service.
 
 <h3 class="pdoc-module-header" id="GoogleIdentityProviderState" data-link-title="GoogleIdentityProviderState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L222">
         interface <strong>GoogleIdentityProviderState</strong>
     </a>
 </h3>
@@ -783,7 +783,7 @@ Google is throttling access to the User Info service.
 Input properties used for looking up and filtering GoogleIdentityProvider resources.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-acceptsPromptNoneForwardFromClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L228">property <b>acceptsPromptNoneForwardFromClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L228">property <b>acceptsPromptNoneForwardFromClient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptsPromptNoneForwardFromClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -793,7 +793,7 @@ case that client sends a request with prompt=none and user is not yet authentica
 returned to client, but the request with prompt=none will be forwarded to this identity provider.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L232">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L232">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addReadTokenRoleOnCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ returned to client, but the request with prompt=none will be forwarded to this i
 Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L237">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L237">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,7 +810,7 @@ The alias uniquely identifies an identity provider and it is also used to build 
 is computed and always google
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L241">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L241">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticateByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ is computed and always google
 Enable/disable authenticate users by default.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L245">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L245">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ Enable/disable authenticate users by default.
 Client ID.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L249">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L249">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -834,7 +834,7 @@ Client ID.
 Client Secret.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L254">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L254">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -843,7 +843,7 @@ The scopes to be sent when asking for authorization. See the documentation for p
 value'. Default: 'openid profile email'
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-disableUserInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L258">property <b>disableUserInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L258">property <b>disableUserInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableUserInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -851,7 +851,7 @@ value'. Default: 'openid profile email'
 Disable usage of User Info service to obtain additional user information? Default is to use this OIDC service.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L262">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L262">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -859,7 +859,7 @@ Disable usage of User Info service to obtain additional user information? Defaul
 Not used by this provider, Will be implicitly Google
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L266">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L266">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -867,12 +867,12 @@ Not used by this provider, Will be implicitly Google
 Enable/disable this identity provider.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L267">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L267">property <b>extraConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L272">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L272">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ Alias of authentication flow, which is triggered after first login with this ide
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L276">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L276">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideOnLoginPage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
 Hide On Login Page.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-hostedDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L281">property <b>hostedDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L281">property <b>hostedDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -898,7 +898,7 @@ Set 'hd' query parameter when logging in with Google. Google will list accounts 
 that the returned identity token has a claim for this domain. When '*' is entered, any hosted account can be used.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-internalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L285">property <b>internalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L285">property <b>internalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ that the returned identity token has a claim for this domain. When '*' is entere
 Internal Identity Provider Id
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L290">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L290">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ If true, users cannot log in through this provider. They can only link to this p
 want to allow login from the provider, but want to integrate with a provider
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L297">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L297">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L301">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L301">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +934,7 @@ authenticator implementations must assume that user is already set in ClientSess
 provider id, is always google, unless you have a extended custom implementation
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L305">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L305">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -942,7 +942,7 @@ provider id, is always google, unless you have a extended custom implementation
 Realm Name
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-requestRefreshToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L311">property <b>requestRefreshToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L311">property <b>requestRefreshToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestRefreshToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -952,7 +952,7 @@ back. Useful if planning to use Token Exchange to retrieve Google token to acces
 the browser.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L315">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L315">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storeToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -960,7 +960,7 @@ the browser.
 Enable/disable if tokens must be stored after authenticating users.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L319">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L319">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -968,7 +968,7 @@ Enable/disable if tokens must be stored after authenticating users.
 If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 
 <h4 class="pdoc-member-header" id="GoogleIdentityProviderState-useUserIpParam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/googleIdentityProvider.ts#L324">property <b>useUserIpParam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/googleIdentityProvider.ts#L324">property <b>useUserIpParam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useUserIpParam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -977,7 +977,7 @@ Set 'userIp' query parameter when invoking on Google's User Info service. This w
 Google is throttling access to the User Info service.
 
 <h3 class="pdoc-module-header" id="IdentityProviderArgs" data-link-title="IdentityProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L377">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L377">
         interface <strong>IdentityProviderArgs</strong>
     </a>
 </h3>
@@ -987,7 +987,7 @@ Google is throttling access to the User Info service.
 The set of arguments for constructing a IdentityProvider resource.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-acceptsPromptNoneForwardFromClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L383">property <b>acceptsPromptNoneForwardFromClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L383">property <b>acceptsPromptNoneForwardFromClient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptsPromptNoneForwardFromClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -997,7 +997,7 @@ case that client sends a request with prompt=none and user is not yet authentica
 returned to client, but the request with prompt=none will be forwarded to this identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L387">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L387">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addReadTokenRoleOnCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ returned to client, but the request with prompt=none will be forwarded to this i
 Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L391">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L391">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1013,7 +1013,7 @@ Enable/disable if new users can read any stored tokens. This assigns the broker.
 The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L395">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L395">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticateByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ The alias uniquely identifies an identity provider and it is also used to build 
 Enable/disable authenticate users by default.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L399">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L399">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ Enable/disable authenticate users by default.
 OIDC authorization URL.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-backchannelSupported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L403">property <b>backchannelSupported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L403">property <b>backchannelSupported</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backchannelSupported?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ OIDC authorization URL.
 Does the external IDP support backchannel logout?
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L407">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L407">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ Does the external IDP support backchannel logout?
 Client ID.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L411">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L411">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1053,7 +1053,7 @@ Client ID.
 Client Secret.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L415">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L415">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1061,7 +1061,7 @@ Client Secret.
 The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to 'openid'.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L419">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L419">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1069,7 +1069,7 @@ The scopes to be sent when asking for authorization. It can be a space-separated
 Friendly name for Identity Providers.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L423">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L423">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1077,12 +1077,12 @@ Friendly name for Identity Providers.
 Enable/disable this identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L424">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L424">property <b>extraConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L429">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L429">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ Alias of authentication flow, which is triggered after first login with this ide
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L433">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L433">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideOnLoginPage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
 Hide On Login Page.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-jwksUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L437">property <b>jwksUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L437">property <b>jwksUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +1107,7 @@ Hide On Login Page.
 JSON Web Key Set URL
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L442">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L442">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ If true, users cannot log in through this provider. They can only link to this p
 want to allow login from the provider, but want to integrate with a provider
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-loginHint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L446">property <b>loginHint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L446">property <b>loginHint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginHint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1124,7 +1124,7 @@ want to allow login from the provider, but want to integrate with a provider
 Login Hint.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-logoutUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L450">property <b>logoutUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L450">property <b>logoutUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoutUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1132,7 +1132,7 @@ Login Hint.
 Logout URL
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L457">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L457">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L461">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L461">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ authenticator implementations must assume that user is already set in ClientSess
 provider id, is always oidc, unless you have a custom implementation
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L465">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L465">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ provider id, is always oidc, unless you have a custom implementation
 Realm Name
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L469">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L469">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storeToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1167,7 +1167,7 @@ Realm Name
 Enable/disable if tokens must be stored after authenticating users.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L473">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L473">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ Enable/disable if tokens must be stored after authenticating users.
 Token URL.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L477">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L477">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ Token URL.
 If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-uiLocales">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L481">property <b>uiLocales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L481">property <b>uiLocales</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uiLocales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ If enabled then email provided by this provider is not verified even if verifica
 Pass current locale to identity provider
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-userInfoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L485">property <b>userInfoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L485">property <b>userInfoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInfoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ Pass current locale to identity provider
 User Info URL
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-validateSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L489">property <b>validateSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L489">property <b>validateSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateSignature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ User Info URL
 Enable/disable signature validation of external IDP signatures.
 
 <h3 class="pdoc-module-header" id="IdentityProviderState" data-link-title="IdentityProviderState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L255">
         interface <strong>IdentityProviderState</strong>
     </a>
 </h3>
@@ -1217,7 +1217,7 @@ Enable/disable signature validation of external IDP signatures.
 Input properties used for looking up and filtering IdentityProvider resources.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-acceptsPromptNoneForwardFromClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L261">property <b>acceptsPromptNoneForwardFromClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L261">property <b>acceptsPromptNoneForwardFromClient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptsPromptNoneForwardFromClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ case that client sends a request with prompt=none and user is not yet authentica
 returned to client, but the request with prompt=none will be forwarded to this identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L265">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L265">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addReadTokenRoleOnCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ returned to client, but the request with prompt=none will be forwarded to this i
 Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L269">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L269">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ Enable/disable if new users can read any stored tokens. This assigns the broker.
 The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L273">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L273">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticateByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ The alias uniquely identifies an identity provider and it is also used to build 
 Enable/disable authenticate users by default.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-authorizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L277">property <b>authorizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L277">property <b>authorizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1259,7 @@ Enable/disable authenticate users by default.
 OIDC authorization URL.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-backchannelSupported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L281">property <b>backchannelSupported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L281">property <b>backchannelSupported</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backchannelSupported?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ OIDC authorization URL.
 Does the external IDP support backchannel logout?
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L285">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L285">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1275,7 +1275,7 @@ Does the external IDP support backchannel logout?
 Client ID.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L289">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L289">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1283,7 +1283,7 @@ Client ID.
 Client Secret.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L293">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L293">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1291,7 @@ Client Secret.
 The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to 'openid'.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L297">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L297">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1299,7 @@ The scopes to be sent when asking for authorization. It can be a space-separated
 Friendly name for Identity Providers.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L301">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L301">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1307,12 +1307,12 @@ Friendly name for Identity Providers.
 Enable/disable this identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L302">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L302">property <b>extraConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IdentityProviderState-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L307">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L307">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ Alias of authentication flow, which is triggered after first login with this ide
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L311">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L311">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideOnLoginPage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
 Hide On Login Page.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-internalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L315">property <b>internalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L315">property <b>internalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ Hide On Login Page.
 Internal Identity Provider Id
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-jwksUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L319">property <b>jwksUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L319">property <b>jwksUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ Internal Identity Provider Id
 JSON Web Key Set URL
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L324">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L324">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1354,7 +1354,7 @@ If true, users cannot log in through this provider. They can only link to this p
 want to allow login from the provider, but want to integrate with a provider
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-loginHint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L328">property <b>loginHint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L328">property <b>loginHint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginHint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1362,7 +1362,7 @@ want to allow login from the provider, but want to integrate with a provider
 Login Hint.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-logoutUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L332">property <b>logoutUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L332">property <b>logoutUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoutUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1370,7 +1370,7 @@ Login Hint.
 Logout URL
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L339">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L339">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1381,7 +1381,7 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L343">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L343">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1389,7 +1389,7 @@ authenticator implementations must assume that user is already set in ClientSess
 provider id, is always oidc, unless you have a custom implementation
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L347">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L347">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ provider id, is always oidc, unless you have a custom implementation
 Realm Name
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L351">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L351">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storeToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ Realm Name
 Enable/disable if tokens must be stored after authenticating users.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L355">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L355">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ Enable/disable if tokens must be stored after authenticating users.
 Token URL.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L359">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L359">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1421,7 +1421,7 @@ Token URL.
 If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-uiLocales">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L363">property <b>uiLocales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L363">property <b>uiLocales</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uiLocales?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1429,7 +1429,7 @@ If enabled then email provided by this provider is not verified even if verifica
 Pass current locale to identity provider
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-userInfoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L367">property <b>userInfoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L367">property <b>userInfoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userInfoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1437,7 +1437,7 @@ Pass current locale to identity provider
 User Info URL
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-validateSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/9cc246c8795cb4e22cb42a5f8807cb2457d25a7b/sdk/nodejs/oidc/identityProvider.ts#L371">property <b>validateSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/oidc/identityProvider.ts#L371">property <b>validateSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateSignature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

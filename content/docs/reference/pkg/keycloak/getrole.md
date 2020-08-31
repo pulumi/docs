@@ -38,21 +38,6 @@ const groupRoles = new keycloak.GroupRoles("group_roles", {
     roles: [offlineAccess.id],
 });
 ```
-```python
-import pulumi
-import pulumi_keycloak as keycloak
-
-realm = keycloak.Realm("realm",
-    enabled=True,
-    realm="my-realm")
-offline_access = realm.id.apply(lambda id: keycloak.get_role(name="offline_access",
-    realm_id=id))
-group = keycloak.Group("group", realm_id=realm.id)
-group_roles = keycloak.GroupRoles("groupRoles",
-    group_id=group.id,
-    realm_id=realm.id,
-    roles=[offline_access.id])
-```
 
 ### Argument Reference
 
@@ -84,7 +69,7 @@ In addition to the arguments listed above, the following computed attributes are
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_role(</span>client_id=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_role(</span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRoleResult</code></pre></div>
 {{% /choosable %}}
 
 

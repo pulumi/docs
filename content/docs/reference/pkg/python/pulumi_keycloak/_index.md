@@ -12,7 +12,7 @@ block_external_search_index: true
 <span id="pulumi-keycloak"></span><h1>Pulumi Keycloak<a class="headerlink" href="#module-pulumi_keycloak" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">AttributeImporterIdentityProviderMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">AttributeImporterIdentityProviderMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows to create and manage identity provider mappers within Keycloak.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
@@ -49,58 +49,16 @@ block_external_search_index: true
 </ul>
 </dd>
 </dl>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_friendly_name">
-<code class="sig-name descname">attribute_friendly_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_friendly_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attribute Friendly Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_name">
-<code class="sig-name descname">attribute_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attribute Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.claim_name">
-<code class="sig-name descname">claim_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.claim_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Claim Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.identity_provider_alias">
-<code class="sig-name descname">identity_provider_alias</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Alias</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Mapper Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.realm">
-<code class="sig-name descname">realm</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.realm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Realm Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.user_attribute">
-<code class="sig-name descname">user_attribute</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.user_attribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>User Attribute</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.attribute_importer_identity_provider_mapper.AttributeImporterIdentityProviderMapper<a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AttributeImporterIdentityProviderMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>attribute_friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Attribute Friendly Name</p></li>
 <li><p><strong>attribute_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Attribute Name</p></li>
@@ -112,6 +70,48 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_friendly_name">
+<em class="property">property </em><code class="sig-name descname">attribute_friendly_name</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_friendly_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute Friendly Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_name">
+<em class="property">property </em><code class="sig-name descname">attribute_name</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.attribute_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.claim_name">
+<em class="property">property </em><code class="sig-name descname">claim_name</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.claim_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.identity_provider_alias">
+<em class="property">property </em><code class="sig-name descname">identity_provider_alias</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Alias</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Mapper Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.realm">
+<em class="property">property </em><code class="sig-name descname">realm</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.realm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realm Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeImporterIdentityProviderMapper.user_attribute">
+<em class="property">property </em><code class="sig-name descname">user_attribute</code><a class="headerlink" href="#pulumi_keycloak.AttributeImporterIdentityProviderMapper.user_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>User Attribute</p>
 </dd></dl>
 
 <dl class="py method">
@@ -154,7 +154,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.AttributeToRoleIdentityMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">AttributeToRoleIdentityMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">AttributeToRoleIdentityMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a AttributeToRoleIdentityMapper resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -167,70 +167,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] name: IDP Mapper Name
 :param pulumi.Input[str] realm: Realm Name
 :param pulumi.Input[str] role: Role Name</p>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_friendly_name">
-<code class="sig-name descname">attribute_friendly_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_friendly_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attribute Friendly Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_name">
-<code class="sig-name descname">attribute_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attribute Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_value">
-<code class="sig-name descname">attribute_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attribute Value</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.claim_name">
-<code class="sig-name descname">claim_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.claim_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>OIDC Claim Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.claim_value">
-<code class="sig-name descname">claim_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.claim_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>OIDC Claim Value</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.identity_provider_alias">
-<code class="sig-name descname">identity_provider_alias</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Alias</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Mapper Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.realm">
-<code class="sig-name descname">realm</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.realm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Realm Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.role">
-<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.role" title="Permalink to this definition">¶</a></dt>
-<dd><p>Role Name</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_friendly_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.attribute_to_role_identity_mapper.AttributeToRoleIdentityMapper<a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AttributeToRoleIdentityMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>attribute_friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Attribute Friendly Name</p></li>
 <li><p><strong>attribute_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Attribute Name</p></li>
@@ -244,6 +190,60 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_friendly_name">
+<em class="property">property </em><code class="sig-name descname">attribute_friendly_name</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_friendly_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute Friendly Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_name">
+<em class="property">property </em><code class="sig-name descname">attribute_name</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_value">
+<em class="property">property </em><code class="sig-name descname">attribute_value</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.attribute_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute Value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.claim_name">
+<em class="property">property </em><code class="sig-name descname">claim_name</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.claim_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>OIDC Claim Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.claim_value">
+<em class="property">property </em><code class="sig-name descname">claim_value</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.claim_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>OIDC Claim Value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.identity_provider_alias">
+<em class="property">property </em><code class="sig-name descname">identity_provider_alias</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Alias</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Mapper Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.realm">
+<em class="property">property </em><code class="sig-name descname">realm</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.realm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realm Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.AttributeToRoleIdentityMapper.role">
+<em class="property">property </em><code class="sig-name descname">role</code><a class="headerlink" href="#pulumi_keycloak.AttributeToRoleIdentityMapper.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role Name</p>
 </dd></dl>
 
 <dl class="py method">
@@ -306,7 +306,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.CustomUserFederation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">CustomUserFederation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">CustomUserFederation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a CustomUserFederation resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -323,53 +323,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm (name) this provider will provide user federation for.</p>
 </dd>
 </dl>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.CustomUserFederation.enabled">
-<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>When false, this provider will not be used when performing queries for users.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.CustomUserFederation.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display name of the provider when displayed in the console.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.CustomUserFederation.parent_id">
-<code class="sig-name descname">parent_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.parent_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The parent_id of the generated component. will use realm_id if not specified.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.CustomUserFederation.priority">
-<code class="sig-name descname">priority</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.priority" title="Permalink to this definition">¶</a></dt>
-<dd><p>Priority of this provider when looking up users. Lower values are first.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.CustomUserFederation.provider_id">
-<code class="sig-name descname">provider_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.provider_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unique ID of the custom provider, specified in the <code class="docutils literal notranslate"><span class="pre">getId</span></code> implementation for the UserStorageProviderFactory
-interface</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.CustomUserFederation.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.realm_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The realm (name) this provider will provide user federation for.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.CustomUserFederation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.custom_user_federation.CustomUserFederation<a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CustomUserFederation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When false, this provider will not be used when performing queries for users.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Display name of the provider when displayed in the console.</p></li>
@@ -381,6 +344,43 @@ interface</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.CustomUserFederation.enabled">
+<em class="property">property </em><code class="sig-name descname">enabled</code><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>When false, this provider will not be used when performing queries for users.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.CustomUserFederation.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of the provider when displayed in the console.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.CustomUserFederation.parent_id">
+<em class="property">property </em><code class="sig-name descname">parent_id</code><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.parent_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent_id of the generated component. will use realm_id if not specified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.CustomUserFederation.priority">
+<em class="property">property </em><code class="sig-name descname">priority</code><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Priority of this provider when looking up users. Lower values are first.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.CustomUserFederation.provider_id">
+<em class="property">property </em><code class="sig-name descname">provider_id</code><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.provider_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique ID of the custom provider, specified in the <code class="docutils literal notranslate"><span class="pre">getId</span></code> implementation for the UserStorageProviderFactory
+interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.CustomUserFederation.realm_id">
+<em class="property">property </em><code class="sig-name descname">realm_id</code><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm (name) this provider will provide user federation for.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -423,7 +423,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.DefaultGroups">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">DefaultGroups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.DefaultGroups" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">DefaultGroups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.DefaultGroups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for managing a realm’s default groups.</p>
 <p>Note that you should not use <code class="docutils literal notranslate"><span class="pre">DefaultGroups</span></code> with a group with memberships managed
 by <code class="docutils literal notranslate"><span class="pre">GroupMemberships</span></code>.</p>
@@ -454,14 +454,14 @@ by <code class="docutils literal notranslate"><span class="pre">GroupMemberships
 </dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.DefaultGroups.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.DefaultGroups.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.default_groups.DefaultGroups<a class="headerlink" href="#pulumi_keycloak.DefaultGroups.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultGroups resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -508,7 +508,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.GenericClientProtocolMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GenericClientProtocolMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_mapper</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GenericClientProtocolMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_mapper</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing protocol mapper for both types of clients (openid-connect and saml) within Keycloak.</p>
 <p>There are two uses cases for using this resource:</p>
 <ul class="simple">
@@ -566,52 +566,16 @@ Therefore, if possible, a specific mapper should be used.</p>
 </ul>
 </dd>
 </dl>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientProtocolMapper.client_id">
-<code class="sig-name descname">client_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientProtocolMapper.client_scope_id">
-<code class="sig-name descname">client_scope_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientProtocolMapper.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientProtocolMapper.protocol">
-<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The protocol of the client (openid-connect / saml).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientProtocolMapper.protocol_mapper">
-<code class="sig-name descname">protocol_mapper</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.protocol_mapper" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the protocol mapper.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientProtocolMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The realm id where the associated client or client scope exists.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.GenericClientProtocolMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_mapper</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_mapper</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.generic_client_protocol_mapper.GenericClientProtocolMapper<a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GenericClientProtocolMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
 <li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
@@ -622,6 +586,42 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientProtocolMapper.client_id">
+<em class="property">property </em><code class="sig-name descname">client_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientProtocolMapper.client_scope_id">
+<em class="property">property </em><code class="sig-name descname">client_scope_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientProtocolMapper.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientProtocolMapper.protocol">
+<em class="property">property </em><code class="sig-name descname">protocol</code><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The protocol of the client (openid-connect / saml).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientProtocolMapper.protocol_mapper">
+<em class="property">property </em><code class="sig-name descname">protocol_mapper</code><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.protocol_mapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the protocol mapper.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientProtocolMapper.realm_id">
+<em class="property">property </em><code class="sig-name descname">realm_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -664,7 +664,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.GenericClientRoleMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GenericClientRoleMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GenericClientRoleMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a GenericClientRoleMapper resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -672,40 +672,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] client_scope_id: The destination client scope of the client role. Cannot be used at the same time as client_id.
 :param pulumi.Input[str] realm_id: The realm id where the associated client or client scope exists.
 :param pulumi.Input[str] role_id: Id of the role to assign</p>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientRoleMapper.client_id">
-<code class="sig-name descname">client_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.client_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The destination client of the client role. Cannot be used at the same time as client_scope_id.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientRoleMapper.client_scope_id">
-<code class="sig-name descname">client_scope_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The destination client scope of the client role. Cannot be used at the same time as client_id.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientRoleMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.realm_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The realm id where the associated client or client scope exists.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.GenericClientRoleMapper.role_id">
-<code class="sig-name descname">role_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.role_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Id of the role to assign</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.GenericClientRoleMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.generic_client_role_mapper.GenericClientRoleMapper<a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GenericClientRoleMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination client of the client role. Cannot be used at the same time as client_scope_id.</p></li>
 <li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination client scope of the client role. Cannot be used at the same time as client_id.</p></li>
@@ -714,6 +690,30 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientRoleMapper.client_id">
+<em class="property">property </em><code class="sig-name descname">client_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination client of the client role. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientRoleMapper.client_scope_id">
+<em class="property">property </em><code class="sig-name descname">client_scope_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination client scope of the client role. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientRoleMapper.realm_id">
+<em class="property">property </em><code class="sig-name descname">realm_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.GenericClientRoleMapper.role_id">
+<em class="property">property </em><code class="sig-name descname">role_id</code><a class="headerlink" href="#pulumi_keycloak.GenericClientRoleMapper.role_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of the role to assign</p>
 </dd></dl>
 
 <dl class="py method">
@@ -758,9 +758,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_keycloak.GetGroupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="pulumi_keycloak.GetGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_keycloak.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -770,9 +770,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_keycloak.GetRealmKeysResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GetRealmKeysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statuses</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GetRealmKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRealmKeys.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="pulumi_keycloak.GetRealmKeysResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GetRealmKeysResult.id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_keycloak.GetRealmKeysResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -782,9 +782,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_keycloak.GetRealmResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GetRealmResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_code_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_user_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan_for_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_admin_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_user_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_grant_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_authentication_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duplicate_emails_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_username_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalizations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_with_email_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_max_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_token_max_reuse</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_email_as_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remember_me</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_credentials_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_password_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_max_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_managed_access</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_email</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GetRealmResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRealm.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="pulumi_keycloak.GetRealmResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GetRealmResult.id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_keycloak.GetRealmResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -794,9 +794,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_keycloak.GetRoleResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GetRoleResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GetRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRole.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="pulumi_keycloak.GetRoleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.GetRoleResult.id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_keycloak.GetRoleResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -804,7 +804,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.Group">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing Groups within Keycloak.</p>
 <p>Groups provide a logical wrapping for users within Keycloak. Users within a
 group can share attributes and roles, and group membership can be mapped
@@ -852,14 +852,14 @@ This resource <strong>should not</strong> be used to manage groups that were cre
 </dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.Group.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Group.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.group.Group<a class="headerlink" href="#pulumi_keycloak.Group.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Group resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -906,20 +906,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.GroupMemberships">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GroupMemberships</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupMemberships" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GroupMemberships</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupMemberships" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a GroupMemberships resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="py method">
 <dt id="pulumi_keycloak.GroupMemberships.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupMemberships.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.group_memberships.GroupMemberships<a class="headerlink" href="#pulumi_keycloak.GroupMemberships.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupMemberships resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -966,20 +966,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.GroupRoles">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GroupRoles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupRoles" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GroupRoles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupRoles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a GroupRoles resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="py method">
 <dt id="pulumi_keycloak.GroupRoles.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupRoles.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.group_roles.GroupRoles<a class="headerlink" href="#pulumi_keycloak.GroupRoles.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupRoles resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -1026,7 +1026,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">HardcodedAttributeIdentityProviderMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">HardcodedAttributeIdentityProviderMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_session</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a HardcodedAttributeIdentityProviderMapper resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1036,52 +1036,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] name: IDP Mapper Name
 :param pulumi.Input[str] realm: Realm Name
 :param pulumi.Input[bool] user_session: Is Attribute Related To a User Session</p>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_name">
-<code class="sig-name descname">attribute_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>OIDC Claim</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_value">
-<code class="sig-name descname">attribute_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>User Attribute</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.identity_provider_alias">
-<code class="sig-name descname">identity_provider_alias</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Alias</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Mapper Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.realm">
-<code class="sig-name descname">realm</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.realm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Realm Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.user_session">
-<code class="sig-name descname">user_session</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.user_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Is Attribute Related To a User Session</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_session</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_session</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.hardcoded_attribute_identity_provider_mapper.HardcodedAttributeIdentityProviderMapper<a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HardcodedAttributeIdentityProviderMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>attribute_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OIDC Claim</p></li>
 <li><p><strong>attribute_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User Attribute</p></li>
@@ -1092,6 +1056,42 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_name">
+<em class="property">property </em><code class="sig-name descname">attribute_name</code><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>OIDC Claim</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_value">
+<em class="property">property </em><code class="sig-name descname">attribute_value</code><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.attribute_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>User Attribute</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.identity_provider_alias">
+<em class="property">property </em><code class="sig-name descname">identity_provider_alias</code><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Alias</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Mapper Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.realm">
+<em class="property">property </em><code class="sig-name descname">realm</code><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.realm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realm Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.user_session">
+<em class="property">property </em><code class="sig-name descname">user_session</code><a class="headerlink" href="#pulumi_keycloak.HardcodedAttributeIdentityProviderMapper.user_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is Attribute Related To a User Session</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1134,7 +1134,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.HardcodedRoleIdentityMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">HardcodedRoleIdentityMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">HardcodedRoleIdentityMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a HardcodedRoleIdentityMapper resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1142,40 +1142,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] name: IDP Mapper Name
 :param pulumi.Input[str] realm: Realm Name
 :param pulumi.Input[str] role: Role Name</p>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.identity_provider_alias">
-<code class="sig-name descname">identity_provider_alias</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Alias</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Mapper Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.realm">
-<code class="sig-name descname">realm</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.realm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Realm Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.role">
-<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.role" title="Permalink to this definition">¶</a></dt>
-<dd><p>Role Name</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.hardcoded_role_identity_mapper.HardcodedRoleIdentityMapper<a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HardcodedRoleIdentityMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>identity_provider_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IDP Alias</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IDP Mapper Name</p></li>
@@ -1184,6 +1160,30 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.identity_provider_alias">
+<em class="property">property </em><code class="sig-name descname">identity_provider_alias</code><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Alias</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Mapper Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.realm">
+<em class="property">property </em><code class="sig-name descname">realm</code><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.realm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realm Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.HardcodedRoleIdentityMapper.role">
+<em class="property">property </em><code class="sig-name descname">role</code><a class="headerlink" href="#pulumi_keycloak.HardcodedRoleIdentityMapper.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role Name</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1226,72 +1226,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">IdentityProviderTokenExchangeScopePermission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clients</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">IdentityProviderTokenExchangeScopePermission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clients</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a IdentityProviderTokenExchangeScopePermission resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] clients: Ids of the clients for which a policy will be created and set on scope based token exchange permission
+:param pulumi.Input[List[pulumi.Input[str]]] clients: Ids of the clients for which a policy will be created and set on scope based token exchange permission
 :param pulumi.Input[str] policy_type: Type of policy that is created. At the moment only ‘client’ type is supported</p>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_idp_resource_id">
-<code class="sig-name descname">authorization_idp_resource_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_idp_resource_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource id representing the identity provider, this automatically created by keycloak</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_resource_server_id">
-<code class="sig-name descname">authorization_resource_server_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_resource_server_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource server id representing the realm management client on which this permission is managed</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_token_exchange_scope_permission_id">
-<code class="sig-name descname">authorization_token_exchange_scope_permission_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_token_exchange_scope_permission_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Permission id representing the Permission with scope ‘Token Exchange’ and the resource ‘authorization_idp_resource_id’,
-this automatically created by keycloak, the policy id will be set on this permission</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.clients">
-<code class="sig-name descname">clients</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.clients" title="Permalink to this definition">¶</a></dt>
-<dd><p>Ids of the clients for which a policy will be created and set on scope based token exchange permission</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_id">
-<code class="sig-name descname">policy_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_type">
-<code class="sig-name descname">policy_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of policy that is created. At the moment only ‘client’ type is supported</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_idp_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_token_exchange_scope_permission_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clients</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_idp_resource_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_resource_server_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_token_exchange_scope_permission_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clients</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.identity_provider_token_exchange_scope_permission.IdentityProviderTokenExchangeScopePermission<a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IdentityProviderTokenExchangeScopePermission resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>authorization_idp_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource id representing the identity provider, this automatically created by keycloak</p></li>
 <li><p><strong>authorization_resource_server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource server id representing the realm management client on which this permission is managed</p></li>
 <li><p><strong>authorization_token_exchange_scope_permission_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Permission id representing the Permission with scope ‘Token Exchange’ and the resource ‘authorization_idp_resource_id’,
 this automatically created by keycloak, the policy id will be set on this permission</p></li>
-<li><p><strong>clients</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids of the clients for which a policy will be created and set on scope based token exchange permission</p></li>
+<li><p><strong>clients</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Ids of the clients for which a policy will be created and set on scope based token exchange permission</p></li>
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
 the reference identity provider</p></li>
 <li><p><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of policy that is created. At the moment only ‘client’ type is supported</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_idp_resource_id">
+<em class="property">property </em><code class="sig-name descname">authorization_idp_resource_id</code><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_idp_resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource id representing the identity provider, this automatically created by keycloak</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_resource_server_id">
+<em class="property">property </em><code class="sig-name descname">authorization_resource_server_id</code><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_resource_server_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource server id representing the realm management client on which this permission is managed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_token_exchange_scope_permission_id">
+<em class="property">property </em><code class="sig-name descname">authorization_token_exchange_scope_permission_id</code><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.authorization_token_exchange_scope_permission_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permission id representing the Permission with scope ‘Token Exchange’ and the resource ‘authorization_idp_resource_id’,
+this automatically created by keycloak, the policy id will be set on this permission</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.clients">
+<em class="property">property </em><code class="sig-name descname">clients</code><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.clients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ids of the clients for which a policy will be created and set on scope based token exchange permission</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_id">
+<em class="property">property </em><code class="sig-name descname">policy_id</code><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
+the reference identity provider</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_type">
+<em class="property">property </em><code class="sig-name descname">policy_type</code><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.policy_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of policy that is created. At the moment only ‘client’ type is supported</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1334,7 +1334,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_ca_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_insecure_skip_verify</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_login</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_ca_certificate</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_insecure_skip_verify</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the keycloak package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -1393,7 +1393,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.Realm">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Realm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_user_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan_for_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_admin_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_user_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_signature_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_grant_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_authentication_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duplicate_emails_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_username_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_with_email_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_max_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_token_max_reuse</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_email_as_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remember_me</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_credentials_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_password_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revoke_refresh_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_max_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_managed_access</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Realm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Realm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_login</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_user_action</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_signature_algorithm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_grant_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_authentication_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duplicate_emails_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_username_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalization</span><span class="p">:</span> <span class="n">Union[RealmInternationalizationArgs, Mapping[str, Any], Awaitable[Union[RealmInternationalizationArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_with_email_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_idle_timeout</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_max_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_token_max_reuse</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_email_as_username</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remember_me</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_credentials_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_password_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revoke_refresh_token</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="p">:</span> <span class="n">Union[RealmSecurityDefensesArgs, Mapping[str, Any], Awaitable[Union[RealmSecurityDefensesArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_server</span><span class="p">:</span> <span class="n">Union[RealmSmtpServerArgs, Mapping[str, Any], Awaitable[Union[RealmSmtpServerArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_required</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_idle_timeout</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_max_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_managed_access</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_email</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Realm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Realm resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1415,114 +1415,16 @@ and notUsername(undefined)”</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>internationalization</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultLocale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">supportedLocales</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-</ul>
-<p>The <strong>security_defenses</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bruteForceDetection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureResetTimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxFailureWaitSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLoginFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumQuickLoginWaitSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permanentLockout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">quickLoginCheckMilliSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitIncrementSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentSecurityPolicyReportOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">strictTransportSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xContentTypeOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xFrameOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xRobotsTag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xXssProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-<p>The <strong>smtp_server</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">envelopeFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">from</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replyTo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replyToDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">starttls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.browser_flow">
-<code class="sig-name descname">browser_flow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.browser_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which flow should be used for BrowserFlow</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.client_authentication_flow">
-<code class="sig-name descname">client_authentication_flow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.client_authentication_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which flow should be used for ClientAuthenticationFlow</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.direct_grant_flow">
-<code class="sig-name descname">direct_grant_flow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.direct_grant_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which flow should be used for DirectGrantFlow</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.docker_authentication_flow">
-<code class="sig-name descname">docker_authentication_flow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.docker_authentication_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which flow should be used for DockerAuthenticationFlow</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.password_policy">
-<code class="sig-name descname">password_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.password_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>String that represents the passwordPolicies that are in place. Each policy is separated with ” and “. Supported policies
-can be found in the server-info providers page. example: “upperCase(1) and length(8) and forceExpiredPasswordChange(365)
-and notUsername(undefined)”</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.registration_flow">
-<code class="sig-name descname">registration_flow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.registration_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which flow should be used for RegistrationFlow</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.reset_credentials_flow">
-<code class="sig-name descname">reset_credentials_flow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.reset_credentials_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which flow should be used for ResetCredentialsFlow</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.Realm.ssl_required">
-<code class="sig-name descname">ssl_required</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.Realm.ssl_required" title="Permalink to this definition">¶</a></dt>
-<dd><p>SSL Required: Values can be ‘none’, ‘external’ or ‘all’.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.Realm.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_user_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan_for_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_admin_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_user_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_signature_algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_grant_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_authentication_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duplicate_emails_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_username_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_with_email_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_max_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_token_max_reuse</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_email_as_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remember_me</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_credentials_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_password_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revoke_refresh_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_idle_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_max_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_managed_access</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_email</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Realm.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_login</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_code_lifespan_user_action</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_signature_algorithm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_grant_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_authentication_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duplicate_emails_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_username_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internal_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalization</span><span class="p">:</span> <span class="n">Union[RealmInternationalizationArgs, Mapping[str, Any], Awaitable[Union[RealmInternationalizationArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_with_email_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_idle_timeout</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offline_session_max_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_token_max_reuse</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_email_as_username</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remember_me</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_credentials_flow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_password_allowed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revoke_refresh_token</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="p">:</span> <span class="n">Union[RealmSecurityDefensesArgs, Mapping[str, Any], Awaitable[Union[RealmSecurityDefensesArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_server</span><span class="p">:</span> <span class="n">Union[RealmSmtpServerArgs, Mapping[str, Any], Awaitable[Union[RealmSmtpServerArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_required</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_idle_timeout</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sso_session_max_lifespan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_managed_access</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_email</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.realm.Realm<a class="headerlink" href="#pulumi_keycloak.Realm.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Realm resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>browser_flow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which flow should be used for BrowserFlow</p></li>
 <li><p><strong>client_authentication_flow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which flow should be used for ClientAuthenticationFlow</p></li>
@@ -1537,54 +1439,56 @@ and notUsername(undefined)”</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>internationalization</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultLocale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">supportedLocales</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-</ul>
-<p>The <strong>security_defenses</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bruteForceDetection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureResetTimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxFailureWaitSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLoginFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumQuickLoginWaitSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permanentLockout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">quickLoginCheckMilliSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitIncrementSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentSecurityPolicyReportOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">strictTransportSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xContentTypeOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xFrameOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xRobotsTag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xXssProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-<p>The <strong>smtp_server</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">envelopeFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">from</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replyTo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replyToDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">starttls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.browser_flow">
+<em class="property">property </em><code class="sig-name descname">browser_flow</code><a class="headerlink" href="#pulumi_keycloak.Realm.browser_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which flow should be used for BrowserFlow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.client_authentication_flow">
+<em class="property">property </em><code class="sig-name descname">client_authentication_flow</code><a class="headerlink" href="#pulumi_keycloak.Realm.client_authentication_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which flow should be used for ClientAuthenticationFlow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.direct_grant_flow">
+<em class="property">property </em><code class="sig-name descname">direct_grant_flow</code><a class="headerlink" href="#pulumi_keycloak.Realm.direct_grant_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which flow should be used for DirectGrantFlow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.docker_authentication_flow">
+<em class="property">property </em><code class="sig-name descname">docker_authentication_flow</code><a class="headerlink" href="#pulumi_keycloak.Realm.docker_authentication_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which flow should be used for DockerAuthenticationFlow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.password_policy">
+<em class="property">property </em><code class="sig-name descname">password_policy</code><a class="headerlink" href="#pulumi_keycloak.Realm.password_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>String that represents the passwordPolicies that are in place. Each policy is separated with ” and “. Supported policies
+can be found in the server-info providers page. example: “upperCase(1) and length(8) and forceExpiredPasswordChange(365)
+and notUsername(undefined)”</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.registration_flow">
+<em class="property">property </em><code class="sig-name descname">registration_flow</code><a class="headerlink" href="#pulumi_keycloak.Realm.registration_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which flow should be used for RegistrationFlow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.reset_credentials_flow">
+<em class="property">property </em><code class="sig-name descname">reset_credentials_flow</code><a class="headerlink" href="#pulumi_keycloak.Realm.reset_credentials_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which flow should be used for ResetCredentialsFlow</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.Realm.ssl_required">
+<em class="property">property </em><code class="sig-name descname">ssl_required</code><a class="headerlink" href="#pulumi_keycloak.Realm.ssl_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>SSL Required: Values can be ‘none’, ‘external’ or ‘all’.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1627,7 +1531,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.RealmEvents">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">RealmEvents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_details_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_event_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_listeners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.RealmEvents" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">RealmEvents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_details_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_event_types</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_expiration</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_listeners</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.RealmEvents" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for managing Realm Events settings within Keycloak.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
@@ -1666,14 +1570,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.RealmEvents.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_details_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_event_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_listeners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.RealmEvents.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_details_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_events_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_event_types</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_expiration</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events_listeners</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.realm_events.RealmEvents<a class="headerlink" href="#pulumi_keycloak.RealmEvents.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RealmEvents resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -1720,20 +1624,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.RequiredAction">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">RequiredAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.RequiredAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">RequiredAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_action</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.RequiredAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a RequiredAction resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="py method">
 <dt id="pulumi_keycloak.RequiredAction.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.RequiredAction.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_action</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.required_action.RequiredAction<a class="headerlink" href="#pulumi_keycloak.RequiredAction.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RequiredAction resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -1780,7 +1684,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.Role">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">composite_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Role" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">composite_roles</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing roles within Keycloak.</p>
 <p>Roles allow you define privileges within Keycloak and map them to users
 and groups.</p>
@@ -1863,14 +1767,14 @@ this list.</p></li>
 </dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.Role.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">composite_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.Role.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">composite_roles</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.role.Role<a class="headerlink" href="#pulumi_keycloak.Role.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -1917,7 +1821,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.User">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verified</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">federated_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verified</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">federated_identities</span><span class="p">:</span> <span class="n">Union[List[Union[UserFederatedIdentityArgs, Mapping[str, Any], Awaitable[Union[UserFederatedIdentityArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[UserFederatedIdentityArgs, Mapping[str, Any], Awaitable[Union[UserFederatedIdentityArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_password</span><span class="p">:</span> <span class="n">Union[UserInitialPasswordArgs, Mapping[str, Any], Awaitable[Union[UserInitialPasswordArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing Users within Keycloak.</p>
 <p>This resource was created primarily to enable the acceptance tests for the <code class="docutils literal notranslate"><span class="pre">Group</span></code> resource.
 Creating users within Keycloak is not recommended. Instead, users should be federated from external sources
@@ -1939,10 +1843,10 @@ by configuring user federation providers or identity providers.</p>
     <span class="n">email</span><span class="o">=</span><span class="s2">&quot;alice@domain.com&quot;</span><span class="p">,</span>
     <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
-    <span class="n">initial_password</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;temporary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;some password&quot;</span><span class="p">,</span>
-    <span class="p">},</span>
+    <span class="n">initial_password</span><span class="o">=</span><span class="n">keycloak</span><span class="o">.</span><span class="n">UserInitialPasswordArgs</span><span class="p">(</span>
+        <span class="n">temporary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;some password&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
     <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;Aliceberg&quot;</span><span class="p">,</span>
     <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;alice&quot;</span><span class="p">)</span>
@@ -1974,42 +1878,20 @@ by configuring user federation providers or identity providers.</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>federated_identities</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-<p>The <strong>initial_password</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">temporary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <dl class="py method">
 <dt id="pulumi_keycloak.User.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verified</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">federated_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.User.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_verified</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">federated_identities</span><span class="p">:</span> <span class="n">Union[List[Union[UserFederatedIdentityArgs, Mapping[str, Any], Awaitable[Union[UserFederatedIdentityArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[UserFederatedIdentityArgs, Mapping[str, Any], Awaitable[Union[UserFederatedIdentityArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_password</span><span class="p">:</span> <span class="n">Union[UserInitialPasswordArgs, Mapping[str, Any], Awaitable[Union[UserInitialPasswordArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.user.User<a class="headerlink" href="#pulumi_keycloak.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>federated_identities</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-<p>The <strong>initial_password</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">temporary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -2052,20 +1934,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.UserRoles">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">UserRoles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserRoles" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">UserRoles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserRoles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a UserRoles resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="py method">
 <dt id="pulumi_keycloak.UserRoles.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserRoles.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.user_roles.UserRoles<a class="headerlink" href="#pulumi_keycloak.UserRoles.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserRoles resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 </ul>
 </dd>
@@ -2112,7 +1994,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">UserTemplateImporterIdentityProviderMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">UserTemplateImporterIdentityProviderMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a UserTemplateImporterIdentityProviderMapper resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -2120,40 +2002,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] name: IDP Mapper Name
 :param pulumi.Input[str] realm: Realm Name
 :param pulumi.Input[str] template: Username For Template Import</p>
-<dl class="py attribute">
-<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.identity_provider_alias">
-<code class="sig-name descname">identity_provider_alias</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Alias</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.name">
-<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>IDP Mapper Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.realm">
-<code class="sig-name descname">realm</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.realm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Realm Name</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.template">
-<code class="sig-name descname">template</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.template" title="Permalink to this definition">¶</a></dt>
-<dd><p>Username For Template Import</p>
-</dd></dl>
-
 <dl class="py method">
 <dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity_provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.user_template_importer_identity_provider_mapper.UserTemplateImporterIdentityProviderMapper<a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserTemplateImporterIdentityProviderMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>identity_provider_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IDP Alias</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IDP Mapper Name</p></li>
@@ -2162,6 +2020,30 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.identity_provider_alias">
+<em class="property">property </em><code class="sig-name descname">identity_provider_alias</code><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.identity_provider_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Alias</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDP Mapper Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.realm">
+<em class="property">property </em><code class="sig-name descname">realm</code><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.realm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realm Name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.template">
+<em class="property">property </em><code class="sig-name descname">template</code><a class="headerlink" href="#pulumi_keycloak.UserTemplateImporterIdentityProviderMapper.template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username For Template Import</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2204,25 +2086,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_keycloak.get_group">
-<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.get_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.get_group.AwaitableGetGroupResult<a class="headerlink" href="#pulumi_keycloak.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch properties of a Keycloak group for
 usage with other resources, such as <code class="docutils literal notranslate"><span class="pre">GroupRoles</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
-
-<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
-    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
-<span class="n">offline_access</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;offline_access&quot;</span><span class="p">,</span>
-    <span class="n">realm_id</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">group</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
-    <span class="n">realm_id</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">group_roles</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">GroupRoles</span><span class="p">(</span><span class="s2">&quot;groupRoles&quot;</span><span class="p">,</span>
-    <span class="n">group_id</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="n">offline_access</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
-</pre></div>
-</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this group exists within.</p></li>
@@ -2237,7 +2103,7 @@ other resources supported by this provider.</p></li>
 
 <dl class="py function">
 <dt id="pulumi_keycloak.get_realm">
-<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_realm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalizations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.get_realm" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_realm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_html</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internationalizations</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>Union<span class="p">[</span>GetRealmInternationalizationArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_defenses</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>Union<span class="p">[</span>GetRealmSecurityDefenseArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smtp_servers</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>Union<span class="p">[</span>GetRealmSmtpServerArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.get_realm.AwaitableGetRealmResult<a class="headerlink" href="#pulumi_keycloak.get_realm" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch properties of a Keycloak realm for
 usage with other resources.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -2252,59 +2118,11 @@ usage with other resources.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">realm</span></code> - (Required) The realm name.</p></li>
 </ul>
 <p>See the docs for the <code class="docutils literal notranslate"><span class="pre">Realm</span></code> resource for details on the exported attributes.</p>
-<p>The <strong>internationalizations</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultLocale</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">supportedLocales</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-</ul>
-<p>The <strong>security_defenses</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bruteForceDetections</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureResetTimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxFailureWaitSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLoginFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumQuickLoginWaitSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permanentLockout</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">quickLoginCheckMilliSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitIncrementSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentSecurityPolicyReportOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">strictTransportSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xContentTypeOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xFrameOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xRobotsTag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xXssProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-<p>The <strong>smtp_servers</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">auths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">envelopeFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">from</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replyTo</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replyToDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">starttls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_keycloak.get_realm_keys">
-<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_realm_keys</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statuses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.get_realm_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_realm_keys</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithms</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statuses</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.get_realm_keys.AwaitableGetRealmKeysResult<a class="headerlink" href="#pulumi_keycloak.get_realm_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the keys of a realm. Keys can be filtered by algorithm and status.</p>
 <p>Remarks:</p>
 <ul class="simple">
@@ -2322,24 +2140,9 @@ usage with other resources.</p>
 
 <dl class="py function">
 <dt id="pulumi_keycloak.get_role">
-<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.get_role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">get_role</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.get_role.AwaitableGetRoleResult<a class="headerlink" href="#pulumi_keycloak.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch properties of a Keycloak role for
 usage with other resources, such as <code class="docutils literal notranslate"><span class="pre">GroupRoles</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_keycloak</span> <span class="k">as</span> <span class="nn">keycloak</span>
-
-<span class="n">realm</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Realm</span><span class="p">(</span><span class="s2">&quot;realm&quot;</span><span class="p">,</span>
-    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">realm</span><span class="o">=</span><span class="s2">&quot;my-realm&quot;</span><span class="p">)</span>
-<span class="n">offline_access</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;offline_access&quot;</span><span class="p">,</span>
-    <span class="n">realm_id</span><span class="o">=</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">group</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-<span class="n">group_roles</span> <span class="o">=</span> <span class="n">keycloak</span><span class="o">.</span><span class="n">GroupRoles</span><span class="p">(</span><span class="s2">&quot;groupRoles&quot;</span><span class="p">,</span>
-    <span class="n">group_id</span><span class="o">=</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">realm_id</span><span class="o">=</span><span class="n">realm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="n">offline_access</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
-</pre></div>
-</div>
 <p>The following arguments are supported:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">realm_id</span></code> - (Required) The realm this role exists within.</p></li>
