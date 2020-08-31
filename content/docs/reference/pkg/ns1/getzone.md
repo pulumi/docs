@@ -14,6 +14,80 @@ Provides details about a NS1 Zone. Use this if you would simply like to read
 information from NS1 into your configurations. For read/write operations, you
 should use a resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Ns1 = Pulumi.Ns1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Ns1.GetZone.InvokeAsync(new Ns1.GetZoneArgs
+        {
+            Zone = "terraform.example.io",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ns1.LookupZone(ctx, &ns1.LookupZoneArgs{
+			Zone: "terraform.example.io",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_ns1 as ns1
+
+example = ns1.get_zone(zone="terraform.example.io")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as ns1 from "@pulumi/ns1";
+
+// Get details about a NS1 Zone.
+const example = pulumi.output(ns1.getZone({
+    zone: "terraform.example.io",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZone {#using}
@@ -27,7 +101,7 @@ should use a resource.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_zone(</span>additional_primaries=None<span class="p">, </span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zone(</span><span class="nx">additional_primaries</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZoneResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -781,7 +855,7 @@ zone.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
@@ -1083,7 +1157,7 @@ when the zone changes. Default `false`.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.

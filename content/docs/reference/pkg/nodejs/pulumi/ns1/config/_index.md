@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/ns1 | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/ns1 package."
-git_sha: "103e072a9f9d1724a9c8087c1775e7c585d3dbc8"
+git_sha: "b05fe1f54516e631a1db91e8371f8b524adc4141"
 block_external_search_index: true
 ---
 
@@ -11,13 +11,6 @@ block_external_search_index: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 {{< resource-docs-alert "ns1" >}}
-
-
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-ns1` repo](https://github.com/pulumi/pulumi-ns1/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-ns1` repo](https://github.com/terraform-providers/terraform-provider-ns1/issues).
-
 
 
 
@@ -38,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apikey" data-link-title="apikey">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/103e072a9f9d1724a9c8087c1775e7c585d3dbc8/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/config/vars.ts#L12">
         let <strong>apikey</strong>
     </a>
 </h3>
@@ -48,28 +41,28 @@ block_external_search_index: true
 The ns1 API key, this is required
 
 <h3 class="pdoc-module-header" id="enableDdi" data-link-title="enableDdi">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/103e072a9f9d1724a9c8087c1775e7c585d3dbc8/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/config/vars.ts#L13">
         let <strong>enableDdi</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> enableDdi: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;enableDdi&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="endpoint" data-link-title="endpoint">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/103e072a9f9d1724a9c8087c1775e7c585d3dbc8/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/config/vars.ts#L14">
         let <strong>endpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpoint&#34;) || utilities.getEnv(&#34;NS1_ENDPOINT&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ignoreSsl" data-link-title="ignoreSsl">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/103e072a9f9d1724a9c8087c1775e7c585d3dbc8/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/config/vars.ts#L15">
         let <strong>ignoreSsl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> ignoreSsl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;ignoreSsl&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="rateLimitParallelism" data-link-title="rateLimitParallelism">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/103e072a9f9d1724a9c8087c1775e7c585d3dbc8/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/b05fe1f54516e631a1db91e8371f8b524adc4141/sdk/nodejs/config/vars.ts#L16">
         let <strong>rateLimitParallelism</strong>
     </a>
 </h3>

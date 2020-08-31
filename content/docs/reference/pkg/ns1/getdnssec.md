@@ -12,6 +12,95 @@ meta_desc: "Explore the GetDNSSec function of the NS1 package, including example
 
 Provides DNSSEC details about a NS1 Zone.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Ns1 = Pulumi.Ns1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Get DNSSEC details about a NS1 Zone.
+        var exampleZone = new Ns1.Zone("exampleZone", new Ns1.ZoneArgs
+        {
+            Dnssec = true,
+            Zone = "terraform.example.io",
+        });
+        var exampleDNSSec = exampleZone.ZoneName.Apply(zone => Ns1.GetDNSSec.InvokeAsync(new Ns1.GetDNSSecArgs
+        {
+            Zone = zone,
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleZone, err := ns1.NewZone(ctx, "exampleZone", &ns1.ZoneArgs{
+			Dnssec: pulumi.Bool(true),
+			Zone:   pulumi.String("terraform.example.io"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_ns1 as ns1
+
+# Get DNSSEC details about a NS1 Zone.
+example_zone = ns1.Zone("exampleZone",
+    dnssec=True,
+    zone="terraform.example.io")
+example_dns_sec = example_zone.zone.apply(lambda zone: ns1.get_dns_sec(zone=zone))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as ns1 from "@pulumi/ns1";
+
+// Get DNSSEC details about a NS1 Zone.
+const exampleZone = new ns1.Zone("example", {
+    dnssec: true,
+    zone: "terraform.example.io",
+});
+const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
+    zone: zone,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDNSSec {#using}
@@ -25,7 +114,7 @@ Provides DNSSEC details about a NS1 Zone.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_dns_sec(</span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_sec(</span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDNSSecResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -294,7 +383,7 @@ below.
 <a href="#delegation_python" style="color: inherit; text-decoration: inherit;">delegation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegation">Dict[Get<wbr>DNSSec<wbr>Delegation]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegation">Get<wbr>DNSSec<wbr>Delegation</a></span>
     </dt>
     <dd>{{% md %}}(Computed) - Delegation field is documented
 below.
@@ -317,7 +406,7 @@ below.
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnsseckeys">Dict[Get<wbr>DNSSec<wbr>Keys]</a></span>
+        <span class="property-type"><a href="#getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}(Computed) - Keys field is documented below.
 {{% /md %}}</dd>
@@ -489,7 +578,7 @@ below.
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationdnskey">List[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationdnskey">List[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd>
@@ -500,7 +589,7 @@ below.
 <a href="#ds_python" style="color: inherit; text-decoration: inherit;">ds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnssecdelegationd">List[Get<wbr>DNSSec<wbr>Delegation<wbr>D]</a></span>
+        <span class="property-type"><a href="#getdnssecdelegationd">List[Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd>
@@ -729,8 +818,8 @@ below.
 
     <dt class="property-required"
             title="Required">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -951,8 +1040,8 @@ below.
 
     <dt class="property-required"
             title="Required">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1078,7 +1167,7 @@ below.
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdnsseckeysdnskey">List[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey]</a></span>
+        <span class="property-type"><a href="#getdnsseckeysdnskey">List[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
 {{% /md %}}</dd>
@@ -1307,8 +1396,8 @@ below.
 
     <dt class="property-required"
             title="Required">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

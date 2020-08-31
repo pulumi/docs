@@ -15,6 +15,79 @@ Provides a NS1 Data Source resource. This can be used to create, modify, and del
 
 [Datasource Api Doc](https://ns1.com/api#data-sources)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Ns1 = Pulumi.Ns1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Ns1.DataSource("example", new Ns1.DataSourceArgs
+        {
+            Sourcetype = "nsone_v1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ns1.NewDataSource(ctx, "example", &ns1.DataSourceArgs{
+			Sourcetype: pulumi.String("nsone_v1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_ns1 as ns1
+
+example = ns1.DataSource("example", sourcetype="nsone_v1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as ns1 from "@pulumi/ns1";
+
+const example = new ns1.DataSource("example", {
+    sourcetype: "nsone_v1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataSource Resource {#create}
@@ -26,7 +99,7 @@ Provides a NS1 Data Source resource. This can be used to create, modify, and del
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.DataSource">DataSource</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>sourcetype=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.DataSource">DataSource</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sourcetype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +411,7 @@ matching the specification in `config` from /data/sourcetypes.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
@@ -453,7 +526,8 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>sourcetype=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sourcetype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataSource</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -461,7 +535,7 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.DataSource.html">DataSource</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..DataSourceState.html">DataSourceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.DataSource.html">DataSource</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..DataSourceState.html">DataSourceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -696,7 +770,7 @@ matching the specification in `config` from /data/sourcetypes.
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.

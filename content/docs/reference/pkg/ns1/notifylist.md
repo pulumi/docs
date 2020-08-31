@@ -15,6 +15,136 @@ Provides a NS1 Notify List resource. This can be used to create, modify, and del
 
 [NotifyList Api Doc](https://ns1.com/api#notification-lists)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Ns1 = Pulumi.Ns1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nl = new Ns1.NotifyList("nl", new Ns1.NotifyListArgs
+        {
+            Notifications = 
+            {
+                new Ns1.Inputs.NotifyListNotificationArgs
+                {
+                    Config = 
+                    {
+                        { "url", "http://www.mywebhook.com" },
+                    },
+                    Type = "webhook",
+                },
+                new Ns1.Inputs.NotifyListNotificationArgs
+                {
+                    Config = 
+                    {
+                        { "email", "test@test.com" },
+                    },
+                    Type = "email",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ns1.NewNotifyList(ctx, "nl", &ns1.NotifyListArgs{
+			Notifications: ns1.NotifyListNotificationArray{
+				&ns1.NotifyListNotificationArgs{
+					Config: pulumi.StringMap{
+						"url": pulumi.String("http://www.mywebhook.com"),
+					},
+					Type: pulumi.String("webhook"),
+				},
+				&ns1.NotifyListNotificationArgs{
+					Config: pulumi.StringMap{
+						"email": pulumi.String("test@test.com"),
+					},
+					Type: pulumi.String("email"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_ns1 as ns1
+
+nl = ns1.NotifyList("nl", notifications=[
+    ns1.NotifyListNotificationArgs(
+        config={
+            "url": "http://www.mywebhook.com",
+        },
+        type="webhook",
+    ),
+    ns1.NotifyListNotificationArgs(
+        config={
+            "email": "test@test.com",
+        },
+        type="email",
+    ),
+])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as ns1 from "@pulumi/ns1";
+
+const nl = new ns1.NotifyList("nl", {
+    notifications: [
+        {
+            config: {
+                url: "http://www.mywebhook.com",
+            },
+            type: "webhook",
+        },
+        {
+            config: {
+                email: "test@test.com",
+            },
+            type: "email",
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotifyList Resource {#create}
@@ -26,7 +156,7 @@ Provides a NS1 Notify List resource. This can be used to create, modify, and del
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.NotifyList">NotifyList</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.NotifyList">NotifyList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[NotifyListNotificationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,7 +432,7 @@ The NotifyList resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifylistnotification">List[Notify<wbr>List<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#notifylistnotification">List[Notify<wbr>List<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 {{% /md %}}</dd>
@@ -405,7 +535,8 @@ Get an existing NotifyList resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>notifications=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[NotifyListNotificationArgs]]</span> = None<span class="p">) -&gt;</span> NotifyList</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,7 +544,7 @@ Get an existing NotifyList resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.NotifyList.html">NotifyList</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..NotifyListState.html">NotifyListState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.NotifyList.html">NotifyList</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..NotifyListState.html">NotifyListState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -623,7 +754,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifylistnotification">List[Notify<wbr>List<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#notifylistnotification">List[Notify<wbr>List<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 {{% /md %}}</dd>
@@ -680,7 +811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint. 
+    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -709,7 +840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint. 
+    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -738,7 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint. 
+    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -754,7 +885,7 @@ The following state arguments are supported:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Configuration details for the given notifier type.
 {{% /md %}}</dd>
@@ -767,7 +898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint. 
+    <dd>{{% md %}}The type of notifier. Available notifiers are indicated in /notifytypes endpoint.
 {{% /md %}}</dd>
 
 </dl>
