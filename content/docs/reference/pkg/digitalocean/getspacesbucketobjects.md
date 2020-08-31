@@ -14,78 +14,6 @@ meta_desc: "Explore the GetSpacesBucketObjects function of the DigitalOcean pack
 
 The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in a Spaces bucket.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using DigitalOcean = Pulumi.DigitalOcean;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myObjects = Output.Create(DigitalOcean.GetSpacesBucketObjects.InvokeAsync(new DigitalOcean.GetSpacesBucketObjectsArgs
-        {
-            Bucket = "ourcorp",
-            Region = "nyc3",
-        }));
-        var objectInfo = Output.Tuple(myObjects.Apply(myObjects => myObjects.Keys).Length, myObjects.Apply(myObjects => myObjects.Keys)[__index], myObjects, myObjects).Apply(values =>
-        {
-            var length = values.Item1;
-            var keys = values.Item2;
-            var myObjects = values.Item3;
-            var myObjects1 = values.Item4;
-            return "TODO: ForExpression";
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-my_objects = digitalocean.get_spaces_bucket_objects(bucket="ourcorp",
-    region="nyc3")
-object_info = [digitalocean.get_spaces_bucket_object(key=my_objects.keys[__index],
-    bucket=my_objects.bucket,
-    region=my_objects.region) for __index in range(len(my_objects.keys))]
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
-
-const myObjects = digitalocean.getSpacesBucketObjects({
-    bucket: "ourcorp",
-    region: "nyc3",
-});
-const objectInfo = Promise.all([myObjects.then(myObjects => myObjects.keys).length, myObjects.then(myObjects => myObjects.keys)[__index], myObjects, myObjects]).then(([length, keys, myObjects, myObjects1]) => .map(__index => digitalocean.getSpacesBucketObject({
-    key: keys,
-    bucket: myObjects.bucket,
-    region: myObjects1.region,
-})));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetSpacesBucketObjects {#using}
@@ -99,7 +27,7 @@ const objectInfo = Promise.all([myObjects.then(myObjects => myObjects.keys).leng
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_spaces_bucket_objects(</span>bucket=None<span class="p">, </span>delimiter=None<span class="p">, </span>encoding_type=None<span class="p">, </span>max_keys=None<span class="p">, </span>prefix=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spaces_bucket_objects(</span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_keys</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpacesBucketObjectsResult</code></pre></div>
 {{% /choosable %}}
 
 

@@ -43,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "example-1.0.0"
+		_, err := digitalocean.GetImage(ctx, &digitalocean.GetImageArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,7 +104,7 @@ const example1 = pulumi.output(digitalocean.getImage({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_image(</span>id=None<span class="p">, </span>name=None<span class="p">, </span>slug=None<span class="p">, </span>source=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slug</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -150,10 +171,6 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Restrict the search to one of the following categories of images:
-- `all` - All images (whether public or private)
-- `applications` - One-click applications
-- `distributions` - Distributions
-- `user` - (Default) User (private) images
 {{% /md %}}</dd>
 
 </dl>
@@ -205,10 +222,6 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Restrict the search to one of the following categories of images:
-- `all` - All images (whether public or private)
-- `applications` - One-click applications
-- `distributions` - Distributions
-- `user` - (Default) User (private) images
 {{% /md %}}</dd>
 
 </dl>
@@ -260,10 +273,6 @@ The following arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Restrict the search to one of the following categories of images:
-- `all` - All images (whether public or private)
-- `applications` - One-click applications
-- `distributions` - Distributions
-- `user` - (Default) User (private) images
 {{% /md %}}</dd>
 
 </dl>
@@ -315,10 +324,6 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Restrict the search to one of the following categories of images:
-- `all` - All images (whether public or private)
-- `applications` - One-click applications
-- `distributions` - Distributions
-- `user` - (Default) User (private) images
 {{% /md %}}</dd>
 
 </dl>

@@ -14,6 +14,299 @@ Provides a DigitalOcean database firewall resource allowing you to restrict
 connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new database firewall allowing multiple IP addresses
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var postgres_example = new DigitalOcean.DatabaseCluster("postgres-example", new DigitalOcean.DatabaseClusterArgs
+        {
+            Engine = "pg",
+            Version = "11",
+            Size = "db-s-1vcpu-1gb",
+            Region = "nyc1",
+            NodeCount = 1,
+        });
+        var example_fw = new DigitalOcean.DatabaseFirewall("example-fw", new DigitalOcean.DatabaseFirewallArgs
+        {
+            ClusterId = postgres_example.Id,
+            Rules = 
+            {
+                new DigitalOcean.Inputs.DatabaseFirewallRuleArgs
+                {
+                    Type = "ip_addr",
+                    Value = "192.168.1.1",
+                },
+                new DigitalOcean.Inputs.DatabaseFirewallRuleArgs
+                {
+                    Type = "ip_addr",
+                    Value = "192.0.2.0",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitalocean.NewDatabaseCluster(ctx, "postgres_example", &digitalocean.DatabaseClusterArgs{
+			Engine:    pulumi.String("pg"),
+			Version:   pulumi.String("11"),
+			Size:      pulumi.String("db-s-1vcpu-1gb"),
+			Region:    pulumi.String("nyc1"),
+			NodeCount: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = digitalocean.NewDatabaseFirewall(ctx, "example_fw", &digitalocean.DatabaseFirewallArgs{
+			ClusterId: postgres_example.ID(),
+			Rules: digitalocean.DatabaseFirewallRuleArray{
+				&digitalocean.DatabaseFirewallRuleArgs{
+					Type:  pulumi.String("ip_addr"),
+					Value: pulumi.String("192.168.1.1"),
+				},
+				&digitalocean.DatabaseFirewallRuleArgs{
+					Type:  pulumi.String("ip_addr"),
+					Value: pulumi.String("192.0.2.0"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+example_fw = digitalocean.DatabaseFirewall("example-fw",
+    cluster_id=postgres_example.id,
+    rules=[
+        digitalocean.DatabaseFirewallRuleArgs(
+            type="ip_addr",
+            value="192.168.1.1",
+        ),
+        digitalocean.DatabaseFirewallRuleArgs(
+            type="ip_addr",
+            value="192.0.2.0",
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const postgres_example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    version: "11",
+    size: "db-s-1vcpu-1gb",
+    region: "nyc1",
+    nodeCount: 1,
+});
+const example_fw = new digitalocean.DatabaseFirewall("example-fw", {
+    clusterId: postgres_example.id,
+    rules: [
+        {
+            type: "ip_addr",
+            value: "192.168.1.1",
+        },
+        {
+            type: "ip_addr",
+            value: "192.0.2.0",
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+### Create a new database firewall allowing a Droplet
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var web = new DigitalOcean.Droplet("web", new DigitalOcean.DropletArgs
+        {
+            Size = "s-1vcpu-1gb",
+            Image = "centos-7-x64",
+            Region = "nyc3",
+        });
+        var postgres_example = new DigitalOcean.DatabaseCluster("postgres-example", new DigitalOcean.DatabaseClusterArgs
+        {
+            Engine = "pg",
+            Version = "11",
+            Size = "db-s-1vcpu-1gb",
+            Region = "nyc1",
+            NodeCount = 1,
+        });
+        var example_fw = new DigitalOcean.DatabaseFirewall("example-fw", new DigitalOcean.DatabaseFirewallArgs
+        {
+            ClusterId = postgres_example.Id,
+            Rules = 
+            {
+                new DigitalOcean.Inputs.DatabaseFirewallRuleArgs
+                {
+                    Type = "droplet",
+                    Value = web.Id,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		web, err := digitalocean.NewDroplet(ctx, "web", &digitalocean.DropletArgs{
+			Size:   pulumi.String("s-1vcpu-1gb"),
+			Image:  pulumi.String("centos-7-x64"),
+			Region: pulumi.String("nyc3"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = digitalocean.NewDatabaseCluster(ctx, "postgres_example", &digitalocean.DatabaseClusterArgs{
+			Engine:    pulumi.String("pg"),
+			Version:   pulumi.String("11"),
+			Size:      pulumi.String("db-s-1vcpu-1gb"),
+			Region:    pulumi.String("nyc1"),
+			NodeCount: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = digitalocean.NewDatabaseFirewall(ctx, "example_fw", &digitalocean.DatabaseFirewallArgs{
+			ClusterId: postgres_example.ID(),
+			Rules: digitalocean.DatabaseFirewallRuleArray{
+				&digitalocean.DatabaseFirewallRuleArgs{
+					Type:  pulumi.String("droplet"),
+					Value: web.ID(),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web = digitalocean.Droplet("web",
+    size="s-1vcpu-1gb",
+    image="centos-7-x64",
+    region="nyc3")
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+example_fw = digitalocean.DatabaseFirewall("example-fw",
+    cluster_id=postgres_example.id,
+    rules=[digitalocean.DatabaseFirewallRuleArgs(
+        type="droplet",
+        value=web.id,
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const web = new digitalocean.Droplet("web", {
+    size: "s-1vcpu-1gb",
+    image: "centos-7-x64",
+    region: "nyc3",
+});
+const postgres_example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    version: "11",
+    size: "db-s-1vcpu-1gb",
+    region: "nyc1",
+    nodeCount: 1,
+});
+const example_fw = new digitalocean.DatabaseFirewall("example-fw", {
+    clusterId: postgres_example.id,
+    rules: [{
+        type: "droplet",
+        value: web.id,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseFirewall Resource {#create}
@@ -25,7 +318,7 @@ specific Droplets, Kubernetes clusters, or IP addresses.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.DatabaseFirewall">DatabaseFirewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.DatabaseFirewall">DatabaseFirewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseFirewallRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,8 +510,6 @@ The DatabaseFirewall resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#databasefirewallrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Database<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -248,8 +539,6 @@ The DatabaseFirewall resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#databasefirewallrule">[]Database<wbr>Firewall<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -279,8 +568,6 @@ The DatabaseFirewall resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#databasefirewallrule">Database<wbr>Firewall<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -307,11 +594,9 @@ The DatabaseFirewall resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefirewallrule">List[Database<wbr>Firewall<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#databasefirewallrule">List[Database<wbr>Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -412,7 +697,8 @@ Get an existing DatabaseFirewall resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>rules=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseFirewallRuleArgs]]</span> = None<span class="p">) -&gt;</span> DatabaseFirewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -420,7 +706,7 @@ Get an existing DatabaseFirewall resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.DatabaseFirewall.html">DatabaseFirewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..DatabaseFirewallState.html">DatabaseFirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.DatabaseFirewall.html">DatabaseFirewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..DatabaseFirewallState.html">DatabaseFirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -546,8 +832,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasefirewallrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Database<wbr>Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -577,8 +861,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasefirewallrule">[]Database<wbr>Firewall<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -608,8 +890,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasefirewallrule">Database<wbr>Firewall<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -636,11 +916,9 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefirewallrule">List[Database<wbr>Firewall<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#databasefirewallrule">List[Database<wbr>Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule specifying a resource allowed to access the database cluster. The following arguments must be specified:
-- `type` - (Required) The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
-- `value` - (Required) The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -684,7 +962,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -694,7 +973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -733,7 +1013,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -743,7 +1024,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -782,7 +1064,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -792,7 +1075,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -831,7 +1115,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of resource that the firewall rule allows to access the database cluster. The possible values are: `droplet`, `k8s`, `ip_addr`, or `tag`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -841,7 +1126,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

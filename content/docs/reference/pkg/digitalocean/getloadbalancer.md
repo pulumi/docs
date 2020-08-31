@@ -46,7 +46,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := digitalocean.LookupLoadBalancer(ctx, &digitalocean.LookupLoadBalancerArgs{
+			Name: "app",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("lbOutput", example.Ip)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,7 +109,7 @@ export const lbOutput = example.then(example => example.ip);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_load_balancer(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancer(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -720,7 +741,7 @@ The following output properties are available:
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -770,7 +791,7 @@ The following output properties are available:
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerhealthcheck">Dict[Get<wbr>Load<wbr>Balancer<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -851,7 +872,7 @@ The following output properties are available:
 <a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerstickysessions">Dict[Get<wbr>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions]</a></span>
+        <span class="property-type"><a href="#getloadbalancerstickysessions">Get<wbr>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1109,8 +1130,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="entryport_python">
-<a href="#entryport_python" style="color: inherit; text-decoration: inherit;">entry<wbr>Port</a>
+        <span id="entry_port_python">
+<a href="#entry_port_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1119,8 +1140,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="entryprotocol_python">
-<a href="#entryprotocol_python" style="color: inherit; text-decoration: inherit;">entry<wbr>Protocol</a>
+        <span id="entry_protocol_python">
+<a href="#entry_protocol_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1129,8 +1150,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetport_python">
-<a href="#targetport_python" style="color: inherit; text-decoration: inherit;">target<wbr>Port</a>
+        <span id="target_port_python">
+<a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1139,8 +1160,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetprotocol_python">
-<a href="#targetprotocol_python" style="color: inherit; text-decoration: inherit;">target<wbr>Protocol</a>
+        <span id="target_protocol_python">
+<a href="#target_protocol_python" style="color: inherit; text-decoration: inherit;">target_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1149,8 +1170,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tlspassthrough_python">
-<a href="#tlspassthrough_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Passthrough</a>
+        <span id="tls_passthrough_python">
+<a href="#tls_passthrough_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>passthrough</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1415,8 +1436,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="checkintervalseconds_python">
-<a href="#checkintervalseconds_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Seconds</a>
+        <span id="check_interval_seconds_python">
+<a href="#check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1425,8 +1446,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthythreshold_python">
-<a href="#healthythreshold_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
+        <span id="healthy_threshold_python">
+<a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1465,8 +1486,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="responsetimeoutseconds_python">
-<a href="#responsetimeoutseconds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Timeout<wbr>Seconds</a>
+        <span id="response_timeout_seconds_python">
+<a href="#response_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1475,8 +1496,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1621,8 +1642,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cookiename_python">
-<a href="#cookiename_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
+        <span id="cookie_name_python">
+<a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1631,8 +1652,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cookiettlseconds_python">
-<a href="#cookiettlseconds_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Ttl<wbr>Seconds</a>
+        <span id="cookie_ttl_seconds_python">
+<a href="#cookie_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

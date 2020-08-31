@@ -13,7 +13,7 @@ meta_desc: "Explore the GetSpacesBuckets function of the DigitalOcean package, i
 Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results.
 If no filters are specified, all Spaces buckets will be returned.
 
-Note: You can use the `digitalocean..SpacesBucket` data source to
+Note: You can use the `digitalocean.SpacesBucket` data source to
 obtain metadata about a single bucket if you already know its `name` and `region`.
 
 {{% examples %}}
@@ -52,7 +52,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitalocean.GetSpacesBuckets(ctx, &digitalocean.GetSpacesBucketsArgs{
+			Filters: []digitalocean.GetSpacesBucketsFilter{
+				digitalocean.GetSpacesBucketsFilter{
+					Key: "region",
+					Values: []string{
+						"nyc3",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,10 +87,10 @@ Coming soon!
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-nyc3 = digitalocean.get_spaces_buckets(filters=[{
-    "key": "region",
-    "values": ["nyc3"],
-}])
+nyc3 = digitalocean.get_spaces_buckets(filters=[digitalocean.GetSpacesBucketsFilterArgs(
+    key="region",
+    values=["nyc3"],
+)])
 ```
 
 {{% /example %}}
@@ -98,7 +125,7 @@ const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_spaces_buckets(</span>filters=None<span class="p">, </span>sorts=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spaces_buckets(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetSpacesBucketsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetSpacesBucketsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpacesBucketsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -222,7 +249,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspacesbucketsfilter">List[Get<wbr>Spaces<wbr>Buckets<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getspacesbucketsfilter">List[Get<wbr>Spaces<wbr>Buckets<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -234,7 +261,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspacesbucketssort">List[Get<wbr>Spaces<wbr>Buckets<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getspacesbucketssort">List[Get<wbr>Spaces<wbr>Buckets<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -268,7 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getspacesbucketsbucket">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Spaces<wbr>Buckets<wbr>Bucket&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:  
+    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -317,7 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getspacesbucketsbucket">[]Get<wbr>Spaces<wbr>Buckets<wbr>Bucket</a></span>
     </dt>
-    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:  
+    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -366,7 +393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getspacesbucketsbucket">Get<wbr>Spaces<wbr>Buckets<wbr>Bucket[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:  
+    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -415,7 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getspacesbucketsbucket">List[Get<wbr>Spaces<wbr>Buckets<wbr>Bucket]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:  
+    <dd>{{% md %}}A list of Spaces buckets satisfying any `filter` and `sort` criteria. Each bucket has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -488,7 +515,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -498,7 +526,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -508,7 +537,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -518,7 +548,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -535,7 +566,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -545,7 +577,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -555,7 +588,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -565,7 +599,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -582,7 +617,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -592,7 +628,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -602,7 +639,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -612,7 +650,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -629,7 +668,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -639,7 +679,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -649,7 +690,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -659,7 +701,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

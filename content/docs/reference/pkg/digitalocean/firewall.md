@@ -24,7 +24,7 @@ modify, and delete Firewalls.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Firewall">Firewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>inbound_rules=None<span class="p">, </span>name=None<span class="p">, </span>outbound_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">inbound_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallInboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallOutboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,7 +397,7 @@ The `outbound_rule` block is documented below.
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -409,7 +409,7 @@ to the Firewall.
 <a href="#inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -432,7 +432,7 @@ The `inbound_rule` block is documented below.
 <a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -699,7 +699,8 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_at=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>inbound_rules=None<span class="p">, </span>name=None<span class="p">, </span>outbound_rules=None<span class="p">, </span>pending_changes=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">inbound_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallInboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallOutboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">pending_changes</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPendingChangeArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -707,7 +708,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1140,7 +1141,7 @@ that represents when the Firewall was created.
 <a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -1152,7 +1153,7 @@ to the Firewall.
 <a href="#state_inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -1175,7 +1176,7 @@ The `inbound_rule` block is documented below.
 <a href="#state_outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -1187,7 +1188,7 @@ The `outbound_rule` block is documented below.
 <a href="#state_pending_changes_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>changes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpendingchange">List[Firewall<wbr>Pending<wbr>Change]</a></span>
+        <span class="property-type"><a href="#firewallpendingchange">List[Firewall<wbr>Pending<wbr>Change<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An list of object containing the fields, "droplet_id",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -1514,8 +1515,8 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="portrange_python">
-<a href="#portrange_python" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
+        <span id="port_range_python">
+<a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1528,8 +1529,8 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1541,11 +1542,11 @@ inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedropletids_python">
-<a href="#sourcedropletids_python" style="color: inherit; text-decoration: inherit;">source<wbr>Droplet<wbr>Ids</a>
+        <span id="source_droplet_ids_python">
+<a href="#source_droplet_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
@@ -1553,8 +1554,8 @@ the Droplets from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceloadbalanceruids_python">
-<a href="#sourceloadbalanceruids_python" style="color: inherit; text-decoration: inherit;">source<wbr>Load<wbr>Balancer<wbr>Uids</a>
+        <span id="source_load_balancer_uids_python">
+<a href="#source_load_balancer_uids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>load_<wbr>balancer_<wbr>uids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1565,8 +1566,8 @@ of the Load Balancers from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcetags_python">
-<a href="#sourcetags_python" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
+        <span id="source_tags_python">
+<a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1867,8 +1868,8 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1880,11 +1881,11 @@ outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationdropletids_python">
-<a href="#destinationdropletids_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Droplet<wbr>Ids</a>
+        <span id="destination_droplet_ids_python">
+<a href="#destination_droplet_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
@@ -1892,8 +1893,8 @@ the Droplets to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationloadbalanceruids_python">
-<a href="#destinationloadbalanceruids_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
+        <span id="destination_load_balancer_uids_python">
+<a href="#destination_load_balancer_uids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>load_<wbr>balancer_<wbr>uids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1904,8 +1905,8 @@ of the Load Balancers to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationtags_python">
-<a href="#destinationtags_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Tags</a>
+        <span id="destination_tags_python">
+<a href="#destination_tags_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1918,8 +1919,8 @@ traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="portrange_python">
-<a href="#portrange_python" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
+        <span id="port_range_python">
+<a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
