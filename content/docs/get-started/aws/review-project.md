@@ -130,7 +130,7 @@ This Pulumi program creates a new S3 bucket. To inspect your new bucket, you wil
 
 > The difference between logical and physical names is in part due to “auto-naming” which Pulumi does to ensure side-by-side projects and zero-downtime upgrades work seamlessly. It can be disabled if you wish; [read more about auto-naming here](https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming).
 
-Programs can export variables which will be shown in the CLI and recorded for each deployment. In the program you just created the name of the bucket is exported so that we can easily verify our bucket was created with the AWS CLI.
+Programs can export variables which will be shown in the CLI and recorded for each deployment. In the program you just created, the name of the bucket is exported, which makes it easy to verify that your bucket was created.
 
 {{% choosable language javascript %}}
 
@@ -173,6 +173,6 @@ public Output<string> BucketName { get; set; }
 
 {{% /choosable %}}
 
-Next, you will run your first update which will provision your S3 Bucket.
+Next, you will run your first update which will provision your S3 bucket.
 
 {{< get-started-stepper >}}

@@ -46,12 +46,12 @@ $ type nul > site/index.html
 
 {{% /choosable %}}
 
-Once you've created your `index.html` file, let's add some content:
+Once you've created your `index.html` file, add some content to it:
 
 ```html
 <html>
     <body>
-        <h1>Hello Pulumi</h1>
+        <h1>Hello, Pulumi!</h1>
     </body>
 </html>
 ```

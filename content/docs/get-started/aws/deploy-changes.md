@@ -57,7 +57,7 @@ Resources:
 Duration: 6s
 ```
 
-Once the update has completed, rerun the command to list the contents of your bucket.
+Once the update has completed, re-run the command to list the contents of the bucket.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -148,7 +148,7 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 });
 ```
 
-Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
+Next, your `index.html` object will need two changes: an ACL of `public-read` so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
 
 ```typescript
 const bucketObject = new aws.s3.BucketObject("index.html", {
@@ -301,7 +301,7 @@ Do you want to perform this update?
   details
 ```
 
-Select `yes` to deploy all of the updates:
+Select `yes` to deploy both changes:
 
 ```
 Do you want to perform this update? yes

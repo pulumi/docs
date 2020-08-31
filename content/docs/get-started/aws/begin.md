@@ -20,7 +20,7 @@ aliases: [
 ]
 ---
 
-Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is setup correctly.
+Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.
 
 ### Install Pulumi
 

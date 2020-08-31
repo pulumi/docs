@@ -67,6 +67,6 @@ Congratulations! You've successfully provisioned some cloud resources using Pulu
 - Served the `index.html` as a static website.
 - Destroyed the resources you've provisioned.
 
-On the next page we have collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
+On the next page we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 
 {{< get-started-stepper >}}
