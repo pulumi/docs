@@ -13,6 +13,124 @@ meta_desc: "Explore the GetCertificate function of the TLS package, including ex
 Use this data source to get information, such as SHA1 fingerprint or serial number, about the TLS certificates that
 protect an HTTPS website. Note that the certificate chain isn't verified.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Tls = Pulumi.Tls;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleCluster = new Aws.Eks.Cluster("exampleCluster", new Aws.Eks.ClusterArgs
+        {
+        });
+        var exampleCertificate = exampleCluster.Identities.Apply(identities => Tls.GetCertificate.InvokeAsync(new Tls.GetCertificateArgs
+        {
+            Url = identities[0].Oidcs?[0]?.Issuer,
+        }));
+        var exampleOpenIdConnectProvider = new Aws.Iam.OpenIdConnectProvider("exampleOpenIdConnectProvider", new Aws.Iam.OpenIdConnectProviderArgs
+        {
+            ClientIdLists = 
+            {
+                "sts.amazonaws.com",
+            },
+            ThumbprintLists = 
+            {
+                exampleCertificate.Apply(exampleCertificate => exampleCertificate.Certificates[0].Sha1Fingerprint),
+            },
+            Url = exampleCluster.Identities.Apply(identities => identities[0].Oidcs?[0]?.Issuer),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleCluster, err := eks.NewCluster(ctx, "exampleCluster", nil)
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewOpenIdConnectProvider(ctx, "exampleOpenIdConnectProvider", &iam.OpenIdConnectProviderArgs{
+			ClientIdLists: pulumi.StringArray{
+				pulumi.String("sts.amazonaws.com"),
+			},
+			ThumbprintLists: pulumi.StringArray{
+				exampleCertificate.ApplyT(func(exampleCertificate tls.GetCertificateResult) (string, error) {
+					return exampleCertificate.Certificates[0].Sha1Fingerprint, nil
+				}).(pulumi.StringOutput),
+			},
+			Url: pulumi.String(exampleCluster.Identities.ApplyT(func(identities []eks.ClusterIdentity) (string, error) {
+				return identities[0].Oidcs[0].Issuer, nil
+			}).(pulumi.StringOutput)),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_tls as tls
+
+example_cluster = aws.eks.Cluster("exampleCluster")
+example_certificate = example_cluster.identities.apply(lambda identities: tls.get_certificate(url=identities[0]["oidcs"][0]["issuer"]))
+example_open_id_connect_provider = aws.iam.OpenIdConnectProvider("exampleOpenIdConnectProvider",
+    client_id_lists=["sts.amazonaws.com"],
+    thumbprint_lists=[example_certificate.certificates[0].sha1_fingerprint],
+    url=example_cluster.identities[0]["oidcs"][0]["issuer"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as tls from "@pulumi/tls";
+
+const exampleCluster = new aws.eks.Cluster("example", {});
+const exampleCertificate = exampleCluster.identities.apply(identities => tls.getCertificate({
+    url: identities[0].oidcs[0].issuer,
+}, { async: true }));
+const exampleOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("example", {
+    clientIdLists: ["sts.amazonaws.com"],
+    thumbprintLists: [exampleCertificate.certificates[0].sha1Fingerprint],
+    url: exampleCluster.identities[0].oidcs[0].issuer,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCertificate {#using}
@@ -26,7 +144,7 @@ protect an HTTPS website. Note that the certificate chain isn't verified.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificate(</span>url=None<span class="p">, </span>verify_chain=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verify_chain</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -783,8 +901,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="isca_python">
-<a href="#isca_python" style="color: inherit; text-decoration: inherit;">is<wbr>Ca</a>
+        <span id="is_ca_python">
+<a href="#is_ca_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ca</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -803,8 +921,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="notafter_python">
-<a href="#notafter_python" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
+        <span id="not_after_python">
+<a href="#not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -813,8 +931,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="notbefore_python">
-<a href="#notbefore_python" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
+        <span id="not_before_python">
+<a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -823,8 +941,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="publickeyalgorithm_python">
-<a href="#publickeyalgorithm_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Algorithm</a>
+        <span id="public_key_algorithm_python">
+<a href="#public_key_algorithm_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -833,8 +951,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="serialnumber_python">
-<a href="#serialnumber_python" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
+        <span id="serial_number_python">
+<a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -843,8 +961,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="sha1fingerprint_python">
-<a href="#sha1fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
+        <span id="sha1_fingerprint_python">
+<a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -853,8 +971,8 @@ function can be used to convert this base 10 number into other bases, such as he
 
     <dt class="property-required"
             title="Required">
-        <span id="signaturealgorithm_python">
-<a href="#signaturealgorithm_python" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
+        <span id="signature_algorithm_python">
+<a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

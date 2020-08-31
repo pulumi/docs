@@ -22,7 +22,7 @@ meta_desc: "Explore the CertRequest resource of the TLS package, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.CertRequest">CertRequest</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dns_names=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_tls/#pulumi_tls.CertRequest">CertRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[List[CertRequestSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -448,7 +448,7 @@ in `private_key_pem`.
 <a href="#subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certrequestsubject">List[Cert<wbr>Request<wbr>Subject]</a></span>
+        <span class="property-type"><a href="#certrequestsubject">List[Cert<wbr>Request<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -629,7 +629,8 @@ Get an existing CertRequest resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cert_request_pem=None<span class="p">, </span>dns_names=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cert_request_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[List[CertRequestSubjectArgs]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> CertRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -637,7 +638,7 @@ Get an existing CertRequest resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.CertRequest.html">CertRequest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls..CertRequestState.html">CertRequestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.CertRequest.html">CertRequest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls..CertRequestState.html">CertRequestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1063,7 +1064,7 @@ in `private_key_pem`.
 <a href="#state_subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certrequestsubject">List[Cert<wbr>Request<wbr>Subject]</a></span>
+        <span class="property-type"><a href="#certrequestsubject">List[Cert<wbr>Request<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.
@@ -1406,8 +1407,8 @@ a nested configuration block whose structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1446,8 +1447,8 @@ a nested configuration block whose structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationalunit_python">
-<a href="#organizationalunit_python" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
+        <span id="organizational_unit_python">
+<a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1456,8 +1457,8 @@ a nested configuration block whose structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="postalcode_python">
-<a href="#postalcode_python" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
+        <span id="postal_code_python">
+<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1476,8 +1477,8 @@ a nested configuration block whose structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serialnumber_python">
-<a href="#serialnumber_python" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
+        <span id="serial_number_python">
+<a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1486,8 +1487,8 @@ a nested configuration block whose structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="streetaddresses_python">
-<a href="#streetaddresses_python" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
+        <span id="street_addresses_python">
+<a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
