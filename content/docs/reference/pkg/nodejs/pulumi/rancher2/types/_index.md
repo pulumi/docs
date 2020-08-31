@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/rancher2 | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/rancher2 package."
-git_sha: "4519f489c7724935dc531af65967c19f54b2e09a"
+git_sha: "3d3c8ee3aa8ecfc3c95624965206207d62ea5087"
 block_external_search_index: true
 ---
 

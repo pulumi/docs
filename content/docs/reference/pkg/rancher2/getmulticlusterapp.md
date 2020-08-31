@@ -38,7 +38,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupMultiClusterApp(ctx, &rancher2.LookupMultiClusterAppArgs{
+			Name: "foo",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,7 +98,7 @@ const foo = pulumi.output(rancher2.getMultiClusterApp({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_multi_cluster_app(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_multi_cluster_app(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMultiClusterAppResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -709,7 +729,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -753,7 +773,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1035,7 +1055,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1177,8 +1197,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1373,8 +1393,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="appid_python">
-<a href="#appid_python" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+        <span id="app_id_python">
+<a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1383,8 +1403,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthstate_python">
-<a href="#healthstate_python" style="color: inherit; text-decoration: inherit;">health<wbr>State</a>
+        <span id="health_state_python">
+<a href="#health_state_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1489,11 +1509,11 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rollingupdate_python">
-<a href="#rollingupdate_python" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
+        <span id="rolling_update_python">
+<a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmulticlusterappupgradestrategyrollingupdate">Dict[Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update]</a></span>
+        <span class="property-type"><a href="#getmulticlusterappupgradestrategyrollingupdate">Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1605,8 +1625,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchsize_python">
-<a href="#batchsize_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
+        <span id="batch_size_python">
+<a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

@@ -38,7 +38,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupNodeTemplate(ctx, &rancher2.LookupNodeTemplateArgs{
+			Name: "foo",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,7 +98,7 @@ const foo = pulumi.output(rancher2.getNodeTemplate({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_node_template(</span>name=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_node_template(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodeTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -753,7 +773,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Template object (map)
 {{% /md %}}</dd>
@@ -797,7 +817,7 @@ The following output properties are available:
 <a href="#engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine environment for the node template (string)
 {{% /md %}}</dd>
@@ -830,7 +850,7 @@ The following output properties are available:
 <a href="#engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine label for the node template (string)
 {{% /md %}}</dd>
@@ -841,7 +861,7 @@ The following output properties are available:
 <a href="#engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine options for the node template (map)
 {{% /md %}}</dd>
@@ -885,7 +905,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Template object (map)
 {{% /md %}}</dd>

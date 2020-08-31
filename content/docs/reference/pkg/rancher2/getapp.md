@@ -40,7 +40,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "<namespace_name>"
+		_, err := rancher2.LookupApp(ctx, &rancher2.LookupAppArgs{
+			Name:            "foo",
+			ProjectId:       "<project_id>",
+			TargetNamespace: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,7 +107,7 @@ const rancher2App = pulumi.output(rancher2.getApp({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_app(</span>annotations=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>target_namespace=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_app(</span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAppResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -292,7 +315,7 @@ The following arguments are supported:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for the catalog (map)
 {{% /md %}}</dd>
@@ -808,7 +831,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for the catalog (map)
 {{% /md %}}</dd>
@@ -819,7 +842,7 @@ The following output properties are available:
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Answers for the app (map)
 {{% /md %}}</dd>
@@ -874,7 +897,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for the catalog (map)
 {{% /md %}}</dd>

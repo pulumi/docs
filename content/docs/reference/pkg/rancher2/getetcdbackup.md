@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupEtcdBackup(ctx, &rancher2.LookupEtcdBackupArgs{
+			ClusterId: "<CLUSTER_ID>",
+			Name:      "foo",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,7 +102,7 @@ const foo = pulumi.output(rancher2.getEtcdBackup({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_etcd_backup(</span>cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_etcd_backup(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEtcdBackupResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -555,7 +576,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Etcd Backup object (map)
 {{% /md %}}</dd>
@@ -566,7 +587,7 @@ The following output properties are available:
 <a href="#backup_config_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getetcdbackupbackupconfig">Dict[Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getetcdbackupbackupconfig">Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Backup config for etcd backup (list maxitems:1)
 {{% /md %}}</dd>
@@ -609,7 +630,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Etcd Backup object (map)
 {{% /md %}}</dd>
@@ -860,8 +881,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="intervalhours_python">
-<a href="#intervalhours_python" style="color: inherit; text-decoration: inherit;">interval<wbr>Hours</a>
+        <span id="interval_hours_python">
+<a href="#interval_hours_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -880,18 +901,18 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupconfig_python">
-<a href="#s3backupconfig_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Config</a>
+        <span id="s3_backup_config_python">
+<a href="#s3_backup_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getetcdbackupbackupconfigs3backupconfig">Dict[Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getetcdbackupbackupconfigs3backupconfig">Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="safetimestamp_python">
-<a href="#safetimestamp_python" style="color: inherit; text-decoration: inherit;">safe<wbr>Timestamp</a>
+        <span id="safe_timestamp_python">
+<a href="#safe_timestamp_python" style="color: inherit; text-decoration: inherit;">safe_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1156,8 +1177,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1186,8 +1207,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customca_python">
-<a href="#customca_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Ca</a>
+        <span id="custom_ca_python">
+<a href="#custom_ca_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ca</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

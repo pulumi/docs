@@ -12,6 +12,75 @@ meta_desc: "Explore the NodePool resource of the Rancher 2 package, including ex
 
 Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 RKE Cluster 
+const foo_custom = new rancher2.Cluster("foo-custom", {
+    description: "Foo rancher2 custom cluster",
+    kind: "rke",
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+    },
+});
+// Create a new rancher2 Cloud Credential
+const fooCloudCredential = new rancher2.CloudCredential("foo", {
+    amazonec2CredentialConfig: {
+        accessKey: "XXXXXXXXXXXXXXXXXXXX",
+        secretKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    },
+    description: "Terraform cloudCredential acceptance test",
+});
+// Create a new rancher2 Node Template
+const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
+    amazonec2Config: {
+        ami: "<AMI_ID>",
+        region: "<REGION>",
+        securityGroups: ["<AWS_SECURITY_GROUP>"],
+        subnetId: "<SUBNET_ID>",
+        vpcId: "<VPC_ID>",
+        zone: "<ZONE>",
+    },
+    cloudCredentialId: fooCloudCredential.id,
+    description: "foo test",
+});
+// Create a new rancher2 Node Pool
+const fooNodePool = new rancher2.NodePool("foo", {
+    clusterId: foo_custom.id,
+    controlPlane: true,
+    etcd: true,
+    hostnamePrefix: "foo-cluster-0",
+    nodeTemplateId: fooNodeTemplate.id,
+    quantity: 1,
+    worker: true,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodePool Resource {#create}
@@ -23,7 +92,7 @@ Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodePool">NodePool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>control_plane=None<span class="p">, </span>delete_not_ready_after_secs=None<span class="p">, </span>etcd=None<span class="p">, </span>hostname_prefix=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>node_taints=None<span class="p">, </span>node_template_id=None<span class="p">, </span>quantity=None<span class="p">, </span>worker=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodePool">NodePool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">control_plane</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_not_ready_after_secs</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">etcd</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[List[NodePoolNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">node_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -651,7 +720,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
@@ -695,7 +764,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
@@ -717,7 +786,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodetaint">List[Node<wbr>Pool<wbr>Node<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#nodepoolnodetaint">List[Node<wbr>Pool<wbr>Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
@@ -842,7 +911,8 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>control_plane=None<span class="p">, </span>delete_not_ready_after_secs=None<span class="p">, </span>etcd=None<span class="p">, </span>hostname_prefix=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>node_taints=None<span class="p">, </span>node_template_id=None<span class="p">, </span>quantity=None<span class="p">, </span>worker=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">control_plane</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">delete_not_ready_after_secs</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">etcd</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[List[NodePoolNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">node_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -850,7 +920,7 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodePool.html">NodePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodePoolState.html">NodePoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodePool.html">NodePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodePoolState.html">NodePoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1379,7 +1449,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
@@ -1445,7 +1515,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
@@ -1467,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodetaint">List[Node<wbr>Pool<wbr>Node<wbr>Taint]</a></span>
+        <span class="property-type"><a href="#nodepoolnodetaint">List[Node<wbr>Pool<wbr>Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
@@ -1726,8 +1796,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeadded_python">
-<a href="#timeadded_python" style="color: inherit; text-decoration: inherit;">time<wbr>Added</a>
+        <span id="time_added_python">
+<a href="#time_added_python" style="color: inherit; text-decoration: inherit;">time_<wbr>added</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

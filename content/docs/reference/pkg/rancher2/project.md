@@ -61,7 +61,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewProject(ctx, "foo", &rancher2.ProjectArgs{
+			ClusterId: pulumi.String("<CLUSTER_ID>"),
+			ContainerResourceLimit: &rancher2.ProjectContainerResourceLimitArgs{
+				LimitsCpu:      pulumi.String("20m"),
+				LimitsMemory:   pulumi.String("20Mi"),
+				RequestsCpu:    pulumi.String("1m"),
+				RequestsMemory: pulumi.String("1Mi"),
+			},
+			ResourceQuota: &rancher2.ProjectResourceQuotaArgs{
+				NamespaceDefaultLimit: &rancher2.ProjectResourceQuotaNamespaceDefaultLimitArgs{
+					LimitsCpu:       pulumi.String("2000m"),
+					LimitsMemory:    pulumi.String("500Mi"),
+					RequestsStorage: pulumi.String("1Gi"),
+				},
+				ProjectLimit: &rancher2.ProjectResourceQuotaProjectLimitArgs{
+					LimitsCpu:       pulumi.String("2000m"),
+					LimitsMemory:    pulumi.String("2000Mi"),
+					RequestsStorage: pulumi.String("2Gi"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,24 +110,24 @@ import pulumi_rancher2 as rancher2
 # Create a new rancher2 Project
 foo = rancher2.Project("foo",
     cluster_id="<CLUSTER_ID>",
-    container_resource_limit={
-        "limitsCpu": "20m",
-        "limitsMemory": "20Mi",
-        "requestsCpu": "1m",
-        "requestsMemory": "1Mi",
-    },
-    resource_quota={
-        "namespaceDefaultLimit": {
-            "limitsCpu": "2000m",
-            "limitsMemory": "500Mi",
-            "requestsStorage": "1Gi",
-        },
-        "projectLimit": {
-            "limitsCpu": "2000m",
-            "limitsMemory": "2000Mi",
-            "requestsStorage": "2Gi",
-        },
-    })
+    container_resource_limit=rancher2.ProjectContainerResourceLimitArgs(
+        limits_cpu="20m",
+        limits_memory="20Mi",
+        requests_cpu="1m",
+        requests_memory="1Mi",
+    ),
+    resource_quota=rancher2.ProjectResourceQuotaArgs(
+        namespace_default_limit=rancher2.ProjectResourceQuotaNamespaceDefaultLimitArgs(
+            limits_cpu="2000m",
+            limits_memory="500Mi",
+            requests_storage="1Gi",
+        ),
+        project_limit=rancher2.ProjectResourceQuotaProjectLimitArgs(
+            limits_cpu="2000m",
+            limits_memory="2000Mi",
+            requests_storage="2Gi",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -138,7 +176,7 @@ const foo = new rancher2.Project("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Project">Project</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>enable_project_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pod_security_policy_template_id=None<span class="p">, </span>project_monitoring_input=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[ProjectContainerResourceLimitArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_project_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ProjectProjectMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[ProjectResourceQuotaArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -711,7 +749,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
@@ -722,7 +760,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
 {{% /md %}}</dd>
@@ -755,7 +793,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
@@ -788,7 +826,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#project_monitoring_input_python" style="color: inherit; text-decoration: inherit;">project_<wbr>monitoring_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
 {{% /md %}}</dd>
@@ -799,7 +837,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
@@ -913,7 +951,8 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>enable_project_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pod_security_policy_template_id=None<span class="p">, </span>project_monitoring_input=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[ProjectContainerResourceLimitArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_project_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ProjectProjectMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[ProjectResourceQuotaArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -921,7 +960,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectState.html">ProjectState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectState.html">ProjectState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1417,7 +1456,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
@@ -1439,7 +1478,7 @@ The following state arguments are supported:
 <a href="#state_container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
 {{% /md %}}</dd>
@@ -1472,7 +1511,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
@@ -1505,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_project_monitoring_input_python" style="color: inherit; text-decoration: inherit;">project_<wbr>monitoring_<wbr>input</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
 {{% /md %}}</dd>
@@ -1516,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
@@ -1720,8 +1759,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1731,8 +1770,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1742,8 +1781,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1753,8 +1792,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1880,7 +1919,7 @@ The following state arguments are supported:
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/value answers for monitor input (map)
 {{% /md %}}</dd>
@@ -2010,22 +2049,22 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="namespacedefaultlimit_python">
-<a href="#namespacedefaultlimit_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Default<wbr>Limit</a>
+        <span id="namespace_default_limit_python">
+<a href="#namespace_default_limit_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>default_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Dict[Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="projectlimit_python">
-<a href="#projectlimit_python" style="color: inherit; text-decoration: inherit;">project<wbr>Limit</a>
+        <span id="project_limit_python">
+<a href="#project_limit_python" style="color: inherit; text-decoration: inherit;">project_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Dict[Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
 {{% /md %}}</dd>
@@ -2504,8 +2543,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configmaps_python">
-<a href="#configmaps_python" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+        <span id="config_maps_python">
+<a href="#config_maps_python" style="color: inherit; text-decoration: inherit;">config_<wbr>maps</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2515,8 +2554,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2526,8 +2565,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2537,8 +2576,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="persistentvolumeclaims_python">
-<a href="#persistentvolumeclaims_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+        <span id="persistent_volume_claims_python">
+<a href="#persistent_volume_claims_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2559,8 +2598,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationcontrollers_python">
-<a href="#replicationcontrollers_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+        <span id="replication_controllers_python">
+<a href="#replication_controllers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>controllers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2570,8 +2609,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2581,8 +2620,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2592,8 +2631,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsstorage_python">
-<a href="#requestsstorage_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+        <span id="requests_storage_python">
+<a href="#requests_storage_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2624,8 +2663,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesloadbalancers_python">
-<a href="#servicesloadbalancers_python" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+        <span id="services_load_balancers_python">
+<a href="#services_load_balancers_python" style="color: inherit; text-decoration: inherit;">services_<wbr>load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2635,8 +2674,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesnodeports_python">
-<a href="#servicesnodeports_python" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+        <span id="services_node_ports_python">
+<a href="#services_node_ports_python" style="color: inherit; text-decoration: inherit;">services_<wbr>node_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3118,8 +3157,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configmaps_python">
-<a href="#configmaps_python" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+        <span id="config_maps_python">
+<a href="#config_maps_python" style="color: inherit; text-decoration: inherit;">config_<wbr>maps</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3129,8 +3168,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3140,8 +3179,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3151,8 +3190,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="persistentvolumeclaims_python">
-<a href="#persistentvolumeclaims_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+        <span id="persistent_volume_claims_python">
+<a href="#persistent_volume_claims_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3173,8 +3212,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationcontrollers_python">
-<a href="#replicationcontrollers_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+        <span id="replication_controllers_python">
+<a href="#replication_controllers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>controllers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3184,8 +3223,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3195,8 +3234,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3206,8 +3245,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsstorage_python">
-<a href="#requestsstorage_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+        <span id="requests_storage_python">
+<a href="#requests_storage_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3238,8 +3277,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesloadbalancers_python">
-<a href="#servicesloadbalancers_python" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+        <span id="services_load_balancers_python">
+<a href="#services_load_balancers_python" style="color: inherit; text-decoration: inherit;">services_<wbr>load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3249,8 +3288,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesnodeports_python">
-<a href="#servicesnodeports_python" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+        <span id="services_node_ports_python">
+<a href="#services_node_ports_python" style="color: inherit; text-decoration: inherit;">services_<wbr>node_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

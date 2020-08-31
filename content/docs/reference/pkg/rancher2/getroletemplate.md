@@ -38,7 +38,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.GetRoleTemplate(ctx, &rancher2.GetRoleTemplateArgs{
+			Name: "foo",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,7 +98,7 @@ const foo = pulumi.output(rancher2.getRoleTemplate({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_role_template(</span>context=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_role_template(</span><span class="nx">context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRoleTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -726,7 +746,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for role template object (map)
 {{% /md %}}</dd>
@@ -813,7 +833,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for role template object (map)
 {{% /md %}}</dd>
@@ -1065,8 +1085,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apigroups_python">
-<a href="#apigroups_python" style="color: inherit; text-decoration: inherit;">api<wbr>Groups</a>
+        <span id="api_groups_python">
+<a href="#api_groups_python" style="color: inherit; text-decoration: inherit;">api_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1075,8 +1095,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nonresourceurls_python">
-<a href="#nonresourceurls_python" style="color: inherit; text-decoration: inherit;">non<wbr>Resource<wbr>Urls</a>
+        <span id="non_resource_urls_python">
+<a href="#non_resource_urls_python" style="color: inherit; text-decoration: inherit;">non_<wbr>resource_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1085,8 +1105,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcenames_python">
-<a href="#resourcenames_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Names</a>
+        <span id="resource_names_python">
+<a href="#resource_names_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

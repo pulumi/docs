@@ -39,7 +39,7 @@ class MyStack : Stack
                 Ami = "<AMI_ID>",
                 Region = "<REGION>",
                 SecretKey = "<AWS_SECRET_KEY>",
-                SecurityGroup = 
+                SecurityGroups = 
                 {
                     "<AWS_SECURITY_GROUP>",
                 },
@@ -57,7 +57,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewNodeTemplate(ctx, "foo", &rancher2.NodeTemplateArgs{
+			Amazonec2Config: &rancher2.NodeTemplateAmazonec2ConfigArgs{
+				AccessKey: pulumi.String("AWS_ACCESS_KEY"),
+				Ami:       pulumi.String("<AMI_ID>"),
+				Region:    pulumi.String("<REGION>"),
+				SecretKey: pulumi.String("<AWS_SECRET_KEY>"),
+				SecurityGroups: pulumi.StringArray{
+					pulumi.String("<AWS_SECURITY_GROUP>"),
+				},
+				SubnetId: pulumi.String("<SUBNET_ID>"),
+				VpcId:    pulumi.String("<VPC_ID>"),
+				Zone:     pulumi.String("<ZONE>"),
+			},
+			Description: pulumi.String("foo test"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,16 +99,16 @@ import pulumi_rancher2 as rancher2
 
 # Create a new rancher2 Node Template up to Rancher 2.1.x
 foo = rancher2.NodeTemplate("foo",
-    amazonec2_config={
-        "access_key": "AWS_ACCESS_KEY",
-        "ami": "<AMI_ID>",
-        "region": "<REGION>",
-        "secret_key": "<AWS_SECRET_KEY>",
-        "securityGroup": ["<AWS_SECURITY_GROUP>"],
-        "subnetId": "<SUBNET_ID>",
-        "vpcId": "<VPC_ID>",
-        "zone": "<ZONE>",
-    },
+    amazonec2_config=rancher2.NodeTemplateAmazonec2ConfigArgs(
+        access_key="AWS_ACCESS_KEY",
+        ami="<AMI_ID>",
+        region="<REGION>",
+        secret_key="<AWS_SECRET_KEY>",
+        security_groups=["<AWS_SECURITY_GROUP>"],
+        subnet_id="<SUBNET_ID>",
+        vpc_id="<VPC_ID>",
+        zone="<ZONE>",
+    ),
     description="foo test")
 ```
 
@@ -118,7 +150,7 @@ const foo = new rancher2.NodeTemplate("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodeTemplate">NodeTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazonec2_config=None<span class="p">, </span>annotations=None<span class="p">, </span>auth_certificate_authority=None<span class="p">, </span>auth_key=None<span class="p">, </span>azure_config=None<span class="p">, </span>cloud_credential_id=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_config=None<span class="p">, </span>driver_id=None<span class="p">, </span>engine_env=None<span class="p">, </span>engine_insecure_registries=None<span class="p">, </span>engine_install_url=None<span class="p">, </span>engine_label=None<span class="p">, </span>engine_opt=None<span class="p">, </span>engine_registry_mirrors=None<span class="p">, </span>engine_storage_driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_config=None<span class="p">, </span>name=None<span class="p">, </span>opennebula_config=None<span class="p">, </span>openstack_config=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>vsphere_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodeTemplate">NodeTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1076,7 +1108,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#amazonec2_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateamazonec2config">Dict[Node<wbr>Template<wbr>Amazonec2Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1087,7 +1119,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
 {{% /md %}}</dd>
@@ -1120,7 +1152,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#azure_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateazureconfig">Dict[Node<wbr>Template<wbr>Azure<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1153,7 +1185,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#digitalocean_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Dict[Node<wbr>Template<wbr>Digitalocean<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1175,7 +1207,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
 {{% /md %}}</dd>
@@ -1208,7 +1240,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
 {{% /md %}}</dd>
@@ -1219,7 +1251,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
 {{% /md %}}</dd>
@@ -1252,7 +1284,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
 {{% /md %}}</dd>
@@ -1263,7 +1295,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#linode_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatelinodeconfig">Dict[Node<wbr>Template<wbr>Linode<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1285,7 +1317,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Dict[Node<wbr>Template<wbr>Opennebula<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1296,7 +1328,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#openstack_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopenstackconfig">Dict[Node<wbr>Template<wbr>Openstack<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1318,7 +1350,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vsphere_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatevsphereconfig">Dict[Node<wbr>Template<wbr>Vsphere<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -1465,7 +1497,8 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>amazonec2_config=None<span class="p">, </span>annotations=None<span class="p">, </span>auth_certificate_authority=None<span class="p">, </span>auth_key=None<span class="p">, </span>azure_config=None<span class="p">, </span>cloud_credential_id=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_config=None<span class="p">, </span>driver=None<span class="p">, </span>driver_id=None<span class="p">, </span>engine_env=None<span class="p">, </span>engine_insecure_registries=None<span class="p">, </span>engine_install_url=None<span class="p">, </span>engine_label=None<span class="p">, </span>engine_opt=None<span class="p">, </span>engine_registry_mirrors=None<span class="p">, </span>engine_storage_driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_config=None<span class="p">, </span>name=None<span class="p">, </span>opennebula_config=None<span class="p">, </span>openstack_config=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>vsphere_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1473,7 +1506,7 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodeTemplate.html">NodeTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodeTemplateState.html">NodeTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodeTemplate.html">NodeTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodeTemplateState.html">NodeTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2398,7 +2431,7 @@ The following state arguments are supported:
 <a href="#state_amazonec2_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateamazonec2config">Dict[Node<wbr>Template<wbr>Amazonec2Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2409,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
 {{% /md %}}</dd>
@@ -2442,7 +2475,7 @@ The following state arguments are supported:
 <a href="#state_azure_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateazureconfig">Dict[Node<wbr>Template<wbr>Azure<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2475,7 +2508,7 @@ The following state arguments are supported:
 <a href="#state_digitalocean_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Dict[Node<wbr>Template<wbr>Digitalocean<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2508,7 +2541,7 @@ The following state arguments are supported:
 <a href="#state_engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
 {{% /md %}}</dd>
@@ -2541,7 +2574,7 @@ The following state arguments are supported:
 <a href="#state_engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
 {{% /md %}}</dd>
@@ -2552,7 +2585,7 @@ The following state arguments are supported:
 <a href="#state_engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
 {{% /md %}}</dd>
@@ -2585,7 +2618,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
 {{% /md %}}</dd>
@@ -2596,7 +2629,7 @@ The following state arguments are supported:
 <a href="#state_linode_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatelinodeconfig">Dict[Node<wbr>Template<wbr>Linode<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2618,7 +2651,7 @@ The following state arguments are supported:
 <a href="#state_opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Dict[Node<wbr>Template<wbr>Opennebula<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2629,7 +2662,7 @@ The following state arguments are supported:
 <a href="#state_openstack_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopenstackconfig">Dict[Node<wbr>Template<wbr>Openstack<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2651,7 +2684,7 @@ The following state arguments are supported:
 <a href="#state_vsphere_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatevsphereconfig">Dict[Node<wbr>Template<wbr>Vsphere<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
 {{% /md %}}</dd>
@@ -2763,7 +2796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2928,7 +2961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3122,7 +3155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3287,7 +3320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3481,7 +3514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3646,7 +3679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3790,8 +3823,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="securitygroups_python">
-<a href="#securitygroups_python" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
+        <span id="security_groups_python">
+<a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3801,8 +3834,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="subnetid_python">
-<a href="#subnetid_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3812,8 +3845,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpcid_python">
-<a href="#vpcid_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3840,13 +3873,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blockdurationminutes_python">
-<a href="#blockdurationminutes_python" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
+        <span id="block_duration_minutes_python">
+<a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3856,8 +3889,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicename_python">
-<a href="#devicename_python" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3867,8 +3900,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptebsvolume_python">
-<a href="#encryptebsvolume_python" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ebs<wbr>Volume</a>
+        <span id="encrypt_ebs_volume_python">
+<a href="#encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>ebs_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3889,8 +3922,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iaminstanceprofile_python">
-<a href="#iaminstanceprofile_python" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+        <span id="iam_instance_profile_python">
+<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3900,8 +3933,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="insecuretransport_python">
-<a href="#insecuretransport_python" style="color: inherit; text-decoration: inherit;">insecure<wbr>Transport</a>
+        <span id="insecure_transport_python">
+<a href="#insecure_transport_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>transport</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3911,8 +3944,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancetype_python">
-<a href="#instancetype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3922,8 +3955,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keypairname_python">
-<a href="#keypairname_python" style="color: inherit; text-decoration: inherit;">keypair<wbr>Name</a>
+        <span id="keypair_name_python">
+<a href="#keypair_name_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3944,8 +3977,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="openports_python">
-<a href="#openports_python" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
+        <span id="open_ports_python">
+<a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3955,8 +3988,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateaddressonly_python">
-<a href="#privateaddressonly_python" style="color: inherit; text-decoration: inherit;">private<wbr>Address<wbr>Only</a>
+        <span id="private_address_only_python">
+<a href="#private_address_only_python" style="color: inherit; text-decoration: inherit;">private_<wbr>address_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3966,8 +3999,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestspotinstance_python">
-<a href="#requestspotinstance_python" style="color: inherit; text-decoration: inherit;">request<wbr>Spot<wbr>Instance</a>
+        <span id="request_spot_instance_python">
+<a href="#request_spot_instance_python" style="color: inherit; text-decoration: inherit;">request_<wbr>spot_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3988,8 +4021,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootsize_python">
-<a href="#rootsize_python" style="color: inherit; text-decoration: inherit;">root<wbr>Size</a>
+        <span id="root_size_python">
+<a href="#root_size_python" style="color: inherit; text-decoration: inherit;">root_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4005,13 +4038,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitygroupreadonly_python">
-<a href="#securitygroupreadonly_python" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Readonly</a>
+        <span id="security_group_readonly_python">
+<a href="#security_group_readonly_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>readonly</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4021,8 +4054,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontoken_python">
-<a href="#sessiontoken_python" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
+        <span id="session_token_python">
+<a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4032,8 +4065,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotprice_python">
-<a href="#spotprice_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
+        <span id="spot_price_python">
+<a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4043,8 +4076,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeypath_python">
-<a href="#sshkeypath_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keypath</a>
+        <span id="ssh_keypath_python">
+<a href="#ssh_keypath_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keypath</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4054,8 +4087,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4076,8 +4109,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useebsoptimizedinstance_python">
-<a href="#useebsoptimizedinstance_python" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instance</a>
+        <span id="use_ebs_optimized_instance_python">
+<a href="#use_ebs_optimized_instance_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4087,8 +4120,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useprivateaddress_python">
-<a href="#useprivateaddress_python" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Address</a>
+        <span id="use_private_address_python">
+<a href="#use_private_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4109,8 +4142,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4162,7 +4195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4173,7 +4206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4393,7 +4426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4455,7 +4488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4466,7 +4499,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4686,7 +4719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4748,7 +4781,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4759,7 +4792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4979,7 +5012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5024,8 +5057,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availabilityset_python">
-<a href="#availabilityset_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Set</a>
+        <span id="availability_set_python">
+<a href="#availability_set_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5041,7 +5074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5052,13 +5085,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customdata_python">
-<a href="#customdata_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
+        <span id="custom_data_python">
+<a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5068,8 +5101,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disksize_python">
-<a href="#disksize_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
+        <span id="disk_size_python">
+<a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5090,8 +5123,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dockerport_python">
-<a href="#dockerport_python" style="color: inherit; text-decoration: inherit;">docker<wbr>Port</a>
+        <span id="docker_port_python">
+<a href="#docker_port_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5113,8 +5146,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="faultdomaincount_python">
-<a href="#faultdomaincount_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain<wbr>Count</a>
+        <span id="fault_domain_count_python">
+<a href="#fault_domain_count_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5145,8 +5178,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manageddisks_python">
-<a href="#manageddisks_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
+        <span id="managed_disks_python">
+<a href="#managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5156,8 +5189,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nopublicip_python">
-<a href="#nopublicip_python" style="color: inherit; text-decoration: inherit;">no<wbr>Public<wbr>Ip</a>
+        <span id="no_public_ip_python">
+<a href="#no_public_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5167,8 +5200,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="openports_python">
-<a href="#openports_python" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
+        <span id="open_ports_python">
+<a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5178,8 +5211,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipaddress_python">
-<a href="#privateipaddress_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5189,8 +5222,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcegroup_python">
-<a href="#resourcegroup_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5211,8 +5244,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5222,8 +5255,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="staticpublicip_python">
-<a href="#staticpublicip_python" style="color: inherit; text-decoration: inherit;">static<wbr>Public<wbr>Ip</a>
+        <span id="static_public_ip_python">
+<a href="#static_public_ip_python" style="color: inherit; text-decoration: inherit;">static_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5233,8 +5266,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagetype_python">
-<a href="#storagetype_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5255,8 +5288,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subnetprefix_python">
-<a href="#subnetprefix_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix</a>
+        <span id="subnet_prefix_python">
+<a href="#subnet_prefix_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5266,19 +5299,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subscriptionid_python">
-<a href="#subscriptionid_python" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatedomaincount_python">
-<a href="#updatedomaincount_python" style="color: inherit; text-decoration: inherit;">update<wbr>Domain<wbr>Count</a>
+        <span id="update_domain_count_python">
+<a href="#update_domain_count_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5288,8 +5321,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useprivateip_python">
-<a href="#useprivateip_python" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
+        <span id="use_private_ip_python">
+<a href="#use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5341,7 +5374,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5502,7 +5535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5663,7 +5696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5818,13 +5851,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstoken_python">
-<a href="#accesstoken_python" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5873,8 +5906,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatenetworking_python">
-<a href="#privatenetworking_python" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
+        <span id="private_networking_python">
+<a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5906,8 +5939,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeyfingerprint_python">
-<a href="#sshkeyfingerprint_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Fingerprint</a>
+        <span id="ssh_key_fingerprint_python">
+<a href="#ssh_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>fingerprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5917,8 +5950,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeypath_python">
-<a href="#sshkeypath_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Path</a>
+        <span id="ssh_key_path_python">
+<a href="#ssh_key_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5928,8 +5961,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5939,8 +5972,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6157,7 +6190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6340,7 +6373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6523,7 +6556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6546,8 +6579,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authorizedusers_python">
-<a href="#authorizedusers_python" style="color: inherit; text-decoration: inherit;">authorized<wbr>Users</a>
+        <span id="authorized_users_python">
+<a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6557,8 +6590,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="createprivateip_python">
-<a href="#createprivateip_python" style="color: inherit; text-decoration: inherit;">create<wbr>Private<wbr>Ip</a>
+        <span id="create_private_ip_python">
+<a href="#create_private_ip_python" style="color: inherit; text-decoration: inherit;">create_<wbr>private_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6568,8 +6601,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dockerport_python">
-<a href="#dockerport_python" style="color: inherit; text-decoration: inherit;">docker<wbr>Port</a>
+        <span id="docker_port_python">
+<a href="#docker_port_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6590,8 +6623,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancetype_python">
-<a href="#instancetype_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6623,8 +6656,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootpass_python">
-<a href="#rootpass_python" style="color: inherit; text-decoration: inherit;">root<wbr>Pass</a>
+        <span id="root_pass_python">
+<a href="#root_pass_python" style="color: inherit; text-decoration: inherit;">root_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6634,8 +6667,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6645,8 +6678,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6667,8 +6700,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stackscriptdata_python">
-<a href="#stackscriptdata_python" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
+        <span id="stackscript_data_python">
+<a href="#stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6678,8 +6711,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="swapsize_python">
-<a href="#swapsize_python" style="color: inherit; text-decoration: inherit;">swap<wbr>Size</a>
+        <span id="swap_size_python">
+<a href="#swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6706,13 +6739,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uaprefix_python">
-<a href="#uaprefix_python" style="color: inherit; text-decoration: inherit;">ua<wbr>Prefix</a>
+        <span id="ua_prefix_python">
+<a href="#ua_prefix_python" style="color: inherit; text-decoration: inherit;">ua_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6753,7 +6786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6969,7 +7002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7185,7 +7218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7401,7 +7434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7417,8 +7450,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="xmlrpcurl_python">
-<a href="#xmlrpcurl_python" style="color: inherit; text-decoration: inherit;">xml<wbr>Rpc<wbr>Url</a>
+        <span id="xml_rpc_url_python">
+<a href="#xml_rpc_url_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>rpc_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7428,8 +7461,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="b2dsize_python">
-<a href="#b2dsize_python" style="color: inherit; text-decoration: inherit;">b2d<wbr>Size</a>
+        <span id="b2d_size_python">
+<a href="#b2d_size_python" style="color: inherit; text-decoration: inherit;">b2d_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7450,8 +7483,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devprefix_python">
-<a href="#devprefix_python" style="color: inherit; text-decoration: inherit;">dev<wbr>Prefix</a>
+        <span id="dev_prefix_python">
+<a href="#dev_prefix_python" style="color: inherit; text-decoration: inherit;">dev_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7461,8 +7494,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablevnc_python">
-<a href="#disablevnc_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Vnc</a>
+        <span id="disable_vnc_python">
+<a href="#disable_vnc_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>vnc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7472,8 +7505,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskresize_python">
-<a href="#diskresize_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Resize</a>
+        <span id="disk_resize_python">
+<a href="#disk_resize_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>resize</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7483,8 +7516,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageid_python">
-<a href="#imageid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7494,8 +7527,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagename_python">
-<a href="#imagename_python" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7505,8 +7538,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageowner_python">
-<a href="#imageowner_python" style="color: inherit; text-decoration: inherit;">image<wbr>Owner</a>
+        <span id="image_owner_python">
+<a href="#image_owner_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7527,8 +7560,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkid_python">
-<a href="#networkid_python" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7538,8 +7571,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkname_python">
-<a href="#networkname_python" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
+        <span id="network_name_python">
+<a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7549,8 +7582,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkowner_python">
-<a href="#networkowner_python" style="color: inherit; text-decoration: inherit;">network<wbr>Owner</a>
+        <span id="network_owner_python">
+<a href="#network_owner_python" style="color: inherit; text-decoration: inherit;">network_<wbr>owner</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7560,8 +7593,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7571,8 +7604,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="templateid_python">
-<a href="#templateid_python" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
+        <span id="template_id_python">
+<a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7668,7 +7701,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7866,7 +7899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7994,7 +8027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8192,7 +8225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8320,7 +8353,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8518,7 +8551,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8607,8 +8640,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="authurl_python">
-<a href="#authurl_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
+        <span id="auth_url_python">
+<a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8618,8 +8651,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="availabilityzone_python">
-<a href="#availabilityzone_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8646,13 +8679,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activetimeout_python">
-<a href="#activetimeout_python" style="color: inherit; text-decoration: inherit;">active<wbr>Timeout</a>
+        <span id="active_timeout_python">
+<a href="#active_timeout_python" style="color: inherit; text-decoration: inherit;">active_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8673,8 +8706,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configdrive_python">
-<a href="#configdrive_python" style="color: inherit; text-decoration: inherit;">config<wbr>Drive</a>
+        <span id="config_drive_python">
+<a href="#config_drive_python" style="color: inherit; text-decoration: inherit;">config_<wbr>drive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8684,8 +8717,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="domainid_python">
-<a href="#domainid_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
+        <span id="domain_id_python">
+<a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8695,8 +8728,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="domainname_python">
-<a href="#domainname_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8706,8 +8739,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointtype_python">
-<a href="#endpointtype_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8717,8 +8750,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flavorid_python">
-<a href="#flavorid_python" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
+        <span id="flavor_id_python">
+<a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8728,8 +8761,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flavorname_python">
-<a href="#flavorname_python" style="color: inherit; text-decoration: inherit;">flavor<wbr>Name</a>
+        <span id="flavor_name_python">
+<a href="#flavor_name_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8739,8 +8772,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="floatingippool_python">
-<a href="#floatingippool_python" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Pool</a>
+        <span id="floating_ip_pool_python">
+<a href="#floating_ip_pool_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8750,8 +8783,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageid_python">
-<a href="#imageid_python" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8761,8 +8794,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagename_python">
-<a href="#imagename_python" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8783,8 +8816,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipversion_python">
-<a href="#ipversion_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8794,8 +8827,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keypairname_python">
-<a href="#keypairname_python" style="color: inherit; text-decoration: inherit;">keypair<wbr>Name</a>
+        <span id="keypair_name_python">
+<a href="#keypair_name_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8805,8 +8838,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="netid_python">
-<a href="#netid_python" style="color: inherit; text-decoration: inherit;">net<wbr>Id</a>
+        <span id="net_id_python">
+<a href="#net_id_python" style="color: inherit; text-decoration: inherit;">net_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8816,8 +8849,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="netname_python">
-<a href="#netname_python" style="color: inherit; text-decoration: inherit;">net<wbr>Name</a>
+        <span id="net_name_python">
+<a href="#net_name_python" style="color: inherit; text-decoration: inherit;">net_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8827,8 +8860,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="novanetwork_python">
-<a href="#novanetwork_python" style="color: inherit; text-decoration: inherit;">nova<wbr>Network</a>
+        <span id="nova_network_python">
+<a href="#nova_network_python" style="color: inherit; text-decoration: inherit;">nova_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8844,13 +8877,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatekeyfile_python">
-<a href="#privatekeyfile_python" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>File</a>
+        <span id="private_key_file_python">
+<a href="#private_key_file_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8860,8 +8893,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secgroups_python">
-<a href="#secgroups_python" style="color: inherit; text-decoration: inherit;">sec<wbr>Groups</a>
+        <span id="sec_groups_python">
+<a href="#sec_groups_python" style="color: inherit; text-decoration: inherit;">sec_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8871,8 +8904,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8882,24 +8915,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantname_python">
-<a href="#tenantname_python" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8915,8 +8937,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userdatafile_python">
-<a href="#userdatafile_python" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>File</a>
+        <span id="tenant_name_python">
+<a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_data_file_python">
+<a href="#user_data_file_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9144,7 +9177,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9221,7 +9254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9276,7 +9309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9287,7 +9320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x. Default `443` (string)
+    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -9492,7 +9525,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9569,7 +9602,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9624,7 +9657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9635,7 +9668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x. Default `443` (string)
+    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -9840,7 +9873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9917,7 +9950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9972,7 +10005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9983,7 +10016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x. Default `443` (string)
+    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -9995,8 +10028,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="boot2dockerurl_python">
-<a href="#boot2dockerurl_python" style="color: inherit; text-decoration: inherit;">boot2docker<wbr>Url</a>
+        <span id="boot2docker_url_python">
+<a href="#boot2docker_url_python" style="color: inherit; text-decoration: inherit;">boot2docker_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10017,8 +10050,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clonefrom_python">
-<a href="#clonefrom_python" style="color: inherit; text-decoration: inherit;">clone<wbr>From</a>
+        <span id="clone_from_python">
+<a href="#clone_from_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10028,8 +10061,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudconfig_python">
-<a href="#cloudconfig_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
+        <span id="cloud_config_python">
+<a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10050,8 +10083,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contentlibrary_python">
-<a href="#contentlibrary_python" style="color: inherit; text-decoration: inherit;">content<wbr>Library</a>
+        <span id="content_library_python">
+<a href="#content_library_python" style="color: inherit; text-decoration: inherit;">content_<wbr>library</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10061,8 +10094,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpucount_python">
-<a href="#cpucount_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Count</a>
+        <span id="cpu_count_python">
+<a href="#cpu_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10072,8 +10105,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="creationtype_python">
-<a href="#creationtype_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Type</a>
+        <span id="creation_type_python">
+<a href="#creation_type_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10083,8 +10116,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customattributes_python">
-<a href="#customattributes_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10116,8 +10149,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datastorecluster_python">
-<a href="#datastorecluster_python" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster</a>
+        <span id="datastore_cluster_python">
+<a href="#datastore_cluster_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10127,8 +10160,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disksize_python">
-<a href="#disksize_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
+        <span id="disk_size_python">
+<a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10160,8 +10193,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memorysize_python">
-<a href="#memorysize_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
+        <span id="memory_size_python">
+<a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10188,7 +10221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10204,8 +10237,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshpassword_python">
-<a href="#sshpassword_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Password</a>
+        <span id="ssh_password_python">
+<a href="#ssh_password_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10215,8 +10248,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshport_python">
-<a href="#sshport_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
+        <span id="ssh_port_python">
+<a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10226,8 +10259,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshuser_python">
-<a href="#sshuser_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10237,8 +10270,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshusergroup_python">
-<a href="#sshusergroup_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>User<wbr>Group</a>
+        <span id="ssh_user_group_python">
+<a href="#ssh_user_group_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10265,13 +10298,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vappipallocationpolicy_python">
-<a href="#vappipallocationpolicy_python" style="color: inherit; text-decoration: inherit;">vapp<wbr>Ip<wbr>Allocation<wbr>Policy</a>
+        <span id="vapp_ip_allocation_policy_python">
+<a href="#vapp_ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>ip_<wbr>allocation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10281,8 +10314,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vappipprotocol_python">
-<a href="#vappipprotocol_python" style="color: inherit; text-decoration: inherit;">vapp<wbr>Ip<wbr>Protocol</a>
+        <span id="vapp_ip_protocol_python">
+<a href="#vapp_ip_protocol_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>ip_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10292,8 +10325,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vappproperties_python">
-<a href="#vappproperties_python" style="color: inherit; text-decoration: inherit;">vapp<wbr>Properties</a>
+        <span id="vapp_properties_python">
+<a href="#vapp_properties_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10303,8 +10336,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vapptransport_python">
-<a href="#vapptransport_python" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transport</a>
+        <span id="vapp_transport_python">
+<a href="#vapp_transport_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transport</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10320,18 +10353,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x (string)
+    <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vcenterport_python">
-<a href="#vcenterport_python" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Port</a>
+        <span id="vcenter_port_python">
+<a href="#vcenter_port_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2..CloudCredential` from Rancher v2.2.x. Default `443` (string)
+    <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
 {{% /md %}}</dd>
 
 </dl>
