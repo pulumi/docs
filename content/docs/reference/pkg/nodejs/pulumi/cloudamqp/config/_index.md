@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/cloudamqp | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/cloudamqp package."
-git_sha: "d662056d40d1c88eb4ca5273cd2be43111c68325"
+git_sha: "97ce3c757ef91c03b7f5e093fb4a0e169d15fedf"
 block_external_search_index: true
 ---
 
@@ -28,7 +28,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apikey" data-link-title="apikey">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/97ce3c757ef91c03b7f5e093fb4a0e169d15fedf/sdk/nodejs/config/vars.ts#L12">
         let <strong>apikey</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ block_external_search_index: true
 Key used to authentication to the CloudAMQP Customer API
 
 <h3 class="pdoc-module-header" id="baseurl" data-link-title="baseurl">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/d662056d40d1c88eb4ca5273cd2be43111c68325/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/97ce3c757ef91c03b7f5e093fb4a0e169d15fedf/sdk/nodejs/config/vars.ts#L16">
         let <strong>baseurl</strong>
     </a>
 </h3>

@@ -31,6 +31,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
     <li><a href="getalarm" title="GetAlarm"><span class="symbol function"></span>GetAlarm</a></li>
     <li><a href="getcredentials" title="GetCredentials"><span class="symbol function"></span>GetCredentials</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getnodes" title="GetNodes"><span class="symbol function"></span>GetNodes</a></li>
     <li><a href="getnotification" title="GetNotification"><span class="symbol function"></span>GetNotification</a></li>
     <li><a href="getplugins" title="GetPlugins"><span class="symbol function"></span>GetPlugins</a></li>
     <li><a href="getpluginscommunity" title="GetPluginsCommunity"><span class="symbol function"></span>GetPluginsCommunity</a></li>
@@ -46,7 +47,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
 	<dt>Version</dt>
-	<dd>2.2.3</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 
