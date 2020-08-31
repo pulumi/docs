@@ -45,12 +45,12 @@ class MyStack : Stack
 " },
                 },
                 EnabledDatabaseCustomization = true,
-                PasswordHistory = 
+                PasswordHistories = 
                 {
-                    
+                    new Auth0.Inputs.ConnectionOptionsPasswordHistoryArgs
                     {
-                        { "enable", true },
-                        { "size", 3 },
+                        Enable = true,
+                        Size = 3,
                     },
                 },
                 PasswordPolicy = "excellent",
@@ -87,7 +87,69 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := auth0.NewConnection(ctx, "myConnection", &auth0.ConnectionArgs{
+			Options: &auth0.ConnectionOptionsArgs{
+				BruteForceProtection: pulumi.Bool(true),
+				Configuration: pulumi.StringMap{
+					"bar": pulumi.String("baz"),
+					"foo": pulumi.String("bar"),
+				},
+				CustomScripts: pulumi.StringMap{
+					"getUser": pulumi.String(fmt.Sprintf("%v%v%v%v", "function getByEmail (email, callback) {\n", "  return callback(new Error(\"Whoops!\"))\n", "}\n", "\n")),
+				},
+				EnabledDatabaseCustomization: pulumi.Bool(true),
+				PasswordHistories: auth0.ConnectionOptionsPasswordHistoryArray{
+					&auth0.ConnectionOptionsPasswordHistoryArgs{
+						Enable: pulumi.Bool(true),
+						Size:   pulumi.Int(3),
+					},
+				},
+				PasswordPolicy: pulumi.String("excellent"),
+			},
+			Strategy: pulumi.String("auth0"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = auth0.NewConnection(ctx, "myWaadConnection", &auth0.ConnectionArgs{
+			Options: &auth0.ConnectionOptionsArgs{
+				ApiEnableUsers: pulumi.Bool(true),
+				AppDomain:      pulumi.String("my-auth0-app.eu.auth0.com"),
+				BasicProfile:   pulumi.Bool(true),
+				ClientId:       pulumi.String("1234"),
+				ClientSecret:   pulumi.String("1234"),
+				DomainAliases: pulumi.StringArray{
+					pulumi.String("example.io"),
+				},
+				ExtGroups:          pulumi.Bool(true),
+				ExtProfile:         pulumi.Bool(true),
+				TenantDomain:       pulumi.String("exmaple.onmicrosoft.com"),
+				UseWsfed:           pulumi.Bool(false),
+				WaadCommonEndpoint: pulumi.Bool(false),
+				WaadProtocol:       pulumi.String("openid-connect"),
+			},
+			Strategy: pulumi.String("waad"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,42 +158,42 @@ import pulumi
 import pulumi_auth0 as auth0
 
 my_connection = auth0.Connection("myConnection",
-    options={
-        "bruteForceProtection": "true",
-        "configuration": {
+    options=auth0.ConnectionOptionsArgs(
+        brute_force_protection=True,
+        configuration={
             "bar": "baz",
             "foo": "bar",
         },
-        "customScripts": {
+        custom_scripts={
             "getUser": """function getByEmail (email, callback) {
   return callback(new Error("Whoops!"))
 }
 
 """,
         },
-        "enabledDatabaseCustomization": "true",
-        "passwordHistory": [{
-            "enable": True,
-            "size": 3,
-        }],
-        "passwordPolicy": "excellent",
-    },
+        enabled_database_customization=True,
+        password_histories=[auth0.ConnectionOptionsPasswordHistoryArgs(
+            enable=True,
+            size=3,
+        )],
+        password_policy="excellent",
+    ),
     strategy="auth0")
 my_waad_connection = auth0.Connection("myWaadConnection",
-    options={
-        "apiEnableUsers": True,
-        "appDomain": "my-auth0-app.eu.auth0.com",
-        "basicProfile": True,
-        "client_id": "1234",
-        "client_secret": "1234",
-        "domainAliases": ["example.io"],
-        "extGroups": True,
-        "extProfile": True,
-        "tenantDomain": "exmaple.onmicrosoft.com",
-        "useWsfed": False,
-        "waadCommonEndpoint": False,
-        "waadProtocol": "openid-connect",
-    },
+    options=auth0.ConnectionOptionsArgs(
+        api_enable_users=True,
+        app_domain="my-auth0-app.eu.auth0.com",
+        basic_profile=True,
+        client_id="1234",
+        client_secret="1234",
+        domain_aliases=["example.io"],
+        ext_groups=True,
+        ext_profile=True,
+        tenant_domain="exmaple.onmicrosoft.com",
+        use_wsfed=False,
+        waad_common_endpoint=False,
+        waad_protocol="openid-connect",
+    ),
     strategy="waad")
 ```
 
@@ -198,7 +260,7 @@ const myWaadConnection = new auth0.Connection("my_waad_connection", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled_clients=None<span class="p">, </span>is_domain_connection=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>realms=None<span class="p">, </span>strategy=None<span class="p">, </span>strategy_version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -716,7 +778,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptions">Dict[Connection<wbr>Options]</a></span>
+        <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
@@ -841,7 +903,8 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>enabled_clients=None<span class="p">, </span>is_domain_connection=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>realms=None<span class="p">, </span>strategy=None<span class="p">, </span>strategy_version=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_clients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_domain_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[ConnectionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">realms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strategy_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -849,7 +912,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1290,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptions">Dict[Connection<wbr>Options]</a></span>
+        <span class="property-type"><a href="#connectionoptions">Connection<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for connection options. For details, see Options.
 {{% /md %}}</dd>
@@ -1489,7 +1552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map(String). 
+    <dd>{{% md %}}Map(String).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1670,7 +1733,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String. 
+    <dd>{{% md %}}String.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2079,7 +2142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map(String). 
+    <dd>{{% md %}}Map(String).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2260,7 +2323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. 
+    <dd>{{% md %}}String.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2669,7 +2732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map(String). 
+    <dd>{{% md %}}Map(String).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2850,7 +2913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String. 
+    <dd>{{% md %}}String.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3133,8 +3196,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adfsserver_python">
-<a href="#adfsserver_python" style="color: inherit; text-decoration: inherit;">adfs<wbr>Server</a>
+        <span id="adfs_server_python">
+<a href="#adfs_server_python" style="color: inherit; text-decoration: inherit;">adfs_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3144,8 +3207,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedaudiences_python">
-<a href="#allowedaudiences_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
+        <span id="allowed_audiences_python">
+<a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3154,8 +3217,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apienableusers_python">
-<a href="#apienableusers_python" style="color: inherit; text-decoration: inherit;">api<wbr>Enable<wbr>Users</a>
+        <span id="api_enable_users_python">
+<a href="#api_enable_users_python" style="color: inherit; text-decoration: inherit;">api_<wbr>enable_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3165,8 +3228,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="appdomain_python">
-<a href="#appdomain_python" style="color: inherit; text-decoration: inherit;">app<wbr>Domain</a>
+        <span id="app_domain_python">
+<a href="#app_domain_python" style="color: inherit; text-decoration: inherit;">app_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3176,8 +3239,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appid_python">
-<a href="#appid_python" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+        <span id="app_id_python">
+<a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3187,8 +3250,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authorizationendpoint_python">
-<a href="#authorizationendpoint_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
+        <span id="authorization_endpoint_python">
+<a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3198,8 +3261,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bruteforceprotection_python">
-<a href="#bruteforceprotection_python" style="color: inherit; text-decoration: inherit;">brute<wbr>Force<wbr>Protection</a>
+        <span id="brute_force_protection_python">
+<a href="#brute_force_protection_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3231,8 +3294,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="communitybaseurl_python">
-<a href="#communitybaseurl_python" style="color: inherit; text-decoration: inherit;">community<wbr>Base<wbr>Url</a>
+        <span id="community_base_url_python">
+<a href="#community_base_url_python" style="color: inherit; text-decoration: inherit;">community_<wbr>base_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3246,26 +3309,26 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map(String), Case-sensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customscripts_python">
-<a href="#customscripts_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Scripts</a>
+        <span id="custom_scripts_python">
+<a href="#custom_scripts_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>scripts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map(String). 
+    <dd>{{% md %}}Map(String).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablecache_python">
-<a href="#disablecache_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Cache</a>
+        <span id="disable_cache_python">
+<a href="#disable_cache_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3274,8 +3337,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablesignup_python">
-<a href="#disablesignup_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Signup</a>
+        <span id="disable_signup_python">
+<a href="#disable_signup_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>signup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3285,8 +3348,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="discoveryurl_python">
-<a href="#discoveryurl_python" style="color: inherit; text-decoration: inherit;">discovery<wbr>Url</a>
+        <span id="discovery_url_python">
+<a href="#discovery_url_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3306,8 +3369,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="domainaliases_python">
-<a href="#domainaliases_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Aliases</a>
+        <span id="domain_aliases_python">
+<a href="#domain_aliases_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>aliases</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3317,8 +3380,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enableddatabasecustomization_python">
-<a href="#enableddatabasecustomization_python" style="color: inherit; text-decoration: inherit;">enabled<wbr>Database<wbr>Customization</a>
+        <span id="enabled_database_customization_python">
+<a href="#enabled_database_customization_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>database_<wbr>customization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3328,8 +3391,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="from_python">
-<a href="#from_python" style="color: inherit; text-decoration: inherit;">from</a>
+        <span id="from__python">
+<a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3339,8 +3402,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iconurl_python">
-<a href="#iconurl_python" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
+        <span id="icon_url_python">
+<a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3349,8 +3412,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityapi_python">
-<a href="#identityapi_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Api</a>
+        <span id="identity_api_python">
+<a href="#identity_api_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3359,8 +3422,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="importmode_python">
-<a href="#importmode_python" style="color: inherit; text-decoration: inherit;">import<wbr>Mode</a>
+        <span id="import_mode_python">
+<a href="#import_mode_python" style="color: inherit; text-decoration: inherit;">import_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3391,8 +3454,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jwksuri_python">
-<a href="#jwksuri_python" style="color: inherit; text-decoration: inherit;">jwks<wbr>Uri</a>
+        <span id="jwks_uri_python">
+<a href="#jwks_uri_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3402,8 +3465,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyid_python">
-<a href="#keyid_python" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3412,8 +3475,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxgroupstoretrieve_python">
-<a href="#maxgroupstoretrieve_python" style="color: inherit; text-decoration: inherit;">max<wbr>Groups<wbr>To<wbr>Retrieve</a>
+        <span id="max_groups_to_retrieve_python">
+<a href="#max_groups_to_retrieve_python" style="color: inherit; text-decoration: inherit;">max_<wbr>groups_<wbr>to_<wbr>retrieve</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3423,8 +3486,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagingservicesid_python">
-<a href="#messagingservicesid_python" style="color: inherit; text-decoration: inherit;">messaging<wbr>Service<wbr>Sid</a>
+        <span id="messaging_service_sid_python">
+<a href="#messaging_service_sid_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>service_<wbr>sid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3440,57 +3503,57 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String. 
+    <dd>{{% md %}}String.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passwordcomplexityoptions_python">
-<a href="#passwordcomplexityoptions_python" style="color: inherit; text-decoration: inherit;">password<wbr>Complexity<wbr>Options</a>
+        <span id="password_complexity_options_python">
+<a href="#password_complexity_options_python" style="color: inherit; text-decoration: inherit;">password_<wbr>complexity_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Dict[Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options]</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordcomplexityoptions">Connection<wbr>Options<wbr>Password<wbr>Complexity<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for password complexity. For details, see Password Complexity Options.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passworddictionary_python">
-<a href="#passworddictionary_python" style="color: inherit; text-decoration: inherit;">password<wbr>Dictionary</a>
+        <span id="password_dictionary_python">
+<a href="#password_dictionary_python" style="color: inherit; text-decoration: inherit;">password_<wbr>dictionary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspassworddictionary">Dict[Connection<wbr>Options<wbr>Password<wbr>Dictionary]</a></span>
+        <span class="property-type"><a href="#connectionoptionspassworddictionary">Connection<wbr>Options<wbr>Password<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passwordhistories_python">
-<a href="#passwordhistories_python" style="color: inherit; text-decoration: inherit;">password<wbr>Histories</a>
+        <span id="password_histories_python">
+<a href="#password_histories_python" style="color: inherit; text-decoration: inherit;">password_<wbr>histories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordhistory">List[Connection<wbr>Options<wbr>Password<wbr>History]</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordhistory">List[Connection<wbr>Options<wbr>Password<wbr>History<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passwordnopersonalinfo_python">
-<a href="#passwordnopersonalinfo_python" style="color: inherit; text-decoration: inherit;">password<wbr>No<wbr>Personal<wbr>Info</a>
+        <span id="password_no_personal_info_python">
+<a href="#password_no_personal_info_python" style="color: inherit; text-decoration: inherit;">password_<wbr>no_<wbr>personal_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Dict[Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info]</a></span>
+        <span class="property-type"><a href="#connectionoptionspasswordnopersonalinfo">Connection<wbr>Options<wbr>Password<wbr>No<wbr>Personal<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="passwordpolicy_python">
-<a href="#passwordpolicy_python" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
+        <span id="password_policy_python">
+<a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3500,8 +3563,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiresusername_python">
-<a href="#requiresusername_python" style="color: inherit; text-decoration: inherit;">requires<wbr>Username</a>
+        <span id="requires_username_python">
+<a href="#requires_username_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3554,8 +3617,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="teamid_python">
-<a href="#teamid_python" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
+        <span id="team_id_python">
+<a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3575,8 +3638,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tenantdomain_python">
-<a href="#tenantdomain_python" style="color: inherit; text-decoration: inherit;">tenant<wbr>Domain</a>
+        <span id="tenant_domain_python">
+<a href="#tenant_domain_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3586,8 +3649,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenendpoint_python">
-<a href="#tokenendpoint_python" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
+        <span id="token_endpoint_python">
+<a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3601,15 +3664,15 @@ The following state arguments are supported:
 <a href="#totp_python" style="color: inherit; text-decoration: inherit;">totp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionoptionstotp">Dict[Connection<wbr>Options<wbr>Totp]</a></span>
+        <span class="property-type"><a href="#connectionoptionstotp">Connection<wbr>Options<wbr>Totp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map(Resource). Configuration options for one-time passwords. For details, see TOTP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="twiliosid_python">
-<a href="#twiliosid_python" style="color: inherit; text-decoration: inherit;">twilio<wbr>Sid</a>
+        <span id="twilio_sid_python">
+<a href="#twilio_sid_python" style="color: inherit; text-decoration: inherit;">twilio_<wbr>sid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3619,8 +3682,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="twiliotoken_python">
-<a href="#twiliotoken_python" style="color: inherit; text-decoration: inherit;">twilio<wbr>Token</a>
+        <span id="twilio_token_python">
+<a href="#twilio_token_python" style="color: inherit; text-decoration: inherit;">twilio_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3641,8 +3704,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecertauth_python">
-<a href="#usecertauth_python" style="color: inherit; text-decoration: inherit;">use<wbr>Cert<wbr>Auth</a>
+        <span id="use_cert_auth_python">
+<a href="#use_cert_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>cert_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3651,8 +3714,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usekerberos_python">
-<a href="#usekerberos_python" style="color: inherit; text-decoration: inherit;">use<wbr>Kerberos</a>
+        <span id="use_kerberos_python">
+<a href="#use_kerberos_python" style="color: inherit; text-decoration: inherit;">use_<wbr>kerberos</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3661,8 +3724,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usewsfed_python">
-<a href="#usewsfed_python" style="color: inherit; text-decoration: inherit;">use<wbr>Wsfed</a>
+        <span id="use_wsfed_python">
+<a href="#use_wsfed_python" style="color: inherit; text-decoration: inherit;">use_<wbr>wsfed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3672,8 +3735,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userinfoendpoint_python">
-<a href="#userinfoendpoint_python" style="color: inherit; text-decoration: inherit;">userinfo<wbr>Endpoint</a>
+        <span id="userinfo_endpoint_python">
+<a href="#userinfo_endpoint_python" style="color: inherit; text-decoration: inherit;">userinfo_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3687,15 +3750,15 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}String.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waadcommonendpoint_python">
-<a href="#waadcommonendpoint_python" style="color: inherit; text-decoration: inherit;">waad<wbr>Common<wbr>Endpoint</a>
+        <span id="waad_common_endpoint_python">
+<a href="#waad_common_endpoint_python" style="color: inherit; text-decoration: inherit;">waad_<wbr>common_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3705,8 +3768,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waadprotocol_python">
-<a href="#waadprotocol_python" style="color: inherit; text-decoration: inherit;">waad<wbr>Protocol</a>
+        <span id="waad_protocol_python">
+<a href="#waad_protocol_python" style="color: inherit; text-decoration: inherit;">waad_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3795,8 +3858,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minlength_python">
-<a href="#minlength_python" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
+        <span id="min_length_python">
+<a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3982,7 +4045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history. 
+    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
 {{% /md %}}</dd>
 
 </dl>
@@ -4011,7 +4074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history. 
+    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
 {{% /md %}}</dd>
 
 </dl>
@@ -4040,7 +4103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history. 
+    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
 {{% /md %}}</dd>
 
 </dl>
@@ -4069,7 +4132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history. 
+    <dd>{{% md %}}Integer, (Maximum=24). Indicates the number of passwords to keep in history.
 {{% /md %}}</dd>
 
 </dl>
@@ -4287,8 +4350,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestep_python">
-<a href="#timestep_python" style="color: inherit; text-decoration: inherit;">time<wbr>Step</a>
+        <span id="time_step_python">
+<a href="#time_step_python" style="color: inherit; text-decoration: inherit;">time_<wbr>step</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

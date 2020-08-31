@@ -45,7 +45,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := auth0.NewEmail(ctx, "myEmailProvider", &auth0.EmailArgs{
+			Credentials: &auth0.EmailCredentialsArgs{
+				AccessKeyId:     pulumi.String("AKIAXXXXXXXXXXXXXXXX"),
+				Region:          pulumi.String("us-east-1"),
+				SecretAccessKey: pulumi.String("7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"),
+			},
+			DefaultFromAddress: pulumi.String("accounts@example.com"),
+			Enabled:            pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,11 +80,11 @@ import pulumi
 import pulumi_auth0 as auth0
 
 my_email_provider = auth0.Email("myEmailProvider",
-    credentials={
-        "accessKeyId": "AKIAXXXXXXXXXXXXXXXX",
-        "region": "us-east-1",
-        "secretAccessKey": "7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    },
+    credentials=auth0.EmailCredentialsArgs(
+        access_key_id="AKIAXXXXXXXXXXXXXXXX",
+        region="us-east-1",
+        secret_access_key="7e8c2148xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    ),
     default_from_address="accounts@example.com",
     enabled=True)
 ```
@@ -96,7 +122,7 @@ const myEmailProvider = new auth0.Email("my_email_provider", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Email">Email</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>credentials=None<span class="p">, </span>default_from_address=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Email">Email</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[EmailCredentialsArgs]</span> = None<span class="p">, </span><span class="nx">default_from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -427,7 +453,7 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailcredentials">Dict[Email<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#emailcredentials">Email<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the credentials for the email provider. For details, see Credentials.
 {{% /md %}}</dd>
@@ -563,7 +589,8 @@ Get an existing Email resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>credentials=None<span class="p">, </span>default_from_address=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[EmailCredentialsArgs]</span> = None<span class="p">, </span><span class="nx">default_from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Email</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +598,7 @@ Get an existing Email resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Email.html">Email</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..EmailState.html">EmailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Email.html">Email</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..EmailState.html">EmailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -836,7 +863,7 @@ The following state arguments are supported:
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailcredentials">Dict[Email<wbr>Credentials]</a></span>
+        <span class="property-type"><a href="#emailcredentials">Email<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the credentials for the email provider. For details, see Credentials.
 {{% /md %}}</dd>
@@ -1257,8 +1284,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesskeyid_python">
-<a href="#accesskeyid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1268,8 +1295,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apikey_python">
-<a href="#apikey_python" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
+        <span id="api_key_python">
+<a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1279,8 +1306,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="apiuser_python">
-<a href="#apiuser_python" style="color: inherit; text-decoration: inherit;">api<wbr>User</a>
+        <span id="api_user_python">
+<a href="#api_user_python" style="color: inherit; text-decoration: inherit;">api_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1311,8 +1338,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretaccesskey_python">
-<a href="#secretaccesskey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1322,8 +1349,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smtphost_python">
-<a href="#smtphost_python" style="color: inherit; text-decoration: inherit;">smtp<wbr>Host</a>
+        <span id="smtp_host_python">
+<a href="#smtp_host_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1333,8 +1360,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smtppass_python">
-<a href="#smtppass_python" style="color: inherit; text-decoration: inherit;">smtp<wbr>Pass</a>
+        <span id="smtp_pass_python">
+<a href="#smtp_pass_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1344,8 +1371,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smtpport_python">
-<a href="#smtpport_python" style="color: inherit; text-decoration: inherit;">smtp<wbr>Port</a>
+        <span id="smtp_port_python">
+<a href="#smtp_port_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1355,8 +1382,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="smtpuser_python">
-<a href="#smtpuser_python" style="color: inherit; text-decoration: inherit;">smtp<wbr>User</a>
+        <span id="smtp_user_python">
+<a href="#smtp_user_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
