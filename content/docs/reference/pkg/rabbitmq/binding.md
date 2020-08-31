@@ -147,25 +147,25 @@ import pulumi_rabbitmq as rabbitmq
 
 test_v_host = rabbitmq.VHost("testVHost")
 guest = rabbitmq.Permissions("guest",
-    permissions={
-        "configure": ".*",
-        "read": ".*",
-        "write": ".*",
-    },
+    permissions=rabbitmq.PermissionsPermissionsArgs(
+        configure=".*",
+        read=".*",
+        write=".*",
+    ),
     user="guest",
     vhost=test_v_host.name)
 test_exchange = rabbitmq.Exchange("testExchange",
-    settings={
-        "autoDelete": True,
-        "durable": False,
-        "type": "fanout",
-    },
+    settings=rabbitmq.ExchangeSettingsArgs(
+        auto_delete=True,
+        durable=False,
+        type="fanout",
+    ),
     vhost=guest.vhost)
 test_queue = rabbitmq.Queue("testQueue",
-    settings={
-        "autoDelete": False,
-        "durable": True,
-    },
+    settings=rabbitmq.QueueSettingsArgs(
+        auto_delete=False,
+        durable=True,
+    ),
     vhost=guest.vhost)
 test_binding = rabbitmq.Binding("testBinding",
     destination=test_queue.name,
@@ -231,7 +231,7 @@ const testBinding = new rabbitmq.Binding("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.Binding">Binding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arguments=None<span class="p">, </span>arguments_json=None<span class="p">, </span>destination=None<span class="p">, </span>destination_type=None<span class="p">, </span>routing_key=None<span class="p">, </span>source=None<span class="p">, </span>vhost=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.Binding">Binding</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">arguments_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -702,7 +702,7 @@ The Binding resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional key/value arguments for the binding.
 {{% /md %}}</dd>
@@ -870,7 +870,8 @@ Get an existing Binding resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arguments=None<span class="p">, </span>arguments_json=None<span class="p">, </span>destination=None<span class="p">, </span>destination_type=None<span class="p">, </span>properties_key=None<span class="p">, </span>routing_key=None<span class="p">, </span>source=None<span class="p">, </span>vhost=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">arguments_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Binding</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -878,7 +879,7 @@ Get an existing Binding resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Binding.html">Binding</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..BindingState.html">BindingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Binding.html">Binding</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..BindingState.html">BindingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1272,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional key/value arguments for the binding.
 {{% /md %}}</dd>

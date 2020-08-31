@@ -130,26 +130,26 @@ import pulumi_rabbitmq as rabbitmq
 
 test_v_host = rabbitmq.VHost("testVHost")
 test_exchange = rabbitmq.Exchange("testExchange",
-    settings={
-        "autoDelete": True,
-        "durable": False,
-        "type": "fanout",
-    },
+    settings=rabbitmq.ExchangeSettingsArgs(
+        auto_delete=True,
+        durable=False,
+        type="fanout",
+    ),
     vhost=test_v_host.name)
 test_queue = rabbitmq.Queue("testQueue",
-    settings={
-        "autoDelete": True,
-        "durable": False,
-    },
+    settings=rabbitmq.QueueSettingsArgs(
+        auto_delete=True,
+        durable=False,
+    ),
     vhost=test_v_host.name)
 shovel_test = rabbitmq.Shovel("shovelTest",
-    info={
-        "destinationQueue": test_queue.name,
-        "destinationUri": "amqp:///test",
-        "sourceExchange": test_exchange.name,
-        "sourceExchangeKey": "test",
-        "sourceUri": "amqp:///test",
-    },
+    info=rabbitmq.ShovelInfoArgs(
+        destination_queue=test_queue.name,
+        destination_uri="amqp:///test",
+        source_exchange=test_exchange.name,
+        source_exchange_key="test",
+        source_uri="amqp:///test",
+    ),
     vhost=test_v_host.name)
 ```
 
@@ -203,7 +203,7 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.Shovel">Shovel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>info=None<span class="p">, </span>name=None<span class="p">, </span>vhost=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.Shovel">Shovel</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">info</span><span class="p">:</span> <span class="nx">Optional[ShovelInfoArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -504,7 +504,7 @@ described below.
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shovelinfo">Dict[Shovel<wbr>Info]</a></span>
+        <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
@@ -630,7 +630,8 @@ Get an existing Shovel resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>info=None<span class="p">, </span>name=None<span class="p">, </span>vhost=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">info</span><span class="p">:</span> <span class="nx">Optional[ShovelInfoArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Shovel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -638,7 +639,7 @@ Get an existing Shovel resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Shovel.html">Shovel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..ShovelState.html">ShovelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Shovel.html">Shovel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..ShovelState.html">ShovelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -873,7 +874,7 @@ described below.
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shovelinfo">Dict[Shovel<wbr>Info]</a></span>
+        <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
@@ -1413,8 +1414,8 @@ Either this or source_exchange must be specified but not both.
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationuri_python">
-<a href="#destinationuri_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Uri</a>
+        <span id="destination_uri_python">
+<a href="#destination_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1424,8 +1425,8 @@ Either this or source_exchange must be specified but not both.
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceuri_python">
-<a href="#sourceuri_python" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
+        <span id="source_uri_python">
+<a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1435,8 +1436,8 @@ Either this or source_exchange must be specified but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ackmode_python">
-<a href="#ackmode_python" style="color: inherit; text-decoration: inherit;">ack<wbr>Mode</a>
+        <span id="ack_mode_python">
+<a href="#ack_mode_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1447,8 +1448,8 @@ Defaults to `on-confirm`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addforwardheaders_python">
-<a href="#addforwardheaders_python" style="color: inherit; text-decoration: inherit;">add<wbr>Forward<wbr>Headers</a>
+        <span id="add_forward_headers_python">
+<a href="#add_forward_headers_python" style="color: inherit; text-decoration: inherit;">add_<wbr>forward_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1459,8 +1460,8 @@ Defaults to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteafter_python">
-<a href="#deleteafter_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
+        <span id="delete_after_python">
+<a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1471,8 +1472,8 @@ Defaults to `never`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationexchange_python">
-<a href="#destinationexchange_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Exchange</a>
+        <span id="destination_exchange_python">
+<a href="#destination_exchange_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>exchange</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1483,8 +1484,8 @@ Either this or destination_queue must be specified but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationexchangekey_python">
-<a href="#destinationexchangekey_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Exchange<wbr>Key</a>
+        <span id="destination_exchange_key_python">
+<a href="#destination_exchange_key_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>exchange_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1494,8 +1495,8 @@ Either this or destination_queue must be specified but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationqueue_python">
-<a href="#destinationqueue_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Queue</a>
+        <span id="destination_queue_python">
+<a href="#destination_queue_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>queue</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1506,8 +1507,8 @@ Either this or destination_exchange must be specified but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefetchcount_python">
-<a href="#prefetchcount_python" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Count</a>
+        <span id="prefetch_count_python">
+<a href="#prefetch_count_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1518,8 +1519,8 @@ Defaults to `1000`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reconnectdelay_python">
-<a href="#reconnectdelay_python" style="color: inherit; text-decoration: inherit;">reconnect<wbr>Delay</a>
+        <span id="reconnect_delay_python">
+<a href="#reconnect_delay_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1530,8 +1531,8 @@ Defaults to `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceexchange_python">
-<a href="#sourceexchange_python" style="color: inherit; text-decoration: inherit;">source<wbr>Exchange</a>
+        <span id="source_exchange_python">
+<a href="#source_exchange_python" style="color: inherit; text-decoration: inherit;">source_<wbr>exchange</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1542,8 +1543,8 @@ Either this or source_queue must be specified but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceexchangekey_python">
-<a href="#sourceexchangekey_python" style="color: inherit; text-decoration: inherit;">source<wbr>Exchange<wbr>Key</a>
+        <span id="source_exchange_key_python">
+<a href="#source_exchange_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>exchange_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1553,8 +1554,8 @@ Either this or source_queue must be specified but not both.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcequeue_python">
-<a href="#sourcequeue_python" style="color: inherit; text-decoration: inherit;">source<wbr>Queue</a>
+        <span id="source_queue_python">
+<a href="#source_queue_python" style="color: inherit; text-decoration: inherit;">source_<wbr>queue</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
