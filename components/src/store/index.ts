@@ -5,9 +5,11 @@ import thunk from "redux-thunk";
 
 import { AppState } from "./state";
 import { preferences } from "./reducers/preferences";
+import { banners } from "./reducers/banners";
 
 export const rootReducer = combineReducers({
-    preferences
+    preferences,
+    banners,
 });
 
 // The Redux store. See https://redux.js.org/ for general information about Redux and

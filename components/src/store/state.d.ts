@@ -10,6 +10,11 @@ export interface PreferencesState {
     cloud: CloudKey,
 }
 
+export interface BannersState {
+    dismissed: string[];
+}
+
 export interface AppState {
-    preferences: PreferencesState
+    preferences: PreferencesState,
+    banners: BannersState,
 }
