@@ -80,7 +80,7 @@ const license = new consul.License("license", {license: fs.readFileSync("license
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.License">License</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>license=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.License">License</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -836,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata attached to the license.
 {{% /md %}}</dd>
@@ -947,7 +947,8 @@ Get an existing License resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>customer_id=None<span class="p">, </span>datacenter=None<span class="p">, </span>expiration_time=None<span class="p">, </span>features=None<span class="p">, </span>flags=None<span class="p">, </span>installation_id=None<span class="p">, </span>issue_time=None<span class="p">, </span>license=None<span class="p">, </span>license_id=None<span class="p">, </span>product=None<span class="p">, </span>start_time=None<span class="p">, </span>valid=None<span class="p">, </span>warnings=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">installation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issue_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> License</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -955,7 +956,7 @@ Get an existing License resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.License.html">License</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..LicenseState.html">LicenseState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.License.html">License</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..LicenseState.html">LicenseState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1565,7 +1566,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata attached to the license.
 {{% /md %}}</dd>

@@ -138,7 +138,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.AclAuthMethod">AclAuthMethod</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>config_json=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>max_token_ttl=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>namespace_rules=None<span class="p">, </span>token_locality=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.AclAuthMethod">AclAuthMethod</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">config_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_token_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_rules</span><span class="p">:</span> <span class="nx">Optional[List[AclAuthMethodNamespaceRuleArgs]]</span> = None<span class="p">, </span><span class="nx">token_locality</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -696,7 +696,7 @@ produces. This can be either 'local' or 'global'.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
@@ -777,7 +777,7 @@ auth method.
 <a href="#namespace_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclauthmethodnamespacerule">List[Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#aclauthmethodnamespacerule">List[Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
@@ -893,7 +893,8 @@ Get an existing AclAuthMethod resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>config_json=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>max_token_ttl=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>namespace_rules=None<span class="p">, </span>token_locality=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">config_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_token_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_rules</span><span class="p">:</span> <span class="nx">Optional[List[AclAuthMethodNamespaceRuleArgs]]</span> = None<span class="p">, </span><span class="nx">token_locality</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AclAuthMethod</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -901,7 +902,7 @@ Get an existing AclAuthMethod resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.AclAuthMethod.html">AclAuthMethod</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..AclAuthMethodState.html">AclAuthMethodState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.AclAuthMethod.html">AclAuthMethod</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..AclAuthMethodState.html">AclAuthMethodState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1382,7 +1383,7 @@ produces. This can be either 'local' or 'global'.
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
@@ -1463,7 +1464,7 @@ auth method.
 <a href="#state_namespace_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclauthmethodnamespacerule">List[Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#aclauthmethodnamespacerule">List[Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
@@ -1623,8 +1624,8 @@ Defaults to `""`.
 
     <dt class="property-required"
             title="Required">
-        <span id="bindnamespace_python">
-<a href="#bindnamespace_python" style="color: inherit; text-decoration: inherit;">bind<wbr>Namespace</a>
+        <span id="bind_namespace_python">
+<a href="#bind_namespace_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

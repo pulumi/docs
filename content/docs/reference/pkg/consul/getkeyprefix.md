@@ -24,7 +24,7 @@ meta_desc: "Explore the GetKeyPrefix function of the Consul package, including e
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_key_prefix(</span>datacenter=None<span class="p">, </span>namespace=None<span class="p">, </span>path_prefix=None<span class="p">, </span>subkey_collection=None<span class="p">, </span>token=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_key_prefix(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[List[GetKeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeyPrefixResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -294,7 +294,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyprefixsubkeycollection">List[Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection]</a></span>
+        <span class="property-type"><a href="#getkeyprefixsubkeycollection">List[Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a subkey in Consul to be read. Supported
 values documented below. Multiple blocks supported.
@@ -655,7 +655,7 @@ has the value of the key.
 <a href="#subkeys_python" style="color: inherit; text-decoration: inherit;">subkeys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the subkeys and values is set if no `subkey`
 block is provided.
@@ -667,7 +667,7 @@ block is provided.
 <a href="#var_python" style="color: inherit; text-decoration: inherit;">var</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

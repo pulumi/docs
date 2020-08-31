@@ -32,7 +32,7 @@ source, which provides a summary of the current Consul services.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service(</span>datacenter=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>query_options=None<span class="p">, </span>tag=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[List[GetServiceQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -303,7 +303,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicequeryoption">List[Get<wbr>Service<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getservicequeryoption">List[Get<wbr>Service<wbr>Query<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See below.
 {{% /md %}}</dd>
@@ -1041,8 +1041,8 @@ to return.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowstale_python">
-<a href="#allowstale_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Stale</a>
+        <span id="allow_stale_python">
+<a href="#allow_stale_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stale</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1092,14 +1092,14 @@ configured to talk to.
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requireconsistent_python">
-<a href="#requireconsistent_python" style="color: inherit; text-decoration: inherit;">require<wbr>Consistent</a>
+        <span id="require_consistent_python">
+<a href="#require_consistent_python" style="color: inherit; text-decoration: inherit;">require_<wbr>consistent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1124,8 +1124,8 @@ provider but may be overriden if necessary.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitindex_python">
-<a href="#waitindex_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Index</a>
+        <span id="wait_index_python">
+<a href="#wait_index_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1135,8 +1135,8 @@ provider but may be overriden if necessary.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waittime_python">
-<a href="#waittime_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Time</a>
+        <span id="wait_time_python">
+<a href="#wait_time_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1695,8 +1695,8 @@ data tag information, if any.
 
     <dt class="property-required"
             title="Required">
-        <span id="createindex_python">
-<a href="#createindex_python" style="color: inherit; text-decoration: inherit;">create<wbr>Index</a>
+        <span id="create_index_python">
+<a href="#create_index_python" style="color: inherit; text-decoration: inherit;">create_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1729,14 +1729,14 @@ data tag information, if any.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="modifyindex_python">
-<a href="#modifyindex_python" style="color: inherit; text-decoration: inherit;">modify<wbr>Index</a>
+        <span id="modify_index_python">
+<a href="#modify_index_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1756,8 +1756,8 @@ data tag information, if any.
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeaddress_python">
-<a href="#nodeaddress_python" style="color: inherit; text-decoration: inherit;">node<wbr>Address</a>
+        <span id="node_address_python">
+<a href="#node_address_python" style="color: inherit; text-decoration: inherit;">node_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1766,8 +1766,8 @@ data tag information, if any.
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1799,21 +1799,21 @@ data tag information, if any.
 
     <dt class="property-required"
             title="Required">
-        <span id="nodename_python">
-<a href="#nodename_python" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
+        <span id="node_meta_python">
+<a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="node_meta_python">
-<a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
+        <span id="node_name_python">
+<a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,11 +1829,11 @@ data tag information, if any.
 
     <dt class="property-required"
             title="Required">
-        <span id="taggedaddresses_python">
-<a href="#taggedaddresses_python" style="color: inherit; text-decoration: inherit;">tagged<wbr>Addresses</a>
+        <span id="tagged_addresses_python">
+<a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

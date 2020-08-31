@@ -100,7 +100,7 @@ export const health = read.healthy;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_autopilot_health(</span>datacenter=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_autopilot_health(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAutopilotHealthResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -956,8 +956,8 @@ configuration
 
     <dt class="property-required"
             title="Required">
-        <span id="lastcontact_python">
-<a href="#lastcontact_python" style="color: inherit; text-decoration: inherit;">last<wbr>Contact</a>
+        <span id="last_contact_python">
+<a href="#last_contact_python" style="color: inherit; text-decoration: inherit;">last_<wbr>contact</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -968,8 +968,8 @@ the leader
 
     <dt class="property-required"
             title="Required">
-        <span id="lastindex_python">
-<a href="#lastindex_python" style="color: inherit; text-decoration: inherit;">last<wbr>Index</a>
+        <span id="last_index_python">
+<a href="#last_index_python" style="color: inherit; text-decoration: inherit;">last_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -979,8 +979,8 @@ the leader
 
     <dt class="property-required"
             title="Required">
-        <span id="lastterm_python">
-<a href="#lastterm_python" style="color: inherit; text-decoration: inherit;">last<wbr>Term</a>
+        <span id="last_term_python">
+<a href="#last_term_python" style="color: inherit; text-decoration: inherit;">last_<wbr>term</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1012,8 +1012,8 @@ the leader
 
     <dt class="property-required"
             title="Required">
-        <span id="serfstatus_python">
-<a href="#serfstatus_python" style="color: inherit; text-decoration: inherit;">serf<wbr>Status</a>
+        <span id="serf_status_python">
+<a href="#serf_status_python" style="color: inherit; text-decoration: inherit;">serf_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1023,8 +1023,8 @@ the leader
 
     <dt class="property-required"
             title="Required">
-        <span id="stablesince_python">
-<a href="#stablesince_python" style="color: inherit; text-decoration: inherit;">stable<wbr>Since</a>
+        <span id="stable_since_python">
+<a href="#stable_since_python" style="color: inherit; text-decoration: inherit;">stable_<wbr>since</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

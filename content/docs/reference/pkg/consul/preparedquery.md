@@ -22,7 +22,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.PreparedQuery">PreparedQuery</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connect=None<span class="p">, </span>datacenter=None<span class="p">, </span>dns=None<span class="p">, </span>failover=None<span class="p">, </span>ignore_check_ids=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>node_meta=None<span class="p">, </span>only_passing=None<span class="p">, </span>service=None<span class="p">, </span>service_meta=None<span class="p">, </span>session=None<span class="p">, </span>stored_token=None<span class="p">, </span>tags=None<span class="p">, </span>template=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.PreparedQuery">PreparedQuery</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryDnsArgs]</span> = None<span class="p">, </span><span class="nx">failover</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryFailoverArgs]</span> = None<span class="p">, </span><span class="nx">ignore_check_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">only_passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">session</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stored_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryTemplateArgs]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -869,7 +869,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Dict[Prepared<wbr>Query<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Dict[Prepared<wbr>Query<wbr>Failover]</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -935,7 +935,7 @@ request.
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
@@ -960,7 +960,7 @@ return nodes with passing health checks in the result.
 <a href="#service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
@@ -1013,7 +1013,7 @@ disallowed.
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Dict[Prepared<wbr>Query<wbr>Template]</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -1129,7 +1129,8 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>connect=None<span class="p">, </span>datacenter=None<span class="p">, </span>dns=None<span class="p">, </span>failover=None<span class="p">, </span>ignore_check_ids=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>node_meta=None<span class="p">, </span>only_passing=None<span class="p">, </span>service=None<span class="p">, </span>service_meta=None<span class="p">, </span>session=None<span class="p">, </span>stored_token=None<span class="p">, </span>tags=None<span class="p">, </span>template=None<span class="p">, </span>token=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryDnsArgs]</span> = None<span class="p">, </span><span class="nx">failover</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryFailoverArgs]</span> = None<span class="p">, </span><span class="nx">ignore_check_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">only_passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">session</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stored_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryTemplateArgs]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PreparedQuery</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1137,7 +1138,7 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQueryState.html">PreparedQueryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQueryState.html">PreparedQueryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1907,7 +1908,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Dict[Prepared<wbr>Query<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
@@ -1918,7 +1919,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Dict[Prepared<wbr>Query<wbr>Failover]</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -1973,7 +1974,7 @@ request.
 <a href="#state_node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
@@ -2009,7 +2010,7 @@ return nodes with passing health checks in the result.
 <a href="#state_service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
@@ -2062,7 +2063,7 @@ disallowed.
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Dict[Prepared<wbr>Query<wbr>Template]</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -2306,8 +2307,8 @@ sorted in ascending order of estimated RTT.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nearestn_python">
-<a href="#nearestn_python" style="color: inherit; text-decoration: inherit;">nearest<wbr>N</a>
+        <span id="nearest_n_python">
+<a href="#nearest_n_python" style="color: inherit; text-decoration: inherit;">nearest_<wbr>n</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

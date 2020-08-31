@@ -28,7 +28,7 @@ nodes from a different WAN-attached Consul datacenter.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_nodes(</span>query_options=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nodes(</span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[List[GetNodesQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -113,7 +113,7 @@ The following arguments are supported:
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesqueryoption">List[Get<wbr>Nodes<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getnodesqueryoption">List[Get<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See below.
 {{% /md %}}</dd>
@@ -687,7 +687,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -703,11 +703,11 @@ List of explicit LAN and WAN IP addresses for the agent.
 
     <dt class="property-required"
             title="Required">
-        <span id="taggedaddresses_python">
-<a href="#taggedaddresses_python" style="color: inherit; text-decoration: inherit;">tagged<wbr>Addresses</a>
+        <span id="tagged_addresses_python">
+<a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1044,8 +1044,8 @@ to return.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowstale_python">
-<a href="#allowstale_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Stale</a>
+        <span id="allow_stale_python">
+<a href="#allow_stale_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stale</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1084,14 +1084,14 @@ configured to talk to then the datacenter in the provider setup.
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requireconsistent_python">
-<a href="#requireconsistent_python" style="color: inherit; text-decoration: inherit;">require<wbr>Consistent</a>
+        <span id="require_consistent_python">
+<a href="#require_consistent_python" style="color: inherit; text-decoration: inherit;">require_<wbr>consistent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1116,8 +1116,8 @@ provider but may be overriden if necessary.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitindex_python">
-<a href="#waitindex_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Index</a>
+        <span id="wait_index_python">
+<a href="#wait_index_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1127,8 +1127,8 @@ provider but may be overriden if necessary.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waittime_python">
-<a href="#waittime_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Time</a>
+        <span id="wait_time_python">
+<a href="#wait_time_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -30,7 +30,7 @@ from the agent specified in the `provider`.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_agent_self(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_agent_self(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAgentSelfResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -2489,7 +2489,7 @@ of telemetry configuration.
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2519,7 +2519,7 @@ of telemetry configuration.
 <a href="#advertise_addrs_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>addrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2639,7 +2639,7 @@ of telemetry configuration.
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of DNS configuration attributes.  See below for details on the
 contents of the `dns` attribute.
@@ -2847,7 +2847,7 @@ of telemetry configuration.
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2867,7 +2867,7 @@ of telemetry configuration.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Integer]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2917,7 +2917,7 @@ of telemetry configuration.
 <a href="#retry_join_ec2_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>join_<wbr>ec2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2927,7 +2927,7 @@ of telemetry configuration.
 <a href="#retry_join_gce_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>join_<wbr>gce</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3057,7 +3057,7 @@ of telemetry configuration.
 <a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3067,7 +3067,7 @@ of telemetry configuration.
 <a href="#telemetry_python" style="color: inherit; text-decoration: inherit;">telemetry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3167,7 +3167,7 @@ of telemetry configuration.
 <a href="#unix_sockets_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>sockets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
