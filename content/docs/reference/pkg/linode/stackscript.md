@@ -69,7 +69,7 @@ class MyStack : Stack
             RevNote = "initial version",
             Script = @"#!/bin/bash
 # <UDF name=""package"" label=""System Package to Install"" example=""nginx"" default="""">
-apt-get -q update && apt-get -q -y install $$PACKAGE
+apt-get -q update && apt-get -q -y install $PACKAGE
 
 ",
         });
@@ -98,7 +98,53 @@ apt-get -q update && apt-get -q -y install $$PACKAGE
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := linode.NewStackScript(ctx, "fooStackScript", &linode.StackScriptArgs{
+			Description: pulumi.String("Installs a Package"),
+			Images: pulumi.StringArray{
+				pulumi.String("linode/ubuntu18.04"),
+				pulumi.String("linode/ubuntu16.04lts"),
+			},
+			Label:   pulumi.String("foo"),
+			RevNote: pulumi.String("initial version"),
+			Script:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v", "#!/bin/bash\n", "# <UDF name=\"package\" label=\"System Package to Install\" example=\"nginx\" default=\"\">\n", "apt-get -q update && apt-get -q -y install ", "$", "PACKAGE\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = linode.NewInstance(ctx, "fooInstance", &linode.InstanceArgs{
+			AuthorizedKeys: pulumi.StringArray{
+				pulumi.String("..."),
+			},
+			Image:    pulumi.String("linode/ubuntu18.04"),
+			Label:    pulumi.String("foo"),
+			Region:   pulumi.String("us-east"),
+			RootPass: pulumi.String("..."),
+			StackscriptData: pulumi.StringMap{
+				"package": pulumi.String("nginx"),
+			},
+			StackscriptId: pulumi.Any(linode_stackscript.Install - nginx.Id),
+			Type:          pulumi.String("g6-nanode-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,7 +162,7 @@ foo_stack_script = linode.StackScript("fooStackScript",
     rev_note="initial version",
     script="""#!/bin/bash
 # <UDF name="package" label="System Package to Install" example="nginx" default="">
-apt-get -q update && apt-get -q -y install $$PACKAGE
+apt-get -q update && apt-get -q -y install $PACKAGE
 
 """)
 foo_instance = linode.Instance("fooInstance",
@@ -181,7 +227,7 @@ const fooInstance = new linode.Instance("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.StackScript">StackScript</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>images=None<span class="p">, </span>is_public=None<span class="p">, </span>label=None<span class="p">, </span>rev_note=None<span class="p">, </span>script=None<span class="p">, </span>user_defined_fields=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.StackScript">StackScript</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rev_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[List[StackScriptUserDefinedFieldArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -680,7 +726,7 @@ parameters during deployment.
 <a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -1048,7 +1094,8 @@ Get an existing StackScript resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>deployments_active=None<span class="p">, </span>deployments_total=None<span class="p">, </span>description=None<span class="p">, </span>images=None<span class="p">, </span>is_public=None<span class="p">, </span>label=None<span class="p">, </span>rev_note=None<span class="p">, </span>script=None<span class="p">, </span>updated=None<span class="p">, </span>user_defined_fields=None<span class="p">, </span>user_gravatar_id=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployments_active</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">deployments_total</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rev_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[List[StackScriptUserDefinedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">user_gravatar_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> StackScript</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1056,7 +1103,7 @@ Get an existing StackScript resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.StackScript.html">StackScript</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..StackScriptState.html">StackScriptState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.StackScript.html">StackScript</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..StackScriptState.html">StackScriptState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1731,7 +1778,7 @@ parameters during deployment.
 <a href="#state_user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -2029,8 +2076,8 @@ parameters during deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manyof_python">
-<a href="#manyof_python" style="color: inherit; text-decoration: inherit;">many<wbr>Of</a>
+        <span id="many_of_python">
+<a href="#many_of_python" style="color: inherit; text-decoration: inherit;">many_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2049,8 +2096,8 @@ parameters during deployment.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oneof_python">
-<a href="#oneof_python" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
+        <span id="one_of_python">
+<a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -74,7 +74,20 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,7 +119,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_stack_script(</span>id=None<span class="p">, </span>user_defined_fields=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_stack_script(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[List[GetStackScriptUserDefinedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStackScriptResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -234,7 +247,7 @@ The following arguments are supported:
 <a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getstackscriptuserdefinedfield">List[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
+        <span class="property-type"><a href="#getstackscriptuserdefinedfield">List[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1103,8 +1116,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="manyof_python">
-<a href="#manyof_python" style="color: inherit; text-decoration: inherit;">many<wbr>Of</a>
+        <span id="many_of_python">
+<a href="#many_of_python" style="color: inherit; text-decoration: inherit;">many_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1123,8 +1136,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oneof_python">
-<a href="#oneof_python" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
+        <span id="one_of_python">
+<a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -59,7 +59,7 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
 	<dt>Version</dt>
-	<dd>2.4.4</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

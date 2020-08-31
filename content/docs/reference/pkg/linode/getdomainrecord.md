@@ -71,7 +71,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := 14950401
+		_, err := linode.LookupDomainRecord(ctx, &linode.LookupDomainRecordArgs{
+			DomainId: 3150401,
+			Id:       &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "www"
+		_, err = linode.LookupDomainRecord(ctx, &linode.LookupDomainRecordArgs{
+			DomainId: 3150401,
+			Name:     &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +109,9 @@ Coming soon!
 import pulumi
 import pulumi_linode as linode
 
-my_record = linode.get_domain_record(domain_id="3150401",
-    id="14950401")
-my_www_record = linode.get_domain_record(domain_id="3150401",
+my_record = linode.get_domain_record(domain_id=3150401,
+    id=14950401)
+my_www_record = linode.get_domain_record(domain_id=3150401,
     name="www")
 ```
 
@@ -119,7 +149,7 @@ const myWwwRecord = pulumi.output(linode.getDomainRecord({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domain_record(</span>domain_id=None<span class="p">, </span>id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain_record(</span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainRecordResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -154,7 +184,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The associated domain's unique ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -164,7 +195,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID of the Domain Record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -174,7 +206,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -191,7 +224,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The associated domain's unique ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -201,7 +235,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID of the Domain Record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -211,7 +246,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -228,7 +264,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The associated domain's unique ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -238,7 +275,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID of the Domain Record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -248,7 +286,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -265,7 +304,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The associated domain's unique ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -275,7 +315,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID of the Domain Record.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -285,7 +326,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
