@@ -44,7 +44,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ubuntuRemoteImage, err := docker.NewRemoteImage(ctx, "ubuntuRemoteImage", &docker.RemoteImageArgs{
+			Name: pulumi.String("ubuntu:precise"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = docker.NewContainer(ctx, "ubuntuContainer", &docker.ContainerArgs{
+			Image: ubuntuRemoteImage.Latest,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +116,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Container">Container</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[List[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[List[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -271,7 +297,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -854,7 +880,7 @@ by name.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -1437,7 +1463,7 @@ by name.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -2020,7 +2046,7 @@ by name.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -2041,7 +2067,7 @@ as is shown in the example above.
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">Dict[Container<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd>
@@ -2098,7 +2124,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">List[Container<wbr>Device]</a></span>
+        <span class="property-type"><a href="#containerdevice">List[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd>
@@ -2190,7 +2216,7 @@ when starting a container, set the entrypoint to be
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">Dict[Container<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd>
@@ -2212,7 +2238,7 @@ when starting a container, set the entrypoint to be
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">List[Container<wbr>Host]</a></span>
+        <span class="property-type"><a href="#containerhost">List[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd>
@@ -2234,7 +2260,7 @@ when starting a container, set the entrypoint to be
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label]</a></span>
+        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd>
@@ -2269,7 +2295,7 @@ Defaults to "json-file".
 <a href="#log_opts_python" style="color: inherit; text-decoration: inherit;">log_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
@@ -2325,7 +2351,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">List[Container<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#containermount">List[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd>
@@ -2390,7 +2416,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">List[Container<wbr>Networks<wbr>Advanced]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">List[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd>
@@ -2412,7 +2438,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List[Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#containerport">List[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd>
@@ -2502,7 +2528,7 @@ started after creation. If false, then the container is only created.
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
 {{% /md %}}</dd>
@@ -2513,7 +2539,7 @@ started after creation. If false, then the container is only created.
 <a href="#tmpfs_python" style="color: inherit; text-decoration: inherit;">tmpfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 {{% /md %}}</dd>
@@ -2524,7 +2550,7 @@ started after creation. If false, then the container is only created.
 <a href="#ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">List[Container<wbr>Ulimit]</a></span>
+        <span class="property-type"><a href="#containerulimit">List[Container<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -2536,7 +2562,7 @@ details.
 <a href="#uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">List[Container<wbr>Upload]</a></span>
+        <span class="property-type"><a href="#containerupload">List[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd>
@@ -2571,7 +2597,7 @@ by name.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">List[Container<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#containervolume">List[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd>
@@ -3005,7 +3031,8 @@ Get an existing Container resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attach=None<span class="p">, </span>bridge=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>container_logs=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>exit_code=None<span class="p">, </span>gateway=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_prefix_length=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_datas=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[List[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[List[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[List[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[List[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[List[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3013,7 +3040,7 @@ Get an existing Container resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Container.html">Container</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..ContainerState.html">ContainerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Container.html">Container</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..ContainerState.html">ContainerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3366,7 +3393,7 @@ NetworkSettings.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -4029,7 +4056,7 @@ NetworkSettings.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -4692,7 +4719,7 @@ NetworkSettings.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -5136,7 +5163,7 @@ by name.
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">Dict[Container<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd>
@@ -5204,7 +5231,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">List[Container<wbr>Device]</a></span>
+        <span class="property-type"><a href="#containerdevice">List[Container<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd>
@@ -5319,7 +5346,7 @@ NetworkSettings.
 <a href="#state_healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">Dict[Container<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd>
@@ -5341,7 +5368,7 @@ NetworkSettings.
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">List[Container<wbr>Host]</a></span>
+        <span class="property-type"><a href="#containerhost">List[Container<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd>
@@ -5355,7 +5382,7 @@ NetworkSettings.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the image to back this container.
-The easiest way to get this value is to use the `docker..RemoteImage` resource
+The easiest way to get this value is to use the `docker.RemoteImage` resource
 as is shown in the example above.
 {{% /md %}}</dd>
 
@@ -5399,7 +5426,7 @@ NetworkSettings.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label]</a></span>
+        <span class="property-type"><a href="#containerlabel">List[Container<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd>
@@ -5434,7 +5461,7 @@ Defaults to "json-file".
 <a href="#state_log_opts_python" style="color: inherit; text-decoration: inherit;">log_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/value pairs to use as options for
 the logging driver.
@@ -5490,7 +5517,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">List[Container<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#containermount">List[Container<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd>
@@ -5532,7 +5559,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_network_datas_python" style="color: inherit; text-decoration: inherit;">network_<wbr>datas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworkdata">List[Container<wbr>Network<wbr>Data]</a></span>
+        <span class="property-type"><a href="#containernetworkdata">List[Container<wbr>Network<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
@@ -5567,7 +5594,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_networks_advanced_python" style="color: inherit; text-decoration: inherit;">networks_<wbr>advanced</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">List[Container<wbr>Networks<wbr>Advanced]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">List[Container<wbr>Networks<wbr>Advanced<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd>
@@ -5589,7 +5616,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List[Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#containerport">List[Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd>
@@ -5679,7 +5706,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of kernel parameters (sysctls) to set in the container.
 {{% /md %}}</dd>
@@ -5690,7 +5717,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_tmpfs_python" style="color: inherit; text-decoration: inherit;">tmpfs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
 {{% /md %}}</dd>
@@ -5701,7 +5728,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">List[Container<wbr>Ulimit]</a></span>
+        <span class="property-type"><a href="#containerulimit">List[Container<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -5713,7 +5740,7 @@ details.
 <a href="#state_uploads_python" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">List[Container<wbr>Upload]</a></span>
+        <span class="property-type"><a href="#containerupload">List[Container<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd>
@@ -5748,7 +5775,7 @@ by name.
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">List[Container<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#containervolume">List[Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd>
@@ -6065,8 +6092,8 @@ Defaults to `rwm`.
 
     <dt class="property-required"
             title="Required">
-        <span id="hostpath_python">
-<a href="#hostpath_python" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
+        <span id="host_path_python">
+<a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6077,8 +6104,8 @@ is located.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerpath_python">
-<a href="#containerpath_python" style="color: inherit; text-decoration: inherit;">container<wbr>Path</a>
+        <span id="container_path_python">
+<a href="#container_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6350,8 +6377,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startperiod_python">
-<a href="#startperiod_python" style="color: inherit; text-decoration: inherit;">start<wbr>Period</a>
+        <span id="start_period_python">
+<a href="#start_period_python" style="color: inherit; text-decoration: inherit;">start_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6942,11 +6969,11 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bindoptions_python">
-<a href="#bindoptions_python" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
+        <span id="bind_options_python">
+<a href="#bind_options_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountbindoptions">Dict[Container<wbr>Mount<wbr>Bind<wbr>Options]</a></span>
+        <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd>
@@ -6976,22 +7003,22 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tmpfsoptions_python">
-<a href="#tmpfsoptions_python" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
+        <span id="tmpfs_options_python">
+<a href="#tmpfs_options_python" style="color: inherit; text-decoration: inherit;">tmpfs_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermounttmpfsoptions">Dict[Container<wbr>Mount<wbr>Tmpfs<wbr>Options]</a></span>
+        <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumeoptions_python">
-<a href="#volumeoptions_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
+        <span id="volume_options_python">
+<a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptions">Dict[Container<wbr>Mount<wbr>Volume<wbr>Options]</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd>
@@ -7211,8 +7238,8 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizebytes_python">
-<a href="#sizebytes_python" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
+        <span id="size_bytes_python">
+<a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7397,8 +7424,8 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="drivername_python">
-<a href="#drivername_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Name</a>
+        <span id="driver_name_python">
+<a href="#driver_name_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7407,11 +7434,11 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveroptions_python">
-<a href="#driveroptions_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Options</a>
+        <span id="driver_options_python">
+<a href="#driver_options_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Options for the driver.
 {{% /md %}}</dd>
@@ -7422,15 +7449,15 @@ Defaults to false.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptionslabel">List[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label]</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptionslabel">List[Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nocopy_python">
-<a href="#nocopy_python" style="color: inherit; text-decoration: inherit;">no<wbr>Copy</a>
+        <span id="no_copy_python">
+<a href="#no_copy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>copy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7790,8 +7817,8 @@ NetworkSettings.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="networkname_python">
-<a href="#networkname_python" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
+        <span id="network_name_python">
+<a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8000,8 +8027,8 @@ NetworkSettings.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4address_python">
-<a href="#ipv4address_python" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8011,8 +8038,8 @@ NetworkSettings.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6address_python">
-<a href="#ipv6address_python" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8501,7 +8528,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not. 
+    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
 {{% /md %}}</dd>
 
 </dl>
@@ -8575,7 +8602,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not. 
+    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
 {{% /md %}}</dd>
 
 </dl>
@@ -8649,7 +8676,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not. 
+    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
 {{% /md %}}</dd>
 
 </dl>
@@ -8683,8 +8710,8 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contentbase64_python">
-<a href="#contentbase64_python" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
+        <span id="content_base64_python">
+<a href="#content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8717,13 +8744,13 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcehash_python">
-<a href="#sourcehash_python" style="color: inherit; text-decoration: inherit;">source<wbr>Hash</a>
+        <span id="source_hash_python">
+<a href="#source_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not. 
+    <dd>{{% md %}}If using `source`, this will force an update if the file content has updated but the filename has not.
 {{% /md %}}</dd>
 
 </dl>
@@ -8954,8 +8981,8 @@ should be mounted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerpath_python">
-<a href="#containerpath_python" style="color: inherit; text-decoration: inherit;">container<wbr>Path</a>
+        <span id="container_path_python">
+<a href="#container_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8966,8 +8993,8 @@ device will be binded.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromcontainer_python">
-<a href="#fromcontainer_python" style="color: inherit; text-decoration: inherit;">from<wbr>Container</a>
+        <span id="from_container_python">
+<a href="#from_container_python" style="color: inherit; text-decoration: inherit;">from_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8978,8 +9005,8 @@ coming from.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostpath_python">
-<a href="#hostpath_python" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
+        <span id="host_path_python">
+<a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9002,8 +9029,8 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumename_python">
-<a href="#volumename_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
+        <span id="volume_name_python">
+<a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

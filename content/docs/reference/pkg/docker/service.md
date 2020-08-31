@@ -22,7 +22,7 @@ meta_desc: "Explore the Service resource of the Docker package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth=None<span class="p">, </span>converge_config=None<span class="p">, </span>endpoint_spec=None<span class="p">, </span>labels=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>rollback_config=None<span class="p">, </span>task_spec=None<span class="p">, </span>update_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">, </span><span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">, </span><span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">, </span><span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -518,7 +518,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#task_spec_python" style="color: inherit; text-decoration: inherit;">task_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Dict[Service<wbr>Task<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Dict[Service<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#converge_config_python" style="color: inherit; text-decoration: inherit;">converge_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Dict[Service<wbr>Converge<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoint_spec_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Dict[Service<wbr>Endpoint<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">List[Service<wbr>Label]</a></span>
+        <span class="property-type"><a href="#servicelabel">List[Service<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Dict[Service<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd>
@@ -595,7 +595,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rollback_config_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Dict[Service<wbr>Rollback<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd>
@@ -606,7 +606,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#update_config_python" style="color: inherit; text-decoration: inherit;">update_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Dict[Service<wbr>Update<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd>
@@ -709,7 +709,8 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth=None<span class="p">, </span>converge_config=None<span class="p">, </span>endpoint_spec=None<span class="p">, </span>labels=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>rollback_config=None<span class="p">, </span>task_spec=None<span class="p">, </span>update_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">, </span><span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">, </span><span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">, </span><span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -717,7 +718,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..ServiceState.html">ServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..ServiceState.html">ServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1147,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Dict[Service<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd>
@@ -1158,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_converge_config_python" style="color: inherit; text-decoration: inherit;">converge_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Dict[Service<wbr>Converge<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd>
@@ -1169,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_spec_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Dict[Service<wbr>Endpoint<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd>
@@ -1180,7 +1181,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">List[Service<wbr>Label]</a></span>
+        <span class="property-type"><a href="#servicelabel">List[Service<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd>
@@ -1191,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Dict[Service<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd>
@@ -1213,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_rollback_config_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Dict[Service<wbr>Rollback<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd>
@@ -1224,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_task_spec_python" style="color: inherit; text-decoration: inherit;">task_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Dict[Service<wbr>Task<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd>
@@ -1235,7 +1236,7 @@ The following state arguments are supported:
 <a href="#state_update_config_python" style="color: inherit; text-decoration: inherit;">update_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Dict[Service<wbr>Update<wbr>Config]</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd>
@@ -1303,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked. 
+    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
 {{% /md %}}</dd>
 
 </dl>
@@ -1343,7 +1344,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked. 
+    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
 {{% /md %}}</dd>
 
 </dl>
@@ -1383,7 +1384,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked. 
+    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
 {{% /md %}}</dd>
 
 </dl>
@@ -1423,7 +1424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked. 
+    <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
 {{% /md %}}</dd>
 
 </dl>
@@ -1693,7 +1694,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">List[Service<wbr>Endpoint<wbr>Spec<wbr>Port]</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">List[Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd>
@@ -1911,8 +1912,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 
     <dt class="property-required"
             title="Required">
-        <span id="targetport_python">
-<a href="#targetport_python" style="color: inherit; text-decoration: inherit;">target<wbr>Port</a>
+        <span id="target_port_python">
+<a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1944,8 +1945,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publishmode_python">
-<a href="#publishmode_python" style="color: inherit; text-decoration: inherit;">publish<wbr>Mode</a>
+        <span id="publish_mode_python">
+<a href="#publish_mode_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1955,8 +1956,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publishedport_python">
-<a href="#publishedport_python" style="color: inherit; text-decoration: inherit;">published<wbr>Port</a>
+        <span id="published_port_python">
+<a href="#published_port_python" style="color: inherit; text-decoration: inherit;">published_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2212,8 +2213,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 
     <dt class="property-optional"
             title="Optional">
-        <span id="global_python">
-<a href="#global_python" style="color: inherit; text-decoration: inherit;">global</a>
+        <span id="global__python">
+<a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2227,7 +2228,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#replicated_python" style="color: inherit; text-decoration: inherit;">replicated</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Dict[Service<wbr>Mode<wbr>Replicated]</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}, which contains atm only the amount of `replicas`
 {{% /md %}}</dd>
@@ -2582,8 +2583,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failureaction_python">
-<a href="#failureaction_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
+        <span id="failure_action_python">
+<a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2593,8 +2594,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxfailureratio_python">
-<a href="#maxfailureratio_python" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Ratio</a>
+        <span id="max_failure_ratio_python">
+<a href="#max_failure_ratio_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2948,19 +2949,19 @@ casting and precision errors.
 
     <dt class="property-required"
             title="Required">
-        <span id="containerspec_python">
-<a href="#containerspec_python" style="color: inherit; text-decoration: inherit;">container<wbr>Spec</a>
+        <span id="container_spec_python">
+<a href="#container_spec_python" style="color: inherit; text-decoration: inherit;">container_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See ContainerSpec below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forceupdate_python">
-<a href="#forceupdate_python" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
+        <span id="force_update_python">
+<a href="#force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2974,7 +2975,7 @@ casting and precision errors.
 <a href="#log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Dict[Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver]</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Log Driver below for details.
 {{% /md %}}</dd>
@@ -2996,7 +2997,7 @@ casting and precision errors.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Dict[Service<wbr>Task<wbr>Spec<wbr>Placement]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Placement below for details.
 {{% /md %}}</dd>
@@ -3007,18 +3008,18 @@ casting and precision errors.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Dict[Service<wbr>Task<wbr>Spec<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Resources below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartpolicy_python">
-<a href="#restartpolicy_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
+        <span id="restart_policy_python">
+<a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Dict[Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Restart Policy below for details.
 {{% /md %}}</dd>
@@ -3776,7 +3777,7 @@ casting and precision errors.
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Configs below for details.
 {{% /md %}}</dd>
@@ -3794,11 +3795,11 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsconfig_python">
-<a href="#dnsconfig_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
+        <span id="dns_config_python">
+<a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See DNS Config below for details.
 {{% /md %}}</dd>
@@ -3809,7 +3810,7 @@ casting and precision errors.
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables in the form VAR=value.
 {{% /md %}}</dd>
@@ -3831,7 +3832,7 @@ casting and precision errors.
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd>
@@ -3853,7 +3854,7 @@ casting and precision errors.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3874,7 +3875,7 @@ casting and precision errors.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd>
@@ -3885,7 +3886,7 @@ casting and precision errors.
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd>
@@ -3896,7 +3897,7 @@ casting and precision errors.
 <a href="#privileges_python" style="color: inherit; text-decoration: inherit;">privileges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Privileges below for details.
 {{% /md %}}</dd>
@@ -3918,15 +3919,15 @@ casting and precision errors.
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Secrets below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stopgraceperiod_python">
-<a href="#stopgraceperiod_python" style="color: inherit; text-decoration: inherit;">stop<wbr>Grace<wbr>Period</a>
+        <span id="stop_grace_period_python">
+<a href="#stop_grace_period_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3936,8 +3937,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stopsignal_python">
-<a href="#stopsignal_python" style="color: inherit; text-decoration: inherit;">stop<wbr>Signal</a>
+        <span id="stop_signal_python">
+<a href="#stop_signal_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>signal</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4202,8 +4203,8 @@ casting and precision errors.
 
     <dt class="property-required"
             title="Required">
-        <span id="configid_python">
-<a href="#configid_python" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
+        <span id="config_id_python">
+<a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4213,8 +4214,8 @@ casting and precision errors.
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_python">
-<a href="#filename_python" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
+        <span id="file_name_python">
+<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4224,8 +4225,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configname_python">
-<a href="#configname_python" style="color: inherit; text-decoration: inherit;">config<wbr>Name</a>
+        <span id="config_name_python">
+<a href="#config_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4235,8 +4236,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filegid_python">
-<a href="#filegid_python" style="color: inherit; text-decoration: inherit;">file<wbr>Gid</a>
+        <span id="file_gid_python">
+<a href="#file_gid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4246,8 +4247,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4257,8 +4258,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fileuid_python">
-<a href="#fileuid_python" style="color: inherit; text-decoration: inherit;">file<wbr>Uid</a>
+        <span id="file_uid_python">
+<a href="#file_uid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4694,8 +4695,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startperiod_python">
-<a href="#startperiod_python" style="color: inherit; text-decoration: inherit;">start<wbr>Period</a>
+        <span id="start_period_python">
+<a href="#start_period_python" style="color: inherit; text-decoration: inherit;">start_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5283,11 +5284,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bindoptions_python">
-<a href="#bindoptions_python" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
+        <span id="bind_options_python">
+<a href="#bind_options_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd>
@@ -5316,22 +5317,22 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tmpfsoptions_python">
-<a href="#tmpfsoptions_python" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
+        <span id="tmpfs_options_python">
+<a href="#tmpfs_options_python" style="color: inherit; text-decoration: inherit;">tmpfs_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumeoptions_python">
-<a href="#volumeoptions_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
+        <span id="volume_options_python">
+<a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd>
@@ -5470,7 +5471,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes. 
+    <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd>
 
 </dl>
@@ -5499,7 +5500,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes. 
+    <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd>
 
 </dl>
@@ -5528,7 +5529,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes. 
+    <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd>
 
 </dl>
@@ -5551,13 +5552,13 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizebytes_python">
-<a href="#sizebytes_python" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
+        <span id="size_bytes_python">
+<a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The size for the tmpfs mount in bytes. 
+    <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd>
 
 </dl>
@@ -5734,8 +5735,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="drivername_python">
-<a href="#drivername_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Name</a>
+        <span id="driver_name_python">
+<a href="#driver_name_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5744,11 +5745,11 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveroptions_python">
-<a href="#driveroptions_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Options</a>
+        <span id="driver_options_python">
+<a href="#driver_options_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5758,15 +5759,15 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">List[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nocopy_python">
-<a href="#nocopy_python" style="color: inherit; text-decoration: inherit;">no<wbr>Copy</a>
+        <span id="no_copy_python">
+<a href="#no_copy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>copy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6022,22 +6023,22 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="credentialspec_python">
-<a href="#credentialspec_python" style="color: inherit; text-decoration: inherit;">credential<wbr>Spec</a>
+        <span id="credential_spec_python">
+<a href="#credential_spec_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For managed service account (Windows only)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="selinuxcontext_python">
-<a href="#selinuxcontext_python" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Context</a>
+        <span id="se_linux_context_python">
+<a href="#se_linux_context_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Dict[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SELinux labels of the container
 {{% /md %}}</dd>
@@ -6688,8 +6689,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-required"
             title="Required">
-        <span id="filename_python">
-<a href="#filename_python" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
+        <span id="file_name_python">
+<a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6699,8 +6700,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-required"
             title="Required">
-        <span id="secretid_python">
-<a href="#secretid_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
+        <span id="secret_id_python">
+<a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6710,8 +6711,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filegid_python">
-<a href="#filegid_python" style="color: inherit; text-decoration: inherit;">file<wbr>Gid</a>
+        <span id="file_gid_python">
+<a href="#file_gid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6721,8 +6722,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filemode_python">
-<a href="#filemode_python" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
+        <span id="file_mode_python">
+<a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6732,8 +6733,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fileuid_python">
-<a href="#fileuid_python" style="color: inherit; text-decoration: inherit;">file<wbr>Uid</a>
+        <span id="file_uid_python">
+<a href="#file_uid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6743,8 +6744,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretname_python">
-<a href="#secretname_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6881,7 +6882,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The options for the logging driver, e.g.
 {{% /md %}}</dd>
@@ -7048,7 +7049,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#platforms_python" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">List[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">List[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
 {{% /md %}}</dd>
@@ -7316,7 +7317,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Dict[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd>
@@ -7327,7 +7328,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#reservation_python" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Dict[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation]</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd>
@@ -7479,19 +7480,19 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="genericresources_python">
-<a href="#genericresources_python" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
+        <span id="generic_resources_python">
+<a href="#generic_resources_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Dict[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memorybytes_python">
-<a href="#memorybytes_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Bytes</a>
+        <span id="memory_bytes_python">
+<a href="#memory_bytes_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7501,8 +7502,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nanocpus_python">
-<a href="#nanocpus_python" style="color: inherit; text-decoration: inherit;">nano<wbr>Cpus</a>
+        <span id="nano_cpus_python">
+<a href="#nano_cpus_python" style="color: inherit; text-decoration: inherit;">nano_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7624,8 +7625,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="discreteresourcesspecs_python">
-<a href="#discreteresourcesspecs_python" style="color: inherit; text-decoration: inherit;">discrete<wbr>Resources<wbr>Specs</a>
+        <span id="discrete_resources_specs_python">
+<a href="#discrete_resources_specs_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>resources_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7635,8 +7636,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namedresourcesspecs_python">
-<a href="#namedresourcesspecs_python" style="color: inherit; text-decoration: inherit;">named<wbr>Resources<wbr>Specs</a>
+        <span id="named_resources_specs_python">
+<a href="#named_resources_specs_python" style="color: inherit; text-decoration: inherit;">named_<wbr>resources_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7791,19 +7792,19 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="genericresources_python">
-<a href="#genericresources_python" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
+        <span id="generic_resources_python">
+<a href="#generic_resources_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Dict[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memorybytes_python">
-<a href="#memorybytes_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Bytes</a>
+        <span id="memory_bytes_python">
+<a href="#memory_bytes_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7813,8 +7814,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nanocpus_python">
-<a href="#nanocpus_python" style="color: inherit; text-decoration: inherit;">nano<wbr>Cpus</a>
+        <span id="nano_cpus_python">
+<a href="#nano_cpus_python" style="color: inherit; text-decoration: inherit;">nano_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7936,8 +7937,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="discreteresourcesspecs_python">
-<a href="#discreteresourcesspecs_python" style="color: inherit; text-decoration: inherit;">discrete<wbr>Resources<wbr>Specs</a>
+        <span id="discrete_resources_specs_python">
+<a href="#discrete_resources_specs_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>resources_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7947,8 +7948,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="namedresourcesspecs_python">
-<a href="#namedresourcesspecs_python" style="color: inherit; text-decoration: inherit;">named<wbr>Resources<wbr>Specs</a>
+        <span id="named_resources_specs_python">
+<a href="#named_resources_specs_python" style="color: inherit; text-decoration: inherit;">named_<wbr>resources_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -8158,8 +8159,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxattempts_python">
-<a href="#maxattempts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
+        <span id="max_attempts_python">
+<a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8438,8 +8439,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failureaction_python">
-<a href="#failureaction_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
+        <span id="failure_action_python">
+<a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8449,8 +8450,8 @@ casting and precision errors.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxfailureratio_python">
-<a href="#maxfailureratio_python" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Ratio</a>
+        <span id="max_failure_ratio_python">
+<a href="#max_failure_ratio_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

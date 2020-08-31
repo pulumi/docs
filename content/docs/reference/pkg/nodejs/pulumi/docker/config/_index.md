@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/docker | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/docker package."
-git_sha: "3b01509623a3d6bea06d15de90cea77e8cce726f"
+git_sha: "0776fe7538b28ac66c32b43f2639b49333243410"
 block_external_search_index: true
 ---
 
@@ -32,37 +32,37 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="caMaterial" data-link-title="caMaterial">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/3b01509623a3d6bea06d15de90cea77e8cce726f/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L14">
         let <strong>caMaterial</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> caMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caMaterial&#34;) || utilities.getEnv(&#34;DOCKER_CA_MATERIAL&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> caMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caMaterial&#34;)</span>;</code></pre>
 
 PEM-encoded content of Docker host CA certificate
 
 <h3 class="pdoc-module-header" id="certMaterial" data-link-title="certMaterial">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/3b01509623a3d6bea06d15de90cea77e8cce726f/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L18">
         let <strong>certMaterial</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> certMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certMaterial&#34;) || utilities.getEnv(&#34;DOCKER_CERT_MATERIAL&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> certMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certMaterial&#34;)</span>;</code></pre>
 
 PEM-encoded content of Docker client certificate
 
 <h3 class="pdoc-module-header" id="certPath" data-link-title="certPath">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/3b01509623a3d6bea06d15de90cea77e8cce726f/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L22">
         let <strong>certPath</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> certPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certPath&#34;) || utilities.getEnv(&#34;DOCKER_CERT_PATH&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> certPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certPath&#34;)</span>;</code></pre>
 
 Path to directory with Docker TLS config
 
 <h3 class="pdoc-module-header" id="host" data-link-title="host">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/3b01509623a3d6bea06d15de90cea77e8cce726f/sdk/nodejs/config/vars.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L26">
         let <strong>host</strong>
     </a>
 </h3>
@@ -72,17 +72,17 @@ Path to directory with Docker TLS config
 The Docker daemon address
 
 <h3 class="pdoc-module-header" id="keyMaterial" data-link-title="keyMaterial">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/3b01509623a3d6bea06d15de90cea77e8cce726f/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L30">
         let <strong>keyMaterial</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> keyMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;keyMaterial&#34;) || utilities.getEnv(&#34;DOCKER_KEY_MATERIAL&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> keyMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;keyMaterial&#34;)</span>;</code></pre>
 
 PEM-encoded content of Docker client private key
 
 <h3 class="pdoc-module-header" id="registryAuth" data-link-title="registryAuth">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/3b01509623a3d6bea06d15de90cea77e8cce726f/sdk/nodejs/config/vars.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/0776fe7538b28ac66c32b43f2639b49333243410/sdk/nodejs/config/vars.ts#L31">
         let <strong>registryAuth</strong>
     </a>
 </h3>

@@ -38,7 +38,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "main"
+		_, err := docker.LookupNetwork(ctx, &docker.LookupNetworkArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,7 +99,7 @@ const main = pulumi.output(docker.getNetwork({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_network(</span>id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -528,7 +549,7 @@ See [docker docs][networkdocs] for more details.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Optional, map) Only available with bridge networks. See
 [docker docs][bridgeoptionsdocs] for more details.
@@ -741,11 +762,11 @@ See [docker docs][networkdocs] for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="auxaddress_python">
-<a href="#auxaddress_python" style="color: inherit; text-decoration: inherit;">aux<wbr>Address</a>
+        <span id="aux_address_python">
+<a href="#aux_address_python" style="color: inherit; text-decoration: inherit;">aux_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -761,8 +782,8 @@ See [docker docs][networkdocs] for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iprange_python">
-<a href="#iprange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
+        <span id="ip_range_python">
+<a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
