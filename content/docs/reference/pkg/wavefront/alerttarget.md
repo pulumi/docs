@@ -77,22 +77,22 @@ test_target = wavefront.AlertTarget("testTarget",
     method="WEBHOOK",
     recipient="https://hooks.slack.com/services/test/me",
     routes=[
-        {
-            "filter": {
+        wavefront.AlertTargetRouteArgs(
+            filter={
                 "key": "env",
                 "value": "prod",
             },
-            "method": "WEBHOOK",
-            "target": "https://hooks.slack.com/services/test/me/prod",
-        },
-        {
-            "filter": {
+            method="WEBHOOK",
+            target="https://hooks.slack.com/services/test/me/prod",
+        ),
+        wavefront.AlertTargetRouteArgs(
+            filter={
                 "key": "env",
                 "value": "dev",
             },
-            "method": "WEBHOOK",
-            "target": "https://hooks.slack.com/services/test/me/dev",
-        },
+            method="WEBHOOK",
+            target="https://hooks.slack.com/services/test/me/dev",
+        ),
     ],
     template="{}",
     triggers=[
@@ -333,7 +333,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.AlertTarget">AlertTarget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_type=None<span class="p">, </span>custom_headers=None<span class="p">, </span>description=None<span class="p">, </span>email_subject=None<span class="p">, </span>is_html_content=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>recipient=None<span class="p">, </span>routes=None<span class="p">, </span>template=None<span class="p">, </span>triggers=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.AlertTarget">AlertTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_html_content</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[List[AlertTargetRouteArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -965,7 +965,7 @@ routing key. `WEBHOOK`: URL endpoint.
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
@@ -1021,7 +1021,7 @@ sent in the requests with a method of `WEBHOOK`.
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alerttargetroute">List[Alert<wbr>Target<wbr>Route]</a></span>
+        <span class="property-type"><a href="#alerttargetroute">List[Alert<wbr>Target<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
 {{% /md %}}</dd>
@@ -1164,7 +1164,8 @@ Get an existing AlertTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content_type=None<span class="p">, </span>custom_headers=None<span class="p">, </span>description=None<span class="p">, </span>email_subject=None<span class="p">, </span>is_html_content=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>recipient=None<span class="p">, </span>routes=None<span class="p">, </span>target_id=None<span class="p">, </span>template=None<span class="p">, </span>triggers=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_html_content</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[List[AlertTargetRouteArgs]]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> AlertTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1172,7 +1173,7 @@ Get an existing AlertTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.AlertTarget.html">AlertTarget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..AlertTargetState.html">AlertTargetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.AlertTarget.html">AlertTarget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..AlertTargetState.html">AlertTargetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1721,7 +1722,7 @@ routing key. `WEBHOOK`: URL endpoint.
 <a href="#state_custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
@@ -1800,7 +1801,7 @@ routing key. `WEBHOOK`: URL endpoint.
 <a href="#state_routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alerttargetroute">List[Alert<wbr>Target<wbr>Route]</a></span>
+        <span class="property-type"><a href="#alerttargetroute">List[Alert<wbr>Target<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
 {{% /md %}}</dd>
@@ -2013,7 +2014,7 @@ routing key. `WEBHOOK`: URL endpoint.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

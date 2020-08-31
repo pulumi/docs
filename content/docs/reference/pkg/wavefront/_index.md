@@ -50,7 +50,7 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/terraform-providers/terraform-provider-wavefront).</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.1.0</dd>
 </dl>
 
 

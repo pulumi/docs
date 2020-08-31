@@ -26,58 +26,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_wavefront as wavefront
-
-basic = wavefront.User("basic",
-    email="test+tftesting@example.com",
-    groups=[
-        "agent_management",
-        "alerts_management",
-    ])
-test_dashboard = wavefront.Dashboard("testDashboard",
-    description="testing, testing",
-    url="tftestcreate",
-    display_section_table_of_contents=True,
-    display_query_parameters=True,
-    can_views=[basic.id],
-    sections=[{
-        "name": "section 1",
-        "rows": [{
-            "charts": [{
-                "name": "chart 1",
-                "description": "chart number 1",
-                "units": "something per unit",
-                "sources": [{
-                    "name": "source name",
-                    "query": "ts()",
-                }],
-                "chartSetting": {
-                    "type": "linear",
-                },
-                "summarization": "MEAN",
-            }],
-        }],
-    }],
-    parameter_details=[{
-        "name": "param1",
-        "label": "param1",
-        "defaultValue": "Label",
-        "hideFromView": False,
-        "parameterType": "SIMPLE",
-        "valuesToReadableStrings": {
-            "Label": "test",
-        },
-    }],
-    tags=[
-        "b",
-        "terraform",
-        "a",
-        "test",
-    ])
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -150,7 +99,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.Dashboard">Dashboard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_modifies=None<span class="p">, </span>can_views=None<span class="p">, </span>description=None<span class="p">, </span>display_query_parameters=None<span class="p">, </span>display_section_table_of_contents=None<span class="p">, </span>event_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>parameter_details=None<span class="p">, </span>sections=None<span class="p">, </span>tags=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_wavefront/#pulumi_wavefront.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[List[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[List[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -732,7 +681,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">List[Dashboard<wbr>Section]</a></span>
+        <span class="property-type"><a href="#dashboardsection">List[Dashboard<wbr>Section<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
@@ -834,7 +783,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">List[Dashboard<wbr>Parameter<wbr>Detail]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">List[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
@@ -937,7 +886,8 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>can_modifies=None<span class="p">, </span>can_views=None<span class="p">, </span>description=None<span class="p">, </span>display_query_parameters=None<span class="p">, </span>display_section_table_of_contents=None<span class="p">, </span>event_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>parameter_details=None<span class="p">, </span>sections=None<span class="p">, </span>tags=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[List[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[List[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -945,7 +895,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1530,7 +1480,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">List[Dashboard<wbr>Parameter<wbr>Detail]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">List[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
@@ -1541,7 +1491,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">List[Dashboard<wbr>Section]</a></span>
+        <span class="property-type"><a href="#dashboardsection">List[Dashboard<wbr>Section<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
@@ -1927,8 +1877,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultvalue_python">
-<a href="#defaultvalue_python" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
+        <span id="default_value_python">
+<a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1938,8 +1888,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-required"
             title="Required">
-        <span id="hidefromview_python">
-<a href="#hidefromview_python" style="color: inherit; text-decoration: inherit;">hide<wbr>From<wbr>View</a>
+        <span id="hide_from_view_python">
+<a href="#hide_from_view_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>from_<wbr>view</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1971,8 +1921,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-required"
             title="Required">
-        <span id="parametertype_python">
-<a href="#parametertype_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Type</a>
+        <span id="parameter_type_python">
+<a href="#parameter_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1982,11 +1932,11 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-required"
             title="Required">
-        <span id="valuestoreadablestrings_python">
-<a href="#valuestoreadablestrings_python" style="color: inherit; text-decoration: inherit;">values<wbr>To<wbr>Readable<wbr>Strings</a>
+        <span id="values_to_readable_strings_python">
+<a href="#values_to_readable_strings_python" style="color: inherit; text-decoration: inherit;">values_<wbr>to_<wbr>readable_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
@@ -1994,8 +1944,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dynamicfieldtype_python">
-<a href="#dynamicfieldtype_python" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Field<wbr>Type</a>
+        <span id="dynamic_field_type_python">
+<a href="#dynamic_field_type_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>field_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2006,8 +1956,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-optional"
             title="Optional">
-        <span id="queryvalue_python">
-<a href="#queryvalue_python" style="color: inherit; text-decoration: inherit;">query<wbr>Value</a>
+        <span id="query_value_python">
+<a href="#query_value_python" style="color: inherit; text-decoration: inherit;">query_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2017,8 +1967,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagkey_python">
-<a href="#tagkey_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
+        <span id="tag_key_python">
+<a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2155,7 +2105,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrow">List[Dashboard<wbr>Section<wbr>Row]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrow">List[Dashboard<wbr>Section<wbr>Row<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd>
@@ -2245,7 +2195,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchart">List[Dashboard<wbr>Section<wbr>Row<wbr>Chart]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchart">List[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd>
@@ -2499,11 +2449,11 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
     <dt class="property-required"
             title="Required">
-        <span id="chartsetting_python">
-<a href="#chartsetting_python" style="color: inherit; text-decoration: inherit;">chart<wbr>Setting</a>
+        <span id="chart_setting_python">
+<a href="#chart_setting_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>setting</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dict[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd>
@@ -2525,7 +2475,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartsource">List[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartsource">List[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd>
@@ -4586,8 +4536,8 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autocolumntags_python">
-<a href="#autocolumntags_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Column<wbr>Tags</a>
+        <span id="auto_column_tags_python">
+<a href="#auto_column_tags_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>column_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4597,8 +4547,8 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columntags_python">
-<a href="#columntags_python" style="color: inherit; text-decoration: inherit;">column<wbr>Tags</a>
+        <span id="column_tags_python">
+<a href="#column_tags_python" style="color: inherit; text-decoration: inherit;">column_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4608,8 +4558,8 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customtags_python">
-<a href="#customtags_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Tags</a>
+        <span id="custom_tags_python">
+<a href="#custom_tags_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4619,8 +4569,8 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expecteddataspacing_python">
-<a href="#expecteddataspacing_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Spacing</a>
+        <span id="expected_data_spacing_python">
+<a href="#expected_data_spacing_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>spacing</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4631,8 +4581,8 @@ above which a dotted line will replace a solid in in line plots. Default 60
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegenddisplaystats_python">
-<a href="#fixedlegenddisplaystats_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Display<wbr>Stats</a>
+        <span id="fixed_legend_display_stats_python">
+<a href="#fixed_legend_display_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>display_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4642,8 +4592,8 @@ above which a dotted line will replace a solid in in line plots. Default 60
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegendenabled_python">
-<a href="#fixedlegendenabled_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Enabled</a>
+        <span id="fixed_legend_enabled_python">
+<a href="#fixed_legend_enabled_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4653,8 +4603,8 @@ above which a dotted line will replace a solid in in line plots. Default 60
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegendfilterfield_python">
-<a href="#fixedlegendfilterfield_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Field</a>
+        <span id="fixed_legend_filter_field_python">
+<a href="#fixed_legend_filter_field_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4665,8 +4615,8 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegendfilterlimit_python">
-<a href="#fixedlegendfilterlimit_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Limit</a>
+        <span id="fixed_legend_filter_limit_python">
+<a href="#fixed_legend_filter_limit_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4676,8 +4626,8 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegendfiltersort_python">
-<a href="#fixedlegendfiltersort_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Sort</a>
+        <span id="fixed_legend_filter_sort_python">
+<a href="#fixed_legend_filter_sort_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>sort</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4688,8 +4638,8 @@ are `TOP`, and `BOTTOM`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegendhidelabel_python">
-<a href="#fixedlegendhidelabel_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Hide<wbr>Label</a>
+        <span id="fixed_legend_hide_label_python">
+<a href="#fixed_legend_hide_label_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>hide_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4699,8 +4649,8 @@ are `TOP`, and `BOTTOM`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegendposition_python">
-<a href="#fixedlegendposition_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Position</a>
+        <span id="fixed_legend_position_python">
+<a href="#fixed_legend_position_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>position</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4711,8 +4661,8 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedlegenduserawstats_python">
-<a href="#fixedlegenduserawstats_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Use<wbr>Raw<wbr>Stats</a>
+        <span id="fixed_legend_use_raw_stats_python">
+<a href="#fixed_legend_use_raw_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>use_<wbr>raw_<wbr>stats</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4722,8 +4672,8 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupbysource_python">
-<a href="#groupbysource_python" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Source</a>
+        <span id="group_by_source_python">
+<a href="#group_by_source_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4735,8 +4685,8 @@ columns in the same row
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invertdynamiclegendhovercontrol_python">
-<a href="#invertdynamiclegendhovercontrol_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Dynamic<wbr>Legend<wbr>Hover<wbr>Control</a>
+        <span id="invert_dynamic_legend_hover_control_python">
+<a href="#invert_dynamic_legend_hover_control_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>dynamic_<wbr>legend_<wbr>hover_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4747,8 +4697,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linetype_python">
-<a href="#linetype_python" style="color: inherit; text-decoration: inherit;">line<wbr>Type</a>
+        <span id="line_type_python">
+<a href="#line_type_python" style="color: inherit; text-decoration: inherit;">line_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4781,8 +4731,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numtags_python">
-<a href="#numtags_python" style="color: inherit; text-decoration: inherit;">num<wbr>Tags</a>
+        <span id="num_tags_python">
+<a href="#num_tags_python" style="color: inherit; text-decoration: inherit;">num_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4792,8 +4742,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="plainmarkdowncontent_python">
-<a href="#plainmarkdowncontent_python" style="color: inherit; text-decoration: inherit;">plain<wbr>Markdown<wbr>Content</a>
+        <span id="plain_markdown_content_python">
+<a href="#plain_markdown_content_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>markdown_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4803,8 +4753,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="showhosts_python">
-<a href="#showhosts_python" style="color: inherit; text-decoration: inherit;">show<wbr>Hosts</a>
+        <span id="show_hosts_python">
+<a href="#show_hosts_python" style="color: inherit; text-decoration: inherit;">show_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4814,8 +4764,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="showlabels_python">
-<a href="#showlabels_python" style="color: inherit; text-decoration: inherit;">show<wbr>Labels</a>
+        <span id="show_labels_python">
+<a href="#show_labels_python" style="color: inherit; text-decoration: inherit;">show_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4825,8 +4775,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="showrawvalues_python">
-<a href="#showrawvalues_python" style="color: inherit; text-decoration: inherit;">show<wbr>Raw<wbr>Values</a>
+        <span id="show_raw_values_python">
+<a href="#show_raw_values_python" style="color: inherit; text-decoration: inherit;">show_<wbr>raw_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4836,8 +4786,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sortvaluesdescending_python">
-<a href="#sortvaluesdescending_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Values<wbr>Descending</a>
+        <span id="sort_values_descending_python">
+<a href="#sort_values_descending_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>values_<wbr>descending</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4847,8 +4797,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedecimalprecision_python">
-<a href="#sparklinedecimalprecision_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Decimal<wbr>Precision</a>
+        <span id="sparkline_decimal_precision_python">
+<a href="#sparkline_decimal_precision_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>decimal_<wbr>precision</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4858,8 +4808,8 @@ reenable it when the ctrl-key is pressed)
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplaycolor_python">
-<a href="#sparklinedisplaycolor_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Color</a>
+        <span id="sparkline_display_color_python">
+<a href="#sparkline_display_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>color</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4870,8 +4820,8 @@ Values should be in `rgba(,,,,)` format
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplayfontsize_python">
-<a href="#sparklinedisplayfontsize_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Font<wbr>Size</a>
+        <span id="sparkline_display_font_size_python">
+<a href="#sparkline_display_font_size_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>font_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4881,8 +4831,8 @@ Values should be in `rgba(,,,,)` format
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplayhorizontalposition_python">
-<a href="#sparklinedisplayhorizontalposition_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Horizontal<wbr>Position</a>
+        <span id="sparkline_display_horizontal_position_python">
+<a href="#sparkline_display_horizontal_position_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>horizontal_<wbr>position</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4893,8 +4843,8 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplaypostfix_python">
-<a href="#sparklinedisplaypostfix_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Postfix</a>
+        <span id="sparkline_display_postfix_python">
+<a href="#sparkline_display_postfix_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>postfix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4904,8 +4854,8 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplayprefix_python">
-<a href="#sparklinedisplayprefix_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Prefix</a>
+        <span id="sparkline_display_prefix_python">
+<a href="#sparkline_display_prefix_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4915,8 +4865,8 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplayvaluetype_python">
-<a href="#sparklinedisplayvaluetype_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Value<wbr>Type</a>
+        <span id="sparkline_display_value_type_python">
+<a href="#sparkline_display_value_type_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4927,8 +4877,8 @@ Valid options are `VALUE` or `LABEL`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinedisplayverticalposition_python">
-<a href="#sparklinedisplayverticalposition_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Vertical<wbr>Position</a>
+        <span id="sparkline_display_vertical_position_python">
+<a href="#sparkline_display_vertical_position_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>vertical_<wbr>position</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4938,8 +4888,8 @@ Valid options are `VALUE` or `LABEL`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinefillcolor_python">
-<a href="#sparklinefillcolor_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Fill<wbr>Color</a>
+        <span id="sparkline_fill_color_python">
+<a href="#sparkline_fill_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>fill_<wbr>color</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4950,8 +4900,8 @@ in `rgba(,,,,)`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinelinecolor_python">
-<a href="#sparklinelinecolor_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Line<wbr>Color</a>
+        <span id="sparkline_line_color_python">
+<a href="#sparkline_line_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>line_<wbr>color</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4961,8 +4911,8 @@ in `rgba(,,,,)`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinesize_python">
-<a href="#sparklinesize_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Size</a>
+        <span id="sparkline_size_python">
+<a href="#sparkline_size_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4973,8 +4923,8 @@ Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinevaluecolormapapplyto_python">
-<a href="#sparklinevaluecolormapapplyto_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Apply<wbr>To</a>
+        <span id="sparkline_value_color_map_apply_to_python">
+<a href="#sparkline_value_color_map_apply_to_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>apply_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4985,8 +4935,8 @@ the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinevaluecolormapcolors_python">
-<a href="#sparklinevaluecolormapcolors_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Colors</a>
+        <span id="sparkline_value_color_map_colors_python">
+<a href="#sparkline_value_color_map_colors_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>colors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4997,22 +4947,22 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinevaluecolormapvalues_python">
-<a href="#sparklinevaluecolormapvalues_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values</a>
+        <span id="sparkline_value_color_map_values_python">
+<a href="#sparkline_value_color_map_values_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinevaluecolormapvaluesv2s_python">
-<a href="#sparklinevaluecolormapvaluesv2s_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values<wbr>V2s</a>
+        <span id="sparkline_value_color_map_values_v2s_python">
+<a href="#sparkline_value_color_map_values_v2s_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values_<wbr>v2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
@@ -5020,8 +4970,8 @@ query values to colors.  Must contain one less element than `sparkline_value_col
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinevaluetextmaptexts_python">
-<a href="#sparklinevaluetextmaptexts_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Texts</a>
+        <span id="sparkline_value_text_map_texts_python">
+<a href="#sparkline_value_text_map_texts_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>texts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5032,11 +4982,11 @@ values map to.  Must contain one more element than `sparkline_value_text_map_thr
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sparklinevaluetextmapthresholds_python">
-<a href="#sparklinevaluetextmapthresholds_python" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Thresholds</a>
+        <span id="sparkline_value_text_map_thresholds_python">
+<a href="#sparkline_value_text_map_thresholds_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
@@ -5044,8 +4994,8 @@ mapping different query values to display text.  Must contain one less element t
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stacktype_python">
-<a href="#stacktype_python" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5057,8 +5007,8 @@ center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagmode_python">
-<a href="#tagmode_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Mode</a>
+        <span id="tag_mode_python">
+<a href="#tag_mode_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5069,8 +5019,8 @@ Valid options are `all`, `top`, or `custom`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timebasedcoloring_python">
-<a href="#timebasedcoloring_python" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Coloring</a>
+        <span id="time_based_coloring_python">
+<a href="#time_based_coloring_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>coloring</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5080,8 +5030,8 @@ Valid options are `all`, `top`, or `custom`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="windowsize_python">
-<a href="#windowsize_python" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
+        <span id="window_size_python">
+<a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5125,8 +5075,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="y0scalesiby1024_python">
-<a href="#y0scalesiby1024_python" style="color: inherit; text-decoration: inherit;">y0Scale<wbr>Si<wbr>By1024</a>
+        <span id="y0_scale_si_by1024_python">
+<a href="#y0_scale_si_by1024_python" style="color: inherit; text-decoration: inherit;">y0_<wbr>scale_<wbr>si_<wbr>by1024</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5136,8 +5086,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="y0unitautoscaling_python">
-<a href="#y0unitautoscaling_python" style="color: inherit; text-decoration: inherit;">y0Unit<wbr>Autoscaling</a>
+        <span id="y0_unit_autoscaling_python">
+<a href="#y0_unit_autoscaling_python" style="color: inherit; text-decoration: inherit;">y0_<wbr>unit_<wbr>autoscaling</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5147,8 +5097,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="y1scalesiby1024_python">
-<a href="#y1scalesiby1024_python" style="color: inherit; text-decoration: inherit;">y1Scale<wbr>Si<wbr>By1024</a>
+        <span id="y1_scale_si_by1024_python">
+<a href="#y1_scale_si_by1024_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>scale_<wbr>si_<wbr>by1024</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5158,8 +5108,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="y1unitautoscaling_python">
-<a href="#y1unitautoscaling_python" style="color: inherit; text-decoration: inherit;">y1Unit<wbr>Autoscaling</a>
+        <span id="y1_unit_autoscaling_python">
+<a href="#y1_unit_autoscaling_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>unit_<wbr>autoscaling</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5169,8 +5119,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="y1units_python">
-<a href="#y1units_python" style="color: inherit; text-decoration: inherit;">y1Units</a>
+        <span id="y1_units_python">
+<a href="#y1_units_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>units</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5501,8 +5451,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querybuilderenabled_python">
-<a href="#querybuilderenabled_python" style="color: inherit; text-decoration: inherit;">query<wbr>Builder<wbr>Enabled</a>
+        <span id="query_builder_enabled_python">
+<a href="#query_builder_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>builder_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5512,8 +5462,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scatterplotsource_python">
-<a href="#scatterplotsource_python" style="color: inherit; text-decoration: inherit;">scatter<wbr>Plot<wbr>Source</a>
+        <span id="scatter_plot_source_python">
+<a href="#scatter_plot_source_python" style="color: inherit; text-decoration: inherit;">scatter_<wbr>plot_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5523,8 +5473,8 @@ Valid options are `full` or `last`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedescription_python">
-<a href="#sourcedescription_python" style="color: inherit; text-decoration: inherit;">source<wbr>Description</a>
+        <span id="source_description_python">
+<a href="#source_description_python" style="color: inherit; text-decoration: inherit;">source_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
