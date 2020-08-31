@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/civo | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/civo package."
-git_sha: "c075461d9ce2b9bb36fefcf3446a368451a52bbb"
+git_sha: "f59f5be19540546efd7e9455a4fbf503a6d67c75"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/c075461d9ce2b9bb36fefcf3446a368451a52bbb/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/config/vars.ts#L9">
         let <strong>token</strong>
     </a>
 </h3>
