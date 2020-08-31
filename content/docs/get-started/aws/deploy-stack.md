@@ -55,14 +55,14 @@ Resources:
 Duration: 14s
 ```
 
-Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. For example, the name of the bucket created above is `my-bucket-68e33ec`. To confirm your bucket has been created, let's try to list the contents of your bucket.
+Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
 ```bash
-$ aws s3 ls $(pulumi stack output bucketName)
+$ pulumi stack output bucketName
 ```
 
 {{% /choosable %}}
@@ -70,7 +70,7 @@ $ aws s3 ls $(pulumi stack output bucketName)
 {{% choosable language typescript %}}
 
 ```bash
-$ aws s3 ls $(pulumi stack output bucketName)
+$ pulumi stack output bucketName
 ```
 
 {{% /choosable %}}
@@ -78,7 +78,7 @@ $ aws s3 ls $(pulumi stack output bucketName)
 {{% choosable language python %}}
 
 ```bash
-$ aws s3 ls $(pulumi stack output bucket_name)
+$ pulumi stack output bucket_name
 ```
 
 {{% /choosable %}}
@@ -86,7 +86,7 @@ $ aws s3 ls $(pulumi stack output bucket_name)
 {{% choosable language go %}}
 
 ```bash
-$ aws s3 ls $(pulumi stack output bucketName)
+$ pulumi stack output bucketName
 ```
 
 {{% /choosable %}}
@@ -94,11 +94,11 @@ $ aws s3 ls $(pulumi stack output bucketName)
 {{% choosable language csharp %}}
 
 ```bash
-$ aws s3 ls $(pulumi stack output BucketName)
+$ pulumi stack output BucketName
 ```
 
 {{% /choosable %}}
 
-Running that command should result in no output as your bucket is currently empty. Let's change that by modifying your bucket to host a static website.
+Running that command will print out the name of your bucket. Now that your bucket has been provisioned, let's modify the bucket to host a static website.
 
 {{< get-started-stepper >}}

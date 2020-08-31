@@ -57,7 +57,7 @@ Resources:
 Duration: 6s
 ```
 
-Once the update has completed, re-run the command to list the contents of the bucket.
+Once the update has completed, you can verify the object was created in your bucket by checking the AWS Console or by running the following AWS CLI command:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -125,7 +125,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     acl: "public-read",
     contentType: "text/html",
     bucket: bucket,
-    source: new pulumi.asset.FileAsset(filePath),
+    content: fs.readFileSync("site/index.html").toString(),
 });
 ```
 
@@ -155,7 +155,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     acl: "public-read",
     contentType: "text/html",
     bucket: bucket,
-    source: new pulumi.asset.FileAsset(filePath),
+    content: fs.readFileSync("site/index.html").toString(),
 });
 ```
 
@@ -172,9 +172,9 @@ Now that your `index.html` is in your bucket, let's modify the program to have t
 
 ```python
 bucket = s3.Bucket('my-bucket',
-    website=s3.BucketWebsiteArgs(
-        index_document="index.html",
-    ))
+    website={
+        'index_document': 'index.html',
+    })
 ```
 
 Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
@@ -185,7 +185,7 @@ bucketObject = s3.BucketObject(
     acl='public-read',
     content_type='text/html',
     bucket=bucket,
-    source=pulumi.FileAsset(filepath)
+    content=open('site/index.html').read(),
 )
 ```
 
@@ -215,7 +215,7 @@ _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Acl:         pulumi.String("public-read"),
     ContentType: pulumi.String("text/html"),
     Bucket:      bucket.ID(),
-    Source:      pulumi.NewFileAsset(filePath),
+    Content:     pulumi.String(string(htmlContent)),
 })
 ```
 
@@ -253,7 +253,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
     Acl = "public-read",
     ContentType = "text/html",
     Bucket = bucket.BucketName,
-    Source = new FileAsset(filePath),
+    Content = hmtlString,
 });
 ```
 
@@ -323,7 +323,7 @@ Resources:
 Duration: 12s
 ```
 
-Finally, you can checkout your new static website at the URL in the `Outputs` section of your update or you can make a `curl` request and see the contents of your `index.html` printed out in your terminal.
+Finally, you can checkout your new static website at the URL in the `Outputs` section of your update or you can make a `curl` request and see the contents of your `index.html` object printed out in your terminal.
 
 {{% choosable language javascript %}}
 
@@ -370,7 +370,7 @@ And you should see:
 ```bash
 <html>
     <body>
-        <h1>Hello Pulumi</h1>
+        <h1>Hello, Pulumi!</h1>
     </body>
 </html>
 ```

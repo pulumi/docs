@@ -56,24 +56,22 @@ Once you've created your `index.html` file, add some content to it:
 </html>
 ```
 
-Now that you have your new `index.html` with some content, let's modify your program to upload the file to your S3 Bucket. To successfully upload the file you need to give Pulumi the absolute path to your file. We can easily accomplish this by taking advantage of libraries native to your programming language of choice.
+Now that you have your new `index.html` with some content, let's modify your program to add the contents of your `index.html` file to your S3 Bucket. To accomplish this we will take advantage of your chosen programming language's native libraries to read the contents of your `index.html` and assign the contents as an input to your new `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-const path = require("path");
+const fs = require("fs");
 ```
 
 Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```javascript
-const filePath = path.join(__dirname, "site", "index.html");
-
 const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket,
-    source: new pulumi.asset.FileAsset(filePath),
+    content: fs.readFileSync("site/index.html").toString(),
 });
 ```
 
@@ -82,17 +80,15 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 {{% choosable language typescript %}}
 
 ```typescript
-import * as path from "path";
+import * as fs from "fs";
 ```
 
 Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```typescript
-const filePath = path.join(__dirname, "site", "index.html");
-
 const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket,
-    source: new pulumi.asset.FileAsset(filePath),
+    content: fs.readFileSync("site/index.html").toString(),
 });
 ```
 
@@ -100,19 +96,13 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 
 {{% choosable language python %}}
 
-```python
-import os
-```
-
 Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```python
-filepath = os.path.abspath('site/index.html')
-
 bucketObject = s3.BucketObject(
     'index.html',
     bucket=bucket,
-    source=pulumi.FileAsset(filepath)
+    content=open('site/index.html').read(),
 )
 ```
 
@@ -122,7 +112,7 @@ bucketObject = s3.BucketObject(
 
 ```go
 import (
-    "path/filepath"
+    "io/ioutil"
     // Existing imports...
 )
 ```
@@ -130,11 +120,14 @@ import (
 Next you will create a new bucket object on the lines right after creating the bucket itself.
 
 ```go
-filePath, err := filepath.Abs("./site/index.html")
+htmlContent, err := ioutil.ReadFile("site/index.html")
+if err != nil {
+    return err
+}
 
 _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
-    Bucket: bucket.ID(),
-    Source: pulumi.NewFileAsset(filePath),
+    Bucket:  bucket.ID(),
+    Content: pulumi.String(string(htmlContent)),
 })
 if err != nil {
     return err
@@ -153,11 +146,12 @@ Next you will create a new bucket object on the lines right after creating the b
 
 ```csharp
 var filePath = Path.GetFullPath("./site/index.html");
+var hmtlString = File.ReadAllText(filePath);
 
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.BucketName,
-    Source = new FileAsset(filePath),
+    Content = hmtlString,
 });
 ```
 
