@@ -90,14 +90,14 @@ import pulumi
 import pulumi_openstack as openstack
 
 test = openstack.database.Configuration("test",
-    configurations=[{
-        "name": "max_connections",
-        "value": 200,
-    }],
-    datastore={
-        "type": "mysql",
-        "version": "mysql-5.7",
-    },
+    configurations=[openstack.database.ConfigurationConfigurationArgs(
+        name="max_connections",
+        value="200",
+    )],
+    datastore=openstack.database.ConfigurationDatastoreArgs(
+        type="mysql",
+        version="mysql-5.7",
+    ),
     description="description")
 ```
 
@@ -136,7 +136,7 @@ const test = new openstack.database.Configuration("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.Configuration">Configuration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configurations=None<span class="p">, </span>datastore=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.Configuration">Configuration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">datastore</span><span class="p">:</span> <span class="nx">Optional[ConfigurationDatastoreArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -506,7 +506,7 @@ creates a new instance.
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Dict[Configuration<wbr>Datastore]</a></span>
+        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -529,7 +529,7 @@ object structure is documented below. Changing this creates resource.
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 {{% /md %}}</dd>
@@ -655,7 +655,8 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configurations=None<span class="p">, </span>datastore=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[List[ConfigurationConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">datastore</span><span class="p">:</span> <span class="nx">Optional[ConfigurationDatastoreArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Configuration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -663,7 +664,7 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.Configuration.html">Configuration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.ConfigurationState.html">ConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.Configuration.html">Configuration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.ConfigurationState.html">ConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -967,7 +968,7 @@ creates a new instance.
 <a href="#state_configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 {{% /md %}}</dd>
@@ -978,7 +979,7 @@ creates a new instance.
 <a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Dict[Configuration<wbr>Datastore]</a></span>
+        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.

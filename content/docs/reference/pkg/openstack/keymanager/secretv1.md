@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretV1 resource of the keymanager module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.SecretV1">SecretV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>algorithm=None<span class="p">, </span>bit_length=None<span class="p">, </span>expiration=None<span class="p">, </span>metadata=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>payload=None<span class="p">, </span>payload_content_encoding=None<span class="p">, </span>payload_content_type=None<span class="p">, </span>region=None<span class="p">, </span>secret_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.SecretV1">SecretV1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[SecretV1AclArgs]</span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bit_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payload</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payload_content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payload_content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +635,7 @@ V1 secret.
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretv1acl">Dict[Secret<wbr>V1Acl]</a></span>
+        <span class="property-type"><a href="#secretv1acl">Secret<wbr>V1Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
@@ -681,7 +681,7 @@ project wide.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ explicitly and implicitly added.
 <a href="#all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
@@ -1088,7 +1088,7 @@ explicitly and implicitly added.
 <a href="#content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
 {{% /md %}}</dd>
@@ -1177,7 +1177,8 @@ Get an existing SecretV1 resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>algorithm=None<span class="p">, </span>all_metadata=None<span class="p">, </span>bit_length=None<span class="p">, </span>content_types=None<span class="p">, </span>created_at=None<span class="p">, </span>creator_id=None<span class="p">, </span>expiration=None<span class="p">, </span>metadata=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>payload=None<span class="p">, </span>payload_content_encoding=None<span class="p">, </span>payload_content_type=None<span class="p">, </span>region=None<span class="p">, </span>secret_ref=None<span class="p">, </span>secret_type=None<span class="p">, </span>status=None<span class="p">, </span>updated_at=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[SecretV1AclArgs]</span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">all_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">bit_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">content_types</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payload</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payload_content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payload_content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecretV1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1185,7 +1186,7 @@ Get an existing SecretV1 resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.SecretV1.html">SecretV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.SecretV1State.html">SecretV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.SecretV1.html">SecretV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.SecretV1State.html">SecretV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1966,7 +1967,7 @@ V1 secret.
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretv1acl">Dict[Secret<wbr>V1Acl]</a></span>
+        <span class="property-type"><a href="#secretv1acl">Secret<wbr>V1Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
@@ -1990,7 +1991,7 @@ project wide.
 <a href="#state_all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
@@ -2013,7 +2014,7 @@ explicitly and implicitly added.
 <a href="#state_content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
 {{% /md %}}</dd>
@@ -2057,7 +2058,7 @@ explicitly and implicitly added.
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
 {{% /md %}}</dd>
@@ -2266,7 +2267,7 @@ V1 secret.
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretv1aclread">Dict[Secret<wbr>V1Acl<wbr>Read]</a></span>
+        <span class="property-type"><a href="#secretv1aclread">Secret<wbr>V1Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2467,8 +2468,8 @@ secret, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectaccess_python">
-<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+        <span id="project_access_python">
+<a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

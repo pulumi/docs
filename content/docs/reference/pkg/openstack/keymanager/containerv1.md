@@ -112,18 +112,18 @@ intermediate1 = openstack.keymanager.SecretV1("intermediate1",
     secret_type="certificate")
 tls1 = openstack.keymanager.ContainerV1("tls1",
     secret_refs=[
-        {
-            "name": "certificate",
-            "secret_ref": certificate1.secret_ref,
-        },
-        {
-            "name": "private_key",
-            "secret_ref": private_key1.secret_ref,
-        },
-        {
-            "name": "intermediates",
-            "secret_ref": intermediate1.secret_ref,
-        },
+        openstack.keymanager.ContainerV1SecretRefArgs(
+            name="certificate",
+            secret_ref=certificate1.secret_ref,
+        ),
+        openstack.keymanager.ContainerV1SecretRefArgs(
+            name="private_key",
+            secret_ref=private_key1.secret_ref,
+        ),
+        openstack.keymanager.ContainerV1SecretRefArgs(
+            name="intermediates",
+            secret_ref=intermediate1.secret_ref,
+        ),
     ],
     type="certificate")
 subnet1 = openstack.networking.get_subnet(name="my-subnet")
@@ -296,28 +296,28 @@ import pulumi
 import pulumi_openstack as openstack
 
 tls1 = openstack.keymanager.ContainerV1("tls1",
-    acl={
-        "read": {
-            "projectAccess": False,
-            "users": [
+    acl=openstack.keymanager.ContainerV1AclArgs(
+        read=openstack.keymanager.ContainerV1AclReadArgs(
+            project_access=False,
+            users=[
                 "userid1",
                 "userid2",
             ],
-        },
-    },
+        ),
+    ),
     secret_refs=[
-        {
-            "name": "certificate",
-            "secret_ref": openstack_keymanager_secret_v1["certificate_1"]["secret_ref"],
-        },
-        {
-            "name": "private_key",
-            "secret_ref": openstack_keymanager_secret_v1["private_key_1"]["secret_ref"],
-        },
-        {
-            "name": "intermediates",
-            "secret_ref": openstack_keymanager_secret_v1["intermediate_1"]["secret_ref"],
-        },
+        openstack.keymanager.ContainerV1SecretRefArgs(
+            name="certificate",
+            secret_ref=openstack_keymanager_secret_v1["certificate_1"]["secret_ref"],
+        ),
+        openstack.keymanager.ContainerV1SecretRefArgs(
+            name="private_key",
+            secret_ref=openstack_keymanager_secret_v1["private_key_1"]["secret_ref"],
+        ),
+        openstack.keymanager.ContainerV1SecretRefArgs(
+            name="intermediates",
+            secret_ref=openstack_keymanager_secret_v1["intermediate_1"]["secret_ref"],
+        ),
     ],
     type="certificate")
 ```
@@ -372,7 +372,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.ContainerV1">ContainerV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.ContainerV1">ContainerV1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[ContainerV1AclArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_refs</span><span class="p">:</span> <span class="nx">Optional[List[ContainerV1SecretRefArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -765,7 +765,7 @@ below.
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Dict[Container<wbr>V1Acl]</a></span>
+        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -803,7 +803,7 @@ V1 container.
 <a href="#secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -1171,7 +1171,8 @@ Get an existing ContainerV1 resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>consumers=None<span class="p">, </span>container_ref=None<span class="p">, </span>created_at=None<span class="p">, </span>creator_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>updated_at=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[ContainerV1AclArgs]</span> = None<span class="p">, </span><span class="nx">consumers</span><span class="p">:</span> <span class="nx">Optional[List[ContainerV1ConsumerArgs]]</span> = None<span class="p">, </span><span class="nx">container_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_refs</span><span class="p">:</span> <span class="nx">Optional[List[ContainerV1SecretRefArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ContainerV1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1179,7 +1180,7 @@ Get an existing ContainerV1 resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.ContainerV1.html">ContainerV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.ContainerV1State.html">ContainerV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.ContainerV1.html">ContainerV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.ContainerV1State.html">ContainerV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1693,7 +1694,7 @@ below.
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Dict[Container<wbr>V1Acl]</a></span>
+        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -1706,7 +1707,7 @@ accessible project wide. The `read` structure is described below.
 <a href="#state_consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1consumer">List[Container<wbr>V1Consumer]</a></span>
+        <span class="property-type"><a href="#containerv1consumer">List[Container<wbr>V1Consumer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described below.
 {{% /md %}}</dd>
@@ -1775,7 +1776,7 @@ V1 container.
 <a href="#state_secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -1904,7 +1905,7 @@ below.
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1aclread">Dict[Container<wbr>V1Acl<wbr>Read]</a></span>
+        <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2105,8 +2106,8 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectaccess_python">
-<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+        <span id="project_access_python">
+<a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

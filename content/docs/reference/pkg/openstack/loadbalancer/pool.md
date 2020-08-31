@@ -82,10 +82,10 @@ import pulumi_openstack as openstack
 pool1 = openstack.loadbalancer.Pool("pool1",
     lb_method="ROUND_ROBIN",
     listener_id="d9415786-5f1a-428b-b35f-2f1523e146d2",
-    persistence={
-        "cookieName": "testCookie",
-        "type": "APP_COOKIE",
-    },
+    persistence=openstack.loadbalancer.PoolPersistenceArgs(
+        cookie_name="testCookie",
+        type="APP_COOKIE",
+    ),
     protocol="HTTP")
 ```
 
@@ -122,7 +122,7 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#pulumi_openstack.loadbalancer.Pool">Pool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>lb_method=None<span class="p">, </span>listener_id=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>persistence=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#pulumi_openstack.loadbalancer.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lb_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistence</span><span class="p">:</span> <span class="nx">Optional[PoolPersistenceArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -785,7 +785,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 <a href="#persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolpersistence">Dict[Pool<wbr>Persistence]</a></span>
+        <span class="property-type"><a href="#poolpersistence">Pool<wbr>Persistence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
@@ -917,7 +917,8 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>lb_method=None<span class="p">, </span>listener_id=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>persistence=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lb_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistence</span><span class="p">:</span> <span class="nx">Optional[PoolPersistenceArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -925,7 +926,7 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.Pool.html">Pool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.PoolState.html">PoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.Pool.html">Pool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.PoolState.html">PoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1510,7 +1511,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 <a href="#state_persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolpersistence">Dict[Pool<wbr>Persistence]</a></span>
+        <span class="property-type"><a href="#poolpersistence">Pool<wbr>Persistence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
@@ -1696,8 +1697,8 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiename_python">
-<a href="#cookiename_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
+        <span id="cookie_name_python">
+<a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -180,7 +180,7 @@ func main() {
 import pulumi
 import pulumi_openstack as openstack
 
-network1 = openstack.networking.Network("network1", admin_state_up="true")
+network1 = openstack.networking.Network("network1", admin_state_up=True)
 subnet1 = openstack.networking.Subnet("subnet1",
     cidr="192.168.1.0/24",
     enable_dhcp=True,
@@ -188,25 +188,25 @@ subnet1 = openstack.networking.Subnet("subnet1",
     network_id=network1.id,
     no_gateway=True)
 parent_port1 = openstack.networking.Port("parentPort1",
-    admin_state_up="true",
+    admin_state_up=True,
     network_id=network1.id,
     opts=ResourceOptions(depends_on=["openstack_networking_subnet_v2.subnet_1"]))
 subport1 = openstack.networking.Port("subport1",
-    admin_state_up="true",
+    admin_state_up=True,
     network_id=network1.id,
     opts=ResourceOptions(depends_on=["openstack_networking_subnet_v2.subnet_1"]))
 trunk1 = openstack.networking.Trunk("trunk1",
-    admin_state_up="true",
+    admin_state_up=True,
     port_id=parent_port1.id,
-    sub_ports=[{
-        "port_id": subport1.id,
-        "segmentation_id": 1,
-        "segmentationType": "vlan",
-    }])
+    sub_ports=[openstack.networking.TrunkSubPortArgs(
+        port_id=subport1.id,
+        segmentation_id=1,
+        segmentation_type="vlan",
+    )])
 instance1 = openstack.compute.Instance("instance1",
-    networks=[{
-        "port": trunk1.port_id,
-    }],
+    networks=[openstack.compute.InstanceNetworkArgs(
+        port=trunk1.port_id,
+    )],
     security_groups=["default"])
 ```
 
@@ -267,7 +267,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Trunk">Trunk</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Trunk">Trunk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sub_ports</span><span class="p">:</span> <span class="nx">Optional[List[TrunkSubPortArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -819,7 +819,7 @@ trunk.
 <a href="#sub_ports_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">List[Trunk<wbr>Sub<wbr>Port]</a></span>
+        <span class="property-type"><a href="#trunksubport">List[Trunk<wbr>Sub<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -994,7 +994,8 @@ Get an existing Trunk resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sub_ports</span><span class="p">:</span> <span class="nx">Optional[List[TrunkSubPortArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trunk</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1002,7 +1003,7 @@ Get an existing Trunk resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Trunk.html">Trunk</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.TrunkState.html">TrunkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Trunk.html">Trunk</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.TrunkState.html">TrunkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1536,7 +1537,7 @@ trunk.
 <a href="#state_sub_ports_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">List[Trunk<wbr>Sub<wbr>Port]</a></span>
+        <span class="property-type"><a href="#trunksubport">List[Trunk<wbr>Sub<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -1731,17 +1732,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
     <dt class="property-required"
             title="Required">
-        <span id="segmentationtype_python">
-<a href="#segmentationtype_python" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The segmentation technology to use, e.g., "vlan".
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="segmentation_id_python">
 <a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
 </span> 
@@ -1749,6 +1739,17 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The numeric id of the subport segment.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="segmentation_type_python">
+<a href="#segmentation_type_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The segmentation technology to use, e.g., "vlan".
 {{% /md %}}</dd>
 
 </dl>

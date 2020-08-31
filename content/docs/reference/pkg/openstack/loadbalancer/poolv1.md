@@ -94,7 +94,7 @@ const vip1 = new openstack.loadbalancer.Vip("vip_1", {
 import pulumi
 import pulumi_openstack as openstack
 
-network1 = openstack.networking.Network("network1", admin_state_up="true")
+network1 = openstack.networking.Network("network1", admin_state_up=True)
 subnet1 = openstack.networking.Subnet("subnet1",
     cidr="192.168.199.0/24",
     ip_version=4,
@@ -102,31 +102,31 @@ subnet1 = openstack.networking.Subnet("subnet1",
 secgroup1 = openstack.compute.SecGroup("secgroup1",
     description="Rules for secgroup_1",
     rules=[
-        {
-            "cidr": "0.0.0.0/0",
-            "fromPort": -1,
-            "ipProtocol": "icmp",
-            "toPort": -1,
-        },
-        {
-            "cidr": "0.0.0.0/0",
-            "fromPort": 80,
-            "ipProtocol": "tcp",
-            "toPort": 80,
-        },
+        openstack.compute.SecGroupRuleArgs(
+            cidr="0.0.0.0/0",
+            from_port=-1,
+            ip_protocol="icmp",
+            to_port=-1,
+        ),
+        openstack.compute.SecGroupRuleArgs(
+            cidr="0.0.0.0/0",
+            from_port=80,
+            ip_protocol="tcp",
+            to_port=80,
+        ),
     ])
 instance1 = openstack.compute.Instance("instance1",
-    networks=[{
-        "uuid": network1.id,
-    }],
+    networks=[openstack.compute.InstanceNetworkArgs(
+        uuid=network1.id,
+    )],
     security_groups=[
         "default",
         secgroup1.name,
     ])
 instance2 = openstack.compute.Instance("instance2",
-    networks=[{
-        "uuid": network1.id,
-    }],
+    networks=[openstack.compute.InstanceNetworkArgs(
+        uuid=network1.id,
+    )],
     security_groups=[
         "default",
         secgroup1.name,
@@ -501,7 +501,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#pulumi_openstack.loadbalancer.PoolV1">PoolV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lb_method=None<span class="p">, </span>lb_provider=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#pulumi_openstack.loadbalancer.PoolV1">PoolV1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">lb_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lb_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1192,7 +1192,8 @@ Get an existing PoolV1 resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>lb_method=None<span class="p">, </span>lb_provider=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">lb_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lb_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PoolV1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1200,7 +1201,7 @@ Get an existing PoolV1 resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.PoolV1.html">PoolV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.PoolV1State.html">PoolV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.PoolV1.html">PoolV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.LoadBalancer.PoolV1State.html">PoolV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

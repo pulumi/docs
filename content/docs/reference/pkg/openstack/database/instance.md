@@ -92,14 +92,14 @@ import pulumi
 import pulumi_openstack as openstack
 
 test = openstack.database.Instance("test",
-    datastore={
-        "type": "mysql",
-        "version": "mysql-5.7",
-    },
+    datastore=openstack.database.InstanceDatastoreArgs(
+        type="mysql",
+        version="mysql-5.7",
+    ),
     flavor_id="31792d21-c355-4587-9290-56c1ed0ca376",
-    networks=[{
-        "uuid": "c0612505-caf2-4fb0-b7cb-56a0240a2b12",
-    }],
+    networks=[openstack.database.InstanceNetworkArgs(
+        uuid="c0612505-caf2-4fb0-b7cb-56a0240a2b12",
+    )],
     region="region-test",
     size=8)
 ```
@@ -140,7 +140,7 @@ const test = new openstack.database.Instance("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configuration_id=None<span class="p">, </span>databases=None<span class="p">, </span>datastore=None<span class="p">, </span>flavor_id=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/database/#pulumi_openstack.database.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[InstanceDatabaseArgs]]</span> = None<span class="p">, </span><span class="nx">datastore</span><span class="p">:</span> <span class="nx">Optional[InstanceDatastoreArgs]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[InstanceUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -663,7 +663,7 @@ object structure is documented below.
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Dict[Instance<wbr>Datastore]</a></span>
+        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -698,7 +698,7 @@ will be rebooted when configuration is detached.
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">List[Instance<wbr>Database]</a></span>
+        <span class="property-type"><a href="#instancedatabase">List[Instance<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
@@ -734,7 +734,7 @@ new instance.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -759,7 +759,7 @@ creates a new instance.
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">List[Instance<wbr>User]</a></span>
+        <span class="property-type"><a href="#instanceuser">List[Instance<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
@@ -863,7 +863,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configuration_id=None<span class="p">, </span>databases=None<span class="p">, </span>datastore=None<span class="p">, </span>flavor_id=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[List[InstanceDatabaseArgs]]</span> = None<span class="p">, </span><span class="nx">datastore</span><span class="p">:</span> <span class="nx">Optional[InstanceDatastoreArgs]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[InstanceUserArgs]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -871,7 +872,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Database.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1340,7 +1341,7 @@ will be rebooted when configuration is detached.
 <a href="#state_databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">List[Instance<wbr>Database]</a></span>
+        <span class="property-type"><a href="#instancedatabase">List[Instance<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
@@ -1352,7 +1353,7 @@ object structure is documented below.
 <a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Dict[Instance<wbr>Datastore]</a></span>
+        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -1388,7 +1389,7 @@ new instance.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -1424,7 +1425,7 @@ creates a new instance.
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">List[Instance<wbr>User]</a></span>
+        <span class="property-type"><a href="#instanceuser">List[Instance<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
@@ -1958,8 +1959,8 @@ attach to the instance. Changing this creates a new instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedipv4_python">
-<a href="#fixedipv4_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V4</a>
+        <span id="fixed_ip_v4_python">
+<a href="#fixed_ip_v4_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1970,8 +1971,8 @@ network. Changing this creates a new instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedipv6_python">
-<a href="#fixedipv6_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V6</a>
+        <span id="fixed_ip_v6_python">
+<a href="#fixed_ip_v6_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/openstack | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/openstack package."
-git_sha: "248d5de3bcadb03eea728119e7931fc4e4ff51e2"
+git_sha: "3ecc733cb4a2cf25445783223b739f3665bf0c3d"
 block_external_search_index: true
 ---
 
@@ -57,7 +57,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="allowReauth" data-link-title="allowReauth">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L13">
         let <strong>allowReauth</strong>
     </a>
 </h3>
@@ -68,7 +68,7 @@ If set to `false`, OpenStack authorization won't be perfomed automatically, if t
 Defaults to `true`
 
 <h3 class="pdoc-module-header" id="applicationCredentialId" data-link-title="applicationCredentialId">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L17">
         let <strong>applicationCredentialId</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ Defaults to `true`
 Application Credential ID to login with.
 
 <h3 class="pdoc-module-header" id="applicationCredentialName" data-link-title="applicationCredentialName">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L21">
         let <strong>applicationCredentialName</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ Application Credential ID to login with.
 Application Credential name to login with.
 
 <h3 class="pdoc-module-header" id="applicationCredentialSecret" data-link-title="applicationCredentialSecret">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L25">
         let <strong>applicationCredentialSecret</strong>
     </a>
 </h3>
@@ -98,7 +98,7 @@ Application Credential name to login with.
 Application Credential secret to login with.
 
 <h3 class="pdoc-module-header" id="authUrl" data-link-title="authUrl">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L29">
         let <strong>authUrl</strong>
     </a>
 </h3>
@@ -108,7 +108,7 @@ Application Credential secret to login with.
 The Identity authentication URL.
 
 <h3 class="pdoc-module-header" id="cacertFile" data-link-title="cacertFile">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L33">
         let <strong>cacertFile</strong>
     </a>
 </h3>
@@ -118,7 +118,7 @@ The Identity authentication URL.
 A Custom CA certificate.
 
 <h3 class="pdoc-module-header" id="cert" data-link-title="cert">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L37">
         let <strong>cert</strong>
     </a>
 </h3>
@@ -128,7 +128,7 @@ A Custom CA certificate.
 A client certificate to authenticate with.
 
 <h3 class="pdoc-module-header" id="cloud" data-link-title="cloud">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L41">
         let <strong>cloud</strong>
     </a>
 </h3>
@@ -138,7 +138,7 @@ A client certificate to authenticate with.
 An entry in a `clouds.yaml` file to use.
 
 <h3 class="pdoc-module-header" id="defaultDomain" data-link-title="defaultDomain">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L45">
         let <strong>defaultDomain</strong>
     </a>
 </h3>
@@ -148,7 +148,7 @@ An entry in a `clouds.yaml` file to use.
 The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
 
 <h3 class="pdoc-module-header" id="delayedAuth" data-link-title="delayedAuth">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L50">
         let <strong>delayedAuth</strong>
     </a>
 </h3>
@@ -159,7 +159,7 @@ If set to `false`, OpenStack authorization will be perfomed, every time the serv
 to `true`.
 
 <h3 class="pdoc-module-header" id="disableNoCacheHeader" data-link-title="disableNoCacheHeader">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L54">
         let <strong>disableNoCacheHeader</strong>
     </a>
 </h3>
@@ -169,7 +169,7 @@ to `true`.
 If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
 
 <h3 class="pdoc-module-header" id="domainId" data-link-title="domainId">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L58">
         let <strong>domainId</strong>
     </a>
 </h3>
@@ -179,7 +179,7 @@ If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by
 The ID of the Domain to scope to (Identity v3).
 
 <h3 class="pdoc-module-header" id="domainName" data-link-title="domainName">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L62">
         let <strong>domainName</strong>
     </a>
 </h3>
@@ -189,7 +189,7 @@ The ID of the Domain to scope to (Identity v3).
 The name of the Domain to scope to (Identity v3).
 
 <h3 class="pdoc-module-header" id="endpointOverrides" data-link-title="endpointOverrides">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L66">
         let <strong>endpointOverrides</strong>
     </a>
 </h3>
@@ -199,14 +199,14 @@ The name of the Domain to scope to (Identity v3).
 A map of services with an endpoint to override what was from the Keystone catalog
 
 <h3 class="pdoc-module-header" id="endpointType" data-link-title="endpointType">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L67">
         let <strong>endpointType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpointType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpointType&#34;) || utilities.getEnv(&#34;OS_ENDPOINT_TYPE&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L71">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -216,7 +216,7 @@ A map of services with an endpoint to override what was from the Keystone catalo
 Trust self-signed certificates.
 
 <h3 class="pdoc-module-header" id="key" data-link-title="key">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L75">
         let <strong>key</strong>
     </a>
 </h3>
@@ -226,7 +226,7 @@ Trust self-signed certificates.
 A client private key to authenticate with.
 
 <h3 class="pdoc-module-header" id="maxRetries" data-link-title="maxRetries">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L79">
         let <strong>maxRetries</strong>
     </a>
 </h3>
@@ -236,7 +236,7 @@ A client private key to authenticate with.
 How many times HTTP connection should be retried until giving up.
 
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L83">
         let <strong>password</strong>
     </a>
 </h3>
@@ -246,7 +246,7 @@ How many times HTTP connection should be retried until giving up.
 Password to login with.
 
 <h3 class="pdoc-module-header" id="projectDomainId" data-link-title="projectDomainId">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L87">
         let <strong>projectDomainId</strong>
     </a>
 </h3>
@@ -256,7 +256,7 @@ Password to login with.
 The ID of the domain where the proejct resides (Identity v3).
 
 <h3 class="pdoc-module-header" id="projectDomainName" data-link-title="projectDomainName">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L91">
         let <strong>projectDomainName</strong>
     </a>
 </h3>
@@ -266,7 +266,7 @@ The ID of the domain where the proejct resides (Identity v3).
 The name of the domain where the project resides (Identity v3).
 
 <h3 class="pdoc-module-header" id="region" data-link-title="region">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L95">
         let <strong>region</strong>
     </a>
 </h3>
@@ -276,7 +276,7 @@ The name of the domain where the project resides (Identity v3).
 The OpenStack region to connect to.
 
 <h3 class="pdoc-module-header" id="swauth" data-link-title="swauth">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L99">
         let <strong>swauth</strong>
     </a>
 </h3>
@@ -286,7 +286,7 @@ The OpenStack region to connect to.
 Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
 
 <h3 class="pdoc-module-header" id="tenantId" data-link-title="tenantId">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L103">
         let <strong>tenantId</strong>
     </a>
 </h3>
@@ -296,7 +296,7 @@ Use Swift's authentication system instead of Keystone. Only used for interaction
 The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 
 <h3 class="pdoc-module-header" id="tenantName" data-link-title="tenantName">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L107">
         let <strong>tenantName</strong>
     </a>
 </h3>
@@ -306,7 +306,7 @@ The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L111">
         let <strong>token</strong>
     </a>
 </h3>
@@ -316,7 +316,7 @@ The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 Authentication token to use as an alternative to username/password.
 
 <h3 class="pdoc-module-header" id="useOctavia" data-link-title="useOctavia">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L115">
         let <strong>useOctavia</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ Authentication token to use as an alternative to username/password.
 If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
 
 <h3 class="pdoc-module-header" id="userDomainId" data-link-title="userDomainId">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L119">
         let <strong>userDomainId</strong>
     </a>
 </h3>
@@ -336,7 +336,7 @@ If set to `true`, API requests will go the Load Balancer service (Octavia) inste
 The ID of the domain where the user resides (Identity v3).
 
 <h3 class="pdoc-module-header" id="userDomainName" data-link-title="userDomainName">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L123">
         let <strong>userDomainName</strong>
     </a>
 </h3>
@@ -346,7 +346,7 @@ The ID of the domain where the user resides (Identity v3).
 The name of the domain where the user resides (Identity v3).
 
 <h3 class="pdoc-module-header" id="userId" data-link-title="userId">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L127">
         let <strong>userId</strong>
     </a>
 </h3>
@@ -356,7 +356,7 @@ The name of the domain where the user resides (Identity v3).
 Username to login with.
 
 <h3 class="pdoc-module-header" id="userName" data-link-title="userName">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/248d5de3bcadb03eea728119e7931fc4e4ff51e2/sdk/nodejs/config/vars.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/3ecc733cb4a2cf25445783223b739f3665bf0c3d/sdk/nodejs/config/vars.ts#L131">
         let <strong>userName</strong>
     </a>
 </h3>

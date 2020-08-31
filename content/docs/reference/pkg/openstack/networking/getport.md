@@ -99,7 +99,7 @@ const port1 = pulumi.output(openstack.networking.getPort({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_port(</span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>port_id=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_port(</span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPortResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1753,7 +1753,7 @@ below.
 <a href="#dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
 {{% /md %}}</dd>
@@ -2308,8 +2308,8 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span id="hostid_python">
-<a href="#hostid_python" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+        <span id="host_id_python">
+<a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2330,11 +2330,11 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span id="vifdetails_python">
-<a href="#vifdetails_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
+        <span id="vif_details_python">
+<a href="#vif_details_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional details for this
 specific binding.
@@ -2342,8 +2342,8 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span id="viftype_python">
-<a href="#viftype_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
+        <span id="vif_type_python">
+<a href="#vif_type_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2353,8 +2353,8 @@ specific binding.
 
     <dt class="property-required"
             title="Required">
-        <span id="vnictype_python">
-<a href="#vnictype_python" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
+        <span id="vnic_type_python">
+<a href="#vnic_type_python" style="color: inherit; text-decoration: inherit;">vnic_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

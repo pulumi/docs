@@ -144,18 +144,18 @@ import pulumi_openstack as openstack
 secgroup1 = openstack.compute.SecGroup("secgroup1",
     description="my security group",
     rules=[
-        {
-            "cidr": "0.0.0.0/0",
-            "fromPort": 22,
-            "ipProtocol": "tcp",
-            "toPort": 22,
-        },
-        {
-            "cidr": "0.0.0.0/0",
-            "fromPort": 80,
-            "ipProtocol": "tcp",
-            "toPort": 80,
-        },
+        openstack.compute.SecGroupRuleArgs(
+            cidr="0.0.0.0/0",
+            from_port=22,
+            ip_protocol="tcp",
+            to_port=22,
+        ),
+        openstack.compute.SecGroupRuleArgs(
+            cidr="0.0.0.0/0",
+            from_port=80,
+            ip_protocol="tcp",
+            to_port=80,
+        ),
     ])
 ```
 
@@ -200,7 +200,7 @@ const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.SecGroup">SecGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.SecGroup">SecGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecGroupRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +593,7 @@ security group.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -699,7 +699,8 @@ Get an existing SecGroup resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>rules=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecGroupRuleArgs]]</span> = None<span class="p">) -&gt;</span> SecGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -707,7 +708,7 @@ Get an existing SecGroup resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.SecGroup.html">SecGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.SecGroupState.html">SecGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.SecGroup.html">SecGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.SecGroupState.html">SecGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1034,7 +1035,7 @@ security group.
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -1356,8 +1357,8 @@ be combined with `cidr` or `from_group_id`.
 
     <dt class="property-required"
             title="Required">
-        <span id="fromport_python">
-<a href="#fromport_python" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
+        <span id="from_port_python">
+<a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1368,8 +1369,8 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span id="ipprotocol_python">
-<a href="#ipprotocol_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
+        <span id="ip_protocol_python">
+<a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1380,8 +1381,8 @@ this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span id="toport_python">
-<a href="#toport_python" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
+        <span id="to_port_python">
+<a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1406,8 +1407,8 @@ be combined with `from_group_id` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromgroupid_python">
-<a href="#fromgroupid_python" style="color: inherit; text-decoration: inherit;">from<wbr>Group<wbr>Id</a>
+        <span id="from_group_id_python">
+<a href="#from_group_id_python" style="color: inherit; text-decoration: inherit;">from_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

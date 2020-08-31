@@ -99,7 +99,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV2({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_volume_v2(</span>bootable=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>volume_type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume_v2(</span><span class="nx">bootable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeV2Result</code></pre></div>
 {{% /choosable %}}
 
 
@@ -365,7 +365,7 @@ client. If omitted, the `region` argument of the provider is used.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs associated with the volume.
 {{% /md %}}</dd>
@@ -781,7 +781,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>

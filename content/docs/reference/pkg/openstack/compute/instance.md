@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the compute module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_ip_v4=None<span class="p">, </span>access_ip_v6=None<span class="p">, </span>admin_pass=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>block_devices=None<span class="p">, </span>config_drive=None<span class="p">, </span>flavor_id=None<span class="p">, </span>flavor_name=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>key_pair=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>personalities=None<span class="p">, </span>power_state=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>security_groups=None<span class="p">, </span>stop_before_destroy=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vendor_options=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[List[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[List[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[List[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1244,7 +1244,7 @@ new server.
 <a href="#block_devices_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">List[Instance<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#instanceblockdevice">List[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -1348,7 +1348,7 @@ Changing this creates a new server.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
@@ -1372,7 +1372,7 @@ name of the network. Changing this creates a new server.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -1385,7 +1385,7 @@ creates a new server.
 <a href="#personalities_python" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">List[Instance<wbr>Personality]</a></span>
+        <span class="property-type"><a href="#instancepersonality">List[Instance<wbr>Personality<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -1425,7 +1425,7 @@ creates a new server.
 <a href="#scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">List[Instance<wbr>Scheduler<wbr>Hint]</a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">List[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -1489,7 +1489,7 @@ Changing this creates a new server.
 <a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevendoroptions">Dict[Instance<wbr>Vendor<wbr>Options]</a></span>
+        <span class="property-type"><a href="#instancevendoroptions">Instance<wbr>Vendor<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -1636,7 +1636,7 @@ been explicitly and implicitly added.
 <a href="#all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1681,7 +1681,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_ip_v4=None<span class="p">, </span>access_ip_v6=None<span class="p">, </span>admin_pass=None<span class="p">, </span>all_metadata=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>block_devices=None<span class="p">, </span>config_drive=None<span class="p">, </span>flavor_id=None<span class="p">, </span>flavor_name=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>key_pair=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>personalities=None<span class="p">, </span>power_state=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>security_groups=None<span class="p">, </span>stop_before_destroy=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vendor_options=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">all_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[List[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[List[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[List[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1689,7 +1690,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2882,7 +2883,7 @@ Changing this changes the root password on the existing server.
 <a href="#state_all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2933,7 +2934,7 @@ new server.
 <a href="#state_block_devices_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">List[Instance<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#instanceblockdevice">List[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -3037,7 +3038,7 @@ Changing this creates a new server.
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
@@ -3061,7 +3062,7 @@ name of the network. Changing this creates a new server.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -3074,7 +3075,7 @@ creates a new server.
 <a href="#state_personalities_python" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">List[Instance<wbr>Personality]</a></span>
+        <span class="property-type"><a href="#instancepersonality">List[Instance<wbr>Personality<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -3114,7 +3115,7 @@ creates a new server.
 <a href="#state_scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">List[Instance<wbr>Scheduler<wbr>Hint]</a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">List[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -3178,7 +3179,7 @@ Changing this creates a new server.
 <a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevendoroptions">Dict[Instance<wbr>Vendor<wbr>Options]</a></span>
+        <span class="property-type"><a href="#instancevendoroptions">Instance<wbr>Vendor<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -3612,8 +3613,8 @@ creates a new server.
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetype_python">
-<a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
+        <span id="source_type_python">
+<a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3625,8 +3626,8 @@ server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bootindex_python">
-<a href="#bootindex_python" style="color: inherit; text-decoration: inherit;">boot<wbr>Index</a>
+        <span id="boot_index_python">
+<a href="#boot_index_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3637,8 +3638,8 @@ Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3650,8 +3651,8 @@ new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationtype_python">
-<a href="#destinationtype_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
+        <span id="destination_type_python">
+<a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3662,8 +3663,8 @@ are "volume" and "local". Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicetype_python">
-<a href="#devicetype_python" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
+        <span id="device_type_python">
+<a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3674,8 +3675,8 @@ common thing is to leave this empty. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskbus_python">
-<a href="#diskbus_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Bus</a>
+        <span id="disk_bus_python">
+<a href="#disk_bus_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>bus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3686,8 +3687,8 @@ thing is to leave this empty. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="guestformat_python">
-<a href="#guestformat_python" style="color: inherit; text-decoration: inherit;">guest<wbr>Format</a>
+        <span id="guest_format_python">
+<a href="#guest_format_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3708,8 +3709,8 @@ the image, volume, or snapshot. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesize_python">
-<a href="#volumesize_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4022,8 +4023,8 @@ the image, volume, or snapshot. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accessnetwork_python">
-<a href="#accessnetwork_python" style="color: inherit; text-decoration: inherit;">access<wbr>Network</a>
+        <span id="access_network_python">
+<a href="#access_network_python" style="color: inherit; text-decoration: inherit;">access_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4034,8 +4035,8 @@ provisioning access. Accepts true or false. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedipv4_python">
-<a href="#fixedipv4_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V4</a>
+        <span id="fixed_ip_v4_python">
+<a href="#fixed_ip_v4_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4046,8 +4047,8 @@ network. Changing this creates a new server.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedipv6_python">
-<a href="#fixedipv6_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V6</a>
+        <span id="fixed_ip_v6_python">
+<a href="#fixed_ip_v6_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v6</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4543,11 +4544,11 @@ scheduled on the same host of those specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
@@ -4555,8 +4556,8 @@ properties to pass to the scheduler.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="buildnearhostip_python">
-<a href="#buildnearhostip_python" style="color: inherit; text-decoration: inherit;">build<wbr>Near<wbr>Host<wbr>Ip</a>
+        <span id="build_near_host_ip_python">
+<a href="#build_near_host_ip_python" style="color: inherit; text-decoration: inherit;">build_<wbr>near_<wbr>host_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4567,8 +4568,8 @@ will be placed on a compute node that is in the same subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="differenthosts_python">
-<a href="#differenthosts_python" style="color: inherit; text-decoration: inherit;">different<wbr>Hosts</a>
+        <span id="different_hosts_python">
+<a href="#different_hosts_python" style="color: inherit; text-decoration: inherit;">different_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4607,8 +4608,8 @@ At this time, only simple queries are supported. Compound queries using
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samehosts_python">
-<a href="#samehosts_python" style="color: inherit; text-decoration: inherit;">same<wbr>Hosts</a>
+        <span id="same_hosts_python">
+<a href="#same_hosts_python" style="color: inherit; text-decoration: inherit;">same_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4619,8 +4620,8 @@ scheduled on the same host of those specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetcell_python">
-<a href="#targetcell_python" style="color: inherit; text-decoration: inherit;">target<wbr>Cell</a>
+        <span id="target_cell_python">
+<a href="#target_cell_python" style="color: inherit; text-decoration: inherit;">target_<wbr>cell</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4757,8 +4758,8 @@ instances after some timeout.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="detachportsbeforedestroy_python">
-<a href="#detachportsbeforedestroy_python" style="color: inherit; text-decoration: inherit;">detach<wbr>Ports<wbr>Before<wbr>Destroy</a>
+        <span id="detach_ports_before_destroy_python">
+<a href="#detach_ports_before_destroy_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>ports_<wbr>before_<wbr>destroy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4770,8 +4771,8 @@ after the vm destruction. This is helpful when the port is not deleted.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoreresizeconfirmation_python">
-<a href="#ignoreresizeconfirmation_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Resize<wbr>Confirmation</a>
+        <span id="ignore_resize_confirmation_python">
+<a href="#ignore_resize_confirmation_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>resize_<wbr>confirmation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

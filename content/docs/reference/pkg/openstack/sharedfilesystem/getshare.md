@@ -99,7 +99,7 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_share(</span>description=None<span class="p">, </span>export_location_path=None<span class="p">, </span>is_public=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>share_network_id=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_share(</span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_location_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetShareResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -506,7 +506,7 @@ length.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
@@ -1176,7 +1176,7 @@ locations.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
