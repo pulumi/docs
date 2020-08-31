@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/postgresql | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/postgresql package."
-git_sha: "a5c2f4069498c63b5f4805d75e05ed70853ab07a"
+git_sha: "3fae4c727a641ded549a14bf6dffad5a7112de1d"
 block_external_search_index: true
 ---
 
@@ -28,8 +28,8 @@ block_external_search_index: true
     <li><a href="#maxConnections"><span class="symbol api"></span>maxConnections</a></li>
     <li><a href="#password"><span class="symbol api"></span>password</a></li>
     <li><a href="#port"><span class="symbol api"></span>port</a></li>
-    <li><a href="#sslMode"><span class="symbol api"></span>sslMode</a></li>
     <li><a href="#sslmode"><span class="symbol api"></span>sslmode</a></li>
+    <li><a href="#sslMode"><span class="symbol api"></span>sslMode</a></li>
     <li><a href="#sslrootcert"><span class="symbol api"></span>sslrootcert</a></li>
     <li><a href="#superuser"><span class="symbol api"></span>superuser</a></li>
     <li><a href="#username"><span class="symbol api"></span>username</a></li>
@@ -40,7 +40,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="clientcert" data-link-title="clientcert">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L14">
         let <strong>clientcert</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ block_external_search_index: true
 SSL client certificate if required by the database.
 
 <h3 class="pdoc-module-header" id="connectTimeout" data-link-title="connectTimeout">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L18">
         let <strong>connectTimeout</strong>
     </a>
 </h3>
@@ -60,7 +60,7 @@ SSL client certificate if required by the database.
 Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
 
 <h3 class="pdoc-module-header" id="database" data-link-title="database">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L22">
         let <strong>database</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ Maximum wait for connection, in seconds. Zero or not specified means wait indefi
 The name of the database to connect to in order to conenct to (defaults to `postgres`).
 
 <h3 class="pdoc-module-header" id="databaseUsername" data-link-title="databaseUsername">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L26">
         let <strong>databaseUsername</strong>
     </a>
 </h3>
@@ -80,7 +80,7 @@ The name of the database to connect to in order to conenct to (defaults to `post
 Database username associated to the connected user (for user name maps)
 
 <h3 class="pdoc-module-header" id="expectedVersion" data-link-title="expectedVersion">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L30">
         let <strong>expectedVersion</strong>
     </a>
 </h3>
@@ -90,7 +90,7 @@ Database username associated to the connected user (for user name maps)
 Specify the expected version of PostgreSQL.
 
 <h3 class="pdoc-module-header" id="host" data-link-title="host">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L34">
         let <strong>host</strong>
     </a>
 </h3>
@@ -100,7 +100,7 @@ Specify the expected version of PostgreSQL.
 Name of PostgreSQL server address to connect to
 
 <h3 class="pdoc-module-header" id="maxConnections" data-link-title="maxConnections">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L38">
         let <strong>maxConnections</strong>
     </a>
 </h3>
@@ -110,7 +110,7 @@ Name of PostgreSQL server address to connect to
 Maximum number of connections to establish to the database. Zero means unlimited.
 
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L42">
         let <strong>password</strong>
     </a>
 </h3>
@@ -120,7 +120,7 @@ Maximum number of connections to establish to the database. Zero means unlimited
 Password to be used if the PostgreSQL server demands password authentication
 
 <h3 class="pdoc-module-header" id="port" data-link-title="port">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L46">
         let <strong>port</strong>
     </a>
 </h3>
@@ -129,15 +129,8 @@ Password to be used if the PostgreSQL server demands password authentication
 
 The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 
-<h3 class="pdoc-module-header" id="sslMode" data-link-title="sslMode">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L47">
-        let <strong>sslMode</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kd'>let</span> sslMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslMode&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="sslmode" data-link-title="sslmode">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L52">
         let <strong>sslmode</strong>
     </a>
 </h3>
@@ -147,8 +140,15 @@ The PostgreSQL port number to connect to at the server host, or socket file name
 This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
 
+<h3 class="pdoc-module-header" id="sslMode" data-link-title="sslMode">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L47">
+        let <strong>sslMode</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> sslMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslMode&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="sslrootcert" data-link-title="sslrootcert">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L56">
         let <strong>sslrootcert</strong>
     </a>
 </h3>
@@ -158,7 +158,7 @@ PostgreSQL server
 The SSL server root certificate file path. The file must contain PEM encoded data.
 
 <h3 class="pdoc-module-header" id="superuser" data-link-title="superuser">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L61">
         let <strong>superuser</strong>
     </a>
 </h3>
@@ -169,7 +169,7 @@ Specify if the user to connect as is a Postgres superuser or not.If not, some fe
 Refreshing state password from Postgres)
 
 <h3 class="pdoc-module-header" id="username" data-link-title="username">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/a5c2f4069498c63b5f4805d75e05ed70853ab07a/sdk/nodejs/config/vars.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3fae4c727a641ded549a14bf6dffad5a7112de1d/sdk/nodejs/config/vars.ts#L65">
         let <strong>username</strong>
     </a>
 </h3>
