@@ -163,8 +163,8 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 
 {{% /choosable %}}
 
-Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what S3 Bucket the object should live in. You can learn more about Inputs and Outputs [here](/docs/intro/concepts/programming-model/#outputs).
+Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what S3 Bucket the object should live in.
 
-Next, you'll deploy the changes.
+Next, you'll deploy your changes.
 
 {{< get-started-stepper >}}

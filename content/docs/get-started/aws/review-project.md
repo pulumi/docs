@@ -126,11 +126,7 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-This Pulumi program creates a new S3 bucket. To inspect your new bucket, you will need its physical AWS name. Pulumi records a logical name, in this case `my-bucket`, however the resulting AWS name will be different.
-
-> The difference between logical and physical names is in part due to “auto-naming” which Pulumi does to ensure side-by-side projects and zero-downtime upgrades work seamlessly. It can be disabled if you wish; [read more about auto-naming here](https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming).
-
-Programs can export variables which will be shown in the CLI and recorded for each deployment. In the program you just created, the name of the bucket is exported, which makes it easy to verify that your bucket was created.
+This Pulumi program creates a new S3 Bucket and exports the name of the bucket.
 
 {{% choosable language javascript %}}
 
@@ -173,6 +169,6 @@ public Output<string> BucketName { get; set; }
 
 {{% /choosable %}}
 
-Next, you will run your first update which will provision your S3 bucket.
+Next, you will deploy your stack which will provision your S3 bucket.
 
 {{< get-started-stepper >}}

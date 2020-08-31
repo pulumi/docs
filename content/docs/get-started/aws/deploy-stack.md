@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/aws/deploy-stack/"]
 ---
 
-Let's go ahead and run your first update:
+Let's go ahead and deploy your stack:
 
 ```bash
 $ pulumi up
@@ -36,13 +36,7 @@ Do you want to perform this update?
   details
 ```
 
-Once the preview has finished you are given three options to choose from:
-
-- `yes` will run your update.
-- `no` will not run the update.
-- `details` will show you the diff for the full set of properties within the stack.
-
-Select `yes` to create your bucket.
+Once the preview has finished you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 Bucket in AWS.
 
 ```
 Do you want to perform this update? yes

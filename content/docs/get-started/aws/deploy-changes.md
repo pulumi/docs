@@ -18,7 +18,7 @@ Now let's deploy your changes.
 $ pulumi up
 ```
 
-First Pulumi will run the `preview` step of the update. In the future you can run `pulumi up -y` to automatically run the update after a successful preview.
+First Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
 Previewing update (dev):
@@ -172,9 +172,9 @@ Now that your `index.html` is in your bucket, let's modify the program to have t
 
 ```python
 bucket = s3.Bucket('my-bucket',
-    website={
-        'index_document': 'index.html',
-    })
+    website=s3.BucketWebsiteArgs(
+        index_document="index.html",
+    ))
 ```
 
 Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
