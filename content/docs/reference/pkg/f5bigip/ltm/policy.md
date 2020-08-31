@@ -128,14 +128,14 @@ test_policy = f5bigip.ltm.Policy("test-policy",
     requires=["http"],
     published_copy="Drafts/my_policy",
     controls=["forwarding"],
-    rules=[{
-        "name": "rule6",
-        "actions": [{
-            "tmName": "20",
-            "forward": True,
-            "pool": "/Common/mypool",
-        }],
-    }],
+    rules=[f5bigip.ltm.PolicyRuleArgs(
+        name="rule6",
+        actions=[f5bigip.ltm.PolicyRuleActionArgs(
+            tm_name="20",
+            forward=True,
+            pool="/Common/mypool",
+        )],
+    )],
     opts=ResourceOptions(depends_on=[bigip_ltm_pool["mypool"]]))
 ```
 
@@ -180,7 +180,7 @@ const test_policy = new f5bigip.ltm.Policy("test-policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>controls=None<span class="p">, </span>name=None<span class="p">, </span>published_copy=None<span class="p">, </span>requires=None<span class="p">, </span>rules=None<span class="p">, </span>strategy=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/ltm/#pulumi_f5bigip.ltm.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">published_copy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -621,7 +621,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrule">List[Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policyrule">List[Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules can be applied using the policy
 {{% /md %}}</dd>
@@ -735,7 +735,8 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>controls=None<span class="p">, </span>name=None<span class="p">, </span>published_copy=None<span class="p">, </span>requires=None<span class="p">, </span>rules=None<span class="p">, </span>strategy=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">published_copy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requires</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -743,7 +744,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1118,7 +1119,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrule">List[Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policyrule">List[Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules can be applied using the policy
 {{% /md %}}</dd>
@@ -1298,7 +1299,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyruleaction">List[Policy<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#policyruleaction">List[Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1308,7 +1309,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyrulecondition">List[Policy<wbr>Rule<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#policyrulecondition">List[Policy<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4509,8 +4510,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clonepool_python">
-<a href="#clonepool_python" style="color: inherit; text-decoration: inherit;">clone<wbr>Pool</a>
+        <span id="clone_pool_python">
+<a href="#clone_pool_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4549,8 +4550,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiehash_python">
-<a href="#cookiehash_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Hash</a>
+        <span id="cookie_hash_python">
+<a href="#cookie_hash_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4559,8 +4560,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookieinsert_python">
-<a href="#cookieinsert_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Insert</a>
+        <span id="cookie_insert_python">
+<a href="#cookie_insert_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>insert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4569,8 +4570,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiepassive_python">
-<a href="#cookiepassive_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Passive</a>
+        <span id="cookie_passive_python">
+<a href="#cookie_passive_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>passive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4579,8 +4580,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookierewrite_python">
-<a href="#cookierewrite_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Rewrite</a>
+        <span id="cookie_rewrite_python">
+<a href="#cookie_rewrite_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4609,8 +4610,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationaddress_python">
-<a href="#destinationaddress_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Address</a>
+        <span id="destination_address_python">
+<a href="#destination_address_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4659,8 +4660,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expirysecs_python">
-<a href="#expirysecs_python" style="color: inherit; text-decoration: inherit;">expiry<wbr>Secs</a>
+        <span id="expiry_secs_python">
+<a href="#expiry_secs_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>secs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4710,8 +4711,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fromprofile_python">
-<a href="#fromprofile_python" style="color: inherit; text-decoration: inherit;">from<wbr>Profile</a>
+        <span id="from_profile_python">
+<a href="#from_profile_python" style="color: inherit; text-decoration: inherit;">from_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4750,8 +4751,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpbasicauth_python">
-<a href="#httpbasicauth_python" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
+        <span id="http_basic_auth_python">
+<a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4760,8 +4761,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpcookie_python">
-<a href="#httpcookie_python" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
+        <span id="http_cookie_python">
+<a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4770,8 +4771,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheader_python">
-<a href="#httpheader_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header</a>
+        <span id="http_header_python">
+<a href="#http_header_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4780,8 +4781,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httphost_python">
-<a href="#httphost_python" style="color: inherit; text-decoration: inherit;">http<wbr>Host</a>
+        <span id="http_host_python">
+<a href="#http_host_python" style="color: inherit; text-decoration: inherit;">http_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4790,8 +4791,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpreferer_python">
-<a href="#httpreferer_python" style="color: inherit; text-decoration: inherit;">http<wbr>Referer</a>
+        <span id="http_referer_python">
+<a href="#http_referer_python" style="color: inherit; text-decoration: inherit;">http_<wbr>referer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4800,8 +4801,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpreply_python">
-<a href="#httpreply_python" style="color: inherit; text-decoration: inherit;">http<wbr>Reply</a>
+        <span id="http_reply_python">
+<a href="#http_reply_python" style="color: inherit; text-decoration: inherit;">http_<wbr>reply</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4810,8 +4811,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsetcookie_python">
-<a href="#httpsetcookie_python" style="color: inherit; text-decoration: inherit;">http<wbr>Set<wbr>Cookie</a>
+        <span id="http_set_cookie_python">
+<a href="#http_set_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>set_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4820,8 +4821,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpuri_python">
-<a href="#httpuri_python" style="color: inherit; text-decoration: inherit;">http<wbr>Uri</a>
+        <span id="http_uri_python">
+<a href="#http_uri_python" style="color: inherit; text-decoration: inherit;">http_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4850,8 +4851,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="internalvirtual_python">
-<a href="#internalvirtual_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Virtual</a>
+        <span id="internal_virtual_python">
+<a href="#internal_virtual_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>virtual</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4860,8 +4861,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipaddress_python">
-<a href="#ipaddress_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4920,8 +4921,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ltmpolicy_python">
-<a href="#ltmpolicy_python" style="color: inherit; text-decoration: inherit;">ltm<wbr>Policy</a>
+        <span id="ltm_policy_python">
+<a href="#ltm_policy_python" style="color: inherit; text-decoration: inherit;">ltm_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5091,8 +5092,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5151,8 +5152,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestadapt_python">
-<a href="#requestadapt_python" style="color: inherit; text-decoration: inherit;">request<wbr>Adapt</a>
+        <span id="request_adapt_python">
+<a href="#request_adapt_python" style="color: inherit; text-decoration: inherit;">request_<wbr>adapt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5181,8 +5182,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseadapt_python">
-<a href="#responseadapt_python" style="color: inherit; text-decoration: inherit;">response<wbr>Adapt</a>
+        <span id="response_adapt_python">
+<a href="#response_adapt_python" style="color: inherit; text-decoration: inherit;">response_<wbr>adapt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5221,8 +5222,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serverssl_python">
-<a href="#serverssl_python" style="color: inherit; text-decoration: inherit;">server<wbr>Ssl</a>
+        <span id="server_ssl_python">
+<a href="#server_ssl_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5231,8 +5232,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="setvariable_python">
-<a href="#setvariable_python" style="color: inherit; text-decoration: inherit;">set<wbr>Variable</a>
+        <span id="set_variable_python">
+<a href="#set_variable_python" style="color: inherit; text-decoration: inherit;">set_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5261,8 +5262,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceaddress_python">
-<a href="#sourceaddress_python" style="color: inherit; text-decoration: inherit;">source<wbr>Address</a>
+        <span id="source_address_python">
+<a href="#source_address_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5271,8 +5272,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslclienthello_python">
-<a href="#sslclienthello_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Hello</a>
+        <span id="ssl_client_hello_python">
+<a href="#ssl_client_hello_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>hello</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5281,8 +5282,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslserverhandshake_python">
-<a href="#sslserverhandshake_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Server<wbr>Handshake</a>
+        <span id="ssl_server_handshake_python">
+<a href="#ssl_server_handshake_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>server_<wbr>handshake</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5291,8 +5292,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslserverhello_python">
-<a href="#sslserverhello_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Server<wbr>Hello</a>
+        <span id="ssl_server_hello_python">
+<a href="#ssl_server_hello_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>server_<wbr>hello</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5301,8 +5302,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslsessionid_python">
-<a href="#sslsessionid_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Session<wbr>Id</a>
+        <span id="ssl_session_id_python">
+<a href="#ssl_session_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>session_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5331,8 +5332,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tcpnagle_python">
-<a href="#tcpnagle_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Nagle</a>
+        <span id="tcp_nagle_python">
+<a href="#tcp_nagle_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>nagle</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5361,8 +5362,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tmname_python">
-<a href="#tmname_python" style="color: inherit; text-decoration: inherit;">tm<wbr>Name</a>
+        <span id="tm_name_python">
+<a href="#tm_name_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5422,8 +5423,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vlanid_python">
-<a href="#vlanid_python" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+        <span id="vlan_id_python">
+<a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8231,8 +8232,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsertype_python">
-<a href="#browsertype_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Type</a>
+        <span id="browser_type_python">
+<a href="#browser_type_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8241,8 +8242,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browserversion_python">
-<a href="#browserversion_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Version</a>
+        <span id="browser_version_python">
+<a href="#browser_version_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8251,8 +8252,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="caseinsensitive_python">
-<a href="#caseinsensitive_python" style="color: inherit; text-decoration: inherit;">case<wbr>Insensitive</a>
+        <span id="case_insensitive_python">
+<a href="#case_insensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>insensitive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8261,8 +8262,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="casesensitive_python">
-<a href="#casesensitive_python" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
+        <span id="case_sensitive_python">
+<a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8281,8 +8282,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cipherbits_python">
-<a href="#cipherbits_python" style="color: inherit; text-decoration: inherit;">cipher<wbr>Bits</a>
+        <span id="cipher_bits_python">
+<a href="#cipher_bits_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>bits</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8291,8 +8292,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientssl_python">
-<a href="#clientssl_python" style="color: inherit; text-decoration: inherit;">client<wbr>Ssl</a>
+        <span id="client_ssl_python">
+<a href="#client_ssl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8311,8 +8312,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8341,8 +8342,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="countrycode_python">
-<a href="#countrycode_python" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
+        <span id="country_code_python">
+<a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8351,8 +8352,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="countryname_python">
-<a href="#countryname_python" style="color: inherit; text-decoration: inherit;">country<wbr>Name</a>
+        <span id="country_name_python">
+<a href="#country_name_python" style="color: inherit; text-decoration: inherit;">country_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8361,8 +8362,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuusage_python">
-<a href="#cpuusage_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Usage</a>
+        <span id="cpu_usage_python">
+<a href="#cpu_usage_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>usage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8371,8 +8372,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicemake_python">
-<a href="#devicemake_python" style="color: inherit; text-decoration: inherit;">device<wbr>Make</a>
+        <span id="device_make_python">
+<a href="#device_make_python" style="color: inherit; text-decoration: inherit;">device_<wbr>make</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8381,8 +8382,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicemodel_python">
-<a href="#devicemodel_python" style="color: inherit; text-decoration: inherit;">device<wbr>Model</a>
+        <span id="device_model_python">
+<a href="#device_model_python" style="color: inherit; text-decoration: inherit;">device_<wbr>model</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8401,8 +8402,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endswith_python">
-<a href="#endswith_python" style="color: inherit; text-decoration: inherit;">ends<wbr>With</a>
+        <span id="ends_with_python">
+<a href="#ends_with_python" style="color: inherit; text-decoration: inherit;">ends_<wbr>with</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8471,8 +8472,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="greaterorequal_python">
-<a href="#greaterorequal_python" style="color: inherit; text-decoration: inherit;">greater<wbr>Or<wbr>Equal</a>
+        <span id="greater_or_equal_python">
+<a href="#greater_or_equal_python" style="color: inherit; text-decoration: inherit;">greater_<wbr>or_<wbr>equal</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8491,8 +8492,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpbasicauth_python">
-<a href="#httpbasicauth_python" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
+        <span id="http_basic_auth_python">
+<a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8501,8 +8502,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpcookie_python">
-<a href="#httpcookie_python" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
+        <span id="http_cookie_python">
+<a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8511,8 +8512,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheader_python">
-<a href="#httpheader_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header</a>
+        <span id="http_header_python">
+<a href="#http_header_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8521,8 +8522,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httphost_python">
-<a href="#httphost_python" style="color: inherit; text-decoration: inherit;">http<wbr>Host</a>
+        <span id="http_host_python">
+<a href="#http_host_python" style="color: inherit; text-decoration: inherit;">http_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8531,8 +8532,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpmethod_python">
-<a href="#httpmethod_python" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
+        <span id="http_method_python">
+<a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8541,8 +8542,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpreferer_python">
-<a href="#httpreferer_python" style="color: inherit; text-decoration: inherit;">http<wbr>Referer</a>
+        <span id="http_referer_python">
+<a href="#http_referer_python" style="color: inherit; text-decoration: inherit;">http_<wbr>referer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8551,8 +8552,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsetcookie_python">
-<a href="#httpsetcookie_python" style="color: inherit; text-decoration: inherit;">http<wbr>Set<wbr>Cookie</a>
+        <span id="http_set_cookie_python">
+<a href="#http_set_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>set_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8561,8 +8562,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpstatus_python">
-<a href="#httpstatus_python" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+        <span id="http_status_python">
+<a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8571,8 +8572,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpuri_python">
-<a href="#httpuri_python" style="color: inherit; text-decoration: inherit;">http<wbr>Uri</a>
+        <span id="http_uri_python">
+<a href="#http_uri_python" style="color: inherit; text-decoration: inherit;">http_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8581,8 +8582,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpuseragent_python">
-<a href="#httpuseragent_python" style="color: inherit; text-decoration: inherit;">http<wbr>User<wbr>Agent</a>
+        <span id="http_user_agent_python">
+<a href="#http_user_agent_python" style="color: inherit; text-decoration: inherit;">http_<wbr>user_<wbr>agent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8591,8 +8592,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpversion_python">
-<a href="#httpversion_python" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
+        <span id="http_version_python">
+<a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8671,8 +8672,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lessorequal_python">
-<a href="#lessorequal_python" style="color: inherit; text-decoration: inherit;">less<wbr>Or<wbr>Equal</a>
+        <span id="less_or_equal_python">
+<a href="#less_or_equal_python" style="color: inherit; text-decoration: inherit;">less_<wbr>or_<wbr>equal</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8741,8 +8742,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="not_python">
-<a href="#not_python" style="color: inherit; text-decoration: inherit;">not</a>
+        <span id="not__python">
+<a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8781,8 +8782,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathsegment_python">
-<a href="#pathsegment_python" style="color: inherit; text-decoration: inherit;">path<wbr>Segment</a>
+        <span id="path_segment_python">
+<a href="#path_segment_python" style="color: inherit; text-decoration: inherit;">path_<wbr>segment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8821,8 +8822,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="queryparameter_python">
-<a href="#queryparameter_python" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter</a>
+        <span id="query_parameter_python">
+<a href="#query_parameter_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8831,8 +8832,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8841,8 +8842,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regioncode_python">
-<a href="#regioncode_python" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
+        <span id="region_code_python">
+<a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8851,8 +8852,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionname_python">
-<a href="#regionname_python" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
+        <span id="region_name_python">
+<a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8891,8 +8892,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routedomain_python">
-<a href="#routedomain_python" style="color: inherit; text-decoration: inherit;">route<wbr>Domain</a>
+        <span id="route_domain_python">
+<a href="#route_domain_python" style="color: inherit; text-decoration: inherit;">route_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8931,8 +8932,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcert_python">
-<a href="#sslcert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert</a>
+        <span id="ssl_cert_python">
+<a href="#ssl_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8941,8 +8942,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslclienthello_python">
-<a href="#sslclienthello_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Hello</a>
+        <span id="ssl_client_hello_python">
+<a href="#ssl_client_hello_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>hello</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8951,8 +8952,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslextension_python">
-<a href="#sslextension_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Extension</a>
+        <span id="ssl_extension_python">
+<a href="#ssl_extension_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>extension</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8961,8 +8962,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslserverhandshake_python">
-<a href="#sslserverhandshake_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Server<wbr>Handshake</a>
+        <span id="ssl_server_handshake_python">
+<a href="#ssl_server_handshake_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>server_<wbr>handshake</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8971,8 +8972,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslserverhello_python">
-<a href="#sslserverhello_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Server<wbr>Hello</a>
+        <span id="ssl_server_hello_python">
+<a href="#ssl_server_hello_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>server_<wbr>hello</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8981,8 +8982,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startswith_python">
-<a href="#startswith_python" style="color: inherit; text-decoration: inherit;">starts<wbr>With</a>
+        <span id="starts_with_python">
+<a href="#starts_with_python" style="color: inherit; text-decoration: inherit;">starts_<wbr>with</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9011,8 +9012,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tmname_python">
-<a href="#tmname_python" style="color: inherit; text-decoration: inherit;">tm<wbr>Name</a>
+        <span id="tm_name_python">
+<a href="#tm_name_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9022,8 +9023,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unnamedqueryparameter_python">
-<a href="#unnamedqueryparameter_python" style="color: inherit; text-decoration: inherit;">unnamed<wbr>Query<wbr>Parameter</a>
+        <span id="unnamed_query_parameter_python">
+<a href="#unnamed_query_parameter_python" style="color: inherit; text-decoration: inherit;">unnamed_<wbr>query_<wbr>parameter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9032,8 +9033,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useragenttoken_python">
-<a href="#useragenttoken_python" style="color: inherit; text-decoration: inherit;">user<wbr>Agent<wbr>Token</a>
+        <span id="user_agent_token_python">
+<a href="#user_agent_token_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9092,8 +9093,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vlanid_python">
-<a href="#vlanid_python" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+        <span id="vlan_id_python">
+<a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
