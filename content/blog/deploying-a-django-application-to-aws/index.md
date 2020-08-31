@@ -380,12 +380,25 @@ django_site_service = aws.ecs.Service("django-site-service",
 ```
 
 To connect to our application, we export the DNS name of the Django balancer and open it
-in a browser window. To access Django administration, add "/admin/" to the end of the URL,
-and log in using your Django admin credentials.
+in a browser window.
 
 ```python
 pulumi.export("app-url", django_balancer.dns_name)
 ```
+
+To add questions to the database, add "/admin/" to the end of the URL,
+and log in using your Django admin credentials.
+
+![Login screen](step1.png)
+
+The Administration panel allows you to manage the state of your application. Groups, users,
+choices, and questions can all be added easily.
+
+![Administration panel](step2.png)
+
+Comparison between Flask and Django:
+
+![Comparison](step3.png)
 
 In this example, I described how to set up a basic Django voting application and deploy it to AWS. Although our Django and Flask applications use very different AWS services, we seamlessly replaced the previous infrastructure with what was needed.
 
