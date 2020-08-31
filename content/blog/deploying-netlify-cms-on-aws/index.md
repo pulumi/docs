@@ -360,4 +360,4 @@ In the workflow, Github secrets are accessed from `${{ secrets.ACCESS_TOKEN }}` 
 
 We have deployed the stand-alone React CMS application on AWS. The [complete code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms) is included in [Pulumi's Example Repository](https://github.com/pulumi/examples).
 
-The next article will show how to deploy on AWS instead of Netlify. To do this, we describe how to substitute the Netlify Identity Service by writing an External OAuth Client-Server and deploying it on AWS. Stay tuned for our [next blog post]({{< relref "/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app" >}}).
+The next article will show how to deploy on AWS instead of Netlify. To do this, we describe how to substitute the Netlify Identity Service by writing an External OAuth Client-Server and deploying it on AWS. Stay tuned for our next blog post.
