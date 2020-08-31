@@ -95,16 +95,16 @@ const profile = new aws.iam.InstanceProfile("instance-profile", { role });
 
 An AWS managed policy is a standalone policy that is created and administered by AWS. Standalone policy means that
 the policy has its own Amazon Resource Name (ARN) that includes the policy name. For example,
-`arn:aws:iam::aws:policy/IAMReadOnlyAccess` is an AWS managed policy. The `aws.iam` module exports a collection of
+`arn:aws:iam::aws:policy/IAMReadOnlyAccess` is an AWS managed policy. The `aws.iam.ManagedPolicies` module exports a collection of
 constants for all available managed policies so that you don't need to remember the ARNs.
 
-For example, the above is available as `aws.iam.IAMReadOnlyAccess`:
+For example, the above is available as `aws.iam.ManagedPolicies.IAMReadOnlyAccess`:
 
 ```typescript
 const role = ...;
 const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("rpa", {
     role: role,
-    policyArn: aws.iam.IAMReadOnlyAccess,
+    policyArn: aws.iam.ManagedPolicies.IAMReadOnlyAccess,
 });
 ```
 
