@@ -12,6 +12,197 @@ meta_desc: "Explore the ServiceDependency resource of the PagerDuty package, inc
 
 A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Pagerduty.ServiceDependency("foo", new Pagerduty.ServiceDependencyArgs
+        {
+            Dependencies = 
+            {
+                new Pagerduty.Inputs.ServiceDependencyDependencyArgs
+                {
+                    DependentServices = 
+                    {
+                        new Pagerduty.Inputs.ServiceDependencyDependencyDependentServiceArgs
+                        {
+                            Id = pagerduty_business_service.Foo.Id,
+                            Type = "business_service",
+                        },
+                    },
+                    SupportingServices = 
+                    {
+                        new Pagerduty.Inputs.ServiceDependencyDependencySupportingServiceArgs
+                        {
+                            Id = pagerduty_service.Foo.Id,
+                            Type = "service",
+                        },
+                    },
+                },
+            },
+        });
+        var bar = new Pagerduty.ServiceDependency("bar", new Pagerduty.ServiceDependencyArgs
+        {
+            Dependencies = 
+            {
+                new Pagerduty.Inputs.ServiceDependencyDependencyArgs
+                {
+                    DependentServices = 
+                    {
+                        new Pagerduty.Inputs.ServiceDependencyDependencyDependentServiceArgs
+                        {
+                            Id = pagerduty_business_service.Foo.Id,
+                            Type = "business_service",
+                        },
+                    },
+                    SupportingServices = 
+                    {
+                        new Pagerduty.Inputs.ServiceDependencyDependencySupportingServiceArgs
+                        {
+                            Id = pagerduty_service.Two.Id,
+                            Type = "service",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pagerduty.NewServiceDependency(ctx, "foo", &pagerduty.ServiceDependencyArgs{
+			Dependencies: pagerduty.ServiceDependencyDependencyArray{
+				&pagerduty.ServiceDependencyDependencyArgs{
+					DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
+						&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
+							Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
+							Type: pulumi.String("business_service"),
+						},
+					},
+					SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
+						&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
+							Id:   pulumi.Any(pagerduty_service.Foo.Id),
+							Type: pulumi.String("service"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceDependency(ctx, "bar", &pagerduty.ServiceDependencyArgs{
+			Dependencies: pagerduty.ServiceDependencyDependencyArray{
+				&pagerduty.ServiceDependencyDependencyArgs{
+					DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
+						&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
+							Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
+							Type: pulumi.String("business_service"),
+						},
+					},
+					SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
+						&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
+							Id:   pulumi.Any(pagerduty_service.Two.Id),
+							Type: pulumi.String("service"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_pagerduty as pagerduty
+
+foo = pagerduty.ServiceDependency("foo", dependencies=[pagerduty.ServiceDependencyDependencyArgs(
+    dependent_services=[pagerduty.ServiceDependencyDependencyDependentServiceArgs(
+        id=pagerduty_business_service["foo"]["id"],
+        type="business_service",
+    )],
+    supporting_services=[pagerduty.ServiceDependencyDependencySupportingServiceArgs(
+        id=pagerduty_service["foo"]["id"],
+        type="service",
+    )],
+)])
+bar = pagerduty.ServiceDependency("bar", dependencies=[pagerduty.ServiceDependencyDependencyArgs(
+    dependent_services=[pagerduty.ServiceDependencyDependencyDependentServiceArgs(
+        id=pagerduty_business_service["foo"]["id"],
+        type="business_service",
+    )],
+    supporting_services=[pagerduty.ServiceDependencyDependencySupportingServiceArgs(
+        id=pagerduty_service["two"]["id"],
+        type="service",
+    )],
+)])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const foo = new pagerduty.ServiceDependency("foo", {dependencies: [{
+    dependentServices: [{
+        id: pagerduty_business_service.foo.id,
+        type: "business_service",
+    }],
+    supportingServices: [{
+        id: pagerduty_service.foo.id,
+        type: "service",
+    }],
+}]});
+const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
+    dependentServices: [{
+        id: pagerduty_business_service.foo.id,
+        type: "business_service",
+    }],
+    supportingServices: [{
+        id: pagerduty_service.two.id,
+        type: "service",
+    }],
+}]});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceDependency Resource {#create}
@@ -23,7 +214,7 @@ A [service dependency](https://developer.pagerduty.com/api-reference/reference/R
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.ServiceDependency">ServiceDependency</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dependencies=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.ServiceDependency">ServiceDependency</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dependencies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceDependencyDependencyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -255,7 +446,7 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">List[Service<wbr>Dependency<wbr>Dependency]</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">List[Service<wbr>Dependency<wbr>Dependency<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
 {{% /md %}}</dd>
@@ -358,7 +549,8 @@ Get an existing ServiceDependency resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dependencies=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dependencies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceDependencyDependencyArgs]]</span> = None<span class="p">) -&gt;</span> ServiceDependency</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -366,7 +558,7 @@ Get an existing ServiceDependency resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.ServiceDependency.html">ServiceDependency</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ServiceDependencyState.html">ServiceDependencyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.ServiceDependency.html">ServiceDependency</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ServiceDependencyState.html">ServiceDependencyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -532,7 +724,7 @@ The following state arguments are supported:
 <a href="#state_dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependency">List[Service<wbr>Dependency<wbr>Dependency]</a></span>
+        <span class="property-type"><a href="#servicedependencydependency">List[Service<wbr>Dependency<wbr>Dependency<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
 {{% /md %}}</dd>
@@ -689,22 +881,22 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dependentservices_python">
-<a href="#dependentservices_python" style="color: inherit; text-decoration: inherit;">dependent<wbr>Services</a>
+        <span id="dependent_services_python">
+<a href="#dependent_services_python" style="color: inherit; text-decoration: inherit;">dependent_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencydependentservice">List[Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service]</a></span>
+        <span class="property-type"><a href="#servicedependencydependencydependentservice">List[Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="supportingservices_python">
-<a href="#supportingservices_python" style="color: inherit; text-decoration: inherit;">supporting<wbr>Services</a>
+        <span id="supporting_services_python">
+<a href="#supporting_services_python" style="color: inherit; text-decoration: inherit;">supporting_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedependencydependencysupportingservice">List[Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service]</a></span>
+        <span class="property-type"><a href="#servicedependencydependencysupportingservice">List[Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
 {{% /md %}}</dd>

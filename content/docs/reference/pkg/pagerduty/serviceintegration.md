@@ -12,171 +12,6 @@ meta_desc: "Explore the ServiceIntegration resource of the PagerDuty package, in
 
 A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Pagerduty = Pulumi.Pagerduty;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
-        {
-            Email = "125.greenholt.earline@graham.name",
-            Teams = 
-            {
-                pagerduty_team.Example.Id,
-            },
-        });
-        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
-        {
-            NumLoops = 2,
-            Rules = 
-            {
-                new Pagerduty.Inputs.EscalationPolicyRuleArgs
-                {
-                    EscalationDelayInMinutes = 10,
-                    Target = 
-                    {
-                        
-                        {
-                            { "id", exampleUser.Id },
-                            { "type", "user" },
-                        },
-                    },
-                },
-            },
-        });
-        var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
-        {
-            AcknowledgementTimeout = "600",
-            AutoResolveTimeout = "14400",
-            EscalationPolicy = pagerduty_escalation_policy.Example.Id,
-        });
-        var exampleServiceIntegration = new Pagerduty.ServiceIntegration("exampleServiceIntegration", new Pagerduty.ServiceIntegrationArgs
-        {
-            Service = exampleService.Id,
-            Type = "generic_events_api_inbound_integration",
-        });
-        var datadogVendor = Output.Create(Pagerduty.GetVendor.InvokeAsync(new Pagerduty.GetVendorArgs
-        {
-            Name = "Datadog",
-        }));
-        var datadogServiceIntegration = new Pagerduty.ServiceIntegration("datadogServiceIntegration", new Pagerduty.ServiceIntegrationArgs
-        {
-            Service = exampleService.Id,
-            Vendor = datadogVendor.Apply(datadogVendor => datadogVendor.Id),
-        });
-        var cloudwatchVendor = Output.Create(Pagerduty.GetVendor.InvokeAsync(new Pagerduty.GetVendorArgs
-        {
-            Name = "Cloudwatch",
-        }));
-        var cloudwatchServiceIntegration = new Pagerduty.ServiceIntegration("cloudwatchServiceIntegration", new Pagerduty.ServiceIntegrationArgs
-        {
-            Service = exampleService.Id,
-            Vendor = cloudwatchVendor.Apply(cloudwatchVendor => cloudwatchVendor.Id),
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_pagerduty as pagerduty
-
-example_user = pagerduty.User("exampleUser",
-    email="125.greenholt.earline@graham.name",
-    teams=[pagerduty_team["example"]["id"]])
-foo = pagerduty.EscalationPolicy("foo",
-    num_loops=2,
-    rules=[{
-        "escalationDelayInMinutes": 10,
-        "target": [{
-            "id": example_user.id,
-            "type": "user",
-        }],
-    }])
-example_service = pagerduty.Service("exampleService",
-    acknowledgement_timeout=600,
-    auto_resolve_timeout=14400,
-    escalation_policy=pagerduty_escalation_policy["example"]["id"])
-example_service_integration = pagerduty.ServiceIntegration("exampleServiceIntegration",
-    service=example_service.id,
-    type="generic_events_api_inbound_integration")
-datadog_vendor = pagerduty.get_vendor(name="Datadog")
-datadog_service_integration = pagerduty.ServiceIntegration("datadogServiceIntegration",
-    service=example_service.id,
-    vendor=datadog_vendor.id)
-cloudwatch_vendor = pagerduty.get_vendor(name="Cloudwatch")
-cloudwatch_service_integration = pagerduty.ServiceIntegration("cloudwatchServiceIntegration",
-    service=example_service.id,
-    vendor=cloudwatch_vendor.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as pagerduty from "@pulumi/pagerduty";
-
-const exampleUser = new pagerduty.User("example", {
-    email: "125.greenholt.earline@graham.name",
-    teams: [pagerduty_team_example.id],
-});
-const foo = new pagerduty.EscalationPolicy("foo", {
-    numLoops: 2,
-    rules: [{
-        escalationDelayInMinutes: 10,
-        targets: [{
-            id: exampleUser.id,
-            type: "user",
-        }],
-    }],
-});
-const exampleService = new pagerduty.Service("example", {
-    acknowledgementTimeout: "600",
-    autoResolveTimeout: "14400",
-    escalationPolicy: pagerduty_escalation_policy_example.id,
-});
-const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
-    service: exampleService.id,
-    type: "generic_events_api_inbound_integration",
-});
-const datadogVendor = pulumi.output(pagerduty.getVendor({
-    name: "Datadog",
-}, { async: true }));
-const datadogServiceIntegration = new pagerduty.ServiceIntegration("datadog", {
-    service: exampleService.id,
-    vendor: datadogVendor.id,
-});
-const cloudwatchVendor = pulumi.output(pagerduty.getVendor({
-    name: "Cloudwatch",
-}, { async: true }));
-const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatch", {
-    service: exampleService.id,
-    vendor: cloudwatchVendor.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServiceIntegration Resource {#create}
@@ -188,7 +23,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.ServiceIntegration">ServiceIntegration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>integration_email=None<span class="p">, </span>integration_key=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">integration_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -823,7 +658,8 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>html_url=None<span class="p">, </span>integration_email=None<span class="p">, </span>integration_key=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -831,7 +667,7 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.ServiceIntegration.html">ServiceIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ServiceIntegrationState.html">ServiceIntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.ServiceIntegration.html">ServiceIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ServiceIntegrationState.html">ServiceIntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

@@ -23,7 +23,7 @@ An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.RulesetRule">RulesetRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>disabled=None<span class="p">, </span>position=None<span class="p">, </span>ruleset=None<span class="p">, </span>time_frame=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.RulesetRule">RulesetRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleConditionsArgs]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleTimeFrameArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +258,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -331,7 +331,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -404,7 +404,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -431,7 +431,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Dict[Ruleset<wbr>Rule<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd>
@@ -442,7 +442,7 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Dict[Ruleset<wbr>Rule<wbr>Conditions]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd>
@@ -475,9 +475,9 @@ The RulesetRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#time_frame_python" style="color: inherit; text-decoration: inherit;">time_<wbr>frame</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Dict[Ruleset<wbr>Rule<wbr>Time<wbr>Frame]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -578,7 +578,8 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>disabled=None<span class="p">, </span>position=None<span class="p">, </span>ruleset=None<span class="p">, </span>time_frame=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleConditionsArgs]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">position</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ruleset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_frame</span><span class="p">:</span> <span class="nx">Optional[RulesetRuleTimeFrameArgs]</span> = None<span class="p">) -&gt;</span> RulesetRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +587,7 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.RulesetRule.html">RulesetRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..RulesetRuleState.html">RulesetRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.RulesetRule.html">RulesetRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..RulesetRuleState.html">RulesetRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -755,7 +756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -828,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -901,7 +902,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -917,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactions">Dict[Ruleset<wbr>Rule<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#rulesetruleactions">Ruleset<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to apply to an event if the conditions match.
 {{% /md %}}</dd>
@@ -928,7 +929,7 @@ The following state arguments are supported:
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditions">Dict[Ruleset<wbr>Rule<wbr>Conditions]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditions">Ruleset<wbr>Rule<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 {{% /md %}}</dd>
@@ -972,9 +973,9 @@ The following state arguments are supported:
 <a href="#state_time_frame_python" style="color: inherit; text-decoration: inherit;">time_<wbr>frame</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframe">Dict[Ruleset<wbr>Rule<wbr>Time<wbr>Frame]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframe">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules). 
+    <dd>{{% md %}}Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 {{% /md %}}</dd>
 
 </dl>
@@ -1265,18 +1266,18 @@ The following state arguments are supported:
 <a href="#annotates_python" style="color: inherit; text-decoration: inherit;">annotates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsannotate">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsannotate">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Annotate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Note added to the event.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventactions_python">
-<a href="#eventactions_python" style="color: inherit; text-decoration: inherit;">event<wbr>Actions</a>
+        <span id="event_actions_python">
+<a href="#event_actions_python" style="color: inherit; text-decoration: inherit;">event_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionseventaction">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionseventaction">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Event<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1286,7 +1287,7 @@ The following state arguments are supported:
 <a href="#extractions_python" style="color: inherit; text-decoration: inherit;">extractions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsextraction">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsextraction">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Extraction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allows you to copy important data from one event field to another. Extraction rules must use valid [RE2 regular expression syntax](https://github.com/google/re2/wiki/Syntax). Extraction objects consist of the following fields:
 {{% /md %}}</dd>
@@ -1297,7 +1298,7 @@ The following state arguments are supported:
 <a href="#priorities_python" style="color: inherit; text-decoration: inherit;">priorities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionspriority">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Priority]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionspriority">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Priority<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the priority applied to the event.
 {{% /md %}}</dd>
@@ -1308,7 +1309,7 @@ The following state arguments are supported:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsroute">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Route]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsroute">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the service where the event will be routed.
 {{% /md %}}</dd>
@@ -1319,7 +1320,7 @@ The following state arguments are supported:
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionsseverity">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionsseverity">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Severity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The [severity level](https://support.pagerduty.com/docs/rulesets#section-set-severity-with-event-rules) of the event. Can be either `info`,`error`,`warning`, or `critical`.
 {{% /md %}}</dd>
@@ -1330,7 +1331,7 @@ The following state arguments are supported:
 <a href="#suppresses_python" style="color: inherit; text-decoration: inherit;">suppresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleactionssuppress">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress]</a></span>
+        <span class="property-type"><a href="#rulesetruleactionssuppress">List[Ruleset<wbr>Rule<wbr>Actions<wbr>Suppress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether an alert is [suppressed](https://support.pagerduty.com/docs/rulesets#section-suppress-but-create-triggering-thresholds-with-event-rules) (does not create an incident).
 {{% /md %}}</dd>
@@ -2011,7 +2012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured. 
+    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2062,7 +2063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured. 
+    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2113,7 +2114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured. 
+    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2147,8 +2148,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdtimeamount_python">
-<a href="#thresholdtimeamount_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Time<wbr>Amount</a>
+        <span id="threshold_time_amount_python">
+<a href="#threshold_time_amount_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>time_<wbr>amount</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2158,19 +2159,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdtimeunit_python">
-<a href="#thresholdtimeunit_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Time<wbr>Unit</a>
+        <span id="threshold_time_unit_python">
+<a href="#threshold_time_unit_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>time_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured. 
+    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdvalue_python">
-<a href="#thresholdvalue_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
+        <span id="threshold_value_python">
+<a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2233,7 +2234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleconditionssubcondition">List&lt;Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of sub-conditions that define the the condition. 
+    <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd>
 
 </dl>
@@ -2262,7 +2263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleconditionssubcondition">[]Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition</a></span>
     </dt>
-    <dd>{{% md %}}List of sub-conditions that define the the condition. 
+    <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd>
 
 </dl>
@@ -2291,7 +2292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesetruleconditionssubcondition">Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition[]</a></span>
     </dt>
-    <dd>{{% md %}}List of sub-conditions that define the the condition. 
+    <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd>
 
 </dl>
@@ -2318,9 +2319,9 @@ The following state arguments are supported:
 <a href="#subconditions_python" style="color: inherit; text-decoration: inherit;">subconditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubcondition">List[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubcondition">List[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of sub-conditions that define the the condition. 
+    <dd>{{% md %}}List of sub-conditions that define the the condition.
 {{% /md %}}</dd>
 
 </dl>
@@ -2452,7 +2453,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">List[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#rulesetruleconditionssubconditionparameter">List[Ruleset<wbr>Rule<wbr>Conditions<wbr>Subcondition<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameter for the sub-condition. It requires both a `path` and `value` to be set.
 {{% /md %}}</dd>
@@ -2701,22 +2702,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activebetweens_python">
-<a href="#activebetweens_python" style="color: inherit; text-decoration: inherit;">active<wbr>Betweens</a>
+        <span id="active_betweens_python">
+<a href="#active_betweens_python" style="color: inherit; text-decoration: inherit;">active_<wbr>betweens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">List[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframeactivebetween">List[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Active<wbr>Between<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule during a specific time period.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scheduledweeklies_python">
-<a href="#scheduledweeklies_python" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Weeklies</a>
+        <span id="scheduled_weeklies_python">
+<a href="#scheduled_weeklies_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>weeklies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">List[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly]</a></span>
+        <span class="property-type"><a href="#rulesetruletimeframescheduledweekly">List[Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Values for executing the rule on a recurring schedule.
 {{% /md %}}</dd>
@@ -3072,7 +3073,7 @@ The following state arguments are supported:
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}An integer array representing which days during the week the rule executes. For example `weekdays = [1,3,7]` would execute on Monday, Wednesday and Sunday.
 {{% /md %}}</dd>

@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/pagerduty | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/pagerduty package."
-git_sha: "a52f6bdfcda0dd37376a7e134db4aecd518daef0"
+git_sha: "49956609579c4d787eefd7e91dd815cf0d228647"
 block_external_search_index: true
 ---
 
@@ -28,14 +28,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="skipCredentialsValidation" data-link-title="skipCredentialsValidation">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/config/vars.ts#L9">
         let <strong>skipCredentialsValidation</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> skipCredentialsValidation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipCredentialsValidation&#34;) || false</span>;</code></pre>
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/config/vars.ts#L10">
         let <strong>token</strong>
     </a>
 </h3>

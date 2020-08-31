@@ -12,177 +12,6 @@ meta_desc: "Explore the Extension resource of the PagerDuty package, including e
 
 An [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extensions/post_extensions) can be associated with a service.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Pagerduty = Pulumi.Pagerduty;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var webhook = Output.Create(Pagerduty.GetExtensionSchema.InvokeAsync(new Pagerduty.GetExtensionSchemaArgs
-        {
-            Name = "Generic V2 Webhook",
-        }));
-        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
-        {
-            Email = "howard.james@example.domain",
-            Teams = 
-            {
-                pagerduty_team.Example.Id,
-            },
-        });
-        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
-        {
-            NumLoops = 2,
-            Rules = 
-            {
-                new Pagerduty.Inputs.EscalationPolicyRuleArgs
-                {
-                    EscalationDelayInMinutes = 10,
-                    Target = 
-                    {
-                        
-                        {
-                            { "id", exampleUser.Id },
-                            { "type", "user" },
-                        },
-                    },
-                },
-            },
-        });
-        var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
-        {
-            AcknowledgementTimeout = "600",
-            AutoResolveTimeout = "14400",
-            EscalationPolicy = pagerduty_escalation_policy.Example.Id,
-        });
-        var slack = new Pagerduty.Extension("slack", new Pagerduty.ExtensionArgs
-        {
-            Config = @"{
-	""restrict"": ""any"",
-	""notify_types"": {
-			""resolve"": false,
-			""acknowledge"": false,
-			""assignments"": false
-	},
-	""access_token"": ""XXX""
-}
-
-",
-            EndpointUrl = "https://generic_webhook_url/XXXXXX/BBBBBB",
-            ExtensionObjects = 
-            {
-                exampleService.Id,
-            },
-            ExtensionSchema = webhook.Apply(webhook => webhook.Id),
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_pagerduty as pagerduty
-
-webhook = pagerduty.get_extension_schema(name="Generic V2 Webhook")
-example_user = pagerduty.User("exampleUser",
-    email="howard.james@example.domain",
-    teams=[pagerduty_team["example"]["id"]])
-foo = pagerduty.EscalationPolicy("foo",
-    num_loops=2,
-    rules=[{
-        "escalationDelayInMinutes": 10,
-        "target": [{
-            "id": example_user.id,
-            "type": "user",
-        }],
-    }])
-example_service = pagerduty.Service("exampleService",
-    acknowledgement_timeout=600,
-    auto_resolve_timeout=14400,
-    escalation_policy=pagerduty_escalation_policy["example"]["id"])
-slack = pagerduty.Extension("slack",
-    config="""{
-	"restrict": "any",
-	"notify_types": {
-			"resolve": false,
-			"acknowledge": false,
-			"assignments": false
-	},
-	"access_token": "XXX"
-}
-
-""",
-    endpoint_url="https://generic_webhook_url/XXXXXX/BBBBBB",
-    extension_objects=[example_service.id],
-    extension_schema=webhook.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as pagerduty from "@pulumi/pagerduty";
-
-const webhook = pulumi.output(pagerduty.getExtensionSchema({
-    name: "Generic V2 Webhook",
-}, { async: true }));
-const exampleUser = new pagerduty.User("example", {
-    email: "howard.james@example.domain",
-    teams: [pagerduty_team_example.id],
-});
-const foo = new pagerduty.EscalationPolicy("foo", {
-    numLoops: 2,
-    rules: [{
-        escalationDelayInMinutes: 10,
-        targets: [{
-            id: exampleUser.id,
-            type: "user",
-        }],
-    }],
-});
-const exampleService = new pagerduty.Service("example", {
-    acknowledgementTimeout: "600",
-    autoResolveTimeout: "14400",
-    escalationPolicy: pagerduty_escalation_policy_example.id,
-});
-const slack = new pagerduty.Extension("slack", {
-    config: `{
-	"restrict": "any",
-	"notify_types": {
-			"resolve": false,
-			"acknowledge": false,
-			"assignments": false
-	},
-	"access_token": "XXX"
-}
-`,
-    endpointUrl: "https://generic_webhook_url/XXXXXX/BBBBBB",
-    extensionObjects: [exampleService.id],
-    extensionSchema: webhook.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Extension Resource {#create}
@@ -194,7 +23,7 @@ const slack = new pagerduty.Extension("slack", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Extension">Extension</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>extension_objects=None<span class="p">, </span>extension_schema=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Extension">Extension</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extension_objects</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">extension_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -408,7 +237,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,7 +310,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -554,7 +383,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,7 +456,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,7 +622,8 @@ Get an existing Extension resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>extension_objects=None<span class="p">, </span>extension_schema=None<span class="p">, </span>html_url=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extension_objects</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">extension_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Extension</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -801,7 +631,7 @@ Get an existing Extension resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Extension.html">Extension</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ExtensionState.html">ExtensionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Extension.html">Extension</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ExtensionState.html">ExtensionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -927,7 +757,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1011,7 +841,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,7 +925,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,7 +1009,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The url of the extension.  
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpoint_url`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpoint_url`, but one with named `Slack` accepts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

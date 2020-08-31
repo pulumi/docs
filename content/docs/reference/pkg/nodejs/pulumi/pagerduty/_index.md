@@ -3,7 +3,7 @@ title: "Package @pulumi/pagerduty"
 title_tag: "Package @pulumi/pagerduty | Node.js SDK"
 linktitle: "@pulumi/pagerduty"
 meta_desc: "Explore members of the @pulumi/pagerduty package."
-git_sha: "a52f6bdfcda0dd37376a7e134db4aecd518daef0"
+git_sha: "49956609579c4d787eefd7e91dd815cf0d228647"
 block_external_search_index: true
 ---
 
@@ -143,7 +143,7 @@ import * as pagerduty from "@pulumi/pagerduty";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Addon" data-link-title="Addon">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L21">
         Resource <strong>Addon</strong>
     </a>
 </h3>
@@ -153,8 +153,6 @@ import * as pagerduty from "@pulumi/pagerduty";
 With [add-ons](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Add-ons/get_addons), third-party developers can write their own add-ons to PagerDuty's UI. Given a configuration containing a src parameter, that URL will be embedded in an iframe on a page that's available to users from a drop-down menu.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -166,7 +164,7 @@ const example = new pagerduty.Addon("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Addon-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L56"> <b>constructor</b></a>
 </h4>
 
 
@@ -180,7 +178,7 @@ Create a Addon resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Addon-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -191,14 +189,14 @@ Get an existing Addon resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Addon-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Addon-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -209,7 +207,7 @@ Returns true if the given object is an instance of Addon.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Addon-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -218,7 +216,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Addon-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +224,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the add-on.
 
 <h4 class="pdoc-member-header" id="Addon-src">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L58">property <b>src</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L56">property <b>src</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>src: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +232,7 @@ The name of the add-on.
 The source URL to display in a frame in the PagerDuty UI. `HTTPS` is required.
 
 <h4 class="pdoc-member-header" id="Addon-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -243,7 +241,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BusinessService" data-link-title="BusinessService">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L22">
         Resource <strong>BusinessService</strong>
     </a>
 </h3>
@@ -253,8 +251,6 @@ deployments.
 A [business service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Business_Services/get_business_services) allows you to model capabilities that span multiple technical services and that may be owned by several different teams.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -267,7 +263,7 @@ const example = new pagerduty.BusinessService("example", {
 ```
 
 <h4 class="pdoc-member-header" id="BusinessService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -281,7 +277,7 @@ Create a BusinessService resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BusinessService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -292,14 +288,14 @@ Get an existing BusinessService resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BusinessService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BusinessService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -310,17 +306,17 @@ Returns true if the given object is an instance of BusinessService.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BusinessService-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L53">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L50">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessService-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L54">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L51">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>htmlUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -329,7 +325,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BusinessService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +333,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the business service.
 
 <h4 class="pdoc-member-header" id="BusinessService-pointOfContact">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L62">property <b>pointOfContact</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L59">property <b>pointOfContact</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pointOfContact: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,17 +341,17 @@ The name of the business service.
 The owner of the business service.
 
 <h4 class="pdoc-member-header" id="BusinessService-self">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L63">property <b>self</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L60">property <b>self</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>self: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessService-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L64">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L61">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>summary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessService-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L68">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L65">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -363,7 +359,7 @@ The owner of the business service.
 Default value is `businessService`. Can also be set as `businessServiceReference`.
 
 <h4 class="pdoc-member-header" id="BusinessService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -372,7 +368,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EscalationPolicy" data-link-title="EscalationPolicy">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L38">
         Resource <strong>EscalationPolicy</strong>
     </a>
 </h3>
@@ -382,8 +378,6 @@ deployments.
 An [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) determines what user or schedule will be notified first, second, and so on when an incident is triggered. Escalation policies are used by one or more services.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -410,7 +404,7 @@ const exampleEscalationPolicy = new pagerduty.EscalationPolicy("example", {
 ```
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -424,7 +418,7 @@ Create a EscalationPolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -435,14 +429,14 @@ Get an existing EscalationPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -453,12 +447,12 @@ Returns true if the given object is an instance of EscalationPolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EscalationPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -467,7 +461,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -475,7 +469,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the escalation policy.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-numLoops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L77">property <b>numLoops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L74">property <b>numLoops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numLoops: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -483,7 +477,7 @@ The name of the escalation policy.
 The number of times the escalation policy will repeat after reaching the end of its escalation.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L81">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L78">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#EscalationPolicyRule'>EscalationPolicyRule</a>[]&gt;;</code></pre>
@@ -491,7 +485,7 @@ The number of times the escalation policy will repeat after reaching the end of 
 An Escalation rule block. Escalation rules documented below.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L85">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L82">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -499,7 +493,7 @@ An Escalation rule block. Escalation rules documented below.
 Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 
 <h4 class="pdoc-member-header" id="EscalationPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -508,14 +502,128 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventRule" data-link-title="EventRule">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L121">
         Resource <strong>EventRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EventRule</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+*NOTE: The `pagerduty.EventRule` resource has been deprecated in favor the the pagerduty.Ruleset and pagerduty.RulesetRule resources. Please use the `ruleset` based resources for working with Event Rules.*
+
+An [event rule](https://v2.developer.pagerduty.com/docs/global-event-rules-api) determines what happens to an event that is sent to PagerDuty by monitoring tools and other integrations.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const second = new pagerduty.EventRule("second", {
+    actionJson: JSON.stringify([
+        [
+            "route",
+            "P5DTL0K",
+        ],
+        [
+            "severity",
+            "warning",
+        ],
+        [
+            "annotate",
+            "2 Managed by terraform",
+        ],
+        [
+            "priority",
+            "PL451DT",
+        ],
+    ]),
+    conditionJson: JSON.stringify([
+        "and",
+        [
+            "contains",
+            [
+                "path",
+                "payload",
+                "source",
+            ],
+            "website",
+        ],
+        [
+            "contains",
+            [
+                "path",
+                "headers",
+                "from",
+                "0",
+                "address",
+            ],
+            "homer",
+        ],
+    ]),
+    advancedConditionJson: JSON.stringify([[
+        "scheduled-weekly",
+        1565392127032,
+        3600000,
+        "America/Los_Angeles",
+        [
+            1,
+            2,
+            3,
+            5,
+            7,
+        ],
+    ]]),
+});
+const third = new pagerduty.EventRule("third", {
+    actionJson: JSON.stringify([
+        [
+            "route",
+            "P5DTL0K",
+        ],
+        [
+            "severity",
+            "warning",
+        ],
+        [
+            "annotate",
+            "3 Managed by terraform",
+        ],
+        [
+            "priority",
+            "PL451DT",
+        ],
+    ]),
+    conditionJson: JSON.stringify([
+        "and",
+        [
+            "contains",
+            [
+                "path",
+                "payload",
+                "source",
+            ],
+            "website",
+        ],
+        [
+            "contains",
+            [
+                "path",
+                "headers",
+                "from",
+                "0",
+                "address",
+            ],
+            "homer",
+        ],
+    ]),
+}, {
+    dependsOn: [pagerduty_event_rule.two],
+});
+```
+
 <h4 class="pdoc-member-header" id="EventRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L164"> <b>constructor</b></a>
 </h4>
 
 
@@ -529,7 +637,7 @@ Create a EventRule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L131">method <b>get</b></a>
 </h4>
 
 
@@ -540,14 +648,14 @@ Get an existing EventRule resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L121">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L142">method <b>isInstance</b></a>
 </h4>
 
 
@@ -558,7 +666,7 @@ Returns true if the given object is an instance of EventRule.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventRule-actionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L38">property <b>actionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L152">property <b>actionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actionJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +674,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of one or more actions for each rule. Each action within the list is itself a list.
 
 <h4 class="pdoc-member-header" id="EventRule-advancedConditionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L42">property <b>advancedConditionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L156">property <b>advancedConditionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>advancedConditionJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +682,7 @@ A list of one or more actions for each rule. Each action within the list is itse
 Contains a list of specific conditions including `active-between`,`scheduled-weekly`, and `frequency-over`. The first element in the list is the label for the condition, followed by a list of values for the specific condition. For more details on these conditions see [Advanced Condition](https://v2.developer.pagerduty.com/docs/global-event-rules-api#section-advanced-condition) in the PagerDuty API documentation.
 
 <h4 class="pdoc-member-header" id="EventRule-catchAll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L46">property <b>catchAll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L160">property <b>catchAll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>catchAll: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -582,7 +690,7 @@ Contains a list of specific conditions including `active-between`,`scheduled-wee
 A boolean that indicates whether the rule is a catch all for the account. This field is read-only through the PagerDuty API.
 
 <h4 class="pdoc-member-header" id="EventRule-conditionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L50">property <b>conditionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L164">property <b>conditionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conditionJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +698,7 @@ A boolean that indicates whether the rule is a catch all for the account. This f
 Contains a list of conditions. The first field in the list is `and` or `or`, followed by a list of operators and values.
 
 <h4 class="pdoc-member-header" id="EventRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L121">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -599,7 +707,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L121">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -608,7 +716,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Extension" data-link-title="Extension">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L55">
         Resource <strong>Extension</strong>
     </a>
 </h3>
@@ -618,8 +726,6 @@ deployments.
 An [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extensions/post_extensions) can be associated with a service.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -650,12 +756,12 @@ const exampleService = new pagerduty.Service("example", {
 const slack = new pagerduty.Extension("slack", {
     config: `{
 	"restrict": "any",
-	"notifyTypes": {
+	"notify_types": {
 			"resolve": false,
 			"acknowledge": false,
 			"assignments": false
 	},
-	"accessToken": "XXX"
+	"access_token": "XXX"
 }
 `,
     endpointUrl: "https://generic_webhook_url/XXXXXX/BBBBBB",
@@ -665,7 +771,7 @@ const slack = new pagerduty.Extension("slack", {
 ```
 
 <h4 class="pdoc-member-header" id="Extension-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -679,7 +785,7 @@ Create a Extension resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Extension-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -690,14 +796,14 @@ Get an existing Extension resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Extension-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Extension-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -708,7 +814,7 @@ Returns true if the given object is an instance of Extension.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Extension-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L88">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L86">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -716,16 +822,16 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The configuration of the service extension as string containing plain JSON-encoded data.
 
 <h4 class="pdoc-member-header" id="Extension-endpointUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L93">property <b>endpointUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L91">property <b>endpointUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The url of the extension.
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpointUrl`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpointUrl`, but one with named `Slack` accepts.
 
 <h4 class="pdoc-member-header" id="Extension-extensionObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L97">property <b>extensionObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L95">property <b>extensionObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extensionObjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -733,7 +839,7 @@ The url of the extension.
 This is the objects for which the extension applies (An array of service ids).
 
 <h4 class="pdoc-member-header" id="Extension-extensionSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L101">property <b>extensionSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L99">property <b>extensionSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extensionSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +847,7 @@ This is the objects for which the extension applies (An array of service ids).
 This is the schema for this extension.
 
 <h4 class="pdoc-member-header" id="Extension-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L105">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L103">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>htmlUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +855,7 @@ This is the schema for this extension.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="Extension-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -758,7 +864,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Extension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -766,12 +872,12 @@ deployments and may be missing (undefined) during planning phases.
 The name of the service extension.
 
 <h4 class="pdoc-member-header" id="Extension-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L110">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L108">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Extension-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -780,7 +886,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindow" data-link-title="MaintenanceWindow">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L25">
         Resource <strong>MaintenanceWindow</strong>
     </a>
 </h3>
@@ -791,10 +897,7 @@ A [maintenance window](https://v2.developer.pagerduty.com/v2/page/api-reference#
 
 Maintenance windows are specified to start at a certain time and end after they have begun. Once started, a maintenance window cannot be deleted; it can only be ended immediately to re-enable the service.
 
-
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -808,7 +911,7 @@ const example = new pagerduty.MaintenanceWindow("example", {
 ```
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -822,7 +925,7 @@ Create a MaintenanceWindow resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -833,14 +936,14 @@ Get an existing MaintenanceWindow resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -851,7 +954,7 @@ Returns true if the given object is an instance of MaintenanceWindow.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -859,7 +962,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L63">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L60">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -867,7 +970,7 @@ A description for the maintenance window.
 The maintenance window's end time. This is when the services will start creating incidents again. This date must be in the future and after the `startTime`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -876,7 +979,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L67">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L64">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -884,7 +987,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of service IDs to include in the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L71">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L68">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -892,7 +995,7 @@ A list of service IDs to include in the maintenance window.
 The maintenance window's start time. This is when the services will stop creating incidents. If this date is in the past, it will be updated to be the current time.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindow-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -901,7 +1004,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -914,7 +1017,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -928,14 +1031,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -946,14 +1049,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -962,7 +1065,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -971,7 +1074,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Ruleset" data-link-title="Ruleset">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L24">
         Resource <strong>Ruleset</strong>
     </a>
 </h3>
@@ -981,8 +1084,6 @@ deployments.
 [Rulesets](https://support.pagerduty.com/docs/rulesets) allow you to route events to an endpoint and create collections of event rules, which define sets of actions to take based on event content.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -995,7 +1096,7 @@ const fooRuleset = new pagerduty.Ruleset("fooRuleset", {team: {
 ```
 
 <h4 class="pdoc-member-header" id="Ruleset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -1009,7 +1110,7 @@ Create a Ruleset resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Ruleset-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -1020,14 +1121,14 @@ Get an existing Ruleset resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Ruleset-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Ruleset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1038,7 +1139,7 @@ Returns true if the given object is an instance of Ruleset.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Ruleset-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1047,7 +1148,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Ruleset-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1055,7 +1156,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the ruleset.
 
 <h4 class="pdoc-member-header" id="Ruleset-routingKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L62">property <b>routingKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L59">property <b>routingKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routingKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1063,7 +1164,7 @@ Name of the ruleset.
 Routing keys routed to this ruleset.
 
 <h4 class="pdoc-member-header" id="Ruleset-team">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L66">property <b>team</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L63">property <b>team</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>team: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetTeam'>RulesetTeam</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1071,7 +1172,7 @@ Routing keys routed to this ruleset.
 Reference to the team that owns the ruleset. If none is specified, only admins have access.
 
 <h4 class="pdoc-member-header" id="Ruleset-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L70">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L67">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1079,7 +1180,7 @@ Reference to the team that owns the ruleset. If none is specified, only admins h
 Type of ruleset. Currently only sets to `global`.
 
 <h4 class="pdoc-member-header" id="Ruleset-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1088,14 +1189,80 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RulesetRule" data-link-title="RulesetRule">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L75">
         Resource <strong>RulesetRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RulesetRule</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event-rules) allows you to set actions that should be taken on events that meet your designated rule criteria.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pagerduty from "@pulumi/pagerduty";
+
+const fooTeam = new pagerduty.Team("fooTeam", {});
+const fooRuleset = new pagerduty.Ruleset("fooRuleset", {team: {
+    id: fooTeam.id,
+}});
+const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
+    ruleset: fooRuleset.id,
+    position: 0,
+    disabled: "false",
+    timeFrame: {
+        scheduledWeeklies: [{
+            weekdays: [
+                3,
+                7,
+            ],
+            timezone: "America/Los_Angeles",
+            startTime: "1000000",
+            duration: "3600000",
+        }],
+    },
+    conditions: {
+        operator: "and",
+        subconditions: [
+            {
+                operator: "contains",
+                parameters: [{
+                    value: "disk space",
+                    path: "payload.summary",
+                }],
+            },
+            {
+                operator: "contains",
+                parameters: [{
+                    value: "db",
+                    path: "payload.source",
+                }],
+            },
+        ],
+    },
+    actions: {
+        routes: [{
+            value: "P5DTL0K",
+        }],
+        severities: [{
+            value: "warning",
+        }],
+        annotates: [{
+            value: "From Terraform",
+        }],
+        extractions: [{
+            target: "dedup_key",
+            source: "details.host",
+            regex: "(.*)",
+        }],
+    },
+});
+```
+
 <h4 class="pdoc-member-header" id="RulesetRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -1109,7 +1276,7 @@ Create a RulesetRule resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RulesetRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L85">method <b>get</b></a>
 </h4>
 
 
@@ -1120,14 +1287,14 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RulesetRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L75">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RulesetRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L96">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1138,7 +1305,7 @@ Returns true if the given object is an instance of RulesetRule.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RulesetRule-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L40">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L106">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleActions'>RulesetRuleActions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1146,7 +1313,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Actions to apply to an event if the conditions match.
 
 <h4 class="pdoc-member-header" id="RulesetRule-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L44">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L110">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleConditions'>RulesetRuleConditions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1154,7 +1321,7 @@ Actions to apply to an event if the conditions match.
 Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 
 <h4 class="pdoc-member-header" id="RulesetRule-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L48">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L114">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1162,7 +1329,7 @@ Conditions evaluated to check if an event matches this event rule. Is always emp
 Indicates whether the rule is disabled and would therefore not be evaluated.
 
 <h4 class="pdoc-member-header" id="RulesetRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1171,7 +1338,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RulesetRule-position">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L52">property <b>position</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L118">property <b>position</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>position: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1179,7 +1346,7 @@ deployments and may be missing (undefined) during planning phases.
 Position/index of the rule within the ruleset.
 
 <h4 class="pdoc-member-header" id="RulesetRule-ruleset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L56">property <b>ruleset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L122">property <b>ruleset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1354,7 @@ Position/index of the rule within the ruleset.
 The ID of the ruleset that the rule belongs to.
 
 <h4 class="pdoc-member-header" id="RulesetRule-timeFrame">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L60">property <b>timeFrame</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L126">property <b>timeFrame</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeFrame: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#RulesetRuleTimeFrame'>RulesetRuleTimeFrame</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1195,7 +1362,7 @@ The ID of the ruleset that the rule belongs to.
 Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 
 <h4 class="pdoc-member-header" id="RulesetRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L75">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1204,7 +1371,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Schedule" data-link-title="Schedule">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L39">
         Resource <strong>Schedule</strong>
     </a>
 </h3>
@@ -1214,8 +1381,6 @@ deployments.
 A [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules) determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1231,7 +1396,7 @@ const foo = new pagerduty.Schedule("foo", {
         restrictions: [{
             durationSeconds: 32400,
             startTimeOfDay: "08:00:00",
-            type: "dailyRestriction",
+            type: "daily_restriction",
         }],
         rotationTurnLengthSeconds: 86400,
         rotationVirtualStart: "2015-11-06T20:00:00-05:00",
@@ -1243,7 +1408,7 @@ const foo = new pagerduty.Schedule("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="Schedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -1257,7 +1422,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Schedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1268,14 +1433,14 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Schedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Schedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1286,7 +1451,7 @@ Returns true if the given object is an instance of Schedule.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Schedule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1294,7 +1459,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the schedule
 
 <h4 class="pdoc-member-header" id="Schedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1303,7 +1468,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Schedule-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L77">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L74">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>layers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#ScheduleLayer'>ScheduleLayer</a>[]&gt;;</code></pre>
@@ -1311,7 +1476,7 @@ deployments and may be missing (undefined) during planning phases.
 A schedule layer block. Schedule layers documented below.
 
 <h4 class="pdoc-member-header" id="Schedule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1319,7 +1484,7 @@ A schedule layer block. Schedule layers documented below.
 The name of the schedule.
 
 <h4 class="pdoc-member-header" id="Schedule-overflow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L87">property <b>overflow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L84">property <b>overflow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>overflow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1329,7 +1494,7 @@ If you don't pass the overflow=true parameter, you will get one schedule entry r
 If you do pass the `overflow` parameter, you will get one schedule entry returned with a start of `2011-06-01T00:00:00Z` and end of `2011-06-02T00:00:00Z`.
 
 <h4 class="pdoc-member-header" id="Schedule-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L91">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L88">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1502,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 The time zone of the schedule (e.g Europe/Berlin).
 
 <h4 class="pdoc-member-header" id="Schedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1346,7 +1511,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L40">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -1356,8 +1521,6 @@ deployments.
 A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services) represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1379,14 +1542,14 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 });
 const exampleService = new pagerduty.Service("example", {
     acknowledgementTimeout: "600",
-    alertCreation: "createIncidents",
+    alertCreation: "create_incidents",
     autoResolveTimeout: "14400",
     escalationPolicy: pagerduty_escalation_policy_example.id,
 });
 ```
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -1400,7 +1563,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1411,14 +1574,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1429,7 +1592,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-acknowledgementTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L74">property <b>acknowledgementTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L71">property <b>acknowledgementTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acknowledgementTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1437,7 +1600,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 
 <h4 class="pdoc-member-header" id="Service-alertCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L78">property <b>alertCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L75">property <b>alertCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertCreation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1445,7 +1608,7 @@ Time in seconds that an incident changes to the Triggered State after being Ackn
 Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "createIncidents" is default: events will create an incident that cannot be merged. Value "createAlertsAndIncidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
 
 <h4 class="pdoc-member-header" id="Service-alertGrouping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L82">property <b>alertGrouping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L79">property <b>alertGrouping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertGrouping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1453,7 +1616,7 @@ Must be one of two values. PagerDuty receives events from your monitoring system
 Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alertGroupingTimeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 
 <h4 class="pdoc-member-header" id="Service-alertGroupingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L86">property <b>alertGroupingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L83">property <b>alertGroupingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertGroupingTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1461,7 +1624,7 @@ Defines how alerts on this service will be automatically grouped into incidents.
 The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alertGrouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 
 <h4 class="pdoc-member-header" id="Service-autoResolveTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L90">property <b>autoResolveTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L87">property <b>autoResolveTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoResolveTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1469,17 +1632,17 @@ The duration in minutes within which to automatically group incoming alerts. Thi
 Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 
 <h4 class="pdoc-member-header" id="Service-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L91">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L88">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L92">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L89">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-escalationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L96">property <b>escalationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L93">property <b>escalationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>escalationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1487,12 +1650,12 @@ Time in seconds that an incident is automatically resolved if left open for that
 The escalation policy used by this service.
 
 <h4 class="pdoc-member-header" id="Service-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L97">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L94">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>htmlUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1501,17 +1664,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-incidentUrgencyRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L98">property <b>incidentUrgencyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L95">property <b>incidentUrgencyRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>incidentUrgencyRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#ServiceIncidentUrgencyRule'>ServiceIncidentUrgencyRule</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-lastIncidentTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L99">property <b>lastIncidentTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L96">property <b>lastIncidentTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastIncidentTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1519,22 +1682,22 @@ deployments and may be missing (undefined) during planning phases.
 The name of the service.
 
 <h4 class="pdoc-member-header" id="Service-scheduledActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L104">property <b>scheduledActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L101">property <b>scheduledActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#ServiceScheduledAction'>ServiceScheduledAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L105">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L102">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-supportHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L106">property <b>supportHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L103">property <b>supportHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportHours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#ServiceSupportHours'>ServiceSupportHours</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1543,7 +1706,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceDependency" data-link-title="ServiceDependency">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L40">
         Resource <strong>ServiceDependency</strong>
     </a>
 </h3>
@@ -1554,28 +1717,26 @@ A [service dependency](https://developer.pagerduty.com/api-reference/reference/R
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
 
-const foo = new pagerduty.ServiceDependency("foo", {dependency: [{
-    dependent_service: [{
+const foo = new pagerduty.ServiceDependency("foo", {dependencies: [{
+    dependentServices: [{
         id: pagerduty_business_service.foo.id,
-        type: "businessService",
+        type: "business_service",
     }],
-    supporting_service: [{
+    supportingServices: [{
         id: pagerduty_service.foo.id,
         type: "service",
     }],
 }]});
-const bar = new pagerduty.ServiceDependency("bar", {dependency: [{
-    dependent_service: [{
+const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
+    dependentServices: [{
         id: pagerduty_business_service.foo.id,
-        type: "businessService",
+        type: "business_service",
     }],
-    supporting_service: [{
+    supportingServices: [{
         id: pagerduty_service.two.id,
         type: "service",
     }],
@@ -1583,7 +1744,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependency: [{
 ```
 
 <h4 class="pdoc-member-header" id="ServiceDependency-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -1597,7 +1758,7 @@ Create a ServiceDependency resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceDependency-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1608,14 +1769,14 @@ Get an existing ServiceDependency resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceDependency-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceDependency-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1626,7 +1787,7 @@ Returns true if the given object is an instance of ServiceDependency.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceDependency-dependencies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L74">property <b>dependencies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L71">property <b>dependencies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dependencies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#ServiceDependencyDependency'>ServiceDependencyDependency</a>[]&gt;;</code></pre>
@@ -1634,7 +1795,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The relationship between the `supportingService` and `dependentService`.
 
 <h4 class="pdoc-member-header" id="ServiceDependency-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1643,7 +1804,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceDependency-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1652,7 +1813,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceIntegration" data-link-title="ServiceIntegration">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L55">
         Resource <strong>ServiceIntegration</strong>
     </a>
 </h3>
@@ -1662,8 +1823,6 @@ deployments.
 A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1690,7 +1849,7 @@ const exampleService = new pagerduty.Service("example", {
 });
 const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
     service: exampleService.id,
-    type: "genericEventsApiInboundIntegration",
+    type: "generic_events_api_inbound_integration",
 });
 const datadogVendor = pulumi.output(pagerduty.getVendor({
     name: "Datadog",
@@ -1709,7 +1868,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
 ```
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L119"> <b>constructor</b></a>
 </h4>
 
 
@@ -1723,7 +1882,7 @@ Create a ServiceIntegration resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -1734,14 +1893,14 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1752,7 +1911,7 @@ Returns true if the given object is an instance of ServiceIntegration.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L88">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L86">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>htmlUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1760,7 +1919,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1769,7 +1928,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-integrationEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L92">property <b>integrationEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L90">property <b>integrationEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1777,7 +1936,7 @@ deployments and may be missing (undefined) during planning phases.
 This is the unique fully-qualified email address used for routing emails to this integration for processing.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-integrationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L96">property <b>integrationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L94">property <b>integrationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1785,7 +1944,7 @@ This is the unique fully-qualified email address used for routing emails to this
 This is the unique key used to route events to this integration when received via the PagerDuty Events API.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1793,7 +1952,7 @@ This is the unique key used to route events to this integration when received vi
 The name of the service integration.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L104">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L102">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1801,7 +1960,7 @@ The name of the service integration.
 The ID of the service the integration should belong to.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L117">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L115">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1818,7 +1977,7 @@ The service type. Can be:
 `pingdomInboundIntegration`or `sqlMonitorInboundIntegration`.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1827,7 +1986,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceIntegration-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L121">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L119">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vendor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1835,7 +1994,7 @@ deployments.
 The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
 
 <h3 class="pdoc-module-header" id="Team" data-link-title="Team">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L23">
         Resource <strong>Team</strong>
     </a>
 </h3>
@@ -1848,8 +2007,6 @@ The account must have the `teams` ability to use the following resource.
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -1860,7 +2017,7 @@ const example = new pagerduty.Team("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Team-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L59"> <b>constructor</b></a>
 </h4>
 
 
@@ -1874,7 +2031,7 @@ Create a Team resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Team-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1885,14 +2042,14 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Team-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Team-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1903,12 +2060,12 @@ Returns true if the given object is an instance of Team.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Team-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L53">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Team-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L57">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L55">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>htmlUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1916,7 +2073,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="Team-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1925,7 +2082,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Team-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1933,7 +2090,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the group.
 
 <h4 class="pdoc-member-header" id="Team-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1942,7 +2099,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TeamMembership" data-link-title="TeamMembership">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L29">
         Resource <strong>TeamMembership</strong>
     </a>
 </h3>
@@ -1952,8 +2109,6 @@ deployments.
 A [team membership](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/put_teams_id_users_user_id) manages memberships within a team.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1973,7 +2128,7 @@ const fooTeamMembership = new pagerduty.TeamMembership("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="TeamMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -1987,7 +2142,7 @@ Create a TeamMembership resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TeamMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -1998,14 +2153,14 @@ Get an existing TeamMembership resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TeamMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TeamMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2016,7 +2171,7 @@ Returns true if the given object is an instance of TeamMembership.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TeamMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2025,7 +2180,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TeamMembership-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L62">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L60">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2033,7 +2188,7 @@ deployments and may be missing (undefined) during planning phases.
 The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
 
 <h4 class="pdoc-member-header" id="TeamMembership-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L66">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L64">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2041,7 +2196,7 @@ The role of the user in the team. One of `observer`, `responder`, or `manager`. 
 The ID of the team in which the user will belong.
 
 <h4 class="pdoc-member-header" id="TeamMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2050,7 +2205,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="TeamMembership-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L70">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L68">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2058,7 +2213,7 @@ deployments.
 The ID of the user to add to the team.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L21">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -2068,8 +2223,6 @@ The ID of the user to add to the team.
 A [user](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users) is a member of a PagerDuty account that have the ability to interact with incidents and other data on the account.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2081,7 +2234,7 @@ const example = new pagerduty.User("example", {
 ```
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -2095,7 +2248,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -2106,14 +2259,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2124,7 +2277,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-avatarUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L55">property <b>avatarUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L52">property <b>avatarUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>avatarUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2132,7 +2285,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The URL of the user's avatar.
 
 <h4 class="pdoc-member-header" id="User-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L59">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L56">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2140,12 +2293,12 @@ The URL of the user's avatar.
 The schedule color for the user. Valid options are purple, red, green, blue, teal, orange, brown, turquoise, dark-slate-blue, cayenne, orange-red, dark-orchid, dark-slate-grey, lime, dark-magenta, lime-green, midnight-blue, deep-pink, dark-green, dark-orange, dark-cyan, darkolive-green, dark-slate-gray, grey20, firebrick, maroon, crimson, dark-red, dark-goldenrod, chocolate, medium-violet-red, sea-green, olivedrab, forest-green, dark-olive-green, blue-violet, royal-blue, indigo, slate-blue, saddle-brown, or steel-blue.
 
 <h4 class="pdoc-member-header" id="User-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L60">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L57">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L64">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L61">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2153,7 +2306,7 @@ The schedule color for the user. Valid options are purple, red, green, blue, tea
 The user's email address.
 
 <h4 class="pdoc-member-header" id="User-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L68">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L65">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>htmlUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2161,7 +2314,7 @@ The user's email address.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2170,7 +2323,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-invitationSent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L72">property <b>invitationSent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L69">property <b>invitationSent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invitationSent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2178,7 +2331,7 @@ deployments and may be missing (undefined) during planning phases.
 If true, the user has an outstanding invitation.
 
 <h4 class="pdoc-member-header" id="User-jobTitle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L76">property <b>jobTitle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L73">property <b>jobTitle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobTitle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2186,7 +2339,7 @@ If true, the user has an outstanding invitation.
 The user's title.
 
 <h4 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2194,7 +2347,7 @@ The user's title.
 The name of the user.
 
 <h4 class="pdoc-member-header" id="User-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L84">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L81">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2202,7 +2355,7 @@ The name of the user.
 The user role. Account must have the `readOnlyUsers` ability to set a user as a `readOnlyUser`. Can be `admin`, `limitedUser`, `observer`, `owner`, `readOnlyUser` or `user`
 
 <h4 class="pdoc-member-header" id="User-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L90">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L87">property <b>teams</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2211,10 +2364,10 @@ Use the &#39;pagerduty_team_membership&#39; resource instead.
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>teams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 
-A list of teams the user should belong to. Please use `pagerduty..TeamMembership` instead.
+A list of teams the user should belong to. Please use `pagerduty.TeamMembership` instead.
 
 <h4 class="pdoc-member-header" id="User-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L94">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L91">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2222,7 +2375,7 @@ A list of teams the user should belong to. Please use `pagerduty..TeamMembership
 The timezone of the user
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2231,7 +2384,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="UserContactMethod" data-link-title="UserContactMethod">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L42">
         Resource <strong>UserContactMethod</strong>
     </a>
 </h3>
@@ -2241,8 +2394,6 @@ deployments.
 A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_contact_methods) is a contact method for a PagerDuty user (email, phone or SMS).
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2255,27 +2406,27 @@ const example = new pagerduty.User("example", {
 const email = new pagerduty.UserContactMethod("email", {
     address: "foo@bar.com",
     label: "Work",
-    type: "emailContactMethod",
+    type: "email_contact_method",
     userId: example.id,
 });
 const phone = new pagerduty.UserContactMethod("phone", {
     address: "2025550199",
     countryCode: 1,
     label: "Work",
-    type: "phoneContactMethod",
+    type: "phone_contact_method",
     userId: example.id,
 });
 const sms = new pagerduty.UserContactMethod("sms", {
     address: "2025550199",
     countryCode: 1,
     label: "Work",
-    type: "smsContactMethod",
+    type: "sms_contact_method",
     userId: example.id,
 });
 ```
 
 <h4 class="pdoc-member-header" id="UserContactMethod-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -2289,7 +2440,7 @@ Create a UserContactMethod resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -2300,14 +2451,14 @@ Get an existing UserContactMethod resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserContactMethod-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2318,7 +2469,7 @@ Returns true if the given object is an instance of UserContactMethod.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L76">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L73">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2326,7 +2477,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-blacklisted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L80">property <b>blacklisted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L77">property <b>blacklisted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blacklisted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2334,7 +2485,7 @@ The "address" to deliver to: `email`, `phone number`, etc., depending on the typ
 If true, this phone has been blacklisted by PagerDuty and no messages will be sent to it.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L84">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L81">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>countryCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2342,7 +2493,7 @@ If true, this phone has been blacklisted by PagerDuty and no messages will be se
 The 1-to-3 digit country calling code. Required when using `phoneContactMethod` or `smsContactMethod`.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L88">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L85">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2350,7 +2501,7 @@ The 1-to-3 digit country calling code. Required when using `phoneContactMethod` 
 If true, this phone is capable of receiving SMS messages.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2359,7 +2510,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L92">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L89">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2518,7 @@ deployments and may be missing (undefined) during planning phases.
 The label (e.g., "Work", "Mobile", etc.).
 
 <h4 class="pdoc-member-header" id="UserContactMethod-sendShortEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L96">property <b>sendShortEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L93">property <b>sendShortEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sendShortEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2375,7 +2526,7 @@ The label (e.g., "Work", "Mobile", etc.).
 Send an abbreviated email message instead of the standard email output.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L100">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L97">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2383,7 +2534,7 @@ Send an abbreviated email message instead of the standard email output.
 The contact method type. May be (`emailContactMethod`, `phoneContactMethod`, `smsContactMethod`, `pushNotificationContactMethod`).
 
 <h4 class="pdoc-member-header" id="UserContactMethod-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2392,7 +2543,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserContactMethod-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L104">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L101">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2551,7 @@ deployments.
 The ID of the user.
 
 <h3 class="pdoc-module-header" id="UserNotificationRule" data-link-title="UserNotificationRule">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L68">
         Resource <strong>UserNotificationRule</strong>
     </a>
 </h3>
@@ -2411,8 +2562,6 @@ A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -2420,20 +2569,20 @@ import * as pagerduty from "@pulumi/pagerduty";
 const example = new pagerduty.User("example", {email: "125.greenholt.earline@graham.name"});
 const email = new pagerduty.UserContactMethod("email", {
     userId: example.id,
-    type: "emailContactMethod",
+    type: "email_contact_method",
     address: "foo@bar.com",
     label: "Work",
 });
 const phone = new pagerduty.UserContactMethod("phone", {
     userId: example.id,
-    type: "phoneContactMethod",
+    type: "phone_contact_method",
     countryCode: "+1",
     address: "2025550199",
     label: "Work",
 });
 const sms = new pagerduty.UserContactMethod("sms", {
     userId: example.id,
-    type: "smsContactMethod",
+    type: "sms_contact_method",
     countryCode: "+1",
     address: "2025550199",
     label: "Work",
@@ -2443,7 +2592,7 @@ const highUrgencyPhone = new pagerduty.UserNotificationRule("highUrgencyPhone", 
     startDelayInMinutes: 1,
     urgency: "high",
     contactMethod: {
-        type: "phoneContactMethod",
+        type: "phone_contact_method",
         id: phone.id,
     },
 });
@@ -2452,7 +2601,7 @@ const lowUrgencyEmail = new pagerduty.UserNotificationRule("lowUrgencyEmail", {
     startDelayInMinutes: 1,
     urgency: "low",
     contactMethod: {
-        type: "emailContactMethod",
+        type: "email_contact_method",
         id: email.id,
     },
 });
@@ -2461,14 +2610,14 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     startDelayInMinutes: 10,
     urgency: "low",
     contactMethod: {
-        type: "smsContactMethod",
+        type: "sms_contact_method",
         id: sms.id,
     },
 });
 ```
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -2482,7 +2631,7 @@ Create a UserNotificationRule resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -2493,14 +2642,14 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2511,7 +2660,7 @@ Returns true if the given object is an instance of UserNotificationRule.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-contactMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L101">property <b>contactMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L99">property <b>contactMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contactMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/output/#UserNotificationRuleContactMethod'>UserNotificationRuleContactMethod</a>&gt;;</code></pre>
@@ -2519,7 +2668,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A contact method block, configured as a block described below.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2528,7 +2677,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-startDelayInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L105">property <b>startDelayInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L103">property <b>startDelayInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startDelayInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2536,7 +2685,7 @@ deployments and may be missing (undefined) during planning phases.
 The delay before firing the rule, in minutes.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-urgency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L109">property <b>urgency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L107">property <b>urgency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urgency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2544,7 +2693,7 @@ The delay before firing the rule, in minutes.
 Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L70">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2553,7 +2702,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserNotificationRule-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L113">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L111">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2563,7 +2712,7 @@ The ID of the user.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getBusinessService" data-link-title="getBusinessService">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getBusinessService.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getBusinessService.ts#L23">
         Function <strong>getBusinessService</strong>
     </a>
 </h3>
@@ -2576,8 +2725,6 @@ Use this data source to get information about a specific [business service](http
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -2588,7 +2735,7 @@ const example = pulumi.output(pagerduty.getBusinessService({
 ```
 
 <h3 class="pdoc-module-header" id="getEscalationPolicy" data-link-title="getEscalationPolicy">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getEscalationPolicy.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getEscalationPolicy.ts#L28">
         Function <strong>getEscalationPolicy</strong>
     </a>
 </h3>
@@ -2600,8 +2747,6 @@ const example = pulumi.output(pagerduty.getBusinessService({
 Use this data source to get information about a specific [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) that you can use for other PagerDuty resources.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2618,7 +2763,7 @@ const testService = new pagerduty.Service("test", {
 ```
 
 <h3 class="pdoc-module-header" id="getExtensionSchema" data-link-title="getExtensionSchema">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L47">
         Function <strong>getExtensionSchema</strong>
     </a>
 </h3>
@@ -2630,8 +2775,6 @@ const testService = new pagerduty.Service("test", {
 Use this data source to get information about a specific [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extension_Schemas/get_extension_schemas) vendor that you can use for a service (e.g: Slack, Generic Webhook, ServiceNow).
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2667,7 +2810,7 @@ const slack = new pagerduty.Extension("slack", {
 ```
 
 <h3 class="pdoc-module-header" id="getPriority" data-link-title="getPriority">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L56">
         Function <strong>getPriority</strong>
     </a>
 </h3>
@@ -2679,8 +2822,6 @@ const slack = new pagerduty.Extension("slack", {
 Use this data source to get information about a specific [priority](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1priorities/get) that you can use for other PagerDuty resources.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2699,14 +2840,14 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         subconditions: [
             {
                 operator: "contains",
-                parameter: [{
+                parameters: [{
                     value: "disk space",
                     path: "payload.summary",
                 }],
             },
             {
                 operator: "contains",
-                parameter: [{
+                parameters: [{
                     value: "db",
                     path: "payload.source",
                 }],
@@ -2714,10 +2855,10 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         ],
     },
     actions: {
-        route: [{
+        routes: [{
             value: "P5DTL0K",
         }],
-        priority: [{
+        priorities: [{
             value: pagerduty_priority.p1.id,
         }],
     },
@@ -2725,7 +2866,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 ```
 
 <h3 class="pdoc-module-header" id="getSchedule" data-link-title="getSchedule">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getSchedule.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getSchedule.ts#L33">
         Function <strong>getSchedule</strong>
     </a>
 </h3>
@@ -2737,8 +2878,6 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 Use this data source to get information about a specific [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules) that you can use for other PagerDuty resources.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2760,7 +2899,7 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 ```
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getService.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getService.ts#L31">
         Function <strong>getService</strong>
     </a>
 </h3>
@@ -2772,8 +2911,6 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 Use this data source to get information about a specific [service](https://api-reference.pagerduty.com/#!/Services/get_services).
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2788,12 +2925,12 @@ const datadog = pagerduty.getVendor({
 const exampleServiceIntegration = new pagerduty.ServiceIntegration("exampleServiceIntegration", {
     vendor: datadog.then(datadog => datadog.id),
     service: exampleService.then(exampleService => exampleService.id),
-    type: "genericEventsApiInboundIntegration",
+    type: "generic_events_api_inbound_integration",
 });
 ```
 
 <h3 class="pdoc-module-header" id="getTeam" data-link-title="getTeam">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L37">
         Function <strong>getTeam</strong>
     </a>
 </h3>
@@ -2805,8 +2942,6 @@ const exampleServiceIntegration = new pagerduty.ServiceIntegration("exampleServi
 Use this data source to get information about a specific [team](https://v1.developer.pagerduty.com/documentation/rest/teams/list) that you can use for other PagerDuty resources.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2832,7 +2967,7 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 ```
 
 <h3 class="pdoc-module-header" id="getUser" data-link-title="getUser">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L33">
         Function <strong>getUser</strong>
     </a>
 </h3>
@@ -2844,8 +2979,6 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 Use this data source to get information about a specific [user](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users) that you can use for other PagerDuty resources.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2867,7 +3000,7 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 ```
 
 <h3 class="pdoc-module-header" id="getVendor" data-link-title="getVendor">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L47">
         Function <strong>getVendor</strong>
     </a>
 </h3>
@@ -2879,8 +3012,6 @@ const foo = new pagerduty.EscalationPolicy("foo", {
 Use this data source to get information about a specific [vendor](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Vendors/get_vendors) that you can use for a service integration (e.g Amazon Cloudwatch, Splunk, Datadog).
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -2910,7 +3041,7 @@ const exampleService = new pagerduty.Service("example", {
 });
 const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
     service: exampleService.id,
-    type: "genericEventsApiInboundIntegration",
+    type: "generic_events_api_inbound_integration",
     vendor: datadog.id,
 });
 ```
@@ -2918,7 +3049,7 @@ const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AddonArgs" data-link-title="AddonArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L108">
         interface <strong>AddonArgs</strong>
     </a>
 </h3>
@@ -2928,7 +3059,7 @@ const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
 The set of arguments for constructing a Addon resource.
 
 <h4 class="pdoc-member-header" id="AddonArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2936,7 +3067,7 @@ The set of arguments for constructing a Addon resource.
 The name of the add-on.
 
 <h4 class="pdoc-member-header" id="AddonArgs-src">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L118">property <b>src</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L116">property <b>src</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>src: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2944,7 +3075,7 @@ The name of the add-on.
 The source URL to display in a frame in the PagerDuty UI. `HTTPS` is required.
 
 <h3 class="pdoc-module-header" id="AddonState" data-link-title="AddonState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L94">
         interface <strong>AddonState</strong>
     </a>
 </h3>
@@ -2954,7 +3085,7 @@ The source URL to display in a frame in the PagerDuty UI. `HTTPS` is required.
 Input properties used for looking up and filtering Addon resources.
 
 <h4 class="pdoc-member-header" id="AddonState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2962,7 +3093,7 @@ Input properties used for looking up and filtering Addon resources.
 The name of the add-on.
 
 <h4 class="pdoc-member-header" id="AddonState-src">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/addon.ts#L104">property <b>src</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/addon.ts#L102">property <b>src</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>src?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2970,7 +3101,7 @@ The name of the add-on.
 The source URL to display in a frame in the PagerDuty UI. `HTTPS` is required.
 
 <h3 class="pdoc-module-header" id="BusinessServiceArgs" data-link-title="BusinessServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L132">
         interface <strong>BusinessServiceArgs</strong>
     </a>
 </h3>
@@ -2980,12 +3111,12 @@ The source URL to display in a frame in the PagerDuty UI. `HTTPS` is required.
 The set of arguments for constructing a BusinessService resource.
 
 <h4 class="pdoc-member-header" id="BusinessServiceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L133">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2993,7 +3124,7 @@ The set of arguments for constructing a BusinessService resource.
 The name of the business service.
 
 <h4 class="pdoc-member-header" id="BusinessServiceArgs-pointOfContact">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L144">property <b>pointOfContact</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L141">property <b>pointOfContact</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointOfContact?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3001,7 +3132,7 @@ The name of the business service.
 The owner of the business service.
 
 <h4 class="pdoc-member-header" id="BusinessServiceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L148">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L145">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3009,7 +3140,7 @@ The owner of the business service.
 Default value is `businessService`. Can also be set as `businessServiceReference`.
 
 <h3 class="pdoc-module-header" id="BusinessServiceState" data-link-title="BusinessServiceState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L110">
         interface <strong>BusinessServiceState</strong>
     </a>
 </h3>
@@ -3019,17 +3150,17 @@ Default value is `businessService`. Can also be set as `businessServiceReference
 Input properties used for looking up and filtering BusinessService resources.
 
 <h4 class="pdoc-member-header" id="BusinessServiceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L114">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L111">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessServiceState-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L115">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L112">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>htmlUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3037,7 +3168,7 @@ Input properties used for looking up and filtering BusinessService resources.
 The name of the business service.
 
 <h4 class="pdoc-member-header" id="BusinessServiceState-pointOfContact">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L123">property <b>pointOfContact</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L120">property <b>pointOfContact</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pointOfContact?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3045,17 +3176,17 @@ The name of the business service.
 The owner of the business service.
 
 <h4 class="pdoc-member-header" id="BusinessServiceState-self">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L124">property <b>self</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L121">property <b>self</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>self?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessServiceState-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L125">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L122">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>summary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BusinessServiceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/businessService.ts#L129">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/businessService.ts#L126">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3063,7 +3194,7 @@ The owner of the business service.
 Default value is `businessService`. Can also be set as `businessServiceReference`.
 
 <h3 class="pdoc-module-header" id="EscalationPolicyArgs" data-link-title="EscalationPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L149">
         interface <strong>EscalationPolicyArgs</strong>
     </a>
 </h3>
@@ -3073,12 +3204,12 @@ Default value is `businessService`. Can also be set as `businessServiceReference
 The set of arguments for constructing a EscalationPolicy resource.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L153">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EscalationPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3086,7 +3217,7 @@ The set of arguments for constructing a EscalationPolicy resource.
 The name of the escalation policy.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyArgs-numLoops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L161">property <b>numLoops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L158">property <b>numLoops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numLoops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3094,7 +3225,7 @@ The name of the escalation policy.
 The number of times the escalation policy will repeat after reaching the end of its escalation.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L165">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L162">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#EscalationPolicyRule'>EscalationPolicyRule</a>&gt;[]&gt;;</code></pre>
@@ -3102,7 +3233,7 @@ The number of times the escalation policy will repeat after reaching the end of 
 An Escalation rule block. Escalation rules documented below.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyArgs-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L169">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L166">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3110,7 +3241,7 @@ An Escalation rule block. Escalation rules documented below.
 Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 
 <h3 class="pdoc-module-header" id="EscalationPolicyState" data-link-title="EscalationPolicyState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L126">
         interface <strong>EscalationPolicyState</strong>
     </a>
 </h3>
@@ -3120,12 +3251,12 @@ Teams associated with the policy. Account must have the `teams` ability to use t
 Input properties used for looking up and filtering EscalationPolicy resources.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L130">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L127">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EscalationPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3133,7 +3264,7 @@ Input properties used for looking up and filtering EscalationPolicy resources.
 The name of the escalation policy.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyState-numLoops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L138">property <b>numLoops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L135">property <b>numLoops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numLoops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3141,7 +3272,7 @@ The name of the escalation policy.
 The number of times the escalation policy will repeat after reaching the end of its escalation.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L142">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L139">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#EscalationPolicyRule'>EscalationPolicyRule</a>&gt;[]&gt;;</code></pre>
@@ -3149,7 +3280,7 @@ The number of times the escalation policy will repeat after reaching the end of 
 An Escalation rule block. Escalation rules documented below.
 
 <h4 class="pdoc-member-header" id="EscalationPolicyState-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/escalationPolicy.ts#L146">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/escalationPolicy.ts#L143">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3157,7 +3288,7 @@ An Escalation rule block. Escalation rules documented below.
 Teams associated with the policy. Account must have the `teams` ability to use this parameter.
 
 <h3 class="pdoc-module-header" id="EventRuleArgs" data-link-title="EventRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L231">
         interface <strong>EventRuleArgs</strong>
     </a>
 </h3>
@@ -3167,7 +3298,7 @@ Teams associated with the policy. Account must have the `teams` ability to use t
 The set of arguments for constructing a EventRule resource.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-actionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L121">property <b>actionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L235">property <b>actionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3175,7 +3306,7 @@ The set of arguments for constructing a EventRule resource.
 A list of one or more actions for each rule. Each action within the list is itself a list.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-advancedConditionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L125">property <b>advancedConditionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L239">property <b>advancedConditionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>advancedConditionJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3183,7 +3314,7 @@ A list of one or more actions for each rule. Each action within the list is itse
 Contains a list of specific conditions including `active-between`,`scheduled-weekly`, and `frequency-over`. The first element in the list is the label for the condition, followed by a list of values for the specific condition. For more details on these conditions see [Advanced Condition](https://v2.developer.pagerduty.com/docs/global-event-rules-api#section-advanced-condition) in the PagerDuty API documentation.
 
 <h4 class="pdoc-member-header" id="EventRuleArgs-conditionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L129">property <b>conditionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L243">property <b>conditionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditionJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3191,7 +3322,7 @@ Contains a list of specific conditions including `active-between`,`scheduled-wee
 Contains a list of conditions. The first field in the list is `and` or `or`, followed by a list of operators and values.
 
 <h3 class="pdoc-module-header" id="EventRuleState" data-link-title="EventRuleState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L209">
         interface <strong>EventRuleState</strong>
     </a>
 </h3>
@@ -3201,7 +3332,7 @@ Contains a list of conditions. The first field in the list is `and` or `or`, fol
 Input properties used for looking up and filtering EventRule resources.
 
 <h4 class="pdoc-member-header" id="EventRuleState-actionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L99">property <b>actionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L213">property <b>actionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3209,7 +3340,7 @@ Input properties used for looking up and filtering EventRule resources.
 A list of one or more actions for each rule. Each action within the list is itself a list.
 
 <h4 class="pdoc-member-header" id="EventRuleState-advancedConditionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L103">property <b>advancedConditionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L217">property <b>advancedConditionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>advancedConditionJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3217,7 +3348,7 @@ A list of one or more actions for each rule. Each action within the list is itse
 Contains a list of specific conditions including `active-between`,`scheduled-weekly`, and `frequency-over`. The first element in the list is the label for the condition, followed by a list of values for the specific condition. For more details on these conditions see [Advanced Condition](https://v2.developer.pagerduty.com/docs/global-event-rules-api#section-advanced-condition) in the PagerDuty API documentation.
 
 <h4 class="pdoc-member-header" id="EventRuleState-catchAll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L107">property <b>catchAll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L221">property <b>catchAll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catchAll?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3225,7 +3356,7 @@ Contains a list of specific conditions including `active-between`,`scheduled-wee
 A boolean that indicates whether the rule is a catch all for the account. This field is read-only through the PagerDuty API.
 
 <h4 class="pdoc-member-header" id="EventRuleState-conditionJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/eventRule.ts#L111">property <b>conditionJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/eventRule.ts#L225">property <b>conditionJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditionJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3233,7 +3364,7 @@ A boolean that indicates whether the rule is a catch all for the account. This f
 Contains a list of conditions. The first field in the list is `and` or `or`, followed by a list of operators and values.
 
 <h3 class="pdoc-module-header" id="ExtensionArgs" data-link-title="ExtensionArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L191">
         interface <strong>ExtensionArgs</strong>
     </a>
 </h3>
@@ -3243,7 +3374,7 @@ Contains a list of conditions. The first field in the list is `and` or `or`, fol
 The set of arguments for constructing a Extension resource.
 
 <h4 class="pdoc-member-header" id="ExtensionArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L197">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L195">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3251,16 +3382,16 @@ The set of arguments for constructing a Extension resource.
 The configuration of the service extension as string containing plain JSON-encoded data.
 
 <h4 class="pdoc-member-header" id="ExtensionArgs-endpointUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L202">property <b>endpointUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L200">property <b>endpointUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The url of the extension.
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpointUrl`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpointUrl`, but one with named `Slack` accepts.
 
 <h4 class="pdoc-member-header" id="ExtensionArgs-extensionObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L206">property <b>extensionObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L204">property <b>extensionObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensionObjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3268,7 +3399,7 @@ The url of the extension.
 This is the objects for which the extension applies (An array of service ids).
 
 <h4 class="pdoc-member-header" id="ExtensionArgs-extensionSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L210">property <b>extensionSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L208">property <b>extensionSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensionSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3276,7 +3407,7 @@ This is the objects for which the extension applies (An array of service ids).
 This is the schema for this extension.
 
 <h4 class="pdoc-member-header" id="ExtensionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3284,12 +3415,12 @@ This is the schema for this extension.
 The name of the service extension.
 
 <h4 class="pdoc-member-header" id="ExtensionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L215">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L213">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ExtensionState" data-link-title="ExtensionState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L159">
         interface <strong>ExtensionState</strong>
     </a>
 </h3>
@@ -3299,7 +3430,7 @@ The name of the service extension.
 Input properties used for looking up and filtering Extension resources.
 
 <h4 class="pdoc-member-header" id="ExtensionState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L165">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L163">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3307,16 +3438,16 @@ Input properties used for looking up and filtering Extension resources.
 The configuration of the service extension as string containing plain JSON-encoded data.
 
 <h4 class="pdoc-member-header" id="ExtensionState-endpointUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L170">property <b>endpointUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L168">property <b>endpointUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The url of the extension.
-**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty..getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty..Extension` with no `endpointUrl`, but one with named `Slack` accepts.
+**Note:** The [endpoint URL is Optional API wise](https://api-reference.pagerduty.com/#!/Extensions/post_extensions) in most cases. But in some cases it is a _Required_ parameter. For example, `pagerduty.getExtensionSchema` named `Generic V2 Webhook` doesn't accept `pagerduty.Extension` with no `endpointUrl`, but one with named `Slack` accepts.
 
 <h4 class="pdoc-member-header" id="ExtensionState-extensionObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L174">property <b>extensionObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L172">property <b>extensionObjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensionObjects?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3324,7 +3455,7 @@ The url of the extension.
 This is the objects for which the extension applies (An array of service ids).
 
 <h4 class="pdoc-member-header" id="ExtensionState-extensionSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L178">property <b>extensionSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L176">property <b>extensionSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensionSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3332,7 +3463,7 @@ This is the objects for which the extension applies (An array of service ids).
 This is the schema for this extension.
 
 <h4 class="pdoc-member-header" id="ExtensionState-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L182">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L180">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>htmlUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3340,7 +3471,7 @@ This is the schema for this extension.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="ExtensionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3348,12 +3479,12 @@ URL at which the entity is uniquely displayed in the Web app
 The name of the service extension.
 
 <h4 class="pdoc-member-header" id="ExtensionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/extension.ts#L187">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/extension.ts#L185">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GetBusinessServiceArgs" data-link-title="GetBusinessServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getBusinessService.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getBusinessService.ts#L39">
         interface <strong>GetBusinessServiceArgs</strong>
     </a>
 </h3>
@@ -3363,7 +3494,7 @@ The name of the service extension.
 A collection of arguments for invoking getBusinessService.
 
 <h4 class="pdoc-member-header" id="GetBusinessServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getBusinessService.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getBusinessService.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3371,7 +3502,7 @@ A collection of arguments for invoking getBusinessService.
 The business service name to use to find a business service in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetBusinessServiceResult" data-link-title="GetBusinessServiceResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getBusinessService.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getBusinessService.ts#L49">
         interface <strong>GetBusinessServiceResult</strong>
     </a>
 </h3>
@@ -3381,7 +3512,7 @@ The business service name to use to find a business service in the PagerDuty API
 A collection of values returned by getBusinessService.
 
 <h4 class="pdoc-member-header" id="GetBusinessServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getBusinessService.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getBusinessService.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3389,7 +3520,7 @@ A collection of values returned by getBusinessService.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBusinessServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getBusinessService.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getBusinessService.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3397,7 +3528,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found business service.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -3406,7 +3537,7 @@ The short name of the found business service.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -3415,7 +3546,7 @@ The short name of the found business service.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -3424,7 +3555,7 @@ The short name of the found business service.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetEscalationPolicyArgs" data-link-title="GetEscalationPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getEscalationPolicy.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getEscalationPolicy.ts#L44">
         interface <strong>GetEscalationPolicyArgs</strong>
     </a>
 </h3>
@@ -3434,7 +3565,7 @@ The short name of the found business service.
 A collection of arguments for invoking getEscalationPolicy.
 
 <h4 class="pdoc-member-header" id="GetEscalationPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getEscalationPolicy.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getEscalationPolicy.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3442,7 +3573,7 @@ A collection of arguments for invoking getEscalationPolicy.
 The name to use to find an escalation policy in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetEscalationPolicyResult" data-link-title="GetEscalationPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getEscalationPolicy.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getEscalationPolicy.ts#L54">
         interface <strong>GetEscalationPolicyResult</strong>
     </a>
 </h3>
@@ -3452,7 +3583,7 @@ The name to use to find an escalation policy in the PagerDuty API.
 A collection of values returned by getEscalationPolicy.
 
 <h4 class="pdoc-member-header" id="GetEscalationPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getEscalationPolicy.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getEscalationPolicy.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3460,7 +3591,7 @@ A collection of values returned by getEscalationPolicy.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEscalationPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getEscalationPolicy.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getEscalationPolicy.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3468,7 +3599,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found escalation policy.
 
 <h3 class="pdoc-module-header" id="GetExtensionSchemaArgs" data-link-title="GetExtensionSchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L63">
         interface <strong>GetExtensionSchemaArgs</strong>
     </a>
 </h3>
@@ -3478,7 +3609,7 @@ The short name of the found escalation policy.
 A collection of arguments for invoking getExtensionSchema.
 
 <h4 class="pdoc-member-header" id="GetExtensionSchemaArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3486,7 +3617,7 @@ A collection of arguments for invoking getExtensionSchema.
 The extension name to use to find an extension vendor in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetExtensionSchemaResult" data-link-title="GetExtensionSchemaResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L73">
         interface <strong>GetExtensionSchemaResult</strong>
     </a>
 </h3>
@@ -3496,7 +3627,7 @@ The extension name to use to find an extension vendor in the PagerDuty API.
 A collection of values returned by getExtensionSchema.
 
 <h4 class="pdoc-member-header" id="GetExtensionSchemaResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3504,7 +3635,7 @@ A collection of values returned by getExtensionSchema.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetExtensionSchemaResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3512,7 +3643,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found extension vendor.
 
 <h4 class="pdoc-member-header" id="GetExtensionSchemaResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getExtensionSchema.ts#L87">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getExtensionSchema.ts#L85">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3520,7 +3651,7 @@ The short name of the found extension vendor.
 The generic service type for this extension vendor.
 
 <h3 class="pdoc-module-header" id="GetPriorityArgs" data-link-title="GetPriorityArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L72">
         interface <strong>GetPriorityArgs</strong>
     </a>
 </h3>
@@ -3530,7 +3661,7 @@ The generic service type for this extension vendor.
 A collection of arguments for invoking getPriority.
 
 <h4 class="pdoc-member-header" id="GetPriorityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3538,7 +3669,7 @@ A collection of arguments for invoking getPriority.
 The name of the priority to find in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetPriorityResult" data-link-title="GetPriorityResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L82">
         interface <strong>GetPriorityResult</strong>
     </a>
 </h3>
@@ -3548,7 +3679,7 @@ The name of the priority to find in the PagerDuty API.
 A collection of values returned by getPriority.
 
 <h4 class="pdoc-member-header" id="GetPriorityResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L88">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L86">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3556,7 +3687,7 @@ A collection of values returned by getPriority.
 A description of the found priority.
 
 <h4 class="pdoc-member-header" id="GetPriorityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3564,7 +3695,7 @@ A description of the found priority.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPriorityResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getPriority.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getPriority.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3572,7 +3703,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the found priority.
 
 <h3 class="pdoc-module-header" id="GetScheduleArgs" data-link-title="GetScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getSchedule.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getSchedule.ts#L49">
         interface <strong>GetScheduleArgs</strong>
     </a>
 </h3>
@@ -3582,7 +3713,7 @@ The name of the found priority.
 A collection of arguments for invoking getSchedule.
 
 <h4 class="pdoc-member-header" id="GetScheduleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getSchedule.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getSchedule.ts#L53">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3590,7 +3721,7 @@ A collection of arguments for invoking getSchedule.
 The name to use to find a schedule in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetScheduleResult" data-link-title="GetScheduleResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getSchedule.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getSchedule.ts#L59">
         interface <strong>GetScheduleResult</strong>
     </a>
 </h3>
@@ -3600,7 +3731,7 @@ The name to use to find a schedule in the PagerDuty API.
 A collection of values returned by getSchedule.
 
 <h4 class="pdoc-member-header" id="GetScheduleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getSchedule.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getSchedule.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3608,7 +3739,7 @@ A collection of values returned by getSchedule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScheduleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getSchedule.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getSchedule.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3616,7 +3747,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found schedule.
 
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getService.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getService.ts#L47">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -3626,7 +3757,7 @@ The short name of the found schedule.
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getService.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getService.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3634,7 +3765,7 @@ A collection of arguments for invoking getService.
 The service name to use to find a service in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getService.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getService.ts#L57">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -3644,7 +3775,7 @@ The service name to use to find a service in the PagerDuty API.
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getService.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getService.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3652,7 +3783,7 @@ A collection of values returned by getService.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getService.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getService.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3660,7 +3791,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found service.
 
 <h3 class="pdoc-module-header" id="GetTeamArgs" data-link-title="GetTeamArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L53">
         interface <strong>GetTeamArgs</strong>
     </a>
 </h3>
@@ -3670,7 +3801,7 @@ The short name of the found service.
 A collection of arguments for invoking getTeam.
 
 <h4 class="pdoc-member-header" id="GetTeamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3678,7 +3809,7 @@ A collection of arguments for invoking getTeam.
 The name of the team to find in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetTeamResult" data-link-title="GetTeamResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L63">
         interface <strong>GetTeamResult</strong>
     </a>
 </h3>
@@ -3688,7 +3819,7 @@ The name of the team to find in the PagerDuty API.
 A collection of values returned by getTeam.
 
 <h4 class="pdoc-member-header" id="GetTeamResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3696,7 +3827,7 @@ A collection of values returned by getTeam.
 A description of the found team.
 
 <h4 class="pdoc-member-header" id="GetTeamResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3704,7 +3835,7 @@ A description of the found team.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTeamResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getTeam.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getTeam.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3712,7 +3843,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the found team.
 
 <h3 class="pdoc-module-header" id="GetUserArgs" data-link-title="GetUserArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L49">
         interface <strong>GetUserArgs</strong>
     </a>
 </h3>
@@ -3722,7 +3853,7 @@ The name of the found team.
 A collection of arguments for invoking getUser.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L55">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L53">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3730,7 +3861,7 @@ A collection of arguments for invoking getUser.
 The email to use to find a user in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetUserResult" data-link-title="GetUserResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L59">
         interface <strong>GetUserResult</strong>
     </a>
 </h3>
@@ -3740,12 +3871,12 @@ The email to use to find a user in the PagerDuty API.
 A collection of values returned by getUser.
 
 <h4 class="pdoc-member-header" id="GetUserResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L62">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L60">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3753,7 +3884,7 @@ A collection of values returned by getUser.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUserResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getUser.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getUser.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3761,7 +3892,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found user.
 
 <h3 class="pdoc-module-header" id="GetVendorArgs" data-link-title="GetVendorArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L63">
         interface <strong>GetVendorArgs</strong>
     </a>
 </h3>
@@ -3771,7 +3902,7 @@ The short name of the found user.
 A collection of arguments for invoking getVendor.
 
 <h4 class="pdoc-member-header" id="GetVendorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3779,7 +3910,7 @@ A collection of arguments for invoking getVendor.
 The vendor name to use to find a vendor in the PagerDuty API.
 
 <h3 class="pdoc-module-header" id="GetVendorResult" data-link-title="GetVendorResult">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L73">
         interface <strong>GetVendorResult</strong>
     </a>
 </h3>
@@ -3789,7 +3920,7 @@ The vendor name to use to find a vendor in the PagerDuty API.
 A collection of values returned by getVendor.
 
 <h4 class="pdoc-member-header" id="GetVendorResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3797,7 +3928,7 @@ A collection of values returned by getVendor.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVendorResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3805,7 +3936,7 @@ The provider-assigned unique ID for this managed resource.
 The short name of the found vendor.
 
 <h4 class="pdoc-member-header" id="GetVendorResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/getVendor.ts#L87">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/getVendor.ts#L85">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3813,7 +3944,7 @@ The short name of the found vendor.
 The generic service type for this vendor.
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -3822,7 +3953,7 @@ The generic service type for this vendor.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowArgs" data-link-title="MaintenanceWindowArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L138">
         interface <strong>MaintenanceWindowArgs</strong>
     </a>
 </h3>
@@ -3832,7 +3963,7 @@ The generic service type for this vendor.
 The set of arguments for constructing a MaintenanceWindow resource.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L145">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L142">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3840,7 +3971,7 @@ The set of arguments for constructing a MaintenanceWindow resource.
 A description for the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L149">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L146">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3848,7 +3979,7 @@ A description for the maintenance window.
 The maintenance window's end time. This is when the services will start creating incidents again. This date must be in the future and after the `startTime`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L153">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L150">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3856,7 +3987,7 @@ The maintenance window's end time. This is when the services will start creating
 A list of service IDs to include in the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L157">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L154">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3864,7 +3995,7 @@ A list of service IDs to include in the maintenance window.
 The maintenance window's start time. This is when the services will stop creating incidents. If this date is in the past, it will be updated to be the current time.
 
 <h3 class="pdoc-module-header" id="MaintenanceWindowState" data-link-title="MaintenanceWindowState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L116">
         interface <strong>MaintenanceWindowState</strong>
     </a>
 </h3>
@@ -3874,7 +4005,7 @@ The maintenance window's start time. This is when the services will stop creatin
 Input properties used for looking up and filtering MaintenanceWindow resources.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L123">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3882,7 +4013,7 @@ Input properties used for looking up and filtering MaintenanceWindow resources.
 A description for the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L127">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L124">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3890,7 +4021,7 @@ A description for the maintenance window.
 The maintenance window's end time. This is when the services will start creating incidents again. This date must be in the future and after the `startTime`.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L131">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L128">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3898,7 +4029,7 @@ The maintenance window's end time. This is when the services will start creating
 A list of service IDs to include in the maintenance window.
 
 <h4 class="pdoc-member-header" id="MaintenanceWindowState-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/maintenanceWindow.ts#L135">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/maintenanceWindow.ts#L132">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3906,7 +4037,7 @@ A list of service IDs to include in the maintenance window.
 The maintenance window's start time. This is when the services will stop creating incidents. If this date is in the past, it will be updated to be the current time.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L56">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -3916,17 +4047,17 @@ The maintenance window's start time. This is when the services will stop creatin
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipCredentialsValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L55">property <b>skipCredentialsValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L57">property <b>skipCredentialsValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipCredentialsValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/provider.ts#L56">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/provider.ts#L58">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RulesetArgs" data-link-title="RulesetArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L128">
         interface <strong>RulesetArgs</strong>
     </a>
 </h3>
@@ -3936,7 +4067,7 @@ The set of arguments for constructing a Provider resource.
 The set of arguments for constructing a Ruleset resource.
 
 <h4 class="pdoc-member-header" id="RulesetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3944,7 +4075,7 @@ The set of arguments for constructing a Ruleset resource.
 Name of the ruleset.
 
 <h4 class="pdoc-member-header" id="RulesetArgs-team">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L139">property <b>team</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L136">property <b>team</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>team?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetTeam'>RulesetTeam</a>&gt;;</code></pre>
@@ -3952,7 +4083,7 @@ Name of the ruleset.
 Reference to the team that owns the ruleset. If none is specified, only admins have access.
 
 <h3 class="pdoc-module-header" id="RulesetRuleArgs" data-link-title="RulesetRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L202">
         interface <strong>RulesetRuleArgs</strong>
     </a>
 </h3>
@@ -3962,7 +4093,7 @@ Reference to the team that owns the ruleset. If none is specified, only admins h
 The set of arguments for constructing a RulesetRule resource.
 
 <h4 class="pdoc-member-header" id="RulesetRuleArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L140">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L206">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActions'>RulesetRuleActions</a>&gt;;</code></pre>
@@ -3970,7 +4101,7 @@ The set of arguments for constructing a RulesetRule resource.
 Actions to apply to an event if the conditions match.
 
 <h4 class="pdoc-member-header" id="RulesetRuleArgs-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L144">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L210">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleConditions'>RulesetRuleConditions</a>&gt;;</code></pre>
@@ -3978,7 +4109,7 @@ Actions to apply to an event if the conditions match.
 Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 
 <h4 class="pdoc-member-header" id="RulesetRuleArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L148">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L214">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3986,7 +4117,7 @@ Conditions evaluated to check if an event matches this event rule. Is always emp
 Indicates whether the rule is disabled and would therefore not be evaluated.
 
 <h4 class="pdoc-member-header" id="RulesetRuleArgs-position">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L152">property <b>position</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L218">property <b>position</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>position?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3994,7 +4125,7 @@ Indicates whether the rule is disabled and would therefore not be evaluated.
 Position/index of the rule within the ruleset.
 
 <h4 class="pdoc-member-header" id="RulesetRuleArgs-ruleset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L156">property <b>ruleset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L222">property <b>ruleset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4002,7 +4133,7 @@ Position/index of the rule within the ruleset.
 The ID of the ruleset that the rule belongs to.
 
 <h4 class="pdoc-member-header" id="RulesetRuleArgs-timeFrame">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L160">property <b>timeFrame</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L226">property <b>timeFrame</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFrame?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleTimeFrame'>RulesetRuleTimeFrame</a>&gt;;</code></pre>
@@ -4010,7 +4141,7 @@ The ID of the ruleset that the rule belongs to.
 Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 
 <h3 class="pdoc-module-header" id="RulesetRuleState" data-link-title="RulesetRuleState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L172">
         interface <strong>RulesetRuleState</strong>
     </a>
 </h3>
@@ -4020,7 +4151,7 @@ Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#s
 Input properties used for looking up and filtering RulesetRule resources.
 
 <h4 class="pdoc-member-header" id="RulesetRuleState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L110">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L176">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleActions'>RulesetRuleActions</a>&gt;;</code></pre>
@@ -4028,7 +4159,7 @@ Input properties used for looking up and filtering RulesetRule resources.
 Actions to apply to an event if the conditions match.
 
 <h4 class="pdoc-member-header" id="RulesetRuleState-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L114">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L180">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleConditions'>RulesetRuleConditions</a>&gt;;</code></pre>
@@ -4036,7 +4167,7 @@ Actions to apply to an event if the conditions match.
 Conditions evaluated to check if an event matches this event rule. Is always empty for the catch all rule, though.
 
 <h4 class="pdoc-member-header" id="RulesetRuleState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L118">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L184">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4044,7 +4175,7 @@ Conditions evaluated to check if an event matches this event rule. Is always emp
 Indicates whether the rule is disabled and would therefore not be evaluated.
 
 <h4 class="pdoc-member-header" id="RulesetRuleState-position">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L122">property <b>position</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L188">property <b>position</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>position?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4052,7 +4183,7 @@ Indicates whether the rule is disabled and would therefore not be evaluated.
 Position/index of the rule within the ruleset.
 
 <h4 class="pdoc-member-header" id="RulesetRuleState-ruleset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L126">property <b>ruleset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L192">property <b>ruleset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4060,7 +4191,7 @@ Position/index of the rule within the ruleset.
 The ID of the ruleset that the rule belongs to.
 
 <h4 class="pdoc-member-header" id="RulesetRuleState-timeFrame">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/rulesetRule.ts#L130">property <b>timeFrame</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/rulesetRule.ts#L196">property <b>timeFrame</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeFrame?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetRuleTimeFrame'>RulesetRuleTimeFrame</a>&gt;;</code></pre>
@@ -4068,7 +4199,7 @@ The ID of the ruleset that the rule belongs to.
 Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#section-scheduled-event-rules).
 
 <h3 class="pdoc-module-header" id="RulesetState" data-link-title="RulesetState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L106">
         interface <strong>RulesetState</strong>
     </a>
 </h3>
@@ -4078,7 +4209,7 @@ Settings for [scheduling the rule](https://support.pagerduty.com/docs/rulesets#s
 Input properties used for looking up and filtering Ruleset resources.
 
 <h4 class="pdoc-member-header" id="RulesetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4086,7 +4217,7 @@ Input properties used for looking up and filtering Ruleset resources.
 Name of the ruleset.
 
 <h4 class="pdoc-member-header" id="RulesetState-routingKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L117">property <b>routingKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L114">property <b>routingKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4094,7 +4225,7 @@ Name of the ruleset.
 Routing keys routed to this ruleset.
 
 <h4 class="pdoc-member-header" id="RulesetState-team">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L121">property <b>team</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L118">property <b>team</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>team?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#RulesetTeam'>RulesetTeam</a>&gt;;</code></pre>
@@ -4102,7 +4233,7 @@ Routing keys routed to this ruleset.
 Reference to the team that owns the ruleset. If none is specified, only admins have access.
 
 <h4 class="pdoc-member-header" id="RulesetState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/ruleset.ts#L125">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/ruleset.ts#L122">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4110,7 +4241,7 @@ Reference to the team that owns the ruleset. If none is specified, only admins h
 Type of ruleset. Currently only sets to `global`.
 
 <h3 class="pdoc-module-header" id="ScheduleArgs" data-link-title="ScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L163">
         interface <strong>ScheduleArgs</strong>
     </a>
 </h3>
@@ -4120,7 +4251,7 @@ Type of ruleset. Currently only sets to `global`.
 The set of arguments for constructing a Schedule resource.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L170">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L167">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4128,7 +4259,7 @@ The set of arguments for constructing a Schedule resource.
 The description of the schedule
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L174">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L171">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ScheduleLayer'>ScheduleLayer</a>&gt;[]&gt;;</code></pre>
@@ -4136,7 +4267,7 @@ The description of the schedule
 A schedule layer block. Schedule layers documented below.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4144,7 +4275,7 @@ A schedule layer block. Schedule layers documented below.
 The name of the schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-overflow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L184">property <b>overflow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L181">property <b>overflow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overflow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4154,7 +4285,7 @@ If you don't pass the overflow=true parameter, you will get one schedule entry r
 If you do pass the `overflow` parameter, you will get one schedule entry returned with a start of `2011-06-01T00:00:00Z` and end of `2011-06-02T00:00:00Z`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L188">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L185">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4162,7 +4293,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 The time zone of the schedule (e.g Europe/Berlin).
 
 <h3 class="pdoc-module-header" id="ScheduleState" data-link-title="ScheduleState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L135">
         interface <strong>ScheduleState</strong>
     </a>
 </h3>
@@ -4172,7 +4303,7 @@ The time zone of the schedule (e.g Europe/Berlin).
 Input properties used for looking up and filtering Schedule resources.
 
 <h4 class="pdoc-member-header" id="ScheduleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L139">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4180,7 +4311,7 @@ Input properties used for looking up and filtering Schedule resources.
 The description of the schedule
 
 <h4 class="pdoc-member-header" id="ScheduleState-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L146">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L143">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ScheduleLayer'>ScheduleLayer</a>&gt;[]&gt;;</code></pre>
@@ -4188,7 +4319,7 @@ The description of the schedule
 A schedule layer block. Schedule layers documented below.
 
 <h4 class="pdoc-member-header" id="ScheduleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4196,7 +4327,7 @@ A schedule layer block. Schedule layers documented below.
 The name of the schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleState-overflow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L156">property <b>overflow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L153">property <b>overflow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overflow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4206,7 +4337,7 @@ If you don't pass the overflow=true parameter, you will get one schedule entry r
 If you do pass the `overflow` parameter, you will get one schedule entry returned with a start of `2011-06-01T00:00:00Z` and end of `2011-06-02T00:00:00Z`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/schedule.ts#L160">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/schedule.ts#L157">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4214,7 +4345,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 The time zone of the schedule (e.g Europe/Berlin).
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L209">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -4224,7 +4355,7 @@ The time zone of the schedule (e.g Europe/Berlin).
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-acknowledgementTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L216">property <b>acknowledgementTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L213">property <b>acknowledgementTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acknowledgementTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4232,7 +4363,7 @@ The set of arguments for constructing a Service resource.
 Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-alertCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L220">property <b>alertCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L217">property <b>alertCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertCreation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4240,7 +4371,7 @@ Time in seconds that an incident changes to the Triggered State after being Ackn
 Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "createIncidents" is default: events will create an incident that cannot be merged. Value "createAlertsAndIncidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-alertGrouping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L224">property <b>alertGrouping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L221">property <b>alertGrouping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertGrouping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4248,7 +4379,7 @@ Must be one of two values. PagerDuty receives events from your monitoring system
 Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alertGroupingTimeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-alertGroupingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L228">property <b>alertGroupingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L225">property <b>alertGroupingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertGroupingTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4256,7 +4387,7 @@ Defines how alerts on this service will be automatically grouped into incidents.
 The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alertGrouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-autoResolveTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L232">property <b>autoResolveTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L229">property <b>autoResolveTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoResolveTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4264,12 +4395,12 @@ The duration in minutes within which to automatically group incoming alerts. Thi
 Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L233">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L230">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-escalationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L237">property <b>escalationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L234">property <b>escalationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>escalationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4277,12 +4408,12 @@ Time in seconds that an incident is automatically resolved if left open for that
 The escalation policy used by this service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-incidentUrgencyRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L238">property <b>incidentUrgencyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L235">property <b>incidentUrgencyRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>incidentUrgencyRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceIncidentUrgencyRule'>ServiceIncidentUrgencyRule</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L242">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L239">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4290,17 +4421,17 @@ The escalation policy used by this service.
 The name of the service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-scheduledActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L243">property <b>scheduledActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L240">property <b>scheduledActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceScheduledAction'>ServiceScheduledAction</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-supportHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L244">property <b>supportHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L241">property <b>supportHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceSupportHours'>ServiceSupportHours</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceDependencyArgs" data-link-title="ServiceDependencyArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L117">
         interface <strong>ServiceDependencyArgs</strong>
     </a>
 </h3>
@@ -4310,7 +4441,7 @@ The name of the service.
 The set of arguments for constructing a ServiceDependency resource.
 
 <h4 class="pdoc-member-header" id="ServiceDependencyArgs-dependencies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L124">property <b>dependencies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L121">property <b>dependencies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dependencies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceDependencyDependency'>ServiceDependencyDependency</a>&gt;[]&gt;;</code></pre>
@@ -4318,7 +4449,7 @@ The set of arguments for constructing a ServiceDependency resource.
 The relationship between the `supportingService` and `dependentService`.
 
 <h3 class="pdoc-module-header" id="ServiceDependencyState" data-link-title="ServiceDependencyState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L107">
         interface <strong>ServiceDependencyState</strong>
     </a>
 </h3>
@@ -4328,7 +4459,7 @@ The relationship between the `supportingService` and `dependentService`.
 Input properties used for looking up and filtering ServiceDependency resources.
 
 <h4 class="pdoc-member-header" id="ServiceDependencyState-dependencies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceDependency.ts#L114">property <b>dependencies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceDependency.ts#L111">property <b>dependencies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dependencies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceDependencyDependency'>ServiceDependencyDependency</a>&gt;[]&gt;;</code></pre>
@@ -4336,7 +4467,7 @@ Input properties used for looking up and filtering ServiceDependency resources.
 The relationship between the `supportingService` and `dependentService`.
 
 <h3 class="pdoc-module-header" id="ServiceIntegrationArgs" data-link-title="ServiceIntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L210">
         interface <strong>ServiceIntegrationArgs</strong>
     </a>
 </h3>
@@ -4346,7 +4477,7 @@ The relationship between the `supportingService` and `dependentService`.
 The set of arguments for constructing a ServiceIntegration resource.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationArgs-integrationEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L216">property <b>integrationEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L214">property <b>integrationEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4354,7 +4485,7 @@ The set of arguments for constructing a ServiceIntegration resource.
 This is the unique fully-qualified email address used for routing emails to this integration for processing.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationArgs-integrationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L220">property <b>integrationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L218">property <b>integrationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4362,7 +4493,7 @@ This is the unique fully-qualified email address used for routing emails to this
 This is the unique key used to route events to this integration when received via the PagerDuty Events API.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L224">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L222">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4370,7 +4501,7 @@ This is the unique key used to route events to this integration when received vi
 The name of the service integration.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L228">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L226">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4378,7 +4509,7 @@ The name of the service integration.
 The ID of the service the integration should belong to.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L241">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L239">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4395,7 +4526,7 @@ The service type. Can be:
 `pingdomInboundIntegration`or `sqlMonitorInboundIntegration`.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationArgs-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L245">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L243">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vendor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4403,7 +4534,7 @@ The service type. Can be:
 The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
 
 <h3 class="pdoc-module-header" id="ServiceIntegrationState" data-link-title="ServiceIntegrationState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L167">
         interface <strong>ServiceIntegrationState</strong>
     </a>
 </h3>
@@ -4413,7 +4544,7 @@ The ID of the vendor the integration should integrate with (e.g Datadog or Amazo
 Input properties used for looking up and filtering ServiceIntegration resources.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L173">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L171">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>htmlUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4421,7 +4552,7 @@ Input properties used for looking up and filtering ServiceIntegration resources.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-integrationEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L177">property <b>integrationEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L175">property <b>integrationEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4429,7 +4560,7 @@ URL at which the entity is uniquely displayed in the Web app
 This is the unique fully-qualified email address used for routing emails to this integration for processing.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-integrationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L181">property <b>integrationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L179">property <b>integrationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4437,7 +4568,7 @@ This is the unique fully-qualified email address used for routing emails to this
 This is the unique key used to route events to this integration when received via the PagerDuty Events API.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4445,7 +4576,7 @@ This is the unique key used to route events to this integration when received vi
 The name of the service integration.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L189">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L187">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4453,7 +4584,7 @@ The name of the service integration.
 The ID of the service the integration should belong to.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L202">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L200">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4470,7 +4601,7 @@ The service type. Can be:
 `pingdomInboundIntegration`or `sqlMonitorInboundIntegration`.
 
 <h4 class="pdoc-member-header" id="ServiceIntegrationState-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/serviceIntegration.ts#L206">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/serviceIntegration.ts#L204">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vendor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4478,7 +4609,7 @@ The service type. Can be:
 The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L167">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -4488,7 +4619,7 @@ The ID of the vendor the integration should integrate with (e.g Datadog or Amazo
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-acknowledgementTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L174">property <b>acknowledgementTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L171">property <b>acknowledgementTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acknowledgementTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4496,7 +4627,7 @@ Input properties used for looking up and filtering Service resources.
 Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
 
 <h4 class="pdoc-member-header" id="ServiceState-alertCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L178">property <b>alertCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L175">property <b>alertCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertCreation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4504,7 +4635,7 @@ Time in seconds that an incident changes to the Triggered State after being Ackn
 Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "createIncidents" is default: events will create an incident that cannot be merged. Value "createAlertsAndIncidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged.
 
 <h4 class="pdoc-member-header" id="ServiceState-alertGrouping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L182">property <b>alertGrouping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L179">property <b>alertGrouping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertGrouping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4512,7 +4643,7 @@ Must be one of two values. PagerDuty receives events from your monitoring system
 Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alertGroupingTimeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
 
 <h4 class="pdoc-member-header" id="ServiceState-alertGroupingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L186">property <b>alertGroupingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L183">property <b>alertGroupingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertGroupingTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4520,7 +4651,7 @@ Defines how alerts on this service will be automatically grouped into incidents.
 The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alertGrouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
 
 <h4 class="pdoc-member-header" id="ServiceState-autoResolveTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L190">property <b>autoResolveTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L187">property <b>autoResolveTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoResolveTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4528,17 +4659,17 @@ The duration in minutes within which to automatically group incoming alerts. Thi
 Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
 
 <h4 class="pdoc-member-header" id="ServiceState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L191">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L188">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L192">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-escalationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L196">property <b>escalationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L193">property <b>escalationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>escalationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4546,22 +4677,22 @@ Time in seconds that an incident is automatically resolved if left open for that
 The escalation policy used by this service.
 
 <h4 class="pdoc-member-header" id="ServiceState-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L197">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L194">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>htmlUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-incidentUrgencyRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L198">property <b>incidentUrgencyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L195">property <b>incidentUrgencyRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>incidentUrgencyRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceIncidentUrgencyRule'>ServiceIncidentUrgencyRule</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-lastIncidentTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L199">property <b>lastIncidentTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L196">property <b>lastIncidentTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastIncidentTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4569,22 +4700,22 @@ The escalation policy used by this service.
 The name of the service.
 
 <h4 class="pdoc-member-header" id="ServiceState-scheduledActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L204">property <b>scheduledActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L201">property <b>scheduledActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceScheduledAction'>ServiceScheduledAction</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L205">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L202">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-supportHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/service.ts#L206">property <b>supportHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/service.ts#L203">property <b>supportHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#ServiceSupportHours'>ServiceSupportHours</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TeamArgs" data-link-title="TeamArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L111">
         interface <strong>TeamArgs</strong>
     </a>
 </h3>
@@ -4594,12 +4725,12 @@ The name of the service.
 The set of arguments for constructing a Team resource.
 
 <h4 class="pdoc-member-header" id="TeamArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L114">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L112">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TeamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4607,7 +4738,7 @@ The set of arguments for constructing a Team resource.
 The name of the group.
 
 <h3 class="pdoc-module-header" id="TeamMembershipArgs" data-link-title="TeamMembershipArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L129">
         interface <strong>TeamMembershipArgs</strong>
     </a>
 </h3>
@@ -4617,7 +4748,7 @@ The name of the group.
 The set of arguments for constructing a TeamMembership resource.
 
 <h4 class="pdoc-member-header" id="TeamMembershipArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L135">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L133">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4625,7 +4756,7 @@ The set of arguments for constructing a TeamMembership resource.
 The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
 
 <h4 class="pdoc-member-header" id="TeamMembershipArgs-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L139">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L137">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4633,7 +4764,7 @@ The role of the user in the team. One of `observer`, `responder`, or `manager`. 
 The ID of the team in which the user will belong.
 
 <h4 class="pdoc-member-header" id="TeamMembershipArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L143">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L141">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4641,7 +4772,7 @@ The ID of the team in which the user will belong.
 The ID of the user to add to the team.
 
 <h3 class="pdoc-module-header" id="TeamMembershipState" data-link-title="TeamMembershipState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L111">
         interface <strong>TeamMembershipState</strong>
     </a>
 </h3>
@@ -4651,7 +4782,7 @@ The ID of the user to add to the team.
 Input properties used for looking up and filtering TeamMembership resources.
 
 <h4 class="pdoc-member-header" id="TeamMembershipState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L117">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L115">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4659,7 +4790,7 @@ Input properties used for looking up and filtering TeamMembership resources.
 The role of the user in the team. One of `observer`, `responder`, or `manager`. Defaults to `manager`.
 
 <h4 class="pdoc-member-header" id="TeamMembershipState-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L121">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L119">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4667,7 +4798,7 @@ The role of the user in the team. One of `observer`, `responder`, or `manager`. 
 The ID of the team in which the user will belong.
 
 <h4 class="pdoc-member-header" id="TeamMembershipState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/teamMembership.ts#L125">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/teamMembership.ts#L123">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4675,7 +4806,7 @@ The ID of the team in which the user will belong.
 The ID of the user to add to the team.
 
 <h3 class="pdoc-module-header" id="TeamState" data-link-title="TeamState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L96">
         interface <strong>TeamState</strong>
     </a>
 </h3>
@@ -4685,12 +4816,12 @@ The ID of the user to add to the team.
 Input properties used for looking up and filtering Team resources.
 
 <h4 class="pdoc-member-header" id="TeamState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L99">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L97">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TeamState-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L103">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L101">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>htmlUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4698,7 +4829,7 @@ Input properties used for looking up and filtering Team resources.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="TeamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/team.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/team.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4706,7 +4837,7 @@ URL at which the entity is uniquely displayed in the Web app
 The name of the group.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L196">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -4716,7 +4847,7 @@ The name of the group.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L203">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L200">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4724,12 +4855,12 @@ The set of arguments for constructing a User resource.
 The schedule color for the user. Valid options are purple, red, green, blue, teal, orange, brown, turquoise, dark-slate-blue, cayenne, orange-red, dark-orchid, dark-slate-grey, lime, dark-magenta, lime-green, midnight-blue, deep-pink, dark-green, dark-orange, dark-cyan, darkolive-green, dark-slate-gray, grey20, firebrick, maroon, crimson, dark-red, dark-goldenrod, chocolate, medium-violet-red, sea-green, olivedrab, forest-green, dark-olive-green, blue-violet, royal-blue, indigo, slate-blue, saddle-brown, or steel-blue.
 
 <h4 class="pdoc-member-header" id="UserArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L204">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L201">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L208">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L205">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4737,7 +4868,7 @@ The schedule color for the user. Valid options are purple, red, green, blue, tea
 The user's email address.
 
 <h4 class="pdoc-member-header" id="UserArgs-jobTitle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L212">property <b>jobTitle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L209">property <b>jobTitle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobTitle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4745,7 +4876,7 @@ The user's email address.
 The user's title.
 
 <h4 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4753,7 +4884,7 @@ The user's title.
 The name of the user.
 
 <h4 class="pdoc-member-header" id="UserArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L220">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L217">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4761,7 +4892,7 @@ The name of the user.
 The user role. Account must have the `readOnlyUsers` ability to set a user as a `readOnlyUser`. Can be `admin`, `limitedUser`, `observer`, `owner`, `readOnlyUser` or `user`
 
 <h4 class="pdoc-member-header" id="UserArgs-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L226">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L223">property <b>teams</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4770,10 +4901,10 @@ Use the &#39;pagerduty_team_membership&#39; resource instead.
 </div>
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-A list of teams the user should belong to. Please use `pagerduty..TeamMembership` instead.
+A list of teams the user should belong to. Please use `pagerduty.TeamMembership` instead.
 
 <h4 class="pdoc-member-header" id="UserArgs-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L230">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L227">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4781,7 +4912,7 @@ A list of teams the user should belong to. Please use `pagerduty..TeamMembership
 The timezone of the user
 
 <h3 class="pdoc-module-header" id="UserContactMethodArgs" data-link-title="UserContactMethodArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L198">
         interface <strong>UserContactMethodArgs</strong>
     </a>
 </h3>
@@ -4791,7 +4922,7 @@ The timezone of the user
 The set of arguments for constructing a UserContactMethod resource.
 
 <h4 class="pdoc-member-header" id="UserContactMethodArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L205">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L202">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4799,7 +4930,7 @@ The set of arguments for constructing a UserContactMethod resource.
 The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
 
 <h4 class="pdoc-member-header" id="UserContactMethodArgs-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L209">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L206">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countryCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4807,7 +4938,7 @@ The "address" to deliver to: `email`, `phone number`, etc., depending on the typ
 The 1-to-3 digit country calling code. Required when using `phoneContactMethod` or `smsContactMethod`.
 
 <h4 class="pdoc-member-header" id="UserContactMethodArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L213">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L210">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4815,7 +4946,7 @@ The 1-to-3 digit country calling code. Required when using `phoneContactMethod` 
 The label (e.g., "Work", "Mobile", etc.).
 
 <h4 class="pdoc-member-header" id="UserContactMethodArgs-sendShortEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L217">property <b>sendShortEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L214">property <b>sendShortEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sendShortEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4823,7 +4954,7 @@ The label (e.g., "Work", "Mobile", etc.).
 Send an abbreviated email message instead of the standard email output.
 
 <h4 class="pdoc-member-header" id="UserContactMethodArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L221">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L218">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4831,7 +4962,7 @@ Send an abbreviated email message instead of the standard email output.
 The contact method type. May be (`emailContactMethod`, `phoneContactMethod`, `smsContactMethod`, `pushNotificationContactMethod`).
 
 <h4 class="pdoc-member-header" id="UserContactMethodArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L225">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L222">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4839,7 +4970,7 @@ The contact method type. May be (`emailContactMethod`, `phoneContactMethod`, `sm
 The ID of the user.
 
 <h3 class="pdoc-module-header" id="UserContactMethodState" data-link-title="UserContactMethodState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L160">
         interface <strong>UserContactMethodState</strong>
     </a>
 </h3>
@@ -4849,7 +4980,7 @@ The ID of the user.
 Input properties used for looking up and filtering UserContactMethod resources.
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L167">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L164">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4857,7 +4988,7 @@ Input properties used for looking up and filtering UserContactMethod resources.
 The "address" to deliver to: `email`, `phone number`, etc., depending on the type.
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-blacklisted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L171">property <b>blacklisted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L168">property <b>blacklisted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blacklisted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4865,7 +4996,7 @@ The "address" to deliver to: `email`, `phone number`, etc., depending on the typ
 If true, this phone has been blacklisted by PagerDuty and no messages will be sent to it.
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-countryCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L175">property <b>countryCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L172">property <b>countryCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countryCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4873,7 +5004,7 @@ If true, this phone has been blacklisted by PagerDuty and no messages will be se
 The 1-to-3 digit country calling code. Required when using `phoneContactMethod` or `smsContactMethod`.
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L179">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L176">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4881,7 +5012,7 @@ The 1-to-3 digit country calling code. Required when using `phoneContactMethod` 
 If true, this phone is capable of receiving SMS messages.
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L183">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L180">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4889,7 +5020,7 @@ If true, this phone is capable of receiving SMS messages.
 The label (e.g., "Work", "Mobile", etc.).
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-sendShortEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L187">property <b>sendShortEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L184">property <b>sendShortEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sendShortEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4897,7 +5028,7 @@ The label (e.g., "Work", "Mobile", etc.).
 Send an abbreviated email message instead of the standard email output.
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L191">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L188">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4905,7 +5036,7 @@ Send an abbreviated email message instead of the standard email output.
 The contact method type. May be (`emailContactMethod`, `phoneContactMethod`, `smsContactMethod`, `pushNotificationContactMethod`).
 
 <h4 class="pdoc-member-header" id="UserContactMethodState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userContactMethod.ts#L195">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userContactMethod.ts#L192">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4913,7 +5044,7 @@ The contact method type. May be (`emailContactMethod`, `phoneContactMethod`, `sm
 The ID of the user.
 
 <h3 class="pdoc-module-header" id="UserNotificationRuleArgs" data-link-title="UserNotificationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L184">
         interface <strong>UserNotificationRuleArgs</strong>
     </a>
 </h3>
@@ -4923,7 +5054,7 @@ The ID of the user.
 The set of arguments for constructing a UserNotificationRule resource.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleArgs-contactMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L190">property <b>contactMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L188">property <b>contactMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contactMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#UserNotificationRuleContactMethod'>UserNotificationRuleContactMethod</a>&gt;;</code></pre>
@@ -4931,7 +5062,7 @@ The set of arguments for constructing a UserNotificationRule resource.
 A contact method block, configured as a block described below.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleArgs-startDelayInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L194">property <b>startDelayInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L192">property <b>startDelayInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startDelayInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4939,7 +5070,7 @@ A contact method block, configured as a block described below.
 The delay before firing the rule, in minutes.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleArgs-urgency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L198">property <b>urgency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L196">property <b>urgency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urgency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4947,7 +5078,7 @@ The delay before firing the rule, in minutes.
 Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L202">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L200">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4955,7 +5086,7 @@ Which incident urgency this rule is used for. Account must have the `urgencies` 
 The ID of the user.
 
 <h3 class="pdoc-module-header" id="UserNotificationRuleState" data-link-title="UserNotificationRuleState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L162">
         interface <strong>UserNotificationRuleState</strong>
     </a>
 </h3>
@@ -4965,7 +5096,7 @@ The ID of the user.
 Input properties used for looking up and filtering UserNotificationRule resources.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleState-contactMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L168">property <b>contactMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L166">property <b>contactMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contactMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pagerduty/types/input/#UserNotificationRuleContactMethod'>UserNotificationRuleContactMethod</a>&gt;;</code></pre>
@@ -4973,7 +5104,7 @@ Input properties used for looking up and filtering UserNotificationRule resource
 A contact method block, configured as a block described below.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleState-startDelayInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L172">property <b>startDelayInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L170">property <b>startDelayInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startDelayInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4981,7 +5112,7 @@ A contact method block, configured as a block described below.
 The delay before firing the rule, in minutes.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleState-urgency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L176">property <b>urgency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L174">property <b>urgency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urgency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4989,7 +5120,7 @@ The delay before firing the rule, in minutes.
 Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 
 <h4 class="pdoc-member-header" id="UserNotificationRuleState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/userNotificationRule.ts#L180">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/userNotificationRule.ts#L178">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4997,7 +5128,7 @@ Which incident urgency this rule is used for. Account must have the `urgencies` 
 The ID of the user.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L147">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -5007,7 +5138,7 @@ The ID of the user.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-avatarUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L154">property <b>avatarUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L151">property <b>avatarUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>avatarUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5015,7 +5146,7 @@ Input properties used for looking up and filtering User resources.
 The URL of the user's avatar.
 
 <h4 class="pdoc-member-header" id="UserState-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L158">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L155">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5023,12 +5154,12 @@ The URL of the user's avatar.
 The schedule color for the user. Valid options are purple, red, green, blue, teal, orange, brown, turquoise, dark-slate-blue, cayenne, orange-red, dark-orchid, dark-slate-grey, lime, dark-magenta, lime-green, midnight-blue, deep-pink, dark-green, dark-orange, dark-cyan, darkolive-green, dark-slate-gray, grey20, firebrick, maroon, crimson, dark-red, dark-goldenrod, chocolate, medium-violet-red, sea-green, olivedrab, forest-green, dark-olive-green, blue-violet, royal-blue, indigo, slate-blue, saddle-brown, or steel-blue.
 
 <h4 class="pdoc-member-header" id="UserState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L156">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L163">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L160">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5036,7 +5167,7 @@ The schedule color for the user. Valid options are purple, red, green, blue, tea
 The user's email address.
 
 <h4 class="pdoc-member-header" id="UserState-htmlUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L167">property <b>htmlUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L164">property <b>htmlUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>htmlUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5044,7 +5175,7 @@ The user's email address.
 URL at which the entity is uniquely displayed in the Web app
 
 <h4 class="pdoc-member-header" id="UserState-invitationSent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L171">property <b>invitationSent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L168">property <b>invitationSent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invitationSent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5052,7 +5183,7 @@ URL at which the entity is uniquely displayed in the Web app
 If true, the user has an outstanding invitation.
 
 <h4 class="pdoc-member-header" id="UserState-jobTitle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L175">property <b>jobTitle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L172">property <b>jobTitle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobTitle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5060,7 +5191,7 @@ If true, the user has an outstanding invitation.
 The user's title.
 
 <h4 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5068,7 +5199,7 @@ The user's title.
 The name of the user.
 
 <h4 class="pdoc-member-header" id="UserState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L183">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L180">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5076,7 +5207,7 @@ The name of the user.
 The user role. Account must have the `readOnlyUsers` ability to set a user as a `readOnlyUser`. Can be `admin`, `limitedUser`, `observer`, `owner`, `readOnlyUser` or `user`
 
 <h4 class="pdoc-member-header" id="UserState-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L189">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L186">property <b>teams</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5085,10 +5216,10 @@ Use the &#39;pagerduty_team_membership&#39; resource instead.
 </div>
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-A list of teams the user should belong to. Please use `pagerduty..TeamMembership` instead.
+A list of teams the user should belong to. Please use `pagerduty.TeamMembership` instead.
 
 <h4 class="pdoc-member-header" id="UserState-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/a52f6bdfcda0dd37376a7e134db4aecd518daef0/sdk/nodejs/user.ts#L193">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-pagerduty/blob/49956609579c4d787eefd7e91dd815cf0d228647/sdk/nodejs/user.ts#L190">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

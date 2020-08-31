@@ -44,7 +44,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testEscalationPolicy, err := pagerduty.LookupEscalationPolicy(ctx, &pagerduty.LookupEscalationPolicyArgs{
+			Name: "Engineering Escalation Policy",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewService(ctx, "testService", &pagerduty.ServiceArgs{
+			AcknowledgementTimeout: pulumi.String("600"),
+			AutoResolveTimeout:     pulumi.String("14400"),
+			EscalationPolicy:       pulumi.String(testEscalationPolicy.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,8 +82,8 @@ import pulumi_pagerduty as pagerduty
 
 test_escalation_policy = pagerduty.get_escalation_policy(name="Engineering Escalation Policy")
 test_service = pagerduty.Service("testService",
-    acknowledgement_timeout=600,
-    auto_resolve_timeout=14400,
+    acknowledgement_timeout="600",
+    auto_resolve_timeout="14400",
     escalation_policy=test_escalation_policy.id)
 ```
 
@@ -93,7 +121,7 @@ const testService = new pagerduty.Service("test", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_escalation_policy(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_escalation_policy(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEscalationPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 

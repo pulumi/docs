@@ -12,122 +12,6 @@ meta_desc: "Explore the Schedule resource of the PagerDuty package, including ex
 
 A [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules) determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Pagerduty = Pulumi.Pagerduty;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Pagerduty.User("example", new Pagerduty.UserArgs
-        {
-            Email = "125.greenholt.earline@graham.name",
-            Teams = 
-            {
-                pagerduty_team.Example.Id,
-            },
-        });
-        var foo = new Pagerduty.Schedule("foo", new Pagerduty.ScheduleArgs
-        {
-            Layers = 
-            {
-                new Pagerduty.Inputs.ScheduleLayerArgs
-                {
-                    Name = "Night Shift",
-                    Restriction = 
-                    {
-                        
-                        {
-                            { "durationSeconds", 32400 },
-                            { "startTimeOfDay", "08:00:00" },
-                            { "type", "daily_restriction" },
-                        },
-                    },
-                    RotationTurnLengthSeconds = 86400,
-                    RotationVirtualStart = "2015-11-06T20:00:00-05:00",
-                    Start = "2015-11-06T20:00:00-05:00",
-                    Users = 
-                    {
-                        pagerduty_user.Foo.Id,
-                    },
-                },
-            },
-            TimeZone = "America/New_York",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_pagerduty as pagerduty
-
-example = pagerduty.User("example",
-    email="125.greenholt.earline@graham.name",
-    teams=[pagerduty_team["example"]["id"]])
-foo = pagerduty.Schedule("foo",
-    layers=[{
-        "name": "Night Shift",
-        "restriction": [{
-            "durationSeconds": 32400,
-            "startTimeOfDay": "08:00:00",
-            "type": "daily_restriction",
-        }],
-        "rotationTurnLengthSeconds": 86400,
-        "rotationVirtualStart": "2015-11-06T20:00:00-05:00",
-        "start": "2015-11-06T20:00:00-05:00",
-        "users": [pagerduty_user["foo"]["id"]],
-    }],
-    time_zone="America/New_York")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as pagerduty from "@pulumi/pagerduty";
-
-const example = new pagerduty.User("example", {
-    email: "125.greenholt.earline@graham.name",
-    teams: [pagerduty_team_example.id],
-});
-const foo = new pagerduty.Schedule("foo", {
-    layers: [{
-        name: "Night Shift",
-        restrictions: [{
-            durationSeconds: 32400,
-            startTimeOfDay: "08:00:00",
-            type: "daily_restriction",
-        }],
-        rotationTurnLengthSeconds: 86400,
-        rotationVirtualStart: "2015-11-06T20:00:00-05:00",
-        start: "2015-11-06T20:00:00-05:00",
-        users: [pagerduty_user_foo.id],
-    }],
-    timeZone: "America/New_York",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Schedule Resource {#create}
@@ -139,7 +23,7 @@ const foo = new pagerduty.Schedule("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>layers=None<span class="p">, </span>name=None<span class="p">, </span>overflow=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Schedule">Schedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">layers</span><span class="p">:</span> <span class="nx">Optional[List[ScheduleLayerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overflow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -509,7 +393,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayer">List[Schedule<wbr>Layer]</a></span>
+        <span class="property-type"><a href="#schedulelayer">List[Schedule<wbr>Layer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer block. Schedule layers documented below.
 {{% /md %}}</dd>
@@ -658,7 +542,8 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>layers=None<span class="p">, </span>name=None<span class="p">, </span>overflow=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">layers</span><span class="p">:</span> <span class="nx">Optional[List[ScheduleLayerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overflow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Schedule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -666,7 +551,7 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Schedule.html">Schedule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ScheduleState.html">ScheduleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Schedule.html">Schedule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..ScheduleState.html">ScheduleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -981,7 +866,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#state_layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayer">List[Schedule<wbr>Layer]</a></span>
+        <span class="property-type"><a href="#schedulelayer">List[Schedule<wbr>Layer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer block. Schedule layers documented below.
 {{% /md %}}</dd>
@@ -1341,8 +1226,8 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 
     <dt class="property-required"
             title="Required">
-        <span id="rotationturnlengthseconds_python">
-<a href="#rotationturnlengthseconds_python" style="color: inherit; text-decoration: inherit;">rotation<wbr>Turn<wbr>Length<wbr>Seconds</a>
+        <span id="rotation_turn_length_seconds_python">
+<a href="#rotation_turn_length_seconds_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>turn_<wbr>length_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1352,8 +1237,8 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 
     <dt class="property-required"
             title="Required">
-        <span id="rotationvirtualstart_python">
-<a href="#rotationvirtualstart_python" style="color: inherit; text-decoration: inherit;">rotation<wbr>Virtual<wbr>Start</a>
+        <span id="rotation_virtual_start_python">
+<a href="#rotation_virtual_start_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>virtual_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1422,7 +1307,7 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulelayerrestriction">List[Schedule<wbr>Layer<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#schedulelayerrestriction">List[Schedule<wbr>Layer<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A schedule layer restriction block. Restriction blocks documented below.
 {{% /md %}}</dd>
@@ -1607,8 +1492,8 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 
     <dt class="property-required"
             title="Required">
-        <span id="durationseconds_python">
-<a href="#durationseconds_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Seconds</a>
+        <span id="duration_seconds_python">
+<a href="#duration_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1618,8 +1503,8 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 
     <dt class="property-required"
             title="Required">
-        <span id="starttimeofday_python">
-<a href="#starttimeofday_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
+        <span id="start_time_of_day_python">
+<a href="#start_time_of_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1640,8 +1525,8 @@ If you do pass the `overflow` parameter, you will get one schedule entry returne
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startdayofweek_python">
-<a href="#startdayofweek_python" style="color: inherit; text-decoration: inherit;">start<wbr>Day<wbr>Of<wbr>Week</a>
+        <span id="start_day_of_week_python">
+<a href="#start_day_of_week_python" style="color: inherit; text-decoration: inherit;">start_<wbr>day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

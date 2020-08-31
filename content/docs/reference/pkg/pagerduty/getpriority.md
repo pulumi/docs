@@ -46,24 +46,24 @@ class MyStack : Stack
                     new Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs
                     {
                         Operator = "contains",
-                        Parameter = 
+                        Parameters = 
                         {
-                            
+                            new Pagerduty.Inputs.RulesetRuleConditionsSubconditionParameterArgs
                             {
-                                { "value", "disk space" },
-                                { "path", "payload.summary" },
+                                Value = "disk space",
+                                Path = "payload.summary",
                             },
                         },
                     },
                     new Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs
                     {
                         Operator = "contains",
-                        Parameter = 
+                        Parameters = 
                         {
-                            
+                            new Pagerduty.Inputs.RulesetRuleConditionsSubconditionParameterArgs
                             {
-                                { "value", "db" },
-                                { "path", "payload.source" },
+                                Value = "db",
+                                Path = "payload.source",
                             },
                         },
                     },
@@ -71,18 +71,18 @@ class MyStack : Stack
             },
             Actions = new Pagerduty.Inputs.RulesetRuleActionsArgs
             {
-                Route = 
+                Routes = 
                 {
-                    
+                    new Pagerduty.Inputs.RulesetRuleActionsRouteArgs
                     {
-                        { "value", "P5DTL0K" },
+                        Value = "P5DTL0K",
                     },
                 },
-                Priority = 
+                Priorities = 
                 {
-                    
+                    new Pagerduty.Inputs.RulesetRuleActionsPriorityArgs
                     {
-                        { "value", pagerduty_priority.P1.Id },
+                        Value = pagerduty_priority.P1.Id,
                     },
                 },
             },
@@ -95,7 +95,74 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pagerduty.GetPriority(ctx, &pagerduty.GetPriorityArgs{
+			Name: "P1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooRuleset, err := pagerduty.NewRuleset(ctx, "fooRuleset", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewRulesetRule(ctx, "fooRulesetRule", &pagerduty.RulesetRuleArgs{
+			Ruleset:  fooRuleset.ID(),
+			Position: pulumi.Int(0),
+			Disabled: pulumi.Bool(false),
+			Conditions: &pagerduty.RulesetRuleConditionsArgs{
+				Operator: pulumi.String("and"),
+				Subconditions: pagerduty.RulesetRuleConditionsSubconditionArray{
+					&pagerduty.RulesetRuleConditionsSubconditionArgs{
+						Operator: pulumi.String("contains"),
+						Parameters: pagerduty.RulesetRuleConditionsSubconditionParameterArray{
+							&pagerduty.RulesetRuleConditionsSubconditionParameterArgs{
+								Value: pulumi.String("disk space"),
+								Path:  pulumi.String("payload.summary"),
+							},
+						},
+					},
+					&pagerduty.RulesetRuleConditionsSubconditionArgs{
+						Operator: pulumi.String("contains"),
+						Parameters: pagerduty.RulesetRuleConditionsSubconditionParameterArray{
+							&pagerduty.RulesetRuleConditionsSubconditionParameterArgs{
+								Value: pulumi.String("db"),
+								Path:  pulumi.String("payload.source"),
+							},
+						},
+					},
+				},
+			},
+			Actions: &pagerduty.RulesetRuleActionsArgs{
+				Routes: pagerduty.RulesetRuleActionsRouteArray{
+					&pagerduty.RulesetRuleActionsRouteArgs{
+						Value: pulumi.String("P5DTL0K"),
+					},
+				},
+				Priorities: pagerduty.RulesetRuleActionsPriorityArray{
+					&pagerduty.RulesetRuleActionsPriorityArgs{
+						Value: pulumi.Any(pagerduty_priority.P1.Id),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,34 +175,34 @@ foo_ruleset = pagerduty.Ruleset("fooRuleset")
 foo_ruleset_rule = pagerduty.RulesetRule("fooRulesetRule",
     ruleset=foo_ruleset.id,
     position=0,
-    disabled="false",
-    conditions={
-        "operator": "and",
-        "subconditions": [
-            {
-                "operator": "contains",
-                "parameter": [{
-                    "value": "disk space",
-                    "path": "payload.summary",
-                }],
-            },
-            {
-                "operator": "contains",
-                "parameter": [{
-                    "value": "db",
-                    "path": "payload.source",
-                }],
-            },
+    disabled=False,
+    conditions=pagerduty.RulesetRuleConditionsArgs(
+        operator="and",
+        subconditions=[
+            pagerduty.RulesetRuleConditionsSubconditionArgs(
+                operator="contains",
+                parameters=[pagerduty.RulesetRuleConditionsSubconditionParameterArgs(
+                    value="disk space",
+                    path="payload.summary",
+                )],
+            ),
+            pagerduty.RulesetRuleConditionsSubconditionArgs(
+                operator="contains",
+                parameters=[pagerduty.RulesetRuleConditionsSubconditionParameterArgs(
+                    value="db",
+                    path="payload.source",
+                )],
+            ),
         ],
-    },
-    actions={
-        "route": [{
-            "value": "P5DTL0K",
-        }],
-        "priority": [{
-            "value": pagerduty_priority["p1"]["id"],
-        }],
-    })
+    ),
+    actions=pagerduty.RulesetRuleActionsArgs(
+        routes=[pagerduty.RulesetRuleActionsRouteArgs(
+            value="P5DTL0K",
+        )],
+        priorities=[pagerduty.RulesetRuleActionsPriorityArgs(
+            value=pagerduty_priority["p1"]["id"],
+        )],
+    ))
 ```
 
 {{% /example %}}
@@ -159,14 +226,14 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         subconditions: [
             {
                 operator: "contains",
-                parameter: [{
+                parameters: [{
                     value: "disk space",
                     path: "payload.summary",
                 }],
             },
             {
                 operator: "contains",
-                parameter: [{
+                parameters: [{
                     value: "db",
                     path: "payload.source",
                 }],
@@ -174,10 +241,10 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         ],
     },
     actions: {
-        route: [{
+        routes: [{
             value: "P5DTL0K",
         }],
-        priority: [{
+        priorities: [{
             value: pagerduty_priority.p1.id,
         }],
     },
@@ -200,7 +267,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_priority(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_priority(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPriorityResult</code></pre></div>
 {{% /choosable %}}
 
 
