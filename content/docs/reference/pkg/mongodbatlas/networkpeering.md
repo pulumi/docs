@@ -89,7 +89,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewNetworkContainer(ctx, "testNetworkContainer", &mongodbatlas.NetworkContainerArgs{
-			ProjectId:      pulumi.String(local.Project_id),
+			ProjectId:      pulumi.Any(local.Project_id),
 			AtlasCidrBlock: pulumi.String("10.8.0.0/21"),
 			ProviderName:   pulumi.String("AWS"),
 			RegionName:     pulumi.String("US_EAST_1"),
@@ -99,7 +99,7 @@ func main() {
 		}
 		testNetworkPeering, err := mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
 			AccepterRegionName:  pulumi.String("us-east-1"),
-			ProjectId:           pulumi.String(local.Project_id),
+			ProjectId:           pulumi.Any(local.Project_id),
 			ContainerId:         pulumi.String("507f1f77bcf86cd799439011"),
 			ProviderName:        pulumi.String("AWS"),
 			RouteTableCidrBlock: pulumi.String("192.168.0.0/24"),
@@ -274,7 +274,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testNetworkContainer, err := mongodbatlas.NewNetworkContainer(ctx, "testNetworkContainer", &mongodbatlas.NetworkContainerArgs{
 			AtlasCidrBlock: pulumi.String("10.8.0.0/21"),
-			ProjectId:      pulumi.String(local.Project_id),
+			ProjectId:      pulumi.Any(local.Project_id),
 			ProviderName:   pulumi.String("GCP"),
 		})
 		if err != nil {
@@ -282,9 +282,9 @@ func main() {
 		}
 		testNetworkPeering, err := mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
 			ContainerId:  testNetworkContainer.ContainerId,
-			GcpProjectId: pulumi.String(local.GCP_PROJECT_ID),
+			GcpProjectId: pulumi.Any(local.GCP_PROJECT_ID),
 			NetworkName:  pulumi.String("default"),
-			ProjectId:    pulumi.String(local.Project_id),
+			ProjectId:    pulumi.Any(local.Project_id),
 			ProviderName: pulumi.String("GCP"),
 		})
 		if err != nil {
@@ -312,7 +312,7 @@ func main() {
 			DiskSizeGb:               pulumi.Float64(5),
 			MongoDbMajorVersion:      pulumi.String("4.2"),
 			NumShards:                pulumi.Int(1),
-			ProjectId:                pulumi.String(local.Project_id),
+			ProjectId:                pulumi.Any(local.Project_id),
 			ProviderInstanceSizeName: pulumi.String("M10"),
 			ProviderName:             pulumi.String("GCP"),
 			ProviderRegionName:       pulumi.String("US_EAST_4"),
@@ -487,7 +487,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testNetworkContainer, err := mongodbatlas.NewNetworkContainer(ctx, "testNetworkContainer", &mongodbatlas.NetworkContainerArgs{
 			AtlasCidrBlock: pulumi.String("10.8.0.0/21"),
-			ProjectId:      pulumi.String(local.Project_id),
+			ProjectId:      pulumi.Any(local.Project_id),
 			ProviderName:   pulumi.String("AZURE"),
 			Region:         pulumi.String("US_EAST_2"),
 		})
@@ -495,13 +495,13 @@ func main() {
 			return err
 		}
 		_, err = mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
-			AzureDirectoryId:    pulumi.String(local.AZURE_DIRECTORY_ID),
-			AzureSubscriptionId: pulumi.String(local.AZURE_SUBSCRIPTION_ID),
+			AzureDirectoryId:    pulumi.Any(local.AZURE_DIRECTORY_ID),
+			AzureSubscriptionId: pulumi.Any(local.AZURE_SUBSCRIPTION_ID),
 			ContainerId:         testNetworkContainer.ContainerId,
-			ProjectId:           pulumi.String(local.Project_id),
+			ProjectId:           pulumi.Any(local.Project_id),
 			ProviderName:        pulumi.String("AZURE"),
-			ResourceGroupName:   pulumi.String(local.AZURE_RESOURCES_GROUP_NAME),
-			VnetName:            pulumi.String(local.AZURE_VNET_NAME),
+			ResourceGroupName:   pulumi.Any(local.AZURE_RESOURCES_GROUP_NAME),
+			VnetName:            pulumi.Any(local.AZURE_VNET_NAME),
 		})
 		if err != nil {
 			return err
@@ -510,7 +510,7 @@ func main() {
 			AutoScalingDiskGbEnabled: pulumi.Bool(true),
 			MongoDbMajorVersion:      pulumi.String("4.2"),
 			NumShards:                pulumi.Int(1),
-			ProjectId:                pulumi.String(local.Project_id),
+			ProjectId:                pulumi.Any(local.Project_id),
 			ProviderDiskTypeName:     pulumi.String("P4"),
 			ProviderInstanceSizeName: pulumi.String("M10"),
 			ProviderName:             pulumi.String("AZURE"),
@@ -680,7 +680,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		test, err := mongodbatlas.NewCluster(ctx, "test", &mongodbatlas.ClusterArgs{
-			ProjectId:                pulumi.String(local.Project_id),
+			ProjectId:                pulumi.Any(local.Project_id),
 			DiskSizeGb:               pulumi.Float64(5),
 			ReplicationFactor:        pulumi.Int(3),
 			AutoScalingDiskGbEnabled: pulumi.Bool(false),
@@ -702,12 +702,12 @@ func main() {
 		}
 		mongoPeer, err := mongodbatlas.NewNetworkPeering(ctx, "mongoPeer", &mongodbatlas.NetworkPeeringArgs{
 			AccepterRegionName:  pulumi.String("us-east-2"),
-			ProjectId:           pulumi.String(local.Project_id),
+			ProjectId:           pulumi.Any(local.Project_id),
 			ContainerId:         test.ContainerId,
 			ProviderName:        pulumi.String("AWS"),
 			RouteTableCidrBlock: pulumi.String("172.31.0.0/16"),
 			VpcId:               _default.ID(),
-			AwsAccountId:        pulumi.String(local.AWS_ACCOUNT_ID),
+			AwsAccountId:        pulumi.Any(local.AWS_ACCOUNT_ID),
 		})
 		if err != nil {
 			return err
@@ -886,7 +886,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testCluster, err := mongodbatlas.NewCluster(ctx, "testCluster", &mongodbatlas.ClusterArgs{
-			ProjectId:                pulumi.String(local.Project_id),
+			ProjectId:                pulumi.Any(local.Project_id),
 			NumShards:                pulumi.Int(1),
 			DiskSizeGb:               pulumi.Float64(5),
 			ReplicationFactor:        pulumi.Int(3),
@@ -900,11 +900,11 @@ func main() {
 			return err
 		}
 		testNetworkPeering, err := mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
-			ProjectId:      pulumi.String(local.Project_id),
+			ProjectId:      pulumi.Any(local.Project_id),
 			AtlasCidrBlock: pulumi.String("192.168.0.0/18"),
 			ContainerId:    testCluster.ContainerId,
 			ProviderName:   pulumi.String("GCP"),
-			GcpProjectId:   pulumi.String(local.GCP_PROJECT_ID),
+			GcpProjectId:   pulumi.Any(local.GCP_PROJECT_ID),
 			NetworkName:    pulumi.String("default"),
 		})
 		if err != nil {
@@ -1063,7 +1063,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testCluster, err := mongodbatlas.NewCluster(ctx, "testCluster", &mongodbatlas.ClusterArgs{
-			ProjectId:                pulumi.String(local.Project_id),
+			ProjectId:                pulumi.Any(local.Project_id),
 			ReplicationFactor:        pulumi.Int(3),
 			AutoScalingDiskGbEnabled: pulumi.Bool(false),
 			MongoDbMajorVersion:      pulumi.String("4.2"),
@@ -1075,13 +1075,13 @@ func main() {
 			return err
 		}
 		_, err = mongodbatlas.NewNetworkPeering(ctx, "testNetworkPeering", &mongodbatlas.NetworkPeeringArgs{
-			ProjectId:           pulumi.String(local.Project_id),
+			ProjectId:           pulumi.Any(local.Project_id),
 			ContainerId:         testCluster.ContainerId,
 			ProviderName:        pulumi.String("AZURE"),
-			AzureDirectoryId:    pulumi.String(local.AZURE_DIRECTORY_ID),
-			AzureSubscriptionId: pulumi.String(local.AZURE_SUBCRIPTION_ID),
-			ResourceGroupName:   pulumi.String(local.AZURE_RESOURCE_GROUP_NAME),
-			VnetName:            pulumi.String(local.AZURE_VNET_NAME),
+			AzureDirectoryId:    pulumi.Any(local.AZURE_DIRECTORY_ID),
+			AzureSubscriptionId: pulumi.Any(local.AZURE_SUBCRIPTION_ID),
+			ResourceGroupName:   pulumi.Any(local.AZURE_RESOURCE_GROUP_NAME),
+			VnetName:            pulumi.Any(local.AZURE_VNET_NAME),
 		})
 		if err != nil {
 			return err
@@ -1168,7 +1168,7 @@ const testNetworkPeering = new mongodbatlas.NetworkPeering("testNetworkPeering",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.NetworkPeering">NetworkPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accepter_region_name=None<span class="p">, </span>atlas_cidr_block=None<span class="p">, </span>atlas_gcp_project_id=None<span class="p">, </span>atlas_vpc_name=None<span class="p">, </span>aws_account_id=None<span class="p">, </span>azure_directory_id=None<span class="p">, </span>azure_subscription_id=None<span class="p">, </span>container_id=None<span class="p">, </span>gcp_project_id=None<span class="p">, </span>network_name=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>route_table_cidr_block=None<span class="p">, </span>vnet_name=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.NetworkPeering">NetworkPeering</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepter_region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_gcp_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_vpc_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcp_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2503,7 +2503,8 @@ Get an existing NetworkPeering resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accepter_region_name=None<span class="p">, </span>atlas_cidr_block=None<span class="p">, </span>atlas_gcp_project_id=None<span class="p">, </span>atlas_id=None<span class="p">, </span>atlas_vpc_name=None<span class="p">, </span>aws_account_id=None<span class="p">, </span>azure_directory_id=None<span class="p">, </span>azure_subscription_id=None<span class="p">, </span>connection_id=None<span class="p">, </span>container_id=None<span class="p">, </span>error_message=None<span class="p">, </span>error_state=None<span class="p">, </span>error_state_name=None<span class="p">, </span>gcp_project_id=None<span class="p">, </span>network_name=None<span class="p">, </span>peer_id=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>route_table_cidr_block=None<span class="p">, </span>status=None<span class="p">, </span>status_name=None<span class="p">, </span>vnet_name=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepter_region_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_gcp_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">atlas_vpc_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_state_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcp_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkPeering</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2511,7 +2512,7 @@ Get an existing NetworkPeering resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.NetworkPeering.html">NetworkPeering</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..NetworkPeeringState.html">NetworkPeeringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.NetworkPeering.html">NetworkPeering</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..NetworkPeeringState.html">NetworkPeeringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

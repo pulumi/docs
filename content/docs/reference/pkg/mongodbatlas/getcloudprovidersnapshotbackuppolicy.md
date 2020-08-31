@@ -27,7 +27,7 @@ meta_desc: "Explore the GetCloudProviderSnapshotBackupPolicy function of the Mon
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cloud_provider_snapshot_backup_policy(</span>cluster_name=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_backup_policy(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotBackupPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -760,11 +760,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyitems_python">
-<a href="#policyitems_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
+        <span id="policy_items_python">
+<a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcloudprovidersnapshotbackuppolicypolicypolicyitem">List[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
+        <span class="property-type"><a href="#getcloudprovidersnapshotbackuppolicypolicypolicyitem">List[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -966,8 +966,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -976,8 +976,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencytype_python">
-<a href="#frequencytype_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
+        <span id="frequency_type_python">
+<a href="#frequency_type_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -996,8 +996,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionunit_python">
-<a href="#retentionunit_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+        <span id="retention_unit_python">
+<a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1006,8 +1006,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionvalue_python">
-<a href="#retentionvalue_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
+        <span id="retention_value_python">
+<a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

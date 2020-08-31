@@ -31,7 +31,7 @@ meta_desc: "Explore the GetCluster function of the MongoDB Atlas package, includ
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1553,7 +1553,7 @@ The following output properties are available:
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterbiconnector">Dict[Get<wbr>Cluster<wbr>Bi<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#getclusterbiconnector">Get<wbr>Cluster<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd>
@@ -1575,7 +1575,7 @@ The following output properties are available:
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterconnectionstrings">Dict[Get<wbr>Cluster<wbr>Connection<wbr>Strings]</a></span>
+        <span class="property-type"><a href="#getclusterconnectionstrings">Get<wbr>Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
@@ -2288,21 +2288,21 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="awsprivatelink_python">
-<a href="#awsprivatelink_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link</a>
+        <span id="aws_private_link_python">
+<a href="#aws_private_link_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="awsprivatelinksrv_python">
-<a href="#awsprivatelinksrv_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link<wbr>Srv</a>
+        <span id="aws_private_link_srv_python">
+<a href="#aws_private_link_srv_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link_<wbr>srv</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2318,8 +2318,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privatesrv_python">
-<a href="#privatesrv_python" style="color: inherit; text-decoration: inherit;">private<wbr>Srv</a>
+        <span id="private_srv_python">
+<a href="#private_srv_python" style="color: inherit; text-decoration: inherit;">private_<wbr>srv</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2338,8 +2338,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="standardsrv_python">
-<a href="#standardsrv_python" style="color: inherit; text-decoration: inherit;">standard<wbr>Srv</a>
+        <span id="standard_srv_python">
+<a href="#standard_srv_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>srv</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2682,19 +2682,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionsconfigs_python">
-<a href="#regionsconfigs_python" style="color: inherit; text-decoration: inherit;">regions<wbr>Configs</a>
+        <span id="regions_configs_python">
+<a href="#regions_configs_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">List[Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">List[Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="zonename_python">
-<a href="#zonename_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
+        <span id="zone_name_python">
+<a href="#zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2915,8 +2915,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="analyticsnodes_python">
-<a href="#analyticsnodes_python" style="color: inherit; text-decoration: inherit;">analytics<wbr>Nodes</a>
+        <span id="analytics_nodes_python">
+<a href="#analytics_nodes_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2926,8 +2926,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="electablenodes_python">
-<a href="#electablenodes_python" style="color: inherit; text-decoration: inherit;">electable<wbr>Nodes</a>
+        <span id="electable_nodes_python">
+<a href="#electable_nodes_python" style="color: inherit; text-decoration: inherit;">electable_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2948,8 +2948,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="readonlynodes_python">
-<a href="#readonlynodes_python" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Nodes</a>
+        <span id="read_only_nodes_python">
+<a href="#read_only_nodes_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3290,7 +3290,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3456,11 +3456,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyitems_python">
-<a href="#policyitems_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
+        <span id="policy_items_python">
+<a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3665,8 +3665,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3675,8 +3675,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencytype_python">
-<a href="#frequencytype_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
+        <span id="frequency_type_python">
+<a href="#frequency_type_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3696,8 +3696,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionunit_python">
-<a href="#retentionunit_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+        <span id="retention_unit_python">
+<a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3706,8 +3706,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionvalue_python">
-<a href="#retentionvalue_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
+        <span id="retention_value_python">
+<a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

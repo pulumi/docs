@@ -130,15 +130,15 @@ import pulumi_mongodbatlas as mongodbatlas
 
 user = mongodbatlas.DatabaseUser("user",
     database_name="$external",
-    labels=[{
-        "key": "My Key",
-        "value": "My Value",
-    }],
+    labels=[mongodbatlas.DatabaseUserLabelArgs(
+        key="My Key",
+        value="My Value",
+    )],
     project_id="<PROJECT-ID>",
-    roles=[{
-        "database_name": "admin",
-        "role_name": "atlasAdmin",
-    }],
+    roles=[mongodbatlas.DatabaseUserRoleArgs(
+        database_name="admin",
+        role_name="atlasAdmin",
+    )],
     username="myUsername",
     x509_type="MANAGED")
 test_x509_authentication_database_user = mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser",
@@ -329,7 +329,7 @@ const test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.pro
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get509_authentication_database_user(</span>project_id=None<span class="p">, </span>username=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get509_authentication_database_user(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> Get509AuthenticationDatabaseUserResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -926,8 +926,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="groupid_python">
-<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -946,8 +946,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="notafter_python">
-<a href="#notafter_python" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
+        <span id="not_after_python">
+<a href="#not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

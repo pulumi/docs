@@ -202,39 +202,39 @@ test = mongodbatlas.CloudProviderSnapshotBackupPolicy("test",
     reference_hour_of_day=3,
     reference_minute_of_hour=45,
     restore_window_days=4,
-    policies=[{
-        "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["id"],
-        "policyItems": [
-            {
-                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][0]["id"],
-                "frequencyInterval": 1,
-                "frequencyType": "hourly",
-                "retentionUnit": "days",
-                "retentionValue": 1,
-            },
-            {
-                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][1]["id"],
-                "frequencyInterval": 1,
-                "frequencyType": "daily",
-                "retentionUnit": "days",
-                "retentionValue": 2,
-            },
-            {
-                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][2]["id"],
-                "frequencyInterval": 4,
-                "frequencyType": "weekly",
-                "retentionUnit": "weeks",
-                "retentionValue": 3,
-            },
-            {
-                "id": my_cluster.snapshot_backup_policies[0]["policies"][0]["policyItems"][3]["id"],
-                "frequencyInterval": 5,
-                "frequencyType": "monthly",
-                "retentionUnit": "months",
-                "retentionValue": 4,
-            },
+    policies=[mongodbatlas.CloudProviderSnapshotBackupPolicyPolicyArgs(
+        id=my_cluster.snapshot_backup_policies[0].policies[0].id,
+        policy_items=[
+            mongodbatlas.CloudProviderSnapshotBackupPolicyPolicyPolicyItemArgs(
+                id=my_cluster.snapshot_backup_policies[0].policies[0].policy_items[0].id,
+                frequency_interval=1,
+                frequency_type="hourly",
+                retention_unit="days",
+                retention_value=1,
+            ),
+            mongodbatlas.CloudProviderSnapshotBackupPolicyPolicyPolicyItemArgs(
+                id=my_cluster.snapshot_backup_policies[0].policies[0].policy_items[1].id,
+                frequency_interval=1,
+                frequency_type="daily",
+                retention_unit="days",
+                retention_value=2,
+            ),
+            mongodbatlas.CloudProviderSnapshotBackupPolicyPolicyPolicyItemArgs(
+                id=my_cluster.snapshot_backup_policies[0].policies[0].policy_items[2].id,
+                frequency_interval=4,
+                frequency_type="weekly",
+                retention_unit="weeks",
+                retention_value=3,
+            ),
+            mongodbatlas.CloudProviderSnapshotBackupPolicyPolicyPolicyItemArgs(
+                id=my_cluster.snapshot_backup_policies[0].policies[0].policy_items[3].id,
+                frequency_interval=5,
+                frequency_type="monthly",
+                retention_unit="months",
+                retention_value=4,
+            ),
         ],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -311,7 +311,7 @@ const test = new mongodbatlas.CloudProviderSnapshotBackupPolicy("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy">CloudProviderSnapshotBackupPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_name=None<span class="p">, </span>policies=None<span class="p">, </span>project_id=None<span class="p">, </span>reference_hour_of_day=None<span class="p">, </span>reference_minute_of_hour=None<span class="p">, </span>restore_window_days=None<span class="p">, </span>update_snapshots=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy">CloudProviderSnapshotBackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[CloudProviderSnapshotBackupPolicyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_hour_of_day</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">reference_minute_of_hour</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">restore_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -755,7 +755,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
@@ -1002,7 +1002,8 @@ Get an existing CloudProviderSnapshotBackupPolicy resource's state with the give
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>next_snapshot=None<span class="p">, </span>policies=None<span class="p">, </span>project_id=None<span class="p">, </span>reference_hour_of_day=None<span class="p">, </span>reference_minute_of_hour=None<span class="p">, </span>restore_window_days=None<span class="p">, </span>update_snapshots=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[CloudProviderSnapshotBackupPolicyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_hour_of_day</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">reference_minute_of_hour</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">restore_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> CloudProviderSnapshotBackupPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1010,7 +1011,7 @@ Get an existing CloudProviderSnapshotBackupPolicy resource's state with the give
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.html">CloudProviderSnapshotBackupPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..CloudProviderSnapshotBackupPolicyState.html">CloudProviderSnapshotBackupPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.CloudProviderSnapshotBackupPolicy.html">CloudProviderSnapshotBackupPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..CloudProviderSnapshotBackupPolicyState.html">CloudProviderSnapshotBackupPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1476,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
@@ -1663,11 +1664,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="policyitems_python">
-<a href="#policyitems_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
+        <span id="policy_items_python">
+<a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1869,8 +1870,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1879,8 +1880,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencytype_python">
-<a href="#frequencytype_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
+        <span id="frequency_type_python">
+<a href="#frequency_type_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1899,8 +1900,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionunit_python">
-<a href="#retentionunit_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
+        <span id="retention_unit_python">
+<a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1909,8 +1910,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionvalue_python">
-<a href="#retentionvalue_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
+        <span id="retention_value_python">
+<a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

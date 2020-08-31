@@ -27,7 +27,7 @@ meta_desc: "Explore the GetAlertConfiguration function of the MongoDB Atlas pack
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_alert_configuration(</span>alert_configuration_id=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_alert_configuration(</span><span class="nx">alert_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAlertConfigurationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -236,27 +236,6 @@ Alert type. Possible values:
 - `TOO_MANY_ELECTIONS`
 Sharded cluster
 - `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-- Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-- Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-- Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-- Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-- Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -381,27 +360,6 @@ Alert type. Possible values:
 - `TOO_MANY_ELECTIONS`
 Sharded cluster
 - `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-- Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-- Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-- Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-- Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-- Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -526,27 +484,6 @@ Alert type. Possible values:
 - `TOO_MANY_ELECTIONS`
 Sharded cluster
 - `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-- Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-- Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-- Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-- Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-- Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -671,27 +608,6 @@ Alert type. Possible values:
 - `TOO_MANY_ELECTIONS`
 Sharded cluster
 - `CLUSTER_MONGOS_IS_MISSING`
-- `User`
-- `JOINED_GROUP`
-- `REMOVED_FROM_GROUP`
-- `USER_ROLES_CHANGED_AUDIT`
-- Project
-- `USERS_AWAITING_APPROVAL`
-- `USERS_WITHOUT_MULTI_FACTOR_AUTH`
-- `GROUP_CREATED`
-- Team
-- `JOINED_TEAM`
-- `REMOVED_FROM_TEAM`
-- Organization
-- `INVITED_TO_ORG`
-- `JOINED_ORG`
-- Data Explorer
-- `DATA_EXPLORER`
-- `DATA_EXPLORER_CRUD`
-- Billing
-- `CREDIT_CARD_ABOUT_TO_EXPIRE`
-- `CHARGE_SUCCEEDED`
-- `INVOICE_CLOSED`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -721,7 +637,7 @@ Sharded cluster
 <a href="#metric_threshold_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getalertconfigurationmetricthreshold">Dict[Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -972,8 +888,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldname_python">
-<a href="#fieldname_python" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
+        <span id="field_name_python">
+<a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2153,8 +2069,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="apitoken_python">
-<a href="#apitoken_python" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
+        <span id="api_token_python">
+<a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2164,8 +2080,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="channelname_python">
-<a href="#channelname_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
+        <span id="channel_name_python">
+<a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2175,8 +2091,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="datadogapikey_python">
-<a href="#datadogapikey_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
+        <span id="datadog_api_key_python">
+<a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2186,8 +2102,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="datadogregion_python">
-<a href="#datadogregion_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Region</a>
+        <span id="datadog_region_python">
+<a href="#datadog_region_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>region</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2197,8 +2113,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="delaymin_python">
-<a href="#delaymin_python" style="color: inherit; text-decoration: inherit;">delay<wbr>Min</a>
+        <span id="delay_min_python">
+<a href="#delay_min_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2208,8 +2124,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="emailaddress_python">
-<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2219,8 +2135,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="emailenabled_python">
-<a href="#emailenabled_python" style="color: inherit; text-decoration: inherit;">email<wbr>Enabled</a>
+        <span id="email_enabled_python">
+<a href="#email_enabled_python" style="color: inherit; text-decoration: inherit;">email_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2230,8 +2146,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="flowname_python">
-<a href="#flowname_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Name</a>
+        <span id="flow_name_python">
+<a href="#flow_name_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2241,8 +2157,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="flowdockapitoken_python">
-<a href="#flowdockapitoken_python" style="color: inherit; text-decoration: inherit;">flowdock<wbr>Api<wbr>Token</a>
+        <span id="flowdock_api_token_python">
+<a href="#flowdock_api_token_python" style="color: inherit; text-decoration: inherit;">flowdock_<wbr>api_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2252,8 +2168,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="intervalmin_python">
-<a href="#intervalmin_python" style="color: inherit; text-decoration: inherit;">interval<wbr>Min</a>
+        <span id="interval_min_python">
+<a href="#interval_min_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2263,8 +2179,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="mobilenumber_python">
-<a href="#mobilenumber_python" style="color: inherit; text-decoration: inherit;">mobile<wbr>Number</a>
+        <span id="mobile_number_python">
+<a href="#mobile_number_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2274,8 +2190,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="opsgenieapikey_python">
-<a href="#opsgenieapikey_python" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Api<wbr>Key</a>
+        <span id="ops_genie_api_key_python">
+<a href="#ops_genie_api_key_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2285,8 +2201,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="opsgenieregion_python">
-<a href="#opsgenieregion_python" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Region</a>
+        <span id="ops_genie_region_python">
+<a href="#ops_genie_region_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>region</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2296,8 +2212,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="orgname_python">
-<a href="#orgname_python" style="color: inherit; text-decoration: inherit;">org<wbr>Name</a>
+        <span id="org_name_python">
+<a href="#org_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2307,8 +2223,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicekey_python">
-<a href="#servicekey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
+        <span id="service_key_python">
+<a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2318,8 +2234,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="smsenabled_python">
-<a href="#smsenabled_python" style="color: inherit; text-decoration: inherit;">sms<wbr>Enabled</a>
+        <span id="sms_enabled_python">
+<a href="#sms_enabled_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2340,8 +2256,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="typename_python">
-<a href="#typename_python" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
+        <span id="type_name_python">
+<a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2376,8 +2292,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="victoropsapikey_python">
-<a href="#victoropsapikey_python" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Api<wbr>Key</a>
+        <span id="victor_ops_api_key_python">
+<a href="#victor_ops_api_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>api_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2387,8 +2303,8 @@ Accepted values are:
 
     <dt class="property-required"
             title="Required">
-        <span id="victoropsroutingkey_python">
-<a href="#victoropsroutingkey_python" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Routing<wbr>Key</a>
+        <span id="victor_ops_routing_key_python">
+<a href="#victor_ops_routing_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>routing_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

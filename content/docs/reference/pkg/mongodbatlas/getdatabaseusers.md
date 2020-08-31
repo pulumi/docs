@@ -132,24 +132,24 @@ test_database_user = mongodbatlas.DatabaseUser("testDatabaseUser",
     project_id="<PROJECT-ID>",
     auth_database_name="admin",
     roles=[
-        {
-            "role_name": "readWrite",
-            "database_name": "admin",
-        },
-        {
-            "role_name": "atlasAdmin",
-            "database_name": "admin",
-        },
+        mongodbatlas.DatabaseUserRoleArgs(
+            role_name="readWrite",
+            database_name="admin",
+        ),
+        mongodbatlas.DatabaseUserRoleArgs(
+            role_name="atlasAdmin",
+            database_name="admin",
+        ),
     ],
     labels=[
-        {
-            "key": "key 1",
-            "value": "value 1",
-        },
-        {
-            "key": "key 2",
-            "value": "value 2",
-        },
+        mongodbatlas.DatabaseUserLabelArgs(
+            key="key 1",
+            value="value 1",
+        ),
+        mongodbatlas.DatabaseUserLabelArgs(
+            key="key 2",
+            value="value 2",
+        ),
     ])
 test_database_users = test_database_user.project_id.apply(lambda project_id: mongodbatlas.get_database_users(project_id=project_id))
 ```
@@ -209,7 +209,7 @@ const testDatabaseUsers = testDatabaseUser.projectId.apply(projectId => mongodba
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_database_users(</span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_users(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -736,7 +736,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultlabel">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultlabel">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -757,7 +757,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultrole">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultrole">List[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
@@ -1062,8 +1062,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="collectionname_python">
-<a href="#collectionname_python" style="color: inherit; text-decoration: inherit;">collection<wbr>Name</a>
+        <span id="collection_name_python">
+<a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
