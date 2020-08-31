@@ -27,7 +27,7 @@ on their documentation site for guidance.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceCompute">ServiceCompute</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>comment=None<span class="p">, </span>domains=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>package=None<span class="p">, </span>papertrails=None<span class="p">, </span>s3loggings=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceCompute">ServiceCompute</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1432,7 +1432,7 @@ Defined below.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">List[Service<wbr>Compute<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">List[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
@@ -1443,7 +1443,7 @@ Defined below.
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Dict[Service<wbr>Compute<wbr>Package]</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload. Defined below.
 {{% /md %}}</dd>
@@ -1465,7 +1465,7 @@ Defined below.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">List[Service<wbr>Compute<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">List[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1478,7 +1478,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">List[Service<wbr>Compute<wbr>Bigquerylogging]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">List[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -1490,7 +1490,7 @@ Defined below.
 <a href="#blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">List[Service<wbr>Compute<wbr>Blobstoragelogging]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">List[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -1525,7 +1525,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">List[Service<wbr>Compute<wbr>Gcslogging]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">List[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -1537,7 +1537,7 @@ Defined below.
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">List[Service<wbr>Compute<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">List[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd>
@@ -1548,7 +1548,7 @@ Defined below.
 <a href="#httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">List[Service<wbr>Compute<wbr>Httpslogging]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">List[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -1560,7 +1560,7 @@ Defined below.
 <a href="#logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">List[Service<wbr>Compute<wbr>Logentry]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">List[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -1572,7 +1572,7 @@ Defined below.
 <a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">List[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">List[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -1584,7 +1584,7 @@ Defined below.
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">List[Service<wbr>Compute<wbr>Logging<wbr>Datadog]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">List[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1596,7 +1596,7 @@ Defined below.
 <a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">List[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">List[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1608,7 +1608,7 @@ Defined below.
 <a href="#logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">List[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">List[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1620,7 +1620,7 @@ Defined below.
 <a href="#logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">List[Service<wbr>Compute<wbr>Logging<wbr>Ftp]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">List[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1632,7 +1632,7 @@ Defined below.
 <a href="#logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">List[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">List[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1644,7 +1644,7 @@ Defined below.
 <a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">List[Service<wbr>Compute<wbr>Logging<wbr>Heroku]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">List[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1656,7 +1656,7 @@ Defined below.
 <a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">List[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">List[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1668,7 +1668,7 @@ Defined below.
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">List[Service<wbr>Compute<wbr>Logging<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">List[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1680,7 +1680,7 @@ Defined below.
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">List[Service<wbr>Compute<wbr>Logging<wbr>Loggly]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">List[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1692,7 +1692,7 @@ Defined below.
 <a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">List[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">List[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1704,7 +1704,7 @@ Defined below.
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">List[Service<wbr>Compute<wbr>Logging<wbr>Newrelic]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">List[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1716,7 +1716,7 @@ Defined below.
 <a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">List[Service<wbr>Compute<wbr>Logging<wbr>Openstack]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">List[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1728,7 +1728,7 @@ Defined below.
 <a href="#logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">List[Service<wbr>Compute<wbr>Logging<wbr>Scalyr]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">List[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1740,7 +1740,7 @@ Defined below.
 <a href="#logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">List[Service<wbr>Compute<wbr>Logging<wbr>Sftp]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">List[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -1763,7 +1763,7 @@ Defined below.
 <a href="#papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">List[Service<wbr>Compute<wbr>Papertrail]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">List[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -1775,7 +1775,7 @@ Defined below.
 <a href="#s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">List[Service<wbr>Compute<wbr>S3logging]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">List[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -1787,7 +1787,7 @@ Defined below.
 <a href="#splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">List[Service<wbr>Compute<wbr>Splunk]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">List[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -1799,7 +1799,7 @@ Defined below.
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">List[Service<wbr>Compute<wbr>Sumologic]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">List[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -1811,7 +1811,7 @@ Defined below.
 <a href="#syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">List[Service<wbr>Compute<wbr>Syslog]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">List[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -2010,7 +2010,8 @@ Get an existing ServiceCompute resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>domains=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>logging_cloudfiles=None<span class="p">, </span>logging_datadogs=None<span class="p">, </span>logging_digitaloceans=None<span class="p">, </span>logging_elasticsearches=None<span class="p">, </span>logging_ftps=None<span class="p">, </span>logging_googlepubsubs=None<span class="p">, </span>logging_heroku=None<span class="p">, </span>logging_honeycombs=None<span class="p">, </span>logging_kafkas=None<span class="p">, </span>logging_logglies=None<span class="p">, </span>logging_logshuttles=None<span class="p">, </span>logging_newrelics=None<span class="p">, </span>logging_openstacks=None<span class="p">, </span>logging_scalyrs=None<span class="p">, </span>logging_sftps=None<span class="p">, </span>name=None<span class="p">, </span>package=None<span class="p">, </span>papertrails=None<span class="p">, </span>s3loggings=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceCompute</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2018,7 +2019,7 @@ Get an existing ServiceCompute resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.ServiceCompute.html">ServiceCompute</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly..ServiceComputeState.html">ServiceComputeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.ServiceCompute.html">ServiceCompute</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly..ServiceComputeState.html">ServiceComputeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3442,7 +3443,7 @@ Defined below.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">List[Service<wbr>Compute<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">List[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -3455,7 +3456,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">List[Service<wbr>Compute<wbr>Bigquerylogging]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">List[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -3467,7 +3468,7 @@ Defined below.
 <a href="#state_blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">List[Service<wbr>Compute<wbr>Blobstoragelogging]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">List[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -3500,7 +3501,7 @@ Defined below.
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">List[Service<wbr>Compute<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">List[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
@@ -3523,7 +3524,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">List[Service<wbr>Compute<wbr>Gcslogging]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">List[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -3535,7 +3536,7 @@ Defined below.
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">List[Service<wbr>Compute<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">List[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd>
@@ -3546,7 +3547,7 @@ Defined below.
 <a href="#state_httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">List[Service<wbr>Compute<wbr>Httpslogging]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">List[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -3558,7 +3559,7 @@ Defined below.
 <a href="#state_logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">List[Service<wbr>Compute<wbr>Logentry]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">List[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -3570,7 +3571,7 @@ Defined below.
 <a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">List[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">List[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -3582,7 +3583,7 @@ Defined below.
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">List[Service<wbr>Compute<wbr>Logging<wbr>Datadog]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">List[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -3594,7 +3595,7 @@ Defined below.
 <a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">List[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">List[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -3606,7 +3607,7 @@ Defined below.
 <a href="#state_logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">List[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">List[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -3618,7 +3619,7 @@ Defined below.
 <a href="#state_logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">List[Service<wbr>Compute<wbr>Logging<wbr>Ftp]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">List[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -3630,7 +3631,7 @@ Defined below.
 <a href="#state_logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">List[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">List[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -3642,7 +3643,7 @@ Defined below.
 <a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">List[Service<wbr>Compute<wbr>Logging<wbr>Heroku]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">List[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -3654,7 +3655,7 @@ Defined below.
 <a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">List[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">List[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -3666,7 +3667,7 @@ Defined below.
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">List[Service<wbr>Compute<wbr>Logging<wbr>Kafka]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">List[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -3678,7 +3679,7 @@ Defined below.
 <a href="#state_logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">List[Service<wbr>Compute<wbr>Logging<wbr>Loggly]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">List[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -3690,7 +3691,7 @@ Defined below.
 <a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">List[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">List[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -3702,7 +3703,7 @@ Defined below.
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">List[Service<wbr>Compute<wbr>Logging<wbr>Newrelic]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">List[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -3714,7 +3715,7 @@ Defined below.
 <a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">List[Service<wbr>Compute<wbr>Logging<wbr>Openstack]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">List[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -3726,7 +3727,7 @@ Defined below.
 <a href="#state_logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">List[Service<wbr>Compute<wbr>Logging<wbr>Scalyr]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">List[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -3738,7 +3739,7 @@ Defined below.
 <a href="#state_logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">List[Service<wbr>Compute<wbr>Logging<wbr>Sftp]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">List[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -3761,7 +3762,7 @@ Defined below.
 <a href="#state_package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Dict[Service<wbr>Compute<wbr>Package]</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload. Defined below.
 {{% /md %}}</dd>
@@ -3772,7 +3773,7 @@ Defined below.
 <a href="#state_papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">List[Service<wbr>Compute<wbr>Papertrail]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">List[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -3784,7 +3785,7 @@ Defined below.
 <a href="#state_s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">List[Service<wbr>Compute<wbr>S3logging]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">List[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -3796,7 +3797,7 @@ Defined below.
 <a href="#state_splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">List[Service<wbr>Compute<wbr>Splunk]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">List[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -3808,7 +3809,7 @@ Defined below.
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">List[Service<wbr>Compute<wbr>Sumologic]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">List[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -3820,7 +3821,7 @@ Defined below.
 <a href="#state_syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">List[Service<wbr>Compute<wbr>Syslog]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">List[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -4719,8 +4720,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoloadbalance_python">
-<a href="#autoloadbalance_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Loadbalance</a>
+        <span id="auto_loadbalance_python">
+<a href="#auto_loadbalance_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>loadbalance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4732,8 +4733,8 @@ Default `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="betweenbytestimeout_python">
-<a href="#betweenbytestimeout_python" style="color: inherit; text-decoration: inherit;">between<wbr>Bytes<wbr>Timeout</a>
+        <span id="between_bytes_timeout_python">
+<a href="#between_bytes_timeout_python" style="color: inherit; text-decoration: inherit;">between_<wbr>bytes_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4743,8 +4744,8 @@ Default `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connecttimeout_python">
-<a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
+        <span id="connect_timeout_python">
+<a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4755,8 +4756,8 @@ Default `1000`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errorthreshold_python">
-<a href="#errorthreshold_python" style="color: inherit; text-decoration: inherit;">error<wbr>Threshold</a>
+        <span id="error_threshold_python">
+<a href="#error_threshold_python" style="color: inherit; text-decoration: inherit;">error_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4766,8 +4767,8 @@ Default `1000`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="firstbytetimeout_python">
-<a href="#firstbytetimeout_python" style="color: inherit; text-decoration: inherit;">first<wbr>Byte<wbr>Timeout</a>
+        <span id="first_byte_timeout_python">
+<a href="#first_byte_timeout_python" style="color: inherit; text-decoration: inherit;">first_<wbr>byte_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4788,8 +4789,8 @@ Default `1000`
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconn_python">
-<a href="#maxconn_python" style="color: inherit; text-decoration: inherit;">max<wbr>Conn</a>
+        <span id="max_conn_python">
+<a href="#max_conn_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4800,8 +4801,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtlsversion_python">
-<a href="#maxtlsversion_python" style="color: inherit; text-decoration: inherit;">max<wbr>Tls<wbr>Version</a>
+        <span id="max_tls_version_python">
+<a href="#max_tls_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4811,8 +4812,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintlsversion_python">
-<a href="#mintlsversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4822,8 +4823,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overridehost_python">
-<a href="#overridehost_python" style="color: inherit; text-decoration: inherit;">override<wbr>Host</a>
+        <span id="override_host_python">
+<a href="#override_host_python" style="color: inherit; text-decoration: inherit;">override_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4855,8 +4856,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcacert_python">
-<a href="#sslcacert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
+        <span id="ssl_ca_cert_python">
+<a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4866,8 +4867,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcerthostname_python">
-<a href="#sslcerthostname_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Hostname</a>
+        <span id="ssl_cert_hostname_python">
+<a href="#ssl_cert_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4877,8 +4878,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcheckcert_python">
-<a href="#sslcheckcert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Check<wbr>Cert</a>
+        <span id="ssl_check_cert_python">
+<a href="#ssl_check_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>check_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4888,8 +4889,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslciphers_python">
-<a href="#sslciphers_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ciphers</a>
+        <span id="ssl_ciphers_python">
+<a href="#ssl_ciphers_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ciphers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4899,8 +4900,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslclientcert_python">
-<a href="#sslclientcert_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
+        <span id="ssl_client_cert_python">
+<a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4910,8 +4911,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslclientkey_python">
-<a href="#sslclientkey_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
+        <span id="ssl_client_key_python">
+<a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4921,8 +4922,8 @@ Default `200`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="sslhostname_python">
-<a href="#sslhostname_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Hostname</a>
+        <span id="ssl_hostname_python">
+<a href="#ssl_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4932,8 +4933,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslsnihostname_python">
-<a href="#sslsnihostname_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sni<wbr>Hostname</a>
+        <span id="ssl_sni_hostname_python">
+<a href="#ssl_sni_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sni_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4943,8 +4944,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usessl_python">
-<a href="#usessl_python" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
+        <span id="use_ssl_python">
+<a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5261,8 +5262,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="projectid_python">
-<a href="#projectid_python" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5294,8 +5295,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5691,8 +5692,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="accountname_python">
-<a href="#accountname_python" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5724,8 +5725,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="sastoken_python">
-<a href="#sastoken_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
+        <span id="sas_token_python">
+<a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5735,8 +5736,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5746,8 +5747,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5779,8 +5780,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5790,8 +5791,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6278,8 +6279,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6311,8 +6312,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6322,8 +6323,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6355,8 +6356,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6366,8 +6367,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6819,8 +6820,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkinterval_python">
-<a href="#checkinterval_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
+        <span id="check_interval_python">
+<a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6830,8 +6831,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expectedresponse_python">
-<a href="#expectedresponse_python" style="color: inherit; text-decoration: inherit;">expected<wbr>Response</a>
+        <span id="expected_response_python">
+<a href="#expected_response_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6841,8 +6842,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpversion_python">
-<a href="#httpversion_python" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
+        <span id="http_version_python">
+<a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7437,8 +7438,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="contenttype_python">
-<a href="#contenttype_python" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7448,8 +7449,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7459,8 +7460,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7470,8 +7471,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="jsonformat_python">
-<a href="#jsonformat_python" style="color: inherit; text-decoration: inherit;">json<wbr>Format</a>
+        <span id="json_format_python">
+<a href="#json_format_python" style="color: inherit; text-decoration: inherit;">json_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7481,8 +7482,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7503,8 +7504,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxbytes_python">
-<a href="#requestmaxbytes_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
+        <span id="request_max_bytes_python">
+<a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7514,8 +7515,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxentries_python">
-<a href="#requestmaxentries_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
+        <span id="request_max_entries_python">
+<a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7525,8 +7526,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7536,8 +7537,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7547,8 +7548,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7558,8 +7559,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7780,8 +7781,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usetls_python">
-<a href="#usetls_python" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
+        <span id="use_tls_python">
+<a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8200,8 +8201,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8211,8 +8212,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8244,8 +8245,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8255,8 +8256,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8288,8 +8289,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8310,8 +8311,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8908,8 +8909,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8919,8 +8920,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8941,8 +8942,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8963,8 +8964,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8974,8 +8975,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9007,8 +9008,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9018,8 +9019,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9526,8 +9527,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxbytes_python">
-<a href="#requestmaxbytes_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
+        <span id="request_max_bytes_python">
+<a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9537,8 +9538,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmaxentries_python">
-<a href="#requestmaxentries_python" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
+        <span id="request_max_entries_python">
+<a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9548,8 +9549,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9559,8 +9560,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9570,8 +9571,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9581,8 +9582,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10067,8 +10068,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10078,8 +10079,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10111,8 +10112,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10122,8 +10123,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10355,8 +10356,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="projectid_python">
-<a href="#projectid_python" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10366,8 +10367,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11164,8 +11165,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressioncodec_python">
-<a href="#compressioncodec_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
+        <span id="compression_codec_python">
+<a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11175,8 +11176,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiredacks_python">
-<a href="#requiredacks_python" style="color: inherit; text-decoration: inherit;">required<wbr>Acks</a>
+        <span id="required_acks_python">
+<a href="#required_acks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>acks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11186,8 +11187,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11197,8 +11198,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11208,8 +11209,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11219,8 +11220,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11230,8 +11231,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usetls_python">
-<a href="#usetls_python" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
+        <span id="use_tls_python">
+<a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -12096,8 +12097,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12107,8 +12108,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12151,8 +12152,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -12162,8 +12163,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12195,8 +12196,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12206,8 +12207,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12903,8 +12904,8 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="sshknownhosts_python">
-<a href="#sshknownhosts_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts</a>
+        <span id="ssh_known_hosts_python">
+<a href="#ssh_known_hosts_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12925,8 +12926,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -12936,8 +12937,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12980,8 +12981,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12991,8 +12992,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretkey_python">
-<a href="#secretkey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13002,8 +13003,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13133,8 +13134,8 @@ Default `200`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcecodehash_python">
-<a href="#sourcecodehash_python" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
+        <span id="source_code_hash_python">
+<a href="#source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13841,8 +13842,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13874,8 +13875,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gziplevel_python">
-<a href="#gziplevel_python" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
+        <span id="gzip_level_python">
+<a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -13885,8 +13886,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13918,8 +13919,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13940,8 +13941,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3accesskey_python">
-<a href="#s3accesskey_python" style="color: inherit; text-decoration: inherit;">s3Access<wbr>Key</a>
+        <span id="s3_access_key_python">
+<a href="#s3_access_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13954,8 +13955,8 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3secretkey_python">
-<a href="#s3secretkey_python" style="color: inherit; text-decoration: inherit;">s3Secret<wbr>Key</a>
+        <span id="s3_secret_key_python">
+<a href="#s3_secret_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13968,8 +13969,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serversideencryption_python">
-<a href="#serversideencryption_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
+        <span id="server_side_encryption_python">
+<a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13978,8 +13979,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serversideencryptionkmskeyid_python">
-<a href="#serversideencryptionkmskeyid_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
+        <span id="server_side_encryption_kms_key_id_python">
+<a href="#server_side_encryption_kms_key_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>kms_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13988,8 +13989,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformat_python">
-<a href="#timestampformat_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
+        <span id="timestamp_format_python">
+<a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14243,8 +14244,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14254,8 +14255,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14432,8 +14433,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14841,8 +14842,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14863,8 +14864,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlscacert_python">
-<a href="#tlscacert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
+        <span id="tls_ca_cert_python">
+<a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14874,8 +14875,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientcert_python">
-<a href="#tlsclientcert_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
+        <span id="tls_client_cert_python">
+<a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14885,8 +14886,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientkey_python">
-<a href="#tlsclientkey_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
+        <span id="tls_client_key_python">
+<a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14896,8 +14897,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlshostname_python">
-<a href="#tlshostname_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
+        <span id="tls_hostname_python">
+<a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -14918,8 +14919,8 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usetls_python">
-<a href="#usetls_python" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
+        <span id="use_tls_python">
+<a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

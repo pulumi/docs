@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/fastly | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/fastly package."
-git_sha: "2c13154a49503b9454f11d507037cf09d9e5e851"
+git_sha: "cfa401945d3cb27167075b69b15a21c67285a2cb"
 block_external_search_index: true
 ---
 
@@ -96,14 +96,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ServiceACLEntriesv1Entry" data-link-title="ServiceACLEntriesv1Entry">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L8">
         interface <strong>ServiceACLEntriesv1Entry</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceACLEntriesv1Entry</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Entry-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L12">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L12">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -111,12 +111,12 @@ block_external_search_index: true
 A personal freeform descriptive note
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Entry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Entry-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L17">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L17">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ A personal freeform descriptive note
 An IP address that is the focus for the ACL
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Entry-negated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L21">property <b>negated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L21">property <b>negated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>negated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ An IP address that is the focus for the ACL
 A boolean that will negate the match if true
 
 <h4 class="pdoc-member-header" id="ServiceACLEntriesv1Entry-subnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L25">property <b>subnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L25">property <b>subnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,14 +140,14 @@ A boolean that will negate the match if true
 An optional subnet mask applied to the IP address
 
 <h3 class="pdoc-module-header" id="ServiceComputeBackend" data-link-title="ServiceComputeBackend">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L28">
         interface <strong>ServiceComputeBackend</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeBackend</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L32">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L32">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ An optional subnet mask applied to the IP address
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-autoLoadbalance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L38">property <b>autoLoadbalance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L38">property <b>autoLoadbalance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoLoadbalance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ included in the pool of backends that requests are load balanced against.
 Default `true`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-betweenBytesTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L42">property <b>betweenBytesTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L42">property <b>betweenBytesTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>betweenBytesTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ Default `true`.
 How long to wait between bytes in milliseconds. Default `10000`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L47">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L47">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ How long to wait for a timeout in milliseconds.
 Default `1000`
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-errorThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L51">property <b>errorThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L51">property <b>errorThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ Default `1000`
 Number of errors to allow before the Backend is marked as down. Default `0`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-firstByteTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L55">property <b>firstByteTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L55">property <b>firstByteTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstByteTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ Number of errors to allow before the Backend is marked as down. Default `0`.
 How long to wait for the first bytes in milliseconds. Default `15000`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-healthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L59">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L59">property <b>healthcheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -206,7 +206,7 @@ How long to wait for the first bytes in milliseconds. Default `15000`.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-maxConn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L64">property <b>maxConn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L64">property <b>maxConn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ Maximum number of connections for this Backend.
 Default `200`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-maxTlsVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L68">property <b>maxTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L68">property <b>maxTlsVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTlsVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -223,7 +223,7 @@ Default `200`.
 Maximum allowed TLS version on SSL connections to this backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-minTlsVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L72">property <b>minTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L72">property <b>minTlsVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTlsVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ Maximum allowed TLS version on SSL connections to this backend.
 Minimum allowed TLS version on SSL connections to this backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ Minimum allowed TLS version on SSL connections to this backend.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-overrideHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L80">property <b>overrideHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L80">property <b>overrideHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrideHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The hostname to override the Host header.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L84">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L84">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ The hostname to override the Host header.
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-shield">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L88">property <b>shield</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L88">property <b>shield</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shield?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ The port the SFTP service listens on. (Default: `22`).
 The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L92">property <b>sslCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L92">property <b>sslCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ The POP of the shield designated to reduce inbound load. Valid values for `shiel
 CA certificate attached to origin.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslCertHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L96">property <b>sslCertHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L96">property <b>sslCertHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCertHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ CA certificate attached to origin.
 Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslCheckCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L100">property <b>sslCheckCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L100">property <b>sslCheckCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCheckCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ Overrides ssl_hostname, but only for cert verification. Does not affect SNI at a
 Be strict about checking SSL certs. Default `true`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslCiphers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L104">property <b>sslCiphers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L104">property <b>sslCiphers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCiphers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -295,7 +295,7 @@ Be strict about checking SSL certs. Default `true`.
 Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L108">property <b>sslClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L108">property <b>sslClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 Client certificate attached to origin. Used when connecting to the backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L112">property <b>sslClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L112">property <b>sslClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +311,7 @@ Client certificate attached to origin. Used when connecting to the backend.
 Client key attached to origin. Used when connecting to the backend.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L118">property <b>sslHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L118">property <b>sslHostname</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -323,7 +323,7 @@ Use ssl_cert_hostname and ssl_sni_hostname instead.
 Used for both SNI during the TLS handshake and to validate the cert.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-sslSniHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L122">property <b>sslSniHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L122">property <b>sslSniHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslSniHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ Used for both SNI during the TLS handshake and to validate the cert.
 Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-useSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L126">property <b>useSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L126">property <b>useSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useSsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert 
 Whether or not to use SSL to reach the backend. Default `false`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBackend-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L130">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L130">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -347,14 +347,14 @@ Whether or not to use SSL to reach the backend. Default `false`.
 The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 
 <h3 class="pdoc-module-header" id="ServiceComputeBigquerylogging" data-link-title="ServiceComputeBigquerylogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L133">
         interface <strong>ServiceComputeBigquerylogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeBigquerylogging</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-dataset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L137">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L137">property <b>dataset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-config
 The Honeycomb Dataset you want to log to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L141">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L141">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ The Honeycomb Dataset you want to log to.
 The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ The email for the service account with write access to your BigQuery dataset. If
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L149">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L149">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The ID of your Google Cloud Platform project.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L153">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L153">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ The ID of your Google Cloud Platform project.
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L157">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L157">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,19 +402,19 @@ Your DigitalOcean Spaces account secret key.
 The ID of your BigQuery table.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBigquerylogging-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L158">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L158">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceComputeBlobstoragelogging" data-link-title="ServiceComputeBlobstoragelogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L161">
         interface <strong>ServiceComputeBlobstoragelogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeBlobstoragelogging</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L165">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L165">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -422,7 +422,7 @@ The ID of your BigQuery table.
 The unique Azure Blob Storage namespace in which your data objects are stored.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L169">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L169">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -430,7 +430,7 @@ The unique Azure Blob Storage namespace in which your data objects are stored.
 The name of the Azure Blob Storage container in which to store logs.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L173">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L173">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ The name of the Azure Blob Storage container in which to store logs.
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L177">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L177">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L185">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L185">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L189">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L189">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L193">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L193">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-sasToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L197">property <b>sasToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L197">property <b>sasToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sasToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
 
 <h4 class="pdoc-member-header" id="ServiceComputeBlobstoragelogging-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L201">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L201">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -494,14 +494,14 @@ The Azure shared access signature providing write access to the blob service obj
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="ServiceComputeDomain" data-link-title="ServiceComputeDomain">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L204">
         interface <strong>ServiceComputeDomain</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeDomain</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeDomain-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L208">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L208">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 An optional comment about the Domain.
 
 <h4 class="pdoc-member-header" id="ServiceComputeDomain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L212">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,14 +517,14 @@ An optional comment about the Domain.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h3 class="pdoc-module-header" id="ServiceComputeGcslogging" data-link-title="ServiceComputeGcslogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L215">
         interface <strong>ServiceComputeGcslogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeGcslogging</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L219">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L219">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L223">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L223">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ The name of your Cloud Files container.
 The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L227">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L227">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ The email for the service account with write access to your BigQuery dataset. If
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L231">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L231">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -556,7 +556,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L235">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L235">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L239">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L239">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -572,7 +572,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L243">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L243">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -580,7 +580,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L247">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L247">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -588,7 +588,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeGcslogging-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L251">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L251">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -596,14 +596,14 @@ Your DigitalOcean Spaces account secret key.
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="ServiceComputeHealthcheck" data-link-title="ServiceComputeHealthcheck">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L254">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L254">
         interface <strong>ServiceComputeHealthcheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeHealthcheck</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-checkInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L258">property <b>checkInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L258">property <b>checkInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 How often to run the Healthcheck in milliseconds. Default `5000`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-expectedResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L262">property <b>expectedResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L262">property <b>expectedResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expectedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -619,7 +619,7 @@ How often to run the Healthcheck in milliseconds. Default `5000`.
 The status code expected from the host. Default `200`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L266">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L266">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ The status code expected from the host. Default `200`.
 The Host header to send for this Healthcheck.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-httpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L270">property <b>httpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L270">property <b>httpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -635,7 +635,7 @@ The Host header to send for this Healthcheck.
 Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-initial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L274">property <b>initial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L274">property <b>initial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -643,7 +643,7 @@ Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 When loading a config, the initial number of probes to be seen as OK. Default `2`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L278">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L278">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ When loading a config, the initial number of probes to be seen as OK. Default `2
 HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L282">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L282">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -659,7 +659,7 @@ HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L286">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L286">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L290">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L290">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ The path to upload logs to.
 How many Healthchecks must succeed to be considered healthy. Default `3`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L294">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L294">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ How many Healthchecks must succeed to be considered healthy. Default `3`.
 Timeout in milliseconds. Default `500`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHealthcheck-window">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L298">property <b>window</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L298">property <b>window</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>window?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -691,14 +691,14 @@ Timeout in milliseconds. Default `500`.
 The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 
 <h3 class="pdoc-module-header" id="ServiceComputeHttpslogging" data-link-title="ServiceComputeHttpslogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L301">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L301">
         interface <strong>ServiceComputeHttpslogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeHttpslogging</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L305">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L305">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ The number of most recent Healthcheck queries to keep for this Healthcheck. Defa
 Value of the `Content-Type` header sent with the request.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-headerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L309">property <b>headerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L309">property <b>headerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -714,7 +714,7 @@ Value of the `Content-Type` header sent with the request.
 Custom header sent with the request.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-headerValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L313">property <b>headerValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L313">property <b>headerValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headerValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ Custom header sent with the request.
 Value of the custom header sent with the request.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-jsonFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L317">property <b>jsonFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L317">property <b>jsonFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jsonFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ Value of the custom header sent with the request.
 Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L321">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L321">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), 
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L325">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L325">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L329">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L329">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-requestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L333">property <b>requestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L333">property <b>requestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-requestMaxEntries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L337">property <b>requestMaxEntries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L337">property <b>requestMaxEntries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxEntries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L341">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L341">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L345">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L345">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L349">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L349">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -794,7 +794,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L353">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L353">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="ServiceComputeHttpslogging-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L357">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L357">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,14 +810,14 @@ The hostname used to verify the server's certificate. It can either be the Commo
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLogentry" data-link-title="ServiceComputeLogentry">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L360">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L360">
         interface <strong>ServiceComputeLogentry</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLogentry</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLogentry-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L364">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L364">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ Your OpenStack auth url.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLogentry-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L368">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L368">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLogentry-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L372">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L372">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +841,7 @@ The port the SFTP service listens on. (Default: `22`).
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLogentry-useTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L376">property <b>useTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L376">property <b>useTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -849,14 +849,14 @@ The data authentication token associated with this endpoint.
 Whether to use TLS for secure logging. Can be either true or false.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingCloudfile" data-link-title="ServiceComputeLoggingCloudfile">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L379">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L379">
         interface <strong>ServiceComputeLoggingCloudfile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingCloudfile</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L383">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L383">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ Whether to use TLS for secure logging. Can be either true or false.
 Your Cloud File account access key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L387">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L387">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ Your Cloud File account access key.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L391">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L391">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ The name of your Cloud Files container.
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L395">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L395">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +888,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L399">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L399">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L403">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L403">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L407">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L407">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L411">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L411">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -920,7 +920,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L415">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L415">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -928,7 +928,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L419">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L419">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -936,7 +936,7 @@ The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingCloudfile-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L423">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L423">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -944,14 +944,14 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingDatadog" data-link-title="ServiceComputeLoggingDatadog">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L426">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L426">
         interface <strong>ServiceComputeLoggingDatadog</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingDatadog</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDatadog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L430">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L430">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ The username for your Cloud Files account.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDatadog-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L434">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L434">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +967,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDatadog-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L438">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L438">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,14 +975,14 @@ The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingDigitalocean" data-link-title="ServiceComputeLoggingDigitalocean">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L441">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L441">
         interface <strong>ServiceComputeLoggingDigitalocean</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingDigitalocean</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L445">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L445">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -990,7 +990,7 @@ The data authentication token associated with this endpoint.
 Your Cloud File account access key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L449">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L449">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -998,7 +998,7 @@ Your Cloud File account access key.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L453">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L453">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ The name of your Cloud Files container.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L457">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L457">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L461">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L461">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L465">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L465">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L469">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L469">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L473">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L473">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1046,7 +1046,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L477">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L477">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L481">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L481">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1062,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingDigitalocean-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L485">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L485">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1070,14 +1070,14 @@ Your DigitalOcean Spaces account secret key.
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingElasticsearch" data-link-title="ServiceComputeLoggingElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L488">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L488">
         interface <strong>ServiceComputeLoggingElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L492">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L492">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1085,7 +1085,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The name of the Elasticsearch index to send documents (logs) to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L496">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L496">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1093,7 +1093,7 @@ The name of the Elasticsearch index to send documents (logs) to.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L500">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L500">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The password for the server. If both `password` and `secretKey` are passed, `secretKey` will be preferred.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-pipeline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L504">property <b>pipeline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L504">property <b>pipeline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipeline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ The password for the server. If both `password` and `secretKey` are passed, `sec
 The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-requestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L508">property <b>requestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L508">property <b>requestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ The ID of the Elasticsearch ingest pipeline to apply pre-process transformations
 The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-requestMaxEntries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L512">property <b>requestMaxEntries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L512">property <b>requestMaxEntries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxEntries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L516">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L516">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L520">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L520">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1141,7 +1141,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L524">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L524">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1149,7 +1149,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L528">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L528">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1157,7 +1157,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L532">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L532">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1165,7 +1165,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 Your OpenStack auth url.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingElasticsearch-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L536">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L536">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1173,14 +1173,14 @@ Your OpenStack auth url.
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingFtp" data-link-title="ServiceComputeLoggingFtp">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L539">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L539">
         interface <strong>ServiceComputeLoggingFtp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingFtp</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L543">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L543">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1188,7 +1188,7 @@ The username for your Cloud Files account.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L547">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L547">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ The SFTP address to stream logs to.
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L551">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L551">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L555">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L555">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L559">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L559">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The password for the server. If both `password` and `secretKey` are passed, `secretKey` will be preferred.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L563">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L563">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1228,7 +1228,7 @@ The password for the server. If both `password` and `secretKey` are passed, `sec
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L567">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L567">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1236,7 +1236,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L571">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L571">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L575">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L575">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ The port the SFTP service listens on. (Default: `22`).
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L579">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L579">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1260,7 +1260,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingFtp-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L583">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L583">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1268,14 +1268,14 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingGooglepubsub" data-link-title="ServiceComputeLoggingGooglepubsub">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L586">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L586">
         interface <strong>ServiceComputeLoggingGooglepubsub</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingGooglepubsub</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingGooglepubsub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L590">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L590">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1283,7 +1283,7 @@ The username for your Cloud Files account.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingGooglepubsub-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L594">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L594">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1291,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The ID of your Google Cloud Platform project.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingGooglepubsub-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L598">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L598">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1299,7 @@ The ID of your Google Cloud Platform project.
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingGooglepubsub-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L602">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L602">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ Your DigitalOcean Spaces account secret key.
 The Kafka topic to send logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingGooglepubsub-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L606">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L606">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,14 +1315,14 @@ The Kafka topic to send logs to.
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingHeroku" data-link-title="ServiceComputeLoggingHeroku">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L609">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L609">
         interface <strong>ServiceComputeLoggingHeroku</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingHeroku</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingHeroku-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L613">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L613">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1330,7 +1330,7 @@ The username for your Cloud Files account.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingHeroku-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L617">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L617">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingHeroku-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L621">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L621">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1346,14 +1346,14 @@ The data authentication token associated with this endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingHoneycomb" data-link-title="ServiceComputeLoggingHoneycomb">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L624">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L624">
         interface <strong>ServiceComputeLoggingHoneycomb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingHoneycomb</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingHoneycomb-dataset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L628">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L628">property <b>dataset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ Your OpenStack auth url.
 The Honeycomb Dataset you want to log to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingHoneycomb-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L632">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L632">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ The Honeycomb Dataset you want to log to.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingHoneycomb-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L636">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L636">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,14 +1377,14 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingKafka" data-link-title="ServiceComputeLoggingKafka">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L639">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L639">
         interface <strong>ServiceComputeLoggingKafka</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingKafka</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-brokers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L643">property <b>brokers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L643">property <b>brokers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>brokers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ The data authentication token associated with this endpoint.
 A comma-separated list of IP addresses or hostnames of Kafka brokers.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-compressionCodec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L647">property <b>compressionCodec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L647">property <b>compressionCodec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compressionCodec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ A comma-separated list of IP addresses or hostnames of Kafka brokers.
 The codec used for compression of your logs. One of: gzip, snappy, lz4.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L651">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L651">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ The codec used for compression of your logs. One of: gzip, snappy, lz4.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-requiredAcks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L655">property <b>requiredAcks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L655">property <b>requiredAcks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredAcks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L659">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L659">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ The Number of acknowledgements a leader must receive before a write is considere
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L663">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L663">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1432,7 +1432,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L667">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L667">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1440,7 +1440,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L671">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L671">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L675">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L675">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 The Kafka topic to send logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingKafka-useTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L679">property <b>useTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L679">property <b>useTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1464,14 +1464,14 @@ The Kafka topic to send logs to.
 Whether to use TLS for secure logging. Can be either true or false.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingLoggly" data-link-title="ServiceComputeLoggingLoggly">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L682">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L682">
         interface <strong>ServiceComputeLoggingLoggly</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingLoggly</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingLoggly-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L686">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L686">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1479,7 +1479,7 @@ Whether to use TLS for secure logging. Can be either true or false.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingLoggly-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L690">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L690">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1487,14 +1487,14 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingLogshuttle" data-link-title="ServiceComputeLoggingLogshuttle">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L693">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L693">
         interface <strong>ServiceComputeLoggingLogshuttle</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingLogshuttle</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingLogshuttle-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L697">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L697">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1502,7 +1502,7 @@ The data authentication token associated with this endpoint.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingLogshuttle-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L701">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L701">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingLogshuttle-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L705">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L705">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1518,14 +1518,14 @@ The data authentication token associated with this endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingNewrelic" data-link-title="ServiceComputeLoggingNewrelic">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L708">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L708">
         interface <strong>ServiceComputeLoggingNewrelic</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingNewrelic</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingNewrelic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L712">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L712">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1533,7 +1533,7 @@ Your OpenStack auth url.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingNewrelic-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L716">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L716">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1541,14 +1541,14 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingOpenstack" data-link-title="ServiceComputeLoggingOpenstack">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L719">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L719">
         interface <strong>ServiceComputeLoggingOpenstack</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingOpenstack</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L723">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L723">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1556,7 +1556,7 @@ The data authentication token associated with this endpoint.
 Your Cloud File account access key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L727">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L727">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1564,7 +1564,7 @@ Your Cloud File account access key.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L731">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L731">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1572,7 +1572,7 @@ The name of your Cloud Files container.
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L735">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L735">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1580,7 +1580,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L739">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L739">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1588,7 +1588,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L743">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L743">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1596,7 +1596,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L747">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L747">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1604,7 +1604,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L751">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L751">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1612,7 +1612,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L755">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L755">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1620,7 +1620,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L759">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L759">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1628,7 +1628,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 Your OpenStack auth url.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingOpenstack-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L763">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L763">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1636,14 +1636,14 @@ Your OpenStack auth url.
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingScalyr" data-link-title="ServiceComputeLoggingScalyr">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L766">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L766">
         interface <strong>ServiceComputeLoggingScalyr</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingScalyr</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingScalyr-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L770">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L770">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1651,7 +1651,7 @@ The username for your Cloud Files account.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingScalyr-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L774">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L774">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1659,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingScalyr-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L778">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L778">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,14 +1667,14 @@ The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="ServiceComputeLoggingSftp" data-link-title="ServiceComputeLoggingSftp">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L781">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L781">
         interface <strong>ServiceComputeLoggingSftp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeLoggingSftp</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L785">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L785">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1682,7 +1682,7 @@ The data authentication token associated with this endpoint.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L789">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L789">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1690,7 +1690,7 @@ The SFTP address to stream logs to.
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L793">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L793">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1698,7 +1698,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L797">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L797">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1706,7 +1706,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L801">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L801">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1714,7 +1714,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The password for the server. If both `password` and `secretKey` are passed, `secretKey` will be preferred.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L805">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L805">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1722,7 +1722,7 @@ The password for the server. If both `password` and `secretKey` are passed, `sec
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L809">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L809">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1730,7 +1730,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L813">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L813">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1738,7 +1738,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L817">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L817">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1746,7 +1746,7 @@ The port the SFTP service listens on. (Default: `22`).
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L821">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L821">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1754,7 +1754,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-sshKnownHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L825">property <b>sshKnownHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L825">property <b>sshKnownHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKnownHosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1762,7 +1762,7 @@ Your DigitalOcean Spaces account secret key.
 A list of host keys for all hosts we can connect to over SFTP.
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L829">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L829">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1770,7 +1770,7 @@ A list of host keys for all hosts we can connect to over SFTP.
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeLoggingSftp-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L833">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L833">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1778,14 +1778,14 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="ServiceComputePackage" data-link-title="ServiceComputePackage">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L836">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L836">
         interface <strong>ServiceComputePackage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputePackage</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputePackage-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L840">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L840">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1793,19 +1793,19 @@ The username for your Cloud Files account.
 The path to the Wasm deployment package within your local filesystem.
 
 <h4 class="pdoc-member-header" id="ServiceComputePackage-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L841">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L841">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceComputePapertrail" data-link-title="ServiceComputePapertrail">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L844">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L844">
         interface <strong>ServiceComputePapertrail</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputePapertrail</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputePapertrail-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L848">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L848">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1813,7 @@ The path to the Wasm deployment package within your local filesystem.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputePapertrail-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L852">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L852">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1821,7 +1821,7 @@ The SFTP address to stream logs to.
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputePapertrail-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L856">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L856">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1829,14 +1829,14 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The port the SFTP service listens on. (Default: `22`).
 
 <h3 class="pdoc-module-header" id="ServiceComputeS3logging" data-link-title="ServiceComputeS3logging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L859">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L859">
         interface <strong>ServiceComputeS3logging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeS3logging</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L863">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L863">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1844,7 +1844,7 @@ The port the SFTP service listens on. (Default: `22`).
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L867">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L867">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1852,7 +1852,7 @@ The name of your Cloud Files container.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L871">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L871">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L875">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L875">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1868,7 +1868,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L879">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L879">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +1876,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L883">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L883">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1884,7 +1884,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L887">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L887">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1892,7 +1892,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L891">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L891">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,7 +1900,7 @@ How frequently log files are finalized so they can be available for reading (in 
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-redundancy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L895">property <b>redundancy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L895">property <b>redundancy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redundancy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1908,7 +1908,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The S3 redundancy level. Should be formatted; one of: `standard`, `reducedRedundancy` or null. Default `null`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-s3AccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L902">property <b>s3AccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L902">property <b>s3AccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3AccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1919,7 +1919,7 @@ IAM user with permissions to only operate on this Bucket. This key will be
 not be encrypted. You can provide this key via an environment variable, `FASTLY_S3_ACCESS_KEY`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-s3SecretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L909">property <b>s3SecretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L909">property <b>s3SecretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3SecretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1930,17 +1930,17 @@ IAM user with permissions to only operate on this Bucket. This secret will be
 not be encrypted. You can provide this secret via an environment variable, `FASTLY_S3_SECRET_KEY`.
 
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L910">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L910">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-serverSideEncryptionKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L911">property <b>serverSideEncryptionKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L911">property <b>serverSideEncryptionKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryptionKmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeS3logging-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L915">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L915">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1948,14 +1948,14 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="ServiceComputeSplunk" data-link-title="ServiceComputeSplunk">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L918">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L918">
         interface <strong>ServiceComputeSplunk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeSplunk</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeSplunk-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L922">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L922">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +1963,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSplunk-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L926">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L926">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1971,7 +1971,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSplunk-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L930">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L930">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1979,7 +1979,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="ServiceComputeSplunk-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L934">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L934">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1987,7 +1987,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSplunk-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L938">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L938">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1995,14 +1995,14 @@ The data authentication token associated with this endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="ServiceComputeSumologic" data-link-title="ServiceComputeSumologic">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L941">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L941">
         interface <strong>ServiceComputeSumologic</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeSumologic</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeSumologic-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L945">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L945">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2010,7 +2010,7 @@ Your OpenStack auth url.
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSumologic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L949">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L949">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2018,7 +2018,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSumologic-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L953">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L953">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2026,14 +2026,14 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="ServiceComputeSyslog" data-link-title="ServiceComputeSyslog">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L956">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L956">
         interface <strong>ServiceComputeSyslog</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComputeSyslog</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L960">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L960">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2041,7 +2041,7 @@ Your OpenStack auth url.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L964">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L964">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2049,7 +2049,7 @@ The SFTP address to stream logs to.
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L968">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L968">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2057,7 +2057,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 The unique name of the Rackspace Cloud Files logging endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L972">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L972">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2065,7 +2065,7 @@ The unique name of the Rackspace Cloud Files logging endpoint.
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L976">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L976">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2073,7 +2073,7 @@ The port the SFTP service listens on. (Default: `22`).
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L980">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L980">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2081,7 +2081,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L984">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L984">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2089,7 +2089,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L988">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L988">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2097,7 +2097,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L992">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L992">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2105,7 +2105,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceComputeSyslog-useTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L996">property <b>useTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L996">property <b>useTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2113,14 +2113,14 @@ The data authentication token associated with this endpoint.
 Whether to use TLS for secure logging. Can be either true or false.
 
 <h3 class="pdoc-module-header" id="Servicev1Acl" data-link-title="Servicev1Acl">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L999">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L999">
         interface <strong>Servicev1Acl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Acl</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Acl-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1003">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1003">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2128,7 @@ Whether to use TLS for secure logging. Can be either true or false.
 The ID of the ACL.
 
 <h4 class="pdoc-member-header" id="Servicev1Acl-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1007">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1007">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2136,14 +2136,14 @@ The ID of the ACL.
 A unique name to identify this dictionary.
 
 <h3 class="pdoc-module-header" id="Servicev1Backend" data-link-title="Servicev1Backend">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1010">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1010">
         interface <strong>Servicev1Backend</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Backend</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Backend-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1014">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1014">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2151,7 @@ A unique name to identify this dictionary.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-autoLoadbalance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1020">property <b>autoLoadbalance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1020">property <b>autoLoadbalance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoLoadbalance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2161,7 +2161,7 @@ included in the pool of backends that requests are load balanced against.
 Default `true`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-betweenBytesTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1024">property <b>betweenBytesTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1024">property <b>betweenBytesTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>betweenBytesTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2169,7 +2169,7 @@ Default `true`.
 How long to wait between bytes in milliseconds. Default `10000`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1029">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1029">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2178,7 +2178,7 @@ How long to wait for a timeout in milliseconds.
 Default `1000`
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-errorThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1033">property <b>errorThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1033">property <b>errorThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2186,7 +2186,7 @@ Default `1000`
 Number of errors to allow before the Backend is marked as down. Default `0`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-firstByteTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1037">property <b>firstByteTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1037">property <b>firstByteTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstByteTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2194,7 +2194,7 @@ Number of errors to allow before the Backend is marked as down. Default `0`.
 How long to wait for the first bytes in milliseconds. Default `15000`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-healthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1041">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1041">property <b>healthcheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2202,7 +2202,7 @@ How long to wait for the first bytes in milliseconds. Default `15000`.
 Name of a defined `healthcheck` to assign to this backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-maxConn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1046">property <b>maxConn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1046">property <b>maxConn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2211,7 +2211,7 @@ Maximum number of connections for this Backend.
 Default `200`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-maxTlsVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1050">property <b>maxTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1050">property <b>maxTlsVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTlsVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2219,7 +2219,7 @@ Default `200`.
 Maximum allowed TLS version on SSL connections to this backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-minTlsVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1054">property <b>minTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1054">property <b>minTlsVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTlsVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2227,7 +2227,7 @@ Maximum allowed TLS version on SSL connections to this backend.
 Minimum allowed TLS version on SSL connections to this backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1058">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1058">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2235,7 +2235,7 @@ Minimum allowed TLS version on SSL connections to this backend.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-overrideHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1062">property <b>overrideHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1062">property <b>overrideHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrideHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2243,7 +2243,7 @@ A unique name to identify this dictionary.
 The hostname to override the Host header.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1066">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1066">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ The hostname to override the Host header.
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-requestCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1070">property <b>requestCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1070">property <b>requestCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2259,7 +2259,7 @@ The port the SFTP service listens on. (Default: `22`).
 Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-shield">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1074">property <b>shield</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1074">property <b>shield</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shield?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2267,7 +2267,7 @@ Name of already defined `condition` to be checked during the request phase. If t
 Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1078">property <b>sslCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1078">property <b>sslCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2275,7 +2275,7 @@ Selected POP to serve as a "shield" for backends. Valid values for `shield` are 
 CA certificate attached to origin.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslCertHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1082">property <b>sslCertHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1082">property <b>sslCertHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCertHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2283,7 +2283,7 @@ CA certificate attached to origin.
 Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslCheckCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1086">property <b>sslCheckCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1086">property <b>sslCheckCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCheckCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2291,7 +2291,7 @@ Overrides ssl_hostname, but only for cert verification. Does not affect SNI at a
 Be strict about checking SSL certs. Default `true`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslCiphers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1090">property <b>sslCiphers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1090">property <b>sslCiphers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCiphers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2299,7 +2299,7 @@ Be strict about checking SSL certs. Default `true`.
 Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1094">property <b>sslClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1094">property <b>sslClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2307,7 +2307,7 @@ Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 Client certificate attached to origin. Used when connecting to the backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1098">property <b>sslClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1098">property <b>sslClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2315,7 +2315,7 @@ Client certificate attached to origin. Used when connecting to the backend.
 Client key attached to origin. Used when connecting to the backend.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1104">property <b>sslHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1104">property <b>sslHostname</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2327,7 +2327,7 @@ Use ssl_cert_hostname and ssl_sni_hostname instead.
 Used for both SNI during the TLS handshake and to validate the cert.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-sslSniHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1108">property <b>sslSniHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1108">property <b>sslSniHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslSniHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2335,7 +2335,7 @@ Used for both SNI during the TLS handshake and to validate the cert.
 Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-useSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1112">property <b>useSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1112">property <b>useSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useSsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2343,7 +2343,7 @@ Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert 
 Whether or not to use SSL to reach the backend. Default `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1Backend-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1116">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1116">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2351,14 +2351,14 @@ Whether or not to use SSL to reach the backend. Default `false`.
 The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 
 <h3 class="pdoc-module-header" id="Servicev1Bigquerylogging" data-link-title="Servicev1Bigquerylogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1119">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1119">
         interface <strong>Servicev1Bigquerylogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Bigquerylogging</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-dataset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1123">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1123">property <b>dataset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2366,7 +2366,7 @@ The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-config
 The Honeycomb Dataset you want to log to.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1127">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1127">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2374,7 +2374,7 @@ The Honeycomb Dataset you want to log to.
 The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1131">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1131">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2382,7 +2382,7 @@ The email for the service account with write access to your BigQuery dataset. If
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1135">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2390,7 +2390,7 @@ Apache style log formatting.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1139">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1139">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2398,7 +2398,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1143">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1143">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2406,7 +2406,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The ID of your Google Cloud Platform project.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1147">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1147">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2414,7 +2414,7 @@ The ID of your Google Cloud Platform project.
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1151">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1151">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2422,7 +2422,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1155">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1155">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2430,7 +2430,7 @@ Your DigitalOcean Spaces account secret key.
 The ID of your BigQuery table.
 
 <h4 class="pdoc-member-header" id="Servicev1Bigquerylogging-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1159">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1159">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2438,14 +2438,14 @@ The ID of your BigQuery table.
 Big query table name suffix template. If set will be interpreted as a strftime compatible string and used as the [Template Suffix for your table](https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables).
 
 <h3 class="pdoc-module-header" id="Servicev1Blobstoragelogging" data-link-title="Servicev1Blobstoragelogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1162">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1162">
         interface <strong>Servicev1Blobstoragelogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Blobstoragelogging</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1166">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1166">property <b>accountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2453,7 +2453,7 @@ Big query table name suffix template. If set will be interpreted as a strftime c
 The unique Azure Blob Storage namespace in which your data objects are stored.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1170">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1170">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2461,7 +2461,7 @@ The unique Azure Blob Storage namespace in which your data objects are stored.
 The name of the Azure Blob Storage container in which to store logs.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1174">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1174">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2469,7 +2469,7 @@ The name of the Azure Blob Storage container in which to store logs.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1178">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1178">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2477,7 +2477,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1182">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1182">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2485,7 +2485,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1186">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1186">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2493,7 +2493,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2501,7 +2501,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1194">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1194">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2509,7 +2509,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1198">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1198">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2517,7 +2517,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1202">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1202">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2525,7 +2525,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1206">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1206">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2533,7 +2533,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1210">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1210">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2541,7 +2541,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-sasToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1214">property <b>sasToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1214">property <b>sasToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sasToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2549,7 +2549,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
 
 <h4 class="pdoc-member-header" id="Servicev1Blobstoragelogging-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1218">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1218">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2557,14 +2557,14 @@ The Azure shared access signature providing write access to the blob service obj
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="Servicev1CacheSetting" data-link-title="Servicev1CacheSetting">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1221">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1221">
         interface <strong>Servicev1CacheSetting</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1CacheSetting</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1CacheSetting-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1226">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1226">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2573,7 +2573,7 @@ Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
 
 <h4 class="pdoc-member-header" id="Servicev1CacheSetting-cacheCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1231">property <b>cacheCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1231">property <b>cacheCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2582,7 +2582,7 @@ Name of already defined `condition` to check after we have retrieved an object. 
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 <h4 class="pdoc-member-header" id="Servicev1CacheSetting-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1235">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1235">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2590,7 +2590,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1CacheSetting-staleTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1239">property <b>staleTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1239">property <b>staleTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staleTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2598,7 +2598,7 @@ A unique name to identify this dictionary.
 Max "Time To Live" for stale (unreachable) objects.
 
 <h4 class="pdoc-member-header" id="Servicev1CacheSetting-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1243">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1243">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2606,14 +2606,14 @@ Max "Time To Live" for stale (unreachable) objects.
 The Time-To-Live (TTL) for the object.
 
 <h3 class="pdoc-module-header" id="Servicev1Condition" data-link-title="Servicev1Condition">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1246">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1246">
         interface <strong>Servicev1Condition</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Condition</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Condition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1250">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1250">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2621,7 +2621,7 @@ The Time-To-Live (TTL) for the object.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Condition-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1254">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1254">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2629,7 +2629,7 @@ A unique name to identify this dictionary.
 Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 
 <h4 class="pdoc-member-header" id="Servicev1Condition-statement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1258">property <b>statement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1258">property <b>statement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ Priority determines the ordering for multiple snippets. Lower numbers execute fi
 The statement used to determine if the condition is met.
 
 <h4 class="pdoc-member-header" id="Servicev1Condition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1262">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1262">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,14 +2645,14 @@ The statement used to determine if the condition is met.
 The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 
 <h3 class="pdoc-module-header" id="Servicev1Dictionary" data-link-title="Servicev1Dictionary">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1265">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1265">
         interface <strong>Servicev1Dictionary</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Dictionary</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Dictionary-dictionaryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1269">property <b>dictionaryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1269">property <b>dictionaryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionaryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2660,7 +2660,7 @@ The location in generated VCL where the snippet should be placed (can be one of 
 The ID of the dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Dictionary-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1273">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1273">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2668,7 +2668,7 @@ The ID of the dictionary.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Dictionary-writeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1280">property <b>writeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1280">property <b>writeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2679,14 +2679,14 @@ dictionary, discard the current items in the dictionary. Using a write-only/priv
 the items are managed outside of the provider.
 
 <h3 class="pdoc-module-header" id="Servicev1Director" data-link-title="Servicev1Director">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1283">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1283">
         interface <strong>Servicev1Director</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Director</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Director-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1287">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1287">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2694,7 +2694,7 @@ the items are managed outside of the provider.
 Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
 
 <h4 class="pdoc-member-header" id="Servicev1Director-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1291">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1291">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2702,7 +2702,7 @@ Names of defined backends to map the director to. Example: `[ "origin1", "origin
 Load balancing weight for the backends. Default `100`.
 
 <h4 class="pdoc-member-header" id="Servicev1Director-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1295">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1295">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2710,7 @@ Load balancing weight for the backends. Default `100`.
 An optional comment about the Director.
 
 <h4 class="pdoc-member-header" id="Servicev1Director-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1299">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1299">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2718,7 +2718,7 @@ An optional comment about the Director.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Director-quorum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1303">property <b>quorum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1303">property <b>quorum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quorum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2726,7 +2726,7 @@ A unique name to identify this dictionary.
 Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`.
 
 <h4 class="pdoc-member-header" id="Servicev1Director-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1307">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1307">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2734,7 +2734,7 @@ Percentage of capacity that needs to be up for the director itself to be conside
 How many backends to search if it fails. Default `5`.
 
 <h4 class="pdoc-member-header" id="Servicev1Director-shield">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1311">property <b>shield</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1311">property <b>shield</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shield?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2742,7 @@ How many backends to search if it fails. Default `5`.
 Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 
 <h4 class="pdoc-member-header" id="Servicev1Director-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1315">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1315">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2750,14 +2750,14 @@ Selected POP to serve as a "shield" for backends. Valid values for `shield` are 
 The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 
 <h3 class="pdoc-module-header" id="Servicev1Domain" data-link-title="Servicev1Domain">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1318">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1318">
         interface <strong>Servicev1Domain</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Domain</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Domain-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1322">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1322">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2765,7 +2765,7 @@ The location in generated VCL where the snippet should be placed (can be one of 
 An optional comment about the Director.
 
 <h4 class="pdoc-member-header" id="Servicev1Domain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1326">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1326">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2773,14 +2773,14 @@ An optional comment about the Director.
 A unique name to identify this dictionary.
 
 <h3 class="pdoc-module-header" id="Servicev1Dynamicsnippet" data-link-title="Servicev1Dynamicsnippet">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1329">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1329">
         interface <strong>Servicev1Dynamicsnippet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Dynamicsnippet</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Dynamicsnippet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1333">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1333">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2788,7 +2788,7 @@ A unique name to identify this dictionary.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Dynamicsnippet-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1337">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1337">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2796,7 +2796,7 @@ A unique name to identify this dictionary.
 Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 
 <h4 class="pdoc-member-header" id="Servicev1Dynamicsnippet-snippetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1341">property <b>snippetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1341">property <b>snippetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snippetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2804,7 +2804,7 @@ Priority determines the ordering for multiple snippets. Lower numbers execute fi
 The ID of the dynamic snippet.
 
 <h4 class="pdoc-member-header" id="Servicev1Dynamicsnippet-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1345">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1345">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2812,14 +2812,14 @@ The ID of the dynamic snippet.
 The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 
 <h3 class="pdoc-module-header" id="Servicev1Gcslogging" data-link-title="Servicev1Gcslogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1348">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1348">
         interface <strong>Servicev1Gcslogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Gcslogging</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1352">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1352">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2827,7 +2827,7 @@ The location in generated VCL where the snippet should be placed (can be one of 
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1356">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1356">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2835,7 +2835,7 @@ The name of your Cloud Files container.
 The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1360">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1360">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2843,7 +2843,7 @@ The email for the service account with write access to your BigQuery dataset. If
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1364">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1364">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2851,7 +2851,7 @@ Apache style log formatting.
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1368">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1368">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2859,7 +2859,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1372">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1372">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2867,7 +2867,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1376">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1376">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2875,7 +2875,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1380">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1380">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2883,7 +2883,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1384">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1384">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2891,7 +2891,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1388">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1388">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2899,7 +2899,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1392">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1392">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2907,7 +2907,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="Servicev1Gcslogging-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1396">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1396">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2915,14 +2915,14 @@ Your DigitalOcean Spaces account secret key.
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="Servicev1Gzip" data-link-title="Servicev1Gzip">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1399">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1399">
         interface <strong>Servicev1Gzip</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Gzip</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Gzip-cacheCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1404">property <b>cacheCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1404">property <b>cacheCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2931,7 +2931,7 @@ Name of already defined `condition` to check after we have retrieved an object. 
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 <h4 class="pdoc-member-header" id="Servicev1Gzip-contentTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1409">property <b>contentTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1409">property <b>contentTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2940,7 +2940,7 @@ The content-type for each type of content you wish to
 have dynamically gzip'ed. Example: `["text/html", "text/css"]`.
 
 <h4 class="pdoc-member-header" id="Servicev1Gzip-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1414">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1414">property <b>extensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2949,7 +2949,7 @@ File extensions for each file type to dynamically
 gzip. Example: `["css", "js"]`.
 
 <h4 class="pdoc-member-header" id="Servicev1Gzip-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1418">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1418">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2957,14 +2957,14 @@ gzip. Example: `["css", "js"]`.
 A unique name to identify this dictionary.
 
 <h3 class="pdoc-module-header" id="Servicev1Header" data-link-title="Servicev1Header">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1421">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1421">
         interface <strong>Servicev1Header</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Header</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Header-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1426">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1426">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2973,7 +2973,7 @@ Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
 
 <h4 class="pdoc-member-header" id="Servicev1Header-cacheCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1431">property <b>cacheCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1431">property <b>cacheCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2982,7 +2982,7 @@ Name of already defined `condition` to check after we have retrieved an object. 
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 <h4 class="pdoc-member-header" id="Servicev1Header-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1435">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1435">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2990,7 +2990,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 The name of the header that is going to be affected by the Action.
 
 <h4 class="pdoc-member-header" id="Servicev1Header-ignoreIfSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1439">property <b>ignoreIfSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1439">property <b>ignoreIfSet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreIfSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2998,7 +2998,7 @@ The name of the header that is going to be affected by the Action.
 Do not add the header if it is already present. (Only applies to the `set` action.). Default `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1Header-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1443">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1443">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3006,7 +3006,7 @@ Do not add the header if it is already present. (Only applies to the `set` actio
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Header-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1447">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1447">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3014,7 +3014,7 @@ A unique name to identify this dictionary.
 Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 
 <h4 class="pdoc-member-header" id="Servicev1Header-regex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1451">property <b>regex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1451">property <b>regex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3022,7 +3022,7 @@ Priority determines the ordering for multiple snippets. Lower numbers execute fi
 Regular expression to use (Only applies to the `regex` and `regexRepeat` actions.)
 
 <h4 class="pdoc-member-header" id="Servicev1Header-requestCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1455">property <b>requestCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1455">property <b>requestCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3030,7 +3030,7 @@ Regular expression to use (Only applies to the `regex` and `regexRepeat` actions
 Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 
 <h4 class="pdoc-member-header" id="Servicev1Header-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1459">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1459">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3038,7 +3038,7 @@ Name of already defined `condition` to be checked during the request phase. If t
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Header-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1464">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1464">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3047,7 +3047,7 @@ Variable to be used as a source for the header
 content. (Does not apply to the `delete` action.)
 
 <h4 class="pdoc-member-header" id="Servicev1Header-substitution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1468">property <b>substitution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1468">property <b>substitution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>substitution?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3055,7 +3055,7 @@ content. (Does not apply to the `delete` action.)
 Value to substitute in place of regular expression. (Only applies to the `regex` and `regexRepeat` actions.)
 
 <h4 class="pdoc-member-header" id="Servicev1Header-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1472">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1472">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3063,14 +3063,14 @@ Value to substitute in place of regular expression. (Only applies to the `regex`
 The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 
 <h3 class="pdoc-module-header" id="Servicev1Healthcheck" data-link-title="Servicev1Healthcheck">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1475">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1475">
         interface <strong>Servicev1Healthcheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Healthcheck</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-checkInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1479">property <b>checkInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1479">property <b>checkInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3078,7 +3078,7 @@ The location in generated VCL where the snippet should be placed (can be one of 
 How often to run the Healthcheck in milliseconds. Default `5000`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-expectedResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1483">property <b>expectedResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1483">property <b>expectedResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expectedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3086,7 +3086,7 @@ How often to run the Healthcheck in milliseconds. Default `5000`.
 The status code expected from the host. Default `200`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1487">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1487">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3094,7 +3094,7 @@ The status code expected from the host. Default `200`.
 The Host header to send for this Healthcheck.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-httpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1491">property <b>httpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1491">property <b>httpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3102,7 +3102,7 @@ The Host header to send for this Healthcheck.
 Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-initial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1495">property <b>initial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1495">property <b>initial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3110,7 +3110,7 @@ Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 When loading a config, the initial number of probes to be seen as OK. Default `2`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1499">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1499">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3118,7 +3118,7 @@ When loading a config, the initial number of probes to be seen as OK. Default `2
 HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1503">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1503">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3126,7 +3126,7 @@ HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1507">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1507">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3134,7 +3134,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1511">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1511">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3142,7 +3142,7 @@ The path to upload logs to.
 How many Healthchecks must succeed to be considered healthy. Default `3`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1515">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1515">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3150,7 +3150,7 @@ How many Healthchecks must succeed to be considered healthy. Default `3`.
 Timeout in milliseconds. Default `500`.
 
 <h4 class="pdoc-member-header" id="Servicev1Healthcheck-window">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1519">property <b>window</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1519">property <b>window</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>window?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3158,14 +3158,14 @@ Timeout in milliseconds. Default `500`.
 The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 
 <h3 class="pdoc-module-header" id="Servicev1Httpslogging" data-link-title="Servicev1Httpslogging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1522">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1522">
         interface <strong>Servicev1Httpslogging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Httpslogging</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1526">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1526">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3173,7 +3173,7 @@ The number of most recent Healthcheck queries to keep for this Healthcheck. Defa
 The MIME type of the content.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1530">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1530">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3181,7 +3181,7 @@ The MIME type of the content.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1534">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1534">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3189,7 +3189,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-headerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1538">property <b>headerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1538">property <b>headerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3197,7 +3197,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 Custom header sent with the request.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-headerValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1542">property <b>headerValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1542">property <b>headerValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headerValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3205,7 +3205,7 @@ Custom header sent with the request.
 Value of the custom header sent with the request.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-jsonFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1546">property <b>jsonFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1546">property <b>jsonFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jsonFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3213,7 +3213,7 @@ Value of the custom header sent with the request.
 Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1550">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1550">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3221,7 +3221,7 @@ Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), 
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1554">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1554">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3229,7 +3229,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1558">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1558">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3237,7 +3237,7 @@ HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1562">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1562">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3245,7 +3245,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-requestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1566">property <b>requestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1566">property <b>requestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3253,7 +3253,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-requestMaxEntries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1570">property <b>requestMaxEntries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1570">property <b>requestMaxEntries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxEntries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3261,7 +3261,7 @@ The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1574">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1574">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3269,7 +3269,7 @@ The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1578">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1578">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3277,7 +3277,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1582">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1582">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3285,7 +3285,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1586">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1586">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3293,7 +3293,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1590">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1590">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3301,7 +3301,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="Servicev1Httpslogging-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1594">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1594">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3309,14 +3309,14 @@ The hostname used to verify the server's certificate. It can either be the Commo
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="Servicev1Logentry" data-link-title="Servicev1Logentry">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1597">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1597">
         interface <strong>Servicev1Logentry</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Logentry</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Logentry-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1601">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1601">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3324,7 +3324,7 @@ Your OpenStack auth url.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1605">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1605">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3332,7 +3332,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1609">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1609">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3340,7 +3340,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1613">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1613">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3348,7 +3348,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1617">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1617">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3356,7 +3356,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1621">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1621">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3364,7 +3364,7 @@ The port the SFTP service listens on. (Default: `22`).
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1625">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1625">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3372,7 +3372,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="Servicev1Logentry-useTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1629">property <b>useTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1629">property <b>useTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3380,14 +3380,14 @@ The data authentication token associated with this endpoint.
 Whether to use TLS for secure logging. Can be either true or false.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingCloudfile" data-link-title="Servicev1LoggingCloudfile">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1632">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1632">
         interface <strong>Servicev1LoggingCloudfile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingCloudfile</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1636">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1636">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3395,7 +3395,7 @@ Whether to use TLS for secure logging. Can be either true or false.
 Your Cloud File account access key.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1640">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1640">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3403,7 +3403,7 @@ Your Cloud File account access key.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1644">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1644">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3411,7 +3411,7 @@ The name of your Cloud Files container.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1648">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1648">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3419,7 +3419,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1652">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1652">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3427,7 +3427,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1656">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1656">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3435,7 +3435,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1660">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1660">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3443,7 +3443,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1664">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1664">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3451,7 +3451,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1668">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1668">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3459,7 +3459,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1672">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1672">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3467,7 +3467,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1676">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1676">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3475,7 +3475,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1680">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1680">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3483,7 +3483,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1684">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1684">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3491,7 +3491,7 @@ The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1688">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1688">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3499,7 +3499,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingCloudfile-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1692">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1692">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3507,14 +3507,14 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingDatadog" data-link-title="Servicev1LoggingDatadog">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1695">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1695">
         interface <strong>Servicev1LoggingDatadog</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingDatadog</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1699">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1699">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3522,7 +3522,7 @@ The username for your Cloud Files account.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1703">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1703">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3530,7 +3530,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1707">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1707">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3538,7 +3538,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1711">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1711">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3546,7 +3546,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1715">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1715">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3554,7 +3554,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1719">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1719">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3562,7 +3562,7 @@ The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDatadog-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1723">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1723">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3570,14 +3570,14 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingDigitalocean" data-link-title="Servicev1LoggingDigitalocean">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1726">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1726">
         interface <strong>Servicev1LoggingDigitalocean</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingDigitalocean</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1730">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1730">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3585,7 +3585,7 @@ The data authentication token associated with this endpoint.
 Your Cloud File account access key.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1734">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1734">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3593,7 +3593,7 @@ Your Cloud File account access key.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1738">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1738">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3601,7 +3601,7 @@ The name of your Cloud Files container.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1742">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1742">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3609,7 +3609,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1746">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1746">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3617,7 +3617,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1750">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1750">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3625,7 +3625,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1754">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1754">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3633,7 +3633,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1758">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1758">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3641,7 +3641,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1762">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1762">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3649,7 +3649,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1766">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1766">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3657,7 +3657,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1770">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1770">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3665,7 +3665,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1774">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1774">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3673,7 +3673,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1778">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1778">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3681,7 +3681,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1782">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1782">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3689,7 +3689,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingDigitalocean-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1786">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1786">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3697,14 +3697,14 @@ Your DigitalOcean Spaces account secret key.
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingElasticsearch" data-link-title="Servicev1LoggingElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1789">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1789">
         interface <strong>Servicev1LoggingElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1793">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1793">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3712,7 +3712,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1797">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1797">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3720,7 +3720,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1801">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1801">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3728,7 +3728,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 The name of the Elasticsearch index to send documents (logs) to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1805">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1805">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3736,7 +3736,7 @@ The name of the Elasticsearch index to send documents (logs) to.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1809">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1809">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3744,7 +3744,7 @@ A unique name to identify this dictionary.
 The password for the server. If both `password` and `secretKey` are passed, `secretKey` will be preferred.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-pipeline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1813">property <b>pipeline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1813">property <b>pipeline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipeline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3752,7 +3752,7 @@ The password for the server. If both `password` and `secretKey` are passed, `sec
 The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1817">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1817">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3760,7 +3760,7 @@ The ID of the Elasticsearch ingest pipeline to apply pre-process transformations
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-requestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1821">property <b>requestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1821">property <b>requestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3768,7 +3768,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-requestMaxEntries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1825">property <b>requestMaxEntries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1825">property <b>requestMaxEntries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestMaxEntries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3776,7 +3776,7 @@ The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1829">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1829">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3784,7 +3784,7 @@ The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1833">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1833">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3792,7 +3792,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1837">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1837">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3800,7 +3800,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1841">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1841">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3808,7 +3808,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1845">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1845">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3816,7 +3816,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1849">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1849">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3824,7 +3824,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 Your OpenStack auth url.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingElasticsearch-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1853">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1853">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3832,14 +3832,14 @@ Your OpenStack auth url.
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingFtp" data-link-title="Servicev1LoggingFtp">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1856">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1856">
         interface <strong>Servicev1LoggingFtp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingFtp</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1860">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1860">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3847,7 +3847,7 @@ The username for your Cloud Files account.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1864">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1864">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3855,7 +3855,7 @@ The SFTP address to stream logs to.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1868">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1868">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3863,7 +3863,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1872">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1872">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3871,7 +3871,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1876">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1876">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3879,7 +3879,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1880">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1880">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3887,7 +3887,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1884">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1884">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3895,7 +3895,7 @@ A unique name to identify this dictionary.
 The password for the server. If both `password` and `secretKey` are passed, `secretKey` will be preferred.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1888">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1888">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3903,7 +3903,7 @@ The password for the server. If both `password` and `secretKey` are passed, `sec
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1892">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1892">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3911,7 +3911,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1896">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1896">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3919,7 +3919,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1900">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1900">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3927,7 +3927,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1904">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1904">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3935,7 +3935,7 @@ The port the SFTP service listens on. (Default: `22`).
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1908">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1908">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3943,7 +3943,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1912">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1912">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3951,7 +3951,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingFtp-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1916">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1916">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3959,14 +3959,14 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingGooglepubsub" data-link-title="Servicev1LoggingGooglepubsub">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1919">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1919">
         interface <strong>Servicev1LoggingGooglepubsub</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingGooglepubsub</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1923">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1923">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3974,7 +3974,7 @@ The username for your Cloud Files account.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1927">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1927">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3982,7 +3982,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1931">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1931">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3990,7 +3990,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1935">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1935">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3998,7 +3998,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1939">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1939">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4006,7 +4006,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The ID of your Google Cloud Platform project.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1943">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1943">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4014,7 +4014,7 @@ The ID of your Google Cloud Platform project.
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1947">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1947">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4022,7 +4022,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1951">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1951">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4030,7 +4030,7 @@ Your DigitalOcean Spaces account secret key.
 The Kafka topic to send logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingGooglepubsub-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1955">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1955">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4038,14 +4038,14 @@ The Kafka topic to send logs to.
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingHeroku" data-link-title="Servicev1LoggingHeroku">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1958">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1958">
         interface <strong>Servicev1LoggingHeroku</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingHeroku</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1962">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1962">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4053,7 +4053,7 @@ The username for your Cloud Files account.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1966">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1966">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4061,7 +4061,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1970">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1970">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4069,7 +4069,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1974">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1974">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4077,7 +4077,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1978">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1978">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4085,7 +4085,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1982">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1982">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4093,7 +4093,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHeroku-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1986">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1986">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4101,14 +4101,14 @@ The data authentication token associated with this endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingHoneycomb" data-link-title="Servicev1LoggingHoneycomb">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1989">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1989">
         interface <strong>Servicev1LoggingHoneycomb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingHoneycomb</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-dataset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1993">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1993">property <b>dataset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4116,7 +4116,7 @@ Your OpenStack auth url.
 The Honeycomb Dataset you want to log to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L1997">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L1997">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4124,7 +4124,7 @@ The Honeycomb Dataset you want to log to.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2001">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2001">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4132,7 +4132,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2005">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2005">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4140,7 +4140,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2009">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2009">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4148,7 +4148,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2013">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2013">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4156,7 +4156,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingHoneycomb-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2017">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2017">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4164,14 +4164,14 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingKafka" data-link-title="Servicev1LoggingKafka">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2020">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2020">
         interface <strong>Servicev1LoggingKafka</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingKafka</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-brokers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2024">property <b>brokers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2024">property <b>brokers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>brokers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4179,7 +4179,7 @@ The data authentication token associated with this endpoint.
 A comma-separated list of IP addresses or hostnames of Kafka brokers.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-compressionCodec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2028">property <b>compressionCodec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2028">property <b>compressionCodec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compressionCodec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4187,7 +4187,7 @@ A comma-separated list of IP addresses or hostnames of Kafka brokers.
 The codec used for compression of your logs. One of: gzip, snappy, lz4.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2032">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2032">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4195,7 +4195,7 @@ The codec used for compression of your logs. One of: gzip, snappy, lz4.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2036">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2036">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4203,7 +4203,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2040">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2040">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4211,7 +4211,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2044">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2044">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4219,7 +4219,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-requiredAcks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2048">property <b>requiredAcks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2048">property <b>requiredAcks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredAcks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4227,7 +4227,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2052">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2052">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4235,7 +4235,7 @@ The Number of acknowledgements a leader must receive before a write is considere
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2056">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2056">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4243,7 +4243,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2060">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2060">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4251,7 +4251,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2064">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2064">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4259,7 +4259,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2068">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2068">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4267,7 +4267,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2072">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2072">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4275,7 +4275,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 The Kafka topic to send logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingKafka-useTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2076">property <b>useTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2076">property <b>useTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4283,14 +4283,14 @@ The Kafka topic to send logs to.
 Whether to use TLS for secure logging. Can be either true or false.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingLoggly" data-link-title="Servicev1LoggingLoggly">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2079">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2079">
         interface <strong>Servicev1LoggingLoggly</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingLoggly</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingLoggly-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2083">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2083">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4298,7 +4298,7 @@ Whether to use TLS for secure logging. Can be either true or false.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLoggly-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2087">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2087">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4306,7 +4306,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLoggly-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2091">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2091">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4314,7 +4314,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLoggly-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2095">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2095">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4322,7 +4322,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLoggly-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2099">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2099">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4330,7 +4330,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLoggly-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2103">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2103">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4338,14 +4338,14 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingLogshuttle" data-link-title="Servicev1LoggingLogshuttle">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2106">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2106">
         interface <strong>Servicev1LoggingLogshuttle</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingLogshuttle</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2110">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2110">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4353,7 +4353,7 @@ The data authentication token associated with this endpoint.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2114">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2114">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4361,7 +4361,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2118">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4369,7 +4369,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2122">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2122">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4377,7 +4377,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2126">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2126">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4385,7 +4385,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2130">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2130">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4393,7 +4393,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingLogshuttle-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2134">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2134">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4401,14 +4401,14 @@ The data authentication token associated with this endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingNewrelic" data-link-title="Servicev1LoggingNewrelic">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2137">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2137">
         interface <strong>Servicev1LoggingNewrelic</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingNewrelic</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingNewrelic-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2141">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2141">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4416,7 +4416,7 @@ Your OpenStack auth url.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingNewrelic-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2145">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2145">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4424,7 +4424,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingNewrelic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4432,7 +4432,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingNewrelic-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2153">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2153">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4440,7 +4440,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingNewrelic-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2157">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2157">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4448,7 +4448,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingNewrelic-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2161">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2161">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4456,14 +4456,14 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingOpenstack" data-link-title="Servicev1LoggingOpenstack">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2164">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2164">
         interface <strong>Servicev1LoggingOpenstack</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingOpenstack</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2168">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2168">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4471,7 +4471,7 @@ The data authentication token associated with this endpoint.
 Your Cloud File account access key.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2172">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2172">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4479,7 +4479,7 @@ Your Cloud File account access key.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2176">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2176">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4487,7 +4487,7 @@ The name of your Cloud Files container.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2180">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2180">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4495,7 +4495,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2184">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2184">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4503,7 +4503,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2188">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2188">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4511,7 +4511,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4519,7 +4519,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2196">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2196">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4527,7 +4527,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2200">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2200">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4535,7 +4535,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2204">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2204">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4543,7 +4543,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2208">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2208">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4551,7 +4551,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2212">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2212">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4559,7 +4559,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2216">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2216">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4567,7 +4567,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2220">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2220">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4575,7 +4575,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 Your OpenStack auth url.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingOpenstack-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2224">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2224">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4583,14 +4583,14 @@ Your OpenStack auth url.
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingScalyr" data-link-title="Servicev1LoggingScalyr">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2227">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2227">
         interface <strong>Servicev1LoggingScalyr</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingScalyr</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2231">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2231">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4598,7 +4598,7 @@ The username for your Cloud Files account.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2235">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2235">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4606,7 +4606,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2239">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4614,7 +4614,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2243">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2243">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4622,7 +4622,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2247">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2247">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4630,7 +4630,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2251">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2251">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4638,7 +4638,7 @@ The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingScalyr-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2255">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2255">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4646,14 +4646,14 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 The data authentication token associated with this endpoint.
 
 <h3 class="pdoc-module-header" id="Servicev1LoggingSftp" data-link-title="Servicev1LoggingSftp">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2258">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2258">
         interface <strong>Servicev1LoggingSftp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1LoggingSftp</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2262">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2262">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4661,7 +4661,7 @@ The data authentication token associated with this endpoint.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2266">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2266">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4669,7 +4669,7 @@ The SFTP address to stream logs to.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2270">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2270">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4677,7 +4677,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2274">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2274">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4685,7 +4685,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2278">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2278">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4693,7 +4693,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2282">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2282">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4701,7 +4701,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2286">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2286">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4709,7 +4709,7 @@ A unique name to identify this dictionary.
 The password for the server. If both `password` and `secretKey` are passed, `secretKey` will be preferred.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2290">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2290">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4717,7 +4717,7 @@ The password for the server. If both `password` and `secretKey` are passed, `sec
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2294">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2294">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4725,7 +4725,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2298">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2298">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4733,7 +4733,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2302">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2302">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4741,7 +4741,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2306">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2306">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4749,7 +4749,7 @@ The port the SFTP service listens on. (Default: `22`).
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2310">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2310">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4757,7 +4757,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2314">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2314">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4765,7 +4765,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 Your DigitalOcean Spaces account secret key.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-sshKnownHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2318">property <b>sshKnownHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2318">property <b>sshKnownHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKnownHosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4773,7 +4773,7 @@ Your DigitalOcean Spaces account secret key.
 A list of host keys for all hosts we can connect to over SFTP.
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2322">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2322">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4781,7 +4781,7 @@ A list of host keys for all hosts we can connect to over SFTP.
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h4 class="pdoc-member-header" id="Servicev1LoggingSftp-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2326">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2326">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4789,14 +4789,14 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The username for your Cloud Files account.
 
 <h3 class="pdoc-module-header" id="Servicev1Papertrail" data-link-title="Servicev1Papertrail">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2329">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2329">
         interface <strong>Servicev1Papertrail</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Papertrail</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Papertrail-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2333">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2333">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4804,7 +4804,7 @@ The username for your Cloud Files account.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1Papertrail-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2337">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2337">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4812,7 +4812,7 @@ The SFTP address to stream logs to.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Papertrail-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2341">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2341">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4820,7 +4820,7 @@ Apache style log formatting.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Papertrail-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2345">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2345">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4828,7 +4828,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Papertrail-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2349">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2349">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4836,7 +4836,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="Servicev1Papertrail-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2353">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2353">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4844,14 +4844,14 @@ The port the SFTP service listens on. (Default: `22`).
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h3 class="pdoc-module-header" id="Servicev1RequestSetting" data-link-title="Servicev1RequestSetting">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2356">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2356">
         interface <strong>Servicev1RequestSetting</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1RequestSetting</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2361">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2361">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4860,7 +4860,7 @@ Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-bypassBusyWait">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2366">property <b>bypassBusyWait</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2366">property <b>bypassBusyWait</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bypassBusyWait?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4869,7 +4869,7 @@ Disable collapsed forwarding, so you don't wait
 for other objects to origin.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-defaultHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2370">property <b>defaultHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2370">property <b>defaultHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultHost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4877,7 +4877,7 @@ for other objects to origin.
 Sets the host header.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-forceMiss">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2375">property <b>forceMiss</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2375">property <b>forceMiss</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceMiss?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4886,7 +4886,7 @@ Force a cache miss for the request. If specified,
 can be `true` or `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-forceSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2379">property <b>forceSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2379">property <b>forceSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceSsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4894,7 +4894,7 @@ can be `true` or `false`.
 Forces the request to use SSL (Redirects a non-SSL request to SSL).
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-geoHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2384">property <b>geoHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2384">property <b>geoHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4903,7 +4903,7 @@ Injects Fastly-Geo-Country, Fastly-Geo-City, and
 Fastly-Geo-Region into the request headers.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-hashKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2389">property <b>hashKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2389">property <b>hashKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hashKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4912,7 +4912,7 @@ Comma separated list of varnish request object fields
 that should be in the hash key.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-maxStaleAge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2394">property <b>maxStaleAge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2394">property <b>maxStaleAge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStaleAge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4921,7 +4921,7 @@ How old an object is allowed to be to serve
 `stale-if-error` or `stale-while-revalidate`, in seconds.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2398">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2398">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4929,7 +4929,7 @@ How old an object is allowed to be to serve
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-requestCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2402">property <b>requestCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2402">property <b>requestCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4937,7 +4937,7 @@ A unique name to identify this dictionary.
 Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-timerSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2407">property <b>timerSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2407">property <b>timerSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timerSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4946,7 +4946,7 @@ Injects the X-Timer info into the request for
 viewing origin fetch durations.
 
 <h4 class="pdoc-member-header" id="Servicev1RequestSetting-xff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2412">property <b>xff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2412">property <b>xff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xff?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4955,14 +4955,14 @@ X-Forwarded-For, should be `clear`, `leave`, `append`,
 `appendAll`, or `overwrite`. Default `append`.
 
 <h3 class="pdoc-module-header" id="Servicev1ResponseObject" data-link-title="Servicev1ResponseObject">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2415">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2415">
         interface <strong>Servicev1ResponseObject</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1ResponseObject</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-cacheCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2420">property <b>cacheCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2420">property <b>cacheCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4971,7 +4971,7 @@ Name of already defined `condition` to check after we have retrieved an object. 
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2424">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2424">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4979,7 +4979,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 The custom VCL code to upload.
 
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2428">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2428">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4987,7 +4987,7 @@ The custom VCL code to upload.
 The MIME type of the content.
 
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2432">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2432">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4995,7 +4995,7 @@ The MIME type of the content.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-requestCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2436">property <b>requestCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2436">property <b>requestCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5003,7 +5003,7 @@ A unique name to identify this dictionary.
 Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-response">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2440">property <b>response</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2440">property <b>response</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>response?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5011,7 +5011,7 @@ Name of already defined `condition` to be checked during the request phase. If t
 The HTTP Response. Default `Ok`.
 
 <h4 class="pdoc-member-header" id="Servicev1ResponseObject-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2444">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2444">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5019,14 +5019,14 @@ The HTTP Response. Default `Ok`.
 The HTTP Status Code. Default `200`.
 
 <h3 class="pdoc-module-header" id="Servicev1S3logging" data-link-title="Servicev1S3logging">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2447">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2447">
         interface <strong>Servicev1S3logging</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1S3logging</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1S3logging-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2451">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2451">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5034,7 +5034,7 @@ The HTTP Status Code. Default `200`.
 The name of your Cloud Files container.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2455">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2455">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5042,7 +5042,7 @@ The name of your Cloud Files container.
 The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2459">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2459">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5050,7 +5050,7 @@ The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2463">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2463">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5058,7 +5058,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-gzipLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2467">property <b>gzipLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2467">property <b>gzipLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzipLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5066,7 +5066,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 What level of GZIP encoding to have when dumping logs (default 0, no compression).
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2471">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2471">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5074,7 +5074,7 @@ What level of GZIP encoding to have when dumping logs (default 0, no compression
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2475">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2475">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5082,7 +5082,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2479">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2479">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5090,7 +5090,7 @@ A unique name to identify this dictionary.
 The path to upload logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2483">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2483">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5098,7 +5098,7 @@ The path to upload logs to.
 How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2487">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2487">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5106,7 +5106,7 @@ How frequently log files are finalized so they can be available for reading (in 
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2491">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2491">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5114,7 +5114,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-redundancy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2495">property <b>redundancy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2495">property <b>redundancy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redundancy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5122,7 +5122,7 @@ The PGP public key that Fastly will use to encrypt your log files before writing
 The S3 redundancy level. Should be formatted; one of: `standard`, `reducedRedundancy` or null. Default `null`.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2499">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2499">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5130,7 +5130,7 @@ The S3 redundancy level. Should be formatted; one of: `standard`, `reducedRedund
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-s3AccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2506">property <b>s3AccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2506">property <b>s3AccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3AccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5141,7 +5141,7 @@ IAM user with permissions to only operate on this Bucket. This key will be
 not be encrypted. You can provide this key via an environment variable, `FASTLY_S3_ACCESS_KEY`.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-s3SecretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2513">property <b>s3SecretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2513">property <b>s3SecretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3SecretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5152,17 +5152,17 @@ IAM user with permissions to only operate on this Bucket. This secret will be
 not be encrypted. You can provide this secret via an environment variable, `FASTLY_S3_SECRET_KEY`.
 
 <h4 class="pdoc-member-header" id="Servicev1S3logging-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2514">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2514">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Servicev1S3logging-serverSideEncryptionKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2515">property <b>serverSideEncryptionKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2515">property <b>serverSideEncryptionKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryptionKmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Servicev1S3logging-timestampFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2519">property <b>timestampFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2519">property <b>timestampFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestampFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5170,14 +5170,14 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 
 <h3 class="pdoc-module-header" id="Servicev1Snippet" data-link-title="Servicev1Snippet">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2522">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2522">
         interface <strong>Servicev1Snippet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Snippet</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Snippet-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2526">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2526">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5185,7 +5185,7 @@ The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 The custom VCL code to upload.
 
 <h4 class="pdoc-member-header" id="Servicev1Snippet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2530">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2530">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5193,7 +5193,7 @@ The custom VCL code to upload.
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Snippet-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2534">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2534">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5201,7 +5201,7 @@ A unique name to identify this dictionary.
 Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 
 <h4 class="pdoc-member-header" id="Servicev1Snippet-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2538">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2538">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5209,14 +5209,14 @@ Priority determines the ordering for multiple snippets. Lower numbers execute fi
 The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 
 <h3 class="pdoc-module-header" id="Servicev1Splunk" data-link-title="Servicev1Splunk">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2541">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2541">
         interface <strong>Servicev1Splunk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Splunk</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Splunk-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2545">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2545">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5224,7 +5224,7 @@ The location in generated VCL where the snippet should be placed (can be one of 
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2549">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2549">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5232,7 +5232,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2553">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2553">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5240,7 +5240,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2557">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2557">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5248,7 +5248,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2561">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2561">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5256,7 +5256,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2565">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2565">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5264,7 +5264,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2569">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2569">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5272,7 +5272,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2573">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2573">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5280,7 +5280,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="Servicev1Splunk-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2577">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2577">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5288,14 +5288,14 @@ The data authentication token associated with this endpoint.
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="Servicev1Sumologic" data-link-title="Servicev1Sumologic">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2580">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2580">
         interface <strong>Servicev1Sumologic</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Sumologic</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2584">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2584">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5303,7 +5303,7 @@ Your OpenStack auth url.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2588">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2588">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5311,7 +5311,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2592">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2592">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5319,7 +5319,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2596">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2596">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5327,7 +5327,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2600">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2600">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5335,7 +5335,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2604">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2604">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5343,7 +5343,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Sumologic-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2608">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2608">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5351,14 +5351,14 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 Your OpenStack auth url.
 
 <h3 class="pdoc-module-header" id="Servicev1Syslog" data-link-title="Servicev1Syslog">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2611">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2611">
         interface <strong>Servicev1Syslog</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Syslog</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Syslog-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2615">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2615">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5366,7 +5366,7 @@ Your OpenStack auth url.
 The SFTP address to stream logs to.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2619">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2619">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5374,7 +5374,7 @@ The SFTP address to stream logs to.
 Apache style log formatting.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-formatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2623">property <b>formatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2623">property <b>formatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>formatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5382,7 +5382,7 @@ Apache style log formatting.
 The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2627">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2627">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5390,7 +5390,7 @@ The version of the custom logging format used for the configured endpoint. Can b
 How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2631">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2631">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5398,7 +5398,7 @@ How the message should be formatted. One of: classic (default), loggly, logplex 
 A unique name to identify this dictionary.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-placement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2635">property <b>placement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2635">property <b>placement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5406,7 +5406,7 @@ A unique name to identify this dictionary.
 Where in the generated VCL the logging call should be placed. Can be `none` or `wafDebug`.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2639">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2639">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5414,7 +5414,7 @@ Where in the generated VCL the logging call should be placed. Can be `none` or `
 The port the SFTP service listens on. (Default: `22`).
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-responseCondition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2643">property <b>responseCondition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2643">property <b>responseCondition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseCondition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5422,7 +5422,7 @@ The port the SFTP service listens on. (Default: `22`).
 The name of an existing condition in the configured endpoint, or leave blank to always execute.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-tlsCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2647">property <b>tlsCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2647">property <b>tlsCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5430,7 +5430,7 @@ The name of an existing condition in the configured endpoint, or leave blank to 
 A secure certificate to authenticate the server with. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-tlsClientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2651">property <b>tlsClientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2651">property <b>tlsClientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5438,7 +5438,7 @@ A secure certificate to authenticate the server with. Must be in PEM format.
 The client certificate used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-tlsClientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2655">property <b>tlsClientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2655">property <b>tlsClientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsClientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5446,7 +5446,7 @@ The client certificate used to make authenticated requests. Must be in PEM forma
 The client private key used to make authenticated requests. Must be in PEM format.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-tlsHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2659">property <b>tlsHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2659">property <b>tlsHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5454,7 +5454,7 @@ The client private key used to make authenticated requests. Must be in PEM forma
 The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2663">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2663">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5462,7 +5462,7 @@ The hostname used to verify the server's certificate. It can either be the Commo
 The data authentication token associated with this endpoint.
 
 <h4 class="pdoc-member-header" id="Servicev1Syslog-useTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2667">property <b>useTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2667">property <b>useTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5470,14 +5470,14 @@ The data authentication token associated with this endpoint.
 Whether to use TLS for secure logging. Can be either true or false.
 
 <h3 class="pdoc-module-header" id="Servicev1Vcl" data-link-title="Servicev1Vcl">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2670">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2670">
         interface <strong>Servicev1Vcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Servicev1Vcl</span></code></pre>
 <h4 class="pdoc-member-header" id="Servicev1Vcl-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2674">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2674">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5485,7 +5485,7 @@ Whether to use TLS for secure logging. Can be either true or false.
 The custom VCL code to upload.
 
 <h4 class="pdoc-member-header" id="Servicev1Vcl-main">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2680">property <b>main</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2680">property <b>main</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>main?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5495,7 +5495,7 @@ If `true`, use this block as the main configuration. If
 marked as the main block. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Servicev1Vcl-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/2c13154a49503b9454f11d507037cf09d9e5e851/sdk/nodejs/types/input.ts#L2684">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-fastly/blob/cfa401945d3cb27167075b69b15a21c67285a2cb/sdk/nodejs/types/input.ts#L2684">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
