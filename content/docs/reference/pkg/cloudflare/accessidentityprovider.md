@@ -81,7 +81,65 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewAccessIdentityProvider(ctx, "pinLogin", &cloudflare.AccessIdentityProviderArgs{
+			AccountId: pulumi.String("1d5fdc9e88c8a8c4518b068cd94331fe"),
+			Name:      pulumi.String("PIN login"),
+			Type:      pulumi.String("onetimepin"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudflare.NewAccessIdentityProvider(ctx, "githubOauth", &cloudflare.AccessIdentityProviderArgs{
+			AccountId: pulumi.String("1d5fdc9e88c8a8c4518b068cd94331fe"),
+			Configs: cloudflare.AccessIdentityProviderConfigArray{
+				&cloudflare.AccessIdentityProviderConfigArgs{
+					ClientId:     pulumi.String("example"),
+					ClientSecret: pulumi.String("secret_key"),
+				},
+			},
+			Name: pulumi.String("GitHub OAuth"),
+			Type: pulumi.String("github"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudflare.NewAccessIdentityProvider(ctx, "jumpcloudSaml", &cloudflare.AccessIdentityProviderArgs{
+			AccountId: pulumi.String("1d5fdc9e88c8a8c4518b068cd94331fe"),
+			Configs: cloudflare.AccessIdentityProviderConfigArray{
+				&cloudflare.AccessIdentityProviderConfigArgs{
+					Attributes: pulumi.StringArray{
+						pulumi.String("email"),
+						pulumi.String("username"),
+					},
+					IdpPublicCert: pulumi.String(fmt.Sprintf("%v%v", "MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg\n", "uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o\n")),
+					IssuerUrl:     pulumi.String("jumpcloud"),
+					SignRequest:   pulumi.Bool(false),
+					SsoTargetUrl:  pulumi.String("https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess"),
+				},
+			},
+			Name: pulumi.String("JumpCloud SAML"),
+			Type: pulumi.String("saml"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,27 +155,27 @@ pin_login = cloudflare.AccessIdentityProvider("pinLogin",
 # oauth
 github_oauth = cloudflare.AccessIdentityProvider("githubOauth",
     account_id="1d5fdc9e88c8a8c4518b068cd94331fe",
-    configs=[{
-        "client_id": "example",
-        "client_secret": "secret_key",
-    }],
+    configs=[cloudflare.AccessIdentityProviderConfigArgs(
+        client_id="example",
+        client_secret="secret_key",
+    )],
     name="GitHub OAuth",
     type="github")
 # saml
 jumpcloud_saml = cloudflare.AccessIdentityProvider("jumpcloudSaml",
     account_id="1d5fdc9e88c8a8c4518b068cd94331fe",
-    configs=[{
-        "attributes": [
+    configs=[cloudflare.AccessIdentityProviderConfigArgs(
+        attributes=[
             "email",
             "username",
         ],
-        "idpPublicCert": """MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg
+        idp_public_cert="""MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg
 uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
 """,
-        "issuerUrl": "jumpcloud",
-        "signRequest": False,
-        "ssoTargetUrl": "https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess",
-    }],
+        issuer_url="jumpcloud",
+        sign_request=False,
+        sso_target_url="https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess",
+    )],
     name="JumpCloud SAML",
     type="saml")
 ```
@@ -179,7 +237,7 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o`,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessIdentityProvider">AccessIdentityProvider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>configs=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessIdentityProvider">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[List[AccessIdentityProviderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -547,7 +605,7 @@ The AccessIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">List[Access<wbr>Identity<wbr>Provider<wbr>Config]</a></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">List[Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
@@ -650,7 +708,8 @@ Get an existing AccessIdentityProvider resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>configs=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[List[AccessIdentityProviderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessIdentityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -658,7 +717,7 @@ Get an existing AccessIdentityProvider resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessIdentityProvider.html">AccessIdentityProvider</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessIdentityProviderState.html">AccessIdentityProviderState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessIdentityProvider.html">AccessIdentityProvider</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessIdentityProviderState.html">AccessIdentityProviderState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -936,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">List[Access<wbr>Identity<wbr>Provider<wbr>Config]</a></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">List[Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
@@ -1591,8 +1650,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appsdomain_python">
-<a href="#appsdomain_python" style="color: inherit; text-decoration: inherit;">apps<wbr>Domain</a>
+        <span id="apps_domain_python">
+<a href="#apps_domain_python" style="color: inherit; text-decoration: inherit;">apps_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1611,8 +1670,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authurl_python">
-<a href="#authurl_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
+        <span id="auth_url_python">
+<a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1621,8 +1680,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="centrifyaccount_python">
-<a href="#centrifyaccount_python" style="color: inherit; text-decoration: inherit;">centrify<wbr>Account</a>
+        <span id="centrify_account_python">
+<a href="#centrify_account_python" style="color: inherit; text-decoration: inherit;">centrify_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1631,8 +1690,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="centrifyappid_python">
-<a href="#centrifyappid_python" style="color: inherit; text-decoration: inherit;">centrify<wbr>App<wbr>Id</a>
+        <span id="centrify_app_id_python">
+<a href="#centrify_app_id_python" style="color: inherit; text-decoration: inherit;">centrify_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1641,8 +1700,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certsurl_python">
-<a href="#certsurl_python" style="color: inherit; text-decoration: inherit;">certs<wbr>Url</a>
+        <span id="certs_url_python">
+<a href="#certs_url_python" style="color: inherit; text-decoration: inherit;">certs_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1671,8 +1730,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="directoryid_python">
-<a href="#directoryid_python" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
+        <span id="directory_id_python">
+<a href="#directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1681,8 +1740,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailattributename_python">
-<a href="#emailattributename_python" style="color: inherit; text-decoration: inherit;">email<wbr>Attribute<wbr>Name</a>
+        <span id="email_attribute_name_python">
+<a href="#email_attribute_name_python" style="color: inherit; text-decoration: inherit;">email_<wbr>attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1691,8 +1750,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="idppubliccert_python">
-<a href="#idppubliccert_python" style="color: inherit; text-decoration: inherit;">idp<wbr>Public<wbr>Cert</a>
+        <span id="idp_public_cert_python">
+<a href="#idp_public_cert_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>public_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1701,8 +1760,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issuerurl_python">
-<a href="#issuerurl_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Url</a>
+        <span id="issuer_url_python">
+<a href="#issuer_url_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1711,8 +1770,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oktaaccount_python">
-<a href="#oktaaccount_python" style="color: inherit; text-decoration: inherit;">okta<wbr>Account</a>
+        <span id="okta_account_python">
+<a href="#okta_account_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1721,8 +1780,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oneloginaccount_python">
-<a href="#oneloginaccount_python" style="color: inherit; text-decoration: inherit;">onelogin<wbr>Account</a>
+        <span id="onelogin_account_python">
+<a href="#onelogin_account_python" style="color: inherit; text-decoration: inherit;">onelogin_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1731,8 +1790,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecturl_python">
-<a href="#redirecturl_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+        <span id="redirect_url_python">
+<a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1741,8 +1800,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="signrequest_python">
-<a href="#signrequest_python" style="color: inherit; text-decoration: inherit;">sign<wbr>Request</a>
+        <span id="sign_request_python">
+<a href="#sign_request_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1751,8 +1810,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssotargeturl_python">
-<a href="#ssotargeturl_python" style="color: inherit; text-decoration: inherit;">sso<wbr>Target<wbr>Url</a>
+        <span id="sso_target_url_python">
+<a href="#sso_target_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>target_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1761,8 +1820,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="supportgroups_python">
-<a href="#supportgroups_python" style="color: inherit; text-decoration: inherit;">support<wbr>Groups</a>
+        <span id="support_groups_python">
+<a href="#support_groups_python" style="color: inherit; text-decoration: inherit;">support_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1771,8 +1830,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenurl_python">
-<a href="#tokenurl_python" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
+        <span id="token_url_python">
+<a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1797,6 +1856,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

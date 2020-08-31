@@ -53,7 +53,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewZoneLockdown(ctx, "endpointLockdown", &cloudflare.ZoneLockdownArgs{
+			Configurations: cloudflare.ZoneLockdownConfigurationArray{
+				&cloudflare.ZoneLockdownConfigurationArgs{
+					Target: pulumi.String("ip"),
+					Value:  pulumi.String("198.51.100.4"),
+				},
+			},
+			Description: pulumi.String("Restrict access to these endpoints to requests from a known IP address"),
+			Paused:      pulumi.Bool(false),
+			Urls: pulumi.StringArray{
+				pulumi.String("api.mysite.com/some/endpoint*"),
+			},
+			ZoneId: pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,12 +94,12 @@ import pulumi_cloudflare as cloudflare
 
 # Restrict access to these endpoints to requests from a known IP address.
 endpoint_lockdown = cloudflare.ZoneLockdown("endpointLockdown",
-    configurations=[{
-        "target": "ip",
-        "value": "198.51.100.4",
-    }],
+    configurations=[cloudflare.ZoneLockdownConfigurationArgs(
+        target="ip",
+        value="198.51.100.4",
+    )],
     description="Restrict access to these endpoints to requests from a known IP address",
-    paused="false",
+    paused=False,
     urls=["api.mysite.com/some/endpoint*"],
     zone_id="d41d8cd98f00b204e9800998ecf8427e")
 ```
@@ -108,7 +139,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.ZoneLockdown">ZoneLockdown</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configurations=None<span class="p">, </span>description=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.ZoneLockdown">ZoneLockdown</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[List[ZoneLockdownConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">paused</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -502,7 +533,7 @@ The ZoneLockdown resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonelockdownconfiguration">List[Zone<wbr>Lockdown<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#zonelockdownconfiguration">List[Zone<wbr>Lockdown<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses or IP ranges to match the request against specified in target, value pairs.  It's a complex value. See description below.   The order of the configuration entries is unimportant.
 {{% /md %}}</dd>
@@ -659,7 +690,8 @@ Get an existing ZoneLockdown resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configurations=None<span class="p">, </span>description=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[List[ZoneLockdownConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">paused</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ZoneLockdown</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -667,7 +699,7 @@ Get an existing ZoneLockdown resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.ZoneLockdown.html">ZoneLockdown</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..ZoneLockdownState.html">ZoneLockdownState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.ZoneLockdown.html">ZoneLockdown</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..ZoneLockdownState.html">ZoneLockdownState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -995,7 +1027,7 @@ The following state arguments are supported:
 <a href="#state_configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonelockdownconfiguration">List[Zone<wbr>Lockdown<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#zonelockdownconfiguration">List[Zone<wbr>Lockdown<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses or IP ranges to match the request against specified in target, value pairs.  It's a complex value. See description below.   The order of the configuration entries is unimportant.
 {{% /md %}}</dd>
@@ -1214,6 +1246,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

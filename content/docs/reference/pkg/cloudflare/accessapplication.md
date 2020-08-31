@@ -28,8 +28,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // With CORS configuration
         var stagingApp = new Cloudflare.AccessApplication("stagingApp", new Cloudflare.AccessApplicationArgs
         {
+            CorsHeaders = 
+            {
+                new Cloudflare.Inputs.AccessApplicationCorsHeaderArgs
+                {
+                    AllowCredentials = true,
+                    AllowedMethods = 
+                    {
+                        "GET",
+                        "POST",
+                        "OPTIONS",
+                    },
+                    AllowedOrigins = 
+                    {
+                        "https://example.com",
+                    },
+                    MaxAge = 10,
+                },
+            },
             Domain = "staging.example.com",
             Name = "staging application",
             SessionDuration = "24h",
@@ -43,7 +62,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewAccessApplication(ctx, "stagingApp", &cloudflare.AccessApplicationArgs{
+			CorsHeaders: cloudflare.AccessApplicationCorsHeaderArray{
+				&cloudflare.AccessApplicationCorsHeaderArgs{
+					AllowCredentials: pulumi.Bool(true),
+					AllowedMethods: pulumi.StringArray{
+						pulumi.String("GET"),
+						pulumi.String("POST"),
+						pulumi.String("OPTIONS"),
+					},
+					AllowedOrigins: pulumi.StringArray{
+						pulumi.String("https://example.com"),
+					},
+					MaxAge: pulumi.Int(10),
+				},
+			},
+			Domain:          pulumi.String("staging.example.com"),
+			Name:            pulumi.String("staging application"),
+			SessionDuration: pulumi.String("24h"),
+			ZoneId:          pulumi.String("1d5fdc9e88c8a8c4518b068cd94331fe"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -51,7 +107,18 @@ Coming soon!
 import pulumi
 import pulumi_cloudflare as cloudflare
 
+# With CORS configuration
 staging_app = cloudflare.AccessApplication("stagingApp",
+    cors_headers=[cloudflare.AccessApplicationCorsHeaderArgs(
+        allow_credentials=True,
+        allowed_methods=[
+            "GET",
+            "POST",
+            "OPTIONS",
+        ],
+        allowed_origins=["https://example.com"],
+        max_age=10,
+    )],
     domain="staging.example.com",
     name="staging application",
     session_duration="24h",
@@ -66,7 +133,18 @@ staging_app = cloudflare.AccessApplication("stagingApp",
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
+// With CORS configuration
 const stagingApp = new cloudflare.AccessApplication("staging_app", {
+    corsHeaders: [{
+        allowCredentials: true,
+        allowedMethods: [
+            "GET",
+            "POST",
+            "OPTIONS",
+        ],
+        allowedOrigins: ["https://example.com"],
+        maxAge: 10,
+    }],
     domain: "staging.example.com",
     name: "staging application",
     sessionDuration: "24h",
@@ -88,7 +166,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessApplication">AccessApplication</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>name=None<span class="p">, </span>session_duration=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[List[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -283,15 +361,50 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_csharp">
-<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedidps_csharp">
+<a href="#allowedidps_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoredirecttoidentity_csharp">
+<a href="#autoredirecttoidentity_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corsheaders_csharp">
+<a href="#corsheaders_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">List&lt;Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -303,8 +416,19 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -336,15 +460,50 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_go">
-<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedidps_go">
+<a href="#allowedidps_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoredirecttoidentity_go">
+<a href="#autoredirecttoidentity_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corsheaders_go">
+<a href="#corsheaders_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">[]Access<wbr>Application<wbr>Cors<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,8 +515,19 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -389,15 +559,50 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_nodejs">
-<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedidps_nodejs">
+<a href="#allowedidps_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoredirecttoidentity_nodejs">
+<a href="#autoredirecttoidentity_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Redirect<wbr>To<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corsheaders_nodejs">
+<a href="#corsheaders_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">Access<wbr>Application<wbr>Cors<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -409,8 +614,19 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -442,15 +658,50 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_id_python">
-<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_idps_python">
+<a href="#allowed_idps_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_redirect_to_identity_python">
+<a href="#auto_redirect_to_identity_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>redirect_<wbr>to_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cors_headers_python">
+<a href="#cors_headers_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">List[Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -462,8 +713,19 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -607,7 +869,8 @@ Get an existing AccessApplication resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>aud=None<span class="p">, </span>domain=None<span class="p">, </span>name=None<span class="p">, </span>session_duration=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[List[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -615,7 +878,7 @@ Get an existing AccessApplication resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessApplication.html">AccessApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessApplicationState.html">AccessApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessApplication.html">AccessApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessApplicationState.html">AccessApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -723,6 +986,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_csharp">
+<a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowedidps_csharp">
+<a href="#state_allowedidps_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_aud_csharp">
 <a href="#state_aud_csharp" style="color: inherit; text-decoration: inherit;">Aud</a>
 </span> 
@@ -730,6 +1014,31 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autoredirecttoidentity_csharp">
+<a href="#state_autoredirecttoidentity_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_corsheaders_csharp">
+<a href="#state_corsheaders_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">List&lt;Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -764,11 +1073,11 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span> 
@@ -776,7 +1085,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -787,6 +1096,27 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_go">
+<a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowedidps_go">
+<a href="#state_allowedidps_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_aud_go">
 <a href="#state_aud_go" style="color: inherit; text-decoration: inherit;">Aud</a>
 </span> 
@@ -794,6 +1124,31 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autoredirecttoidentity_go">
+<a href="#state_autoredirecttoidentity_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_corsheaders_go">
+<a href="#state_corsheaders_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">[]Access<wbr>Application<wbr>Cors<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,11 +1183,11 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span> 
@@ -840,7 +1195,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -851,6 +1206,27 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_nodejs">
+<a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowedidps_nodejs">
+<a href="#state_allowedidps_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_aud_nodejs">
 <a href="#state_aud_nodejs" style="color: inherit; text-decoration: inherit;">aud</a>
 </span> 
@@ -858,6 +1234,31 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autoredirecttoidentity_nodejs">
+<a href="#state_autoredirecttoidentity_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Redirect<wbr>To<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_corsheaders_nodejs">
+<a href="#state_corsheaders_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">Access<wbr>Application<wbr>Cors<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -892,11 +1293,11 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span> 
@@ -904,7 +1305,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -915,6 +1316,27 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_account_id_python">
+<a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowed_idps_python">
+<a href="#state_allowed_idps_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>idps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity providers selected for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_aud_python">
 <a href="#state_aud_python" style="color: inherit; text-decoration: inherit;">aud</a>
 </span> 
@@ -922,6 +1344,31 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_auto_redirect_to_identity_python">
+<a href="#state_auto_redirect_to_identity_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>redirect_<wbr>to_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to skip identity provider
+selection if only one is configured in allowed_idps. Defaults to `false`
+(disabled).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cors_headers_python">
+<a href="#state_cors_headers_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">List[Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}CORS configuration for the Access Application. See
+below for reference structure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -956,11 +1403,11 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
+re-authorise. Must be one of `0s`, `15m`, `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span> 
@@ -968,12 +1415,440 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in version 3 and replaced with the account_id field.{{% /md %}}</p></dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="accessapplicationcorsheader">Access<wbr>Application<wbr>Cors<wbr>Header</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessApplicationCorsHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessApplicationCorsHeader">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessApplicationCorsHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessApplicationCorsHeaderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.AccessApplicationCorsHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.AccessApplicationCorsHeader.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallheaders_csharp">
+<a href="#allowallheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+HTTP headers are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallmethods_csharp">
+<a href="#allowallmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+methods are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallorigins_csharp">
+<a href="#allowallorigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+origins are permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine if credentials
+(cookies, authorization headers, or TLS client certificates) are included with
+requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedheaders_csharp">
+<a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of HTTP headers to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of methods to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of origins permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Integer representing the maximum time a preflight
+request will be cached.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallheaders_go">
+<a href="#allowallheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+HTTP headers are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallmethods_go">
+<a href="#allowallmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+methods are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallorigins_go">
+<a href="#allowallorigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+origins are permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine if credentials
+(cookies, authorization headers, or TLS client certificates) are included with
+requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedheaders_go">
+<a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of HTTP headers to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of methods to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of origins permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Integer representing the maximum time a preflight
+request will be cached.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallheaders_nodejs">
+<a href="#allowallheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+HTTP headers are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallmethods_nodejs">
+<a href="#allowallmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+methods are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowallorigins_nodejs">
+<a href="#allowallorigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+origins are permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine if credentials
+(cookies, authorization headers, or TLS client certificates) are included with
+requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedheaders_nodejs">
+<a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of HTTP headers to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of methods to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of origins permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Integer representing the maximum time a preflight
+request will be cached.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_all_headers_python">
+<a href="#allow_all_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+HTTP headers are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_all_methods_python">
+<a href="#allow_all_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+methods are exposed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_all_origins_python">
+<a href="#allow_all_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine whether all
+origins are permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean value to determine if credentials
+(cookies, authorization headers, or TLS client certificates) are included with
+requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of HTTP headers to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of methods to expose via CORS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of origins permitted to make CORS requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Integer representing the maximum time a preflight
+request will be cached.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 
@@ -990,6 +1865,6 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

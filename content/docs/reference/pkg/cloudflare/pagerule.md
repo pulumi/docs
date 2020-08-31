@@ -36,13 +36,13 @@ class MyStack : Stack
             {
                 Ssl = "flexible",
                 EmailObfuscation = "on",
-                Minify = 
+                Minifies = 
                 {
-                    
+                    new Cloudflare.Inputs.PageRuleActionsMinifyArgs
                     {
-                        { "html", "off" },
-                        { "css", "on" },
-                        { "js", "on" },
+                        Html = "off",
+                        Css = "on",
+                        Js = "on",
                     },
                 },
             },
@@ -55,7 +55,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewPageRule(ctx, "foobar", &cloudflare.PageRuleArgs{
+			ZoneId:   pulumi.Any(_var.Cloudflare_zone_id),
+			Target:   pulumi.String(fmt.Sprintf("%v%v%v", "sub.", _var.Cloudflare_zone, "/page")),
+			Priority: pulumi.Int(1),
+			Actions: &cloudflare.PageRuleActionsArgs{
+				Ssl:              pulumi.String("flexible"),
+				EmailObfuscation: pulumi.String("on"),
+				Minifies: cloudflare.PageRuleActionsMinifyArray{
+					&cloudflare.PageRuleActionsMinifyArgs{
+						Html: pulumi.String("off"),
+						Css:  pulumi.String("on"),
+						Js:   pulumi.String("on"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,15 +103,15 @@ foobar = cloudflare.PageRule("foobar",
     zone_id=var["cloudflare_zone_id"],
     target=f"sub.{var['cloudflare_zone']}/page",
     priority=1,
-    actions={
-        "ssl": "flexible",
-        "emailObfuscation": "on",
-        "minify": [{
-            "html": "off",
-            "css": "on",
-            "js": "on",
-        }],
-    })
+    actions=cloudflare.PageRuleActionsArgs(
+        ssl="flexible",
+        email_obfuscation="on",
+        minifies=[cloudflare.PageRuleActionsMinifyArgs(
+            html="off",
+            css="on",
+            js="on",
+        )],
+    ))
 ```
 
 {{% /example %}}
@@ -95,7 +130,7 @@ const foobar = new cloudflare.PageRule("foobar", {
     actions: {
         ssl: "flexible",
         emailObfuscation: "on",
-        minify: [{
+        minifies: [{
             html: "off",
             css: "on",
             js: "on",
@@ -118,7 +153,7 @@ const foobar = new cloudflare.PageRule("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.PageRule">PageRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>target=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.PageRule">PageRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +517,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactions">Dict[Page<wbr>Rule<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
 {{% /md %}}</dd>
@@ -629,7 +664,8 @@ Get an existing PageRule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>target=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[PageRuleActionsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PageRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -637,7 +673,7 @@ Get an existing PageRule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.PageRule.html">PageRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..PageRuleState.html">PageRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.PageRule.html">PageRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..PageRuleState.html">PageRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -935,7 +971,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactions">Dict[Page<wbr>Rule<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
 {{% /md %}}</dd>
@@ -2261,8 +2297,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwaysonline_python">
-<a href="#alwaysonline_python" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
+        <span id="always_online_python">
+<a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2272,8 +2308,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwaysusehttps_python">
-<a href="#alwaysusehttps_python" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
+        <span id="always_use_https_python">
+<a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2283,8 +2319,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automatichttpsrewrites_python">
-<a href="#automatichttpsrewrites_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
+        <span id="automatic_https_rewrites_python">
+<a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2294,8 +2330,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsercachettl_python">
-<a href="#browsercachettl_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
+        <span id="browser_cache_ttl_python">
+<a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2305,8 +2341,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsercheck_python">
-<a href="#browsercheck_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
+        <span id="browser_check_python">
+<a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2316,8 +2352,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bypasscacheoncookie_python">
-<a href="#bypasscacheoncookie_python" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Cookie</a>
+        <span id="bypass_cache_on_cookie_python">
+<a href="#bypass_cache_on_cookie_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2327,8 +2363,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachebydevicetype_python">
-<a href="#cachebydevicetype_python" style="color: inherit; text-decoration: inherit;">cache<wbr>By<wbr>Device<wbr>Type</a>
+        <span id="cache_by_device_type_python">
+<a href="#cache_by_device_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>by_<wbr>device_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2338,8 +2374,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachedeceptionarmor_python">
-<a href="#cachedeceptionarmor_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Deception<wbr>Armor</a>
+        <span id="cache_deception_armor_python">
+<a href="#cache_deception_armor_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>deception_<wbr>armor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2349,19 +2385,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachekeyfields_python">
-<a href="#cachekeyfields_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Fields</a>
+        <span id="cache_key_fields_python">
+<a href="#cache_key_fields_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfields">Dict[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachelevel_python">
-<a href="#cachelevel_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
+        <span id="cache_level_python">
+<a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2371,8 +2407,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheoncookie_python">
-<a href="#cacheoncookie_python" style="color: inherit; text-decoration: inherit;">cache<wbr>On<wbr>Cookie</a>
+        <span id="cache_on_cookie_python">
+<a href="#cache_on_cookie_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>on_<wbr>cookie</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2382,19 +2418,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachettlbystatuses_python">
-<a href="#cachettlbystatuses_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
+        <span id="cache_ttl_by_statuses_python">
+<a href="#cache_ttl_by_statuses_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>by_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachettlbystatus">List[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">List[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disableapps_python">
-<a href="#disableapps_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Apps</a>
+        <span id="disable_apps_python">
+<a href="#disable_apps_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>apps</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2404,8 +2440,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disableperformance_python">
-<a href="#disableperformance_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Performance</a>
+        <span id="disable_performance_python">
+<a href="#disable_performance_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>performance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2415,8 +2451,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablerailgun_python">
-<a href="#disablerailgun_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Railgun</a>
+        <span id="disable_railgun_python">
+<a href="#disable_railgun_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>railgun</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2426,8 +2462,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disablesecurity_python">
-<a href="#disablesecurity_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Security</a>
+        <span id="disable_security_python">
+<a href="#disable_security_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>security</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2437,8 +2473,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="edgecachettl_python">
-<a href="#edgecachettl_python" style="color: inherit; text-decoration: inherit;">edge<wbr>Cache<wbr>Ttl</a>
+        <span id="edge_cache_ttl_python">
+<a href="#edge_cache_ttl_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>cache_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2448,8 +2484,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailobfuscation_python">
-<a href="#emailobfuscation_python" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
+        <span id="email_obfuscation_python">
+<a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2459,8 +2495,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="explicitcachecontrol_python">
-<a href="#explicitcachecontrol_python" style="color: inherit; text-decoration: inherit;">explicit<wbr>Cache<wbr>Control</a>
+        <span id="explicit_cache_control_python">
+<a href="#explicit_cache_control_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>cache_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2470,19 +2506,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardingurl_python">
-<a href="#forwardingurl_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Url</a>
+        <span id="forwarding_url_python">
+<a href="#forwarding_url_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsforwardingurl">Dict[Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url]</a></span>
+        <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostheaderoverride_python">
-<a href="#hostheaderoverride_python" style="color: inherit; text-decoration: inherit;">host<wbr>Header<wbr>Override</a>
+        <span id="host_header_override_python">
+<a href="#host_header_override_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2492,8 +2528,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipgeolocation_python">
-<a href="#ipgeolocation_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
+        <span id="ip_geolocation_python">
+<a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2507,7 +2543,7 @@ The following state arguments are supported:
 <a href="#minifies_python" style="color: inherit; text-decoration: inherit;">minifies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionsminify">List[Page<wbr>Rule<wbr>Actions<wbr>Minify]</a></span>
+        <span class="property-type"><a href="#pageruleactionsminify">List[Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
 {{% /md %}}</dd>
@@ -2525,8 +2561,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="opportunisticencryption_python">
-<a href="#opportunisticencryption_python" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
+        <span id="opportunistic_encryption_python">
+<a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2536,8 +2572,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="originerrorpagepassthru_python">
-<a href="#originerrorpagepassthru_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
+        <span id="origin_error_page_pass_thru_python">
+<a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2558,8 +2594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resolveoverride_python">
-<a href="#resolveoverride_python" style="color: inherit; text-decoration: inherit;">resolve<wbr>Override</a>
+        <span id="resolve_override_python">
+<a href="#resolve_override_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2569,8 +2605,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="respectstrongetag_python">
-<a href="#respectstrongetag_python" style="color: inherit; text-decoration: inherit;">respect<wbr>Strong<wbr>Etag</a>
+        <span id="respect_strong_etag_python">
+<a href="#respect_strong_etag_python" style="color: inherit; text-decoration: inherit;">respect_<wbr>strong_<wbr>etag</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2580,8 +2616,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsebuffering_python">
-<a href="#responsebuffering_python" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
+        <span id="response_buffering_python">
+<a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2591,8 +2627,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rocketloader_python">
-<a href="#rocketloader_python" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
+        <span id="rocket_loader_python">
+<a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2602,8 +2638,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2613,8 +2649,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serversideexclude_python">
-<a href="#serversideexclude_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
+        <span id="server_side_exclude_python">
+<a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2624,8 +2660,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sortquerystringforcache_python">
-<a href="#sortquerystringforcache_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
+        <span id="sort_query_string_for_cache_python">
+<a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2646,8 +2682,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trueclientipheader_python">
-<a href="#trueclientipheader_python" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
+        <span id="true_client_ip_header_python">
+<a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2883,7 +2919,7 @@ The following state arguments are supported:
 <a href="#cookie_python" style="color: inherit; text-decoration: inherit;">cookie</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Dict[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
 {{% /md %}}</dd>
@@ -2894,7 +2930,7 @@ The following state arguments are supported:
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Dict[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
 {{% /md %}}</dd>
@@ -2905,18 +2941,18 @@ The following state arguments are supported:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Dict[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="querystring_python">
-<a href="#querystring_python" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Dict[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
 {{% /md %}}</dd>
@@ -2927,7 +2963,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Dict[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User]</a></span>
+        <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
 {{% /md %}}</dd>
@@ -3046,8 +3082,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkpresences_python">
-<a href="#checkpresences_python" style="color: inherit; text-decoration: inherit;">check<wbr>Presences</a>
+        <span id="check_presences_python">
+<a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3213,8 +3249,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkpresences_python">
-<a href="#checkpresences_python" style="color: inherit; text-decoration: inherit;">check<wbr>Presences</a>
+        <span id="check_presences_python">
+<a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3659,8 +3695,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicetype_python">
-<a href="#devicetype_python" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
+        <span id="device_type_python">
+<a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3942,8 +3978,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statuscode_python">
-<a href="#statuscode_python" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
+        <span id="status_code_python">
+<a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4158,6 +4194,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

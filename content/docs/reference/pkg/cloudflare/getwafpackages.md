@@ -25,7 +25,7 @@ Use this data source to look up [WAF Rule Packages](https://api.cloudflare.com/#
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_waf_packages(</span>filter=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_waf_packages(</span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[GetWafPackagesFilterArgs]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWafPackagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -58,7 +58,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the DNS zone in which to search for the WAF Rule Packages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -68,7 +69,9 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up WAF Rule Packages. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -85,7 +88,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the DNS zone in which to search for the WAF Rule Packages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -95,7 +99,9 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up WAF Rule Packages. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -112,7 +118,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the DNS zone in which to search for the WAF Rule Packages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -122,7 +129,9 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up WAF Rule Packages. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -139,7 +148,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the DNS zone in which to search for the WAF Rule Packages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -147,9 +157,11 @@ The following arguments are supported:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getwafpackagesfilter">Dict[Get<wbr>Waf<wbr>Packages<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more values used to look up WAF Rule Packages. If more than one value is given all
+values must match in order to be included, see below for full list.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -190,7 +202,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">List&lt;Get<wbr>Waf<wbr>Packages<wbr>Package&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of WAF Rule Packages details. Full list below:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -238,7 +251,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">[]Get<wbr>Waf<wbr>Packages<wbr>Package</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of WAF Rule Packages details. Full list below:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -286,7 +300,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">Get<wbr>Waf<wbr>Packages<wbr>Package[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of WAF Rule Packages details. Full list below:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -334,7 +349,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getwafpackagespackage">List[Get<wbr>Waf<wbr>Packages<wbr>Package]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of WAF Rule Packages details. Full list below:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -352,7 +368,7 @@ The following output properties are available:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getwafpackagesfilter">Dict[Get<wbr>Waf<wbr>Packages<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getwafpackagesfilter">Get<wbr>Waf<wbr>Packages<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -395,7 +411,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -405,7 +422,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -415,7 +433,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -425,7 +444,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -442,7 +462,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -452,7 +473,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -462,7 +484,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -472,7 +495,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -489,7 +513,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -499,7 +524,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -509,7 +535,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -519,7 +546,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -536,17 +564,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="detectionmode_python">
-<a href="#detectionmode_python" style="color: inherit; text-decoration: inherit;">detection<wbr>Mode</a>
+        <span id="detection_mode_python">
+<a href="#detection_mode_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -556,7 +586,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -566,7 +597,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -601,7 +633,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -611,7 +644,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package description
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -621,7 +655,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -631,7 +666,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +677,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -651,7 +688,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -668,7 +706,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -678,7 +717,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package description
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -688,7 +728,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -698,7 +739,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -708,7 +750,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -718,7 +761,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -735,7 +779,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -745,7 +790,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package description
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -755,7 +801,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -765,7 +812,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -775,7 +823,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -785,7 +834,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -802,7 +852,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Action mode of the WAF Rule Packages to lookup. Valid values: simulate, block and challenge.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -812,17 +863,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package description
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="detectionmode_python">
-<a href="#detectionmode_python" style="color: inherit; text-decoration: inherit;">detection<wbr>Mode</a>
+        <span id="detection_mode_python">
+<a href="#detection_mode_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Detection mode of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -832,7 +885,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The WAF Rule Package ID
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -842,7 +896,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A regular expression matching the name of the WAF Rule Packages to lookup.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -852,7 +907,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sensitivity of the WAF Rule Packages to lookup. Valid values: high, medium, low and off.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -872,6 +928,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

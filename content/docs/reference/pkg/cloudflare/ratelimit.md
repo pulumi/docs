@@ -12,208 +12,6 @@ meta_desc: "Explore the RateLimit resource of the Cloudflare package, including 
 
 Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Cloudflare = Pulumi.Cloudflare;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Cloudflare.RateLimit("example", new Cloudflare.RateLimitArgs
-        {
-            ZoneId = @var.Cloudflare_zone_id,
-            Threshold = 2000,
-            Period = 2,
-            Match = new Cloudflare.Inputs.RateLimitMatchArgs
-            {
-                Request = new Cloudflare.Inputs.RateLimitMatchRequestArgs
-                {
-                    UrlPattern = $"{@var.Cloudflare_zone}/*",
-                    Schemes = 
-                    {
-                        "HTTP",
-                        "HTTPS",
-                    },
-                    Methods = 
-                    {
-                        "GET",
-                        "POST",
-                        "PUT",
-                        "DELETE",
-                        "PATCH",
-                        "HEAD",
-                    },
-                },
-                Response = new Cloudflare.Inputs.RateLimitMatchResponseArgs
-                {
-                    Statuses = 
-                    {
-                        200,
-                        201,
-                        202,
-                        301,
-                        429,
-                    },
-                    OriginTraffic = false,
-                },
-            },
-            Action = new Cloudflare.Inputs.RateLimitActionArgs
-            {
-                Mode = "simulate",
-                Timeout = 43200,
-                Response = new Cloudflare.Inputs.RateLimitActionResponseArgs
-                {
-                    ContentType = "text/plain",
-                    Body = "custom response body",
-                },
-            },
-            Correlate = new Cloudflare.Inputs.RateLimitCorrelateArgs
-            {
-                By = "nat",
-            },
-            Disabled = false,
-            Description = "example rate limit for a zone",
-            BypassUrlPatterns = 
-            {
-                $"{@var.Cloudflare_zone}/bypass1",
-                $"{@var.Cloudflare_zone}/bypass2",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_cloudflare as cloudflare
-
-example = cloudflare.RateLimit("example",
-    zone_id=var["cloudflare_zone_id"],
-    threshold=2000,
-    period=2,
-    match={
-        "request": {
-            "urlPattern": f"{var['cloudflare_zone']}/*",
-            "schemes": [
-                "HTTP",
-                "HTTPS",
-            ],
-            "methods": [
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE",
-                "PATCH",
-                "HEAD",
-            ],
-        },
-        "response": {
-            "statuses": [
-                200,
-                201,
-                202,
-                301,
-                429,
-            ],
-            "originTraffic": False,
-        },
-    },
-    action={
-        "mode": "simulate",
-        "timeout": 43200,
-        "response": {
-            "contentType": "text/plain",
-            "body": "custom response body",
-        },
-    },
-    correlate={
-        "by": "nat",
-    },
-    disabled=False,
-    description="example rate limit for a zone",
-    bypass_url_patterns=[
-        f"{var['cloudflare_zone']}/bypass1",
-        f"{var['cloudflare_zone']}/bypass2",
-    ])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as cloudflare from "@pulumi/cloudflare";
-
-const example = new cloudflare.RateLimit("example", {
-    zoneId: _var.cloudflare_zone_id,
-    threshold: 2000,
-    period: 2,
-    match: {
-        request: {
-            urlPattern: `${_var.cloudflare_zone}/*`,
-            schemes: [
-                "HTTP",
-                "HTTPS",
-            ],
-            methods: [
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE",
-                "PATCH",
-                "HEAD",
-            ],
-        },
-        response: {
-            statuses: [
-                200,
-                201,
-                202,
-                301,
-                429,
-            ],
-            originTraffic: false,
-        },
-    },
-    action: {
-        mode: "simulate",
-        timeout: 43200,
-        response: {
-            contentType: "text/plain",
-            body: "custom response body",
-        },
-    },
-    correlate: {
-        by: "nat",
-    },
-    disabled: false,
-    description: "example rate limit for a zone",
-    bypassUrlPatterns: [
-        `${_var.cloudflare_zone}/bypass1`,
-        `${_var.cloudflare_zone}/bypass2`,
-    ],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a RateLimit Resource {#create}
@@ -225,7 +23,7 @@ const example = new cloudflare.RateLimit("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.RateLimit">RateLimit</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>bypass_url_patterns=None<span class="p">, </span>correlate=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>match=None<span class="p">, </span>period=None<span class="p">, </span>threshold=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.RateLimit">RateLimit</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[RateLimitActionArgs]</span> = None<span class="p">, </span><span class="nx">bypass_url_patterns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">correlate</span><span class="p">:</span> <span class="nx">Optional[RateLimitCorrelateArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[RateLimitMatchArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -721,7 +519,7 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitaction">Dict[Rate<wbr>Limit<wbr>Action]</a></span>
+        <span class="property-type"><a href="#ratelimitaction">Rate<wbr>Limit<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to be performed when the threshold of matched traffic within the period defined is exceeded.
 {{% /md %}}</dd>
@@ -776,7 +574,7 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#correlate_python" style="color: inherit; text-decoration: inherit;">correlate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitcorrelate">Dict[Rate<wbr>Limit<wbr>Correlate]</a></span>
+        <span class="property-type"><a href="#ratelimitcorrelate">Rate<wbr>Limit<wbr>Correlate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines how rate limiting is applied. By default if not specified, rate limiting applies to the clients IP address.
 {{% /md %}}</dd>
@@ -809,7 +607,7 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitmatch">Dict[Rate<wbr>Limit<wbr>Match]</a></span>
+        <span class="property-type"><a href="#ratelimitmatch">Rate<wbr>Limit<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines which traffic the rate limit counts towards the threshold. By default matches all traffic in the zone. See definition below.
 {{% /md %}}</dd>
@@ -912,7 +710,8 @@ Get an existing RateLimit resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>bypass_url_patterns=None<span class="p">, </span>correlate=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>match=None<span class="p">, </span>period=None<span class="p">, </span>threshold=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[RateLimitActionArgs]</span> = None<span class="p">, </span><span class="nx">bypass_url_patterns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">correlate</span><span class="p">:</span> <span class="nx">Optional[RateLimitCorrelateArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[RateLimitMatchArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RateLimit</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -920,7 +719,7 @@ Get an existing RateLimit resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.RateLimit.html">RateLimit</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..RateLimitState.html">RateLimitState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.RateLimit.html">RateLimit</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..RateLimitState.html">RateLimitState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1350,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitaction">Dict[Rate<wbr>Limit<wbr>Action]</a></span>
+        <span class="property-type"><a href="#ratelimitaction">Rate<wbr>Limit<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to be performed when the threshold of matched traffic within the period defined is exceeded.
 {{% /md %}}</dd>
@@ -1372,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_correlate_python" style="color: inherit; text-decoration: inherit;">correlate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitcorrelate">Dict[Rate<wbr>Limit<wbr>Correlate]</a></span>
+        <span class="property-type"><a href="#ratelimitcorrelate">Rate<wbr>Limit<wbr>Correlate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines how rate limiting is applied. By default if not specified, rate limiting applies to the clients IP address.
 {{% /md %}}</dd>
@@ -1405,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitmatch">Dict[Rate<wbr>Limit<wbr>Match]</a></span>
+        <span class="property-type"><a href="#ratelimitmatch">Rate<wbr>Limit<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines which traffic the rate limit counts towards the threshold. By default matches all traffic in the zone. See definition below.
 {{% /md %}}</dd>
@@ -1613,7 +1412,7 @@ The following state arguments are supported:
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitactionresponse">Dict[Rate<wbr>Limit<wbr>Action<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ratelimitactionresponse">Rate<wbr>Limit<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.
 {{% /md %}}</dd>
@@ -1754,8 +1553,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="contenttype_python">
-<a href="#contenttype_python" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1971,7 +1770,7 @@ The following state arguments are supported:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitmatchrequest">Dict[Rate<wbr>Limit<wbr>Match<wbr>Request]</a></span>
+        <span class="property-type"><a href="#ratelimitmatchrequest">Rate<wbr>Limit<wbr>Match<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Matches HTTP requests (from the client to Cloudflare). See definition below.
 {{% /md %}}</dd>
@@ -1982,7 +1781,7 @@ The following state arguments are supported:
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitmatchresponse">Dict[Rate<wbr>Limit<wbr>Match<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ratelimitmatchresponse">Rate<wbr>Limit<wbr>Match<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.
 {{% /md %}}</dd>
@@ -2156,8 +1955,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlpattern_python">
-<a href="#urlpattern_python" style="color: inherit; text-decoration: inherit;">url<wbr>Pattern</a>
+        <span id="url_pattern_python">
+<a href="#url_pattern_python" style="color: inherit; text-decoration: inherit;">url_<wbr>pattern</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2279,8 +2078,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="origintraffic_python">
-<a href="#origintraffic_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Traffic</a>
+        <span id="origin_traffic_python">
+<a href="#origin_traffic_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2294,7 +2093,7 @@ The following state arguments are supported:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Status codes, can be one [403], many [401,403] or indicate all by not providing this value.
 {{% /md %}}</dd>
@@ -2317,6 +2116,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

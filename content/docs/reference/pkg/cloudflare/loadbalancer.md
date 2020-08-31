@@ -12,6 +12,213 @@ meta_desc: "Explore the LoadBalancer resource of the Cloudflare package, includi
 
 Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Cloudflare.LoadBalancerPool("foo", new Cloudflare.LoadBalancerPoolArgs
+        {
+            Name = "example-lb-pool",
+            Origins = 
+            {
+                new Cloudflare.Inputs.LoadBalancerPoolOriginArgs
+                {
+                    Name = "example-1",
+                    Address = "192.0.2.1",
+                    Enabled = false,
+                },
+            },
+        });
+        // Define a load balancer which always points to a pool we define below
+        // In normal usage, would have different pools set for different pops (cloudflare points-of-presence) and/or for different regions
+        // Within each pop or region we can define multiple pools in failover order
+        var bar = new Cloudflare.LoadBalancer("bar", new Cloudflare.LoadBalancerArgs
+        {
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+            Name = "example-load-balancer",
+            FallbackPoolId = foo.Id,
+            DefaultPoolIds = 
+            {
+                foo.Id,
+            },
+            Description = "example load balancer using geo-balancing",
+            Proxied = true,
+            SteeringPolicy = "geo",
+            PopPools = 
+            {
+                new Cloudflare.Inputs.LoadBalancerPopPoolArgs
+                {
+                    Pop = "LAX",
+                    PoolIds = 
+                    {
+                        foo.Id,
+                    },
+                },
+            },
+            RegionPools = 
+            {
+                new Cloudflare.Inputs.LoadBalancerRegionPoolArgs
+                {
+                    Region = "WNAM",
+                    PoolIds = 
+                    {
+                        foo.Id,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := cloudflare.NewLoadBalancerPool(ctx, "foo", &cloudflare.LoadBalancerPoolArgs{
+			Name: pulumi.String("example-lb-pool"),
+			Origins: cloudflare.LoadBalancerPoolOriginArray{
+				&cloudflare.LoadBalancerPoolOriginArgs{
+					Name:    pulumi.String("example-1"),
+					Address: pulumi.String("192.0.2.1"),
+					Enabled: pulumi.Bool(false),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudflare.NewLoadBalancer(ctx, "bar", &cloudflare.LoadBalancerArgs{
+			ZoneId:         pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
+			Name:           pulumi.String("example-load-balancer"),
+			FallbackPoolId: foo.ID(),
+			DefaultPoolIds: pulumi.StringArray{
+				foo.ID(),
+			},
+			Description:    pulumi.String("example load balancer using geo-balancing"),
+			Proxied:        pulumi.Bool(true),
+			SteeringPolicy: pulumi.String("geo"),
+			PopPools: cloudflare.LoadBalancerPopPoolArray{
+				&cloudflare.LoadBalancerPopPoolArgs{
+					Pop: pulumi.String("LAX"),
+					PoolIds: pulumi.StringArray{
+						foo.ID(),
+					},
+				},
+			},
+			RegionPools: cloudflare.LoadBalancerRegionPoolArray{
+				&cloudflare.LoadBalancerRegionPoolArgs{
+					Region: pulumi.String("WNAM"),
+					PoolIds: pulumi.StringArray{
+						foo.ID(),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+foo = cloudflare.LoadBalancerPool("foo",
+    name="example-lb-pool",
+    origins=[cloudflare.LoadBalancerPoolOriginArgs(
+        name="example-1",
+        address="192.0.2.1",
+        enabled=False,
+    )])
+# Define a load balancer which always points to a pool we define below
+# In normal usage, would have different pools set for different pops (cloudflare points-of-presence) and/or for different regions
+# Within each pop or region we can define multiple pools in failover order
+bar = cloudflare.LoadBalancer("bar",
+    zone_id="d41d8cd98f00b204e9800998ecf8427e",
+    name="example-load-balancer",
+    fallback_pool_id=foo.id,
+    default_pool_ids=[foo.id],
+    description="example load balancer using geo-balancing",
+    proxied=True,
+    steering_policy="geo",
+    pop_pools=[cloudflare.LoadBalancerPopPoolArgs(
+        pop="LAX",
+        pool_ids=[foo.id],
+    )],
+    region_pools=[cloudflare.LoadBalancerRegionPoolArgs(
+        region="WNAM",
+        pool_ids=[foo.id],
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const foo = new cloudflare.LoadBalancerPool("foo", {
+    name: "example-lb-pool",
+    origins: [{
+        name: "example-1",
+        address: "192.0.2.1",
+        enabled: false,
+    }],
+});
+// Define a load balancer which always points to a pool we define below
+// In normal usage, would have different pools set for different pops (cloudflare points-of-presence) and/or for different regions
+// Within each pop or region we can define multiple pools in failover order
+const bar = new cloudflare.LoadBalancer("bar", {
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+    name: "example-load-balancer",
+    fallbackPoolId: foo.id,
+    defaultPoolIds: [foo.id],
+    description: "example load balancer using geo-balancing",
+    proxied: true,
+    steeringPolicy: "geo",
+    popPools: [{
+        pop: "LAX",
+        poolIds: [foo.id],
+    }],
+    regionPools: [{
+        region: "WNAM",
+        poolIds: [foo.id],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LoadBalancer Resource {#create}
@@ -23,7 +230,7 @@ Provides a Cloudflare Load Balancer resource. This sits in front of a number of 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.LoadBalancer">LoadBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_pool_ids=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>fallback_pool_id=None<span class="p">, </span>name=None<span class="p">, </span>pop_pools=None<span class="p">, </span>proxied=None<span class="p">, </span>region_pools=None<span class="p">, </span>session_affinity=None<span class="p">, </span>steering_policy=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_pool_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pop_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerPopPoolArgs]]</span> = None<span class="p">, </span><span class="nx">proxied</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerRegionPoolArgs]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steering_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,7 +891,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#pop_pools_python" style="color: inherit; text-decoration: inherit;">pop_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpoppool">List[Load<wbr>Balancer<wbr>Pop<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#loadbalancerpoppool">List[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
 {{% /md %}}</dd>
@@ -706,7 +913,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#region_pools_python" style="color: inherit; text-decoration: inherit;">region_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerregionpool">List[Load<wbr>Balancer<wbr>Region<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#loadbalancerregionpool">List[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
 {{% /md %}}</dd>
@@ -930,7 +1137,8 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_on=None<span class="p">, </span>default_pool_ids=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>fallback_pool_id=None<span class="p">, </span>modified_on=None<span class="p">, </span>name=None<span class="p">, </span>pop_pools=None<span class="p">, </span>proxied=None<span class="p">, </span>region_pools=None<span class="p">, </span>session_affinity=None<span class="p">, </span>steering_policy=None<span class="p">, </span>ttl=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_pool_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pop_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerPopPoolArgs]]</span> = None<span class="p">, </span><span class="nx">proxied</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region_pools</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerRegionPoolArgs]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steering_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -938,7 +1146,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1610,7 +1818,7 @@ The following state arguments are supported:
 <a href="#state_pop_pools_python" style="color: inherit; text-decoration: inherit;">pop_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpoppool">List[Load<wbr>Balancer<wbr>Pop<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#loadbalancerpoppool">List[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
 {{% /md %}}</dd>
@@ -1632,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_region_pools_python" style="color: inherit; text-decoration: inherit;">region_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerregionpool">List[Load<wbr>Balancer<wbr>Region<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#loadbalancerregionpool">List[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
 {{% /md %}}</dd>
@@ -1803,8 +2011,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="poolids_python">
-<a href="#poolids_python" style="color: inherit; text-decoration: inherit;">pool<wbr>Ids</a>
+        <span id="pool_ids_python">
+<a href="#pool_ids_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1937,8 +2145,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="poolids_python">
-<a href="#poolids_python" style="color: inherit; text-decoration: inherit;">pool<wbr>Ids</a>
+        <span id="pool_ids_python">
+<a href="#pool_ids_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1975,6 +2183,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

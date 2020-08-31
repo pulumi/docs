@@ -13,6 +13,140 @@ meta_desc: "Explore the WafOverride resource of the Cloudflare package, includin
 Provides a Cloudflare WAF override resource. This enables the ability to toggle
 WAF rules and groups on or off based on URIs.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var shopEcxample = new Cloudflare.WafOverride("shopEcxample", new Cloudflare.WafOverrideArgs
+        {
+            ZoneId = "1d5fdc9e88c8a8c4518b068cd94331fe",
+            Urls = 
+            {
+                "example.com/no-waf-here",
+                "example.com/another/path/*",
+            },
+            Rules = 
+            {
+                { "100015", "disable" },
+            },
+            Groups = 
+            {
+                { "ea8687e59929c1fd05ba97574ad43f77", "default" },
+            },
+            RewriteAction = 
+            {
+                { "default", "block" },
+                { "challenge", "block" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewWafOverride(ctx, "shopEcxample", &cloudflare.WafOverrideArgs{
+			ZoneId: pulumi.String("1d5fdc9e88c8a8c4518b068cd94331fe"),
+			Urls: pulumi.StringArray{
+				pulumi.String("example.com/no-waf-here"),
+				pulumi.String("example.com/another/path/*"),
+			},
+			Rules: pulumi.StringMap{
+				"100015": pulumi.String("disable"),
+			},
+			Groups: pulumi.StringMap{
+				"ea8687e59929c1fd05ba97574ad43f77": pulumi.String("default"),
+			},
+			RewriteAction: pulumi.StringMap{
+				"default":   pulumi.String("block"),
+				"challenge": pulumi.String("block"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_cloudflare as cloudflare
+
+shop_ecxample = cloudflare.WafOverride("shopEcxample",
+    zone_id="1d5fdc9e88c8a8c4518b068cd94331fe",
+    urls=[
+        "example.com/no-waf-here",
+        "example.com/another/path/*",
+    ],
+    rules={
+        "100015": "disable",
+    },
+    groups={
+        "ea8687e59929c1fd05ba97574ad43f77": "default",
+    },
+    rewrite_action={
+        "default": "block",
+        "challenge": "block",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const shopEcxample = new cloudflare.WafOverride("shopEcxample", {
+    zoneId: "1d5fdc9e88c8a8c4518b068cd94331fe",
+    urls: [
+        "example.com/no-waf-here",
+        "example.com/another/path/*",
+    ],
+    rules: {
+        "100015": "disable",
+    },
+    groups: {
+        ea8687e59929c1fd05ba97574ad43f77: "default",
+    },
+    rewriteAction: {
+        "default": "block",
+        challenge: "block",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WafOverride Resource {#create}
@@ -24,7 +158,7 @@ WAF rules and groups on or off based on URIs.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.WafOverride">WafOverride</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>rewrite_action=None<span class="p">, </span>rules=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.WafOverride">WafOverride</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">paused</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rewrite_action</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -487,7 +621,7 @@ The WafOverride resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of WAF rule ID to rule action you intend to apply.
 {{% /md %}}</dd>
@@ -531,7 +665,7 @@ The WafOverride resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Similar to `rules`; which WAF groups you want to alter.
 {{% /md %}}</dd>
@@ -564,7 +698,7 @@ The WafOverride resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rewrite_action_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}When a WAF rule matches, substitute its configured action for a different action specified by this definition.
 {{% /md %}}</dd>
@@ -707,7 +841,8 @@ Get an existing WafOverride resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>override_id=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>rewrite_action=None<span class="p">, </span>rules=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">override_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">paused</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rewrite_action</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WafOverride</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -715,7 +850,7 @@ Get an existing WafOverride resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.WafOverride.html">WafOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..WafOverrideState.html">WafOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.WafOverride.html">WafOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..WafOverrideState.html">WafOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1153,7 +1288,7 @@ The following state arguments are supported:
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Similar to `rules`; which WAF groups you want to alter.
 {{% /md %}}</dd>
@@ -1196,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_rewrite_action_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}When a WAF rule matches, substitute its configured action for a different action specified by this definition.
 {{% /md %}}</dd>
@@ -1207,7 +1342,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of WAF rule ID to rule action you intend to apply.
 {{% /md %}}</dd>
@@ -1254,6 +1389,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 

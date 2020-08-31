@@ -44,9 +44,9 @@ class MyStack : Stack
                     Js = "off",
                     Html = "off",
                 },
-                Security_header = 
+                SecurityHeader = new Cloudflare.Inputs.ZoneSettingsOverrideSettingsSecurityHeaderArgs
                 {
-                    { "enabled", true },
+                    Enabled = true,
                 },
             },
         });
@@ -58,7 +58,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudflare.NewZoneSettingsOverride(ctx, "test", &cloudflare.ZoneSettingsOverrideArgs{
+			ZoneId: pulumi.Any(_var.Cloudflare_zone_id),
+			Settings: &cloudflare.ZoneSettingsOverrideSettingsArgs{
+				Brotli:                  pulumi.String("on"),
+				ChallengeTtl:            pulumi.Int(2700),
+				SecurityLevel:           pulumi.String("high"),
+				OpportunisticEncryption: pulumi.String("on"),
+				AutomaticHttpsRewrites:  pulumi.String("on"),
+				Mirage:                  pulumi.String("on"),
+				Waf:                     pulumi.String("on"),
+				Minify: &cloudflare.ZoneSettingsOverrideSettingsMinifyArgs{
+					Css:  pulumi.String("on"),
+					Js:   pulumi.String("off"),
+					Html: pulumi.String("off"),
+				},
+				SecurityHeader: &cloudflare.ZoneSettingsOverrideSettingsSecurityHeaderArgs{
+					Enabled: pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,23 +105,23 @@ import pulumi_cloudflare as cloudflare
 
 test = cloudflare.ZoneSettingsOverride("test",
     zone_id=var["cloudflare_zone_id"],
-    settings={
-        "brotli": "on",
-        "challengeTtl": 2700,
-        "securityLevel": "high",
-        "opportunisticEncryption": "on",
-        "automaticHttpsRewrites": "on",
-        "mirage": "on",
-        "waf": "on",
-        "minify": {
-            "css": "on",
-            "js": "off",
-            "html": "off",
-        },
-        "security_header": {
-            "enabled": True,
-        },
-    })
+    settings=cloudflare.ZoneSettingsOverrideSettingsArgs(
+        brotli="on",
+        challenge_ttl=2700,
+        security_level="high",
+        opportunistic_encryption="on",
+        automatic_https_rewrites="on",
+        mirage="on",
+        waf="on",
+        minify=cloudflare.ZoneSettingsOverrideSettingsMinifyArgs(
+            css="on",
+            js="off",
+            html="off",
+        ),
+        security_header=cloudflare.ZoneSettingsOverrideSettingsSecurityHeaderArgs(
+            enabled=True,
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -110,7 +147,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
             js: "off",
             html: "off",
         },
-        security_header: {
+        securityHeader: {
             enabled: true,
         },
     },
@@ -131,7 +168,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.ZoneSettingsOverride">ZoneSettingsOverride</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>settings=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.ZoneSettingsOverride">ZoneSettingsOverride</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideSettingsArgs]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,7 +444,7 @@ The ZoneSettingsOverride resource accepts the following [input]({{< relref "/doc
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettings">Dict[Zone<wbr>Settings<wbr>Override<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.
 {{% /md %}}</dd>
@@ -659,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_settings_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Dict[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd>
@@ -726,7 +763,8 @@ Get an existing ZoneSettingsOverride resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>initial_settings=None<span class="p">, </span>initial_settings_read_at=None<span class="p">, </span>readonly_settings=None<span class="p">, </span>settings=None<span class="p">, </span>zone_id=None<span class="p">, </span>zone_status=None<span class="p">, </span>zone_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">initial_settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideInitialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">initial_settings_read_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readonly_settings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[ZoneSettingsOverrideSettingsArgs]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ZoneSettingsOverride</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -734,7 +772,7 @@ Get an existing ZoneSettingsOverride resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.ZoneSettingsOverride.html">ZoneSettingsOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..ZoneSettingsOverrideState.html">ZoneSettingsOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.ZoneSettingsOverride.html">ZoneSettingsOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..ZoneSettingsOverrideState.html">ZoneSettingsOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1095,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_initial_settings_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Dict[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings present in the zone at the time the resource is created. This will be used to restore the original settings when this resource is destroyed. Shares the same schema as the `settings` attribute (Above).
 {{% /md %}}</dd>
@@ -1129,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettings">Dict[Zone<wbr>Settings<wbr>Override<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings overrides that will be applied to the zone. If a setting is not specified the existing setting will be used. For a full list of available settings see below.
 {{% /md %}}</dd>
@@ -2604,8 +2642,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwaysonline_python">
-<a href="#alwaysonline_python" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
+        <span id="always_online_python">
+<a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2614,8 +2652,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwaysusehttps_python">
-<a href="#alwaysusehttps_python" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
+        <span id="always_use_https_python">
+<a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2624,8 +2662,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automatichttpsrewrites_python">
-<a href="#automatichttpsrewrites_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
+        <span id="automatic_https_rewrites_python">
+<a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2644,8 +2682,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsercachettl_python">
-<a href="#browsercachettl_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
+        <span id="browser_cache_ttl_python">
+<a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2654,8 +2692,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsercheck_python">
-<a href="#browsercheck_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
+        <span id="browser_check_python">
+<a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2664,8 +2702,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachelevel_python">
-<a href="#cachelevel_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
+        <span id="cache_level_python">
+<a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2674,8 +2712,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="challengettl_python">
-<a href="#challengettl_python" style="color: inherit; text-decoration: inherit;">challenge<wbr>Ttl</a>
+        <span id="challenge_ttl_python">
+<a href="#challenge_ttl_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2684,8 +2722,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cnameflattening_python">
-<a href="#cnameflattening_python" style="color: inherit; text-decoration: inherit;">cname<wbr>Flattening</a>
+        <span id="cname_flattening_python">
+<a href="#cname_flattening_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>flattening</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2694,8 +2732,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="developmentmode_python">
-<a href="#developmentmode_python" style="color: inherit; text-decoration: inherit;">development<wbr>Mode</a>
+        <span id="development_mode_python">
+<a href="#development_mode_python" style="color: inherit; text-decoration: inherit;">development_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2704,8 +2742,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailobfuscation_python">
-<a href="#emailobfuscation_python" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
+        <span id="email_obfuscation_python">
+<a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2714,8 +2752,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="h2prioritization_python">
-<a href="#h2prioritization_python" style="color: inherit; text-decoration: inherit;">h2Prioritization</a>
+        <span id="h2_prioritization_python">
+<a href="#h2_prioritization_python" style="color: inherit; text-decoration: inherit;">h2_<wbr>prioritization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2724,8 +2762,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hotlinkprotection_python">
-<a href="#hotlinkprotection_python" style="color: inherit; text-decoration: inherit;">hotlink<wbr>Protection</a>
+        <span id="hotlink_protection_python">
+<a href="#hotlink_protection_python" style="color: inherit; text-decoration: inherit;">hotlink_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2754,8 +2792,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageresizing_python">
-<a href="#imageresizing_python" style="color: inherit; text-decoration: inherit;">image<wbr>Resizing</a>
+        <span id="image_resizing_python">
+<a href="#image_resizing_python" style="color: inherit; text-decoration: inherit;">image_<wbr>resizing</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2764,8 +2802,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipgeolocation_python">
-<a href="#ipgeolocation_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
+        <span id="ip_geolocation_python">
+<a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2784,8 +2822,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxupload_python">
-<a href="#maxupload_python" style="color: inherit; text-decoration: inherit;">max<wbr>Upload</a>
+        <span id="max_upload_python">
+<a href="#max_upload_python" style="color: inherit; text-decoration: inherit;">max_<wbr>upload</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2794,8 +2832,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintlsversion_python">
-<a href="#mintlsversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2808,7 +2846,7 @@ The following state arguments are supported:
 <a href="#minify_python" style="color: inherit; text-decoration: inherit;">minify</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Dict[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2824,28 +2862,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mobileredirect_python">
-<a href="#mobileredirect_python" style="color: inherit; text-decoration: inherit;">mobile<wbr>Redirect</a>
+        <span id="mobile_redirect_python">
+<a href="#mobile_redirect_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Dict[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="opportunisticencryption_python">
-<a href="#opportunisticencryption_python" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="opportunisticonion_python">
-<a href="#opportunisticonion_python" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Onion</a>
+        <span id="opportunistic_encryption_python">
+<a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2854,8 +2882,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="originerrorpagepassthru_python">
-<a href="#originerrorpagepassthru_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
+        <span id="opportunistic_onion_python">
+<a href="#opportunistic_onion_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>onion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="origin_error_page_pass_thru_python">
+<a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2874,8 +2912,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefetchpreload_python">
-<a href="#prefetchpreload_python" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Preload</a>
+        <span id="prefetch_preload_python">
+<a href="#prefetch_preload_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>preload</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2884,8 +2922,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privacypass_python">
-<a href="#privacypass_python" style="color: inherit; text-decoration: inherit;">privacy<wbr>Pass</a>
+        <span id="privacy_pass_python">
+<a href="#privacy_pass_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2894,8 +2932,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pseudoipv4_python">
-<a href="#pseudoipv4_python" style="color: inherit; text-decoration: inherit;">pseudo<wbr>Ipv4</a>
+        <span id="pseudo_ipv4_python">
+<a href="#pseudo_ipv4_python" style="color: inherit; text-decoration: inherit;">pseudo_<wbr>ipv4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2904,8 +2942,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsebuffering_python">
-<a href="#responsebuffering_python" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
+        <span id="response_buffering_python">
+<a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2914,8 +2952,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rocketloader_python">
-<a href="#rocketloader_python" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
+        <span id="rocket_loader_python">
+<a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2924,28 +2962,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securityheader_python">
-<a href="#securityheader_python" style="color: inherit; text-decoration: inherit;">security<wbr>Header</a>
+        <span id="security_header_python">
+<a href="#security_header_python" style="color: inherit; text-decoration: inherit;">security_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Dict[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serversideexclude_python">
-<a href="#serversideexclude_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2954,8 +2982,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sortquerystringforcache_python">
-<a href="#sortquerystringforcache_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
+        <span id="server_side_exclude_python">
+<a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sort_query_string_for_cache_python">
+<a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2974,8 +3012,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="tls12only_python">
-<a href="#tls12only_python" style="color: inherit; text-decoration: inherit;">tls12Only</a>
+        <span id="tls12_only_python">
+<a href="#tls12_only_python" style="color: inherit; text-decoration: inherit;">tls12_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2994,8 +3032,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientauth_python">
-<a href="#tlsclientauth_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Auth</a>
+        <span id="tls_client_auth_python">
+<a href="#tls_client_auth_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3004,8 +3042,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trueclientipheader_python">
-<a href="#trueclientipheader_python" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
+        <span id="true_client_ip_header_python">
+<a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3014,8 +3052,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="universalssl_python">
-<a href="#universalssl_python" style="color: inherit; text-decoration: inherit;">universal<wbr>Ssl</a>
+        <span id="universal_ssl_python">
+<a href="#universal_ssl_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3055,8 +3093,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zerortt_python">
-<a href="#zerortt_python" style="color: inherit; text-decoration: inherit;">zero<wbr>Rtt</a>
+        <span id="zero_rtt_python">
+<a href="#zero_rtt_python" style="color: inherit; text-decoration: inherit;">zero_<wbr>rtt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3388,8 +3426,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="mobilesubdomain_python">
-<a href="#mobilesubdomain_python" style="color: inherit; text-decoration: inherit;">mobile<wbr>Subdomain</a>
+        <span id="mobile_subdomain_python">
+<a href="#mobile_subdomain_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>subdomain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3410,8 +3448,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="stripuri_python">
-<a href="#stripuri_python" style="color: inherit; text-decoration: inherit;">strip<wbr>Uri</a>
+        <span id="strip_uri_python">
+<a href="#strip_uri_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3643,8 +3681,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includesubdomains_python">
-<a href="#includesubdomains_python" style="color: inherit; text-decoration: inherit;">include<wbr>Subdomains</a>
+        <span id="include_subdomains_python">
+<a href="#include_subdomains_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subdomains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3654,8 +3692,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxage_python">
-<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5116,8 +5154,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwaysonline_python">
-<a href="#alwaysonline_python" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
+        <span id="always_online_python">
+<a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5126,8 +5164,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwaysusehttps_python">
-<a href="#alwaysusehttps_python" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
+        <span id="always_use_https_python">
+<a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5136,8 +5174,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automatichttpsrewrites_python">
-<a href="#automatichttpsrewrites_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
+        <span id="automatic_https_rewrites_python">
+<a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5156,8 +5194,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsercachettl_python">
-<a href="#browsercachettl_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
+        <span id="browser_cache_ttl_python">
+<a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5166,8 +5204,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="browsercheck_python">
-<a href="#browsercheck_python" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
+        <span id="browser_check_python">
+<a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5176,8 +5214,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachelevel_python">
-<a href="#cachelevel_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
+        <span id="cache_level_python">
+<a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5186,8 +5224,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="challengettl_python">
-<a href="#challengettl_python" style="color: inherit; text-decoration: inherit;">challenge<wbr>Ttl</a>
+        <span id="challenge_ttl_python">
+<a href="#challenge_ttl_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5196,8 +5234,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cnameflattening_python">
-<a href="#cnameflattening_python" style="color: inherit; text-decoration: inherit;">cname<wbr>Flattening</a>
+        <span id="cname_flattening_python">
+<a href="#cname_flattening_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>flattening</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5206,8 +5244,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="developmentmode_python">
-<a href="#developmentmode_python" style="color: inherit; text-decoration: inherit;">development<wbr>Mode</a>
+        <span id="development_mode_python">
+<a href="#development_mode_python" style="color: inherit; text-decoration: inherit;">development_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5216,8 +5254,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emailobfuscation_python">
-<a href="#emailobfuscation_python" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
+        <span id="email_obfuscation_python">
+<a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5226,8 +5264,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="h2prioritization_python">
-<a href="#h2prioritization_python" style="color: inherit; text-decoration: inherit;">h2Prioritization</a>
+        <span id="h2_prioritization_python">
+<a href="#h2_prioritization_python" style="color: inherit; text-decoration: inherit;">h2_<wbr>prioritization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5236,8 +5274,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hotlinkprotection_python">
-<a href="#hotlinkprotection_python" style="color: inherit; text-decoration: inherit;">hotlink<wbr>Protection</a>
+        <span id="hotlink_protection_python">
+<a href="#hotlink_protection_python" style="color: inherit; text-decoration: inherit;">hotlink_<wbr>protection</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5266,8 +5304,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageresizing_python">
-<a href="#imageresizing_python" style="color: inherit; text-decoration: inherit;">image<wbr>Resizing</a>
+        <span id="image_resizing_python">
+<a href="#image_resizing_python" style="color: inherit; text-decoration: inherit;">image_<wbr>resizing</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5276,8 +5314,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipgeolocation_python">
-<a href="#ipgeolocation_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
+        <span id="ip_geolocation_python">
+<a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5296,8 +5334,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxupload_python">
-<a href="#maxupload_python" style="color: inherit; text-decoration: inherit;">max<wbr>Upload</a>
+        <span id="max_upload_python">
+<a href="#max_upload_python" style="color: inherit; text-decoration: inherit;">max_<wbr>upload</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5306,8 +5344,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintlsversion_python">
-<a href="#mintlsversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5320,7 +5358,7 @@ The following state arguments are supported:
 <a href="#minify_python" style="color: inherit; text-decoration: inherit;">minify</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingsminify">Dict[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5336,28 +5374,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mobileredirect_python">
-<a href="#mobileredirect_python" style="color: inherit; text-decoration: inherit;">mobile<wbr>Redirect</a>
+        <span id="mobile_redirect_python">
+<a href="#mobile_redirect_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingsmobileredirect">Dict[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="opportunisticencryption_python">
-<a href="#opportunisticencryption_python" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="opportunisticonion_python">
-<a href="#opportunisticonion_python" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Onion</a>
+        <span id="opportunistic_encryption_python">
+<a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5366,8 +5394,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="originerrorpagepassthru_python">
-<a href="#originerrorpagepassthru_python" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
+        <span id="opportunistic_onion_python">
+<a href="#opportunistic_onion_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>onion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="origin_error_page_pass_thru_python">
+<a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5386,8 +5424,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefetchpreload_python">
-<a href="#prefetchpreload_python" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Preload</a>
+        <span id="prefetch_preload_python">
+<a href="#prefetch_preload_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>preload</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5396,8 +5434,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privacypass_python">
-<a href="#privacypass_python" style="color: inherit; text-decoration: inherit;">privacy<wbr>Pass</a>
+        <span id="privacy_pass_python">
+<a href="#privacy_pass_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5406,8 +5444,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pseudoipv4_python">
-<a href="#pseudoipv4_python" style="color: inherit; text-decoration: inherit;">pseudo<wbr>Ipv4</a>
+        <span id="pseudo_ipv4_python">
+<a href="#pseudo_ipv4_python" style="color: inherit; text-decoration: inherit;">pseudo_<wbr>ipv4</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5416,8 +5454,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsebuffering_python">
-<a href="#responsebuffering_python" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
+        <span id="response_buffering_python">
+<a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5426,8 +5464,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rocketloader_python">
-<a href="#rocketloader_python" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
+        <span id="rocket_loader_python">
+<a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5436,28 +5474,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securityheader_python">
-<a href="#securityheader_python" style="color: inherit; text-decoration: inherit;">security<wbr>Header</a>
+        <span id="security_header_python">
+<a href="#security_header_python" style="color: inherit; text-decoration: inherit;">security_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesettingsoverridesettingssecurityheader">Dict[Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header]</a></span>
+        <span class="property-type"><a href="#zonesettingsoverridesettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serversideexclude_python">
-<a href="#serversideexclude_python" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5466,8 +5494,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sortquerystringforcache_python">
-<a href="#sortquerystringforcache_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
+        <span id="server_side_exclude_python">
+<a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sort_query_string_for_cache_python">
+<a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5486,8 +5524,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="tls12only_python">
-<a href="#tls12only_python" style="color: inherit; text-decoration: inherit;">tls12Only</a>
+        <span id="tls12_only_python">
+<a href="#tls12_only_python" style="color: inherit; text-decoration: inherit;">tls12_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5506,8 +5544,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlsclientauth_python">
-<a href="#tlsclientauth_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Auth</a>
+        <span id="tls_client_auth_python">
+<a href="#tls_client_auth_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>auth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5516,8 +5554,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trueclientipheader_python">
-<a href="#trueclientipheader_python" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
+        <span id="true_client_ip_header_python">
+<a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5526,8 +5564,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="universalssl_python">
-<a href="#universalssl_python" style="color: inherit; text-decoration: inherit;">universal<wbr>Ssl</a>
+        <span id="universal_ssl_python">
+<a href="#universal_ssl_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5567,8 +5605,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zerortt_python">
-<a href="#zerortt_python" style="color: inherit; text-decoration: inherit;">zero<wbr>Rtt</a>
+        <span id="zero_rtt_python">
+<a href="#zero_rtt_python" style="color: inherit; text-decoration: inherit;">zero_<wbr>rtt</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5900,8 +5938,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="mobilesubdomain_python">
-<a href="#mobilesubdomain_python" style="color: inherit; text-decoration: inherit;">mobile<wbr>Subdomain</a>
+        <span id="mobile_subdomain_python">
+<a href="#mobile_subdomain_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>subdomain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5922,8 +5960,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="stripuri_python">
-<a href="#stripuri_python" style="color: inherit; text-decoration: inherit;">strip<wbr>Uri</a>
+        <span id="strip_uri_python">
+<a href="#strip_uri_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6155,8 +6193,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includesubdomains_python">
-<a href="#includesubdomains_python" style="color: inherit; text-decoration: inherit;">include<wbr>Subdomains</a>
+        <span id="include_subdomains_python">
+<a href="#include_subdomains_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subdomains</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6166,8 +6204,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxage_python">
-<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6215,6 +6253,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 </dl>
 
