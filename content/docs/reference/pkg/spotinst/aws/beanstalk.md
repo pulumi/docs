@@ -185,28 +185,28 @@ import pulumi_spotinst as spotinst
 elastigoup_aws_beanstalk = spotinst.aws.Beanstalk("elastigoup-aws-beanstalk",
     beanstalk_environment_id="e-example",
     beanstalk_environment_name="example-env",
-    deployment_preferences={
-        "automaticRoll": True,
-        "batchSizePercentage": 100,
-        "grace_period": 90,
-        "strategies": [{
-            "action": "REPLACE_SERVER",
-            "shouldDrainInstances": True,
-        }],
-    },
+    deployment_preferences=spotinst.aws.BeanstalkDeploymentPreferencesArgs(
+        automatic_roll=True,
+        batch_size_percentage=100,
+        grace_period=90,
+        strategies=[spotinst.aws.BeanstalkDeploymentPreferencesStrategyArgs(
+            action="REPLACE_SERVER",
+            should_drain_instances=True,
+        )],
+    ),
     desired_capacity=0,
     instance_types_spots=[
         "t2.micro",
         "t2.medium",
         "t2.large",
     ],
-    managed_actions={
-        "platformUpdate": {
-            "performAt": "timeWindow",
-            "timeWindow": "Mon:23:50-Tue:00:20",
-            "updateLevel": "minorAndPatch",
-        },
-    },
+    managed_actions=spotinst.aws.BeanstalkManagedActionsArgs(
+        platform_update=spotinst.aws.BeanstalkManagedActionsPlatformUpdateArgs(
+            perform_at="timeWindow",
+            time_window="Mon:23:50-Tue:00:20",
+            update_level="minorAndPatch",
+        ),
+    ),
     max_size=1,
     min_size=0,
     product="Linux/UNIX",
@@ -267,7 +267,7 @@ const elastigoup_aws_beanstalk = new spotinst.aws.Beanstalk("elastigoup-aws-bean
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Beanstalk">Beanstalk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">beanstalk_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">beanstalk_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_preferences</span><span class="p">:</span> <span class="nx">Optional[Dict[BeanstalkDeploymentPreferences]]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">maintenance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_actions</span><span class="p">:</span> <span class="nx">Optional[Dict[BeanstalkManagedActions]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[BeanstalkScheduledTask]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Beanstalk">Beanstalk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">beanstalk_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">beanstalk_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_preferences</span><span class="p">:</span> <span class="nx">Optional[BeanstalkDeploymentPreferencesArgs]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">maintenance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_actions</span><span class="p">:</span> <span class="nx">Optional[BeanstalkManagedActionsArgs]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[BeanstalkScheduledTaskArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -981,7 +981,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#deployment_preferences_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Dict[Beanstalk<wbr>Deployment<wbr>Preferences]</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd>
@@ -1002,7 +1002,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#managed_actions_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Dict[Beanstalk<wbr>Managed<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
@@ -1024,7 +1024,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1127,7 +1127,7 @@ Get an existing Beanstalk resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">beanstalk_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">beanstalk_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_preferences</span><span class="p">:</span> <span class="nx">Optional[Dict[BeanstalkDeploymentPreferences]]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">maintenance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_actions</span><span class="p">:</span> <span class="nx">Optional[Dict[BeanstalkManagedActions]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[BeanstalkScheduledTask]]</span> = None<span class="p">) -&gt;</span> Beanstalk</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">beanstalk_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">beanstalk_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_preferences</span><span class="p">:</span> <span class="nx">Optional[BeanstalkDeploymentPreferencesArgs]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">maintenance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_actions</span><span class="p">:</span> <span class="nx">Optional[BeanstalkManagedActionsArgs]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[BeanstalkScheduledTaskArgs]]</span> = None<span class="p">) -&gt;</span> Beanstalk</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1716,7 +1716,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#state_deployment_preferences_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Dict[Beanstalk<wbr>Deployment<wbr>Preferences]</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd>
@@ -1759,7 +1759,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#state_managed_actions_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Dict[Beanstalk<wbr>Managed<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
@@ -1826,7 +1826,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2018,8 +2018,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="automaticroll_python">
-<a href="#automaticroll_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Roll</a>
+        <span id="automatic_roll_python">
+<a href="#automatic_roll_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>roll</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2029,8 +2029,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchsizepercentage_python">
-<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2055,7 +2055,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 <a href="#strategies_python" style="color: inherit; text-decoration: inherit;">strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">List[Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">List[Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
 {{% /md %}}</dd>
@@ -2185,8 +2185,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shoulddraininstances_python">
-<a href="#shoulddraininstances_python" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
+        <span id="should_drain_instances_python">
+<a href="#should_drain_instances_python" style="color: inherit; text-decoration: inherit;">should_<wbr>drain_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2275,11 +2275,11 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="platformupdate_python">
-<a href="#platformupdate_python" style="color: inherit; text-decoration: inherit;">platform<wbr>Update</a>
+        <span id="platform_update_python">
+<a href="#platform_update_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Dict[Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update]</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
 {{% /md %}}</dd>
@@ -2431,8 +2431,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="performat_python">
-<a href="#performat_python" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
+        <span id="perform_at_python">
+<a href="#perform_at_python" style="color: inherit; text-decoration: inherit;">perform_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2442,8 +2442,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timewindow_python">
-<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+        <span id="time_window_python">
+<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2453,8 +2453,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatelevel_python">
-<a href="#updatelevel_python" style="color: inherit; text-decoration: inherit;">update<wbr>Level</a>
+        <span id="update_level_python">
+<a href="#update_level_python" style="color: inherit; text-decoration: inherit;">update_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2966,8 +2966,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span id="tasktype_python">
-<a href="#tasktype_python" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
+        <span id="task_type_python">
+<a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2986,8 +2986,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adjustmentpercentage_python">
-<a href="#adjustmentpercentage_python" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Percentage</a>
+        <span id="adjustment_percentage_python">
+<a href="#adjustment_percentage_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2996,8 +2996,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchsizepercentage_python">
-<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+        <span id="batch_size_percentage_python">
+<a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3007,8 +3007,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cronexpression_python">
-<a href="#cronexpression_python" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
+        <span id="cron_expression_python">
+<a href="#cron_expression_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>expression</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3038,8 +3038,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3048,8 +3048,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcapacity_python">
-<a href="#maxcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3058,8 +3058,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mincapacity_python">
-<a href="#mincapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3068,8 +3068,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scalemaxcapacity_python">
-<a href="#scalemaxcapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Max<wbr>Capacity</a>
+        <span id="scale_max_capacity_python">
+<a href="#scale_max_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3078,8 +3078,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scalemincapacity_python">
-<a href="#scalemincapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Min<wbr>Capacity</a>
+        <span id="scale_min_capacity_python">
+<a href="#scale_min_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>min_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3088,8 +3088,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scaletargetcapacity_python">
-<a href="#scaletargetcapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Capacity</a>
+        <span id="scale_target_capacity_python">
+<a href="#scale_target_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3098,8 +3098,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3108,8 +3108,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetcapacity_python">
-<a href="#targetcapacity_python" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
+        <span id="target_capacity_python">
+<a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

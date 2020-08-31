@@ -3,7 +3,7 @@ title: "Module multai"
 title_tag: "Module multai | Package @pulumi/spotinst | Node.js SDK"
 linktitle: "multai"
 meta_desc: "Explore members of the multai module in the @pulumi/spotinst package."
-git_sha: "0ca9cd9e505b583e0ed53dcbae47863b28d536aa"
+git_sha: "9c09ad96fc81d6e53907abb5d257a89215aef203"
 block_external_search_index: true
 ---
 
@@ -45,14 +45,14 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Balancer" data-link-title="Balancer">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L9">
         Resource <strong>Balancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Balancer</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Balancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L41"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L41"> <b>constructor</b></a>
 </h4>
 
 
@@ -66,7 +66,7 @@ Create a Balancer resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Balancer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -77,14 +77,14 @@ Get an existing Balancer resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Balancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Balancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -95,17 +95,17 @@ Returns true if the given object is an instance of Balancer.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Balancer-connectionTimeouts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L37">property <b>connectionTimeouts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L37">property <b>connectionTimeouts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionTimeouts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BalancerConnectionTimeouts'>BalancerConnectionTimeouts</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Balancer-dnsCnameAliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L38">property <b>dnsCnameAliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L38">property <b>dnsCnameAliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsCnameAliases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Balancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -114,22 +114,22 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Balancer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Balancer-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L40">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L40">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Balancer-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L41">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L41">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BalancerTag'>BalancerTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Balancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -138,14 +138,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Deployment" data-link-title="Deployment">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L7">
         Resource <strong>Deployment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Deployment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L35"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L35"> <b>constructor</b></a>
 </h4>
 
 
@@ -159,7 +159,7 @@ Create a Deployment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -170,14 +170,14 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Deployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -188,7 +188,7 @@ Returns true if the given object is an instance of Deployment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Deployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,12 +197,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Deployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L35">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Deployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -211,14 +211,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Listener" data-link-title="Listener">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L9">
         Resource <strong>Listener</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Listener</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L41"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L41"> <b>constructor</b></a>
 </h4>
 
 
@@ -232,7 +232,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -243,14 +243,14 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -261,12 +261,12 @@ Returns true if the given object is an instance of Listener.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Listener-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L37">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L37">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -275,27 +275,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Listener-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L38">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L38">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L39">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L39">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L40">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L40">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ListenerTag'>ListenerTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-tlsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L41">property <b>tlsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L41">property <b>tlsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ListenerTlsConfig'>ListenerTlsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -304,14 +304,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoutingRule" data-link-title="RoutingRule">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L9">
         Resource <strong>RoutingRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RoutingRule</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L44"> <b>constructor</b></a>
 </h4>
 
 
@@ -325,7 +325,7 @@ Create a RoutingRule resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoutingRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -336,14 +336,14 @@ Get an existing RoutingRule resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RoutingRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoutingRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -354,12 +354,12 @@ Returns true if the given object is an instance of RoutingRule.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoutingRule-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L37">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L37">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -368,42 +368,42 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoutingRule-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L38">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L38">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-middlewareIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L39">property <b>middlewareIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L39">property <b>middlewareIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>middlewareIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L40">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L40">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L41">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L41">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>route: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L42">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L42">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>strategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L43">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L43">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#RoutingRuleTag'>RoutingRuleTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-targetSetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L44">property <b>targetSetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L44">property <b>targetSetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetSetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -412,14 +412,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Target" data-link-title="Target">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L9">
         Resource <strong>Target</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Target</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Target-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L43"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
@@ -433,7 +433,7 @@ Create a Target resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Target-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -444,14 +444,14 @@ Get an existing Target resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Target-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Target-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -462,17 +462,17 @@ Returns true if the given object is an instance of Target.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Target-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L37">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L37">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L38">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L38">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -481,27 +481,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Target-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L40">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L40">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L41">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L41">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#TargetTag'>TargetTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-targetSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L42">property <b>targetSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L42">property <b>targetSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Target-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -510,19 +510,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Target-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L43">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L43">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetSet" data-link-title="TargetSet">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L9">
         Resource <strong>TargetSet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TargetSet</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L44"> <b>constructor</b></a>
 </h4>
 
 
@@ -536,7 +536,7 @@ Create a TargetSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TargetSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -547,14 +547,14 @@ Get an existing TargetSet resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TargetSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TargetSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -565,22 +565,22 @@ Returns true if the given object is an instance of TargetSet.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TargetSet-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L37">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L37">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L38">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L38">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L39">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L39">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#TargetSetHealthCheck'>TargetSetHealthCheck</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -589,27 +589,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TargetSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L40">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L41">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L41">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L42">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L42">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L43">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L43">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#TargetSetTag'>TargetSetTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -618,7 +618,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="TargetSet-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L44">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L44">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -626,7 +626,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BalancerArgs" data-link-title="BalancerArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L93">
         interface <strong>BalancerArgs</strong>
     </a>
 </h3>
@@ -636,32 +636,32 @@ deployments.
 The set of arguments for constructing a Balancer resource.
 
 <h4 class="pdoc-member-header" id="BalancerArgs-connectionTimeouts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L94">property <b>connectionTimeouts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L94">property <b>connectionTimeouts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionTimeouts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BalancerConnectionTimeouts'>BalancerConnectionTimeouts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerArgs-dnsCnameAliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L95">property <b>dnsCnameAliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L95">property <b>dnsCnameAliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsCnameAliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerArgs-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L97">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L97">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L98">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BalancerTag'>BalancerTag</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="BalancerState" data-link-title="BalancerState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L82">
         interface <strong>BalancerState</strong>
     </a>
 </h3>
@@ -671,32 +671,32 @@ The set of arguments for constructing a Balancer resource.
 Input properties used for looking up and filtering Balancer resources.
 
 <h4 class="pdoc-member-header" id="BalancerState-connectionTimeouts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L83">property <b>connectionTimeouts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L83">property <b>connectionTimeouts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionTimeouts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BalancerConnectionTimeouts'>BalancerConnectionTimeouts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerState-dnsCnameAliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L84">property <b>dnsCnameAliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L84">property <b>dnsCnameAliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsCnameAliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerState-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L86">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L86">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/balancer.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/balancer.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BalancerTag'>BalancerTag</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DeploymentArgs" data-link-title="DeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L75">
         interface <strong>DeploymentArgs</strong>
     </a>
 </h3>
@@ -706,12 +706,12 @@ Input properties used for looking up and filtering Balancer resources.
 The set of arguments for constructing a Deployment resource.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DeploymentState" data-link-title="DeploymentState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L68">
         interface <strong>DeploymentState</strong>
     </a>
 </h3>
@@ -721,12 +721,12 @@ The set of arguments for constructing a Deployment resource.
 Input properties used for looking up and filtering Deployment resources.
 
 <h4 class="pdoc-member-header" id="DeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/deployment.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/deployment.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ListenerArgs" data-link-title="ListenerArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L102">
         interface <strong>ListenerArgs</strong>
     </a>
 </h3>
@@ -736,32 +736,32 @@ Input properties used for looking up and filtering Deployment resources.
 The set of arguments for constructing a Listener resource.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L103">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L103">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L104">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L104">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L105">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L105">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L106">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ListenerTag'>ListenerTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerArgs-tlsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L107">property <b>tlsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L107">property <b>tlsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ListenerTlsConfig'>ListenerTlsConfig</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ListenerState" data-link-title="ListenerState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L91">
         interface <strong>ListenerState</strong>
     </a>
 </h3>
@@ -771,32 +771,32 @@ The set of arguments for constructing a Listener resource.
 Input properties used for looking up and filtering Listener resources.
 
 <h4 class="pdoc-member-header" id="ListenerState-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L92">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L92">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L93">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L93">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L94">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L94">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ListenerTag'>ListenerTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerState-tlsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/listener.ts#L96">property <b>tlsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/listener.ts#L96">property <b>tlsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ListenerTlsConfig'>ListenerTlsConfig</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RoutingRuleArgs" data-link-title="RoutingRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L117">
         interface <strong>RoutingRuleArgs</strong>
     </a>
 </h3>
@@ -806,47 +806,47 @@ Input properties used for looking up and filtering Listener resources.
 The set of arguments for constructing a RoutingRule resource.
 
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L118">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L118">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L119">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L119">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-middlewareIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L120">property <b>middlewareIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L120">property <b>middlewareIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>middlewareIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L121">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L121">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L122">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L122">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>route: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L123">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L123">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L124">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L124">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#RoutingRuleTag'>RoutingRuleTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleArgs-targetSetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L125">property <b>targetSetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L125">property <b>targetSetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RoutingRuleState" data-link-title="RoutingRuleState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L103">
         interface <strong>RoutingRuleState</strong>
     </a>
 </h3>
@@ -856,47 +856,47 @@ The set of arguments for constructing a RoutingRule resource.
 Input properties used for looking up and filtering RoutingRule resources.
 
 <h4 class="pdoc-member-header" id="RoutingRuleState-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L104">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L104">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L105">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L105">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-middlewareIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L106">property <b>middlewareIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L106">property <b>middlewareIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>middlewareIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L107">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L107">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L108">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L108">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>route?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L109">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L109">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L110">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L110">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#RoutingRuleTag'>RoutingRuleTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleState-targetSetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/routingRule.ts#L111">property <b>targetSetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/routingRule.ts#L111">property <b>targetSetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetArgs" data-link-title="TargetArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L113">
         interface <strong>TargetArgs</strong>
     </a>
 </h3>
@@ -906,42 +906,42 @@ Input properties used for looking up and filtering RoutingRule resources.
 The set of arguments for constructing a Target resource.
 
 <h4 class="pdoc-member-header" id="TargetArgs-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L114">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L114">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L115">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L115">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L117">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L117">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#TargetTag'>TargetTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-targetSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L119">property <b>targetSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L119">property <b>targetSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L120">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L120">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetSetArgs" data-link-title="TargetSetArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L120">
         interface <strong>TargetSetArgs</strong>
     </a>
 </h3>
@@ -951,47 +951,47 @@ The set of arguments for constructing a Target resource.
 The set of arguments for constructing a TargetSet resource.
 
 <h4 class="pdoc-member-header" id="TargetSetArgs-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L121">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L121">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L122">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L122">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L123">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L123">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#TargetSetHealthCheck'>TargetSetHealthCheck</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L125">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L125">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L126">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L126">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L127">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L127">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#TargetSetTag'>TargetSetTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L128">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L128">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetSetState" data-link-title="TargetSetState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L106">
         interface <strong>TargetSetState</strong>
     </a>
 </h3>
@@ -1001,47 +1001,47 @@ The set of arguments for constructing a TargetSet resource.
 Input properties used for looking up and filtering TargetSet resources.
 
 <h4 class="pdoc-member-header" id="TargetSetState-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L107">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L107">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L108">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L108">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L109">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L109">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#TargetSetHealthCheck'>TargetSetHealthCheck</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L111">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L111">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L112">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L112">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L113">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L113">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#TargetSetTag'>TargetSetTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/targetSet.ts#L114">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/targetSet.ts#L114">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetState" data-link-title="TargetState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L100">
         interface <strong>TargetState</strong>
     </a>
 </h3>
@@ -1051,37 +1051,37 @@ Input properties used for looking up and filtering TargetSet resources.
 Input properties used for looking up and filtering Target resources.
 
 <h4 class="pdoc-member-header" id="TargetState-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L101">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L101">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L102">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L102">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L103">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L104">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L104">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L105">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#TargetTag'>TargetTag</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-targetSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L106">property <b>targetSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L106">property <b>targetSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/0ca9cd9e505b583e0ed53dcbae47863b28d536aa/sdk/nodejs/multai/target.ts#L107">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/9c09ad96fc81d6e53907abb5d257a89215aef203/sdk/nodejs/multai/target.ts#L107">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
