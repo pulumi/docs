@@ -134,26 +134,26 @@ import pulumi_datadog as datadog
 
 sample_index = datadog.LogsIndex("sampleIndex",
     exclusion_filters=[
-        {
-            "filters": [{
-                "query": "app:coredns",
-                "sampleRate": 0.97,
-            }],
-            "is_enabled": True,
-            "name": "Filter coredns logs",
-        },
-        {
-            "filters": [{
-                "query": "service:kube_apiserver",
-                "sampleRate": 1,
-            }],
-            "is_enabled": True,
-            "name": "Kubernetes apiserver",
-        },
+        datadog.LogsIndexExclusionFilterArgs(
+            filters=[datadog.LogsIndexExclusionFilterFilterArgs(
+                query="app:coredns",
+                sample_rate=0.97,
+            )],
+            is_enabled=True,
+            name="Filter coredns logs",
+        ),
+        datadog.LogsIndexExclusionFilterArgs(
+            filters=[datadog.LogsIndexExclusionFilterFilterArgs(
+                query="service:kube_apiserver",
+                sample_rate=1,
+            )],
+            is_enabled=True,
+            name="Kubernetes apiserver",
+        ),
     ],
-    filters=[{
-        "query": "*",
-    }],
+    filters=[datadog.LogsIndexFilterArgs(
+        query="*",
+    )],
     name="your index")
 ```
 
@@ -205,7 +205,7 @@ const sampleIndex = new datadog.LogsIndex("sample_index", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsIndex">LogsIndex</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>exclusion_filters=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsIndex">LogsIndex</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">exclusion_filters</span><span class="p">:</span> <span class="nx">Optional[List[LogsIndexExclusionFilterArgs]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[LogsIndexFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -500,7 +500,7 @@ The LogsIndex resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsindexfilter">List[Logs<wbr>Index<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logsindexfilter">List[Logs<wbr>Index<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -521,7 +521,7 @@ The LogsIndex resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#exclusion_filters_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsindexexclusionfilter">List[Logs<wbr>Index<wbr>Exclusion<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logsindexexclusionfilter">List[Logs<wbr>Index<wbr>Exclusion<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of exclusion filters.
 {{% /md %}}</dd>
@@ -624,7 +624,8 @@ Get an existing LogsIndex resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>exclusion_filters=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">exclusion_filters</span><span class="p">:</span> <span class="nx">Optional[List[LogsIndexExclusionFilterArgs]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[LogsIndexFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LogsIndex</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -632,7 +633,7 @@ Get an existing LogsIndex resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsIndex.html">LogsIndex</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsIndexState.html">LogsIndexState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsIndex.html">LogsIndex</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsIndexState.html">LogsIndexState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -861,7 +862,7 @@ The following state arguments are supported:
 <a href="#state_exclusion_filters_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsindexexclusionfilter">List[Logs<wbr>Index<wbr>Exclusion<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logsindexexclusionfilter">List[Logs<wbr>Index<wbr>Exclusion<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of exclusion filters.
 {{% /md %}}</dd>
@@ -872,7 +873,7 @@ The following state arguments are supported:
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsindexfilter">List[Logs<wbr>Index<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logsindexfilter">List[Logs<wbr>Index<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1043,7 +1044,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsindexexclusionfilterfilter">List[Logs<wbr>Index<wbr>Exclusion<wbr>Filter<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logsindexexclusionfilterfilter">List[Logs<wbr>Index<wbr>Exclusion<wbr>Filter<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1194,8 +1195,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplerate_python">
-<a href="#samplerate_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
+        <span id="sample_rate_python">
+<a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

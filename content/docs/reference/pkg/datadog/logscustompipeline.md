@@ -499,36 +499,36 @@ import pulumi
 import pulumi_datadog as datadog
 
 sample_pipeline = datadog.LogsCustomPipeline("samplePipeline",
-    filters=[{
-        "query": "source:foo",
-    }],
+    filters=[datadog.LogsCustomPipelineFilterArgs(
+        query="source:foo",
+    )],
     is_enabled=True,
     name="sample pipeline",
     processors=[
-        {
-            "arithmeticProcessor": {
-                "expression": "(time1 - time2)*1000",
-                "is_enabled": True,
-                "isReplaceMissing": True,
-                "name": "sample arithmetic processor",
-                "target": "my_arithmetic",
-            },
-        },
-        {
-            "attributeRemapper": {
-                "is_enabled": True,
-                "name": "sample attribute processor",
-                "overrideOnConflict": False,
-                "preserveSource": True,
-                "sourceType": "tag",
-                "sources": ["db.instance"],
-                "target": "db",
-                "targetType": "tag",
-            },
-        },
-        {
-            "categoryProcessor": {
-                "category": [
+        datadog.LogsCustomPipelineProcessorArgs(
+            arithmetic_processor=datadog.LogsCustomPipelineProcessorArithmeticProcessorArgs(
+                expression="(time1 - time2)*1000",
+                is_enabled=True,
+                is_replace_missing=True,
+                name="sample arithmetic processor",
+                target="my_arithmetic",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            attribute_remapper=datadog.LogsCustomPipelineProcessorAttributeRemapperArgs(
+                is_enabled=True,
+                name="sample attribute processor",
+                override_on_conflict=False,
+                preserve_source=True,
+                source_type="tag",
+                sources=["db.instance"],
+                target="db",
+                target_type="tag",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            category_processor=datadog.LogsCustomPipelineProcessorCategoryProcessorArgs(
+                category=[
                     {
                         "filter": [{
                             "query": "@severity: \".\"",
@@ -542,66 +542,66 @@ sample_pipeline = datadog.LogsCustomPipeline("samplePipeline",
                         "name": "verbose",
                     },
                 ],
-                "is_enabled": True,
-                "name": "sample category processor",
-                "target": "foo.severity",
-            },
-        },
-        {
-            "dateRemapper": {
-                "is_enabled": True,
-                "name": "sample date remapper",
-                "sources": [
+                is_enabled=True,
+                name="sample category processor",
+                target="foo.severity",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            date_remapper=datadog.LogsCustomPipelineProcessorDateRemapperArgs(
+                is_enabled=True,
+                name="sample date remapper",
+                sources=[
                     "_timestamp",
                     "published_date",
                 ],
-            },
-        },
-        {
-            "geoIpParser": {
-                "is_enabled": True,
-                "name": "sample geo ip parser",
-                "sources": ["network.client.ip"],
-                "target": "network.client.geoip",
-            },
-        },
-        {
-            "grokParser": {
-                "grok": {
-                    "matchRules": "Rule %{word:my_word2} %{number:my_float2}",
-                    "supportRules": "",
-                },
-                "is_enabled": True,
-                "name": "sample grok parser",
-                "samples": ["sample log 1"],
-                "source": "message",
-            },
-        },
-        {
-            "lookupProcessor": {
-                "defaultLookup": "unknown service",
-                "is_enabled": True,
-                "lookupTable": ["1,my service"],
-                "name": "sample lookup processor",
-                "source": "service_id",
-                "target": "service_name",
-            },
-        },
-        {
-            "messageRemapper": {
-                "is_enabled": True,
-                "name": "sample message remapper",
-                "sources": ["msg"],
-            },
-        },
-        {
-            "pipeline": {
-                "filter": [{
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            geo_ip_parser=datadog.LogsCustomPipelineProcessorGeoIpParserArgs(
+                is_enabled=True,
+                name="sample geo ip parser",
+                sources=["network.client.ip"],
+                target="network.client.geoip",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            grok_parser=datadog.LogsCustomPipelineProcessorGrokParserArgs(
+                grok=datadog.LogsCustomPipelineProcessorGrokParserGrokArgs(
+                    match_rules="Rule %{word:my_word2} %{number:my_float2}",
+                    support_rules="",
+                ),
+                is_enabled=True,
+                name="sample grok parser",
+                samples=["sample log 1"],
+                source="message",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            lookup_processor=datadog.LogsCustomPipelineProcessorLookupProcessorArgs(
+                default_lookup="unknown service",
+                is_enabled=True,
+                lookup_table=["1,my service"],
+                name="sample lookup processor",
+                source="service_id",
+                target="service_name",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            message_remapper=datadog.LogsCustomPipelineProcessorMessageRemapperArgs(
+                is_enabled=True,
+                name="sample message remapper",
+                sources=["msg"],
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            pipeline=datadog.LogsCustomPipelineProcessorPipelineArgs(
+                filter=[{
                     "query": "source:foo",
                 }],
-                "is_enabled": True,
-                "name": "nested pipeline",
-                "processor": [{
+                is_enabled=True,
+                name="nested pipeline",
+                processor=[{
                     "urlParser": {
                         "name": "sample url parser",
                         "normalizeEndingSlashes": True,
@@ -612,53 +612,53 @@ sample_pipeline = datadog.LogsCustomPipeline("samplePipeline",
                         "target": "http_url",
                     },
                 }],
-            },
-        },
-        {
-            "serviceRemapper": {
-                "is_enabled": True,
-                "name": "sample service remapper",
-                "sources": ["service"],
-            },
-        },
-        {
-            "statusRemapper": {
-                "is_enabled": True,
-                "name": "sample status remapper",
-                "sources": [
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            service_remapper=datadog.LogsCustomPipelineProcessorServiceRemapperArgs(
+                is_enabled=True,
+                name="sample service remapper",
+                sources=["service"],
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            status_remapper=datadog.LogsCustomPipelineProcessorStatusRemapperArgs(
+                is_enabled=True,
+                name="sample status remapper",
+                sources=[
                     "info",
                     "trace",
                 ],
-            },
-        },
-        {
-            "stringBuilderProcessor": {
-                "is_enabled": True,
-                "isReplaceMissing": False,
-                "name": "sample string builder processor",
-                "target": "user_activity",
-                "template": "%{user.name} logged in at %{timestamp}",
-            },
-        },
-        {
-            "traceIdRemapper": {
-                "is_enabled": True,
-                "name": "sample trace id remapper",
-                "sources": ["dd.trace_id"],
-            },
-        },
-        {
-            "userAgentParser": {
-                "is_enabled": True,
-                "isEncoded": False,
-                "name": "sample user agent parser",
-                "sources": [
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            string_builder_processor=datadog.LogsCustomPipelineProcessorStringBuilderProcessorArgs(
+                is_enabled=True,
+                is_replace_missing=False,
+                name="sample string builder processor",
+                target="user_activity",
+                template="%{user.name} logged in at %{timestamp}",
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            trace_id_remapper=datadog.LogsCustomPipelineProcessorTraceIdRemapperArgs(
+                is_enabled=True,
+                name="sample trace id remapper",
+                sources=["dd.trace_id"],
+            ),
+        ),
+        datadog.LogsCustomPipelineProcessorArgs(
+            user_agent_parser=datadog.LogsCustomPipelineProcessorUserAgentParserArgs(
+                is_enabled=True,
+                is_encoded=False,
+                name="sample user agent parser",
+                sources=[
                     "user",
                     "agent",
                 ],
-                "target": "http_agent",
-            },
-        },
+                target="http_agent",
+            ),
+        ),
     ])
 ```
 
@@ -849,7 +849,7 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsCustomPipeline">LogsCustomPipeline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>filters=None<span class="p">, </span>is_enabled=None<span class="p">, </span>name=None<span class="p">, </span>processors=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsCustomPipeline">LogsCustomPipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[LogsCustomPipelineFilterArgs]]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">processors</span><span class="p">:</span> <span class="nx">Optional[List[LogsCustomPipelineProcessorArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1180,7 +1180,7 @@ The LogsCustomPipeline resource accepts the following [input]({{< relref "/docs/
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelinefilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logscustompipelinefilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 {{% /md %}}</dd>
@@ -1213,7 +1213,7 @@ The LogsCustomPipeline resource accepts the following [input]({{< relref "/docs/
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessor">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessor">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Processors. Nested pipeline can't take any other nested pipeline as its processor.
 {{% /md %}}</dd>
@@ -1316,7 +1316,8 @@ Get an existing LogsCustomPipeline resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>filters=None<span class="p">, </span>is_enabled=None<span class="p">, </span>name=None<span class="p">, </span>processors=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[LogsCustomPipelineFilterArgs]]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">processors</span><span class="p">:</span> <span class="nx">Optional[List[LogsCustomPipelineProcessorArgs]]</span> = None<span class="p">) -&gt;</span> LogsCustomPipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1324,7 +1325,7 @@ Get an existing LogsCustomPipeline resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsCustomPipeline.html">LogsCustomPipeline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsCustomPipelineState.html">LogsCustomPipelineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsCustomPipeline.html">LogsCustomPipeline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsCustomPipelineState.html">LogsCustomPipelineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1589,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelinefilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logscustompipelinefilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 {{% /md %}}</dd>
@@ -1622,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessor">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessor">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Processors. Nested pipeline can't take any other nested pipeline as its processor.
 {{% /md %}}</dd>
@@ -2219,81 +2220,81 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="arithmeticprocessor_python">
-<a href="#arithmeticprocessor_python" style="color: inherit; text-decoration: inherit;">arithmetic<wbr>Processor</a>
+        <span id="arithmetic_processor_python">
+<a href="#arithmetic_processor_python" style="color: inherit; text-decoration: inherit;">arithmetic_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorarithmeticprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorarithmeticprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributeremapper_python">
-<a href="#attributeremapper_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Remapper</a>
+        <span id="attribute_remapper_python">
+<a href="#attribute_remapper_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorattributeremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorattributeremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="categoryprocessor_python">
-<a href="#categoryprocessor_python" style="color: inherit; text-decoration: inherit;">category<wbr>Processor</a>
+        <span id="category_processor_python">
+<a href="#category_processor_python" style="color: inherit; text-decoration: inherit;">category_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorcategoryprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorcategoryprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateremapper_python">
-<a href="#dateremapper_python" style="color: inherit; text-decoration: inherit;">date<wbr>Remapper</a>
+        <span id="date_remapper_python">
+<a href="#date_remapper_python" style="color: inherit; text-decoration: inherit;">date_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessordateremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessordateremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="geoipparser_python">
-<a href="#geoipparser_python" style="color: inherit; text-decoration: inherit;">geo<wbr>Ip<wbr>Parser</a>
+        <span id="geo_ip_parser_python">
+<a href="#geo_ip_parser_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>ip_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorgeoipparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorgeoipparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="grokparser_python">
-<a href="#grokparser_python" style="color: inherit; text-decoration: inherit;">grok<wbr>Parser</a>
+        <span id="grok_parser_python">
+<a href="#grok_parser_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorgrokparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorgrokparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lookupprocessor_python">
-<a href="#lookupprocessor_python" style="color: inherit; text-decoration: inherit;">lookup<wbr>Processor</a>
+        <span id="lookup_processor_python">
+<a href="#lookup_processor_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorlookupprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Lookup<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorlookupprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Lookup<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageremapper_python">
-<a href="#messageremapper_python" style="color: inherit; text-decoration: inherit;">message<wbr>Remapper</a>
+        <span id="message_remapper_python">
+<a href="#message_remapper_python" style="color: inherit; text-decoration: inherit;">message_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessormessageremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessormessageremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2303,67 +2304,67 @@ The following state arguments are supported:
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipeline">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipeline">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceremapper_python">
-<a href="#serviceremapper_python" style="color: inherit; text-decoration: inherit;">service<wbr>Remapper</a>
+        <span id="service_remapper_python">
+<a href="#service_remapper_python" style="color: inherit; text-decoration: inherit;">service_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorserviceremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorserviceremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statusremapper_python">
-<a href="#statusremapper_python" style="color: inherit; text-decoration: inherit;">status<wbr>Remapper</a>
+        <span id="status_remapper_python">
+<a href="#status_remapper_python" style="color: inherit; text-decoration: inherit;">status_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorstatusremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorstatusremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stringbuilderprocessor_python">
-<a href="#stringbuilderprocessor_python" style="color: inherit; text-decoration: inherit;">string<wbr>Builder<wbr>Processor</a>
+        <span id="string_builder_processor_python">
+<a href="#string_builder_processor_python" style="color: inherit; text-decoration: inherit;">string_<wbr>builder_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorstringbuilderprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorstringbuilderprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="traceidremapper_python">
-<a href="#traceidremapper_python" style="color: inherit; text-decoration: inherit;">trace<wbr>Id<wbr>Remapper</a>
+        <span id="trace_id_remapper_python">
+<a href="#trace_id_remapper_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>id_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessortraceidremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessortraceidremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlparser_python">
-<a href="#urlparser_python" style="color: inherit; text-decoration: inherit;">url<wbr>Parser</a>
+        <span id="url_parser_python">
+<a href="#url_parser_python" style="color: inherit; text-decoration: inherit;">url_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorurlparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorurlparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useragentparser_python">
-<a href="#useragentparser_python" style="color: inherit; text-decoration: inherit;">user<wbr>Agent<wbr>Parser</a>
+        <span id="user_agent_parser_python">
+<a href="#user_agent_parser_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessoruseragentparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessoruseragentparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2605,18 +2606,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isreplacemissing_python">
-<a href="#isreplacemissing_python" style="color: inherit; text-decoration: inherit;">is<wbr>Replace<wbr>Missing</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
-* trace_id_remapper
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -2624,6 +2613,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the processor is enabled or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_replace_missing_python">
+<a href="#is_replace_missing_python" style="color: inherit; text-decoration: inherit;">is_<wbr>replace_<wbr>missing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
+* trace_id_remapper
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2949,8 +2950,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetype_python">
-<a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
+        <span id="source_type_python">
+<a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2982,8 +2983,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targettype_python">
-<a href="#targettype_python" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
+        <span id="target_type_python">
+<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3015,8 +3016,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideonconflict_python">
-<a href="#overrideonconflict_python" style="color: inherit; text-decoration: inherit;">override<wbr>On<wbr>Conflict</a>
+        <span id="override_on_conflict_python">
+<a href="#override_on_conflict_python" style="color: inherit; text-decoration: inherit;">override_<wbr>on_<wbr>conflict</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3026,8 +3027,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preservesource_python">
-<a href="#preservesource_python" style="color: inherit; text-decoration: inherit;">preserve<wbr>Source</a>
+        <span id="preserve_source_python">
+<a href="#preserve_source_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3219,7 +3220,7 @@ The following state arguments are supported:
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorcategoryprocessorcategory">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorcategoryprocessorcategory">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of filters to match or exclude a log with their corresponding name to assign a custom value to the log.
 {{% /md %}}</dd>
@@ -3375,7 +3376,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorcategoryprocessorcategoryfilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorcategoryprocessorcategoryfilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 {{% /md %}}</dd>
@@ -4091,7 +4092,7 @@ The following state arguments are supported:
 <a href="#grok_python" style="color: inherit; text-decoration: inherit;">grok</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorgrokparsergrok">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorgrokparsergrok">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4253,8 +4254,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchrules_python">
-<a href="#matchrules_python" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
+        <span id="match_rules_python">
+<a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4264,8 +4265,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportrules_python">
-<a href="#supportrules_python" style="color: inherit; text-decoration: inherit;">support<wbr>Rules</a>
+        <span id="support_rules_python">
+<a href="#support_rules_python" style="color: inherit; text-decoration: inherit;">support_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4519,8 +4520,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="lookuptables_python">
-<a href="#lookuptables_python" style="color: inherit; text-decoration: inherit;">lookup<wbr>Tables</a>
+        <span id="lookup_tables_python">
+<a href="#lookup_tables_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4552,8 +4553,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultlookup_python">
-<a href="#defaultlookup_python" style="color: inherit; text-decoration: inherit;">default<wbr>Lookup</a>
+        <span id="default_lookup_python">
+<a href="#default_lookup_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lookup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4945,7 +4946,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelinefilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelinefilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 {{% /md %}}</dd>
@@ -4978,7 +4979,7 @@ The following state arguments are supported:
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessor">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessor">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Processors. Nested pipeline can't take any other nested pipeline as its processor.
 {{% /md %}}</dd>
@@ -5537,141 +5538,141 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="arithmeticprocessor_python">
-<a href="#arithmeticprocessor_python" style="color: inherit; text-decoration: inherit;">arithmetic<wbr>Processor</a>
+        <span id="arithmetic_processor_python">
+<a href="#arithmetic_processor_python" style="color: inherit; text-decoration: inherit;">arithmetic_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorarithmeticprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorarithmeticprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="attributeremapper_python">
-<a href="#attributeremapper_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Remapper</a>
+        <span id="attribute_remapper_python">
+<a href="#attribute_remapper_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorattributeremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorattributeremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="categoryprocessor_python">
-<a href="#categoryprocessor_python" style="color: inherit; text-decoration: inherit;">category<wbr>Processor</a>
+        <span id="category_processor_python">
+<a href="#category_processor_python" style="color: inherit; text-decoration: inherit;">category_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorcategoryprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorcategoryprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateremapper_python">
-<a href="#dateremapper_python" style="color: inherit; text-decoration: inherit;">date<wbr>Remapper</a>
+        <span id="date_remapper_python">
+<a href="#date_remapper_python" style="color: inherit; text-decoration: inherit;">date_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessordateremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessordateremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="geoipparser_python">
-<a href="#geoipparser_python" style="color: inherit; text-decoration: inherit;">geo<wbr>Ip<wbr>Parser</a>
+        <span id="geo_ip_parser_python">
+<a href="#geo_ip_parser_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>ip_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorgeoipparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorgeoipparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="grokparser_python">
-<a href="#grokparser_python" style="color: inherit; text-decoration: inherit;">grok<wbr>Parser</a>
+        <span id="grok_parser_python">
+<a href="#grok_parser_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorgrokparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorgrokparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lookupprocessor_python">
-<a href="#lookupprocessor_python" style="color: inherit; text-decoration: inherit;">lookup<wbr>Processor</a>
+        <span id="lookup_processor_python">
+<a href="#lookup_processor_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorlookupprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Lookup<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorlookupprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Lookup<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageremapper_python">
-<a href="#messageremapper_python" style="color: inherit; text-decoration: inherit;">message<wbr>Remapper</a>
+        <span id="message_remapper_python">
+<a href="#message_remapper_python" style="color: inherit; text-decoration: inherit;">message_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessormessageremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessormessageremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceremapper_python">
-<a href="#serviceremapper_python" style="color: inherit; text-decoration: inherit;">service<wbr>Remapper</a>
+        <span id="service_remapper_python">
+<a href="#service_remapper_python" style="color: inherit; text-decoration: inherit;">service_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorserviceremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorserviceremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="statusremapper_python">
-<a href="#statusremapper_python" style="color: inherit; text-decoration: inherit;">status<wbr>Remapper</a>
+        <span id="status_remapper_python">
+<a href="#status_remapper_python" style="color: inherit; text-decoration: inherit;">status_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorstatusremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorstatusremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stringbuilderprocessor_python">
-<a href="#stringbuilderprocessor_python" style="color: inherit; text-decoration: inherit;">string<wbr>Builder<wbr>Processor</a>
+        <span id="string_builder_processor_python">
+<a href="#string_builder_processor_python" style="color: inherit; text-decoration: inherit;">string_<wbr>builder_<wbr>processor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorstringbuilderprocessor">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorstringbuilderprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="traceidremapper_python">
-<a href="#traceidremapper_python" style="color: inherit; text-decoration: inherit;">trace<wbr>Id<wbr>Remapper</a>
+        <span id="trace_id_remapper_python">
+<a href="#trace_id_remapper_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>id_<wbr>remapper</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessortraceidremapper">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessortraceidremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlparser_python">
-<a href="#urlparser_python" style="color: inherit; text-decoration: inherit;">url<wbr>Parser</a>
+        <span id="url_parser_python">
+<a href="#url_parser_python" style="color: inherit; text-decoration: inherit;">url_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorurlparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorurlparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useragentparser_python">
-<a href="#useragentparser_python" style="color: inherit; text-decoration: inherit;">user<wbr>Agent<wbr>Parser</a>
+        <span id="user_agent_parser_python">
+<a href="#user_agent_parser_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent_<wbr>parser</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessoruseragentparser">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessoruseragentparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5913,18 +5914,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isreplacemissing_python">
-<a href="#isreplacemissing_python" style="color: inherit; text-decoration: inherit;">is<wbr>Replace<wbr>Missing</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
-* trace_id_remapper
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -5932,6 +5921,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the processor is enabled or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_replace_missing_python">
+<a href="#is_replace_missing_python" style="color: inherit; text-decoration: inherit;">is_<wbr>replace_<wbr>missing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
+* trace_id_remapper
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6257,8 +6258,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetype_python">
-<a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
+        <span id="source_type_python">
+<a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6290,8 +6291,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targettype_python">
-<a href="#targettype_python" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
+        <span id="target_type_python">
+<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6323,8 +6324,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideonconflict_python">
-<a href="#overrideonconflict_python" style="color: inherit; text-decoration: inherit;">override<wbr>On<wbr>Conflict</a>
+        <span id="override_on_conflict_python">
+<a href="#override_on_conflict_python" style="color: inherit; text-decoration: inherit;">override_<wbr>on_<wbr>conflict</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6334,8 +6335,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preservesource_python">
-<a href="#preservesource_python" style="color: inherit; text-decoration: inherit;">preserve<wbr>Source</a>
+        <span id="preserve_source_python">
+<a href="#preserve_source_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6527,7 +6528,7 @@ The following state arguments are supported:
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorcategoryprocessorcategory">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorcategoryprocessorcategory">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of filters to match or exclude a log with their corresponding name to assign a custom value to the log.
 {{% /md %}}</dd>
@@ -6683,7 +6684,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorcategoryprocessorcategoryfilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorcategoryprocessorcategoryfilter">List[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the nested pipeline filter. Only logs that match the filter criteria are processed by this pipeline.
 {{% /md %}}</dd>
@@ -7399,7 +7400,7 @@ The following state arguments are supported:
 <a href="#grok_python" style="color: inherit; text-decoration: inherit;">grok</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorgrokparsergrok">Dict[Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok]</a></span>
+        <span class="property-type"><a href="#logscustompipelineprocessorpipelineprocessorgrokparsergrok">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7561,8 +7562,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchrules_python">
-<a href="#matchrules_python" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
+        <span id="match_rules_python">
+<a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7572,8 +7573,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="supportrules_python">
-<a href="#supportrules_python" style="color: inherit; text-decoration: inherit;">support<wbr>Rules</a>
+        <span id="support_rules_python">
+<a href="#support_rules_python" style="color: inherit; text-decoration: inherit;">support_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7827,8 +7828,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="lookuptables_python">
-<a href="#lookuptables_python" style="color: inherit; text-decoration: inherit;">lookup<wbr>Tables</a>
+        <span id="lookup_tables_python">
+<a href="#lookup_tables_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7860,8 +7861,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultlookup_python">
-<a href="#defaultlookup_python" style="color: inherit; text-decoration: inherit;">default<wbr>Lookup</a>
+        <span id="default_lookup_python">
+<a href="#default_lookup_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lookup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8663,18 +8664,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isreplacemissing_python">
-<a href="#isreplacemissing_python" style="color: inherit; text-decoration: inherit;">is<wbr>Replace<wbr>Missing</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
-* trace_id_remapper
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -8682,6 +8671,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the processor is enabled or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_replace_missing_python">
+<a href="#is_replace_missing_python" style="color: inherit; text-decoration: inherit;">is_<wbr>replace_<wbr>missing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
+* trace_id_remapper
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9130,8 +9131,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="normalizeendingslashes_python">
-<a href="#normalizeendingslashes_python" style="color: inherit; text-decoration: inherit;">normalize<wbr>Ending<wbr>Slashes</a>
+        <span id="normalize_ending_slashes_python">
+<a href="#normalize_ending_slashes_python" style="color: inherit; text-decoration: inherit;">normalize_<wbr>ending_<wbr>slashes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9374,17 +9375,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isencoded_python">
-<a href="#isencoded_python" style="color: inherit; text-decoration: inherit;">is<wbr>Encoded</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the source attribute is URL encoded or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -9392,6 +9382,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the processor is enabled or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_encoded_python">
+<a href="#is_encoded_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encoded</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the source attribute is URL encoded or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9999,18 +10000,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isreplacemissing_python">
-<a href="#isreplacemissing_python" style="color: inherit; text-decoration: inherit;">is<wbr>Replace<wbr>Missing</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
-* trace_id_remapper
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -10018,6 +10007,18 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the processor is enabled or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_replace_missing_python">
+<a href="#is_replace_missing_python" style="color: inherit; text-decoration: inherit;">is_<wbr>replace_<wbr>missing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
+* trace_id_remapper
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10466,8 +10467,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="normalizeendingslashes_python">
-<a href="#normalizeendingslashes_python" style="color: inherit; text-decoration: inherit;">normalize<wbr>Ending<wbr>Slashes</a>
+        <span id="normalize_ending_slashes_python">
+<a href="#normalize_ending_slashes_python" style="color: inherit; text-decoration: inherit;">normalize_<wbr>ending_<wbr>slashes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10710,17 +10711,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isencoded_python">
-<a href="#isencoded_python" style="color: inherit; text-decoration: inherit;">is<wbr>Encoded</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the source attribute is URL encoded or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
@@ -10728,6 +10718,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the processor is enabled or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_encoded_python">
+<a href="#is_encoded_python" style="color: inherit; text-decoration: inherit;">is_<wbr>encoded</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the source attribute is URL encoded or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

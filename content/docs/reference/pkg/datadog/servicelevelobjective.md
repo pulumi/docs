@@ -128,29 +128,29 @@ import pulumi_datadog as datadog
 foo = datadog.ServiceLevelObjective("foo",
     description="My custom metric SLO",
     name="Example Metric SLO",
-    query={
-        "denominator": "sum:my.custom.count.metric{*}.as_count()",
-        "numerator": "sum:my.custom.count.metric{type:good_events}.as_count()",
-    },
+    query=datadog.ServiceLevelObjectiveQueryArgs(
+        denominator="sum:my.custom.count.metric{*}.as_count()",
+        numerator="sum:my.custom.count.metric{type:good_events}.as_count()",
+    ),
     tags=[
         "foo:bar",
         "baz",
     ],
     thresholds=[
-        {
-            "target": 99.9,
-            "targetDisplay": "99.900",
-            "timeframe": "7d",
-            "warning": 99.99,
-            "warningDisplay": "99.990",
-        },
-        {
-            "target": 99.9,
-            "targetDisplay": "99.900",
-            "timeframe": "30d",
-            "warning": 99.99,
-            "warningDisplay": "99.990",
-        },
+        datadog.ServiceLevelObjectiveThresholdArgs(
+            target=99.9,
+            target_display="99.900",
+            timeframe="7d",
+            warning=99.99,
+            warning_display="99.990",
+        ),
+        datadog.ServiceLevelObjectiveThresholdArgs(
+            target=99.9,
+            target_display="99.900",
+            timeframe="30d",
+            warning=99.99,
+            warning_display="99.990",
+        ),
     ],
     type="metric")
 ```
@@ -208,7 +208,7 @@ const foo = new datadog.ServiceLevelObjective("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ServiceLevelObjective">ServiceLevelObjective</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>tags=None<span class="p">, </span>thresholds=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ServiceLevelObjective">ServiceLevelObjective</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ServiceLevelObjectiveQueryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLevelObjectiveThresholdArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -688,7 +688,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
@@ -734,7 +734,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelobjectivequery">Dict[Service<wbr>Level<wbr>Objective<wbr>Query]</a></span>
+        <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
 {{% /md %}}</dd>
@@ -859,7 +859,8 @@ Get an existing ServiceLevelObjective resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>monitor_ids=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>tags=None<span class="p">, </span>thresholds=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ServiceLevelObjectiveQueryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLevelObjectiveThresholdArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceLevelObjective</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -867,7 +868,7 @@ Get an existing ServiceLevelObjective resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.ServiceLevelObjective.html">ServiceLevelObjective</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..ServiceLevelObjectiveState.html">ServiceLevelObjectiveState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.ServiceLevelObjective.html">ServiceLevelObjective</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..ServiceLevelObjectiveState.html">ServiceLevelObjectiveState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1292,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
 {{% /md %}}</dd>
@@ -1314,7 +1315,7 @@ The following state arguments are supported:
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelobjectivequery">Dict[Service<wbr>Level<wbr>Objective<wbr>Query]</a></span>
+        <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
 {{% /md %}}</dd>
@@ -1336,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
@@ -1747,8 +1748,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetdisplay_python">
-<a href="#targetdisplay_python" style="color: inherit; text-decoration: inherit;">target<wbr>Display</a>
+        <span id="target_display_python">
+<a href="#target_display_python" style="color: inherit; text-decoration: inherit;">target_<wbr>display</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1769,8 +1770,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="warningdisplay_python">
-<a href="#warningdisplay_python" style="color: inherit; text-decoration: inherit;">warning<wbr>Display</a>
+        <span id="warning_display_python">
+<a href="#warning_display_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>display</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

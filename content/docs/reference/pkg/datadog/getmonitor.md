@@ -108,7 +108,7 @@ const test = pulumi.output(datadog.getMonitor({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_monitor(</span>monitor_tags_filters=None<span class="p">, </span>name_filter=None<span class="p">, </span>tags_filters=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitor(</span><span class="nx">monitor_tags_filters</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags_filters</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitorResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1269,7 +1269,7 @@ results.
 <a href="#threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmonitorthresholdwindows">Dict[Get<wbr>Monitor<wbr>Threshold<wbr>Windows]</a></span>
+        <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
     <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
 {{% /md %}}</dd>
@@ -1280,7 +1280,7 @@ results.
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmonitorthresholds">Dict[Get<wbr>Monitor<wbr>Thresholds]</a></span>
+        <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
 {{% /md %}}</dd>

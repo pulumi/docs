@@ -84,12 +84,12 @@ import pulumi_datadog as datadog
 my_s3_archive = datadog.LogsArchive("myS3Archive",
     name="my s3 archive",
     query="service:myservice",
-    s3={
-        "account_id": "001234567888",
-        "bucket": "my-bucket",
-        "path": "/path/foo",
-        "role_name": "my-role-name",
-    })
+    s3=datadog.LogsArchiveS3Args(
+        account_id="001234567888",
+        bucket="my-bucket",
+        path="/path/foo",
+        role_name="my-role-name",
+    ))
 ```
 
 {{% /example %}}
@@ -126,7 +126,7 @@ const myS3Archive = new datadog.LogsArchive("my_s3_archive", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsArchive">LogsArchive</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>azure=None<span class="p">, </span>gcs=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>s3=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsArchive">LogsArchive</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure</span><span class="p">:</span> <span class="nx">Optional[LogsArchiveAzureArgs]</span> = None<span class="p">, </span><span class="nx">gcs</span><span class="p">:</span> <span class="nx">Optional[LogsArchiveGcsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[LogsArchiveS3Args]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -512,7 +512,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_python" style="color: inherit; text-decoration: inherit;">azure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsarchiveazure">Dict[Logs<wbr>Archive<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsarchivegcs">Dict[Logs<wbr>Archive<wbr>Gcs]</a></span>
+        <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an gcs archive.
 {{% /md %}}</dd>
@@ -534,7 +534,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsarchives3">Dict[Logs<wbr>Archive<wbr>S3]</a></span>
+        <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
 {{% /md %}}</dd>
@@ -637,7 +637,8 @@ Get an existing LogsArchive resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>azure=None<span class="p">, </span>gcs=None<span class="p">, </span>name=None<span class="p">, </span>query=None<span class="p">, </span>s3=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure</span><span class="p">:</span> <span class="nx">Optional[LogsArchiveAzureArgs]</span> = None<span class="p">, </span><span class="nx">gcs</span><span class="p">:</span> <span class="nx">Optional[LogsArchiveGcsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[LogsArchiveS3Args]</span> = None<span class="p">) -&gt;</span> LogsArchive</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -645,7 +646,7 @@ Get an existing LogsArchive resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsArchive.html">LogsArchive</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsArchiveState.html">LogsArchiveState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsArchive.html">LogsArchive</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsArchiveState.html">LogsArchiveState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -943,7 +944,7 @@ The following state arguments are supported:
 <a href="#state_azure_python" style="color: inherit; text-decoration: inherit;">azure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsarchiveazure">Dict[Logs<wbr>Archive<wbr>Azure]</a></span>
+        <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
 {{% /md %}}</dd>
@@ -954,7 +955,7 @@ The following state arguments are supported:
 <a href="#state_gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsarchivegcs">Dict[Logs<wbr>Archive<wbr>Gcs]</a></span>
+        <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an gcs archive.
 {{% /md %}}</dd>
@@ -987,7 +988,7 @@ The following state arguments are supported:
 <a href="#state_s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsarchives3">Dict[Logs<wbr>Archive<wbr>S3]</a></span>
+        <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
 {{% /md %}}</dd>

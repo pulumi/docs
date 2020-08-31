@@ -351,13 +351,13 @@ test_api = datadog.SyntheticsTest("testApi",
     locations=["aws:eu-central-1"],
     message="Notify @pagerduty",
     name="An API test on example.org",
-    options={
-        "tick_every": 900,
-    },
-    request={
-        "method": "GET",
-        "url": "https://www.example.org",
-    },
+    options=datadog.SyntheticsTestOptionsArgs(
+        tick_every=900,
+    ),
+    request=datadog.SyntheticsTestRequestArgs(
+        method="GET",
+        url="https://www.example.org",
+    ),
     request_headers={
         "Authentication": "Token: 1234566789",
         "Content-Type": "application/json",
@@ -532,14 +532,14 @@ test_ssl = datadog.SyntheticsTest("testSsl",
     locations=["aws:eu-central-1"],
     message="Notify @pagerduty",
     name="An API test on example.org",
-    options={
-        "accept_self_signed": True,
-        "tick_every": 900,
-    },
-    request={
-        "host": "example.org",
-        "port": 443,
-    },
+    options=datadog.SyntheticsTestOptionsArgs(
+        accept_self_signed=True,
+        tick_every=900,
+    ),
+    request=datadog.SyntheticsTestRequestArgs(
+        host="example.org",
+        port=443,
+    ),
     status="live",
     subtype="ssl",
     tags=[
@@ -683,13 +683,13 @@ test_browser = datadog.SyntheticsTest("testBrowser",
     locations=["aws:eu-central-1"],
     message="Notify @qa",
     name="A Browser test on example.org",
-    options={
-        "tick_every": 3600,
-    },
-    request={
-        "method": "GET",
-        "url": "https://app.datadoghq.com",
-    },
+    options=datadog.SyntheticsTestOptionsArgs(
+        tick_every=3600,
+    ),
+    request=datadog.SyntheticsTestRequestArgs(
+        method="GET",
+        url="https://app.datadoghq.com",
+    ),
     status="paused",
     tags=[],
     type="browser")
@@ -736,7 +736,7 @@ const testBrowser = new datadog.SyntheticsTest("test_browser", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.SyntheticsTest">SyntheticsTest</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assertions=None<span class="p">, </span>device_ids=None<span class="p">, </span>locations=None<span class="p">, </span>message=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>request=None<span class="p">, </span>request_basicauth=None<span class="p">, </span>request_headers=None<span class="p">, </span>request_query=None<span class="p">, </span>status=None<span class="p">, </span>subtype=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.SyntheticsTest">SyntheticsTest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[List[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">, </span><span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">, </span><span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -916,7 +916,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -926,7 +927,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -936,7 +938,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -946,7 +949,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -956,7 +960,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -966,7 +971,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -986,7 +992,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -996,7 +1003,9 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1016,7 +1025,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1026,7 +1036,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1036,7 +1047,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1046,7 +1058,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1063,7 +1076,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1073,7 +1087,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1083,7 +1098,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1093,7 +1109,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1103,7 +1120,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1113,7 +1131,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1133,7 +1152,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1143,7 +1163,9 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1163,7 +1185,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1173,7 +1196,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1183,7 +1207,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1193,7 +1218,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1210,7 +1236,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1220,7 +1247,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1230,7 +1258,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1240,7 +1269,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1250,7 +1280,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1260,7 +1291,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1280,7 +1312,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1290,7 +1323,9 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1310,7 +1345,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1320,7 +1356,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1330,7 +1367,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1340,7 +1378,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1357,7 +1396,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1367,7 +1407,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1375,9 +1416,10 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Dict[Synthetics<wbr>Test<wbr>Request]</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1387,7 +1429,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1397,7 +1440,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1407,7 +1451,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1415,7 +1460,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 <a href="#assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd>
 
@@ -1427,7 +1472,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1437,7 +1483,9 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1445,7 +1493,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Dict[Synthetics<wbr>Test<wbr>Options]</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1455,9 +1503,10 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 <a href="#request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Dict[Synthetics<wbr>Test<wbr>Request<wbr>Basicauth]</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1465,9 +1514,10 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1475,9 +1525,10 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 <a href="#request_query_python" style="color: inherit; text-decoration: inherit;">request_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1487,7 +1538,8 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1525,7 +1577,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1552,7 +1605,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1579,7 +1633,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1606,7 +1661,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1627,7 +1683,8 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assertions=None<span class="p">, </span>device_ids=None<span class="p">, </span>locations=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>request=None<span class="p">, </span>request_basicauth=None<span class="p">, </span>request_headers=None<span class="p">, </span>request_query=None<span class="p">, </span>status=None<span class="p">, </span>subtype=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[List[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">, </span><span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">, </span><span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SyntheticsTest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1635,7 +1692,7 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.SyntheticsTest.html">SyntheticsTest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..SyntheticsTestState.html">SyntheticsTestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.SyntheticsTest.html">SyntheticsTest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..SyntheticsTestState.html">SyntheticsTestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1759,7 +1816,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1769,7 +1827,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1779,7 +1838,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1789,7 +1850,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1799,7 +1861,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1819,7 +1882,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1829,7 +1893,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1839,7 +1904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1849,7 +1915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1859,7 +1926,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1869,7 +1937,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1879,7 +1948,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1889,7 +1959,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1916,7 +1987,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1926,7 +1998,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1936,7 +2009,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1946,7 +2021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1956,7 +2032,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1976,7 +2053,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1986,7 +2064,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1996,7 +2075,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2006,7 +2086,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2016,7 +2097,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2026,7 +2108,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2036,7 +2119,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2046,7 +2130,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2073,7 +2158,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2083,7 +2169,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2093,7 +2180,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2103,7 +2192,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2113,7 +2203,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2133,7 +2224,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2143,7 +2235,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2153,7 +2246,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2163,7 +2257,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2173,7 +2268,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2183,7 +2279,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2193,7 +2290,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2203,7 +2301,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2218,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd>
 
@@ -2230,7 +2329,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"laptop_large", "tablet" or "mobile_small" (only available if type=browser)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2240,7 +2340,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Please refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. "aws:eu-central-1")
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2250,7 +2351,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A message to include with notifications for this synthetics test.
+Email notifications can be sent to specific users by using the same '@username' notation as events.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2260,7 +2363,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the monitor associated with the Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2270,7 +2374,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Datadog synthetics test
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2278,7 +2383,7 @@ The following state arguments are supported:
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Dict[Synthetics<wbr>Test<wbr>Options]</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2288,9 +2393,10 @@ The following state arguments are supported:
 <a href="#state_request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Dict[Synthetics<wbr>Test<wbr>Request]</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2298,9 +2404,10 @@ The following state arguments are supported:
 <a href="#state_request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Dict[Synthetics<wbr>Test<wbr>Request<wbr>Basicauth]</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of 1 item containing HTTP basic authentication credentials
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2308,9 +2415,10 @@ The following state arguments are supported:
 <a href="#state_request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Header name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2318,9 +2426,10 @@ The following state arguments are supported:
 <a href="#state_request_query_python" style="color: inherit; text-decoration: inherit;">request_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Query arguments name and value map
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2330,7 +2439,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"live", "paused"
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2340,7 +2450,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, http or ssl (Default = http)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2350,7 +2461,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2360,7 +2472,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}body, header, responseTime, statusCode
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2403,7 +2516,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are 900, 1800, 3600, 21600, 43200, 86400, 604800 plus 60 if type=api or 300 if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2413,7 +2527,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=ssl, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2423,7 +2538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false. Allow your HTTP test go on with connection even if there is an error when validating the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2433,7 +2549,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2443,7 +2560,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How long the test should be in failure before alerting (integer, number of seconds, max 7200). Default is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2453,7 +2571,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Threshold below which a synthetics test is allowed to fail before sending notifications
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2470,7 +2589,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are 900, 1800, 3600, 21600, 43200, 86400, 604800 plus 60 if type=api or 300 if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2480,7 +2600,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=ssl, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2490,7 +2611,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false. Allow your HTTP test go on with connection even if there is an error when validating the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2500,7 +2622,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2510,7 +2633,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How long the test should be in failure before alerting (integer, number of seconds, max 7200). Default is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2520,7 +2644,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Threshold below which a synthetics test is allowed to fail before sending notifications
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2537,7 +2662,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are 900, 1800, 3600, 21600, 43200, 86400, 604800 plus 60 if type=api or 300 if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2547,7 +2673,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=ssl, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2557,7 +2684,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false. Allow your HTTP test go on with connection even if there is an error when validating the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2567,7 +2695,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2577,7 +2706,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How long the test should be in failure before alerting (integer, number of seconds, max 7200). Default is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2587,7 +2717,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Threshold below which a synthetics test is allowed to fail before sending notifications
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2604,7 +2735,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are 900, 1800, 3600, 21600, 43200, 86400, 604800 plus 60 if type=api or 300 if type=browser
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2614,7 +2746,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=ssl, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2624,7 +2757,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false. Allow your HTTP test go on with connection even if there is an error when validating the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2634,7 +2768,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, true or false
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2644,7 +2779,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How long the test should be in failure before alerting (integer, number of seconds, max 7200). Default is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2654,7 +2790,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Threshold below which a synthetics test is allowed to fail before sending notifications
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2689,7 +2826,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Request body
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2699,7 +2837,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}host name
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2709,7 +2848,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}no-op, use GET
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2719,7 +2859,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}port number
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2729,7 +2870,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, any value between 0 and 60 (Default = 60)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2739,7 +2881,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Any url
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2756,7 +2899,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Request body
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2766,7 +2910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}host name
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2776,7 +2921,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}no-op, use GET
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2786,7 +2932,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}port number
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2796,7 +2943,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, any value between 0 and 60 (Default = 60)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2806,7 +2954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Any url
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2823,7 +2972,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Request body
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2833,7 +2983,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}host name
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2843,7 +2994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}no-op, use GET
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2853,7 +3005,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}port number
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2863,7 +3016,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, any value between 0 and 60 (Default = 60)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2873,7 +3027,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Any url
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2890,7 +3045,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Request body
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2900,7 +3056,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}host name
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2910,7 +3067,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}no-op, use GET
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2920,7 +3078,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}port number
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2930,7 +3089,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For type=api, any value between 0 and 60 (Default = 60)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2940,7 +3100,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Any url
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2975,7 +3136,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for authentication
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2985,7 +3147,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Username for authentication
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3002,7 +3165,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for authentication
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3012,7 +3176,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Username for authentication
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3029,7 +3194,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for authentication
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3039,7 +3205,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Username for authentication
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3056,7 +3223,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for authentication
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3066,7 +3234,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Username for authentication
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
