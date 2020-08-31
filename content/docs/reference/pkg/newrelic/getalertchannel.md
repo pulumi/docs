@@ -26,19 +26,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-foo_alert_channel = newrelic.get_alert_channel(name="foo@example.com")
-# Resource
-foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
-# Using the data source and resource together
-foo_alert_policy_channel = newrelic.AlertPolicyChannel("fooAlertPolicyChannel",
-    policy_id=foo_alert_policy.id,
-    channel_id=foo_alert_channel.id)
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -75,7 +63,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("fooAlertPolicyCha
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_alert_channel(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_alert_channel(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAlertChannelResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -376,7 +364,7 @@ The following output properties are available:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getalertchannelconfig">Dict[Get<wbr>Alert<wbr>Channel<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getalertchannelconfig">Get<wbr>Alert<wbr>Channel<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Alert channel configuration.
 {{% /md %}}</dd>
@@ -408,7 +396,7 @@ The following output properties are available:
 <a href="#policy_ids_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of policy IDs associated with the alert channel.
 {{% /md %}}</dd>
@@ -1058,8 +1046,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authpassword_python">
-<a href="#authpassword_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Password</a>
+        <span id="auth_password_python">
+<a href="#auth_password_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1068,8 +1056,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authtype_python">
-<a href="#authtype_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
+        <span id="auth_type_python">
+<a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1078,8 +1066,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authusername_python">
-<a href="#authusername_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Username</a>
+        <span id="auth_username_python">
+<a href="#auth_username_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1088,8 +1076,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseurl_python">
-<a href="#baseurl_python" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+        <span id="base_url_python">
+<a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1112,14 +1100,14 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includejsonattachment_python">
-<a href="#includejsonattachment_python" style="color: inherit; text-decoration: inherit;">include<wbr>Json<wbr>Attachment</a>
+        <span id="include_json_attachment_python">
+<a href="#include_json_attachment_python" style="color: inherit; text-decoration: inherit;">include_<wbr>json_<wbr>attachment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1142,14 +1130,14 @@ The following output properties are available:
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="payloadtype_python">
-<a href="#payloadtype_python" style="color: inherit; text-decoration: inherit;">payload<wbr>Type</a>
+        <span id="payload_type_python">
+<a href="#payload_type_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1178,8 +1166,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routekey_python">
-<a href="#routekey_python" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
+        <span id="route_key_python">
+<a href="#route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1188,8 +1176,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicekey_python">
-<a href="#servicekey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
+        <span id="service_key_python">
+<a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1228,8 +1216,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userid_python">
-<a href="#userid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -76,7 +76,7 @@ The optional filter block supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.Dashboard">Dashboard</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>editable=None<span class="p">, </span>filter=None<span class="p">, </span>grid_column_count=None<span class="p">, </span>icon=None<span class="p">, </span>title=None<span class="p">, </span>visibility=None<span class="p">, </span>widgets=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">editable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[DashboardFilterArgs]</span> = None<span class="p">, </span><span class="nx">grid_column_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">icon</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[List[DashboardWidgetArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -528,7 +528,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Dict[Dashboard<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidget">List[Dashboard<wbr>Widget]</a></span>
+        <span class="property-type"><a href="#dashboardwidget">List[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 {{% /md %}}</dd>
@@ -719,7 +719,8 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dashboard_url=None<span class="p">, </span>editable=None<span class="p">, </span>filter=None<span class="p">, </span>grid_column_count=None<span class="p">, </span>icon=None<span class="p">, </span>title=None<span class="p">, </span>visibility=None<span class="p">, </span>widgets=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">editable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[DashboardFilterArgs]</span> = None<span class="p">, </span><span class="nx">grid_column_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">icon</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[List[DashboardWidgetArgs]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -727,7 +728,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1146,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Dict[Dashboard<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 {{% /md %}}</dd>
@@ -1201,7 +1202,7 @@ The following state arguments are supported:
 <a href="#state_widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidget">List[Dashboard<wbr>Widget]</a></span>
+        <span class="property-type"><a href="#dashboardwidget">List[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 {{% /md %}}</dd>
@@ -1322,8 +1323,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventtypes_python">
-<a href="#eventtypes_python" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
+        <span id="event_types_python">
+<a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2092,18 +2093,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="comparewiths_python">
-<a href="#comparewiths_python" style="color: inherit; text-decoration: inherit;">compare<wbr>Withs</a>
+        <span id="compare_withs_python">
+<a href="#compare_withs_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>withs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidgetcomparewith">List[Dashboard<wbr>Widget<wbr>Compare<wbr>With]</a></span>
+        <span class="property-type"><a href="#dashboardwidgetcomparewith">List[Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="drilldowndashboardid_python">
-<a href="#drilldowndashboardid_python" style="color: inherit; text-decoration: inherit;">drilldown<wbr>Dashboard<wbr>Id</a>
+        <span id="drilldown_dashboard_id_python">
+<a href="#drilldown_dashboard_id_python" style="color: inherit; text-decoration: inherit;">drilldown_<wbr>dashboard_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2122,8 +2123,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endtime_python">
-<a href="#endtime_python" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2132,11 +2133,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="entityids_python">
-<a href="#entityids_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Ids</a>
+        <span id="entity_ids_python">
+<a href="#entity_ids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2176,7 +2177,7 @@ The following state arguments are supported:
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidgetmetric">List[Dashboard<wbr>Widget<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#dashboardwidgetmetric">List[Dashboard<wbr>Widget<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2202,8 +2203,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orderby_python">
-<a href="#orderby_python" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
+        <span id="order_by_python">
+<a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2212,8 +2213,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rawmetricname_python">
-<a href="#rawmetricname_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Metric<wbr>Name</a>
+        <span id="raw_metric_name_python">
+<a href="#raw_metric_name_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2232,8 +2233,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdred_python">
-<a href="#thresholdred_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Red</a>
+        <span id="threshold_red_python">
+<a href="#threshold_red_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>red</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2242,8 +2243,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdyellow_python">
-<a href="#thresholdyellow_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Yellow</a>
+        <span id="threshold_yellow_python">
+<a href="#threshold_yellow_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>yellow</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2252,8 +2253,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="widgetid_python">
-<a href="#widgetid_python" style="color: inherit; text-decoration: inherit;">widget<wbr>Id</a>
+        <span id="widget_id_python">
+<a href="#widget_id_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2378,8 +2379,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="offsetduration_python">
-<a href="#offsetduration_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Duration</a>
+        <span id="offset_duration_python">
+<a href="#offset_duration_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2392,7 +2393,7 @@ The following state arguments are supported:
 <a href="#presentation_python" style="color: inherit; text-decoration: inherit;">presentation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardwidgetcomparewithpresentation">Dict[Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation]</a></span>
+        <span class="property-type"><a href="#dashboardwidgetcomparewithpresentation">Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

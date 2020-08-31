@@ -23,7 +23,7 @@ Use this resource to create and manage New Relic alert policies.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertChannel">AlertChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertChannel">AlertChannel</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[AlertChannelConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -332,7 +332,7 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertchannelconfig">Dict[Alert<wbr>Channel<wbr>Config]</a></span>
+        <span class="property-type"><a href="#alertchannelconfig">Alert<wbr>Channel<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
@@ -446,7 +446,8 @@ Get an existing AlertChannel resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[AlertChannelConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertChannel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -454,7 +455,7 @@ Get an existing AlertChannel resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertChannel.html">AlertChannel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..AlertChannelState.html">AlertChannelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertChannel.html">AlertChannel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..AlertChannelState.html">AlertChannelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -686,7 +687,7 @@ The following state arguments are supported:
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertchannelconfig">Dict[Alert<wbr>Channel<wbr>Config]</a></span>
+        <span class="property-type"><a href="#alertchannelconfig">Alert<wbr>Channel<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
@@ -1485,8 +1486,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authpassword_python">
-<a href="#authpassword_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Password</a>
+        <span id="auth_password_python">
+<a href="#auth_password_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1496,8 +1497,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authtype_python">
-<a href="#authtype_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
+        <span id="auth_type_python">
+<a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1507,8 +1508,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authusername_python">
-<a href="#authusername_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Username</a>
+        <span id="auth_username_python">
+<a href="#auth_username_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1518,8 +1519,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="baseurl_python">
-<a href="#baseurl_python" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+        <span id="base_url_python">
+<a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1545,15 +1546,15 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that represents extra HTTP headers to be sent along with the webhook payload.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headersstring_python">
-<a href="#headersstring_python" style="color: inherit; text-decoration: inherit;">headers<wbr>String</a>
+        <span id="headers_string_python">
+<a href="#headers_string_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1563,8 +1564,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includejsonattachment_python">
-<a href="#includejsonattachment_python" style="color: inherit; text-decoration: inherit;">include<wbr>Json<wbr>Attachment</a>
+        <span id="include_json_attachment_python">
+<a href="#include_json_attachment_python" style="color: inherit; text-decoration: inherit;">include_<wbr>json_<wbr>attachment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1590,15 +1591,15 @@ The following state arguments are supported:
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that represents the webhook payload.  Must provide `payload_type` if setting this argument.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="payloadstring_python">
-<a href="#payloadstring_python" style="color: inherit; text-decoration: inherit;">payload<wbr>String</a>
+        <span id="payload_string_python">
+<a href="#payload_string_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1608,8 +1609,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="payloadtype_python">
-<a href="#payloadtype_python" style="color: inherit; text-decoration: inherit;">payload<wbr>Type</a>
+        <span id="payload_type_python">
+<a href="#payload_type_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1642,8 +1643,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routekey_python">
-<a href="#routekey_python" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
+        <span id="route_key_python">
+<a href="#route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1654,8 +1655,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicekey_python">
-<a href="#servicekey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
+        <span id="service_key_python">
+<a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1699,8 +1700,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userid_python">
-<a href="#userid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -23,7 +23,7 @@ Use this resource to create, update, and delete a New Relic Synthetics Location 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics/#pulumi_newrelic.synthetics.MultiLocationAlertCondition">MultiLocationAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>critical=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics/#pulumi_newrelic.synthetics.MultiLocationAlertCondition">MultiLocationAlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[MultiLocationAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[MultiLocationAlertConditionWarningArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -489,7 +489,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multilocationalertconditioncritical">Dict[Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
 {{% /md %}}</dd>
@@ -567,7 +567,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multilocationalertconditionwarning">Dict[Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
+        <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
 {{% /md %}}</dd>
@@ -670,7 +670,8 @@ Get an existing MultiLocationAlertCondition resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>critical=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[MultiLocationAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[MultiLocationAlertConditionWarningArgs]</span> = None<span class="p">) -&gt;</span> MultiLocationAlertCondition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -678,7 +679,7 @@ Get an existing MultiLocationAlertCondition resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.MultiLocationAlertCondition.html">MultiLocationAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.MultiLocationAlertConditionState.html">MultiLocationAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.MultiLocationAlertCondition.html">MultiLocationAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.MultiLocationAlertConditionState.html">MultiLocationAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1078,7 +1079,7 @@ The following state arguments are supported:
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multilocationalertconditioncritical">Dict[Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
 {{% /md %}}</dd>
@@ -1156,7 +1157,7 @@ The following state arguments are supported:
 <a href="#state_warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multilocationalertconditionwarning">Dict[Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
+        <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
 {{% /md %}}</dd>

@@ -23,8 +23,10 @@ A Pulumi package for creating and managing New Relic resources.
 <ul class="api">
     <li><a href="alertchannel" title="AlertChannel"><span class="symbol resource"></span>AlertChannel</a></li>
     <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
+    <li><a href="alertmutingrule" title="AlertMutingRule"><span class="symbol resource"></span>AlertMutingRule</a></li>
     <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
     <li><a href="alertpolicychannel" title="AlertPolicyChannel"><span class="symbol resource"></span>AlertPolicyChannel</a></li>
+    <li><a href="apiaccesskey" title="ApiAccessKey"><span class="symbol resource"></span>ApiAccessKey</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="entitytags" title="EntityTags"><span class="symbol resource"></span>EntityTags</a></li>
     <li><a href="eventstometricsrule" title="EventsToMetricsRule"><span class="symbol resource"></span>EventsToMetricsRule</a></li>
@@ -52,7 +54,7 @@ A Pulumi package for creating and managing New Relic resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 
