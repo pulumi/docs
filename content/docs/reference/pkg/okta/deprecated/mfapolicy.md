@@ -22,7 +22,7 @@ meta_desc: "Explore the MfaPolicy resource of the deprecated module, including e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/deprecated/#pulumi_okta.deprecated.MfaPolicy">MfaPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>duo=None<span class="p">, </span>fido_u2f=None<span class="p">, </span>fido_webauthn=None<span class="p">, </span>google_otp=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>okta_call=None<span class="p">, </span>okta_otp=None<span class="p">, </span>okta_password=None<span class="p">, </span>okta_push=None<span class="p">, </span>okta_question=None<span class="p">, </span>okta_sms=None<span class="p">, </span>priority=None<span class="p">, </span>rsa_token=None<span class="p">, </span>status=None<span class="p">, </span>symantec_vip=None<span class="p">, </span>yubikey_token=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/deprecated/#pulumi_okta.deprecated.MfaPolicy">MfaPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duo</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyDuoArgs]</span> = None<span class="p">, </span><span class="nx">fido_u2f</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyFidoU2fArgs]</span> = None<span class="p">, </span><span class="nx">fido_webauthn</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyFidoWebauthnArgs]</span> = None<span class="p">, </span><span class="nx">google_otp</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyGoogleOtpArgs]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">okta_call</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaCallArgs]</span> = None<span class="p">, </span><span class="nx">okta_otp</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaOtpArgs]</span> = None<span class="p">, </span><span class="nx">okta_password</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaPasswordArgs]</span> = None<span class="p">, </span><span class="nx">okta_push</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaPushArgs]</span> = None<span class="p">, </span><span class="nx">okta_question</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaQuestionArgs]</span> = None<span class="p">, </span><span class="nx">okta_sms</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaSmsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rsa_token</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyRsaTokenArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">symantec_vip</span><span class="p">:</span> <span class="nx">Optional[MfaPolicySymantecVipArgs]</span> = None<span class="p">, </span><span class="nx">yubikey_token</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyYubikeyTokenArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -790,7 +790,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#duo_python" style="color: inherit; text-decoration: inherit;">duo</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Dict[Mfa<wbr>Policy<wbr>Duo]</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -800,7 +800,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#fido_u2f_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>u2f</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Dict[Mfa<wbr>Policy<wbr>Fido<wbr>U2f]</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -810,7 +810,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#fido_webauthn_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>webauthn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Dict[Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn]</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -820,7 +820,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#google_otp_python" style="color: inherit; text-decoration: inherit;">google_<wbr>otp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Dict[Mfa<wbr>Policy<wbr>Google<wbr>Otp]</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -852,7 +852,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#okta_call_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>call</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Call]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -862,7 +862,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#okta_otp_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>otp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Otp]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -872,7 +872,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#okta_password_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Password]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -882,7 +882,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#okta_push_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>push</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Push]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -892,7 +892,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#okta_question_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>question</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Question]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -902,7 +902,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#okta_sms_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>sms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Sms]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -924,7 +924,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#rsa_token_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Dict[Mfa<wbr>Policy<wbr>Rsa<wbr>Token]</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -945,7 +945,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#symantec_vip_python" style="color: inherit; text-decoration: inherit;">symantec_<wbr>vip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Dict[Mfa<wbr>Policy<wbr>Symantec<wbr>Vip]</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -955,7 +955,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#yubikey_token_python" style="color: inherit; text-decoration: inherit;">yubikey_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Dict[Mfa<wbr>Policy<wbr>Yubikey<wbr>Token]</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1057,7 +1057,8 @@ Get an existing MfaPolicy resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>duo=None<span class="p">, </span>fido_u2f=None<span class="p">, </span>fido_webauthn=None<span class="p">, </span>google_otp=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>okta_call=None<span class="p">, </span>okta_otp=None<span class="p">, </span>okta_password=None<span class="p">, </span>okta_push=None<span class="p">, </span>okta_question=None<span class="p">, </span>okta_sms=None<span class="p">, </span>priority=None<span class="p">, </span>rsa_token=None<span class="p">, </span>status=None<span class="p">, </span>symantec_vip=None<span class="p">, </span>yubikey_token=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duo</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyDuoArgs]</span> = None<span class="p">, </span><span class="nx">fido_u2f</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyFidoU2fArgs]</span> = None<span class="p">, </span><span class="nx">fido_webauthn</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyFidoWebauthnArgs]</span> = None<span class="p">, </span><span class="nx">google_otp</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyGoogleOtpArgs]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">okta_call</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaCallArgs]</span> = None<span class="p">, </span><span class="nx">okta_otp</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaOtpArgs]</span> = None<span class="p">, </span><span class="nx">okta_password</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaPasswordArgs]</span> = None<span class="p">, </span><span class="nx">okta_push</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaPushArgs]</span> = None<span class="p">, </span><span class="nx">okta_question</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaQuestionArgs]</span> = None<span class="p">, </span><span class="nx">okta_sms</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyOktaSmsArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rsa_token</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyRsaTokenArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">symantec_vip</span><span class="p">:</span> <span class="nx">Optional[MfaPolicySymantecVipArgs]</span> = None<span class="p">, </span><span class="nx">yubikey_token</span><span class="p">:</span> <span class="nx">Optional[MfaPolicyYubikeyTokenArgs]</span> = None<span class="p">) -&gt;</span> MfaPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1065,7 +1066,7 @@ Get an existing MfaPolicy resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicy.html">MfaPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyState.html">MfaPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicy.html">MfaPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyState.html">MfaPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1767,7 +1768,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_duo_python" style="color: inherit; text-decoration: inherit;">duo</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Dict[Mfa<wbr>Policy<wbr>Duo]</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1777,7 +1778,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_fido_u2f_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>u2f</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Dict[Mfa<wbr>Policy<wbr>Fido<wbr>U2f]</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1787,7 +1788,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_fido_webauthn_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>webauthn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Dict[Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn]</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1797,7 +1798,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_google_otp_python" style="color: inherit; text-decoration: inherit;">google_<wbr>otp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Dict[Mfa<wbr>Policy<wbr>Google<wbr>Otp]</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,7 +1830,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_okta_call_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>call</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Call]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1839,7 +1840,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_okta_otp_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>otp</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Otp]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1849,7 +1850,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_okta_password_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Password]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1859,7 +1860,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_okta_push_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>push</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Push]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1869,7 +1870,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_okta_question_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>question</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Question]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1879,7 +1880,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_okta_sms_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>sms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Sms]</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1901,7 +1902,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_rsa_token_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Dict[Mfa<wbr>Policy<wbr>Rsa<wbr>Token]</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1922,7 +1923,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_symantec_vip_python" style="color: inherit; text-decoration: inherit;">symantec_<wbr>vip</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Dict[Mfa<wbr>Policy<wbr>Symantec<wbr>Vip]</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1932,7 +1933,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 <a href="#state_yubikey_token_python" style="color: inherit; text-decoration: inherit;">yubikey_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Dict[Mfa<wbr>Policy<wbr>Yubikey<wbr>Token]</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

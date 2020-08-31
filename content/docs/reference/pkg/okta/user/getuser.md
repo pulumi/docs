@@ -88,14 +88,14 @@ import pulumi
 import pulumi_okta as okta
 
 example = okta.user.get_user(searches=[
-    {
-        "name": "profile.firstName",
-        "value": "John",
-    },
-    {
-        "name": "profile.lastName",
-        "value": "Doe",
-    },
+    okta.user.GetUserSearchArgs(
+        name="profile.firstName",
+        value="John",
+    ),
+    okta.user.GetUserSearchArgs(
+        name="profile.lastName",
+        value="Doe",
+    ),
 ])
 ```
 
@@ -137,7 +137,7 @@ const example = pulumi.output(okta.user.getUser({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_user(</span>searches=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_user(</span><span class="nx">searches</span><span class="p">:</span> <span class="nx">Optional[List[GetUserSearchArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUserResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -224,7 +224,7 @@ The following arguments are supported:
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersearch">List[Get<wbr>User<wbr>Search]</a></span>
+        <span class="property-type"><a href="#getusersearch">List[Get<wbr>User<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of search criteria. It supports the following properties.
 {{% /md %}}</dd>

@@ -99,16 +99,16 @@ import pulumi_okta as okta
 
 example = okta.template.Email("example",
     translations=[
-        {
-            "language": "en",
-            "subject": "Stuff",
-            "template": f"Hi {user['firstName']},<br/><br/>Blah blah {reset_password_link}",
-        },
-        {
-            "language": "es",
-            "subject": "Cosas",
-            "template": f"Hola {user['firstName']},<br/><br/>Puedo ir al bano {reset_password_link}",
-        },
+        okta.template.EmailTranslationArgs(
+            language="en",
+            subject="Stuff",
+            template=f"Hi {user['firstName']},<br/><br/>Blah blah {reset_password_link}",
+        ),
+        okta.template.EmailTranslationArgs(
+            language="es",
+            subject="Cosas",
+            template=f"Hola {user['firstName']},<br/><br/>Puedo ir al bano {reset_password_link}",
+        ),
     ],
     type="email.forgotPassword")
 ```
@@ -152,7 +152,7 @@ const example = new okta.template.Email("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/template/#pulumi_okta.template.Email">Email</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_language=None<span class="p">, </span>translations=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/template/#pulumi_okta.template.Email">Email</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">translations</span><span class="p">:</span> <span class="nx">Optional[List[EmailTranslationArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -450,7 +450,7 @@ The Email resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#translations_python" style="color: inherit; text-decoration: inherit;">translations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailtranslation">List[Email<wbr>Translation]</a></span>
+        <span class="property-type"><a href="#emailtranslation">List[Email<wbr>Translation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of translations for particular template.
 {{% /md %}}</dd>
@@ -575,7 +575,8 @@ Get an existing Email resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_language=None<span class="p">, </span>translations=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">translations</span><span class="p">:</span> <span class="nx">Optional[List[EmailTranslationArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Email</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -583,7 +584,7 @@ Get an existing Email resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.Email.html">Email</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.EmailState.html">EmailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.Email.html">Email</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.EmailState.html">EmailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -826,7 +827,7 @@ The following state arguments are supported:
 <a href="#state_translations_python" style="color: inherit; text-decoration: inherit;">translations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailtranslation">List[Email<wbr>Translation]</a></span>
+        <span class="property-type"><a href="#emailtranslation">List[Email<wbr>Translation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of translations for particular template.
 {{% /md %}}</dd>

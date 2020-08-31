@@ -80,11 +80,11 @@ func main() {
 import pulumi
 import pulumi_okta as okta
 
-example = okta.user.get_users(searches=[{
-    "comparison": "sw",
-    "name": "profile.company",
-    "value": "Articulate",
-}])
+example = okta.user.get_users(searches=[okta.user.GetUsersSearchArgs(
+    comparison="sw",
+    name="profile.company",
+    value="Articulate",
+)])
 ```
 
 {{% /example %}}
@@ -120,7 +120,7 @@ const example = pulumi.output(okta.user.getUsers({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_users(</span>searches=None<span class="p">, </span>users=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">searches</span><span class="p">:</span> <span class="nx">Optional[List[GetUsersSearchArgs]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[GetUsersUserArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getuserssearch">List[Get<wbr>Users<wbr>Search]</a></span>
+        <span class="property-type"><a href="#getuserssearch">List[Get<wbr>Users<wbr>Search<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ The following arguments are supported:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List[Get<wbr>Users<wbr>User]</a></span>
+        <span class="property-type"><a href="#getusersuser">List[Get<wbr>Users<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
