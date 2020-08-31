@@ -25,7 +25,7 @@ Provides details about a specific Hetzner Cloud Certificate.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificate(</span>id=None<span class="p">, </span>name=None<span class="p">, </span>with_selector=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -60,7 +60,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -70,7 +71,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -80,7 +82,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -97,7 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -107,7 +111,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -117,7 +122,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -134,7 +140,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -144,7 +151,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -154,7 +162,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -171,7 +180,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -181,7 +191,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -191,7 +202,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -221,7 +233,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) PEM encoded TLS certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -231,7 +244,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -241,7 +255,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -251,7 +266,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Fingerprint of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -261,7 +277,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -271,7 +288,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -281,7 +299,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -291,7 +310,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -301,7 +321,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -328,7 +349,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) PEM encoded TLS certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -338,7 +360,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -348,7 +371,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -358,7 +382,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Fingerprint of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -368,7 +393,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -378,7 +404,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -388,7 +415,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,7 +426,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -408,7 +437,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -435,7 +465,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) PEM encoded TLS certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -445,7 +476,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -455,7 +487,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -465,7 +498,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Fingerprint of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -475,7 +509,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -485,7 +520,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -495,7 +531,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -505,7 +542,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -515,7 +553,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -542,7 +581,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) PEM encoded TLS certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -552,7 +592,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -562,7 +603,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -572,7 +614,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Fingerprint of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -580,9 +623,10 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -592,7 +636,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -602,7 +647,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -612,7 +658,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -622,7 +669,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Certificate.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

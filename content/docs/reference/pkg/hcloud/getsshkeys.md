@@ -24,7 +24,7 @@ meta_desc: "Explore the GetSshKeys function of the Hetzner Cloud package, includ
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ssh_keys(</span>with_selector=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ssh_keys(</span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSshKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -57,7 +57,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -74,7 +75,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -91,7 +93,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -108,7 +111,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -149,7 +153,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsshkeyssshkey">List&lt;Pulumi.<wbr>HCloud.<wbr>Outputs.<wbr>Get<wbr>Ssh<wbr>Keys<wbr>Ssh<wbr>Key&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of all matches SSH keys. See `data.hcloud_ssh_key` for schema.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -187,7 +192,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsshkeyssshkey">[]Get<wbr>Ssh<wbr>Keys<wbr>Ssh<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of all matches SSH keys. See `data.hcloud_ssh_key` for schema.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -225,7 +231,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsshkeyssshkey">Get<wbr>Ssh<wbr>Keys<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of all matches SSH keys. See `data.hcloud_ssh_key` for schema.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -263,7 +270,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsshkeyssshkey">List[Get<wbr>Ssh<wbr>Keys<wbr>Ssh<wbr>Key]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of all matches SSH keys. See `data.hcloud_ssh_key` for schema.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -503,7 +511,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

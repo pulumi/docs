@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/hcloud | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/hcloud package."
-git_sha: "a5a93f87f7271bc48509e9f37057132bd8495a45"
+git_sha: "6fc3141a4afc2685ddf3739956bc1f15b50108c4"
 block_external_search_index: true
 ---
 
