@@ -19,7 +19,7 @@ Provides an IAM role.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const instance-assume-role-policy = aws.iam.getPolicyDocument({
+const instance_assume_role_policy = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
