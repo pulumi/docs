@@ -105,7 +105,7 @@ export const usersOfTerraformFun = tfProject1.then(tfProject1 => tfProject1.user
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_project(</span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -623,7 +623,7 @@ The following output properties are available:
 <a href="#bgp_config_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectbgpconfig">Dict[Get<wbr>Project<wbr>Bgp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getprojectbgpconfig">Get<wbr>Project<wbr>Bgp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional BGP settings. Refer to [Packet guide for BGP](https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/).
 {{% /md %}}</dd>
@@ -944,8 +944,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deploymenttype_python">
-<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -955,8 +955,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxprefix_python">
-<a href="#maxprefix_python" style="color: inherit; text-decoration: inherit;">max<wbr>Prefix</a>
+        <span id="max_prefix_python">
+<a href="#max_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
