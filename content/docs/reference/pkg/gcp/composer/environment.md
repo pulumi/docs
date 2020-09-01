@@ -1038,6 +1038,16 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="databaseconfig_csharp">
+<a href="#databaseconfig_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="gkecluster_csharp">
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
 </span> 
@@ -1093,6 +1103,16 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="webserverconfig_csharp">
+<a href="#webserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="webservernetworkaccesscontrol_csharp">
 <a href="#webservernetworkaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span> 
@@ -1126,6 +1146,16 @@ will be used to run this environment.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databaseconfig_go">
+<a href="#databaseconfig_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1186,6 +1216,16 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="webserverconfig_go">
+<a href="#webserverconfig_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="webservernetworkaccesscontrol_go">
 <a href="#webservernetworkaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span> 
@@ -1219,6 +1259,16 @@ will be used to run this environment.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databaseconfig_nodejs">
+<a href="#databaseconfig_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1279,6 +1329,16 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="webserverconfig_nodejs">
+<a href="#webserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="webservernetworkaccesscontrol_nodejs">
 <a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span> 
@@ -1312,6 +1372,16 @@ will be used to run this environment.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="database_config_python">
+<a href="#database_config_python" style="color: inherit; text-decoration: inherit;">database_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1372,6 +1442,16 @@ will be used to run this environment.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="web_server_config_python">
+<a href="#web_server_config_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="web_server_network_access_control_python">
 <a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
 </span> 
@@ -1379,6 +1459,108 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfigDatabaseConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigDatabaseConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigDatabaseConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigDatabaseConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigDatabaseConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigDatabaseConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
 {{% /md %}}</dd>
 
 </dl>
@@ -1453,10 +1635,10 @@ Cannot be updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
-specified as a name or relative resource name. For example:
-"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
-region/zone.
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1582,10 +1764,10 @@ Cannot be updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
-specified as a name or relative resource name. For example:
-"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
-region/zone.
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1711,10 +1893,10 @@ Cannot be updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
-specified as a name or relative resource name. For example:
-"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
-region/zone.
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1840,10 +2022,10 @@ Cannot be updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
-specified as a name or relative resource name. For example:
-"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
-region/zone.
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2935,6 +3117,108 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EnvironmentConfigWebServerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EnvironmentConfigWebServerConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigWebServerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer?tab=doc#EnvironmentConfigWebServerConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.EnvironmentConfigWebServerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.EnvironmentConfigWebServerConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+composer-n1-webserver-4 or composer-n1-webserver-8.
+Value custom is returned only in response, if Airflow web server parameters were
+manually changed to a non-standard values.
 {{% /md %}}</dd>
 
 </dl>

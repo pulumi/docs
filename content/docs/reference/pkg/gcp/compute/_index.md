@@ -20,6 +20,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="backendservice" title="BackendService"><span class="symbol resource"></span>BackendService</a></li>
     <li><a href="backendservicesignedurlkey" title="BackendServiceSignedUrlKey"><span class="symbol resource"></span>BackendServiceSignedUrlKey</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
+    <li><a href="diskiambinding" title="DiskIamBinding"><span class="symbol resource"></span>DiskIamBinding</a></li>
+    <li><a href="diskiammember" title="DiskIamMember"><span class="symbol resource"></span>DiskIamMember</a></li>
+    <li><a href="diskiampolicy" title="DiskIamPolicy"><span class="symbol resource"></span>DiskIamPolicy</a></li>
     <li><a href="diskresourcepolicyattachment" title="DiskResourcePolicyAttachment"><span class="symbol resource"></span>DiskResourcePolicyAttachment</a></li>
     <li><a href="externalvpngateway" title="ExternalVpnGateway"><span class="symbol resource"></span>ExternalVpnGateway</a></li>
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
@@ -33,6 +36,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="httphealthcheck" title="HttpHealthCheck"><span class="symbol resource"></span>HttpHealthCheck</a></li>
     <li><a href="httpshealthcheck" title="HttpsHealthCheck"><span class="symbol resource"></span>HttpsHealthCheck</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
+    <li><a href="imageiambinding" title="ImageIamBinding"><span class="symbol resource"></span>ImageIamBinding</a></li>
+    <li><a href="imageiammember" title="ImageIamMember"><span class="symbol resource"></span>ImageIamMember</a></li>
+    <li><a href="imageiampolicy" title="ImageIamPolicy"><span class="symbol resource"></span>ImageIamPolicy</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="instancefromtemplate" title="InstanceFromTemplate"><span class="symbol resource"></span>InstanceFromTemplate</a></li>
     <li><a href="instancegroup" title="InstanceGroup"><span class="symbol resource"></span>InstanceGroup</a></li>
@@ -64,6 +70,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="regionautoscaler" title="RegionAutoscaler"><span class="symbol resource"></span>RegionAutoscaler</a></li>
     <li><a href="regionbackendservice" title="RegionBackendService"><span class="symbol resource"></span>RegionBackendService</a></li>
     <li><a href="regiondisk" title="RegionDisk"><span class="symbol resource"></span>RegionDisk</a></li>
+    <li><a href="regiondiskiambinding" title="RegionDiskIamBinding"><span class="symbol resource"></span>RegionDiskIamBinding</a></li>
+    <li><a href="regiondiskiammember" title="RegionDiskIamMember"><span class="symbol resource"></span>RegionDiskIamMember</a></li>
+    <li><a href="regiondiskiampolicy" title="RegionDiskIamPolicy"><span class="symbol resource"></span>RegionDiskIamPolicy</a></li>
     <li><a href="regiondiskresourcepolicyattachment" title="RegionDiskResourcePolicyAttachment"><span class="symbol resource"></span>RegionDiskResourcePolicyAttachment</a></li>
     <li><a href="regionhealthcheck" title="RegionHealthCheck"><span class="symbol resource"></span>RegionHealthCheck</a></li>
     <li><a href="regioninstancegroupmanager" title="RegionInstanceGroupManager"><span class="symbol resource"></span>RegionInstanceGroupManager</a></li>
@@ -139,7 +148,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.21.1</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

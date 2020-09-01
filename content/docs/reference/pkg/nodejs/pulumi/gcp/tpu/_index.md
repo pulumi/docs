@@ -3,7 +3,7 @@ title: "Module tpu"
 title_tag: "Module tpu | Package @pulumi/gcp | Node.js SDK"
 linktitle: "tpu"
 meta_desc: "Explore members of the tpu module in the @pulumi/gcp package."
-git_sha: "c0c329b219df5a06e0c3610c0ec93582d700510f"
+git_sha: "2400b696ba8424ff5a3a419f75640293ac2f363b"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Node" data-link-title="Node">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L20">
         Resource <strong>Node</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ To get more information about Node, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Node-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a Node resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Node-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Node-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Node-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +97,7 @@ Returns true if the given object is an instance of Node.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Node-acceleratorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L51">property <b>acceleratorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L51">property <b>acceleratorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceleratorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The type of hardware accelerators associated with this node.
 
 <h4 class="pdoc-member-header" id="Node-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L62">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L62">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
 
 <h4 class="pdoc-member-header" id="Node-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ is peered with another network that is using that CIDR block.
 The user-supplied description of the TPU. Maximum of 512 characters.
 
 <h4 class="pdoc-member-header" id="Node-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Node-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L70">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L70">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource labels to represent user provided metadata.
 
 <h4 class="pdoc-member-header" id="Node-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Resource labels to represent user provided metadata.
 The immutable name of the TPU.
 
 <h4 class="pdoc-member-header" id="Node-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L81">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L81">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ this API has been activated. If none is provided, "default" will be
 used.
 
 <h4 class="pdoc-member-header" id="Node-networkEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L86">property <b>networkEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L86">property <b>networkEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeNetworkEndpoint'>NodeNetworkEndpoint</a>[]&gt;;</code></pre>
@@ -173,7 +173,7 @@ The network endpoints where TPU workers can be accessed and sent work. It is rec
 node first reach out to the first (index 0) entry.
 
 <h4 class="pdoc-member-header" id="Node-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L91">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L91">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Node-schedulingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L96">property <b>schedulingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L96">property <b>schedulingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedulingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeSchedulingConfig'>NodeSchedulingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ Sets the scheduling options for this TPU instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Node-serviceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L101">property <b>serviceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L101">property <b>serviceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ The service account used to run the tensor flow services within the node. To sha
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
 
 <h4 class="pdoc-member-header" id="Node-tensorflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L105">property <b>tensorflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L105">property <b>tensorflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tensorflowVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 The version of Tensorflow running in the Node.
 
 <h4 class="pdoc-member-header" id="Node-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -217,7 +217,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Node-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L109">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L109">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ The GCP location for the TPU.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getTensorflowVersions" data-link-title="getTensorflowVersions">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L12">
         Function <strong>getTensorflowVersions</strong>
     </a>
 </h3>
@@ -241,7 +241,7 @@ Get TensorFlow versions available for a project. For more information see the [o
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetTensorflowVersionsArgs" data-link-title="GetTensorflowVersionsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L30">
         interface <strong>GetTensorflowVersionsArgs</strong>
     </a>
 </h3>
@@ -251,7 +251,7 @@ Get TensorFlow versions available for a project. For more information see the [o
 A collection of arguments for invoking getTensorflowVersions.
 
 <h4 class="pdoc-member-header" id="GetTensorflowVersionsArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L35">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L35">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -260,7 +260,7 @@ The project to list versions for. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GetTensorflowVersionsArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L40">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L40">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -269,7 +269,7 @@ The zone to list versions for. If it
 is not provided, the provider zone is used.
 
 <h3 class="pdoc-module-header" id="GetTensorflowVersionsResult" data-link-title="GetTensorflowVersionsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L46">
         interface <strong>GetTensorflowVersionsResult</strong>
     </a>
 </h3>
@@ -279,7 +279,7 @@ is not provided, the provider zone is used.
 A collection of values returned by getTensorflowVersions.
 
 <h4 class="pdoc-member-header" id="GetTensorflowVersionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -287,12 +287,12 @@ A collection of values returned by getTensorflowVersions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTensorflowVersionsResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L51">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L51">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTensorflowVersionsResult-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L55">property <b>versions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L55">property <b>versions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -300,12 +300,12 @@ The provider-assigned unique ID for this managed resource.
 The list of TensorFlow versions available for the given project and zone.
 
 <h4 class="pdoc-member-header" id="GetTensorflowVersionsResult-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/getTensorflowVersions.ts#L56">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/getTensorflowVersions.ts#L56">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodeArgs" data-link-title="NodeArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L244">
         interface <strong>NodeArgs</strong>
     </a>
 </h3>
@@ -315,7 +315,7 @@ The list of TensorFlow versions available for the given project and zone.
 The set of arguments for constructing a Node resource.
 
 <h4 class="pdoc-member-header" id="NodeArgs-acceleratorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L248">property <b>acceleratorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L248">property <b>acceleratorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ The set of arguments for constructing a Node resource.
 The type of hardware accelerators associated with this node.
 
 <h4 class="pdoc-member-header" id="NodeArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L259">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L259">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
 
 <h4 class="pdoc-member-header" id="NodeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L263">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L263">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ is peered with another network that is using that CIDR block.
 The user-supplied description of the TPU. Maximum of 512 characters.
 
 <h4 class="pdoc-member-header" id="NodeArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L267">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L267">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -354,7 +354,7 @@ The user-supplied description of the TPU. Maximum of 512 characters.
 Resource labels to represent user provided metadata.
 
 <h4 class="pdoc-member-header" id="NodeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L271">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L271">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ Resource labels to represent user provided metadata.
 The immutable name of the TPU.
 
 <h4 class="pdoc-member-header" id="NodeArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L278">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L278">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ this API has been activated. If none is provided, "default" will be
 used.
 
 <h4 class="pdoc-member-header" id="NodeArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L283">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L283">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +382,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NodeArgs-schedulingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L288">property <b>schedulingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L288">property <b>schedulingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig'>NodeSchedulingConfig</a>&gt;;</code></pre>
@@ -391,7 +391,7 @@ Sets the scheduling options for this TPU instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodeArgs-tensorflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L292">property <b>tensorflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L292">property <b>tensorflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tensorflowVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ Structure is documented below.
 The version of Tensorflow running in the Node.
 
 <h4 class="pdoc-member-header" id="NodeArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L296">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L296">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ The version of Tensorflow running in the Node.
 The GCP location for the TPU.
 
 <h3 class="pdoc-module-header" id="NodeState" data-link-title="NodeState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L176">
         interface <strong>NodeState</strong>
     </a>
 </h3>
@@ -417,7 +417,7 @@ The GCP location for the TPU.
 Input properties used for looking up and filtering Node resources.
 
 <h4 class="pdoc-member-header" id="NodeState-acceleratorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L180">property <b>acceleratorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L180">property <b>acceleratorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ Input properties used for looking up and filtering Node resources.
 The type of hardware accelerators associated with this node.
 
 <h4 class="pdoc-member-header" id="NodeState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L191">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L191">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
 
 <h4 class="pdoc-member-header" id="NodeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L195">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L195">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ is peered with another network that is using that CIDR block.
 The user-supplied description of the TPU. Maximum of 512 characters.
 
 <h4 class="pdoc-member-header" id="NodeState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L199">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L199">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -456,7 +456,7 @@ The user-supplied description of the TPU. Maximum of 512 characters.
 Resource labels to represent user provided metadata.
 
 <h4 class="pdoc-member-header" id="NodeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -464,7 +464,7 @@ Resource labels to represent user provided metadata.
 The immutable name of the TPU.
 
 <h4 class="pdoc-member-header" id="NodeState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L210">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L210">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -475,7 +475,7 @@ this API has been activated. If none is provided, "default" will be
 used.
 
 <h4 class="pdoc-member-header" id="NodeState-networkEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L215">property <b>networkEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L215">property <b>networkEndpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeNetworkEndpoint'>NodeNetworkEndpoint</a>&gt;[]&gt;;</code></pre>
@@ -484,7 +484,7 @@ The network endpoints where TPU workers can be accessed and sent work. It is rec
 node first reach out to the first (index 0) entry.
 
 <h4 class="pdoc-member-header" id="NodeState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L220">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L220">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NodeState-schedulingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L225">property <b>schedulingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L225">property <b>schedulingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig'>NodeSchedulingConfig</a>&gt;;</code></pre>
@@ -502,7 +502,7 @@ Sets the scheduling options for this TPU instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="NodeState-serviceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L230">property <b>serviceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L230">property <b>serviceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -511,7 +511,7 @@ The service account used to run the tensor flow services within the node. To sha
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
 
 <h4 class="pdoc-member-header" id="NodeState-tensorflowVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L234">property <b>tensorflowVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L234">property <b>tensorflowVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tensorflowVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +519,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 The version of Tensorflow running in the Node.
 
 <h4 class="pdoc-member-header" id="NodeState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/tpu/node.ts#L238">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/tpu/node.ts#L238">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
