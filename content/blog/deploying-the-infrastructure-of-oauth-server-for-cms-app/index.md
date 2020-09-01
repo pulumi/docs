@@ -168,7 +168,7 @@ const tg = alb.createTargetGroup("oauth-tg", {
     loadBalancer: alb
 });
 ```
-
+ 
 The target group port was also implemented as an optional stack configuration for the user to specify a different target group port.
 If the user wants to use the different port numbers, they could do so by `pulumi config set cms-OAuth:targetGroupPort` and type in the port number value. The default port is 80 which is https port for local development.
 
