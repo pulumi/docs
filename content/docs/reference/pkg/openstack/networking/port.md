@@ -85,9 +85,9 @@ func main() {
 import pulumi
 import pulumi_openstack as openstack
 
-network1 = openstack.networking.Network("network1", admin_state_up="true")
+network1 = openstack.networking.Network("network1", admin_state_up=True)
 port1 = openstack.networking.Port("port1",
-    admin_state_up="true",
+    admin_state_up=True,
     network_id=network1.id)
 ```
 
@@ -205,12 +205,12 @@ func main() {
 import pulumi
 import pulumi_openstack as openstack
 
-network1 = openstack.networking.Network("network1", admin_state_up="true")
+network1 = openstack.networking.Network("network1", admin_state_up=True)
 port1 = openstack.networking.Port("port1",
-    admin_state_up="true",
-    binding={
-        "hostId": "b080b9cf-46e0-4ce8-ad47-0fd4accc872b",
-        "profile": """{
+    admin_state_up=True,
+    binding=openstack.networking.PortBindingArgs(
+        host_id="b080b9cf-46e0-4ce8-ad47-0fd4accc872b",
+        profile="""{
   "local_link_information": [
     {
       "switch_info": "info1",
@@ -227,8 +227,8 @@ port1 = openstack.networking.Port("port1",
 }
 
 """,
-        "vnicType": "baremetal",
-    },
+        vnic_type="baremetal",
+    ),
     device_id="cdf70fcf-c161-4f24-9c70-96b3f5a54b71",
     device_owner="baremetal:none",
     network_id=network1.id)
@@ -287,7 +287,7 @@ const port1 = new openstack.networking.Port("port_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Port">Port</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>allowed_address_pairs=None<span class="p">, </span>binding=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_name=None<span class="p">, </span>extra_dhcp_options=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_fixed_ip=None<span class="p">, </span>no_security_groups=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Port">Port</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_address_pairs</span><span class="p">:</span> <span class="nx">Optional[List[PortAllowedAddressPairArgs]]</span> = None<span class="p">, </span><span class="nx">binding</span><span class="p">:</span> <span class="nx">Optional[PortBindingArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_dhcp_options</span><span class="p">:</span> <span class="nx">Optional[List[PortExtraDhcpOptionArgs]]</span> = None<span class="p">, </span><span class="nx">fixed_ips</span><span class="p">:</span> <span class="nx">Optional[List[PortFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_fixed_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_security_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">qos_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1297,7 +1297,7 @@ this creates a new port.
 <a href="#allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair]</a></span>
+        <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -1310,7 +1310,7 @@ below.
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Dict[Port<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#portbinding">Port<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -1370,7 +1370,7 @@ is enabled.
 <a href="#extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option]</a></span>
+        <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -1383,7 +1383,7 @@ times.
 <a href="#fixed_ips_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip]</a></span>
+        <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
@@ -1523,7 +1523,7 @@ to create a port for another tenant. Changing this creates a new port.
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -1780,7 +1780,7 @@ explicitly and implicitly added.
 <a href="#dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
 {{% /md %}}</dd>
@@ -1814,7 +1814,8 @@ Get an existing Port resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_fixed_ips=None<span class="p">, </span>all_security_group_ids=None<span class="p">, </span>all_tags=None<span class="p">, </span>allowed_address_pairs=None<span class="p">, </span>binding=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_assignments=None<span class="p">, </span>dns_name=None<span class="p">, </span>extra_dhcp_options=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_fixed_ip=None<span class="p">, </span>no_security_groups=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">all_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">all_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">allowed_address_pairs</span><span class="p">:</span> <span class="nx">Optional[List[PortAllowedAddressPairArgs]]</span> = None<span class="p">, </span><span class="nx">binding</span><span class="p">:</span> <span class="nx">Optional[PortBindingArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_assignments</span><span class="p">:</span> <span class="nx">Optional[List[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_dhcp_options</span><span class="p">:</span> <span class="nx">Optional[List[PortExtraDhcpOptionArgs]]</span> = None<span class="p">, </span><span class="nx">fixed_ips</span><span class="p">:</span> <span class="nx">Optional[List[PortFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_fixed_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_security_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">qos_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> Port</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1822,7 +1823,7 @@ Get an existing Port resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Port.html">Port</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.PortState.html">PortState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Port.html">Port</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.PortState.html">PortState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2931,7 +2932,7 @@ explicitly and implicitly added.
 <a href="#state_allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair]</a></span>
+        <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -2944,7 +2945,7 @@ below.
 <a href="#state_binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Dict[Port<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#portbinding">Port<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -2992,7 +2993,7 @@ a new port.
 <a href="#state_dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
 {{% /md %}}</dd>
@@ -3015,7 +3016,7 @@ is enabled.
 <a href="#state_extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option]</a></span>
+        <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -3028,7 +3029,7 @@ times.
 <a href="#state_fixed_ips_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip]</a></span>
+        <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
@@ -3180,7 +3181,7 @@ to create a port for another tenant. Changing this creates a new port.
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -3552,8 +3553,8 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostid_python">
-<a href="#hostid_python" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+        <span id="host_id_python">
+<a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3575,11 +3576,11 @@ must be passed as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vifdetails_python">
-<a href="#vifdetails_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
+        <span id="vif_details_python">
+<a href="#vif_details_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
@@ -3587,8 +3588,8 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viftype_python">
-<a href="#viftype_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
+        <span id="vif_type_python">
+<a href="#vif_type_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3598,8 +3599,8 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vnictype_python">
-<a href="#vnictype_python" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
+        <span id="vnic_type_python">
+<a href="#vnic_type_python" style="color: inherit; text-decoration: inherit;">vnic_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

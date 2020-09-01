@@ -24,7 +24,7 @@ meta_desc: "Explore the GetSecret function of the keymanager module, including e
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret(</span>acl_only=None<span class="p">, </span>algorithm=None<span class="p">, </span>bit_length=None<span class="p">, </span>created_at_filter=None<span class="p">, </span>expiration_filter=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_type=None<span class="p">, </span>updated_at_filter=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret(</span><span class="nx">acl_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bit_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">created_at_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1370,7 +1370,7 @@ explicitly and implicitly added.
 <a href="#content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
 {{% /md %}}</dd>
@@ -1425,7 +1425,7 @@ explicitly and implicitly added.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
@@ -1695,7 +1695,7 @@ explicitly and implicitly added.
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretaclread">Dict[Get<wbr>Secret<wbr>Acl<wbr>Read]</a></span>
+        <span class="property-type"><a href="#getsecretaclread">Get<wbr>Secret<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1904,8 +1904,8 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectaccess_python">
-<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+        <span id="project_access_python">
+<a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

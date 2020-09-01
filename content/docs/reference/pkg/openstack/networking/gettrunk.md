@@ -99,7 +99,7 @@ const trunk1 = pulumi.output(openstack.networking.getTrunk({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_trunk(</span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>trunk_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trunk(</span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">trunk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrunkResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1256,17 +1256,6 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span id="segmentationtype_python">
-<a href="#segmentationtype_python" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The segmenation tecnology used, e.g., "vlan".
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="segmentation_id_python">
 <a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
 </span> 
@@ -1274,6 +1263,17 @@ described below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The numeric id of the subport segment.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="segmentation_type_python">
+<a href="#segmentation_type_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The segmenation tecnology used, e.g., "vlan".
 {{% /md %}}</dd>
 
 </dl>

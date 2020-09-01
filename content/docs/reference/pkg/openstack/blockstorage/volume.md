@@ -105,7 +105,7 @@ const volume1 = new openstack.blockstorage.Volume("volume_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage/#pulumi_openstack.blockstorage.Volume">Volume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>consistency_group_id=None<span class="p">, </span>description=None<span class="p">, </span>enable_online_resize=None<span class="p">, </span>image_id=None<span class="p">, </span>metadata=None<span class="p">, </span>multiattach=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_replica=None<span class="p">, </span>source_vol_id=None<span class="p">, </span>volume_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage/#pulumi_openstack.blockstorage.Volume">Volume</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consistency_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_online_resize</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">multiattach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[List[VolumeSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_replica</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vol_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -913,7 +913,7 @@ Changing this creates a new volume.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
@@ -961,7 +961,7 @@ creates a new volume.
 <a href="#scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeschedulerhint">List[Volume<wbr>Scheduler<wbr>Hint]</a></span>
+        <span class="property-type"><a href="#volumeschedulerhint">List[Volume<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
@@ -1164,7 +1164,8 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attachments=None<span class="p">, </span>availability_zone=None<span class="p">, </span>consistency_group_id=None<span class="p">, </span>description=None<span class="p">, </span>enable_online_resize=None<span class="p">, </span>image_id=None<span class="p">, </span>metadata=None<span class="p">, </span>multiattach=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_replica=None<span class="p">, </span>source_vol_id=None<span class="p">, </span>volume_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[List[VolumeAttachmentArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consistency_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_online_resize</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">multiattach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[List[VolumeSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_replica</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vol_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1172,7 +1173,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.BlockStorage.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.BlockStorage.VolumeState.html">VolumeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.BlockStorage.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.BlockStorage.VolumeState.html">VolumeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1881,7 +1882,7 @@ Changing this creates a new volume.
 <a href="#state_attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachment">List[Volume<wbr>Attachment]</a></span>
+        <span class="property-type"><a href="#volumeattachment">List[Volume<wbr>Attachment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
@@ -1955,7 +1956,7 @@ Changing this creates a new volume.
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
@@ -2003,7 +2004,7 @@ creates a new volume.
 <a href="#state_scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeschedulerhint">List[Volume<wbr>Scheduler<wbr>Hint]</a></span>
+        <span class="property-type"><a href="#volumeschedulerhint">List[Volume<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
@@ -2481,11 +2482,11 @@ scheduled on the same host as another volume specified in the list provided.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
@@ -2493,8 +2494,8 @@ properties to pass to the scheduler.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="differenthosts_python">
-<a href="#differenthosts_python" style="color: inherit; text-decoration: inherit;">different<wbr>Hosts</a>
+        <span id="different_hosts_python">
+<a href="#different_hosts_python" style="color: inherit; text-decoration: inherit;">different_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2505,8 +2506,8 @@ different host from the set of volumes specified in the list provided.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localtoinstance_python">
-<a href="#localtoinstance_python" style="color: inherit; text-decoration: inherit;">local<wbr>To<wbr>Instance</a>
+        <span id="local_to_instance_python">
+<a href="#local_to_instance_python" style="color: inherit; text-decoration: inherit;">local_<wbr>to_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2533,8 +2534,8 @@ At this time, only simple queries are supported. Compound queries using
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samehosts_python">
-<a href="#samehosts_python" style="color: inherit; text-decoration: inherit;">same<wbr>Hosts</a>
+        <span id="same_hosts_python">
+<a href="#same_hosts_python" style="color: inherit; text-decoration: inherit;">same_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
