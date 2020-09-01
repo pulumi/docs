@@ -165,7 +165,7 @@ crawlDirectory(
 We also create a private CDN request log bucket for storing logs that we can use for debugging the application.
 
 ```typescript
-// logsBucket is an S3 bucket that will contain the CDN's request logs.
+// logsBucket is an S3 bucket that will contain the CDN's request logs. 
 const logsBucket = new aws.s3.Bucket("requestLogs",
     {
         bucket: `${config.targetDomain}-logs`,
