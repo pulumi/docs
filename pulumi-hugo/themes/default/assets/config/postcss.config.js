@@ -75,7 +75,8 @@ module.exports = {
 
                 // Whitelist our web components along with any of their descendent selectors.
                 /^pulumi-chooser/,
-                /^pulumi-tooltip/
+                /^pulumi-tooltip/,
+                /^pulumi-banner/,
             ],
 
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)

@@ -1,4 +1,4 @@
-import { ActionTypes, TypeKeys } from "../actions/index";
+import { PreferencesAction, TypeKeys } from "../actions/index";
 import { PreferencesState } from "../../store/state";
 import { OSKey } from "../../components/chooser/chooser";
 
@@ -30,7 +30,7 @@ function guessOS(): OSKey {
 
 // The preferences reducer. Note that it does not mutate state, but rather always returns a fresh copy.
 // https://redux.js.org/basics/reducers/
-export const preferences = (currentState = getInitialState(), action: ActionTypes): PreferencesState => {
+export const preferences = (currentState = getInitialState(), action: PreferencesAction): PreferencesState => {
 
     switch (action.type) {
         case TypeKeys.SET_LANGUAGE:

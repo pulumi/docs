@@ -20,6 +20,11 @@ import {
 } from './components/chooser/chooser';
 
 export namespace Components {
+  interface PulumiBanner {
+    'dismissible': boolean;
+    'name': string;
+    'visible': boolean;
+  }
   interface PulumiChoosable {
     'mode': ChooserMode;
     'selection': ChooserKey;
@@ -46,6 +51,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLPulumiBannerElement extends Components.PulumiBanner, HTMLStencilElement {}
+  var HTMLPulumiBannerElement: {
+    prototype: HTMLPulumiBannerElement;
+    new (): HTMLPulumiBannerElement;
+  };
 
   interface HTMLPulumiChoosableElement extends Components.PulumiChoosable, HTMLStencilElement {}
   var HTMLPulumiChoosableElement: {
@@ -89,6 +100,7 @@ declare global {
     new (): HTMLPulumiTopButtonElement;
   };
   interface HTMLElementTagNameMap {
+    'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
     'pulumi-example': HTMLPulumiExampleElement;
@@ -100,6 +112,11 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface PulumiBanner {
+    'dismissible'?: boolean;
+    'name'?: string;
+    'visible'?: boolean;
+  }
   interface PulumiChoosable {
     'mode'?: ChooserMode;
     'selection'?: ChooserKey;
@@ -123,6 +140,7 @@ declare namespace LocalJSX {
   interface PulumiTopButton {}
 
   interface IntrinsicElements {
+    'pulumi-banner': PulumiBanner;
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
     'pulumi-example': PulumiExample;
@@ -139,6 +157,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'pulumi-banner': LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
