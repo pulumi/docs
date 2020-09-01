@@ -1,6 +1,6 @@
 ---
 title: "Deploying Netlify CMS on AWS with Pulumi"
-date: "2020-08-28"
+date: "2020-09-01"
 draft: false
 meta_desc: "Implementing Netlify CMS without Netlify, deploying the Netlify CMS on AWS."
 meta_image: cms.png
@@ -26,9 +26,9 @@ We can use the [templates from @talves](https://github.com/ADARTA/netlify-cms-re
 
 ### CMS Configuration File
 
-The `config.yml` file configures Netlify CMS to look for content segments that can be edited and which backend instructions that it needs to follow.
+The `config.yml` file configures Netlify CMS to look for content segments that can be edited and which backend instructions it needs to follow.
 
-In the template, `cms/public/index.html` contains the entry point for React to insert the generated content under `<div id=root>`. We can change the title of the website, but more importantly, we linked the configuration file `cms/public/config.yml` of the Netlify CMS by following the [instructions](https://www.netlifycms.org/docs/configuration-options/).
+The template, `cms/public/index.html` contains the entry point for React to insert the generated content under `<div id=root>`. We can change website's title, but more importantly, we linked the configuration file `cms/public/config.yml` of the Netlify CMS by following the [instructions](https://www.netlifycms.org/docs/configuration-options/).
 
 ![Custom Neltify Config File](./custom-config-file.png)
 
@@ -89,11 +89,11 @@ $ pulumi config set pulumi-website-cms:pathToWebsiteContent ../build
 
 The pathToWebsiteContent parameter specifies the path to the directory with the website content. This directory is synched to the S3 bucket by using the `crawlDirectory` method. We pass in the `build` folder, which is the directory that stores our built CMS website.
 
-Similarly, we can set the CMS's target domain name and the optional certificate arn parameter with `stackConfig.get` instead of `stackConfig.require` to get the value. For the target domain, we can use any subdomain name of an existing parent domain and the code creates the subdomain under the parent domain automatically. For the certificate arn, if we already have a certificate registered for CMS then we can pass it in as the certificate arn. Otherwise, the code generates a new certificate.
+Similarly, we can set the CMS's target domain name and the optional certificate arn parameter with `stackConfig.get` instead of `stackConfig.require` to get the value. For the target domain, we can use any subdomain name of an existing parent domain, and the code creates the subdomain under the parent domain automatically. For the certificate arn, if we already have a certificate registered for CMS, then we can pass it in as the certificate arn. Otherwise, the code generates a new certificate.
 
 ```bash
-# subdomain name: some-cms-domain and parent domain is pulumi-demos.com which is an existing one.
-$ pulumi config set pulumi-website-cms:targetDomain https://some-cms-domain.pulumi-demos.com
+# replace the targetDomain with the domain name for your CMS
+$ pulumi config set pulumi-website-cms:targetDomain https://some-cms-domain.com
 # replace the value of certificateArn with the correct one
 $ pulumi config set pulumi-website-cms:certificateArn arnarnarnxxx
 ```
@@ -165,7 +165,7 @@ crawlDirectory(
 We also create a private CDN request log bucket for storing logs that we can use for debugging the application.
 
 ```typescript
-// logsBucket is an S3 bucket that will contain the CDN's request logs. 
+// logsBucket is an S3 bucket that will contain the CDN's request logs.
 const logsBucket = new aws.s3.Bucket("requestLogs",
     {
         bucket: `${config.targetDomain}-logs`,
@@ -175,7 +175,7 @@ const logsBucket = new aws.s3.Bucket("requestLogs",
 
 ### Step 4: Certificate Creation and Validation
 
-If the certificateArn is not provided as a configuration, the code will create a new certificate. We need to set the AWS region to match the Project region, which is required for the ACM certificate.
+If the certificateArn is not provided as a configuration, the code will create a new certificate. We set the AWS region to match the Project region, which ACM certificate requires.
 
 Then we create a new certificate.
 
@@ -193,7 +193,7 @@ const domainParts = getDomainAndSubdomain(config.targetDomain);
 const hostedZoneId = aws.route53.getZone({ name: domainParts.parentDomain }, { async: true }).then(zone => zone.zoneId);
 
 /**
-    *  Create a DNS record to prove that we _own_ the domain we're requesting a certificate for.
+    *  Create a DNS record to prove that we _own_ the domain we're requesting a certificate.
     *  See https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html for more info.
     */
 const certificateValidationDomain = new aws.route53.Record(`${config.targetDomain}-validation`, {
@@ -205,7 +205,7 @@ const certificateValidationDomain = new aws.route53.Record(`${config.targetDomai
 });
 ```
 
-The `getDomainAndSubdomain` method for separates the parent domain and child domain. In our example  `https://some-cms-domain.pulumi-demos.com` the parent domain would be pulumi-demos.com and the subdomain is some-cms-domain.
+The `getDomainAndSubdomain` method for separates the parent domain and child domain. 
 
 We validate the certificate by setting the CertificateValidation resource and set the certificateArn.
 
@@ -339,7 +339,7 @@ const aRecord = createAliasRecord(config.targetDomain, cdn);
 
 ---
 
-We've finished implementing our application infrastructure and we're ready to deploy. Run `pulumi up` to execute the Pulumi code to deploy to AWS. However, there is a more convenient way to do so with Github.
+We've finished implementing our application infrastructure, and we're ready to deploy. Run `pulumi up` to execute the Pulumi code to deploy to AWS. However, there is a more convenient way to do so with Github.
 
 ## Github Workflow (Optional)
 
@@ -350,7 +350,7 @@ In the workflow, Github secrets are accessed from `${{ secrets.ACCESS_TOKEN }}` 
 ![Github Secrets Settings](./github-secrets.jpg)
 
 `PULUMI_STACK` is the Pulumi stack name that we are using.
-`PULUMI_ACCESS_TOKEN` is required for the automatic process and can be generated by clicking the blue button "New Access Token" on the Settings of [Pulumi console](https://app.pulumi.com).
+`PULUMI_ACCESS_TOKEN` is required for the automatic process and can be generated by clicking the blue button "New Access Token" on the [Pulumi console's](https://app.pulumi.com) Settings.
 
 ![Pulumi Tokens](./pulumi-token.jpg)
 
@@ -358,6 +358,6 @@ In the workflow, Github secrets are accessed from `${{ secrets.ACCESS_TOKEN }}` 
 
 ## Summary and Next Step
 
-We have deployed the stand-alone React CMS application on AWS. The [complete code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms) is included in [Pulumi's Example Repository](https://github.com/pulumi/examples).
+We have deployed the stand-alone React CMS application on AWS. The [complete code](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/cms) is available in [Pulumi's Example Repository](https://github.com/pulumi/examples).
 
-The next article will show how to deploy on AWS instead of Netlify. To do this, we describe how to substitute the Netlify Identity Service by writing an External OAuth Client-Server and deploying it on AWS. Stay tuned for our next blog post.
+The next article will show how to deploy on AWS instead of Netlify. We describe how to substitute the Netlify Identity Service by writing an External OAuth Client-Server and deploying it on AWS. Stay tuned for our next blog post.
