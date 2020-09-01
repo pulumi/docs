@@ -58,7 +58,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cs.NewKubernetesAutoscaler(ctx, "_default", &cs.KubernetesAutoscalerArgs{
+			ClusterId:            pulumi.Any(_var.Cluster_id),
+			CoolDownDuration:     pulumi.Any(_var.Cool_down_duration),
+			DeferScaleInDuration: pulumi.Any(_var.Defer_scale_in_duration),
+			Nodepools: cs.KubernetesAutoscalerNodepoolArray{
+				&cs.KubernetesAutoscalerNodepoolArgs{
+					Id:     pulumi.String("scaling_group_id"),
+					Labels: pulumi.String("a=b"),
+					Taints: pulumi.String("c=d:NoSchedule"),
+				},
+			},
+			Utilization: pulumi.Any(_var.Utilization),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,11 +100,11 @@ default = alicloud.cs.KubernetesAutoscaler("default",
     cluster_id=var["cluster_id"],
     cool_down_duration=var["cool_down_duration"],
     defer_scale_in_duration=var["defer_scale_in_duration"],
-    nodepools=[{
-        "id": "scaling_group_id",
-        "labels": "a=b",
-        "taints": "c=d:NoSchedule",
-    }],
+    nodepools=[alicloud.cs.KubernetesAutoscalerNodepoolArgs(
+        id="scaling_group_id",
+        labels="a=b",
+        taints="c=d:NoSchedule",
+    )],
     utilization=var["utilization"])
 ```
 
@@ -113,7 +143,7 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cool_down_duration=None<span class="p">, </span>defer_scale_in_duration=None<span class="p">, </span>nodepools=None<span class="p">, </span>use_ecs_ram_role_token=None<span class="p">, </span>utilization=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cool_down_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defer_scale_in_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nodepools</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesAutoscalerNodepoolArgs]]</span> = None<span class="p">, </span><span class="nx">use_ecs_ram_role_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -304,7 +334,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -337,8 +367,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -380,7 +409,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -413,8 +442,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -456,7 +484,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -489,8 +517,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -532,7 +559,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -563,10 +590,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 <a href="#nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -680,7 +706,8 @@ Get an existing KubernetesAutoscaler resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>cool_down_duration=None<span class="p">, </span>defer_scale_in_duration=None<span class="p">, </span>nodepools=None<span class="p">, </span>use_ecs_ram_role_token=None<span class="p">, </span>utilization=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cool_down_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defer_scale_in_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nodepools</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesAutoscalerNodepoolArgs]]</span> = None<span class="p">, </span><span class="nx">use_ecs_ram_role_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KubernetesAutoscaler</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -688,7 +715,7 @@ Get an existing KubernetesAutoscaler resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscalerState.html">KubernetesAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscalerState.html">KubernetesAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -813,7 +840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -835,8 +862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -889,7 +915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,8 +937,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -965,7 +990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -1041,7 +1065,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1061,10 +1085,9 @@ The following state arguments are supported:
 <a href="#state_nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
@@ -1283,6 +1306,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

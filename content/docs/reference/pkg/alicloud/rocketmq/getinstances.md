@@ -59,7 +59,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rocketmq"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rocketmq.NewInstance(ctx, "_default", &rocketmq.InstanceArgs{
+			Remark: pulumi.String("default_ons_instance_remark"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstInstanceId", instancesDs.ApplyT(func(instancesDs rocketmq.GetInstancesResult) (string, error) {
+			return instancesDs.Instances[0].InstanceId, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,7 +98,7 @@ default = alicloud.rocketmq.Instance("default", remark="default_ons_instance_rem
 instances_ds = pulumi.Output.all(default.id, default.name).apply(lambda id, name: alicloud.rocketmq.get_instances(ids=[id],
     name_regex=name,
     output_file="instances.txt"))
-pulumi.export("firstInstanceId", instances_ds.instances[0]["instance_id"])
+pulumi.export("firstInstanceId", instances_ds.instances[0].instance_id)
 ```
 
 {{% /example %}}
@@ -117,7 +140,7 @@ export const firstInstanceId = instancesDs.instances[0].instanceId;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -161,7 +184,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -200,7 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -239,7 +262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,7 +301,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,6 +945,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

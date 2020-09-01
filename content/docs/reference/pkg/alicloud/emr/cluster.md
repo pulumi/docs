@@ -25,7 +25,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/emr/#pulumi_alicloud.emr.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>charge_type=None<span class="p">, </span>cluster_type=None<span class="p">, </span>deposit_type=None<span class="p">, </span>eas_enable=None<span class="p">, </span>emr_ver=None<span class="p">, </span>high_availability_enable=None<span class="p">, </span>host_groups=None<span class="p">, </span>is_open_public_ip=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>master_pwd=None<span class="p">, </span>name=None<span class="p">, </span>option_software_lists=None<span class="p">, </span>related_cluster_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>ssh_enable=None<span class="p">, </span>tags=None<span class="p">, </span>use_local_metadb=None<span class="p">, </span>user_defined_emr_ecs_role=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/emr/#pulumi_alicloud.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[List[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -944,7 +944,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1232,7 +1232,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bootstrap_actions=None<span class="p">, </span>charge_type=None<span class="p">, </span>cluster_type=None<span class="p">, </span>deposit_type=None<span class="p">, </span>eas_enable=None<span class="p">, </span>emr_ver=None<span class="p">, </span>high_availability_enable=None<span class="p">, </span>host_groups=None<span class="p">, </span>is_open_public_ip=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>master_pwd=None<span class="p">, </span>name=None<span class="p">, </span>option_software_lists=None<span class="p">, </span>related_cluster_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>ssh_enable=None<span class="p">, </span>tags=None<span class="p">, </span>use_local_metadb=None<span class="p">, </span>user_defined_emr_ecs_role=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[List[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1240,7 +1241,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2060,7 +2061,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2136,7 +2137,7 @@ The following state arguments are supported:
 <a href="#state_host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd>
@@ -2234,7 +2235,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2998,8 +2999,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskcapacity_python">
-<a href="#diskcapacity_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity</a>
+        <span id="disk_capacity_python">
+<a href="#disk_capacity_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3009,8 +3010,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskcount_python">
-<a href="#diskcount_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
+        <span id="disk_count_python">
+<a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3031,8 +3032,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gpudriver_python">
-<a href="#gpudriver_python" style="color: inherit; text-decoration: inherit;">gpu<wbr>Driver</a>
+        <span id="gpu_driver_python">
+<a href="#gpu_driver_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>driver</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3041,8 +3042,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostgroupname_python">
-<a href="#hostgroupname_python" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Name</a>
+        <span id="host_group_name_python">
+<a href="#host_group_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3052,8 +3053,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostgrouptype_python">
-<a href="#hostgrouptype_python" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Type</a>
+        <span id="host_group_type_python">
+<a href="#host_group_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3063,8 +3064,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancelist_python">
-<a href="#instancelist_python" style="color: inherit; text-decoration: inherit;">instance<wbr>List</a>
+        <span id="instance_list_python">
+<a href="#instance_list_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>list</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3107,8 +3108,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sysdiskcapacity_python">
-<a href="#sysdiskcapacity_python" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Capacity</a>
+        <span id="sys_disk_capacity_python">
+<a href="#sys_disk_capacity_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>disk_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3118,8 +3119,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sysdisktype_python">
-<a href="#sysdisktype_python" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Type</a>
+        <span id="sys_disk_type_python">
+<a href="#sys_disk_type_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3145,6 +3146,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

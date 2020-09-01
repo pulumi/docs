@@ -42,7 +42,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cen-id1"
+		opt1 := "^foo"
+		bwp, err := cen.GetBandwidthPackages(ctx, &cen.GetBandwidthPackagesArgs{
+			InstanceId: &opt0,
+			NameRegex:  &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstCenBandwidthPackageId", bwp.Packages[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +76,7 @@ import pulumi_alicloud as alicloud
 
 bwp = alicloud.cen.get_bandwidth_packages(instance_id="cen-id1",
     name_regex="^foo")
-pulumi.export("firstCenBandwidthPackageId", bwp.packages[0]["id"])
+pulumi.export("firstCenBandwidthPackageId", bwp.packages[0].id)
 ```
 
 {{% /example %}}
@@ -87,7 +111,7 @@ export const firstCenBandwidthPackageId = bwp.packages[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bandwidth_packages(</span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bandwidth_packages(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBandwidthPackagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1066,8 +1090,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bandwidthpackagechargetype_python">
-<a href="#bandwidthpackagechargetype_python" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Charge<wbr>Type</a>
+        <span id="bandwidth_package_charge_type_python">
+<a href="#bandwidth_package_charge_type_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>charge_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1110,8 +1134,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="geographicregionaid_python">
-<a href="#geographicregionaid_python" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>AId</a>
+        <span id="geographic_region_a_id_python">
+<a href="#geographic_region_a_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>a_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1121,8 +1145,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="geographicregionbid_python">
-<a href="#geographicregionbid_python" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>BId</a>
+        <span id="geographic_region_b_id_python">
+<a href="#geographic_region_b_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>b_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1192,6 +1216,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

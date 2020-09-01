@@ -38,7 +38,7 @@ class MyStack : Stack
         {
             Direction = "ingress",
             GroupId = groupsDs.Groups[0].Id,
-            IpProtocol = "TCP",
+            IpProtocol = "tcp",
             NicType = "internet",
         })));
         // Pass port_range to the backend service
@@ -54,7 +54,48 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "api"
+		groupsDs, err := ecs.GetSecurityGroups(ctx, &ecs.GetSecurityGroupsArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "ingress"
+		opt2 := "tcp"
+		opt3 := "internet"
+		ingressRulesDs, err := ecs.GetSecurityGroupRules(ctx, &ecs.GetSecurityGroupRulesArgs{
+			Direction:  &opt1,
+			GroupId:    groupsDs.Groups[0].Id,
+			IpProtocol: &opt2,
+			NicType:    &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewInstance(ctx, "backend", &ecs.InstanceArgs{
+			UserData: pulumi.String(fmt.Sprintf("%v%v", "config_service.sh --portrange=", ingressRulesDs.Rules[0].PortRange)),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,11 +107,11 @@ config = pulumi.Config()
 security_group_id = config.require_object("securityGroupId")
 groups_ds = alicloud.ecs.get_security_groups(name_regex="api")
 ingress_rules_ds = alicloud.ecs.get_security_group_rules(direction="ingress",
-    group_id=groups_ds.groups[0]["id"],
-    ip_protocol="TCP",
+    group_id=groups_ds.groups[0].id,
+    ip_protocol="tcp",
     nic_type="internet")
 # Pass port_range to the backend service
-backend = alicloud.ecs.Instance("backend", user_data=f"config_service.sh --portrange={ingress_rules_ds.rules[0]['port_range']}")
+backend = alicloud.ecs.Instance("backend", user_data=f"config_service.sh --portrange={ingress_rules_ds.rules[0].port_range}")
 ```
 
 {{% /example %}}
@@ -85,7 +126,7 @@ const config = new pulumi.Config();
 // Get the security group id from a variable
 const securityGroupId = config.require("securityGroupId");
 
-// Or get it from the alicloud.ecs.getSecurityGroups data source.
+// Or get it from the alicloud_security_groups data source.
 // Please note that the data source arguments must be enough to filter results to one security group.
 const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
     nameRegex: "api",
@@ -94,7 +135,7 @@ const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
 const ingressRulesDs = groupsDs.apply(groupsDs => alicloud.ecs.getSecurityGroupRules({
     direction: "ingress",
     groupId: groupsDs.groups[0].id,
-    ipProtocol: "TCP",
+    ipProtocol: "tcp",
     nicType: "internet",
 }, { async: true }));
 // Pass port_range to the backend service
@@ -119,7 +160,7 @@ const backend = new alicloud.ecs.Instance("backend", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_security_group_rules(</span>direction=None<span class="p">, </span>group_id=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>nic_type=None<span class="p">, </span>output_file=None<span class="p">, </span>policy=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_security_group_rules(</span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecurityGroupRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -959,7 +1000,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1057,7 +1099,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1107,7 +1150,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1205,7 +1249,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1255,7 +1300,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1353,7 +1399,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1386,8 +1433,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="destcidrip_python">
-<a href="#destcidrip_python" style="color: inherit; text-decoration: inherit;">dest<wbr>Cidr<wbr>Ip</a>
+        <span id="dest_cidr_ip_python">
+<a href="#dest_cidr_ip_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>cidr_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1397,18 +1444,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="destgroupid_python">
-<a href="#destgroupid_python" style="color: inherit; text-decoration: inherit;">dest<wbr>Group<wbr>Id</a>
+        <span id="dest_group_id_python">
+<a href="#dest_group_id_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="destgroupowneraccount_python">
-<a href="#destgroupowneraccount_python" style="color: inherit; text-decoration: inherit;">dest<wbr>Group<wbr>Owner<wbr>Account</a>
+        <span id="dest_group_owner_account_python">
+<a href="#dest_group_owner_account_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>group_<wbr>owner_<wbr>account</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1484,16 +1532,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcegroupid_python">
-<a href="#sourcegroupid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="source_cidr_ip_python">
 <a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
 </span> 
@@ -1501,6 +1539,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Source IP address segment for ingress authorization.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_group_id_python">
+<a href="#source_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source security group ID for ingress authorization.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1532,6 +1581,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

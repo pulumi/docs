@@ -138,7 +138,146 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cloud_efficiency"
+		opt1 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := defaultZones.Zones[0].Id
+		opt3 := 2
+		opt4 := 4
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			CpuCoreCount:     &opt3,
+			MemorySize:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt5 := true
+		opt6 := "^ubuntu_18.*64"
+		opt7 := "system"
+		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			MostRecent: &opt5,
+			NameRegex:  &opt6,
+			Owners:     &opt7,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			VpcId:            defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			VpcId: defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewSecurityGroupRule(ctx, "defaultSecurityGroupRule", &ecs.SecurityGroupRuleArgs{
+			CidrIp:          pulumi.String("172.16.0.0/24"),
+			IpProtocol:      pulumi.String("tcp"),
+			NicType:         pulumi.String("intranet"),
+			Policy:          pulumi.String("accept"),
+			PortRange:       pulumi.String("22/22"),
+			Priority:        pulumi.Int(1),
+			SecurityGroupId: defaultSecurityGroup.ID(),
+			Type:            pulumi.String("ingress"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultScalingGroup, err := ess.NewScalingGroup(ctx, "defaultScalingGroup", &ess.ScalingGroupArgs{
+			MaxSize: pulumi.Int(2),
+			MinSize: pulumi.Int(0),
+			RemovalPolicies: pulumi.StringArray{
+				pulumi.String("OldestInstance"),
+				pulumi.String("NewestInstance"),
+			},
+			ScalingGroupName: pulumi.String(name),
+			VswitchIds: pulumi.StringArray{
+				defaultSwitch.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ess.NewScalingConfiguration(ctx, "defaultScalingConfiguration", &ess.ScalingConfigurationArgs{
+			Active:          pulumi.Bool(true),
+			Enable:          pulumi.Bool(true),
+			ForceDelete:     pulumi.Bool(true),
+			ImageId:         pulumi.String(defaultImages.Images[0].Id),
+			InstanceType:    pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			ScalingGroupId:  defaultScalingGroup.ID(),
+			SecurityGroupId: defaultSecurityGroup.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		var defaultInstance []*ecs.Instance
+		for key0, _ := range 2 {
+			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("defaultInstance-%v", key0), &ecs.InstanceArgs{
+				ImageId:                 pulumi.String(defaultImages.Images[0].Id),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				InstanceName:            pulumi.String(name),
+				InstanceType:            pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(10),
+				SecurityGroups: pulumi.StringArray{
+					defaultSecurityGroup.ID(),
+				},
+				SystemDiskCategory: pulumi.String("cloud_efficiency"),
+				VswitchId:          defaultSwitch.ID(),
+			})
+			if err != nil {
+				return err
+			}
+			defaultInstance = append(defaultInstance, __res)
+		}
+		_, err = ess.NewAttachment(ctx, "defaultAttachment", &ess.AttachmentArgs{
+			Force: pulumi.Bool(true),
+			InstanceIds: pulumi.StringArray{
+				defaultInstance[0].ID(),
+				defaultInstance[1].ID(),
+			},
+			ScalingGroupId: defaultScalingGroup.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -152,7 +291,7 @@ if name is None:
     name = "essattachmentconfig"
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     cpu_core_count=2,
     memory_size=4)
 default_images = alicloud.ecs.get_images(most_recent=True,
@@ -160,7 +299,7 @@ default_images = alicloud.ecs.get_images(most_recent=True,
     owners="system")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/24",
     vpc_id=default_network.id)
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
@@ -186,19 +325,19 @@ default_scaling_configuration = alicloud.ess.ScalingConfiguration("defaultScalin
     active=True,
     enable=True,
     force_delete=True,
-    image_id=default_images.images[0]["id"],
-    instance_type=default_instance_types.instance_types[0]["id"],
+    image_id=default_images.images[0].id,
+    instance_type=default_instance_types.instance_types[0].id,
     scaling_group_id=default_scaling_group.id,
     security_group_id=default_security_group.id)
 default_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     default_instance.append(alicloud.ecs.Instance(f"defaultInstance-{range['value']}",
-        image_id=default_images.images[0]["id"],
+        image_id=default_images.images[0].id,
         instance_charge_type="PostPaid",
         instance_name=name,
-        instance_type=default_instance_types.instance_types[0]["id"],
+        instance_type=default_instance_types.instance_types[0].id,
         internet_charge_type="PayByTraffic",
-        internet_max_bandwidth_out="10",
+        internet_max_bandwidth_out=10,
         security_groups=[default_security_group.id],
         system_disk_category="cloud_efficiency",
         vswitch_id=default_switch.id))
@@ -314,7 +453,7 @@ const defaultAttachment = new alicloud.ess.Attachment("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.Attachment">Attachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.Attachment">Attachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -737,7 +876,8 @@ Get an existing Attachment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>scaling_group_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Attachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -745,7 +885,7 @@ Get an existing Attachment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Attachment.html">Attachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.AttachmentState.html">AttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Attachment.html">Attachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.AttachmentState.html">AttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1024,6 +1164,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

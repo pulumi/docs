@@ -44,7 +44,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ram"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := ".*test.*"
+		opt1 := "roles.txt"
+		opt2 := "AliyunACSDefaultAccess"
+		opt3 := "Custom"
+		rolesDs, err := ram.GetRoles(ctx, &ram.GetRolesArgs{
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+			PolicyName: &opt2,
+			PolicyType: &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstRoleId", rolesDs.Roles[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,7 +84,7 @@ roles_ds = alicloud.ram.get_roles(name_regex=".*test.*",
     output_file="roles.txt",
     policy_name="AliyunACSDefaultAccess",
     policy_type="Custom")
-pulumi.export("firstRoleId", roles_ds.roles[0]["id"])
+pulumi.export("firstRoleId", roles_ds.roles[0].id)
 ```
 
 {{% /example %}}
@@ -93,7 +121,7 @@ export const firstRoleId = rolesDs.roles[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_roles(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>policy_name=None<span class="p">, </span>policy_type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_roles(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRolesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -126,7 +154,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram role IDs. 
+    <dd>{{% md %}}- A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -187,7 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram role IDs. 
+    <dd>{{% md %}}- A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -248,7 +276,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram role IDs. 
+    <dd>{{% md %}}- A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,7 +337,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of ram role IDs. 
+    <dd>{{% md %}}- A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,7 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role IDs. 
+    <dd>{{% md %}}A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -405,7 +433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role names. 
+    <dd>{{% md %}}A list of ram role names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -485,7 +513,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role IDs. 
+    <dd>{{% md %}}A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -496,7 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role names. 
+    <dd>{{% md %}}A list of ram role names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -576,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role IDs. 
+    <dd>{{% md %}}A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -587,7 +615,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role names. 
+    <dd>{{% md %}}A list of ram role names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -667,7 +695,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role IDs. 
+    <dd>{{% md %}}A list of ram role IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -678,7 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of ram role names. 
+    <dd>{{% md %}}A list of ram role names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1154,6 +1182,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

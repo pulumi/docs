@@ -42,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entry, err := cen.GetRouteEntries(ctx, &cen.GetRouteEntriesArgs{
+			InstanceId:   "cen-id1",
+			RouteTableId: "vtb-id1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstRouteEntriesRouteEntryCidrBlock", entry.Entries[0].CidrBlock)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +74,7 @@ import pulumi_alicloud as alicloud
 
 entry = alicloud.cen.get_route_entries(instance_id="cen-id1",
     route_table_id="vtb-id1")
-pulumi.export("firstRouteEntriesRouteEntryCidrBlock", entry.entries[0]["cidr_block"])
+pulumi.export("firstRouteEntriesRouteEntryCidrBlock", entry.entries[0].cidr_block)
 ```
 
 {{% /example %}}
@@ -87,7 +109,7 @@ export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_route_entries(</span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>output_file=None<span class="p">, </span>route_table_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_entries(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteEntriesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -939,15 +961,15 @@ The following output properties are available:
 <a href="#conflicts_python" style="color: inherit; text-decoration: inherit;">conflicts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrouteentriesentryconflict">List[Get<wbr>Route<wbr>Entries<wbr>Entry<wbr>Conflict]</a></span>
+        <span class="property-type"><a href="#getrouteentriesentryconflict">List[Get<wbr>Route<wbr>Entries<wbr>Entry<wbr>Conflict<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conflicted Route Entries. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthopid_python">
-<a href="#nexthopid_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Id</a>
+        <span id="next_hop_id_python">
+<a href="#next_hop_id_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -957,8 +979,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nexthoptype_python">
-<a href="#nexthoptype_python" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
+        <span id="next_hop_type_python">
+<a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -968,8 +990,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="operationalmode_python">
-<a href="#operationalmode_python" style="color: inherit; text-decoration: inherit;">operational<wbr>Mode</a>
+        <span id="operational_mode_python">
+<a href="#operational_mode_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -979,24 +1001,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publishstatus_python">
-<a href="#publishstatus_python" style="color: inherit; text-decoration: inherit;">publish<wbr>Status</a>
+        <span id="publish_status_python">
+<a href="#publish_status_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The publish status of the route entry in CEN, including "Published" and "NonPublished".
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="routetype_python">
-<a href="#routetype_python" style="color: inherit; text-decoration: inherit;">route<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Type of the route entry, including "System", "Custom" and "BGP".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1008,6 +1019,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the route table of the VPC or VBR.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="route_type_python">
+<a href="#route_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of the route entry, including "System", "Custom" and "BGP".
 {{% /md %}}</dd>
 
 </dl>
@@ -1256,8 +1278,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1294,6 +1316,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

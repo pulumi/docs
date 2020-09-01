@@ -49,7 +49,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "pc-\\w+"
+		opt1 := "Running"
+		polardbClustersDs, err := polardb.GetClusters(ctx, &polardb.GetClustersArgs{
+			DescriptionRegex: &opt0,
+			Status:           &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_default, err := polardb.GetDatabases(ctx, &polardb.GetDatabasesArgs{
+			DbClusterId: polardbClustersDs.Clusters[0].Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("ends", _default.Databases[0].DbName)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,8 +89,8 @@ import pulumi_alicloud as alicloud
 
 polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
     status="Running")
-default = alicloud.polardb.get_databases(db_cluster_id=polardb_clusters_ds.clusters[0]["id"])
-pulumi.export("ends", default.databases[0]["db_name"])
+default = alicloud.polardb.get_databases(db_cluster_id=polardb_clusters_ds.clusters[0].id)
+pulumi.export("ends", default.databases[0].db_name)
 ```
 
 {{% /example %}}
@@ -97,7 +127,7 @@ export const ends = _default.then(_default => _default.databases[0].dbName);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_databases(</span>db_cluster_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_databases(</span><span class="nx">db_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabasesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -130,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -159,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -188,7 +218,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -217,7 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -740,7 +770,7 @@ The following output properties are available:
 <a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabasesdatabaseaccount">List[Get<wbr>Databases<wbr>Database<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getdatabasesdatabaseaccount">List[Get<wbr>Databases<wbr>Database<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of accounts of database. Each element contains the following attributes.
 {{% /md %}}</dd>
@@ -754,17 +784,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The character set name of database.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="dbstatus_python">
-<a href="#dbstatus_python" style="color: inherit; text-decoration: inherit;">db<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The status of database.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -787,6 +806,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Database name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="db_status_python">
+<a href="#db_status_python" style="color: inherit; text-decoration: inherit;">db_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of database.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -947,17 +977,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountstatus_python">
-<a href="#accountstatus_python" style="color: inherit; text-decoration: inherit;">account<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Account status.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span> 
@@ -969,8 +988,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privilegestatus_python">
-<a href="#privilegestatus_python" style="color: inherit; text-decoration: inherit;">privilege<wbr>Status</a>
+        <span id="account_status_python">
+<a href="#account_status_python" style="color: inherit; text-decoration: inherit;">account_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account status.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privilege_status_python">
+<a href="#privilege_status_python" style="color: inherit; text-decoration: inherit;">privilege_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -996,6 +1026,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

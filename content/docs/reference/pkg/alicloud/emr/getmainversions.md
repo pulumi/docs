@@ -52,7 +52,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "EMR-3.22.0"
+		_default, err := emr.GetMainVersions(ctx, &emr.GetMainVersionsArgs{
+			ClusterTypes: []string{
+				"HADOOP",
+				"ZOOKEEPER",
+			},
+			EmrVersion: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstMainVersion", _default.MainVersions[0].EmrVersion)
+		ctx.Export("thisClusterTypes", _default.MainVersions[0].ClusterTypes)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,8 +92,8 @@ default = alicloud.emr.get_main_versions(cluster_types=[
         "ZOOKEEPER",
     ],
     emr_version="EMR-3.22.0")
-pulumi.export("firstMainVersion", default.main_versions[0]["emrVersion"])
-pulumi.export("thisClusterTypes", default.main_versions[0]["clusterTypes"])
+pulumi.export("firstMainVersion", default.main_versions[0].emr_version)
+pulumi.export("thisClusterTypes", default.main_versions[0].cluster_types)
 ```
 
 {{% /example %}}
@@ -105,7 +132,7 @@ export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_main_versions(</span>cluster_types=None<span class="p">, </span>emr_version=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_main_versions(</span><span class="nx">cluster_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">emr_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMainVersionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -322,7 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -393,7 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -464,7 +491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -535,7 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of emr instance types IDs. 
+    <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -733,8 +760,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clustertypes_python">
-<a href="#clustertypes_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Types</a>
+        <span id="cluster_types_python">
+<a href="#cluster_types_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -744,8 +771,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="emrversion_python">
-<a href="#emrversion_python" style="color: inherit; text-decoration: inherit;">emr<wbr>Version</a>
+        <span id="emr_version_python">
+<a href="#emr_version_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -782,6 +809,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

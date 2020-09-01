@@ -3,7 +3,7 @@ title: "Module emr"
 title_tag: "Module emr | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "emr"
 meta_desc: "Explore members of the emr module in the @pulumi/alicloud package."
-git_sha: "70979907924ce961ff86ab63063f73d6a5bce811"
+git_sha: "b7b59fa875693ba8460f61295cc547d3028192d6"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L376">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L477">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -54,7 +54,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 > **NOTE:** Available in 1.57.0+.
 
 #### Example Usage
-
 ##### 1. Create A Cluster
 
 ```typescript
@@ -128,9 +127,9 @@ const defaultRole = new alicloud.ram.Role("defaultRole", {
 const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
     emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
     clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
-    host_group: [
+    hostGroups: [
         {
-            hostGroupName: "masterGroup",
+            hostGroupName: "master_group",
             hostGroupType: "MASTER",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -141,7 +140,7 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
             sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
         },
         {
-            hostGroupName: "coreGroup",
+            hostGroupName: "core_group",
             hostGroupType: "CORE",
             nodeCount: "3",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -152,7 +151,7 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
             sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
         },
         {
-            hostGroupName: "taskGroup",
+            hostGroupName: "task_group",
             hostGroupType: "TASK",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -174,8 +173,15 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
     masterPwd: "ABCtest1234!",
 });
 ```
-
 ##### 2. Scale Up
+The hosts of EMR Cluster are orginized as host group. Scaling up/down is operating host group.
+
+In the case of scaling up cluster, we should add the nodeCount of some host group.
+
+> **NOTE:** Scaling up is only applicable to CORE and TASK group. Cost time of scaling up will vary with the number of scaling-up nodes.
+Scaling down is only applicable to TASK group. If you want to scale down CORE group, please submit tickets or contact EMR support team.
+
+As the following case, we scale up the TASK group 2 nodes by increasing host_group.node_count by 2.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -248,9 +254,9 @@ const defaultRole = new alicloud.ram.Role("defaultRole", {
 const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
     emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
     clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
-    host_group: [
+    hostGroups: [
         {
-            hostGroupName: "masterGroup",
+            hostGroupName: "master_group",
             hostGroupType: "MASTER",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -261,7 +267,7 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
             sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
         },
         {
-            hostGroupName: "coreGroup",
+            hostGroupName: "core_group",
             hostGroupType: "CORE",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -272,7 +278,7 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
             sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
         },
         {
-            hostGroupName: "taskGroup",
+            hostGroupName: "task_group",
             hostGroupType: "TASK",
             nodeCount: "4",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -294,8 +300,11 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
     masterPwd: "ABCtest1234!",
 });
 ```
-
 ##### 3. Scale Down
+
+In the case of scaling down a cluster, we need to specified the host group and the instance list.
+
+The following is an example. We scale down the cluster by decreasing the node count by 2, and specifying the scale-down instance list.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -368,9 +377,9 @@ const defaultRole = new alicloud.ram.Role("defaultRole", {
 const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
     emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
     clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
-    host_group: [
+    hostGroups: [
         {
-            hostGroupName: "masterGroup",
+            hostGroupName: "master_group",
             hostGroupType: "MASTER",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -381,7 +390,7 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
             sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
         },
         {
-            hostGroupName: "coreGroup",
+            hostGroupName: "core_group",
             hostGroupType: "CORE",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -392,7 +401,7 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
             sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
         },
         {
-            hostGroupName: "taskGroup",
+            hostGroupName: "task_group",
             hostGroupType: "TASK",
             nodeCount: "2",
             instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
@@ -414,9 +423,101 @@ const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
     masterPwd: "ABCtest1234!",
 });
 ```
+##### 4. Create a emr gateway cluster
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultMainVersions = alicloud.emr.getMainVersions({});
+const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
+    destinationResource: "InstanceType",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    supportLocalStorage: false,
+    instanceChargeType: "PostPaid",
+    supportNodeTypes: ["GATEWAY"],
+}));
+const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "DataDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "SystemDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const vpc: alicloud.vpc.Network[];
+for (const range = {value: 0}; range.value < (_var.vpc_id == "" ? 1 : 0 == true); range.value++) {
+    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: _var.vpc_cidr}));
+}
+const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
+for (const range = {value: 0}; range.value < (_var.security_group_id == "" ? 1 : 0 == true); range.value++) {
+    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id}));
+}
+// VSwitch Resource for Module
+const vswitch: alicloud.vpc.Switch[];
+for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
+    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
+        availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        cidrBlock: _var.vswitch_cidr,
+        vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
+    }));
+}
+// Ram role Resource for Module
+const defaultRole = new alicloud.ram.Role("defaultRole", {
+    document: `    {
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+            "Service": [
+                "emr.aliyuncs.com",
+                "ecs.aliyuncs.com"
+            ]
+            }
+        }
+        ],
+        "Version": "1"
+    }
+`,
+    description: "this is a role test.",
+    force: true,
+});
+const gateway = new alicloud.emr.Cluster("gateway", {
+    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
+    clusterType: "GATEWAY",
+    hostGroups: [{
+        hostGroupName: "master_group",
+        hostGroupType: "GATEWAY",
+        nodeCount: "1",
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+        diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+        diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+        diskCount: "1",
+        sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+        sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+    }],
+    highAvailabilityEnable: true,
+    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
+    securityGroupId: _var.security_group_id == "" ? defaultSecurityGroup.id : _var.security_group_id,
+    isOpenPublicIp: true,
+    chargeType: "PostPaid",
+    vswitchId: _var.vswitch_id == "" ? vswitch.id : _var.vswitch_id,
+    userDefinedEmrEcsRole: defaultRole.name,
+    sshEnable: true,
+    masterPwd: "ABCtest1234!",
+    relatedClusterId: related_cluster_id,
+});
+```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L481"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L582"> <b>constructor</b></a>
 </h4>
 
 
@@ -430,7 +531,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L386">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L487">method <b>get</b></a>
 </h4>
 
 
@@ -441,14 +542,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L376">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L477">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L397">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L498">method <b>isInstance</b></a>
 </h4>
 
 
@@ -459,12 +560,12 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-bootstrapActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L404">property <b>bootstrapActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L505">property <b>bootstrapActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bootstrapActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ClusterBootstrapAction'>ClusterBootstrapAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-chargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L408">property <b>chargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L509">property <b>chargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>chargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -472,7 +573,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global chargeType value.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L412">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L513">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +581,7 @@ Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specifi
 EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 
 <h4 class="pdoc-member-header" id="Cluster-depositType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L416">property <b>depositType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L517">property <b>depositType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>depositType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +589,7 @@ EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid
 Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 
 <h4 class="pdoc-member-header" id="Cluster-easEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L420">property <b>easEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L521">property <b>easEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>easEnable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -496,7 +597,7 @@ Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 High security cluster (true) or not. Default value is false.
 
 <h4 class="pdoc-member-header" id="Cluster-emrVer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L424">property <b>emrVer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L525">property <b>emrVer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emrVer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -504,7 +605,7 @@ High security cluster (true) or not. Default value is false.
 EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 
 <h4 class="pdoc-member-header" id="Cluster-highAvailabilityEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L428">property <b>highAvailabilityEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L529">property <b>highAvailabilityEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>highAvailabilityEnable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -512,7 +613,7 @@ EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web 
 High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 
 <h4 class="pdoc-member-header" id="Cluster-hostGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L432">property <b>hostGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L533">property <b>hostGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ClusterHostGroup'>ClusterHostGroup</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -520,7 +621,7 @@ High Available for HDFS and YARN. If this is set true, MASTER group must have tw
 Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L376">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L477">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -529,12 +630,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-isOpenPublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L433">property <b>isOpenPublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L534">property <b>isOpenPublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isOpenPublicIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-keyPairName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L437">property <b>keyPairName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L538">property <b>keyPairName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyPairName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +643,7 @@ deployments and may be missing (undefined) during planning phases.
 Ssh key pair.
 
 <h4 class="pdoc-member-header" id="Cluster-masterPwd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L441">property <b>masterPwd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L542">property <b>masterPwd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterPwd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -550,7 +651,7 @@ Ssh key pair.
 Master ssh password.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L445">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L546">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +659,7 @@ Master ssh password.
 bootstrap action name.
 
 <h4 class="pdoc-member-header" id="Cluster-optionSoftwareLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L449">property <b>optionSoftwareLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L550">property <b>optionSoftwareLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionSoftwareLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +667,7 @@ bootstrap action name.
 Optional software list.
 
 <h4 class="pdoc-member-header" id="Cluster-relatedClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L453">property <b>relatedClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L554">property <b>relatedClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relatedClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +675,7 @@ Optional software list.
 This specify the related cluster id, if this cluster is a Gateway.
 
 <h4 class="pdoc-member-header" id="Cluster-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L457">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L558">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -582,7 +683,7 @@ This specify the related cluster id, if this cluster is a Gateway.
 Security Group ID for Cluster, you can also specify this key for each host group.
 
 <h4 class="pdoc-member-header" id="Cluster-sshEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L461">property <b>sshEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L562">property <b>sshEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshEnable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -590,7 +691,7 @@ Security Group ID for Cluster, you can also specify this key for each host group
 If this is set true, we can ssh into cluster. Default value is false.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L465">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L566">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -598,7 +699,7 @@ If this is set true, we can ssh into cluster. Default value is false.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L376">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L477">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -607,7 +708,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-useLocalMetadb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L469">property <b>useLocalMetadb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L570">property <b>useLocalMetadb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useLocalMetadb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -615,7 +716,7 @@ deployments.
 Use local metadb. Default is false.
 
 <h4 class="pdoc-member-header" id="Cluster-userDefinedEmrEcsRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L473">property <b>userDefinedEmrEcsRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L574">property <b>userDefinedEmrEcsRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userDefinedEmrEcsRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -623,7 +724,7 @@ Use local metadb. Default is false.
 Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 
 <h4 class="pdoc-member-header" id="Cluster-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L477">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L578">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -631,7 +732,7 @@ Alicloud EMR uses roles to perform actions on your behalf when provisioning clus
 Global vswitch id, you can also specify it in host group.
 
 <h4 class="pdoc-member-header" id="Cluster-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L481">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L582">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +742,7 @@ Zone ID, e.g. cn-huhehaote-a
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDiskTypes" data-link-title="getDiskTypes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L32">
         Function <strong>getDiskTypes</strong>
     </a>
 </h3>
@@ -656,8 +757,6 @@ system disk types available in Alibaba Cloud account when create a emr cluster.
 > **NOTE:** Available in 1.60.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -675,7 +774,7 @@ export const dataDiskType = defaultDiskTypes.types[0].value;
 ```
 
 <h3 class="pdoc-module-header" id="getInstanceTypes" data-link-title="getInstanceTypes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L36">
         Function <strong>getInstanceTypes</strong>
     </a>
 </h3>
@@ -690,8 +789,6 @@ instance types available in Alibaba Cloud account when create a emr cluster.
 > **NOTE:** Available in 1.59.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -713,7 +810,7 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getMainVersions" data-link-title="getMainVersions">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L33">
         Function <strong>getMainVersions</strong>
     </a>
 </h3>
@@ -728,8 +825,6 @@ main versions available in Alibaba Cloud account when create a emr cluster.
 > **NOTE:** Available in 1.59.0+
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -750,7 +845,7 @@ export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L647">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L748">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -760,12 +855,12 @@ export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-bootstrapActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L648">property <b>bootstrapActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L749">property <b>bootstrapActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootstrapActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ClusterBootstrapAction'>ClusterBootstrapAction</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-chargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L652">property <b>chargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L753">property <b>chargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +868,7 @@ The set of arguments for constructing a Cluster resource.
 Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global chargeType value.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L656">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L757">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +876,7 @@ Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specifi
 EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-depositType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L660">property <b>depositType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L761">property <b>depositType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>depositType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +884,7 @@ EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid
 Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-easEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L664">property <b>easEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L765">property <b>easEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>easEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -797,7 +892,7 @@ Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 High security cluster (true) or not. Default value is false.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-emrVer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L668">property <b>emrVer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L769">property <b>emrVer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emrVer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +900,7 @@ High security cluster (true) or not. Default value is false.
 EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-highAvailabilityEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L672">property <b>highAvailabilityEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L773">property <b>highAvailabilityEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highAvailabilityEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -813,7 +908,7 @@ EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web 
 High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-hostGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L676">property <b>hostGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L777">property <b>hostGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ClusterHostGroup'>ClusterHostGroup</a>&gt;[]&gt;;</code></pre>
@@ -821,12 +916,12 @@ High Available for HDFS and YARN. If this is set true, MASTER group must have tw
 Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-isOpenPublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L677">property <b>isOpenPublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L778">property <b>isOpenPublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOpenPublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-keyPairName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L681">property <b>keyPairName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L782">property <b>keyPairName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPairName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -834,7 +929,7 @@ Groups of Host, You can specify MASTER as a group, CORE as a group (just like th
 Ssh key pair.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterPwd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L685">property <b>masterPwd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L786">property <b>masterPwd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPwd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -842,7 +937,7 @@ Ssh key pair.
 Master ssh password.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L689">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L790">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -850,7 +945,7 @@ Master ssh password.
 bootstrap action name.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-optionSoftwareLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L693">property <b>optionSoftwareLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L794">property <b>optionSoftwareLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionSoftwareLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -858,7 +953,7 @@ bootstrap action name.
 Optional software list.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-relatedClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L697">property <b>relatedClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L798">property <b>relatedClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedClusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -866,7 +961,7 @@ Optional software list.
 This specify the related cluster id, if this cluster is a Gateway.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L701">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L802">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +969,7 @@ This specify the related cluster id, if this cluster is a Gateway.
 Security Group ID for Cluster, you can also specify this key for each host group.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-sshEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L705">property <b>sshEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L806">property <b>sshEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -882,7 +977,7 @@ Security Group ID for Cluster, you can also specify this key for each host group
 If this is set true, we can ssh into cluster. Default value is false.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L709">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L810">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -890,7 +985,7 @@ If this is set true, we can ssh into cluster. Default value is false.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-useLocalMetadb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L713">property <b>useLocalMetadb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L814">property <b>useLocalMetadb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useLocalMetadb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -898,7 +993,7 @@ A mapping of tags to assign to the resource.
 Use local metadb. Default is false.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-userDefinedEmrEcsRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L717">property <b>userDefinedEmrEcsRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L818">property <b>userDefinedEmrEcsRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedEmrEcsRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +1001,7 @@ Use local metadb. Default is false.
 Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L721">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L822">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -914,7 +1009,7 @@ Alicloud EMR uses roles to perform actions on your behalf when provisioning clus
 Global vswitch id, you can also specify it in host group.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L725">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L826">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -922,7 +1017,7 @@ Global vswitch id, you can also specify it in host group.
 Zone ID, e.g. cn-huhehaote-a
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L563">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L664">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -932,12 +1027,12 @@ Zone ID, e.g. cn-huhehaote-a
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-bootstrapActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L564">property <b>bootstrapActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L665">property <b>bootstrapActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootstrapActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ClusterBootstrapAction'>ClusterBootstrapAction</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-chargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L568">property <b>chargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L669">property <b>chargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -945,7 +1040,7 @@ Input properties used for looking up and filtering Cluster resources.
 Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global chargeType value.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L572">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L673">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -953,7 +1048,7 @@ Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specifi
 EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 
 <h4 class="pdoc-member-header" id="ClusterState-depositType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L576">property <b>depositType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L677">property <b>depositType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>depositType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +1056,7 @@ EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid
 Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 
 <h4 class="pdoc-member-header" id="ClusterState-easEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L580">property <b>easEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L681">property <b>easEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>easEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -969,7 +1064,7 @@ Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
 High security cluster (true) or not. Default value is false.
 
 <h4 class="pdoc-member-header" id="ClusterState-emrVer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L584">property <b>emrVer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L685">property <b>emrVer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emrVer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -977,7 +1072,7 @@ High security cluster (true) or not. Default value is false.
 EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 
 <h4 class="pdoc-member-header" id="ClusterState-highAvailabilityEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L588">property <b>highAvailabilityEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L689">property <b>highAvailabilityEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highAvailabilityEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -985,7 +1080,7 @@ EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web 
 High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
 
 <h4 class="pdoc-member-header" id="ClusterState-hostGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L592">property <b>hostGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L693">property <b>hostGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ClusterHostGroup'>ClusterHostGroup</a>&gt;[]&gt;;</code></pre>
@@ -993,12 +1088,12 @@ High Available for HDFS and YARN. If this is set true, MASTER group must have tw
 Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 
 <h4 class="pdoc-member-header" id="ClusterState-isOpenPublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L593">property <b>isOpenPublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L694">property <b>isOpenPublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOpenPublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-keyPairName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L597">property <b>keyPairName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L698">property <b>keyPairName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPairName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1006,7 +1101,7 @@ Groups of Host, You can specify MASTER as a group, CORE as a group (just like th
 Ssh key pair.
 
 <h4 class="pdoc-member-header" id="ClusterState-masterPwd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L601">property <b>masterPwd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L702">property <b>masterPwd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPwd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1014,7 +1109,7 @@ Ssh key pair.
 Master ssh password.
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L605">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L706">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1117,7 @@ Master ssh password.
 bootstrap action name.
 
 <h4 class="pdoc-member-header" id="ClusterState-optionSoftwareLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L609">property <b>optionSoftwareLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L710">property <b>optionSoftwareLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionSoftwareLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1030,7 +1125,7 @@ bootstrap action name.
 Optional software list.
 
 <h4 class="pdoc-member-header" id="ClusterState-relatedClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L613">property <b>relatedClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L714">property <b>relatedClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relatedClusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1038,7 +1133,7 @@ Optional software list.
 This specify the related cluster id, if this cluster is a Gateway.
 
 <h4 class="pdoc-member-header" id="ClusterState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L617">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L718">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1046,7 +1141,7 @@ This specify the related cluster id, if this cluster is a Gateway.
 Security Group ID for Cluster, you can also specify this key for each host group.
 
 <h4 class="pdoc-member-header" id="ClusterState-sshEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L621">property <b>sshEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L722">property <b>sshEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1054,7 +1149,7 @@ Security Group ID for Cluster, you can also specify this key for each host group
 If this is set true, we can ssh into cluster. Default value is false.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L625">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L726">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1062,7 +1157,7 @@ If this is set true, we can ssh into cluster. Default value is false.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-useLocalMetadb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L629">property <b>useLocalMetadb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L730">property <b>useLocalMetadb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useLocalMetadb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1070,7 +1165,7 @@ A mapping of tags to assign to the resource.
 Use local metadb. Default is false.
 
 <h4 class="pdoc-member-header" id="ClusterState-userDefinedEmrEcsRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L633">property <b>userDefinedEmrEcsRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L734">property <b>userDefinedEmrEcsRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedEmrEcsRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1078,7 +1173,7 @@ Use local metadb. Default is false.
 Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
 
 <h4 class="pdoc-member-header" id="ClusterState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L637">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L738">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1086,7 +1181,7 @@ Alicloud EMR uses roles to perform actions on your behalf when provisioning clus
 Global vswitch id, you can also specify it in host group.
 
 <h4 class="pdoc-member-header" id="ClusterState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/cluster.ts#L641">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/cluster.ts#L742">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1094,7 +1189,7 @@ Global vswitch id, you can also specify it in host group.
 Zone ID, e.g. cn-huhehaote-a
 
 <h3 class="pdoc-module-header" id="GetDiskTypesArgs" data-link-title="GetDiskTypesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L53">
         interface <strong>GetDiskTypesArgs</strong>
     </a>
 </h3>
@@ -1104,7 +1199,7 @@ Zone ID, e.g. cn-huhehaote-a
 A collection of arguments for invoking getDiskTypes.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L59">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L57">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1112,7 +1207,7 @@ A collection of arguments for invoking getDiskTypes.
 The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`, `ZOOKEEPER`, `DRUID`.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesArgs-destinationResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L63">property <b>destinationResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L61">property <b>destinationResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1120,7 +1215,7 @@ The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`
 The destination resource of emr cluster instance
 
 <h4 class="pdoc-member-header" id="GetDiskTypesArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L67">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L65">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1128,7 +1223,7 @@ The destination resource of emr cluster instance
 Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L71">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L69">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1136,12 +1231,12 @@ Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Defau
 The ecs instance type of create emr cluster instance.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L72">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L70">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDiskTypesArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L76">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L74">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1149,7 +1244,7 @@ The ecs instance type of create emr cluster instance.
 The Zone to create emr cluster instance.
 
 <h3 class="pdoc-module-header" id="GetDiskTypesResult" data-link-title="GetDiskTypesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L80">
         interface <strong>GetDiskTypesResult</strong>
     </a>
 </h3>
@@ -1159,17 +1254,17 @@ The Zone to create emr cluster instance.
 A collection of values returned by getDiskTypes.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L83">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L81">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-destinationResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L84">property <b>destinationResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L82">property <b>destinationResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1177,7 +1272,7 @@ A collection of values returned by getDiskTypes.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L92">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L90">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1185,22 +1280,22 @@ The provider-assigned unique ID for this managed resource.
 A list of data disk and system disk type IDs.
 
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L93">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L91">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L94">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L92">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L95">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L93">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-types">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L99">property <b>types</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L97">property <b>types</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>types: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDiskTypesType'>GetDiskTypesType</a>[];</code></pre>
@@ -1208,12 +1303,12 @@ A list of data disk and system disk type IDs.
 A list of emr instance types. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDiskTypesResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getDiskTypes.ts#L100">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getDiskTypes.ts#L98">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstanceTypesArgs" data-link-title="GetInstanceTypesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L59">
         interface <strong>GetInstanceTypesArgs</strong>
     </a>
 </h3>
@@ -1223,7 +1318,7 @@ A list of emr instance types. Each element contains the following attributes:
 A collection of arguments for invoking getInstanceTypes.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L65">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L63">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1231,7 +1326,7 @@ A collection of arguments for invoking getInstanceTypes.
 The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`, `ZOOKEEPER`, `DRUID`.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-destinationResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L69">property <b>destinationResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L67">property <b>destinationResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1239,7 +1334,7 @@ The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`
 The destination resource of emr cluster instance
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L73">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L71">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1247,7 +1342,7 @@ The destination resource of emr cluster instance
 Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L77">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L75">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1255,12 +1350,12 @@ Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Defau
 Filter the specific ecs instance type to create emr cluster.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L76">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-supportLocalStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L82">property <b>supportLocalStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L80">property <b>supportLocalStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportLocalStorage?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1268,7 +1363,7 @@ Filter the specific ecs instance type to create emr cluster.
 Whether the current storage disk is local or not.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-supportNodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L87">property <b>supportNodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L85">property <b>supportNodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportNodeTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1277,7 +1372,7 @@ The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L91">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L89">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1285,7 +1380,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
 The supported resources of specific zoneId.
 
 <h3 class="pdoc-module-header" id="GetInstanceTypesResult" data-link-title="GetInstanceTypesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L95">
         interface <strong>GetInstanceTypesResult</strong>
     </a>
 </h3>
@@ -1295,17 +1390,17 @@ The supported resources of specific zoneId.
 A collection of values returned by getInstanceTypes.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L98">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L96">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-destinationResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L99">property <b>destinationResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L97">property <b>destinationResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L103">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L101">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1313,7 +1408,7 @@ A collection of values returned by getInstanceTypes.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L107">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L105">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1321,32 +1416,32 @@ The provider-assigned unique ID for this managed resource.
 A list of emr instance types IDs.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L108">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L106">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L109">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L107">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L110">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L108">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-supportLocalStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L111">property <b>supportLocalStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L109">property <b>supportLocalStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportLocalStorage?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-supportNodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L112">property <b>supportNodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L110">property <b>supportNodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportNodeTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-types">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L116">property <b>types</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L114">property <b>types</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>types: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesType'>GetInstanceTypesType</a>[];</code></pre>
@@ -1354,7 +1449,7 @@ A list of emr instance types IDs.
 A list of emr instance types. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstanceTypesResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getInstanceTypes.ts#L120">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getInstanceTypes.ts#L118">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1362,7 +1457,7 @@ A list of emr instance types. Each element contains the following attributes:
 The available zone id in Alibaba Cloud account
 
 <h3 class="pdoc-module-header" id="GetMainVersionsArgs" data-link-title="GetMainVersionsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L52">
         interface <strong>GetMainVersionsArgs</strong>
     </a>
 </h3>
@@ -1372,7 +1467,7 @@ The available zone id in Alibaba Cloud account
 A collection of arguments for invoking getMainVersions.
 
 <h4 class="pdoc-member-header" id="GetMainVersionsArgs-clusterTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L59">property <b>clusterTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L57">property <b>clusterTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1381,7 +1476,7 @@ The supported clusterType of this emr version.
 Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAFKA", "ZOOKEEPER", "FLINK", "CLICKHOUSE"]
 
 <h4 class="pdoc-member-header" id="GetMainVersionsArgs-emrVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L63">property <b>emrVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L61">property <b>emrVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emrVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1389,12 +1484,12 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 The version of the emr cluster instance. Possible values: `EMR-4.0.0`, `EMR-3.23.0`, `EMR-3.22.0`.
 
 <h4 class="pdoc-member-header" id="GetMainVersionsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L64">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L62">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetMainVersionsResult" data-link-title="GetMainVersionsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L68">
         interface <strong>GetMainVersionsResult</strong>
     </a>
 </h3>
@@ -1404,12 +1499,12 @@ The version of the emr cluster instance. Possible values: `EMR-4.0.0`, `EMR-3.23
 A collection of values returned by getMainVersions.
 
 <h4 class="pdoc-member-header" id="GetMainVersionsResult-clusterTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L71">property <b>clusterTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L69">property <b>clusterTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMainVersionsResult-emrVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L75">property <b>emrVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L73">property <b>emrVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emrVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1417,7 +1512,7 @@ A collection of values returned by getMainVersions.
 The version of the emr cluster instance.
 
 <h4 class="pdoc-member-header" id="GetMainVersionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1425,7 +1520,7 @@ The version of the emr cluster instance.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMainVersionsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L83">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L81">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1433,7 +1528,7 @@ The provider-assigned unique ID for this managed resource.
 A list of emr instance types IDs.
 
 <h4 class="pdoc-member-header" id="GetMainVersionsResult-mainVersions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L87">property <b>mainVersions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L85">property <b>mainVersions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mainVersions: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMainVersionsMainVersion'>GetMainVersionsMainVersion</a>[];</code></pre>
@@ -1441,7 +1536,7 @@ A list of emr instance types IDs.
 A list of versions of the emr cluster instance. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetMainVersionsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/70979907924ce961ff86ab63063f73d6a5bce811/sdk/nodejs/emr/getMainVersions.ts#L88">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/b7b59fa875693ba8460f61295cc547d3028192d6/sdk/nodejs/emr/getMainVersions.ts#L86">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

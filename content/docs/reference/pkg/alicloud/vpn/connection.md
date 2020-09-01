@@ -22,7 +22,7 @@ meta_desc: "Explore the Connection resource of the vpn module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>customer_gateway_id=None<span class="p">, </span>effect_immediately=None<span class="p">, </span>ike_configs=None<span class="p">, </span>ipsec_configs=None<span class="p">, </span>local_subnets=None<span class="p">, </span>name=None<span class="p">, </span>remote_subnets=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -540,7 +540,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config]</a></span>
+        <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
@@ -709,7 +709,8 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>customer_gateway_id=None<span class="p">, </span>effect_immediately=None<span class="p">, </span>ike_configs=None<span class="p">, </span>ipsec_configs=None<span class="p">, </span>local_subnets=None<span class="p">, </span>name=None<span class="p">, </span>remote_subnets=None<span class="p">, </span>status=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -717,7 +718,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1169,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config]</a></span>
+        <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
@@ -1180,7 +1181,7 @@ The following state arguments are supported:
 <a href="#state_ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
@@ -1593,8 +1594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeauthalg_python">
-<a href="#ikeauthalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
+        <span id="ike_auth_alg_python">
+<a href="#ike_auth_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>auth_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1604,8 +1605,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeencalg_python">
-<a href="#ikeencalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
+        <span id="ike_enc_alg_python">
+<a href="#ike_enc_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>enc_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1615,8 +1616,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikelifetime_python">
-<a href="#ikelifetime_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
+        <span id="ike_lifetime_python">
+<a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1626,8 +1627,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikelocalid_python">
-<a href="#ikelocalid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
+        <span id="ike_local_id_python">
+<a href="#ike_local_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>local_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1637,8 +1638,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikemode_python">
-<a href="#ikemode_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
+        <span id="ike_mode_python">
+<a href="#ike_mode_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1648,8 +1649,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikepfs_python">
-<a href="#ikepfs_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
+        <span id="ike_pfs_python">
+<a href="#ike_pfs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>pfs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1659,8 +1660,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeremoteid_python">
-<a href="#ikeremoteid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
+        <span id="ike_remote_id_python">
+<a href="#ike_remote_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>remote_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1670,8 +1671,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeversion_python">
-<a href="#ikeversion_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
+        <span id="ike_version_python">
+<a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1870,8 +1871,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecauthalg_python">
-<a href="#ipsecauthalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
+        <span id="ipsec_auth_alg_python">
+<a href="#ipsec_auth_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>auth_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1881,8 +1882,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecencalg_python">
-<a href="#ipsecencalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
+        <span id="ipsec_enc_alg_python">
+<a href="#ipsec_enc_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>enc_<wbr>alg</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1892,8 +1893,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipseclifetime_python">
-<a href="#ipseclifetime_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
+        <span id="ipsec_lifetime_python">
+<a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1903,8 +1904,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecpfs_python">
-<a href="#ipsecpfs_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
+        <span id="ipsec_pfs_python">
+<a href="#ipsec_pfs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>pfs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1930,6 +1931,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

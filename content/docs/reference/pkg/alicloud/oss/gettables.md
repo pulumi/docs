@@ -45,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample-table"
+		opt1 := "tables.txt"
+		tablesDs, err := oss.GetTables(ctx, &oss.GetTablesArgs{
+			InstanceName: "sample-instance",
+			NameRegex:    &opt0,
+			OutputFile:   &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstTableId", tablesDs.Tables[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,7 +81,7 @@ import pulumi_alicloud as alicloud
 tables_ds = alicloud.oss.get_tables(instance_name="sample-instance",
     name_regex="sample-table",
     output_file="tables.txt")
-pulumi.export("firstTableId", tables_ds.tables[0]["id"])
+pulumi.export("firstTableId", tables_ds.tables[0].id)
 ```
 
 {{% /example %}}
@@ -92,7 +117,7 @@ export const firstTableId = tablesDs.tables[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_tables(</span>ids=None<span class="p">, </span>instance_name=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tables(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTablesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -940,7 +965,7 @@ The following output properties are available:
 <a href="#primary_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestableprimarykey">List[Get<wbr>Tables<wbr>Table<wbr>Primary<wbr>Key]</a></span>
+        <span class="property-type"><a href="#gettablestableprimarykey">List[Get<wbr>Tables<wbr>Table<wbr>Primary<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table.
 {{% /md %}}</dd>
@@ -1111,6 +1136,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

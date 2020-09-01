@@ -41,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample_disk"
+		disksDs, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstDiskId", disksDs.Disks[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +72,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 disks_ds = alicloud.ecs.get_disks(name_regex="sample_disk")
-pulumi.export("firstDiskId", disks_ds.disks[0]["id"])
+pulumi.export("firstDiskId", disks_ds.disks[0].id)
 ```
 
 {{% /example %}}
@@ -84,7 +106,7 @@ export const firstDiskId = disksDs.disks[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_disks(</span>category=None<span class="p">, </span>encrypted=None<span class="p">, </span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_disks(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDisksResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -194,12 +216,67 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -307,12 +384,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -420,12 +552,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -530,15 +717,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1051,7 +1293,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disk.
 {{% /md %}}</dd>
@@ -1305,12 +1547,67 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1529,12 +1826,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1753,12 +2105,67 @@ tagKey2 = "tagValue2"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1772,8 +2179,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="attachedtime_python">
-<a href="#attachedtime_python" style="color: inherit; text-decoration: inherit;">attached<wbr>Time</a>
+        <span id="attached_time_python">
+<a href="#attached_time_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1827,8 +2234,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="detachedtime_python">
-<a href="#detachedtime_python" style="color: inherit; text-decoration: inherit;">detached<wbr>Time</a>
+        <span id="detached_time_python">
+<a href="#detached_time_python" style="color: inherit; text-decoration: inherit;">detached_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1849,8 +2256,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="expirationtime_python">
-<a href="#expirationtime_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1904,8 +2311,8 @@ tagKey2 = "tagValue2"
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1974,15 +2381,70 @@ tagKey2 = "tagValue2"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
+    tags: {
+        tagKey1: "tagValue1",
+        tagKey2: "tagValue2",
+    },
+}, { async: true }));
 ```
-data "alicloud.ecs.getDisks" "disks_ds" {
-tags = {
-tagKey1 = "tagValue1",
-tagKey2 = "tagValue2"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+disks_ds = alicloud.ecs.get_disks(tags={
+    "tagKey1": "tagValue1",
+    "tagKey2": "tagValue2",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disksDs = Output.Create(AliCloud.Ecs.GetDisks.InvokeAsync(new AliCloud.Ecs.GetDisksArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+                { "tagKey2", "tagValue2" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ecs.GetDisks(ctx, &ecs.GetDisksArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+				"tagKey2": "tagValue2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -2005,6 +2467,6 @@ tagKey2 = "tagValue2"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

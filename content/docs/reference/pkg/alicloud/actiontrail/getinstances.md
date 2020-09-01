@@ -69,7 +69,66 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/actiontrail"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			VpcId:            defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = alikafka.NewInstance(ctx, "defaultInstance", &alikafka.InstanceArgs{
+			DeployType: pulumi.Int(4),
+			DiskSize:   pulumi.Int(500),
+			DiskType:   pulumi.Int(1),
+			IoMax:      pulumi.Int(20),
+			TopicQuota: pulumi.Int(50),
+			VswitchId:  defaultSwitch.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		opt1 := "alikafkaInstanceName"
+		opt2 := "instances.txt"
+		instancesDs, err := actiontrail.GetInstances(ctx, &actiontrail.GetInstancesArgs{
+			NameRegex:  &opt1,
+			OutputFile: &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstInstanceName", instancesDs.Instances[0].Name)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,19 +143,19 @@ if instance_name is None:
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/24",
     vpc_id=default_network.id)
 default_instance = alicloud.alikafka.Instance("defaultInstance",
-    deploy_type="4",
-    disk_size="500",
-    disk_type="1",
-    io_max="20",
-    topic_quota="50",
+    deploy_type=4,
+    disk_size=500,
+    disk_type=1,
+    io_max=20,
+    topic_quota=50,
     vswitch_id=default_switch.id)
 instances_ds = alicloud.actiontrail.get_instances(name_regex="alikafkaInstanceName",
     output_file="instances.txt")
-pulumi.export("firstInstanceName", instances_ds.instances[0]["name"])
+pulumi.export("firstInstanceName", instances_ds.instances[0].name)
 ```
 
 {{% /example %}}
@@ -153,7 +212,7 @@ export const firstInstanceName = instancesDs.instances[0].name;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -197,7 +256,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,7 +295,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -275,7 +334,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -314,7 +373,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the instance name. 
+    <dd>{{% md %}}A regex string to filter results by the instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -756,13 +815,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="securitygroup_csharp">
+<a href="#securitygroup_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The security group of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="servicestatus_csharp">
 <a href="#servicestatus_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error. 
+    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -928,13 +998,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="securitygroup_go">
+<a href="#securitygroup_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The security group of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="servicestatus_go">
 <a href="#servicestatus_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error. 
+    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1100,13 +1181,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="securitygroup_nodejs">
+<a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The security group of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="servicestatus_nodejs">
 <a href="#servicestatus_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error. 
+    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1272,13 +1364,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicestatus_python">
-<a href="#servicestatus_python" style="color: inherit; text-decoration: inherit;">service<wbr>Status</a>
+        <span id="security_group_python">
+<a href="#security_group_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The security group of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_status_python">
+<a href="#service_status_python" style="color: inherit; text-decoration: inherit;">service_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error. 
+    <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1354,6 +1457,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

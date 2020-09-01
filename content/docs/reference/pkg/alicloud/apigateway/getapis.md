@@ -41,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "output_ApiGatawayApis"
+		_, err := apigateway.GetApis(ctx, &apigateway.GetApisArgs{
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstApiId", data.Alicloud_api_gateway_apis.Data_apigatway.Apis[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +72,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 data_apigatway_apis = alicloud.apigateway.get_apis(output_file="output_ApiGatawayApis")
-pulumi.export("firstApiId", data["alicloud.apigateway.getApis"]["data_apigatway"]["apis"][0]["id"])
+pulumi.export("firstApiId", data["alicloud_api_gateway_apis"]["data_apigatway"]["apis"][0]["id"])
 ```
 
 {{% /example %}}
@@ -84,7 +106,7 @@ export const firstApiId = alicloud_api_gateway_apis_data_apigatway.apis.0.id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_apis(</span>api_id=None<span class="p">, </span>group_id=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_apis(</span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApisResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -139,7 +161,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -200,7 +222,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -261,7 +283,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,7 +344,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,7 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -407,7 +429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of api names. 
+    <dd>{{% md %}}A list of api names.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -488,7 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -499,7 +521,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of api names. 
+    <dd>{{% md %}}A list of api names.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -580,7 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -591,7 +613,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api names. 
+    <dd>{{% md %}}A list of api names.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -672,7 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api IDs. 
+    <dd>{{% md %}}A list of api IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -683,7 +705,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of api names. 
+    <dd>{{% md %}}A list of api names.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -1034,8 +1056,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1061,6 +1083,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

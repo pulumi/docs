@@ -43,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ds, err := ess.GetNotifications(ctx, &ess.GetNotificationsArgs{
+			ScalingGroupId: "scaling_group_id",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstNotification", ds.Notifications[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +73,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 ds = alicloud.ess.get_notifications(scaling_group_id="scaling_group_id")
-pulumi.export("firstNotification", ds.notifications[0]["id"])
+pulumi.export("firstNotification", ds.notifications[0].id)
 ```
 
 {{% /example %}}
@@ -86,7 +107,7 @@ export const firstNotification = ds.notifications[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_notifications(</span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_notifications(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNotificationsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -567,7 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object. 
+    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -618,7 +639,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object. 
+    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -669,7 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object. 
+    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -720,7 +741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object. 
+    <dd>{{% md %}}The Alibaba Cloud Resource Name (ARN) for the notification object.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -763,6 +784,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

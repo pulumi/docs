@@ -44,7 +44,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "my-first-k8s"
+		opt1 := "my-first-k8s-json"
+		k8sClusters, err := cs.GetServerlessKubernetesClusters(ctx, &cs.GetServerlessKubernetesClustersArgs{
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("output", k8sClusters.Clusters)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +114,7 @@ export const output = k8sClusters.clusters;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_serverless_kubernetes_clusters(</span>enable_details=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_serverless_kubernetes_clusters(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerlessKubernetesClustersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -691,7 +715,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the cluster support delete protection.  
+    <dd>{{% md %}}Whether the cluster support delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -806,7 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the cluster support delete protection.  
+    <dd>{{% md %}}Whether the cluster support delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -921,7 +945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether the cluster support delete protection.  
+    <dd>{{% md %}}Whether the cluster support delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1023,7 +1047,7 @@ The following output properties are available:
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserverlesskubernetesclustersclusterconnections">Dict[Get<wbr>Serverless<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections]</a></span>
+        <span class="property-type"><a href="#getserverlesskubernetesclustersclusterconnections">Get<wbr>Serverless<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of serverless cluster connection information. It contains several attributes to `Block Connections`.
 {{% /md %}}</dd>
@@ -1036,7 +1060,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the cluster support delete protection.  
+    <dd>{{% md %}}Whether the cluster support delete protection.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1099,7 +1123,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1321,6 +1345,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -44,7 +44,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			NameRegex: "^bastionhost",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		var splat0 []interface{}
+		for _, val0 := range alicloud_yundun_bastionhost_instances.Instance {
+			splat0 = append(splat0, val0.Id)
+		}
+		ctx.Export("instance", splat0)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,7 +112,7 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bastion_host_instances(</span>description_regex=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bastion_host_instances(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBastionHostInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -154,11 +179,63 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -212,11 +289,63 @@ tagKey1 = "tagValue1"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -270,11 +399,63 @@ tagKey1 = "tagValue1"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -325,14 +506,66 @@ tagKey1 = "tagValue1"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -665,7 +898,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
@@ -808,11 +1041,63 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -931,11 +1216,63 @@ tagKey1 = "tagValue1"
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1054,11 +1391,63 @@ tagKey1 = "tagValue1"
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1115,8 +1504,8 @@ tagKey1 = "tagValue1"
 
     <dt class="property-required"
             title="Required">
-        <span id="privatedomain_python">
-<a href="#privatedomain_python" style="color: inherit; text-decoration: inherit;">private<wbr>Domain</a>
+        <span id="private_domain_python">
+<a href="#private_domain_python" style="color: inherit; text-decoration: inherit;">private_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1126,8 +1515,8 @@ tagKey1 = "tagValue1"
 
     <dt class="property-required"
             title="Required">
-        <span id="publicdomain_python">
-<a href="#publicdomain_python" style="color: inherit; text-decoration: inherit;">public<wbr>Domain</a>
+        <span id="public_domain_python">
+<a href="#public_domain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1137,8 +1526,8 @@ tagKey1 = "tagValue1"
 
     <dt class="property-required"
             title="Required">
-        <span id="publicnetworkaccess_python">
-<a href="#publicnetworkaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1159,8 +1548,8 @@ tagKey1 = "tagValue1"
 
     <dt class="property-required"
             title="Required">
-        <span id="uservswitchid_python">
-<a href="#uservswitchid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Vswitch<wbr>Id</a>
+        <span id="user_vswitch_id_python">
+<a href="#user_vswitch_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>vswitch_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1174,14 +1563,66 @@ tagKey1 = "tagValue1"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
@@ -1204,6 +1645,6 @@ tagKey1 = "tagValue1"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

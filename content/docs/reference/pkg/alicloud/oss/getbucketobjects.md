@@ -42,7 +42,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample/sample_object.txt"
+		bucketObjectsDs, err := oss.GetBucketObjects(ctx, &oss.GetBucketObjectsArgs{
+			BucketName: "sample_bucket",
+			KeyRegex:   &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstObjectKey", bucketObjectsDs.Objects[0].Key)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +75,7 @@ import pulumi_alicloud as alicloud
 
 bucket_objects_ds = alicloud.oss.get_bucket_objects(bucket_name="sample_bucket",
     key_regex="sample/sample_object.txt")
-pulumi.export("firstObjectKey", bucket_objects_ds.objects[0]["key"])
+pulumi.export("firstObjectKey", bucket_objects_ds.objects[0].key)
 ```
 
 {{% /example %}}
@@ -87,7 +110,7 @@ export const firstObjectKey = bucketObjectsDs.objects[0].key;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bucket_objects(</span>bucket_name=None<span class="p">, </span>key_prefix=None<span class="p">, </span>key_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bucket_objects(</span><span class="nx">bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketObjectsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1220,8 +1243,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastmodificationtime_python">
-<a href="#lastmodificationtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
+        <span id="last_modification_time_python">
+<a href="#last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1242,8 +1265,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="ssekmskeyid_python">
-<a href="#ssekmskeyid_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms<wbr>Key<wbr>Id</a>
+        <span id="sse_kms_key_id_python">
+<a href="#sse_kms_key_id_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>kms_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1280,6 +1303,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

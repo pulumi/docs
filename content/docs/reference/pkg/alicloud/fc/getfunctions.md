@@ -42,7 +42,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "sample_fc_function"
+		functionsDs, err := fc.GetFunctions(ctx, &fc.GetFunctionsArgs{
+			NameRegex:   &opt0,
+			ServiceName: "sample_service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstFcFunctionName", functionsDs.Functions[0].Name)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +75,7 @@ import pulumi_alicloud as alicloud
 
 functions_ds = alicloud.fc.get_functions(name_regex="sample_fc_function",
     service_name="sample_service")
-pulumi.export("firstFcFunctionName", functions_ds.functions[0]["name"])
+pulumi.export("firstFcFunctionName", functions_ds.functions[0].name)
 ```
 
 {{% /example %}}
@@ -87,7 +110,7 @@ export const firstFcFunctionName = functionsDs.functions[0].name;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_functions(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>service_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_functions(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1092,17 +1115,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="codesize_python">
-<a href="#codesize_python" style="color: inherit; text-decoration: inherit;">code<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Function code size in bytes.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="code_checksum_python">
 <a href="#code_checksum_python" style="color: inherit; text-decoration: inherit;">code_<wbr>checksum</a>
 </span> 
@@ -1110,6 +1122,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Checksum (crc64) of the function code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_size_python">
+<a href="#code_size_python" style="color: inherit; text-decoration: inherit;">code_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Function code size in bytes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1140,7 +1163,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
 {{% /md %}}</dd>
@@ -1169,8 +1192,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lastmodificationtime_python">
-<a href="#lastmodificationtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
+        <span id="last_modification_time_python">
+<a href="#last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1240,6 +1263,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

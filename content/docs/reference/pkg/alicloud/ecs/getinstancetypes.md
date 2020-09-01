@@ -47,7 +47,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := 1
+		opt1 := 2
+		typesDs, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			CpuCoreCount: &opt0,
+			MemorySize:   &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewInstance(ctx, "instance", &ecs.InstanceArgs{
+			InstanceType: pulumi.String(typesDs.InstanceTypes[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,7 +86,7 @@ import pulumi_alicloud as alicloud
 
 types_ds = alicloud.ecs.get_instance_types(cpu_core_count=1,
     memory_size=2)
-instance = alicloud.ecs.Instance("instance", instance_type=types_ds.instance_types[0]["id"])
+instance = alicloud.ecs.Instance("instance", instance_type=types_ds.instance_types[0].id)
 ```
 
 {{% /example %}}
@@ -94,7 +123,7 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_types(</span>availability_zone=None<span class="p">, </span>cpu_core_count=None<span class="p">, </span>eni_amount=None<span class="p">, </span>gpu_amount=None<span class="p">, </span>gpu_spec=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_type_family=None<span class="p">, </span>is_outdated=None<span class="p">, </span>kubernetes_node_role=None<span class="p">, </span>memory_size=None<span class="p">, </span>network_type=None<span class="p">, </span>output_file=None<span class="p">, </span>sorted_by=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">eni_amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">gpu_amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">gpu_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_outdated</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubernetes_node_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1870,8 +1899,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="availabilityzones_python">
-<a href="#availabilityzones_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
+        <span id="availability_zones_python">
+<a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1881,19 +1910,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="burstableinstance_python">
-<a href="#burstableinstance_python" style="color: inherit; text-decoration: inherit;">burstable<wbr>Instance</a>
+        <span id="burstable_instance_python">
+<a href="#burstable_instance_python" style="color: inherit; text-decoration: inherit;">burstable_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Dict[Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The burstable instance attribution:
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="cpucorecount_python">
-<a href="#cpucorecount_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Core<wbr>Count</a>
+        <span id="cpu_core_count_python">
+<a href="#cpu_core_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>core_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1903,8 +1932,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eniamount_python">
-<a href="#eniamount_python" style="color: inherit; text-decoration: inherit;">eni<wbr>Amount</a>
+        <span id="eni_amount_python">
+<a href="#eni_amount_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>amount</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1929,7 +1958,7 @@ The following output properties are available:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Dict[Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu]</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU attribution of an instance type:
 {{% /md %}}</dd>
@@ -1947,11 +1976,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="localstorage_python">
-<a href="#localstorage_python" style="color: inherit; text-decoration: inherit;">local<wbr>Storage</a>
+        <span id="local_storage_python">
+<a href="#local_storage_python" style="color: inherit; text-decoration: inherit;">local_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Dict[Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local storage of an instance type:
 {{% /md %}}</dd>
@@ -2091,8 +2120,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="baselinecredit_python">
-<a href="#baselinecredit_python" style="color: inherit; text-decoration: inherit;">baseline<wbr>Credit</a>
+        <span id="baseline_credit_python">
+<a href="#baseline_credit_python" style="color: inherit; text-decoration: inherit;">baseline_<wbr>credit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2102,8 +2131,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="initialcredit_python">
-<a href="#initialcredit_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Credit</a>
+        <span id="initial_credit_python">
+<a href="#initial_credit_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>credit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2441,6 +2470,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

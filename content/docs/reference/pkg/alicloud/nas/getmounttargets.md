@@ -44,7 +44,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "tf-testAccNasConfig"
+		mt, err := nas.GetMountTargets(ctx, &nas.GetMountTargetsArgs{
+			AccessGroupName: &opt0,
+			FileSystemId:    "1a2sc4d",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("alicloudNasMountTargetsId", mt.Targets[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,7 +77,7 @@ import pulumi_alicloud as alicloud
 
 mt = alicloud.nas.get_mount_targets(access_group_name="tf-testAccNasConfig",
     file_system_id="1a2sc4d")
-pulumi.export("alicloudNasMountTargetsId", mt.targets[0]["id"])
+pulumi.export("alicloudNasMountTargetsId", mt.targets[0].id)
 ```
 
 {{% /example %}}
@@ -89,7 +112,7 @@ export const alicloudNasMountTargetsId = mt.targets[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_mount_targets(</span>access_group_name=None<span class="p">, </span>file_system_id=None<span class="p">, </span>ids=None<span class="p">, </span>mount_target_domain=None<span class="p">, </span>output_file=None<span class="p">, </span>type=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mount_targets(</span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">mount_target_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMountTargetsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1230,8 +1253,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mounttargetdomain_python">
-<a href="#mounttargetdomain_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Domain</a>
+        <span id="mount_target_domain_python">
+<a href="#mount_target_domain_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1290,6 +1313,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

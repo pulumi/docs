@@ -102,7 +102,122 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cloud_ssd"
+		opt1 := "VSwitch"
+		_default, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := _default.Zones[0].Id
+		opt3 := 1
+		opt4 := 2
+		_type, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			CpuCoreCount:     &opt3,
+			MemorySize:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt5 := true
+		opt6 := "^ubuntu_18.*64"
+		opt7 := "system"
+		images, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			MostRecent: &opt5,
+			NameRegex:  &opt6,
+			Owners:     &opt7,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("10.1.0.0/21"),
+		})
+		if err != nil {
+			return err
+		}
+		vswitch, err := vpc.NewSwitch(ctx, "vswitch", &vpc.SwitchArgs{
+			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
+			CidrBlock:        pulumi.String("10.1.1.0/24"),
+			VpcId:            vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		group, err := ecs.NewSecurityGroup(ctx, "group", &ecs.SecurityGroupArgs{
+			Description: pulumi.String("New security group"),
+			VpcId:       vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		var instance []*ecs.Instance
+		for key0, val0 := range 2 {
+			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("instance-%v", key0), &ecs.InstanceArgs{
+				ImageId:                 pulumi.String(images.Images[0].Id),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				InstanceName:            pulumi.String(fmt.Sprintf("%v%v%v", name, "-", val0+1)),
+				InstanceType:            pulumi.String(_type.InstanceTypes[0].Id),
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(5),
+				Password:                pulumi.String("Test12345"),
+				SecurityGroups: pulumi.StringArray{
+					group.ID(),
+				},
+				SystemDiskCategory: pulumi.String("cloud_ssd"),
+				VswitchId:          vswitch.ID(),
+			})
+			if err != nil {
+				return err
+			}
+			instance = append(instance, __res)
+		}
+		pair, err := ecs.NewKeyPair(ctx, "pair", &ecs.KeyPairArgs{
+			KeyName: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		var splat0 pulumi.StringArray
+		for _, val0 := range instance {
+			splat0 = append(splat0, val0.ID())
+		}
+		_, err = ecs.NewKeyPairAttachment(ctx, "attachment", &ecs.KeyPairAttachmentArgs{
+			InstanceIds: toPulumiStringArray(splat0),
+			KeyName:     pair.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,7 +227,7 @@ import pulumi_alicloud as alicloud
 
 default = alicloud.get_zones(available_disk_category="cloud_ssd",
     available_resource_creation="VSwitch")
-type = alicloud.ecs.get_instance_types(availability_zone=default.zones[0]["id"],
+type = alicloud.ecs.get_instance_types(availability_zone=default.zones[0].id,
     cpu_core_count=1,
     memory_size=2)
 images = alicloud.ecs.get_images(most_recent=True,
@@ -124,7 +239,7 @@ if name is None:
     name = "keyPairAttachmentName"
 vpc = alicloud.vpc.Network("vpc", cidr_block="10.1.0.0/21")
 vswitch = alicloud.vpc.Switch("vswitch",
-    availability_zone=default.zones[0]["id"],
+    availability_zone=default.zones[0].id,
     cidr_block="10.1.1.0/24",
     vpc_id=vpc.id)
 group = alicloud.ecs.SecurityGroup("group",
@@ -133,10 +248,10 @@ group = alicloud.ecs.SecurityGroup("group",
 instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
-        image_id=images.images[0]["id"],
+        image_id=images.images[0].id,
         instance_charge_type="PostPaid",
         instance_name=f"{name}-{range['value'] + 1}",
-        instance_type=type.instance_types[0]["id"],
+        instance_type=type.instance_types[0].id,
         internet_charge_type="PayByTraffic",
         internet_max_bandwidth_out=5,
         password="Test12345",
@@ -224,7 +339,7 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.KeyPairAttachment">KeyPairAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>key_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.KeyPairAttachment">KeyPairAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -647,7 +762,8 @@ Get an existing KeyPairAttachment resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>key_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyPairAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -655,7 +771,7 @@ Get an existing KeyPairAttachment resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachmentState.html">KeyPairAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachmentState.html">KeyPairAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -934,6 +1050,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

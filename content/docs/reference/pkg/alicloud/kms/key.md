@@ -42,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kms.NewKey(ctx, "key", &kms.KeyArgs{
+			Description:         pulumi.String("Hello KMS"),
+			KeyState:            pulumi.String("Enabled"),
+			PendingWindowInDays: pulumi.Int(7),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +75,7 @@ import pulumi_alicloud as alicloud
 key = alicloud.kms.Key("key",
     description="Hello KMS",
     key_state="Enabled",
-    pending_window_in_days="7")
+    pending_window_in_days=7)
 ```
 
 {{% /example %}}
@@ -85,7 +107,7 @@ const key = new alicloud.kms.Key("key", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/kms/#pulumi_alicloud.kms.Key">Key</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automatic_rotation=None<span class="p">, </span>deletion_window_in_days=None<span class="p">, </span>description=None<span class="p">, </span>is_enabled=None<span class="p">, </span>key_spec=None<span class="p">, </span>key_state=None<span class="p">, </span>key_usage=None<span class="p">, </span>origin=None<span class="p">, </span>pending_window_in_days=None<span class="p">, </span>protection_level=None<span class="p">, </span>rotation_interval=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/kms/#pulumi_alicloud.kms.Key">Key</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_rotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_window_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_usage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pending_window_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -375,7 +397,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -503,7 +525,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -631,7 +653,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -759,7 +781,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -842,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -864,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -875,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
 </dl>
@@ -947,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -969,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -980,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
 </dl>
@@ -1052,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1074,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1085,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
 </dl>
@@ -1157,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1179,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1190,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
 </dl>
@@ -1212,7 +1234,8 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>automatic_rotation=None<span class="p">, </span>creation_date=None<span class="p">, </span>creator=None<span class="p">, </span>delete_date=None<span class="p">, </span>deletion_window_in_days=None<span class="p">, </span>description=None<span class="p">, </span>is_enabled=None<span class="p">, </span>key_spec=None<span class="p">, </span>key_state=None<span class="p">, </span>key_usage=None<span class="p">, </span>last_rotation_date=None<span class="p">, </span>material_expire_time=None<span class="p">, </span>next_rotation_date=None<span class="p">, </span>origin=None<span class="p">, </span>pending_window_in_days=None<span class="p">, </span>primary_key_version=None<span class="p">, </span>protection_level=None<span class="p">, </span>rotation_interval=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_rotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_window_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_usage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_rotation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">material_expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_rotation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pending_window_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">primary_key_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Key</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1220,7 +1243,7 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Kms.Key.html">Key</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Kms.KeyState.html">KeyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Kms.Key.html">Key</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Kms.KeyState.html">KeyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1455,7 +1478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1477,7 +1500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1510,7 +1533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1532,7 +1555,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -1671,7 +1694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1693,7 +1716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1726,7 +1749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1748,7 +1771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -1887,7 +1910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1909,7 +1932,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1942,7 +1965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1964,7 +1987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -2103,7 +2126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC. 
+    <dd>{{% md %}}The date and time the last rotation was performed. The time is displayed in UTC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2125,7 +2148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time the next rotation is scheduled for execution. 
+    <dd>{{% md %}}The time the next rotation is scheduled for execution.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2158,7 +2181,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK. 
+    <dd>{{% md %}}The ID of the current primary key version of the symmetric CMK.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2180,7 +2203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds. 
+    <dd>{{% md %}}The period of automatic key rotation. Unit: seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -2203,6 +2226,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

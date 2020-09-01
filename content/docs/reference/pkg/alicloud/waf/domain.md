@@ -34,10 +34,19 @@ class MyStack : Stack
         {
             ClusterType = "PhysicalCluster",
             Domain = "www.aliyun.com",
-            Http2Ports = 443,
-            HttpPorts = 80,
+            Http2Ports = 
+            {
+                "443",
+            },
+            HttpPorts = 
+            {
+                "80",
+            },
             HttpToUserIp = "Off",
-            HttpsPorts = 443,
+            HttpsPorts = 
+            {
+                "443",
+            },
             HttpsRedirect = "Off",
             InstanceId = "waf-123455",
             IsAccessProduct = "On",
@@ -63,7 +72,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := waf.NewDomain(ctx, "domain", &waf.DomainArgs{
+			ClusterType: pulumi.String("PhysicalCluster"),
+			Domain:      pulumi.String("www.aliyun.com"),
+			Http2Ports: pulumi.StringArray{
+				pulumi.String("443"),
+			},
+			HttpPorts: pulumi.StringArray{
+				pulumi.String("80"),
+			},
+			HttpToUserIp: pulumi.String("Off"),
+			HttpsPorts: pulumi.StringArray{
+				pulumi.String("443"),
+			},
+			HttpsRedirect:   pulumi.String("Off"),
+			InstanceId:      pulumi.String("waf-123455"),
+			IsAccessProduct: pulumi.String("On"),
+			LoadBalancing:   pulumi.String("IpHash"),
+			LogHeaders: waf.DomainLogHeaderArray{
+				&waf.DomainLogHeaderArgs{
+					Key:   pulumi.String("foo"),
+					Value: pulumi.String("http"),
+				},
+			},
+			SourceIps: pulumi.StringArray{
+				pulumi.String("1.1.1.1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,18 +127,18 @@ import pulumi_alicloud as alicloud
 domain = alicloud.waf.Domain("domain",
     cluster_type="PhysicalCluster",
     domain="www.aliyun.com",
-    http2_ports=443,
-    http_ports=80,
+    http2_ports=["443"],
+    http_ports=["80"],
     http_to_user_ip="Off",
-    https_ports=443,
+    https_ports=["443"],
     https_redirect="Off",
     instance_id="waf-123455",
     is_access_product="On",
     load_balancing="IpHash",
-    log_headers=[{
-        "key": "foo",
-        "value": "http",
-    }],
+    log_headers=[alicloud.waf.DomainLogHeaderArgs(
+        key="foo",
+        value="http",
+    )],
     source_ips=["1.1.1.1"])
 ```
 
@@ -100,10 +153,10 @@ import * as alicloud from "@pulumi/alicloud";
 const domain = new alicloud.waf.Domain("domain", {
     clusterType: "PhysicalCluster",
     domain: "www.aliyun.com",
-    http2Ports: "443",
-    httpPorts: "80",
+    http2Ports: ["443"],
+    httpPorts: ["80"],
     httpToUserIp: "Off",
-    httpsPorts: "443",
+    httpsPorts: ["443"],
     httpsRedirect: "Off",
     instanceId: "waf-123455",
     isAccessProduct: "On",
@@ -130,7 +183,7 @@ const domain = new alicloud.waf.Domain("domain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/waf/#pulumi_alicloud.waf.Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_type=None<span class="p">, </span>connection_time=None<span class="p">, </span>domain=None<span class="p">, </span>http2_ports=None<span class="p">, </span>http_ports=None<span class="p">, </span>http_to_user_ip=None<span class="p">, </span>https_ports=None<span class="p">, </span>https_redirect=None<span class="p">, </span>instance_id=None<span class="p">, </span>is_access_product=None<span class="p">, </span>load_balancing=None<span class="p">, </span>log_headers=None<span class="p">, </span>read_time=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>source_ips=None<span class="p">, </span>write_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/waf/#pulumi_alicloud.waf.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -304,17 +357,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span id="domainname_csharp">
-<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The domain that you want to add to WAF.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
@@ -332,7 +374,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -354,7 +396,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,6 +408,28 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="domaindeprecated_csharp">
+<a href="#domaindeprecated_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Deprecated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -387,7 +451,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,7 +463,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -410,7 +474,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,7 +485,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -432,7 +496,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,17 +554,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span id="domain_go">
-<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The domain that you want to add to WAF.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
@@ -518,7 +571,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -540,7 +593,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,6 +605,28 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -573,7 +648,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,7 +660,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -596,7 +671,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -607,7 +682,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,7 +693,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -676,17 +751,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span id="domain_nodejs">
-<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The domain that you want to add to WAF.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span> 
@@ -704,7 +768,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -726,7 +790,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,6 +802,28 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -759,7 +845,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -771,7 +857,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -782,7 +868,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,7 +879,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -804,7 +890,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,17 +948,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-required"
             title="Required">
-        <span id="domain_python">
-<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The domain that you want to add to WAF.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
@@ -890,7 +965,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -912,7 +987,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,6 +999,28 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The domain that you want to add to WAF.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -945,7 +1042,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -957,7 +1054,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,7 +1065,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -979,7 +1076,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,7 +1087,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,7 +1096,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header]</a></span>
+        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -1078,16 +1175,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1115,16 +1202,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1154,16 +1231,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1192,16 +1259,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1221,7 +1278,8 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_type=None<span class="p">, </span>cname=None<span class="p">, </span>connection_time=None<span class="p">, </span>domain=None<span class="p">, </span>http2_ports=None<span class="p">, </span>http_ports=None<span class="p">, </span>http_to_user_ip=None<span class="p">, </span>https_ports=None<span class="p">, </span>https_redirect=None<span class="p">, </span>instance_id=None<span class="p">, </span>is_access_product=None<span class="p">, </span>load_balancing=None<span class="p">, </span>log_headers=None<span class="p">, </span>read_time=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>source_ips=None<span class="p">, </span>status=None<span class="p">, </span>write_time=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http2_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">http_to_user_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">https_ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">https_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_access_product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_headers</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">read_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">write_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1229,7 +1287,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.Domain.html">Domain</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.DomainState.html">DomainState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.Domain.html">Domain</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Waf.DomainState.html">DomainState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1343,7 +1401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1367,6 +1425,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_domaindeprecated_csharp">
+<a href="#state_domaindeprecated_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Deprecated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1398,7 +1467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1410,7 +1479,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1421,7 +1490,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,7 +1501,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1454,7 +1523,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1465,7 +1534,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1516,16 +1585,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_csharp">
-<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_writetime_csharp">
 <a href="#state_writetime_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
 </span> 
@@ -1550,7 +1609,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1575,10 +1634,21 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_domainname_go">
+<a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1605,7 +1675,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1617,7 +1687,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1628,7 +1698,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1639,7 +1709,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1661,7 +1731,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1672,7 +1742,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1723,16 +1793,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_go">
-<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_writetime_go">
 <a href="#state_writetime_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Time</a>
 </span> 
@@ -1757,7 +1817,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1782,10 +1842,21 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_domainname_nodejs">
+<a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1812,7 +1883,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1824,7 +1895,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,7 +1906,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1846,7 +1917,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1868,7 +1939,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1879,7 +1950,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1930,16 +2001,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_nodejs">
-<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_writetime_nodejs">
 <a href="#state_writetime_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Time</a>
 </span> 
@@ -1964,7 +2025,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the WAF cluster. Valid values: "PhysicalCluster" and "VirtualCluster". Default to "PhysicalCluster".
+    <dd>{{% md %}}The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1989,10 +2050,21 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
     <dd>{{% md %}}The connection timeout for WAF exclusive clusters. Unit: seconds.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Field `domain` has been deprecated from version 1.94.0. Use `domain_name` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_name&#39; instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_name_python">
+<a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2019,7 +2091,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTP ports
+    <dd>{{% md %}}List of the HTTP ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2031,7 +2103,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the HTTP back-to-origin feature. After this feature is enabled, the WAF instance can use HTTP to forward HTTPS requests to the origin server. 
-By default, port 80 is used to forward the requests to the origin server. Valid values: "On" and "Off". Default to "Off".
+By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2042,7 +2114,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of the HTTPS ports
+    <dd>{{% md %}}List of the HTTPS ports.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2053,7 +2125,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2075,7 +2147,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
+    <dd>{{% md %}}Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2086,7 +2158,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: "IpHash" and "RoundRobin". Default to "IpHash".
+    <dd>{{% md %}}The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2095,7 +2167,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 <a href="#state_log_headers_python" style="color: inherit; text-decoration: inherit;">log_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header]</a></span>
+        <span class="property-type"><a href="#domainlogheader">List[Domain<wbr>Log<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key-value pair that is used to mark the traffic that flows through WAF to the domain. Each item contains two field:
 * key: The key of label
@@ -2134,16 +2206,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
     </dt>
     <dd>{{% md %}}List of the IP address or domain of the origin server to which the specified domain points.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_status_python">
-<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2308,6 +2370,6 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

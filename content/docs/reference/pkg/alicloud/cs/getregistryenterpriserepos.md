@@ -45,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "my-repos"
+		opt1 := "my-repo-json"
+		myRepos, err := cs.GetRegistryEnterpriseRepos(ctx, &cs.GetRegistryEnterpriseReposArgs{
+			InstanceId: "cri-xx",
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("output", myRepos.Repos)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,7 +118,7 @@ export const output = myRepos.repos;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_registry_enterprise_repos(</span>enable_details=None<span class="p">, </span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>namespace=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_enterprise_repos(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistryEnterpriseReposResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1179,7 +1204,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregistryenterprisereposrepotag">List[Get<wbr>Registry<wbr>Enterprise<wbr>Repos<wbr>Repo<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#getregistryenterprisereposrepotag">List[Get<wbr>Registry<wbr>Enterprise<wbr>Repos<wbr>Repo<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of image tags belong to this repository. Each contains several attributes, see `Block Tag`.
 {{% /md %}}</dd>
@@ -1474,35 +1499,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="imagecreate_python">
-<a href="#imagecreate_python" style="color: inherit; text-decoration: inherit;">image<wbr>Create</a>
+        <span id="image_create_python">
+<a href="#image_create_python" style="color: inherit; text-decoration: inherit;">image_<wbr>create</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Create time of this image, unix time in nanoseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="imagesize_python">
-<a href="#imagesize_python" style="color: inherit; text-decoration: inherit;">image<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Status of this image, in bytes.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="imageupdate_python">
-<a href="#imageupdate_python" style="color: inherit; text-decoration: inherit;">image<wbr>Update</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Last update time of this image, unix time in nanoseconds.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1514,6 +1517,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of this image.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_size_python">
+<a href="#image_size_python" style="color: inherit; text-decoration: inherit;">image_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Status of this image, in bytes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_update_python">
+<a href="#image_update_python" style="color: inherit; text-decoration: inherit;">image_<wbr>update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last update time of this image, unix time in nanoseconds.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1556,6 +1581,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

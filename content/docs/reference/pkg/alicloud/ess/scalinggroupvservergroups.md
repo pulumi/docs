@@ -154,7 +154,7 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    availability_zone=default_zones.zones[0].id,
     cidr_block="172.16.0.0/24",
     vpc_id=default_network.id)
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
@@ -162,27 +162,27 @@ default_server_group = alicloud.slb.ServerGroup("defaultServerGroup", load_balan
 default_listener = []
 for range in [{"value": i} for i in range(0, 2)]:
     default_listener.append(alicloud.slb.Listener(f"defaultListener-{range['value']}",
-        backend_port="22",
-        bandwidth="10",
-        frontend_port="22",
+        backend_port=22,
+        bandwidth=10,
+        frontend_port=22,
         health_check_type="tcp",
         load_balancer_id=[__item.id for __item in [default_load_balancer]][range["value"]],
         protocol="tcp"))
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
-    max_size="2",
-    min_size="2",
+    max_size=2,
+    min_size=2,
     scaling_group_name=name,
     vswitch_ids=[default_switch.id])
 default_scaling_group_v_server_groups = alicloud.ess.ScalingGroupVServerGroups("defaultScalingGroupVServerGroups",
     scaling_group_id=default_scaling_group.id,
-    vserver_groups=[{
-        "loadbalancerId": default_load_balancer.id,
-        "vserverAttributes": [{
-            "port": "100",
-            "vserver_group_id": default_server_group.id,
-            "weight": "60",
-        }],
-    }])
+    vserver_groups=[alicloud.ess.ScalingGroupVServerGroupsVserverGroupArgs(
+        loadbalancer_id=default_load_balancer.id,
+        vserver_attributes=[alicloud.ess.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs(
+            port=100,
+            vserver_group_id=default_server_group.id,
+            weight=60,
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -258,7 +258,7 @@ const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGro
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>vserver_groups=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vserver_groups</span><span class="p">:</span> <span class="nx">Optional[List[ScalingGroupVServerGroupsVserverGroupArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -567,7 +567,7 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 <a href="#vserver_groups_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
@@ -681,7 +681,8 @@ Get an existing ScalingGroupVServerGroups resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>force=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>vserver_groups=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vserver_groups</span><span class="p">:</span> <span class="nx">Optional[List[ScalingGroupVServerGroupsVserverGroupArgs]]</span> = None<span class="p">) -&gt;</span> ScalingGroupVServerGroups</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -689,7 +690,7 @@ Get an existing ScalingGroupVServerGroups resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsState.html">ScalingGroupVServerGroupsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsState.html">ScalingGroupVServerGroupsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -943,7 +944,7 @@ The following state arguments are supported:
 <a href="#state_vserver_groups_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
@@ -1064,8 +1065,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancerid_python">
-<a href="#loadbalancerid_python" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
+        <span id="loadbalancer_id_python">
+<a href="#loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1074,11 +1075,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="vserverattributes_python">
-<a href="#vserverattributes_python" style="color: inherit; text-decoration: inherit;">vserver<wbr>Attributes</a>
+        <span id="vserver_attributes_python">
+<a href="#vserver_attributes_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1266,6 +1267,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -43,10 +43,16 @@ class MyStack : Stack
         var vpc1 = new AliCloud.Vpc.Network("vpc1", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.fra",
         });
         var vpc2 = new AliCloud.Vpc.Network("vpc2", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.sh",
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
@@ -87,6 +93,14 @@ class MyStack : Stack
                 "eu-central-1",
                 "cn-shanghai",
             },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "alicloud_cen_bandwidth_package_attachment.bwp_attach",
+                "alicloud_cen_instance_attachment.vpc_attach_1",
+                "alicloud_cen_instance_attachment.vpc_attach_2",
+            },
         });
     }
 
@@ -96,7 +110,101 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newalicloud(ctx, "fra", &providers.alicloudArgs{
+			Region: pulumi.String("eu-central-1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newalicloud(ctx, "sh", &providers.alicloudArgs{
+			Region: pulumi.String("cn-shanghai"),
+		})
+		if err != nil {
+			return err
+		}
+		vpc1, err := vpc.NewNetwork(ctx, "vpc1", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("192.168.0.0/16"),
+		}, pulumi.Provider("alicloud.fra"))
+		if err != nil {
+			return err
+		}
+		vpc2, err := vpc.NewNetwork(ctx, "vpc2", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		}, pulumi.Provider("alicloud.sh"))
+		if err != nil {
+			return err
+		}
+		cen, err := cen.NewInstance(ctx, "cen", &cen.InstanceArgs{
+			Description: pulumi.String("tf-testAccCenBandwidthLimitConfigDescription"),
+		})
+		if err != nil {
+			return err
+		}
+		bwp, err := cen.NewBandwidthPackage(ctx, "bwp", &cen.BandwidthPackageArgs{
+			Bandwidth: pulumi.Int(5),
+			GeographicRegionIds: pulumi.StringArray{
+				pulumi.String("Europe"),
+				pulumi.String("China"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewBandwidthPackageAttachment(ctx, "bwpAttach", &cen.BandwidthPackageAttachmentArgs{
+			BandwidthPackageId: bwp.ID(),
+			InstanceId:         cen.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "vpcAttach1", &cen.InstanceAttachmentArgs{
+			ChildInstanceId:       vpc1.ID(),
+			ChildInstanceRegionId: pulumi.String("eu-central-1"),
+			InstanceId:            cen.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "vpcAttach2", &cen.InstanceAttachmentArgs{
+			ChildInstanceId:       vpc2.ID(),
+			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
+			InstanceId:            cen.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewBandwidthLimit(ctx, "foo", &cen.BandwidthLimitArgs{
+			BandwidthLimit: pulumi.Int(4),
+			InstanceId:     cen.ID(),
+			RegionIds: pulumi.StringArray{
+				pulumi.String("eu-central-1"),
+				pulumi.String("cn-shanghai"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"alicloud_cen_bandwidth_package_attachment.bwp_attach",
+			"alicloud_cen_instance_attachment.vpc_attach_1",
+			"alicloud_cen_instance_attachment.vpc_attach_2",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,8 +219,10 @@ if name is None:
     name = "tf-testAccCenBandwidthLimitConfig"
 fra = pulumi.providers.Alicloud("fra", region="eu-central-1")
 sh = pulumi.providers.Alicloud("sh", region="cn-shanghai")
-vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16")
-vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12")
+vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16",
+opts=ResourceOptions(provider="alicloud.fra"))
+vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12",
+opts=ResourceOptions(provider="alicloud.sh"))
 cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthLimitConfigDescription")
 bwp = alicloud.cen.BandwidthPackage("bwp",
     bandwidth=5,
@@ -137,7 +247,12 @@ foo = alicloud.cen.BandwidthLimit("foo",
     region_ids=[
         "eu-central-1",
         "cn-shanghai",
-    ])
+    ],
+    opts=ResourceOptions(depends_on=[
+            "alicloud_cen_bandwidth_package_attachment.bwp_attach",
+            "alicloud_cen_instance_attachment.vpc_attach_1",
+            "alicloud_cen_instance_attachment.vpc_attach_2",
+        ]))
 ```
 
 {{% /example %}}
@@ -211,7 +326,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.BandwidthLimit">BandwidthLimit</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth_limit=None<span class="p">, </span>instance_id=None<span class="p">, </span>region_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.BandwidthLimit">BandwidthLimit</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +749,8 @@ Get an existing BandwidthLimit resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth_limit=None<span class="p">, </span>instance_id=None<span class="p">, </span>region_ids=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> BandwidthLimit</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -642,7 +758,7 @@ Get an existing BandwidthLimit resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimit.html">BandwidthLimit</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimitState.html">BandwidthLimitState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimit.html">BandwidthLimit</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimitState.html">BandwidthLimitState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -921,6 +1037,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

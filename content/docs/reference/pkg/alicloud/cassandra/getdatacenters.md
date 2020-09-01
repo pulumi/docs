@@ -42,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cassandra"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "tf_testAccCassandra_dc"
+		_, err := cassandra.GetDataCenters(ctx, &cassandra.GetDataCentersArgs{
+			ClusterId: "cds-xxxxx",
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,7 +106,7 @@ const cassandra = pulumi.output(alicloud.cassandra.getDataCenters({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_data_centers(</span>cluster_id=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_data_centers(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDataCentersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1233,8 +1255,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="commodityinstance_python">
-<a href="#commodityinstance_python" style="color: inherit; text-decoration: inherit;">commodity<wbr>Instance</a>
+        <span id="commodity_instance_python">
+<a href="#commodity_instance_python" style="color: inherit; text-decoration: inherit;">commodity_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1244,8 +1266,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createdtime_python">
-<a href="#createdtime_python" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1320,8 +1342,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lockmode_python">
-<a href="#lockmode_python" style="color: inherit; text-decoration: inherit;">lock<wbr>Mode</a>
+        <span id="lock_mode_python">
+<a href="#lock_mode_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1413,6 +1435,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

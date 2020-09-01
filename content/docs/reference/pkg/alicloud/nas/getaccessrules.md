@@ -14,6 +14,42 @@ This data source provides AccessRule available to the user.
 
 > NOTE: Available in 1.35.0+
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.nas.getAccessRules({
+    accessGroupName: "tf-testAccAccessGroupsdatasource",
+    rwAccess: "RDWR",
+    sourceCidrIp: "168.1.1.0/16",
+    userAccess: "no_squash",
+}, { async: true }));
+
+export const alicloudNasAccessRulesId = foo.rules[0].id;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccessRules {#using}
@@ -27,7 +63,7 @@ This data source provides AccessRule available to the user.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_access_rules(</span>access_group_name=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>rw_access=None<span class="p">, </span>source_cidr_ip=None<span class="p">, </span>user_access=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_rules(</span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rw_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -92,7 +128,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -103,7 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -114,7 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -164,7 +200,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -175,7 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -186,7 +222,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -236,7 +272,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,7 +283,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -258,7 +294,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -308,7 +344,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +355,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +366,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -779,7 +815,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -790,7 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -801,7 +837,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -841,7 +877,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -852,7 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -863,7 +899,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -903,7 +939,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -914,7 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -925,7 +961,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -959,13 +995,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rwaccess_python">
-<a href="#rwaccess_python" style="color: inherit; text-decoration: inherit;">rw<wbr>Access</a>
+        <span id="rw_access_python">
+<a href="#rw_access_python" style="color: inherit; text-decoration: inherit;">rw_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -976,18 +1012,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="useraccess_python">
-<a href="#useraccess_python" style="color: inherit; text-decoration: inherit;">user<wbr>Access</a>
+        <span id="user_access_python">
+<a href="#user_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
 
 </dl>
@@ -1008,6 +1044,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

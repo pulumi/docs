@@ -22,7 +22,7 @@ meta_desc: "Explore the ScalingGroup resource of the ess module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingGroup">ScalingGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>db_instance_ids=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>loadbalancer_ids=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multi_az_policy=None<span class="p">, </span>on_demand_base_capacity=None<span class="p">, </span>on_demand_percentage_above_base_capacity=None<span class="p">, </span>removal_policies=None<span class="p">, </span>scaling_group_name=None<span class="p">, </span>spot_instance_pools=None<span class="p">, </span>spot_instance_remedy=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingGroup">ScalingGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">db_instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">loadbalancer_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multi_az_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_demand_base_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">on_demand_percentage_above_base_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">removal_policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">scaling_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_pools</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">spot_instance_remedy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,7 +297,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -345,7 +345,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -480,7 +480,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -528,7 +528,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -663,7 +663,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -711,7 +711,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -846,7 +846,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -894,7 +894,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1017,7 +1017,8 @@ Get an existing ScalingGroup resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>db_instance_ids=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>loadbalancer_ids=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multi_az_policy=None<span class="p">, </span>on_demand_base_capacity=None<span class="p">, </span>on_demand_percentage_above_base_capacity=None<span class="p">, </span>removal_policies=None<span class="p">, </span>scaling_group_name=None<span class="p">, </span>spot_instance_pools=None<span class="p">, </span>spot_instance_remedy=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">db_instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">loadbalancer_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">multi_az_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_demand_base_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">on_demand_percentage_above_base_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">removal_policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">scaling_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_instance_pools</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">spot_instance_remedy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ScalingGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1025,7 +1026,7 @@ Get an existing ScalingGroup resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroup.html">ScalingGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupState.html">ScalingGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroup.html">ScalingGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupState.html">ScalingGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1234,7 +1235,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1282,7 +1283,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1417,7 +1418,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1465,7 +1466,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1600,7 +1601,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1648,7 +1649,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1783,7 +1784,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.  
+    <dd>{{% md %}}Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1831,7 +1832,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.            
+    <dd>{{% md %}}Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1876,6 +1877,6 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

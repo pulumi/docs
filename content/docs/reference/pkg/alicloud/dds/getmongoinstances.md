@@ -24,7 +24,7 @@ meta_desc: "Explore the GetMongoInstances function of the dds module, including 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_mongo_instances(</span>availability_zone=None<span class="p">, </span>ids=None<span class="p">, </span>instance_class=None<span class="p">, </span>instance_type=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mongo_instances(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMongoInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -346,7 +346,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1469,8 +1469,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="expirationtime_python">
-<a href="#expirationtime_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1509,8 +1509,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lockmode_python">
-<a href="#lockmode_python" style="color: inherit; text-decoration: inherit;">lock<wbr>Mode</a>
+        <span id="lock_mode_python">
+<a href="#lock_mode_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1523,7 +1523,7 @@ The following output properties are available:
 <a href="#mongos_python" style="color: inherit; text-decoration: inherit;">mongos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmongoinstancesinstancemongo">List[Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Mongo]</a></span>
+        <span class="property-type"><a href="#getmongoinstancesinstancemongo">List[Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Mongo<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1549,8 +1549,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1573,7 +1573,7 @@ The following output properties are available:
 <a href="#shards_python" style="color: inherit; text-decoration: inherit;">shards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmongoinstancesinstanceshard">List[Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Shard]</a></span>
+        <span class="property-type"><a href="#getmongoinstancesinstanceshard">List[Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Shard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1603,7 +1603,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1745,8 +1745,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="class_python">
-<a href="#class_python" style="color: inherit; text-decoration: inherit;">class</a>
+        <span id="class__python">
+<a href="#class__python" style="color: inherit; text-decoration: inherit;">class_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1765,8 +1765,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1941,8 +1941,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="class_python">
-<a href="#class_python" style="color: inherit; text-decoration: inherit;">class</a>
+        <span id="class__python">
+<a href="#class__python" style="color: inherit; text-decoration: inherit;">class_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1961,8 +1961,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1997,6 +1997,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

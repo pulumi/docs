@@ -27,6 +27,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="cr/" title="cr"><span class="symbol module"></span>cr</a></li>
     <li><a href="cs/" title="cs"><span class="symbol module"></span>cs</a></li>
     <li><a href="datahub/" title="datahub"><span class="symbol module"></span>datahub</a></li>
+    <li><a href="dcdn/" title="dcdn"><span class="symbol module"></span>dcdn</a></li>
     <li><a href="ddos/" title="ddos"><span class="symbol module"></span>ddos</a></li>
     <li><a href="dds/" title="dds"><span class="symbol module"></span>dds</a></li>
     <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
@@ -48,6 +49,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="maxcompute/" title="maxcompute"><span class="symbol module"></span>maxcompute</a></li>
     <li><a href="mns/" title="mns"><span class="symbol module"></span>mns</a></li>
     <li><a href="mongodb/" title="mongodb"><span class="symbol module"></span>mongodb</a></li>
+    <li><a href="mse/" title="mse"><span class="symbol module"></span>mse</a></li>
     <li><a href="nas/" title="nas"><span class="symbol module"></span>nas</a></li>
     <li><a href="oos/" title="oos"><span class="symbol module"></span>oos</a></li>
     <li><a href="oss/" title="oss"><span class="symbol module"></span>oss</a></li>
@@ -87,9 +89,9 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
+	<dd>2.15.0</dd>
 </dl>
 
 

@@ -47,7 +47,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "scaling_rule_name"
+		opt1 := "scaling_group_id"
+		scalingrulesDs, err := ess.GetScalingRules(ctx, &ess.GetScalingRulesArgs{
+			Ids: []string{
+				"scaling_rule_id1",
+				"scaling_rule_id2",
+			},
+			NameRegex:      &opt0,
+			ScalingGroupId: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstScalingRule", scalingrulesDs.Rules[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,7 +89,7 @@ scalingrules_ds = alicloud.ess.get_scaling_rules(ids=[
     ],
     name_regex="scaling_rule_name",
     scaling_group_id="scaling_group_id")
-pulumi.export("firstScalingRule", scalingrules_ds.rules[0]["id"])
+pulumi.export("firstScalingRule", scalingrules_ds.rules[0].id)
 ```
 
 {{% /example %}}
@@ -100,7 +128,7 @@ export const firstScalingRule = scalingrulesDs.rules[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_scaling_rules(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_scaling_rules(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetScalingRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1142,8 +1170,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minadjustmentmagnitude_python">
-<a href="#minadjustmentmagnitude_python" style="color: inherit; text-decoration: inherit;">min<wbr>Adjustment<wbr>Magnitude</a>
+        <span id="min_adjustment_magnitude_python">
+<a href="#min_adjustment_magnitude_python" style="color: inherit; text-decoration: inherit;">min_<wbr>adjustment_<wbr>magnitude</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1164,17 +1192,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="scalingruleari_python">
-<a href="#scalingruleari_python" style="color: inherit; text-decoration: inherit;">scaling<wbr>Rule<wbr>Ari</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Ari of scaling rule.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="scaling_group_id_python">
 <a href="#scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
 </span> 
@@ -1182,6 +1199,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Scaling group id the scaling rules belong to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scaling_rule_ari_python">
+<a href="#scaling_rule_ari_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>rule_<wbr>ari</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Ari of scaling rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1213,6 +1241,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

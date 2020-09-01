@@ -46,10 +46,16 @@ class MyStack : Stack
         var vpc00 = new AliCloud.Vpc.Network("vpc00", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.vpc00_region",
         });
         var vpc01 = new AliCloud.Vpc.Network("vpc01", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+        }, new CustomResourceOptions
+        {
+            Provider = "alicloud.vpc01_region",
         });
         var default00 = new AliCloud.Cen.InstanceAttachment("default00", new AliCloud.Cen.InstanceAttachmentArgs
         {
@@ -131,6 +137,13 @@ class MyStack : Stack
                 vpc00.RouteTableId,
             },
             TransmitDirection = "RegionIn",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "alicloud_cen_instance_attachment.default00",
+                "alicloud_cen_instance_attachment.default01",
+            },
         });
     }
 
@@ -140,7 +153,128 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultInstance, err := cen.NewInstance(ctx, "defaultInstance", nil)
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newalicloud(ctx, "vpc00Region", &providers.alicloudArgs{
+			Region: pulumi.String("cn-hangzhou"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newalicloud(ctx, "vpc01Region", &providers.alicloudArgs{
+			Region: pulumi.String("cn-shanghai"),
+		})
+		if err != nil {
+			return err
+		}
+		vpc00, err := vpc.NewNetwork(ctx, "vpc00", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		}, pulumi.Provider("alicloud.vpc00_region"))
+		if err != nil {
+			return err
+		}
+		vpc01, err := vpc.NewNetwork(ctx, "vpc01", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		}, pulumi.Provider("alicloud.vpc01_region"))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "default00", &cen.InstanceAttachmentArgs{
+			ChildInstanceId:       vpc00.ID(),
+			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
+			InstanceId:            defaultInstance.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "default01", &cen.InstanceAttachmentArgs{
+			ChildInstanceId:       vpc01.ID(),
+			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
+			InstanceId:            defaultInstance.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewRouteMap(ctx, "defaultRouteMap", &cen.RouteMapArgs{
+			AsPathMatchMode:      pulumi.String("Include"),
+			CenId:                pulumi.Any(alicloud_cen_instance.Cen.Id),
+			CenRegionId:          pulumi.String("cn-hangzhou"),
+			CidrMatchMode:        pulumi.String("Include"),
+			CommunityMatchMode:   pulumi.String("Include"),
+			CommunityOperateMode: pulumi.String("Additive"),
+			Description:          pulumi.String("test-desc"),
+			DestinationChildInstanceTypes: pulumi.StringArray{
+				pulumi.String("VPC"),
+			},
+			DestinationCidrBlocks: pulumi.StringArray{
+				vpc01.CidrBlock,
+			},
+			DestinationInstanceIds: pulumi.StringArray{
+				vpc01.ID(),
+			},
+			DestinationInstanceIdsReverseMatch: pulumi.Bool(false),
+			DestinationRouteTableIds: pulumi.StringArray{
+				vpc01.RouteTableId,
+			},
+			MapResult: pulumi.String("Permit"),
+			MatchAsns: pulumi.StringArray{
+				pulumi.String("65501"),
+			},
+			MatchCommunitySets: pulumi.StringArray{
+				pulumi.String("65501:1"),
+			},
+			NextPriority: pulumi.Int(1),
+			OperateCommunitySets: pulumi.StringArray{
+				pulumi.String("65501:1"),
+			},
+			Preference: pulumi.Int(20),
+			PrependAsPaths: pulumi.StringArray{
+				pulumi.String("65501"),
+			},
+			Priority: pulumi.Int(1),
+			RouteTypes: pulumi.StringArray{
+				pulumi.String("System"),
+			},
+			SourceChildInstanceTypes: pulumi.StringArray{
+				pulumi.String("VPC"),
+			},
+			SourceInstanceIds: pulumi.StringArray{
+				vpc00.ID(),
+			},
+			SourceInstanceIdsReverseMatch: pulumi.Bool(false),
+			SourceRegionIds: pulumi.StringArray{
+				pulumi.String("cn-hangzhou"),
+			},
+			SourceRouteTableIds: pulumi.StringArray{
+				vpc00.RouteTableId,
+			},
+			TransmitDirection: pulumi.String("RegionIn"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"alicloud_cen_instance_attachment.default00",
+			"alicloud_cen_instance_attachment.default01",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -152,8 +286,10 @@ import pulumi_pulumi as pulumi
 default_instance = alicloud.cen.Instance("defaultInstance")
 vpc00_region = pulumi.providers.Alicloud("vpc00Region", region="cn-hangzhou")
 vpc01_region = pulumi.providers.Alicloud("vpc01Region", region="cn-shanghai")
-vpc00 = alicloud.vpc.Network("vpc00", cidr_block="172.16.0.0/12")
-vpc01 = alicloud.vpc.Network("vpc01", cidr_block="172.16.0.0/12")
+vpc00 = alicloud.vpc.Network("vpc00", cidr_block="172.16.0.0/12",
+opts=ResourceOptions(provider="alicloud.vpc00_region"))
+vpc01 = alicloud.vpc.Network("vpc01", cidr_block="172.16.0.0/12",
+opts=ResourceOptions(provider="alicloud.vpc01_region"))
 default00 = alicloud.cen.InstanceAttachment("default00",
     child_instance_id=vpc00.id,
     child_instance_region_id="cn-hangzhou",
@@ -173,23 +309,27 @@ default_route_map = alicloud.cen.RouteMap("defaultRouteMap",
     destination_child_instance_types=["VPC"],
     destination_cidr_blocks=[vpc01.cidr_block],
     destination_instance_ids=[vpc01.id],
-    destination_instance_ids_reverse_match="false",
+    destination_instance_ids_reverse_match=False,
     destination_route_table_ids=[vpc01.route_table_id],
     map_result="Permit",
     match_asns=["65501"],
     match_community_sets=["65501:1"],
-    next_priority="1",
+    next_priority=1,
     operate_community_sets=["65501:1"],
-    preference="20",
+    preference=20,
     prepend_as_paths=["65501"],
-    priority="1",
+    priority=1,
     route_types=["System"],
     source_child_instance_types=["VPC"],
     source_instance_ids=[vpc00.id],
-    source_instance_ids_reverse_match="false",
+    source_instance_ids_reverse_match=False,
     source_region_ids=["cn-hangzhou"],
     source_route_table_ids=[vpc00.route_table_id],
-    transmit_direction="RegionIn")
+    transmit_direction="RegionIn",
+    opts=ResourceOptions(depends_on=[
+            "alicloud_cen_instance_attachment.default00",
+            "alicloud_cen_instance_attachment.default01",
+        ]))
 ```
 
 {{% /example %}}
@@ -268,7 +408,7 @@ const defaultRouteMap = new alicloud.cen.RouteMap("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteMap">RouteMap</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>as_path_match_mode=None<span class="p">, </span>cen_id=None<span class="p">, </span>cen_region_id=None<span class="p">, </span>cidr_match_mode=None<span class="p">, </span>community_match_mode=None<span class="p">, </span>community_operate_mode=None<span class="p">, </span>description=None<span class="p">, </span>destination_child_instance_types=None<span class="p">, </span>destination_cidr_blocks=None<span class="p">, </span>destination_instance_ids=None<span class="p">, </span>destination_instance_ids_reverse_match=None<span class="p">, </span>destination_route_table_ids=None<span class="p">, </span>map_result=None<span class="p">, </span>match_asns=None<span class="p">, </span>match_community_sets=None<span class="p">, </span>next_priority=None<span class="p">, </span>operate_community_sets=None<span class="p">, </span>preference=None<span class="p">, </span>prepend_as_paths=None<span class="p">, </span>priority=None<span class="p">, </span>route_types=None<span class="p">, </span>source_child_instance_types=None<span class="p">, </span>source_instance_ids=None<span class="p">, </span>source_instance_ids_reverse_match=None<span class="p">, </span>source_region_ids=None<span class="p">, </span>source_route_table_ids=None<span class="p">, </span>transmit_direction=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteMap">RouteMap</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_path_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_operate_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">destination_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">map_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_asns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">match_community_sets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">next_priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">operate_community_sets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">preference</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">prepend_as_paths</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">route_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_region_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -569,7 +709,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -602,7 +742,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -613,7 +753,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -624,7 +764,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -646,7 +786,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -657,7 +797,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -701,7 +841,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,7 +874,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
 </dl>
@@ -873,7 +1013,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -906,7 +1046,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,7 +1057,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,7 +1068,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -950,7 +1090,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,7 +1101,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1005,7 +1145,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1038,7 +1178,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1177,7 +1317,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,7 +1350,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1221,7 +1361,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1232,7 +1372,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1254,7 +1394,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1265,7 +1405,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1309,7 +1449,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1342,7 +1482,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1481,7 +1621,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1514,7 +1654,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,7 +1665,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,7 +1676,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1558,7 +1698,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1569,7 +1709,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1613,7 +1753,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1646,7 +1786,7 @@ The RouteMap resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
 </dl>
@@ -1831,7 +1971,8 @@ Get an existing RouteMap resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>as_path_match_mode=None<span class="p">, </span>cen_id=None<span class="p">, </span>cen_region_id=None<span class="p">, </span>cidr_match_mode=None<span class="p">, </span>community_match_mode=None<span class="p">, </span>community_operate_mode=None<span class="p">, </span>description=None<span class="p">, </span>destination_child_instance_types=None<span class="p">, </span>destination_cidr_blocks=None<span class="p">, </span>destination_instance_ids=None<span class="p">, </span>destination_instance_ids_reverse_match=None<span class="p">, </span>destination_route_table_ids=None<span class="p">, </span>map_result=None<span class="p">, </span>match_asns=None<span class="p">, </span>match_community_sets=None<span class="p">, </span>next_priority=None<span class="p">, </span>operate_community_sets=None<span class="p">, </span>preference=None<span class="p">, </span>prepend_as_paths=None<span class="p">, </span>priority=None<span class="p">, </span>route_map_id=None<span class="p">, </span>route_types=None<span class="p">, </span>source_child_instance_types=None<span class="p">, </span>source_instance_ids=None<span class="p">, </span>source_instance_ids_reverse_match=None<span class="p">, </span>source_region_ids=None<span class="p">, </span>source_route_table_ids=None<span class="p">, </span>status=None<span class="p">, </span>transmit_direction=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_path_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_match_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">community_operate_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">destination_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">destination_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">map_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">match_asns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">match_community_sets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">next_priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">operate_community_sets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">preference</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">prepend_as_paths</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">route_map_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_child_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_instance_ids_reverse_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_region_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_route_table_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouteMap</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1839,7 +1980,7 @@ Get an existing RouteMap resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteMap.html">RouteMap</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteMapState.html">RouteMapState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteMap.html">RouteMap</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteMapState.html">RouteMapState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2041,7 +2182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2074,7 +2215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2096,7 +2237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2107,7 +2248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2129,7 +2270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2140,7 +2281,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2205,7 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2238,7 +2379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2366,7 +2507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2399,7 +2540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2421,7 +2562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2432,7 +2573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2454,7 +2595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2465,7 +2606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2530,7 +2671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2563,7 +2704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2691,7 +2832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2724,7 +2865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2746,7 +2887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2757,7 +2898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2779,7 +2920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2790,7 +2931,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2855,7 +2996,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2888,7 +3029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3016,7 +3157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks. 
+    <dd>{{% md %}}A match statement that indicates the prefix list. The prefix is in the CIDR format. You can enter a maximum of 32 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3049,7 +3190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3071,7 +3212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission. 
+    <dd>{{% md %}}A match statement that indicates the AS path list. The AS path is a well-known mandatory attribute, which describes the numbers of the ASs that a BGP route passes through during transmission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3082,7 +3223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}A match statement that indicates the community set. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3104,7 +3245,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported. 
+    <dd>{{% md %}}An action statement that operates the community attribute. The format of each community is nn:nn, which ranges from 1 to 65535. You can enter a maximum of 32 communities. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3115,7 +3256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference. 
+    <dd>{{% md %}}An action statement that modifies the priority of the route. Value range: 1 to 100. The default priority of a route is 50. A lower value indicates a higher preference.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3180,7 +3321,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3213,7 +3354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs. 
+    <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables. You can enter a maximum of 32 route table IDs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3258,6 +3399,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

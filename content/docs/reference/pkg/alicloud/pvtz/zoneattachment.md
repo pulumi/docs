@@ -22,7 +22,7 @@ meta_desc: "Explore the ZoneAttachment resource of the pvtz module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz/#pulumi_alicloud.pvtz.ZoneAttachment">ZoneAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lang=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>vpc_ids=None<span class="p">, </span>vpcs=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/pvtz/#pulumi_alicloud.pvtz.ZoneAttachment">ZoneAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">lang</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpcs</span><span class="p">:</span> <span class="nx">Optional[List[ZoneAttachmentVpcArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +235,7 @@ The ZoneAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,7 +297,7 @@ The ZoneAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,7 +359,7 @@ The ZoneAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,7 +421,7 @@ The ZoneAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -430,7 +430,7 @@ The ZoneAttachment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vpcs_python" style="color: inherit; text-decoration: inherit;">vpcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc]</a></span>
+        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The List of the VPC:
 {{% /md %}}</dd>
@@ -533,7 +533,8 @@ Get an existing ZoneAttachment resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>lang=None<span class="p">, </span>user_client_ip=None<span class="p">, </span>vpc_ids=None<span class="p">, </span>vpcs=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">lang</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpcs</span><span class="p">:</span> <span class="nx">Optional[List[ZoneAttachmentVpcArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ZoneAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -541,7 +542,7 @@ Get an existing ZoneAttachment resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Pvtz.ZoneAttachment.html">ZoneAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Pvtz.ZoneAttachmentState.html">ZoneAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Pvtz.ZoneAttachment.html">ZoneAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Pvtz.ZoneAttachmentState.html">ZoneAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -677,7 +678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -739,7 +740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -801,7 +802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,7 +864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -872,7 +873,7 @@ The following state arguments are supported:
 <a href="#state_vpcs_python" style="color: inherit; text-decoration: inherit;">vpcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc]</a></span>
+        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The List of the VPC:
 {{% /md %}}</dd>
@@ -1021,8 +1022,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1048,6 +1049,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

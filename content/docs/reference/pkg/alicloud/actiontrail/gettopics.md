@@ -45,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/actiontrail"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "alikafkaTopicName"
+		opt1 := "topics.txt"
+		topicsDs, err := actiontrail.GetTopics(ctx, &actiontrail.GetTopicsArgs{
+			InstanceId: "xxx",
+			NameRegex:  &opt0,
+			OutputFile: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstTopicName", topicsDs.Topics[0].Topic)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,7 +81,7 @@ import pulumi_alicloud as alicloud
 topics_ds = alicloud.actiontrail.get_topics(instance_id="xxx",
     name_regex="alikafkaTopicName",
     output_file="topics.txt")
-pulumi.export("firstTopicName", topics_ds.topics[0]["topic"])
+pulumi.export("firstTopicName", topics_ds.topics[0].topic)
 ```
 
 {{% /example %}}
@@ -92,7 +117,7 @@ export const firstTopicName = topicsDs.topics[0].topic;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_topics(</span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_topics(</span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTopicsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -135,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -173,7 +198,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -211,7 +236,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -249,7 +274,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the topic name. 
+    <dd>{{% md %}}A regex string to filter results by the topic name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -649,7 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause. 
+    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -733,7 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause. 
+    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -817,7 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause. 
+    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -901,7 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause. 
+    <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -933,6 +958,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

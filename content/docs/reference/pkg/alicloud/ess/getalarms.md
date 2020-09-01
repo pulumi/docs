@@ -27,7 +27,7 @@ This data source provides available alarm resources.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_alarms(</span>ids=None<span class="p">, </span>metric_type=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_alarms(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metric_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAlarmsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -361,7 +361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type for the alarm's associated metric. 
+    <dd>{{% md %}}The type for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -454,7 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type for the alarm's associated metric. 
+    <dd>{{% md %}}The type for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -547,7 +547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type for the alarm's associated metric. 
+    <dd>{{% md %}}The type for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -640,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type for the alarm's associated metric. 
+    <dd>{{% md %}}The type for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -735,7 +735,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. 
+    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -757,7 +757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The dimension map for the alarm's associated metric. 
+    <dd>{{% md %}}The dimension map for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -779,7 +779,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state. 
+    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -856,7 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of alarm task. 
+    <dd>{{% md %}}The state of alarm task.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -867,7 +867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The statistic to apply to the alarm's associated metric. 
+    <dd>{{% md %}}The statistic to apply to the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -918,7 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. 
+    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -940,7 +940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The dimension map for the alarm's associated metric. 
+    <dd>{{% md %}}The dimension map for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -962,7 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state. 
+    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1039,7 +1039,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of alarm task. 
+    <dd>{{% md %}}The state of alarm task.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1050,7 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The statistic to apply to the alarm's associated metric. 
+    <dd>{{% md %}}The statistic to apply to the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1101,7 +1101,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. 
+    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1123,7 +1123,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The dimension map for the alarm's associated metric. 
+    <dd>{{% md %}}The dimension map for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1145,7 +1145,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state. 
+    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1222,7 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of alarm task. 
+    <dd>{{% md %}}The state of alarm task.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1233,7 +1233,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The statistic to apply to the alarm's associated metric. 
+    <dd>{{% md %}}The statistic to apply to the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1284,7 +1284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. 
+    <dd>{{% md %}}The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1304,9 +1304,9 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The dimension map for the alarm's associated metric. 
+    <dd>{{% md %}}The dimension map for the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1328,7 +1328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state. 
+    <dd>{{% md %}}The number of times that needs to satisfies comparison condition before transition into ALARM state.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1405,7 +1405,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The state of alarm task. 
+    <dd>{{% md %}}The state of alarm task.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1416,7 +1416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The statistic to apply to the alarm's associated metric. 
+    <dd>{{% md %}}The statistic to apply to the alarm's associated metric.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1448,6 +1448,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 
