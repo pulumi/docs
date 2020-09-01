@@ -205,7 +205,7 @@ const certificateValidationDomain = new aws.route53.Record(`${config.targetDomai
 });
 ```
 
-The `getDomainAndSubdomain` method for separates the parent domain and child domain. 
+The `getDomainAndSubdomain` method for separates the parent domain and child domain.
 
 We validate the certificate by setting the CertificateValidation resource and set the certificateArn.
 
