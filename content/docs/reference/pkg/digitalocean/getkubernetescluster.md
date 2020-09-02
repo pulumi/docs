@@ -25,7 +25,7 @@ Retrieves information about a DigitalOcean Kubernetes cluster for use in other r
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kubernetes_cluster(</span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -71,7 +71,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -100,7 +100,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -129,7 +129,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -158,7 +158,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -183,6 +183,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="autoupgrade_csharp">
+<a href="#autoupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
+* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="clustersubnet_csharp">
 <a href="#clustersubnet_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Subnet</a>
 </span> 
@@ -200,7 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -254,7 +266,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The auto-generated name for the node.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -265,22 +278,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternodepool">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
-- `id` -  The unique ID that can be used to identify and reference the node pool.
-- `name` - The name of the node pool.
-- `size` - The slug identifier for the type of Droplet used as workers in the node pool.
-- `node_count` - The number of Droplet instances in the node pool.
-- `actual_node_count` - The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-- `auto_scale` - A boolean indicating whether auto-scaling is enabled on the node pool.
-- `min_nodes` - If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-- `max_nodes` - If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-- `tags` - A list of tag names applied to the node pool.
-- `labels` - A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-- `nodes` - A list of nodes in the pool. Each node exports the following attributes:
-+ `id` -  A unique ID that can be used to identify and reference the node.
-+ `name` - The auto-generated name for the node.
-+ `status` -  A string indicating the current status of the individual node.
-+ `created_at` - The date and time when the node was created.
-+ `updated_at` - The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -313,8 +310,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surgeupgrade_csharp">
+<a href="#surgeupgrade_csharp" style="color: inherit; text-decoration: inherit;">Surge<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -324,15 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -365,7 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -374,6 +373,18 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="autoupgrade_go">
+<a href="#autoupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
+* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -394,7 +405,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -448,7 +459,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The auto-generated name for the node.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -459,22 +471,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternodepool">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
-- `id` -  The unique ID that can be used to identify and reference the node pool.
-- `name` - The name of the node pool.
-- `size` - The slug identifier for the type of Droplet used as workers in the node pool.
-- `node_count` - The number of Droplet instances in the node pool.
-- `actual_node_count` - The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-- `auto_scale` - A boolean indicating whether auto-scaling is enabled on the node pool.
-- `min_nodes` - If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-- `max_nodes` - If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-- `tags` - A list of tag names applied to the node pool.
-- `labels` - A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-- `nodes` - A list of nodes in the pool. Each node exports the following attributes:
-+ `id` -  A unique ID that can be used to identify and reference the node.
-+ `name` - The auto-generated name for the node.
-+ `status` -  A string indicating the current status of the individual node.
-+ `created_at` - The date and time when the node was created.
-+ `updated_at` - The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -507,8 +503,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surgeupgrade_go">
+<a href="#surgeupgrade_go" style="color: inherit; text-decoration: inherit;">Surge<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -518,15 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -559,7 +557,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -568,6 +566,18 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="autoupgrade_nodejs">
+<a href="#autoupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
+* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -588,7 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -642,7 +652,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The auto-generated name for the node.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -653,22 +664,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternodepool">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
-- `id` -  The unique ID that can be used to identify and reference the node pool.
-- `name` - The name of the node pool.
-- `size` - The slug identifier for the type of Droplet used as workers in the node pool.
-- `node_count` - The number of Droplet instances in the node pool.
-- `actual_node_count` - The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-- `auto_scale` - A boolean indicating whether auto-scaling is enabled on the node pool.
-- `min_nodes` - If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-- `max_nodes` - If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-- `tags` - A list of tag names applied to the node pool.
-- `labels` - A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-- `nodes` - A list of nodes in the pool. Each node exports the following attributes:
-+ `id` -  A unique ID that can be used to identify and reference the node.
-+ `name` - The auto-generated name for the node.
-+ `status` -  A string indicating the current status of the individual node.
-+ `created_at` - The date and time when the node was created.
-+ `updated_at` - The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -701,8 +696,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surgeupgrade_nodejs">
+<a href="#surgeupgrade_nodejs" style="color: inherit; text-decoration: inherit;">surge<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -712,15 +717,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -753,7 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -762,6 +759,18 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="auto_upgrade_python">
+<a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
+* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -782,7 +791,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -836,7 +845,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The auto-generated name for the node.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -847,22 +857,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternodepool">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool]</a></span>
     </dt>
     <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
-- `id` -  The unique ID that can be used to identify and reference the node pool.
-- `name` - The name of the node pool.
-- `size` - The slug identifier for the type of Droplet used as workers in the node pool.
-- `node_count` - The number of Droplet instances in the node pool.
-- `actual_node_count` - The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-- `auto_scale` - A boolean indicating whether auto-scaling is enabled on the node pool.
-- `min_nodes` - If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-- `max_nodes` - If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-- `tags` - A list of tag names applied to the node pool.
-- `labels` - A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-- `nodes` - A list of nodes in the pool. Each node exports the following attributes:
-+ `id` -  A unique ID that can be used to identify and reference the node.
-+ `name` - The auto-generated name for the node.
-+ `status` -  A string indicating the current status of the individual node.
-+ `created_at` - The date and time when the node was created.
-+ `updated_at` - The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -895,8 +889,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surge_upgrade_python">
+<a href="#surge_upgrade_python" style="color: inherit; text-decoration: inherit;">surge_<wbr>upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -906,15 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -947,7 +943,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -989,7 +985,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -999,7 +996,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1009,7 +1007,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate for the cluster's certificate authority.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1019,7 +1018,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The date and time when the credentials will expire and need to be regenerated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1029,7 +1029,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the API server on the Kubernetes master node.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1039,7 +1040,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the Kubernetes cluster's kubeconfig file.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1049,7 +1051,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean API access token used by clients to access the cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1066,7 +1069,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1076,7 +1080,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1086,7 +1091,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate for the cluster's certificate authority.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1096,7 +1102,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The date and time when the credentials will expire and need to be regenerated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1106,7 +1113,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the API server on the Kubernetes master node.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1116,7 +1124,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the Kubernetes cluster's kubeconfig file.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1126,7 +1135,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean API access token used by clients to access the cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1143,7 +1153,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1153,7 +1164,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1163,7 +1175,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate for the cluster's certificate authority.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1173,7 +1186,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The date and time when the credentials will expire and need to be regenerated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1183,7 +1197,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the API server on the Kubernetes master node.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1193,7 +1208,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the Kubernetes cluster's kubeconfig file.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1203,7 +1219,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean API access token used by clients to access the cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1214,43 +1231,47 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="clustercacertificate_python">
-<a href="#clustercacertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
+        <span id="cluster_ca_certificate_python">
+<a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The base64 encoded public certificate for the cluster's certificate authority.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="expiresat_python">
-<a href="#expiresat_python" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
+        <span id="expires_at_python">
+<a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The date and time when the credentials will expire and need to be regenerated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1260,17 +1281,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the API server on the Kubernetes master node.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="rawconfig_python">
-<a href="#rawconfig_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Config</a>
+        <span id="raw_config_python">
+<a href="#raw_config_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the Kubernetes cluster's kubeconfig file.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1280,7 +1303,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean API access token used by clients to access the cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1315,7 +1339,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1325,7 +1350,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean indicating whether auto-scaling is enabled on the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1335,7 +1361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1346,7 +1372,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1356,7 +1383,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1366,7 +1394,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1387,7 +1416,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of Droplet instances in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1397,7 +1427,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusternodepoolnode">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1407,7 +1438,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug identifier for the type of Droplet used as workers in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1417,7 +1449,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1435,7 +1467,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1445,7 +1478,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean indicating whether auto-scaling is enabled on the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1455,7 +1489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1466,7 +1500,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1476,7 +1511,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1486,7 +1522,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1507,7 +1544,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of Droplet instances in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1517,7 +1555,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusternodepoolnode">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1527,7 +1566,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug identifier for the type of Droplet used as workers in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1537,7 +1577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1555,7 +1595,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1565,7 +1606,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean indicating whether auto-scaling is enabled on the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1575,7 +1617,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1586,7 +1628,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1596,7 +1639,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1606,7 +1650,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1627,7 +1672,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of Droplet instances in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1637,7 +1683,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusternodepoolnode">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1647,7 +1694,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug identifier for the type of Droplet used as workers in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1657,7 +1705,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1675,7 +1723,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1685,7 +1734,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean indicating whether auto-scaling is enabled on the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1695,7 +1745,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1704,9 +1754,10 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1716,7 +1767,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1726,7 +1778,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1747,7 +1800,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of Droplet instances in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1755,9 +1809,10 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusternodepoolnode">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusternodepoolnode">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1767,7 +1822,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug identifier for the type of Droplet used as workers in the node pool.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1777,7 +1833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+    <dd>{{% md %}}A list of tag names applied to the node pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1813,7 +1869,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1834,7 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1856,7 +1912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1867,15 +1923,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
 </dl>
@@ -1893,7 +1941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1914,7 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1936,7 +1984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1947,15 +1995,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
 </dl>
@@ -1973,7 +2013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1994,7 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2016,7 +2056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2027,15 +2067,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
 </dl>
@@ -2053,7 +2085,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was created.
+    <dd>{{% md %}}The date and time when the node was created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2074,7 +2106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID that can be used to identify and reference a Kubernetes cluster.
+    <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2096,7 +2128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
+    <dd>{{% md %}}A string indicating the current status of the individual node.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2107,15 +2139,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The date and time when the Kubernetes cluster was last updated.
-* `kube_config.0` - A representation of the Kubernetes cluster's kubeconfig with the following attributes:
-- `raw_config` - The full contents of the Kubernetes cluster's kubeconfig file.
-- `host` - The URL of the API server on the Kubernetes master node.
-- `cluster_ca_certificate` - The base64 encoded public certificate for the cluster's certificate authority.
-- `token` - The DigitalOcean API access token used by clients to access the cluster.
-- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
-- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
+    <dd>{{% md %}}The date and time when the node was last updated.
 {{% /md %}}</dd>
 
 </dl>
@@ -2136,6 +2160,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

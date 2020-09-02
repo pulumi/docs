@@ -41,7 +41,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := digitalocean.LookupDatabaseCluster(ctx, &digitalocean.LookupDatabaseClusterArgs{
+			Name: "example-cluster",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("databaseOutput", example.Uri)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,7 +104,7 @@ export const databaseOutput = example.then(example => example.uri);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_database_cluster(</span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1242,6 +1263,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

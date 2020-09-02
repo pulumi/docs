@@ -24,7 +24,7 @@ modify, and delete Load Balancers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.LoadBalancer">LoadBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">droplet_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backend_keepalive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerForwardingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_http_to_https</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_sessions</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerStickySessionsArgs]</span> = None<span class="p">, </span><span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +646,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#forwarding_rules_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerforwardingrule">List[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#loadbalancerforwardingrule">List[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
@@ -682,7 +682,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ the backend service. Default value is `false`.
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -764,7 +764,7 @@ Default value is `false`.
 <a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstickysessions">Dict[Load<wbr>Balancer<wbr>Sticky<wbr>Sessions]</a></span>
+        <span class="property-type"><a href="#loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
@@ -1003,7 +1003,8 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>load_balancer_urn=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">droplet_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backend_keepalive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerForwardingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_http_to_https</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_sessions</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerStickySessionsArgs]</span> = None<span class="p">, </span><span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1011,7 +1012,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1673,7 +1674,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}</dd>
@@ -1719,7 +1720,7 @@ the backend service. Default value is `false`.
 <a href="#state_forwarding_rules_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerforwardingrule">List[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#loadbalancerforwardingrule">List[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
@@ -1731,7 +1732,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#state_healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Healthcheck]</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -1809,7 +1810,7 @@ Default value is `false`.
 <a href="#state_sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstickysessions">Dict[Load<wbr>Balancer<wbr>Sticky<wbr>Sessions]</a></span>
+        <span class="property-type"><a href="#loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
@@ -2080,8 +2081,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-required"
             title="Required">
-        <span id="entryport_python">
-<a href="#entryport_python" style="color: inherit; text-decoration: inherit;">entry<wbr>Port</a>
+        <span id="entry_port_python">
+<a href="#entry_port_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2091,8 +2092,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-required"
             title="Required">
-        <span id="entryprotocol_python">
-<a href="#entryprotocol_python" style="color: inherit; text-decoration: inherit;">entry<wbr>Protocol</a>
+        <span id="entry_protocol_python">
+<a href="#entry_protocol_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2102,8 +2103,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-required"
             title="Required">
-        <span id="targetport_python">
-<a href="#targetport_python" style="color: inherit; text-decoration: inherit;">target<wbr>Port</a>
+        <span id="target_port_python">
+<a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2113,8 +2114,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-required"
             title="Required">
-        <span id="targetprotocol_python">
-<a href="#targetprotocol_python" style="color: inherit; text-decoration: inherit;">target<wbr>Protocol</a>
+        <span id="target_protocol_python">
+<a href="#target_protocol_python" style="color: inherit; text-decoration: inherit;">target_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2135,8 +2136,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tlspassthrough_python">
-<a href="#tlspassthrough_python" style="color: inherit; text-decoration: inherit;">tls<wbr>Passthrough</a>
+        <span id="tls_passthrough_python">
+<a href="#tls_passthrough_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>passthrough</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2188,7 +2189,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http` or `tcp`.
+    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2272,7 +2273,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http` or `tcp`.
+    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2356,7 +2357,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http` or `tcp`.
+    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2440,13 +2441,13 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http` or `tcp`.
+    <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="checkintervalseconds_python">
-<a href="#checkintervalseconds_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Seconds</a>
+        <span id="check_interval_seconds_python">
+<a href="#check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2456,8 +2457,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthythreshold_python">
-<a href="#healthythreshold_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
+        <span id="healthy_threshold_python">
+<a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2478,8 +2479,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responsetimeoutseconds_python">
-<a href="#responsetimeoutseconds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Timeout<wbr>Seconds</a>
+        <span id="response_timeout_seconds_python">
+<a href="#response_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2489,8 +2490,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2645,8 +2646,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiename_python">
-<a href="#cookiename_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
+        <span id="cookie_name_python">
+<a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2656,8 +2657,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cookiettlseconds_python">
-<a href="#cookiettlseconds_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Ttl<wbr>Seconds</a>
+        <span id="cookie_ttl_seconds_python">
+<a href="#cookie_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2694,6 +2695,6 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

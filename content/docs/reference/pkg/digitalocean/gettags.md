@@ -14,6 +14,103 @@ Returns a list of tags in your DigitalOcean account, with the ability to
 filter and sort the results. If no filters are specified, all tags will be
 returned.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var list = Output.Create(DigitalOcean.GetTags.InvokeAsync(new DigitalOcean.GetTagsArgs
+        {
+            Sorts = 
+            {
+                new DigitalOcean.Inputs.GetTagsSortArgs
+                {
+                    Key = "total_resource_count",
+                    Direction = "asc",
+                },
+            },
+        }));
+        this.SortedTags = list.Apply(list => list.Tags);
+    }
+
+    [Output("sortedTags")]
+    public Output<string> SortedTags { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		list, err := digitalocean.GetTags(ctx, &digitalocean.GetTagsArgs{
+			Sorts: []digitalocean.GetTagsSort{
+				digitalocean.GetTagsSort{
+					Key:       "total_resource_count",
+					Direction: "asc",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("sortedTags", list.Tags)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+list = digitalocean.get_tags(sorts=[digitalocean.GetTagsSortArgs(
+    key="total_resource_count",
+    direction="asc",
+)])
+pulumi.export("sortedTags", list.tags)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const list = digitalocean.getTags({
+    sorts: [{
+        key: "total_resource_count",
+        direction: "asc",
+    }],
+});
+export const sortedTags = list.then(list => list.tags);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetTags {#using}
@@ -27,7 +124,7 @@ returned.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_tags(</span>filters=None<span class="p">, </span>sorts=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tags(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetTagsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetTagsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTagsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -151,7 +248,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettagsfilter">List[Get<wbr>Tags<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#gettagsfilter">List[Get<wbr>Tags<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -163,7 +260,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettagssort">List[Get<wbr>Tags<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#gettagssort">List[Get<wbr>Tags<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -1024,6 +1121,6 @@ one of the values provided here.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

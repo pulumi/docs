@@ -13,7 +13,7 @@ meta_desc: "Explore the GetRegions function of the DigitalOcean package, includi
 Retrieve information about all supported DigitalOcean regions, with the ability to
 filter and sort the results. If no filters are specified, all regions will be returned.
 
-Note: You can use the `digitalocean..getRegion` data source
+Note: You can use the `digitalocean.getRegion` data source
 to obtain metadata about a single region if you already know the `slug` to retrieve.
 
 {{% examples %}}
@@ -52,7 +52,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitalocean.GetRegions(ctx, &digitalocean.GetRegionsArgs{
+			Filters: []digitalocean.GetRegionsFilter{
+				digitalocean.GetRegionsFilter{
+					Key: "available",
+					Values: []string{
+						"true",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -60,10 +87,10 @@ Coming soon!
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-available = digitalocean.get_regions(filters=[{
-    "key": "available",
-    "values": ["true"],
-}])
+available = digitalocean.get_regions(filters=[digitalocean.GetRegionsFilterArgs(
+    key="available",
+    values=["true"],
+)])
 ```
 
 {{% /example %}}
@@ -98,7 +125,7 @@ const available = pulumi.output(digitalocean.getRegions({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_regions(</span>filters=None<span class="p">, </span>sorts=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_regions(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetRegionsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetRegionsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -222,7 +249,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -234,7 +261,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionssort">List[Get<wbr>Regions<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getregionssort">List[Get<wbr>Regions<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -279,12 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Region&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:  
-- `slug` - A human-readable string that is used as a unique identifier for each region.
-- `name` - The display name of the region.
-- `available` - A boolean value that represents whether new Droplets can be created in this region.
-- `sizes` - A set of identifying slugs for the Droplet sizes available in this region.
-- `features` - A set of features available in this region.
+    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -333,12 +355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">[]Get<wbr>Regions<wbr>Region</a></span>
     </dt>
-    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:  
-- `slug` - A human-readable string that is used as a unique identifier for each region.
-- `name` - The display name of the region.
-- `available` - A boolean value that represents whether new Droplets can be created in this region.
-- `sizes` - A set of identifying slugs for the Droplet sizes available in this region.
-- `features` - A set of features available in this region.
+    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -387,12 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">Get<wbr>Regions<wbr>Region[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:  
-- `slug` - A human-readable string that is used as a unique identifier for each region.
-- `name` - The display name of the region.
-- `available` - A boolean value that represents whether new Droplets can be created in this region.
-- `sizes` - A set of identifying slugs for the Droplet sizes available in this region.
-- `features` - A set of features available in this region.
+    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -441,12 +453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">List[Get<wbr>Regions<wbr>Region]</a></span>
     </dt>
-    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:  
-- `slug` - A human-readable string that is used as a unique identifier for each region.
-- `name` - The display name of the region.
-- `available` - A boolean value that represents whether new Droplets can be created in this region.
-- `sizes` - A set of identifying slugs for the Droplet sizes available in this region.
-- `features` - A set of features available in this region.
+    <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -650,7 +657,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -660,7 +668,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of features available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -670,7 +679,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of the region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -680,7 +690,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -690,7 +701,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -707,7 +719,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -717,7 +730,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of features available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -727,7 +741,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of the region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -737,7 +752,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -747,7 +763,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -764,7 +781,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -774,7 +792,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of features available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -784,7 +803,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of the region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -794,7 +814,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -804,7 +825,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -821,7 +843,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -831,7 +854,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of features available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -841,7 +865,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of the region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -851,7 +876,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -861,7 +887,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1019,6 +1046,6 @@ where the `key` field takes on one or more of the values provided here.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 
