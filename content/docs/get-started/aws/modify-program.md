@@ -18,7 +18,7 @@ Now that your S3 bucket is provisioned, let's add an object to it. First, create
 $ mkdir site
 ```
 
-Next let's create an `index.html` file you will upload to your bucket.
+Next create an `index.html` file you will upload to your bucket.
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -56,7 +56,7 @@ Once you've created your `index.html` file, add some content to it:
 </html>
 ```
 
-Now that you have your new `index.html` with some content, let's modify your program to add the contents of your `index.html` file to your S3 bucket. To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
+Now that you have your new `index.html` with some content, modify your program to add the contents of your `index.html` file to your S3 bucket. To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 

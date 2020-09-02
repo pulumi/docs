@@ -108,7 +108,7 @@ Notice that your index.html file has been added:
 ```
 
 {{% choosable language javascript %}}
-Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First, you need to set the `website` property on your bucket.
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve the file as a static website. First, you need to set the `website` property on your bucket.
 
 ```javascript
 const bucket = new aws.s3.Bucket("my-bucket", {
@@ -138,7 +138,7 @@ exports.bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint}`;
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
-Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First you need to set the `website` property on your bucket.
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve the file as a static website. First you need to set the `website` property on your bucket.
 
 ```typescript
 const bucket = new aws.s3.Bucket("my-bucket", {
@@ -168,7 +168,7 @@ export const bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint
 {{% /choosable %}}
 
 {{% choosable language python %}}
-Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First you need to set the `website` property on your bucket.
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve the file as a static website. First you need to set the `website` property on your bucket.
 
 ```python
 bucket = s3.Bucket('my-bucket',
@@ -198,7 +198,7 @@ pulumi.export('bucket_endpoint', pulumi.Output.concat('http://', bucket.website_
 {{% /choosable %}}
 
 {{% choosable language go %}}
-Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First you need to set the `Website` property on your bucket.
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve the file as a static website. First you need to set the `Website` property on your bucket.
 
 ```go
 bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
@@ -228,7 +228,7 @@ ctx.Export("bucketEndpoint", pulumi.Sprintf("http://%s", bucket.WebsiteEndpoint)
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First you need to set the `Website` property on your bucket.
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve the file as a static website. First you need to set the `Website` property on your bucket.
 
 ```csharp
 // Add this import
@@ -272,7 +272,7 @@ this.BucketEndpoint = Output.Format($"http://{bucket.WebsiteEndpoint}");
 
 {{% /choosable %}}
 
-Now let's update your stack to have your S3 bucket serve your `index.html` file as a static website.
+Now update your stack to have your S3 bucket serve your `index.html` file as a static website.
 
 ```bash
 $ pulumi up

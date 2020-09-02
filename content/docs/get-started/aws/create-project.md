@@ -20,7 +20,7 @@ Now that you have set up your environment by installing Pulumi, installing your 
 - Serve the `index.html` as a static website.
 - Destroy the resources you've provisioned.
 
-Let's get started with a new project in a new directory.
+To get started you will a create a new directory and a new project.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
