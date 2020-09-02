@@ -6243,11 +6243,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubeletconfigs_csharp">
+<a href="#kubeletconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxnodeconfigs_csharp">
+<a href="#linuxnodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6430,11 +6450,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubeletconfigs_go">
+<a href="#kubeletconfigs_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">[]Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxnodeconfigs_go">
+<a href="#linuxnodeconfigs_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">[]Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6617,11 +6657,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubeletconfigs_nodejs">
+<a href="#kubeletconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxnodeconfigs_nodejs">
+<a href="#linuxnodeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6804,11 +6864,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubelet_configs_python">
+<a href="#kubelet_configs_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linux_node_configs_python">
+<a href="#linux_node_configs_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7055,6 +7135,258 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusternodeconfigkubeletconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigKubeletConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterNodeConfigKubeletConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigKubeletConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquota_csharp">
+<a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquotaperiod_csharp">
+<a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpumanagerpolicy_csharp">
+<a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquota_go">
+<a href="#cpucfsquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquotaperiod_go">
+<a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpumanagerpolicy_go">
+<a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquota_nodejs">
+<a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquotaperiod_nodejs">
+<a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpumanagerpolicy_nodejs">
+<a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_cfs_quota_python">
+<a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_cfs_quota_period_python">
+<a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_manager_policy_python">
+<a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusternodeconfiglinuxnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigLinuxNodeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterNodeConfigLinuxNodeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigLinuxNodeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_csharp">
+<a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_go">
+<a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_nodejs">
+<a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_python">
+<a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8381,11 +8713,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubeletconfigs_csharp">
+<a href="#kubeletconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxnodeconfigs_csharp">
+<a href="#linuxnodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8568,11 +8920,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubeletconfigs_go">
+<a href="#kubeletconfigs_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">[]Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxnodeconfigs_go">
+<a href="#linuxnodeconfigs_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">[]Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8755,11 +9127,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubeletconfigs_nodejs">
+<a href="#kubeletconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxnodeconfigs_nodejs">
+<a href="#linuxnodeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8942,11 +9334,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="kubelet_configs_python">
+<a href="#kubelet_configs_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linux_node_configs_python">
+<a href="#linux_node_configs_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9193,6 +9605,258 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusternodepoolnodeconfigkubeletconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigKubeletConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigKubeletConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigKubeletConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquota_csharp">
+<a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquotaperiod_csharp">
+<a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpumanagerpolicy_csharp">
+<a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquota_go">
+<a href="#cpucfsquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquotaperiod_go">
+<a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpumanagerpolicy_go">
+<a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquota_nodejs">
+<a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpucfsquotaperiod_nodejs">
+<a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpumanagerpolicy_nodejs">
+<a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_cfs_quota_python">
+<a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_cfs_quota_period_python">
+<a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_manager_policy_python">
+<a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusternodepoolnodeconfiglinuxnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigLinuxNodeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigLinuxNodeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigLinuxNodeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_csharp">
+<a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_go">
+<a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_nodejs">
+<a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sysctls_python">
+<a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

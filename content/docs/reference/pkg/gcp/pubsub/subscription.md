@@ -30,7 +30,7 @@ To get more information about Subscription, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#pulumi_gcp.pubsub.Subscription">Subscription</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#pulumi_gcp.pubsub.Subscription">Subscription</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -381,6 +381,20 @@ they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -565,6 +579,20 @@ Structure is documented below.
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -753,6 +781,20 @@ they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -939,6 +981,20 @@ they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1078,7 +1134,7 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subscription</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1372,6 +1428,20 @@ messageRetentionDuration window.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_retrypolicy_csharp">
+<a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_topic_csharp">
 <a href="#state_topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span> 
@@ -1564,6 +1634,20 @@ Structure is documented below.
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_go">
+<a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1764,6 +1848,20 @@ messageRetentionDuration window.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_retrypolicy_nodejs">
+<a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_topic_nodejs">
 <a href="#state_topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span> 
@@ -1956,6 +2054,20 @@ Structure is documented below.
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retry_policy_python">
+<a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2703,6 +2815,148 @@ value is a single case-sensitive string. Having multiple values (array)
 for the audience field is not supported. More info about the OIDC JWT
 token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
 Note: if not specified, the Push endpoint URL will be used.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionRetryPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionRetryPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionRetryPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionRetryPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionRetryPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumbackoff_csharp">
+<a href="#maximumbackoff_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumbackoff_csharp">
+<a href="#minimumbackoff_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumbackoff_go">
+<a href="#maximumbackoff_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumbackoff_go">
+<a href="#minimumbackoff_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumbackoff_nodejs">
+<a href="#maximumbackoff_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumbackoff_nodejs">
+<a href="#minimumbackoff_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_backoff_python">
+<a href="#maximum_backoff_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_backoff_python">
+<a href="#minimum_backoff_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>backoff</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
 
 </dl>

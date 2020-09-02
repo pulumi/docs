@@ -35,7 +35,7 @@ of the network, even entire subnets, using firewall rules.
 
 To get more information about Subnetwork, see:
 
-* [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks)
+* [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks)
 * How-to Guides
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
@@ -2097,6 +2097,18 @@ Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTE
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filterexpr_csharp">
+<a href="#filterexpr_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="flowsampling_csharp">
 <a href="#flowsampling_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Sampling</a>
 </span> 
@@ -2122,7 +2134,19 @@ half of all collected logs are reported.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
-Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatafields_csharp">
+<a href="#metadatafields_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
 {{% /md %}}</dd>
 
 </dl>
@@ -2146,6 +2170,18 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filterexpr_go">
+<a href="#filterexpr_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2175,7 +2211,19 @@ half of all collected logs are reported.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
-Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatafields_go">
+<a href="#metadatafields_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
 {{% /md %}}</dd>
 
 </dl>
@@ -2199,6 +2247,18 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filterexpr_nodejs">
+<a href="#filterexpr_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2228,7 +2288,19 @@ half of all collected logs are reported.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
-Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatafields_nodejs">
+<a href="#metadatafields_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
 {{% /md %}}</dd>
 
 </dl>
@@ -2252,6 +2324,18 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_expr_python">
+<a href="#filter_expr_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2281,7 +2365,19 @@ half of all collected logs are reported.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
-Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_fields_python">
+<a href="#metadata_fields_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
 {{% /md %}}</dd>
 
 </dl>

@@ -3,7 +3,7 @@ title: "Module gameservices"
 title_tag: "Module gameservices | Package @pulumi/gcp | Node.js SDK"
 linktitle: "gameservices"
 meta_desc: "Explore members of the gameservices module in the @pulumi/gcp package."
-git_sha: "c0c329b219df5a06e0c3610c0ec93582d700510f"
+git_sha: "2400b696ba8424ff5a3a419f75640293ac2f363b"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="GameServerCluster" data-link-title="GameServerCluster">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L20">
         Resource <strong>GameServerCluster</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ To get more information about GameServerCluster, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="GameServerCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -80,7 +80,7 @@ Create a GameServerCluster resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing GameServerCluster resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GameServerCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,7 +109,7 @@ Returns true if the given object is an instance of GameServerCluster.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L51">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L51">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Required. The resource name of the game server cluster
 
 <h4 class="pdoc-member-header" id="GameServerCluster-connectionInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L57">property <b>connectionInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L57">property <b>connectionInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GameServerClusterConnectionInfo'>GameServerClusterConnectionInfo</a>&gt;;</code></pre>
@@ -127,7 +127,7 @@ manage game server clusters.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ Structure is documented below.
 Human readable description of the cluster.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L66">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L66">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ The labels associated with this game server cluster. Each label is a
 key-value pair.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L70">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L70">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ key-value pair.
 Location of the Cluster.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ The resource id of the game server cluster, eg:
 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L81">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L81">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L85">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L85">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ If it is not provided, the provider project is used.
 The realm id of the game server realm.
 
 <h4 class="pdoc-member-header" id="GameServerCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GameServerConfig" data-link-title="GameServerConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L20">
         Resource <strong>GameServerConfig</strong>
     </a>
 </h3>
@@ -215,7 +215,7 @@ To get more information about GameServerConfig, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="GameServerConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -229,7 +229,7 @@ Create a GameServerConfig resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -240,14 +240,14 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GameServerConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -258,7 +258,7 @@ Returns true if the given object is an instance of GameServerConfig.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-configId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L51">property <b>configId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L51">property <b>configId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A unique id for the deployment config.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L55">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L55">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ A unique id for the deployment config.
 A unique id for the deployment.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L59">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ A unique id for the deployment.
 The description of the game server config.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-fleetConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L65">property <b>fleetConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L65">property <b>fleetConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fleetConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GameServerConfigFleetConfig'>GameServerConfigFleetConfig</a>[]&gt;;</code></pre>
@@ -292,7 +292,7 @@ will be only one.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -301,7 +301,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L69">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L69">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ deployments and may be missing (undefined) during planning phases.
 Set of labels to group by.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ Set of labels to group by.
 Location of the Deployment.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ Location of the Deployment.
 The name of the ScalingConfig
 
 <h4 class="pdoc-member-header" id="GameServerConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L82">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L82">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -334,7 +334,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-scalingConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L87">property <b>scalingConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L87">property <b>scalingConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GameServerConfigScalingConfig'>GameServerConfigScalingConfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ Optional. This contains the autoscaling settings.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -352,7 +352,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GameServerDeployment" data-link-title="GameServerDeployment">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">
         Resource <strong>GameServerDeployment</strong>
     </a>
 </h3>
@@ -370,7 +370,7 @@ To get more information about GameServerDeployment, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -384,7 +384,7 @@ Create a GameServerDeployment resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -395,14 +395,14 @@ Get an existing GameServerDeployment resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -413,7 +413,7 @@ Returns true if the given object is an instance of GameServerDeployment.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L49">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L49">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A unique id for the deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L53">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L53">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ A unique id for the deployment.
 Human readable description of the game server deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -438,7 +438,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L58">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L58">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ The labels associated with this game server deployment. Each label is a
 key-value pair.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L62">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L62">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ key-value pair.
 Location of the Deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ The resource id of the game server deployment, eg:
 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L73">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L73">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -483,7 +483,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GameServerDeploymentRollout" data-link-title="GameServerDeploymentRollout">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">
         Resource <strong>GameServerDeploymentRollout</strong>
     </a>
 </h3>
@@ -502,7 +502,7 @@ To get more information about GameServerDeploymentRollout, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -516,7 +516,7 @@ Create a GameServerDeploymentRollout resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -527,14 +527,14 @@ Get an existing GameServerDeploymentRollout resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -545,7 +545,7 @@ Returns true if the given object is an instance of GameServerDeploymentRollout. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-defaultGameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L54">property <b>defaultGameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L54">property <b>defaultGameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultGameServerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -555,7 +555,7 @@ applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L58">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L58">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -563,7 +563,7 @@ applied by default to all realms and clusters. For example,
 The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-gameServerConfigOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L66">property <b>gameServerConfigOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L66">property <b>gameServerConfigOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gameServerConfigOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GameServerDeploymentRolloutGameServerConfigOverride'>GameServerDeploymentRolloutGameServerConfigOverride</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ processed.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -584,7 +584,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -593,7 +593,7 @@ The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L76">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L76">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRollout-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -611,7 +611,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Realm" data-link-title="Realm">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L18">
         Resource <strong>Realm</strong>
     </a>
 </h3>
@@ -629,7 +629,7 @@ To get more information about Realm, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Realm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -643,7 +643,7 @@ Create a Realm resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Realm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -654,14 +654,14 @@ Get an existing Realm resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Realm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Realm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -672,7 +672,7 @@ Returns true if the given object is an instance of Realm.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Realm-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L49">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L49">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Human readable description of the realm.
 
 <h4 class="pdoc-member-header" id="Realm-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L53">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L53">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,7 +688,7 @@ Human readable description of the realm.
 ETag of the resource.
 
 <h4 class="pdoc-member-header" id="Realm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -697,7 +697,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Realm-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L57">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L57">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ deployments and may be missing (undefined) during planning phases.
 The labels associated with this realm. Each label is a key-value pair.
 
 <h4 class="pdoc-member-header" id="Realm-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L61">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L61">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -713,7 +713,7 @@ The labels associated with this realm. Each label is a key-value pair.
 Location of the Realm.
 
 <h4 class="pdoc-member-header" id="Realm-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ The resource id of the realm, of the form: 'projects/{project_id}/locations/{loc
 'projects/my-project/locations/{location}/realms/my-realm'.
 
 <h4 class="pdoc-member-header" id="Realm-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L71">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L71">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -731,7 +731,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Realm-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L75">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L75">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ If it is not provided, the provider project is used.
 GCP region of the Realm.
 
 <h4 class="pdoc-member-header" id="Realm-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L81">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L81">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
 
 <h4 class="pdoc-member-header" id="Realm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -760,7 +760,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getGameServerDeploymentRollout" data-link-title="getGameServerDeploymentRollout">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L14">
         Function <strong>getGameServerDeploymentRollout</strong>
     </a>
 </h3>
@@ -776,7 +776,7 @@ https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeplo
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GameServerClusterArgs" data-link-title="GameServerClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L185">
         interface <strong>GameServerClusterArgs</strong>
     </a>
 </h3>
@@ -786,7 +786,7 @@ https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeplo
 The set of arguments for constructing a GameServerCluster resource.
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L189">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L189">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -794,7 +794,7 @@ The set of arguments for constructing a GameServerCluster resource.
 Required. The resource name of the game server cluster
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-connectionInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L195">property <b>connectionInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L195">property <b>connectionInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerClusterConnectionInfo'>GameServerClusterConnectionInfo</a>&gt;;</code></pre>
@@ -804,7 +804,7 @@ manage game server clusters.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L199">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L199">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ Structure is documented below.
 Human readable description of the cluster.
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L204">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L204">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -821,7 +821,7 @@ The labels associated with this game server cluster. Each label is a
 key-value pair.
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L208">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L208">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,7 +829,7 @@ key-value pair.
 Location of the Cluster.
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L213">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L213">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -838,7 +838,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerClusterArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L217">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L217">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +846,7 @@ If it is not provided, the provider project is used.
 The realm id of the game server realm.
 
 <h3 class="pdoc-module-header" id="GameServerClusterState" data-link-title="GameServerClusterState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L141">
         interface <strong>GameServerClusterState</strong>
     </a>
 </h3>
@@ -856,7 +856,7 @@ The realm id of the game server realm.
 Input properties used for looking up and filtering GameServerCluster resources.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L145">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L145">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ Input properties used for looking up and filtering GameServerCluster resources.
 Required. The resource name of the game server cluster
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-connectionInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L151">property <b>connectionInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L151">property <b>connectionInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerClusterConnectionInfo'>GameServerClusterConnectionInfo</a>&gt;;</code></pre>
@@ -874,7 +874,7 @@ manage game server clusters.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L155">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L155">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +882,7 @@ Structure is documented below.
 Human readable description of the cluster.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L160">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L160">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -891,7 +891,7 @@ The labels associated with this game server cluster. Each label is a
 key-value pair.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L164">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L164">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -899,7 +899,7 @@ key-value pair.
 Location of the Cluster.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -909,7 +909,7 @@ The resource id of the game server cluster, eg:
 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L175">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L175">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -918,7 +918,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerClusterState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerCluster.ts#L179">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerCluster.ts#L179">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ If it is not provided, the provider project is used.
 The realm id of the game server realm.
 
 <h3 class="pdoc-module-header" id="GameServerConfigArgs" data-link-title="GameServerConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L191">
         interface <strong>GameServerConfigArgs</strong>
     </a>
 </h3>
@@ -936,7 +936,7 @@ The realm id of the game server realm.
 The set of arguments for constructing a GameServerConfig resource.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-configId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L195">property <b>configId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L195">property <b>configId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -944,7 +944,7 @@ The set of arguments for constructing a GameServerConfig resource.
 A unique id for the deployment config.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L199">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L199">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -952,7 +952,7 @@ A unique id for the deployment config.
 A unique id for the deployment.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L203">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -960,7 +960,7 @@ A unique id for the deployment.
 The description of the game server config.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-fleetConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L209">property <b>fleetConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L209">property <b>fleetConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fleetConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerConfigFleetConfig'>GameServerConfigFleetConfig</a>&gt;[]&gt;;</code></pre>
@@ -970,7 +970,7 @@ will be only one.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L213">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L213">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -978,7 +978,7 @@ Structure is documented below.
 Set of labels to group by.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L217">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L217">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -986,7 +986,7 @@ Set of labels to group by.
 Location of the Deployment.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L222">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L222">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerConfigArgs-scalingConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L227">property <b>scalingConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L227">property <b>scalingConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerConfigScalingConfig'>GameServerConfigScalingConfig</a>&gt;[]&gt;;</code></pre>
@@ -1004,7 +1004,7 @@ Optional. This contains the autoscaling settings.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GameServerConfigState" data-link-title="GameServerConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L145">
         interface <strong>GameServerConfigState</strong>
     </a>
 </h3>
@@ -1014,7 +1014,7 @@ Structure is documented below.
 Input properties used for looking up and filtering GameServerConfig resources.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-configId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L149">property <b>configId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L149">property <b>configId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ Input properties used for looking up and filtering GameServerConfig resources.
 A unique id for the deployment config.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L153">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L153">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ A unique id for the deployment config.
 A unique id for the deployment.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L157">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L157">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ A unique id for the deployment.
 The description of the game server config.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-fleetConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L163">property <b>fleetConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L163">property <b>fleetConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fleetConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerConfigFleetConfig'>GameServerConfigFleetConfig</a>&gt;[]&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ will be only one.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L167">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L167">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ Structure is documented below.
 Set of labels to group by.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L171">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L171">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ Set of labels to group by.
 Location of the Deployment.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ Location of the Deployment.
 The name of the ScalingConfig
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L180">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L180">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GameServerConfigState-scalingConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerConfig.ts#L185">property <b>scalingConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerConfig.ts#L185">property <b>scalingConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerConfigScalingConfig'>GameServerConfigScalingConfig</a>&gt;[]&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ Optional. This contains the autoscaling settings.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GameServerDeploymentArgs" data-link-title="GameServerDeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L153">
         interface <strong>GameServerDeploymentArgs</strong>
     </a>
 </h3>
@@ -1100,7 +1100,7 @@ Structure is documented below.
 The set of arguments for constructing a GameServerDeployment resource.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentArgs-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L157">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L157">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1108,7 +1108,7 @@ The set of arguments for constructing a GameServerDeployment resource.
 A unique id for the deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ A unique id for the deployment.
 Human readable description of the game server deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L166">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L166">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The labels associated with this game server deployment. Each label is a
 key-value pair.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ key-value pair.
 Location of the Deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L175">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L175">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GameServerDeploymentRolloutArgs" data-link-title="GameServerDeploymentRolloutArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L157">
         interface <strong>GameServerDeploymentRolloutArgs</strong>
     </a>
 </h3>
@@ -1152,7 +1152,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a GameServerDeploymentRollout resource.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutArgs-defaultGameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L163">property <b>defaultGameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L163">property <b>defaultGameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultGameServerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutArgs-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L167">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L167">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1170,7 +1170,7 @@ applied by default to all realms and clusters. For example,
 The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutArgs-gameServerConfigOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L175">property <b>gameServerConfigOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L175">property <b>gameServerConfigOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gameServerConfigOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerDeploymentRolloutGameServerConfigOverride'>GameServerDeploymentRolloutGameServerConfigOverride</a>&gt;[]&gt;;</code></pre>
@@ -1182,7 +1182,7 @@ processed.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L180">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L180">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GameServerDeploymentRolloutState" data-link-title="GameServerDeploymentRolloutState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L123">
         interface <strong>GameServerDeploymentRolloutState</strong>
     </a>
 </h3>
@@ -1201,7 +1201,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering GameServerDeploymentRollout resources.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutState-defaultGameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L129">property <b>defaultGameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L129">property <b>defaultGameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultGameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutState-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L133">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L133">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1219,7 +1219,7 @@ applied by default to all realms and clusters. For example,
 The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutState-gameServerConfigOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L141">property <b>gameServerConfigOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L141">property <b>gameServerConfigOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gameServerConfigOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GameServerDeploymentRolloutGameServerConfigOverride'>GameServerDeploymentRolloutGameServerConfigOverride</a>&gt;[]&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ processed.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1240,7 +1240,7 @@ The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentRolloutState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L151">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeploymentRollout.ts#L151">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GameServerDeploymentState" data-link-title="GameServerDeploymentState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L119">
         interface <strong>GameServerDeploymentState</strong>
     </a>
 </h3>
@@ -1259,7 +1259,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering GameServerDeployment resources.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentState-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L123">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L123">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ Input properties used for looking up and filtering GameServerDeployment resource
 A unique id for the deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L127">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L127">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1275,7 +1275,7 @@ A unique id for the deployment.
 Human readable description of the game server deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L132">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L132">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ The labels associated with this game server deployment. Each label is a
 key-value pair.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L136">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L136">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1292,7 +1292,7 @@ key-value pair.
 Location of the Deployment.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1302,7 +1302,7 @@ The resource id of the game server deployment, eg:
 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
 
 <h4 class="pdoc-member-header" id="GameServerDeploymentState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/gameServerDeployment.ts#L147">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/gameServerDeployment.ts#L147">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1311,7 +1311,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetGameServerDeploymentRolloutArgs" data-link-title="GetGameServerDeploymentRolloutArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L30">
         interface <strong>GetGameServerDeploymentRolloutArgs</strong>
     </a>
 </h3>
@@ -1321,7 +1321,7 @@ If it is not provided, the provider project is used.
 A collection of arguments for invoking getGameServerDeploymentRollout.
 
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutArgs-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L34">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L34">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1329,7 +1329,7 @@ A collection of arguments for invoking getGameServerDeploymentRollout.
 The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
 
 <h3 class="pdoc-module-header" id="GetGameServerDeploymentRolloutResult" data-link-title="GetGameServerDeploymentRolloutResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L40">
         interface <strong>GetGameServerDeploymentRolloutResult</strong>
     </a>
 </h3>
@@ -1339,22 +1339,22 @@ The deployment to get the rollout state from. Only 1 rollout must be associated 
 A collection of values returned by getGameServerDeploymentRollout.
 
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutResult-defaultGameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L41">property <b>defaultGameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L41">property <b>defaultGameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultGameServerConfig: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutResult-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L42">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L42">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutResult-gameServerConfigOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L43">property <b>gameServerConfigOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L43">property <b>gameServerConfigOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gameServerConfigOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGameServerDeploymentRolloutGameServerConfigOverride'>GetGameServerDeploymentRolloutGameServerConfigOverride</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1362,12 +1362,12 @@ A collection of values returned by getGameServerDeploymentRollout.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGameServerDeploymentRolloutResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L53">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/getGameServerDeploymentRollout.ts#L53">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1376,7 +1376,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="RealmArgs" data-link-title="RealmArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L176">
         interface <strong>RealmArgs</strong>
     </a>
 </h3>
@@ -1386,7 +1386,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a Realm resource.
 
 <h4 class="pdoc-member-header" id="RealmArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L180">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L180">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1394,7 +1394,7 @@ The set of arguments for constructing a Realm resource.
 Human readable description of the realm.
 
 <h4 class="pdoc-member-header" id="RealmArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L184">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L184">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1402,7 +1402,7 @@ Human readable description of the realm.
 The labels associated with this realm. Each label is a key-value pair.
 
 <h4 class="pdoc-member-header" id="RealmArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L188">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L188">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1410,7 +1410,7 @@ The labels associated with this realm. Each label is a key-value pair.
 Location of the Realm.
 
 <h4 class="pdoc-member-header" id="RealmArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L193">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L193">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RealmArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L197">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L197">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ If it is not provided, the provider project is used.
 GCP region of the Realm.
 
 <h4 class="pdoc-member-header" id="RealmArgs-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L203">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L203">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1437,7 +1437,7 @@ this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
 
 <h3 class="pdoc-module-header" id="RealmState" data-link-title="RealmState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L134">
         interface <strong>RealmState</strong>
     </a>
 </h3>
@@ -1447,7 +1447,7 @@ https://www.iana.org/time-zones.
 Input properties used for looking up and filtering Realm resources.
 
 <h4 class="pdoc-member-header" id="RealmState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L138">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1455,7 +1455,7 @@ Input properties used for looking up and filtering Realm resources.
 Human readable description of the realm.
 
 <h4 class="pdoc-member-header" id="RealmState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L142">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L142">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1463,7 +1463,7 @@ Human readable description of the realm.
 ETag of the resource.
 
 <h4 class="pdoc-member-header" id="RealmState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L146">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L146">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1471,7 +1471,7 @@ ETag of the resource.
 The labels associated with this realm. Each label is a key-value pair.
 
 <h4 class="pdoc-member-header" id="RealmState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L150">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L150">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1479,7 +1479,7 @@ The labels associated with this realm. Each label is a key-value pair.
 Location of the Realm.
 
 <h4 class="pdoc-member-header" id="RealmState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1488,7 +1488,7 @@ The resource id of the realm, of the form: 'projects/{project_id}/locations/{loc
 'projects/my-project/locations/{location}/realms/my-realm'.
 
 <h4 class="pdoc-member-header" id="RealmState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L160">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L160">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1497,7 +1497,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RealmState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L164">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L164">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1505,7 +1505,7 @@ If it is not provided, the provider project is used.
 GCP region of the Realm.
 
 <h4 class="pdoc-member-header" id="RealmState-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/gameservices/realm.ts#L170">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/gameservices/realm.ts#L170">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

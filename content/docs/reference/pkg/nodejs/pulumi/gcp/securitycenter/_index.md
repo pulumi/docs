@@ -3,7 +3,7 @@ title: "Module securitycenter"
 title_tag: "Module securitycenter | Package @pulumi/gcp | Node.js SDK"
 linktitle: "securitycenter"
 meta_desc: "Explore members of the securitycenter module in the @pulumi/gcp package."
-git_sha: "c0c329b219df5a06e0c3610c0ec93582d700510f"
+git_sha: "2400b696ba8424ff5a3a419f75640293ac2f363b"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Source" data-link-title="Source">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L21">
         Resource <strong>Source</strong>
     </a>
 </h3>
@@ -51,7 +51,7 @@ To get more information about Source, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="Source-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -65,7 +65,7 @@ Create a Source resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Source-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -76,14 +76,14 @@ Get an existing Source resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Source-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Source-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -94,7 +94,7 @@ Returns true if the given object is an instance of Source.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Source-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -102,7 +102,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the source (max of 1024 characters).
 
 <h4 class="pdoc-member-header" id="Source-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L60">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L60">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -114,7 +114,7 @@ with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
 
 <h4 class="pdoc-member-header" id="Source-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -123,7 +123,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Source-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
 
 <h4 class="pdoc-member-header" id="Source-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L69">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L69">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ The organization whose Cloud Security Command Center the Source
 lives in.
 
 <h4 class="pdoc-member-header" id="Source-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -152,7 +152,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SourceArgs" data-link-title="SourceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L141">
         interface <strong>SourceArgs</strong>
     </a>
 </h3>
@@ -162,7 +162,7 @@ deployments.
 The set of arguments for constructing a Source resource.
 
 <h4 class="pdoc-member-header" id="SourceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L145">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L145">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The set of arguments for constructing a Source resource.
 The description of the source (max of 1024 characters).
 
 <h4 class="pdoc-member-header" id="SourceArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L153">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L153">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
 
 <h4 class="pdoc-member-header" id="SourceArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L158">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L158">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ The organization whose Cloud Security Command Center the Source
 lives in.
 
 <h3 class="pdoc-module-header" id="SourceState" data-link-title="SourceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L114">
         interface <strong>SourceState</strong>
     </a>
 </h3>
@@ -201,7 +201,7 @@ lives in.
 Input properties used for looking up and filtering Source resources.
 
 <h4 class="pdoc-member-header" id="SourceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ Input properties used for looking up and filtering Source resources.
 The description of the source (max of 1024 characters).
 
 <h4 class="pdoc-member-header" id="SourceState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L126">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L126">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
 
 <h4 class="pdoc-member-header" id="SourceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ and underscores, and can be no longer than 32 characters.
 The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
 
 <h4 class="pdoc-member-header" id="SourceState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c0c329b219df5a06e0c3610c0ec93582d700510f/sdk/nodejs/securitycenter/source.ts#L135">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2400b696ba8424ff5a3a419f75640293ac2f363b/sdk/nodejs/securitycenter/source.ts#L135">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
