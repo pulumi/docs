@@ -72,7 +72,7 @@ import pulumi
 import pulumi_aws as aws
 
 org = aws.organizations.get_organization()
-ou = aws.organizations.get_organizational_units(parent_id=org.roots[0]["id"])
+ou = aws.organizations.get_organizational_units(parent_id=org.roots[0].id)
 ```
 
 {{% /example %}}
@@ -105,7 +105,7 @@ const ou = org.then(org => aws.organizations.getOrganizationalUnits({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_organizational_units(</span>parent_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_organizational_units(</span><span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrganizationalUnitsResult</code></pre></div>
 {{% /choosable %}}
 
 

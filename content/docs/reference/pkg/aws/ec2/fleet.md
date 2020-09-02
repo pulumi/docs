@@ -88,16 +88,16 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ec2.Fleet("example",
-    launch_template_config={
-        "launchTemplateSpecification": {
-            "launchTemplateId": aws_launch_template["example"]["id"],
-            "version": aws_launch_template["example"]["latest_version"],
-        },
-    },
-    target_capacity_specification={
-        "defaultTargetCapacityType": "spot",
-        "totalTargetCapacity": 5,
-    })
+    launch_template_config=aws.ec2.FleetLaunchTemplateConfigArgs(
+        launch_template_specification=aws.ec2.FleetLaunchTemplateConfigLaunchTemplateSpecificationArgs(
+            launch_template_id=aws_launch_template["example"]["id"],
+            version=aws_launch_template["example"]["latest_version"],
+        ),
+    ),
+    target_capacity_specification=aws.ec2.FleetTargetCapacitySpecificationArgs(
+        default_target_capacity_type="spot",
+        total_target_capacity=5,
+    ))
 ```
 
 {{% /example %}}
@@ -136,7 +136,7 @@ const example = new aws.ec2.Fleet("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Fleet">Fleet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>launch_template_config=None<span class="p">, </span>on_demand_options=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_options=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity_specification=None<span class="p">, </span>terminate_instances=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Fleet">Fleet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_config</span><span class="p">:</span> <span class="nx">Optional[FleetLaunchTemplateConfigArgs]</span> = None<span class="p">, </span><span class="nx">on_demand_options</span><span class="p">:</span> <span class="nx">Optional[FleetOnDemandOptionsArgs]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_options</span><span class="p">:</span> <span class="nx">Optional[FleetSpotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity_specification</span><span class="p">:</span> <span class="nx">Optional[FleetTargetCapacitySpecificationArgs]</span> = None<span class="p">, </span><span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -665,7 +665,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#launch_template_config_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd>
@@ -676,7 +676,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#target_capacity_specification_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">Dict[Fleet<wbr>Target<wbr>Capacity<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#on_demand_options_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">Dict[Fleet<wbr>On<wbr>Demand<wbr>Options]</a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd>
@@ -720,7 +720,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">Dict[Fleet<wbr>Spot<wbr>Options]</a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
 {{% /md %}}</dd>
@@ -867,7 +867,8 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>excess_capacity_termination_policy=None<span class="p">, </span>launch_template_config=None<span class="p">, </span>on_demand_options=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_options=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity_specification=None<span class="p">, </span>terminate_instances=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_config</span><span class="p">:</span> <span class="nx">Optional[FleetLaunchTemplateConfigArgs]</span> = None<span class="p">, </span><span class="nx">on_demand_options</span><span class="p">:</span> <span class="nx">Optional[FleetOnDemandOptionsArgs]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_options</span><span class="p">:</span> <span class="nx">Optional[FleetSpotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity_specification</span><span class="p">:</span> <span class="nx">Optional[FleetTargetCapacitySpecificationArgs]</span> = None<span class="p">, </span><span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Fleet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -875,7 +876,7 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Fleet.html">Fleet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.FleetState.html">FleetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Fleet.html">Fleet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.FleetState.html">FleetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1349,7 +1350,7 @@ The following state arguments are supported:
 <a href="#state_launch_template_config_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd>
@@ -1360,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_on_demand_options_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">Dict[Fleet<wbr>On<wbr>Demand<wbr>Options]</a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd>
@@ -1382,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">Dict[Fleet<wbr>Spot<wbr>Options]</a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd>
@@ -1393,7 +1394,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
 {{% /md %}}</dd>
@@ -1404,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_target_capacity_specification_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">Dict[Fleet<wbr>Target<wbr>Capacity<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd>
@@ -1564,11 +1565,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="launchtemplatespecification_python">
-<a href="#launchtemplatespecification_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
+        <span id="launch_template_specification_python">
+<a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Dict[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template to use. Defined below.
 {{% /md %}}</dd>
@@ -1579,7 +1580,7 @@ The following state arguments are supported:
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">List[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">List[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd>
@@ -1742,8 +1743,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="launchtemplateid_python">
-<a href="#launchtemplateid_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
+        <span id="launch_template_id_python">
+<a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1753,8 +1754,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="launchtemplatename_python">
-<a href="#launchtemplatename_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
+        <span id="launch_template_name_python">
+<a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2030,8 +2031,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxprice_python">
-<a href="#maxprice_python" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+        <span id="max_price_python">
+<a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2063,8 +2064,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weightedcapacity_python">
-<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2320,8 +2321,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instanceinterruptionbehavior_python">
-<a href="#instanceinterruptionbehavior_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+        <span id="instance_interruption_behavior_python">
+<a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2520,8 +2521,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaulttargetcapacitytype_python">
-<a href="#defaulttargetcapacitytype_python" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
+        <span id="default_target_capacity_type_python">
+<a href="#default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2531,8 +2532,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="totaltargetcapacity_python">
-<a href="#totaltargetcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
+        <span id="total_target_capacity_python">
+<a href="#total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2542,8 +2543,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ondemandtargetcapacity_python">
-<a href="#ondemandtargetcapacity_python" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Target<wbr>Capacity</a>
+        <span id="on_demand_target_capacity_python">
+<a href="#on_demand_target_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2553,8 +2554,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spottargetcapacity_python">
-<a href="#spottargetcapacity_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
+        <span id="spot_target_capacity_python">
+<a href="#spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

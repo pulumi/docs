@@ -98,7 +98,7 @@ const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>cluster_id=None<span class="p">, </span>cluster_state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -524,7 +524,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#cluster_certificates_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclustercertificates">Dict[Get<wbr>Cluster<wbr>Cluster<wbr>Certificates]</a></span>
+        <span class="property-type"><a href="#getclusterclustercertificates">Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></span>
     </dt>
     <dd>{{% md %}}The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
@@ -803,8 +803,8 @@ The number of available cluster certificates may vary depending on state of the 
 
     <dt class="property-required"
             title="Required">
-        <span id="awshardwarecertificate_python">
-<a href="#awshardwarecertificate_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Hardware<wbr>Certificate</a>
+        <span id="aws_hardware_certificate_python">
+<a href="#aws_hardware_certificate_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>hardware_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -813,8 +813,8 @@ The number of available cluster certificates may vary depending on state of the 
 
     <dt class="property-required"
             title="Required">
-        <span id="clustercertificate_python">
-<a href="#clustercertificate_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Certificate</a>
+        <span id="cluster_certificate_python">
+<a href="#cluster_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -823,8 +823,8 @@ The number of available cluster certificates may vary depending on state of the 
 
     <dt class="property-required"
             title="Required">
-        <span id="clustercsr_python">
-<a href="#clustercsr_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Csr</a>
+        <span id="cluster_csr_python">
+<a href="#cluster_csr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>csr</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -833,8 +833,8 @@ The number of available cluster certificates may vary depending on state of the 
 
     <dt class="property-required"
             title="Required">
-        <span id="hsmcertificate_python">
-<a href="#hsmcertificate_python" style="color: inherit; text-decoration: inherit;">hsm<wbr>Certificate</a>
+        <span id="hsm_certificate_python">
+<a href="#hsm_certificate_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -843,8 +843,8 @@ The number of available cluster certificates may vary depending on state of the 
 
     <dt class="property-required"
             title="Required">
-        <span id="manufacturerhardwarecertificate_python">
-<a href="#manufacturerhardwarecertificate_python" style="color: inherit; text-decoration: inherit;">manufacturer<wbr>Hardware<wbr>Certificate</a>
+        <span id="manufacturer_hardware_certificate_python">
+<a href="#manufacturer_hardware_certificate_python" style="color: inherit; text-decoration: inherit;">manufacturer_<wbr>hardware_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

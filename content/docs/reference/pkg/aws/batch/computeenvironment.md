@@ -286,27 +286,27 @@ aws_batch_service_role_role = aws.iam.Role("awsBatchServiceRoleRole", assume_rol
 aws_batch_service_role_role_policy_attachment = aws.iam.RolePolicyAttachment("awsBatchServiceRoleRolePolicyAttachment",
     role=aws_batch_service_role_role.name,
     policy_arn="arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole")
-sample_security_group = aws.ec2.SecurityGroup("sampleSecurityGroup", egress=[{
-    "from_port": 0,
-    "to_port": 0,
-    "protocol": "-1",
-    "cidr_blocks": ["0.0.0.0/0"],
-}])
+sample_security_group = aws.ec2.SecurityGroup("sampleSecurityGroup", egress=[aws.ec2.SecurityGroupEgressArgs(
+    from_port=0,
+    to_port=0,
+    protocol="-1",
+    cidr_blocks=["0.0.0.0/0"],
+)])
 sample_vpc = aws.ec2.Vpc("sampleVpc", cidr_block="10.1.0.0/16")
 sample_subnet = aws.ec2.Subnet("sampleSubnet",
     vpc_id=sample_vpc.id,
     cidr_block="10.1.1.0/24")
 sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironment",
     compute_environment_name="sample",
-    compute_resources={
-        "instanceRole": ecs_instance_role_instance_profile.arn,
-        "instance_types": ["c4.large"],
-        "maxVcpus": 16,
-        "minVcpus": 0,
-        "security_group_ids": [sample_security_group.id],
-        "subnets": [sample_subnet.id],
-        "type": "EC2",
-    },
+    compute_resources=aws.batch.ComputeEnvironmentComputeResourcesArgs(
+        instance_role=ecs_instance_role_instance_profile.arn,
+        instance_types=["c4.large"],
+        max_vcpus=16,
+        min_vcpus=0,
+        security_group_ids=[sample_security_group.id],
+        subnets=[sample_subnet.id],
+        type="EC2",
+    ),
     service_role=aws_batch_service_role_role.arn,
     type="MANAGED",
     opts=ResourceOptions(depends_on=[aws_batch_service_role_role_policy_attachment]))
@@ -398,7 +398,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/batch/#pulumi_aws.batch.ComputeEnvironment">ComputeEnvironment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_environment_name=None<span class="p">, </span>compute_environment_name_prefix=None<span class="p">, </span>compute_resources=None<span class="p">, </span>service_role=None<span class="p">, </span>state=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/batch/#pulumi_aws.batch.ComputeEnvironment">ComputeEnvironment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_environment_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_resources</span><span class="p">:</span> <span class="nx">Optional[ComputeEnvironmentComputeResourcesArgs]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -839,7 +839,7 @@ The ComputeEnvironment resource accepts the following [input]({{< relref "/docs/
 <a href="#compute_resources_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresources">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd>
@@ -1129,7 +1129,8 @@ Get an existing ComputeEnvironment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>compute_environment_name=None<span class="p">, </span>compute_environment_name_prefix=None<span class="p">, </span>compute_resources=None<span class="p">, </span>ecs_cluster_arn=None<span class="p">, </span>service_role=None<span class="p">, </span>state=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_environment_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compute_resources</span><span class="p">:</span> <span class="nx">Optional[ComputeEnvironmentComputeResourcesArgs]</span> = None<span class="p">, </span><span class="nx">ecs_cluster_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ComputeEnvironment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1137,7 +1138,7 @@ Get an existing ComputeEnvironment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.ComputeEnvironment.html">ComputeEnvironment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.ComputeEnvironmentState.html">ComputeEnvironmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.ComputeEnvironment.html">ComputeEnvironment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.ComputeEnvironmentState.html">ComputeEnvironmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1633,7 +1634,7 @@ The following state arguments are supported:
 <a href="#state_compute_resources_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresources">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
 {{% /md %}}</dd>
@@ -2255,8 +2256,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="instancerole_python">
-<a href="#instancerole_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
+        <span id="instance_role_python">
+<a href="#instance_role_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2277,8 +2278,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxvcpus_python">
-<a href="#maxvcpus_python" style="color: inherit; text-decoration: inherit;">max<wbr>Vcpus</a>
+        <span id="max_vcpus_python">
+<a href="#max_vcpus_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vcpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2288,8 +2289,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="minvcpus_python">
-<a href="#minvcpus_python" style="color: inherit; text-decoration: inherit;">min<wbr>Vcpus</a>
+        <span id="min_vcpus_python">
+<a href="#min_vcpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vcpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2343,8 +2344,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bidpercentage_python">
-<a href="#bidpercentage_python" style="color: inherit; text-decoration: inherit;">bid<wbr>Percentage</a>
+        <span id="bid_percentage_python">
+<a href="#bid_percentage_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2354,8 +2355,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="desiredvcpus_python">
-<a href="#desiredvcpus_python" style="color: inherit; text-decoration: inherit;">desired<wbr>Vcpus</a>
+        <span id="desired_vcpus_python">
+<a href="#desired_vcpus_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>vcpus</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2365,8 +2366,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ec2keypair_python">
-<a href="#ec2keypair_python" style="color: inherit; text-decoration: inherit;">ec2Key<wbr>Pair</a>
+        <span id="ec2_key_pair_python">
+<a href="#ec2_key_pair_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>key_<wbr>pair</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2391,15 +2392,15 @@ The following state arguments are supported:
 <a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Dict[Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template]</a></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The launch template to use for your compute resources. See details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotiamfleetrole_python">
-<a href="#spotiamfleetrole_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Iam<wbr>Fleet<wbr>Role</a>
+        <span id="spot_iam_fleet_role_python">
+<a href="#spot_iam_fleet_role_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>iam_<wbr>fleet_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2413,7 +2414,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment.
 {{% /md %}}</dd>
@@ -2565,8 +2566,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="launchtemplateid_python">
-<a href="#launchtemplateid_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
+        <span id="launch_template_id_python">
+<a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2576,8 +2577,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="launchtemplatename_python">
-<a href="#launchtemplatename_python" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
+        <span id="launch_template_name_python">
+<a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

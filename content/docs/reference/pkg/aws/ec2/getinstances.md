@@ -94,10 +94,10 @@ import pulumi_aws as aws
 test_instances = aws.ec2.get_instances(instance_tags={
         "Role": "HardWorker",
     },
-    filters=[{
-        "name": "instance.group-id",
-        "values": ["sg-12345678"],
-    }],
+    filters=[aws.ec2.GetInstancesFilterArgs(
+        name="instance.group-id",
+        values=["sg-12345678"],
+    )],
     instance_state_names=[
         "running",
         "stopped",
@@ -152,7 +152,7 @@ export = async () => {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>filters=None<span class="p">, </span>instance_state_names=None<span class="p">, </span>instance_tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstancesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">instance_state_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -312,7 +312,7 @@ exactly match a pair on desired instances.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesfilter">List[Get<wbr>Instances<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancesfilter">List[Get<wbr>Instances<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -336,7 +336,7 @@ several valid keys, for a full reference, check out
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on desired instances.
@@ -633,7 +633,7 @@ The following output properties are available:
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

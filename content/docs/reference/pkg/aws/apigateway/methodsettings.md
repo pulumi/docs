@@ -223,10 +223,10 @@ method_settings = aws.apigateway.MethodSettings("methodSettings",
     rest_api=test_rest_api.id,
     stage_name=test_stage.stage_name,
     method_path=pulumi.Output.all(test_resource.path_part, test_method.http_method).apply(lambda path_part, http_method: f"{path_part}/{http_method}"),
-    settings={
-        "metricsEnabled": True,
-        "loggingLevel": "INFO",
-    })
+    settings=aws.apigateway.MethodSettingsSettingsArgs(
+        metrics_enabled=True,
+        logging_level="INFO",
+    ))
 ```
 
 {{% /example %}}
@@ -297,7 +297,7 @@ const methodSettings = new aws.apigateway.MethodSettings("methodSettings", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.MethodSettings">MethodSettings</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>method_path=None<span class="p">, </span>rest_api=None<span class="p">, </span>settings=None<span class="p">, </span>stage_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.MethodSettings">MethodSettings</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">method_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[MethodSettingsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">stage_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -639,7 +639,7 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
@@ -650,7 +650,7 @@ The MethodSettings resource accepts the following [input]({{< relref "/docs/intr
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodsettingssettings">Dict[Method<wbr>Settings<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
@@ -764,7 +764,8 @@ Get an existing MethodSettings resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>method_path=None<span class="p">, </span>rest_api=None<span class="p">, </span>settings=None<span class="p">, </span>stage_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">method_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[MethodSettingsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">stage_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MethodSettings</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,7 +773,7 @@ Get an existing MethodSettings resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodSettings.html">MethodSettings</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodSettingsState.html">MethodSettingsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodSettings.html">MethodSettings</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodSettingsState.html">MethodSettingsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1048,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the REST API
 {{% /md %}}</dd>
@@ -1059,7 +1060,7 @@ The following state arguments are supported:
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodsettingssettings">Dict[Method<wbr>Settings<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings block, see below.
 {{% /md %}}</dd>
@@ -1461,8 +1462,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachedataencrypted_python">
-<a href="#cachedataencrypted_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Data<wbr>Encrypted</a>
+        <span id="cache_data_encrypted_python">
+<a href="#cache_data_encrypted_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>data_<wbr>encrypted</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1472,8 +1473,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachettlinseconds_python">
-<a href="#cachettlinseconds_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>In<wbr>Seconds</a>
+        <span id="cache_ttl_in_seconds_python">
+<a href="#cache_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1483,8 +1484,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachingenabled_python">
-<a href="#cachingenabled_python" style="color: inherit; text-decoration: inherit;">caching<wbr>Enabled</a>
+        <span id="caching_enabled_python">
+<a href="#caching_enabled_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1494,8 +1495,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datatraceenabled_python">
-<a href="#datatraceenabled_python" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
+        <span id="data_trace_enabled_python">
+<a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1505,8 +1506,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logginglevel_python">
-<a href="#logginglevel_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
+        <span id="logging_level_python">
+<a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1516,8 +1517,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metricsenabled_python">
-<a href="#metricsenabled_python" style="color: inherit; text-decoration: inherit;">metrics<wbr>Enabled</a>
+        <span id="metrics_enabled_python">
+<a href="#metrics_enabled_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1527,8 +1528,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requireauthorizationforcachecontrol_python">
-<a href="#requireauthorizationforcachecontrol_python" style="color: inherit; text-decoration: inherit;">require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</a>
+        <span id="require_authorization_for_cache_control_python">
+<a href="#require_authorization_for_cache_control_python" style="color: inherit; text-decoration: inherit;">require_<wbr>authorization_<wbr>for_<wbr>cache_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1538,8 +1539,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlingburstlimit_python">
-<a href="#throttlingburstlimit_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
+        <span id="throttling_burst_limit_python">
+<a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1549,8 +1550,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlingratelimit_python">
-<a href="#throttlingratelimit_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
+        <span id="throttling_rate_limit_python">
+<a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1560,8 +1561,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unauthorizedcachecontrolheaderstrategy_python">
-<a href="#unauthorizedcachecontrolheaderstrategy_python" style="color: inherit; text-decoration: inherit;">unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</a>
+        <span id="unauthorized_cache_control_header_strategy_python">
+<a href="#unauthorized_cache_control_header_strategy_python" style="color: inherit; text-decoration: inherit;">unauthorized_<wbr>cache_<wbr>control_<wbr>header_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

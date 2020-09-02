@@ -88,14 +88,14 @@ import pulumi
 import pulumi_aws as aws
 
 geo_match_set = aws.waf.GeoMatchSet("geoMatchSet", geo_match_constraints=[
-    {
-        "type": "Country",
-        "value": "US",
-    },
-    {
-        "type": "Country",
-        "value": "CA",
-    },
+    aws.waf.GeoMatchSetGeoMatchConstraintArgs(
+        type="Country",
+        value="US",
+    ),
+    aws.waf.GeoMatchSetGeoMatchConstraintArgs(
+        type="Country",
+        value="CA",
+    ),
 ])
 ```
 
@@ -135,7 +135,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.GeoMatchSet">GeoMatchSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>geo_match_constraints=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.GeoMatchSet">GeoMatchSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">geo_match_constraints</span><span class="p">:</span> <span class="nx">Optional[List[GeoMatchSetGeoMatchConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -400,7 +400,7 @@ The GeoMatchSet resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#geo_match_constraints_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>match_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd>
@@ -558,7 +558,8 @@ Get an existing GeoMatchSet resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>geo_match_constraints=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_match_constraints</span><span class="p">:</span> <span class="nx">Optional[List[GeoMatchSetGeoMatchConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GeoMatchSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -566,7 +567,7 @@ Get an existing GeoMatchSet resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.GeoMatchSet.html">GeoMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.GeoMatchSetState.html">GeoMatchSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.GeoMatchSet.html">GeoMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.GeoMatchSetState.html">GeoMatchSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -809,7 +810,7 @@ The following state arguments are supported:
 <a href="#state_geo_match_constraints_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>match_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd>

@@ -62,34 +62,34 @@ import pulumi
 import pulumi_aws as aws
 
 example_policy_document = aws.iam.get_policy_document(statements=[
-    {
-        "sid": "1",
-        "actions": [
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="1",
+        actions=[
             "s3:ListAllMyBuckets",
             "s3:GetBucketLocation",
         ],
-        "resources": ["arn:aws:s3:::*"],
-    },
-    {
-        "actions": ["s3:ListBucket"],
-        "resources": [f"arn:aws:s3:::{var['s3_bucket_name']}"],
-        "conditions": [{
-            "test": "StringLike",
-            "variable": "s3:prefix",
-            "values": [
+        resources=["arn:aws:s3:::*"],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        actions=["s3:ListBucket"],
+        resources=[f"arn:aws:s3:::{var['s3_bucket_name']}"],
+        conditions=[aws.iam.GetPolicyDocumentStatementConditionArgs(
+            test="StringLike",
+            variable="s3:prefix",
+            values=[
                 "",
                 "home/",
                 "home/&{aws:username}/",
             ],
-        }],
-    },
-    {
-        "actions": ["s3:*"],
-        "resources": [
+        )],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        actions=["s3:*"],
+        resources=[
             f"arn:aws:s3:::{var['s3_bucket_name']}/home/&{{aws:username}}",
             f"arn:aws:s3:::{var['s3_bucket_name']}/home/&{{aws:username}}/*",
         ],
-    },
+    ),
 ])
 example_policy = aws.iam.Policy("examplePolicy",
     path="/",
@@ -321,44 +321,44 @@ import pulumi
 import pulumi_aws as aws
 
 source = aws.iam.get_policy_document(statements=[
-    {
-        "actions": ["ec2:*"],
-        "resources": ["*"],
-    },
-    {
-        "sid": "SidToOverwrite",
-        "actions": ["s3:*"],
-        "resources": ["*"],
-    },
+    aws.iam.GetPolicyDocumentStatementArgs(
+        actions=["ec2:*"],
+        resources=["*"],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="SidToOverwrite",
+        actions=["s3:*"],
+        resources=["*"],
+    ),
 ])
 source_json_example = aws.iam.get_policy_document(source_json=source.json,
-    statements=[{
-        "sid": "SidToOverwrite",
-        "actions": ["s3:*"],
-        "resources": [
+    statements=[aws.iam.GetPolicyDocumentStatementArgs(
+        sid="SidToOverwrite",
+        actions=["s3:*"],
+        resources=[
             "arn:aws:s3:::somebucket",
             "arn:aws:s3:::somebucket/*",
         ],
-    }])
-override = aws.iam.get_policy_document(statements=[{
-    "sid": "SidToOverwrite",
-    "actions": ["s3:*"],
-    "resources": ["*"],
-}])
+    )])
+override = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    sid="SidToOverwrite",
+    actions=["s3:*"],
+    resources=["*"],
+)])
 override_json_example = aws.iam.get_policy_document(override_json=override.json,
     statements=[
-        {
-            "actions": ["ec2:*"],
-            "resources": ["*"],
-        },
-        {
-            "sid": "SidToOverwrite",
-            "actions": ["s3:*"],
-            "resources": [
+        aws.iam.GetPolicyDocumentStatementArgs(
+            actions=["ec2:*"],
+            resources=["*"],
+        ),
+        aws.iam.GetPolicyDocumentStatementArgs(
+            sid="SidToOverwrite",
+            actions=["s3:*"],
+            resources=[
                 "arn:aws:s3:::somebucket",
                 "arn:aws:s3:::somebucket/*",
             ],
-        },
+        ),
     ])
 ```
 ```csharp
@@ -671,16 +671,16 @@ const politik = Promise.all([source, override]).then(([source, override]) => aws
 import pulumi
 import pulumi_aws as aws
 
-source = aws.iam.get_policy_document(statements=[{
-    "sid": "OverridePlaceholder",
-    "actions": ["ec2:DescribeAccountAttributes"],
-    "resources": ["*"],
-}])
-override = aws.iam.get_policy_document(statements=[{
-    "sid": "OverridePlaceholder",
-    "actions": ["s3:GetObject"],
-    "resources": ["*"],
-}])
+source = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    sid="OverridePlaceholder",
+    actions=["ec2:DescribeAccountAttributes"],
+    resources=["*"],
+)])
+override = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    sid="OverridePlaceholder",
+    actions=["s3:GetObject"],
+    resources=["*"],
+)])
 politik = aws.iam.get_policy_document(source_json=source.json,
     override_json=override.json)
 ```
@@ -844,7 +844,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_policy_document(</span>override_json=None<span class="p">, </span>policy_id=None<span class="p">, </span>source_json=None<span class="p">, </span>statements=None<span class="p">, </span>version=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[List[GetPolicyDocumentStatementArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1121,7 +1121,7 @@ json.  Statements without an `sid` cannot be overwritten.
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
@@ -1867,7 +1867,7 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 that defines a further, possibly-service-specific condition that constrains
@@ -1888,8 +1888,8 @@ statement allows or denies the given actions. The default is "Allow".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notactions_python">
-<a href="#notactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
+        <span id="not_actions_python">
+<a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1901,11 +1901,11 @@ listed.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notprincipals_python">
-<a href="#notprincipals_python" style="color: inherit; text-decoration: inherit;">not<wbr>Principals</a>
+        <span id="not_principals_python">
+<a href="#not_principals_python" style="color: inherit; text-decoration: inherit;">not_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Like `principals` except gives principals that
 the statement does *not* apply to.
@@ -1913,8 +1913,8 @@ the statement does *not* apply to.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notresources_python">
-<a href="#notresources_python" style="color: inherit; text-decoration: inherit;">not<wbr>Resources</a>
+        <span id="not_resources_python">
+<a href="#not_resources_python" style="color: inherit; text-decoration: inherit;">not_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1930,7 +1930,7 @@ does *not* apply to. Used to apply a policy statement to all resources
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 specifying a principal (or principal pattern) to which this statement applies.

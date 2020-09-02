@@ -24,7 +24,7 @@ meta_desc: "Explore the GetSecret function of the kms module, including examples
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret(</span>secrets=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret(</span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[GetSecretSecretArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,7 +106,7 @@ The following arguments are supported:
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretsecret">List[Get<wbr>Secret<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#getsecretsecret">List[Get<wbr>Secret<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -433,14 +433,14 @@ The following output properties are available:
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="granttokens_python">
-<a href="#granttokens_python" style="color: inherit; text-decoration: inherit;">grant<wbr>Tokens</a>
+        <span id="grant_tokens_python">
+<a href="#grant_tokens_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

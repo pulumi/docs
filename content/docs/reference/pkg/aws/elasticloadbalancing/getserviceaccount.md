@@ -161,16 +161,16 @@ elb_logs = aws.s3.Bucket("elbLogs",
 """)
 bar = aws.elb.LoadBalancer("bar",
     availability_zones=["us-west-2a"],
-    access_logs={
-        "bucket": elb_logs.bucket,
-        "interval": 5,
-    },
-    listeners=[{
-        "instance_port": 8000,
-        "instanceProtocol": "http",
-        "lb_port": 80,
-        "lbProtocol": "http",
-    }])
+    access_logs=aws.elb.LoadBalancerAccessLogsArgs(
+        bucket=elb_logs.bucket,
+        interval=5,
+    ),
+    listeners=[aws.elb.LoadBalancerListenerArgs(
+        instance_port=8000,
+        instance_protocol="http",
+        lb_port=80,
+        lb_protocol="http",
+    )])
 ```
 
 {{% /example %}}
@@ -236,7 +236,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_service_account(</span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_account(</span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceAccountResult</code></pre></div>
 {{% /choosable %}}
 
 

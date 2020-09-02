@@ -111,13 +111,13 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-foo = aws.ec2.get_customer_gateway(filters=[{
-    "name": "tag:Name",
-    "values": ["foo-prod"],
-}])
+foo = aws.ec2.get_customer_gateway(filters=[aws.ec2.GetCustomerGatewayFilterArgs(
+    name="tag:Name",
+    values=["foo-prod"],
+)])
 main = aws.ec2.VpnGateway("main",
     vpc_id=aws_vpc["main"]["id"],
-    amazon_side_asn=7224)
+    amazon_side_asn="7224")
 transit = aws.ec2.VpnConnection("transit",
     vpn_gateway_id=main.id,
     customer_gateway_id=foo.id,
@@ -167,7 +167,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_customer_gateway(</span>filters=None<span class="p">, </span>id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_customer_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetCustomerGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomerGatewayResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -320,7 +320,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomergatewayfilter">List[Get<wbr>Customer<wbr>Gateway<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getcustomergatewayfilter">List[Get<wbr>Customer<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more [name-value pairs][dcg-filters] to filter by.
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of key-value pairs assigned to the gateway.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of key-value pairs assigned to the gateway.
 {{% /md %}}</dd>

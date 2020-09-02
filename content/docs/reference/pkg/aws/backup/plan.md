@@ -80,11 +80,11 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.backup.Plan("example", rules=[{
-    "rule_name": "tf_example_backup_rule",
-    "targetVaultName": aws_backup_vault["test"]["name"],
-    "schedule": "cron(0 12 * * ? *)",
-}])
+example = aws.backup.Plan("example", rules=[aws.backup.PlanRuleArgs(
+    rule_name="tf_example_backup_rule",
+    target_vault_name=aws_backup_vault["test"]["name"],
+    schedule="cron(0 12 * * ? *)",
+)])
 ```
 
 {{% /example %}}
@@ -116,7 +116,7 @@ const example = new aws.backup.Plan("example", {rules: [{
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/backup/#pulumi_aws.backup.Plan">Plan</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/backup/#pulumi_aws.backup.Plan">Plan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -414,7 +414,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">List[Plan<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#planrule">List[Plan<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd>
@@ -436,7 +436,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -627,7 +627,8 @@ Get an existing Plan resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>rules=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[PlanRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Plan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +636,7 @@ Get an existing Plan resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Plan.html">Plan</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.PlanState.html">PlanState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Plan.html">Plan</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.PlanState.html">PlanState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -955,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">List[Plan<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#planrule">List[Plan<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd>
@@ -966,7 +967,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -1313,8 +1314,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetvaultname_python">
-<a href="#targetvaultname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Vault<wbr>Name</a>
+        <span id="target_vault_name_python">
+<a href="#target_vault_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vault_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1324,8 +1325,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="completionwindow_python">
-<a href="#completionwindow_python" style="color: inherit; text-decoration: inherit;">completion<wbr>Window</a>
+        <span id="completion_window_python">
+<a href="#completion_window_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1335,11 +1336,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="copyactions_python">
-<a href="#copyactions_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Actions</a>
+        <span id="copy_actions_python">
+<a href="#copy_actions_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyaction">List[Plan<wbr>Rule<wbr>Copy<wbr>Action]</a></span>
+        <span class="property-type"><a href="#planrulecopyaction">List[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
 {{% /md %}}</dd>
@@ -1350,18 +1351,18 @@ The following state arguments are supported:
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Dict[Plan<wbr>Rule<wbr>Lifecycle]</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recoverypointtags_python">
-<a href="#recoverypointtags_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Tags</a>
+        <span id="recovery_point_tags_python">
+<a href="#recovery_point_tags_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>
@@ -1379,8 +1380,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="startwindow_python">
-<a href="#startwindow_python" style="color: inherit; text-decoration: inherit;">start<wbr>Window</a>
+        <span id="start_window_python">
+<a href="#start_window_python" style="color: inherit; text-decoration: inherit;">start_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1502,8 +1503,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationvaultarn_python">
-<a href="#destinationvaultarn_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Vault<wbr>Arn</a>
+        <span id="destination_vault_arn_python">
+<a href="#destination_vault_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>vault_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1517,7 +1518,7 @@ The following state arguments are supported:
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulecopyactionlifecycle">Dict[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle]</a></span>
+        <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
 {{% /md %}}</dd>
@@ -1636,8 +1637,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="coldstorageafter_python">
-<a href="#coldstorageafter_python" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>After</a>
+        <span id="cold_storage_after_python">
+<a href="#cold_storage_after_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1647,8 +1648,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteafter_python">
-<a href="#deleteafter_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
+        <span id="delete_after_python">
+<a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1770,8 +1771,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="coldstorageafter_python">
-<a href="#coldstorageafter_python" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>After</a>
+        <span id="cold_storage_after_python">
+<a href="#cold_storage_after_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1781,8 +1782,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteafter_python">
-<a href="#deleteafter_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
+        <span id="delete_after_python">
+<a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

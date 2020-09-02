@@ -79,9 +79,9 @@ import pulumi_aws as aws
 
 example = aws.glue.Job("example",
     role_arn=aws_iam_role["example"]["arn"],
-    command={
-        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.py",
-    })
+    command=aws.glue.JobCommandArgs(
+        script_location=f"s3://{aws_s3_bucket['example']['bucket']}/example.py",
+    ))
 ```
 
 {{% /example %}}
@@ -170,9 +170,9 @@ import pulumi_aws as aws
 
 example = aws.glue.Job("example",
     role_arn=aws_iam_role["example"]["arn"],
-    command={
-        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.scala",
-    },
+    command=aws.glue.JobCommandArgs(
+        script_location=f"s3://{aws_s3_bucket['example']['bucket']}/example.scala",
+    ),
     default_arguments={
         "--job-language": "scala",
     })
@@ -314,7 +314,7 @@ const exampleJob = new aws.glue.Job("exampleJob", {defaultArguments: {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>command=None<span class="p">, </span>connections=None<span class="p">, </span>default_arguments=None<span class="p">, </span>description=None<span class="p">, </span>execution_property=None<span class="p">, </span>glue_version=None<span class="p">, </span>max_capacity=None<span class="p">, </span>max_retries=None<span class="p">, </span>name=None<span class="p">, </span>notification_property=None<span class="p">, </span>number_of_workers=None<span class="p">, </span>role_arn=None<span class="p">, </span>security_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>worker_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Job">Job</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[JobCommandArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_property</span><span class="p">:</span> <span class="nx">Optional[JobExecutionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_property</span><span class="p">:</span> <span class="nx">Optional[JobNotificationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1041,7 +1041,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Dict[Job<wbr>Command]</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
@@ -1074,7 +1074,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#default_arguments_python" style="color: inherit; text-decoration: inherit;">default_<wbr>arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#execution_property_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>property</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Dict[Job<wbr>Execution<wbr>Property]</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -1151,7 +1151,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#notification_property_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>property</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Dict[Job<wbr>Notification<wbr>Property]</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -1184,7 +1184,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1353,7 +1353,8 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>command=None<span class="p">, </span>connections=None<span class="p">, </span>default_arguments=None<span class="p">, </span>description=None<span class="p">, </span>execution_property=None<span class="p">, </span>glue_version=None<span class="p">, </span>max_capacity=None<span class="p">, </span>max_retries=None<span class="p">, </span>name=None<span class="p">, </span>notification_property=None<span class="p">, </span>number_of_workers=None<span class="p">, </span>role_arn=None<span class="p">, </span>security_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>worker_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[JobCommandArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_property</span><span class="p">:</span> <span class="nx">Optional[JobExecutionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_property</span><span class="p">:</span> <span class="nx">Optional[JobNotificationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1361,7 +1362,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.JobState.html">JobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.JobState.html">JobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2066,7 +2067,7 @@ The following state arguments are supported:
 <a href="#state_command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Dict[Job<wbr>Command]</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
@@ -2088,7 +2089,7 @@ The following state arguments are supported:
 <a href="#state_default_arguments_python" style="color: inherit; text-decoration: inherit;">default_<wbr>arguments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
 {{% /md %}}</dd>
@@ -2110,7 +2111,7 @@ The following state arguments are supported:
 <a href="#state_execution_property_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>property</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Dict[Job<wbr>Execution<wbr>Property]</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -2165,7 +2166,7 @@ The following state arguments are supported:
 <a href="#state_notification_property_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>property</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Dict[Job<wbr>Notification<wbr>Property]</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -2209,7 +2210,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2391,8 +2392,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="scriptlocation_python">
-<a href="#scriptlocation_python" style="color: inherit; text-decoration: inherit;">script<wbr>Location</a>
+        <span id="script_location_python">
+<a href="#script_location_python" style="color: inherit; text-decoration: inherit;">script_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2413,8 +2414,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pythonversion_python">
-<a href="#pythonversion_python" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+        <span id="python_version_python">
+<a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2503,8 +2504,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconcurrentruns_python">
-<a href="#maxconcurrentruns_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Runs</a>
+        <span id="max_concurrent_runs_python">
+<a href="#max_concurrent_runs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>runs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2593,8 +2594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notifydelayafter_python">
-<a href="#notifydelayafter_python" style="color: inherit; text-decoration: inherit;">notify<wbr>Delay<wbr>After</a>
+        <span id="notify_delay_after_python">
+<a href="#notify_delay_after_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>delay_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

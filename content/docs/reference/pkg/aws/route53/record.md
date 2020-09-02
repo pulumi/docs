@@ -134,20 +134,20 @@ www_dev = aws.route53.Record("www-dev",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="www",
     type="CNAME",
-    ttl="5",
-    weighted_routing_policies=[{
-        "weight": 10,
-    }],
+    ttl=5,
+    weighted_routing_policies=[aws.route53.RecordWeightedRoutingPolicyArgs(
+        weight=10,
+    )],
     set_identifier="dev",
     records=["dev.example.com"])
 www_live = aws.route53.Record("www-live",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="www",
     type="CNAME",
-    ttl="5",
-    weighted_routing_policies=[{
-        "weight": 90,
-    }],
+    ttl=5,
+    weighted_routing_policies=[aws.route53.RecordWeightedRoutingPolicyArgs(
+        weight=90,
+    )],
     set_identifier="live",
     records=["live.example.com"])
 ```
@@ -292,21 +292,21 @@ import pulumi_aws as aws
 
 main = aws.elb.LoadBalancer("main",
     availability_zones=["us-east-1c"],
-    listeners=[{
-        "instance_port": 80,
-        "instanceProtocol": "http",
-        "lb_port": 80,
-        "lbProtocol": "http",
-    }])
+    listeners=[aws.elb.LoadBalancerListenerArgs(
+        instance_port=80,
+        instance_protocol="http",
+        lb_port=80,
+        lb_protocol="http",
+    )])
 www = aws.route53.Record("www",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="example.com",
     type="A",
-    aliases=[{
-        "name": main.dns_name,
-        "zone_id": main.zone_id,
-        "evaluateTargetHealth": True,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        name=main.dns_name,
+        zone_id=main.zone_id,
+        evaluate_target_health=True,
+    )])
 ```
 
 {{% /example %}}
@@ -479,7 +479,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/route53/#pulumi_aws.route53.Record">Record</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aliases=None<span class="p">, </span>allow_overwrite=None<span class="p">, </span>failover_routing_policies=None<span class="p">, </span>geolocation_routing_policies=None<span class="p">, </span>health_check_id=None<span class="p">, </span>latency_routing_policies=None<span class="p">, </span>multivalue_answer_routing_policy=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>set_identifier=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>weighted_routing_policies=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/route53/#pulumi_aws.route53.Record">Record</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[RecordAliasArgs]]</span> = None<span class="p">, </span><span class="nx">allow_overwrite</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failover_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordFailoverRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">geolocation_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordGeolocationRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latency_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordLatencyRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">multivalue_answer_routing_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">set_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weighted_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordWeightedRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1154,7 +1154,7 @@ Alias record documented below.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ Alias record documented below.
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
@@ -1199,7 +1199,7 @@ Alias record documented below.
 <a href="#failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -1210,7 +1210,7 @@ Alias record documented below.
 <a href="#geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ Alias record documented below.
 <a href="#latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -1287,7 +1287,7 @@ Alias record documented below.
 <a href="#weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -1434,7 +1434,8 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>aliases=None<span class="p">, </span>allow_overwrite=None<span class="p">, </span>failover_routing_policies=None<span class="p">, </span>fqdn=None<span class="p">, </span>geolocation_routing_policies=None<span class="p">, </span>health_check_id=None<span class="p">, </span>latency_routing_policies=None<span class="p">, </span>multivalue_answer_routing_policy=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>set_identifier=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>weighted_routing_policies=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[RecordAliasArgs]]</span> = None<span class="p">, </span><span class="nx">allow_overwrite</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failover_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordFailoverRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geolocation_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordGeolocationRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latency_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordLatencyRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">multivalue_answer_routing_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">set_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weighted_routing_policies</span><span class="p">:</span> <span class="nx">Optional[List[RecordWeightedRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1442,7 +1443,7 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2073,7 +2074,7 @@ Alias record documented below.
 <a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
@@ -2096,7 +2097,7 @@ Alias record documented below.
 <a href="#state_failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -2118,7 +2119,7 @@ Alias record documented below.
 <a href="#state_geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -2140,7 +2141,7 @@ Alias record documented below.
 <a href="#state_latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -2206,7 +2207,7 @@ Alias record documented below.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
@@ -2217,7 +2218,7 @@ Alias record documented below.
 <a href="#state_weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
@@ -2388,8 +2389,8 @@ Alias record documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="evaluatetargethealth_python">
-<a href="#evaluatetargethealth_python" style="color: inherit; text-decoration: inherit;">evaluate<wbr>Target<wbr>Health</a>
+        <span id="evaluate_target_health_python">
+<a href="#evaluate_target_health_python" style="color: inherit; text-decoration: inherit;">evaluate_<wbr>target_<wbr>health</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

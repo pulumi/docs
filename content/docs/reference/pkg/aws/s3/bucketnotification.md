@@ -139,11 +139,11 @@ topic = aws.sns.Topic("topic", policy=bucket.arn.apply(lambda arn: f"""{{
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
-    topics=[{
-        "topic_arn": topic.arn,
-        "events": ["s3:ObjectCreated:*"],
-        "filterSuffix": ".log",
-    }])
+    topics=[aws.s3.BucketNotificationTopicArgs(
+        topic_arn=topic.arn,
+        events=["s3:ObjectCreated:*"],
+        filter_suffix=".log",
+    )])
 ```
 
 {{% /example %}}
@@ -305,11 +305,11 @@ queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
-    queues=[{
-        "queueArn": queue.arn,
-        "events": ["s3:ObjectCreated:*"],
-        "filterSuffix": ".log",
-    }])
+    queues=[aws.s3.BucketNotificationQueueArgs(
+        queue_arn=queue.arn,
+        events=["s3:ObjectCreated:*"],
+        filter_suffix=".log",
+    )])
 ```
 
 {{% /example %}}
@@ -456,12 +456,12 @@ allow_bucket = aws.lambda_.Permission("allowBucket",
     source_arn=bucket.arn)
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
-    lambda_functions=[{
-        "lambda_function_arn": func.arn,
-        "events": ["s3:ObjectCreated:*"],
-        "filterPrefix": "AWSLogs/",
-        "filterSuffix": ".log",
-    }],
+    lambda_functions=[aws.s3.BucketNotificationLambdaFunctionArgs(
+        lambda_function_arn=func.arn,
+        events=["s3:ObjectCreated:*"],
+        filter_prefix="AWSLogs/",
+        filter_suffix=".log",
+    )],
     opts=ResourceOptions(depends_on=[allow_bucket]))
 ```
 
@@ -656,18 +656,18 @@ allow_bucket2 = aws.lambda_.Permission("allowBucket2",
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     lambda_functions=[
-        {
-            "lambda_function_arn": func1.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "AWSLogs/",
-            "filterSuffix": ".log",
-        },
-        {
-            "lambda_function_arn": func2.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "OtherLogs/",
-            "filterSuffix": ".log",
-        },
+        aws.s3.BucketNotificationLambdaFunctionArgs(
+            lambda_function_arn=func1.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="AWSLogs/",
+            filter_suffix=".log",
+        ),
+        aws.s3.BucketNotificationLambdaFunctionArgs(
+            lambda_function_arn=func2.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="OtherLogs/",
+            filter_suffix=".log",
+        ),
     ],
     opts=ResourceOptions(depends_on=[
             allow_bucket1,
@@ -892,18 +892,18 @@ queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     queues=[
-        {
-            "id": "image-upload-event",
-            "queueArn": queue.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "images/",
-        },
-        {
-            "id": "video-upload-event",
-            "queueArn": queue.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "videos/",
-        },
+        aws.s3.BucketNotificationQueueArgs(
+            id="image-upload-event",
+            queue_arn=queue.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="images/",
+        ),
+        aws.s3.BucketNotificationQueueArgs(
+            id="video-upload-event",
+            queue_arn=queue.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="videos/",
+        ),
     ])
 ```
 
@@ -964,7 +964,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketNotification">BucketNotification</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>lambda_functions=None<span class="p">, </span>queues=None<span class="p">, </span>topics=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketNotification">BucketNotification</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationTopicArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1306,7 +1306,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function]</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -1317,7 +1317,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue]</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -1328,7 +1328,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic]</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -1431,7 +1431,8 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket=None<span class="p">, </span>lambda_functions=None<span class="p">, </span>queues=None<span class="p">, </span>topics=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationTopicArgs]]</span> = None<span class="p">) -&gt;</span> BucketNotification</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1439,7 +1440,7 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotification.html">BucketNotification</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotificationState.html">BucketNotificationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotification.html">BucketNotification</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotificationState.html">BucketNotificationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1715,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function]</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -1726,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue]</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -1737,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic]</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -1974,8 +1975,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filterprefix_python">
-<a href="#filterprefix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
+        <span id="filter_prefix_python">
+<a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1985,8 +1986,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersuffix_python">
-<a href="#filtersuffix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
+        <span id="filter_suffix_python">
+<a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2240,8 +2241,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="queuearn_python">
-<a href="#queuearn_python" style="color: inherit; text-decoration: inherit;">queue<wbr>Arn</a>
+        <span id="queue_arn_python">
+<a href="#queue_arn_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2251,8 +2252,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filterprefix_python">
-<a href="#filterprefix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
+        <span id="filter_prefix_python">
+<a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2262,8 +2263,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersuffix_python">
-<a href="#filtersuffix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
+        <span id="filter_suffix_python">
+<a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2517,8 +2518,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filterprefix_python">
-<a href="#filterprefix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
+        <span id="filter_prefix_python">
+<a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2528,8 +2529,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersuffix_python">
-<a href="#filtersuffix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
+        <span id="filter_suffix_python">
+<a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -78,9 +78,9 @@ import pulumi_aws as aws
 example = aws.secretsmanager.SecretRotation("example",
     secret_id=aws_secretsmanager_secret["example"]["id"],
     rotation_lambda_arn=aws_lambda_function["example"]["arn"],
-    rotation_rules={
-        "automaticallyAfterDays": 30,
-    })
+    rotation_rules=aws.secretsmanager.SecretRotationRotationRulesArgs(
+        automatically_after_days=30,
+    ))
 ```
 
 {{% /example %}}
@@ -114,7 +114,7 @@ const example = new aws.secretsmanager.SecretRotation("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/secretsmanager/#pulumi_aws.secretsmanager.SecretRotation">SecretRotation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>rotation_lambda_arn=None<span class="p">, </span>rotation_rules=None<span class="p">, </span>secret_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/secretsmanager/#pulumi_aws.secretsmanager.SecretRotation">SecretRotation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">rotation_lambda_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_rules</span><span class="p">:</span> <span class="nx">Optional[SecretRotationRotationRulesArgs]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +453,7 @@ The SecretRotation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrotationrotationrules">Dict[Secret<wbr>Rotation<wbr>Rotation<wbr>Rules]</a></span>
+        <span class="property-type"><a href="#secretrotationrotationrules">Secret<wbr>Rotation<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below.
 {{% /md %}}</dd>
@@ -475,7 +475,7 @@ The SecretRotation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -621,7 +621,8 @@ Get an existing SecretRotation resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>rotation_enabled=None<span class="p">, </span>rotation_lambda_arn=None<span class="p">, </span>rotation_rules=None<span class="p">, </span>secret_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">rotation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">rotation_lambda_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_rules</span><span class="p">:</span> <span class="nx">Optional[SecretRotationRotationRulesArgs]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> SecretRotation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,7 +630,7 @@ Get an existing SecretRotation resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.SecretRotation.html">SecretRotation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.SecretRotationState.html">SecretRotationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.SecretRotation.html">SecretRotation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.SecretRotationState.html">SecretRotationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -946,7 +947,7 @@ The following state arguments are supported:
 <a href="#state_rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrotationrotationrules">Dict[Secret<wbr>Rotation<wbr>Rotation<wbr>Rules]</a></span>
+        <span class="property-type"><a href="#secretrotationrotationrules">Secret<wbr>Rotation<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below.
 {{% /md %}}</dd>
@@ -968,7 +969,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1061,8 +1062,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="automaticallyafterdays_python">
-<a href="#automaticallyafterdays_python" style="color: inherit; text-decoration: inherit;">automatically<wbr>After<wbr>Days</a>
+        <span id="automatically_after_days_python">
+<a href="#automatically_after_days_python" style="color: inherit; text-decoration: inherit;">automatically_<wbr>after_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

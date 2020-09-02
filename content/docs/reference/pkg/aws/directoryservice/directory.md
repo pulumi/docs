@@ -144,13 +144,13 @@ bar_subnet = aws.ec2.Subnet("barSubnet",
 bar_directory = aws.directoryservice.Directory("barDirectory",
     password="SuperSecretPassw0rd",
     size="Small",
-    vpc_settings={
-        "vpc_id": main.id,
-        "subnet_ids": [
+    vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
+        vpc_id=main.id,
+        subnet_ids=[
             foo.id,
             bar_subnet.id,
         ],
-    },
+    ),
     tags={
         "Project": "foo",
     })
@@ -322,13 +322,13 @@ bar_directory = aws.directoryservice.Directory("barDirectory",
     password="SuperSecretPassw0rd",
     edition="Standard",
     type="MicrosoftAD",
-    vpc_settings={
-        "vpc_id": main.id,
-        "subnet_ids": [
+    vpc_settings=aws.directoryservice.DirectoryVpcSettingsArgs(
+        vpc_id=main.id,
+        subnet_ids=[
             foo.id,
             bar_subnet.id,
         ],
-    },
+    ),
     tags={
         "Project": "foo",
     })
@@ -503,15 +503,15 @@ connector = aws.directoryservice.Directory("connector",
     password="SuperSecretPassw0rd",
     size="Small",
     type="ADConnector",
-    connect_settings={
-        "customerDnsIps": ["A.B.C.D"],
-        "customerUsername": "Admin",
-        "subnet_ids": [
+    connect_settings=aws.directoryservice.DirectoryConnectSettingsArgs(
+        customer_dns_ips=["A.B.C.D"],
+        customer_username="Admin",
+        subnet_ids=[
             foo.id,
             bar.id,
         ],
-        "vpc_id": main.id,
-    })
+        vpc_id=main.id,
+    ))
 ```
 
 {{% /example %}}
@@ -563,7 +563,7 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/directoryservice/#pulumi_aws.directoryservice.Directory">Directory</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alias=None<span class="p">, </span>connect_settings=None<span class="p">, </span>description=None<span class="p">, </span>edition=None<span class="p">, </span>enable_sso=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>short_name=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>vpc_settings=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/directoryservice/#pulumi_aws.directoryservice.Directory">Directory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connect_settings</span><span class="p">:</span> <span class="nx">Optional[DirectoryConnectSettingsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_settings</span><span class="p">:</span> <span class="nx">Optional[DirectoryVpcSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1180,7 +1180,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connect_settings_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Dict[Directory<wbr>Connect<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1257,7 +1257,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1279,7 +1279,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#vpc_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Dict[Directory<wbr>Vpc<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1514,7 +1514,8 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_url=None<span class="p">, </span>alias=None<span class="p">, </span>connect_settings=None<span class="p">, </span>description=None<span class="p">, </span>dns_ip_addresses=None<span class="p">, </span>edition=None<span class="p">, </span>enable_sso=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>security_group_id=None<span class="p">, </span>short_name=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>vpc_settings=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connect_settings</span><span class="p">:</span> <span class="nx">Optional[DirectoryConnectSettingsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_settings</span><span class="p">:</span> <span class="nx">Optional[DirectoryVpcSettingsArgs]</span> = None<span class="p">) -&gt;</span> Directory</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1522,7 +1523,7 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Directory.html">Directory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.DirectoryState.html">DirectoryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Directory.html">Directory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.DirectoryState.html">DirectoryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2172,7 +2173,7 @@ The following state arguments are supported:
 <a href="#state_connect_settings_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Dict[Directory<wbr>Connect<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -2282,7 +2283,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2304,7 +2305,7 @@ The following state arguments are supported:
 <a href="#state_vpc_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Dict[Directory<wbr>Vpc<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -2560,8 +2561,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerdnsips_python">
-<a href="#customerdnsips_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Dns<wbr>Ips</a>
+        <span id="customer_dns_ips_python">
+<a href="#customer_dns_ips_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>dns_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2571,8 +2572,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerusername_python">
-<a href="#customerusername_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Username</a>
+        <span id="customer_username_python">
+<a href="#customer_username_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2614,8 +2615,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectips_python">
-<a href="#connectips_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Ips</a>
+        <span id="connect_ips_python">
+<a href="#connect_ips_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

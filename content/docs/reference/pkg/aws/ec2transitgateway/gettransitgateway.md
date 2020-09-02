@@ -83,10 +83,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ec2transitgateway.get_transit_gateway(filters=[{
-    "name": "options.amazon-side-asn",
-    "values": ["64512"],
-}])
+example = aws.ec2transitgateway.get_transit_gateway(filters=[aws.ec2transitgateway.GetTransitGatewayFilterArgs(
+    name="options.amazon-side-asn",
+    values=["64512"],
+)])
 ```
 
 {{% /example %}}
@@ -190,7 +190,7 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_transit_gateway(</span>filters=None<span class="p">, </span>id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_transit_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetTransitGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTransitGatewayResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -343,7 +343,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettransitgatewayfilter">List[Get<wbr>Transit<wbr>Gateway<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#gettransitgatewayfilter">List[Get<wbr>Transit<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
@@ -986,7 +986,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
