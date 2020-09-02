@@ -17,8 +17,28 @@
 
 {{ define "main" }}
     {{ $webinars := (where $.Pages "Type" "webinars") }}
+    {{ $events := (where $.Site.Pages "Type" "events") }}
+
     {{ $listed_webinars := (where $webinars ".Params.unlisted" false) }}
+    {{ $listed_events := (where $events ".Params.unlisted" "!=" true )}}
+
     {{ $non_pulumi_tv_webinars := (where $listed_webinars ".Params.pulumi_tv" false)}}
+
+    {{ $eventListWebinars := slice }}
+    {{ range $listed_webinars }}
+        {{ $eventListWebinars = $eventListWebinars | append (.Params | jsonify)}}
+    {{ end }}
+
+    {{ $eventListEvents := slice }}
+    {{ range $listed_events }}
+        {{ $eventListEvents = $eventListEvents | append (.Params | jsonify)}}
+    {{ end }}
+
+    <pulumi-event-list
+        webinars="[{{ delimit $eventListWebinars "," }}]"
+        events="[{{ delimit $eventListEvents "," }}]"
+    ></pulumi-event-list>
+
     <div id="webinarListings" class="container mx-auto">
         <div class="my-10">
             <ul class="flex">

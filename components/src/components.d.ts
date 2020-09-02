@@ -21,6 +21,9 @@ import {
 import {
   SourceKind,
 } from './components/convert/convert';
+import {
+  PulumiEvent,
+} from './util/types/events';
 
 export namespace Components {
   interface PulumiBanner {
@@ -47,6 +50,13 @@ export namespace Components {
     'examples': string;
     'from': SourceKind;
     'theme': string;
+  }
+  interface PulumiEventList {
+    'events': string;
+    'webinars': string;
+  }
+  interface PulumiEventListItem {
+    'event': PulumiEvent;
   }
   interface PulumiExample {}
   interface PulumiExamples {}
@@ -85,6 +95,18 @@ declare global {
     new (): HTMLPulumiConvertElement;
   };
 
+  interface HTMLPulumiEventListElement extends Components.PulumiEventList, HTMLStencilElement {}
+  var HTMLPulumiEventListElement: {
+    prototype: HTMLPulumiEventListElement;
+    new (): HTMLPulumiEventListElement;
+  };
+
+  interface HTMLPulumiEventListItemElement extends Components.PulumiEventListItem, HTMLStencilElement {}
+  var HTMLPulumiEventListItemElement: {
+    prototype: HTMLPulumiEventListItemElement;
+    new (): HTMLPulumiEventListItemElement;
+  };
+
   interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {}
   var HTMLPulumiExampleElement: {
     prototype: HTMLPulumiExampleElement;
@@ -119,6 +141,8 @@ declare global {
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
     'pulumi-convert': HTMLPulumiConvertElement;
+    'pulumi-event-list': HTMLPulumiEventListElement;
+    'pulumi-event-list-item': HTMLPulumiEventListItemElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
@@ -153,6 +177,13 @@ declare namespace LocalJSX {
     'from'?: SourceKind;
     'theme'?: string;
   }
+  interface PulumiEventList {
+    'events'?: string;
+    'webinars'?: string;
+  }
+  interface PulumiEventListItem {
+    'event'?: PulumiEvent;
+  }
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {
@@ -166,6 +197,8 @@ declare namespace LocalJSX {
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
     'pulumi-convert': PulumiConvert;
+    'pulumi-event-list': PulumiEventList;
+    'pulumi-event-list-item': PulumiEventListItem;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
@@ -184,6 +217,8 @@ declare module "@stencil/core" {
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
       'pulumi-convert': LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
+      'pulumi-event-list': LocalJSX.PulumiEventList & JSXBase.HTMLAttributes<HTMLPulumiEventListElement>;
+      'pulumi-event-list-item': LocalJSX.PulumiEventListItem & JSXBase.HTMLAttributes<HTMLPulumiEventListItemElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
@@ -192,5 +227,3 @@ declare module "@stencil/core" {
     }
   }
 }
-
-

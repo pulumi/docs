@@ -18,3 +18,22 @@ export function getQueryVariable(paramKey) :string {
 export function getUUID() {
     return uuid.v4();
 }
+
+interface ClassNamesOptions {
+    [key: string]: boolean;
+}
+
+export function classNames(baseClass: string, opts: ClassNamesOptions): string {
+    const classes = [ baseClass ];
+    const classesToCheck = Object.keys(opts);
+
+    for (let i = 0; i < classesToCheck.length; i++) {
+        const classToCheck = classesToCheck[i];
+
+        if (opts[classToCheck]) {
+            classes.push(classToCheck);
+        }
+    }
+
+    return classes.join(" ");
+}
