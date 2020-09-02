@@ -126,7 +126,7 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-This Pulumi program creates a new S3 Bucket and exports the name of the bucket.
+This Pulumi program creates a new S3 bucket and exports the name of the bucket.
 
 {{% choosable language javascript %}}
 
@@ -169,6 +169,6 @@ public Output<string> BucketName { get; set; }
 
 {{% /choosable %}}
 
-Next, you will deploy your stack which will provision your S3 bucket.
+Next, you'll deploy your stack, which will provision your S3 bucket.
 
 {{< get-started-stepper >}}

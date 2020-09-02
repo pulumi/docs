@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/aws/modify-program/"]
 ---
 
-Now that your S3 Bucket is provisioned, let's add an object to your bucket. First let's create a new directory called `site`.
+Now that your S3 bucket is provisioned, let's add an object to it. First, create a new directory called `site`.
 
 ```bash
 $ mkdir site
@@ -56,7 +56,7 @@ Once you've created your `index.html` file, add some content to it:
 </html>
 ```
 
-Now that you have your new `index.html` with some content, let's modify your program to add the contents of your `index.html` file to your S3 Bucket. To accomplish this we will take advantage of your chosen programming language's native libraries to read the contents of your `index.html` and assign the contents as an input to your new `BucketObject`.
+Now that you have your new `index.html` with some content, let's modify your program to add the contents of your `index.html` file to your S3 bucket. To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -157,7 +157,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 
 {{% /choosable %}}
 
-Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what S3 Bucket the object should live in.
+Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what S3 bucket the object should live in.
 
 Next, you'll deploy your changes.
 

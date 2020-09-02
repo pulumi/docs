@@ -18,7 +18,7 @@ Now let's deploy your changes.
 $ pulumi up
 ```
 
-First Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
+First, Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
 Previewing update (dev):
@@ -108,7 +108,7 @@ Notice that your index.html file has been added:
 ```
 
 {{% choosable language javascript %}}
-Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First you need to set the `website` property on your bucket.
+Now that your `index.html` is in your bucket, let's modify the program to have the bucket serve the file as a static website. First, you need to set the `website` property on your bucket.
 
 ```javascript
 const bucket = new aws.s3.Bucket("my-bucket", {
@@ -129,7 +129,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 });
 ```
 
-Finally, at the bottom of your program export the resulting bucket’s endpoint URL so you can easily access it:
+Finally, at the bottom of your program, export the resulting bucket’s endpoint URL so you can easily access it:
 
 ```javascript
 exports.bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint}`;
@@ -272,13 +272,13 @@ this.BucketEndpoint = Output.Format($"http://{bucket.WebsiteEndpoint}");
 
 {{% /choosable %}}
 
-Now let's update your stack to have your S3 Bucket serve your `index.html` file as a static website.
+Now let's update your stack to have your S3 bucket serve your `index.html` file as a static website.
 
 ```bash
 $ pulumi up
 ```
 
-First you will see a preview of your changes:
+First, you will see a preview of your changes:
 
 ```
 Previewing update (dev):
@@ -323,7 +323,7 @@ Resources:
 Duration: 12s
 ```
 
-Finally, you can checkout your new static website at the URL in the `Outputs` section of your update or you can make a `curl` request and see the contents of your `index.html` object printed out in your terminal.
+Finally, you can check out your new static website at the URL in the `Outputs` section of your update or you can make a `curl` request and see the contents of your `index.html` object printed out in your terminal.
 
 {{% choosable language javascript %}}
 

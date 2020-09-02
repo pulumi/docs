@@ -36,7 +36,7 @@ Do you want to perform this update?
   details
 ```
 
-Once the preview has finished you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 Bucket in AWS.
+Once the preview has finished you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 bucket in AWS.
 
 ```
 Do you want to perform this update? yes
