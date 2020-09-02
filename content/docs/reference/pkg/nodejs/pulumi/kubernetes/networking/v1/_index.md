@@ -3,7 +3,7 @@ title: "Module networking/v1"
 title_tag: "Module networking/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1"
 meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
-git_sha: "2d5f66dff2f98c399f6df3e47fdd05918ad66597"
+git_sha: "fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf"
 block_external_search_index: true
 ---
 
@@ -17,6 +17,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="#Ingress"><span class="symbol resource"></span>Ingress</a></li>
+    <li><a href="#IngressClass"><span class="symbol resource"></span>IngressClass</a></li>
+    <li><a href="#IngressClassList"><span class="symbol resource"></span>IngressClassList</a></li>
+    <li><a href="#IngressList"><span class="symbol resource"></span>IngressList</a></li>
     <li><a href="#NetworkPolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
     <li><a href="#NetworkPolicyList"><span class="symbol resource"></span>NetworkPolicyList</a></li>
 </ul>
@@ -24,14 +28,452 @@ block_external_search_index: true
 
 <h3>Others</h3>
 <ul class="api">
+    <li><a href="#IngressArgs"><span class="symbol api"></span>IngressArgs</a></li>
+    <li><a href="#IngressClassArgs"><span class="symbol api"></span>IngressClassArgs</a></li>
+    <li><a href="#IngressClassListArgs"><span class="symbol api"></span>IngressClassListArgs</a></li>
+    <li><a href="#IngressListArgs"><span class="symbol api"></span>IngressListArgs</a></li>
     <li><a href="#NetworkPolicyArgs"><span class="symbol api"></span>NetworkPolicyArgs</a></li>
     <li><a href="#NetworkPolicyListArgs"><span class="symbol api"></span>NetworkPolicyListArgs</a></li>
 </ul>
 
 
 <h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="Ingress" data-link-title="Ingress">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L26">
+        Resource <strong>Ingress</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Ingress</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
+
+This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:
+
+1.  Ingress object exists.
+2.  Endpoint objects exist with matching names for each Ingress path (except when Service
+    type is ExternalName).
+3.  Ingress entry exists for '.status.loadBalancer.ingress'.
+
+If the Ingress has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.
+
+<h4 class="pdoc-member-header" id="Ingress-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L72"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#IngressArgs'>IngressArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a Ingress resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="Ingress-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L35">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Ingress'>Ingress</a></code></pre>
+
+
+Get an existing Ingress resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="Ingress-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L26">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="Ingress-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L46">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is Ingress</code></pre>
+
+
+Returns true if the given object is an instance of Ingress.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="Ingress-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L56">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="Ingress-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L26">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="Ingress-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L60">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Ingress"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="Ingress-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L64">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
+
+Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
+<h4 class="pdoc-member-header" id="Ingress-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L68">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressSpec'>IngressSpec</a>&gt;;</code></pre>
+
+Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+<h4 class="pdoc-member-header" id="Ingress-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L72">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressStatus'>IngressStatus</a>&gt;;</code></pre>
+
+Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+<h4 class="pdoc-member-header" id="Ingress-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L26">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="IngressClass" data-link-title="IngressClass">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L12">
+        Resource <strong>IngressClass</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IngressClass</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be used to indicate that an IngressClass should be considered default. When a single IngressClass resource has this annotation set to true, new Ingress resources without a class specified will be assigned this default class.
+
+<h4 class="pdoc-member-header" id="IngressClass-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L54"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> IngressClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#IngressClassArgs'>IngressClassArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a IngressClass resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="IngressClass-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L21">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IngressClass'>IngressClass</a></code></pre>
+
+
+Get an existing IngressClass resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="IngressClass-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L12">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="IngressClass-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L32">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IngressClass</code></pre>
+
+
+Returns true if the given object is an instance of IngressClass.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="IngressClass-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L42">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressClass-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L12">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="IngressClass-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L46">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"IngressClass"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressClass-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L50">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
+
+Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
+<h4 class="pdoc-member-header" id="IngressClass-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L54">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressClassSpec'>IngressClassSpec</a>&gt;;</code></pre>
+
+Spec is the desired state of the IngressClass. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+<h4 class="pdoc-member-header" id="IngressClass-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L12">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="IngressClassList" data-link-title="IngressClassList">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L12">
+        Resource <strong>IngressClassList</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IngressClassList</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+IngressClassList is a collection of IngressClasses.
+
+<h4 class="pdoc-member-header" id="IngressClassList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L54"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> IngressClassList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#IngressClassListArgs'>IngressClassListArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a IngressClassList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="IngressClassList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L21">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IngressClassList'>IngressClassList</a></code></pre>
+
+
+Get an existing IngressClassList resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="IngressClassList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L12">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="IngressClassList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L32">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IngressClassList</code></pre>
+
+
+Returns true if the given object is an instance of IngressClassList.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="IngressClassList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L42">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressClassList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L12">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="IngressClassList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L46">property <b>items</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressClass'>IngressClass</a>[]&gt;;</code></pre>
+
+Items is the list of IngressClasses.
+
+<h4 class="pdoc-member-header" id="IngressClassList-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L50">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"IngressClassList"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressClassList-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L54">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
+
+Standard list metadata.
+
+<h4 class="pdoc-member-header" id="IngressClassList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L12">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="IngressList" data-link-title="IngressList">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L12">
+        Resource <strong>IngressList</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IngressList</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+IngressList is a collection of Ingress.
+
+<h4 class="pdoc-member-header" id="IngressList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L54"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> IngressList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#IngressListArgs'>IngressListArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a IngressList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="IngressList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L21">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IngressList'>IngressList</a></code></pre>
+
+
+Get an existing IngressList resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="IngressList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L12">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="IngressList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L32">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IngressList</code></pre>
+
+
+Returns true if the given object is an instance of IngressList.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="IngressList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L42">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L12">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="IngressList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L46">property <b>items</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Ingress'>Ingress</a>[]&gt;;</code></pre>
+
+Items is the list of Ingress.
+
+<h4 class="pdoc-member-header" id="IngressList-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L50">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"IngressList"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressList-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L54">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
+
+Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
+<h4 class="pdoc-member-header" id="IngressList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L12">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="NetworkPolicy" data-link-title="NetworkPolicy">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L12">
         Resource <strong>NetworkPolicy</strong>
     </a>
 </h3>
@@ -41,7 +483,7 @@ block_external_search_index: true
 NetworkPolicy describes what network traffic is allowed for a set of Pods
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +497,7 @@ Create a NetworkPolicy resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +508,14 @@ Get an existing NetworkPolicy resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +526,7 @@ Returns true if the given object is an instance of NetworkPolicy.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -92,7 +534,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -101,7 +543,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L46">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L46">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</code></pre>
@@ -109,7 +551,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L50">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L50">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -117,7 +559,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L54">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L54">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</code></pre>
@@ -125,7 +567,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 Specification of the desired behavior for this NetworkPolicy.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -134,7 +576,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkPolicyList" data-link-title="NetworkPolicyList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">
         Resource <strong>NetworkPolicyList</strong>
     </a>
 </h3>
@@ -144,7 +586,7 @@ deployments.
 NetworkPolicyList is a list of NetworkPolicy objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -158,7 +600,7 @@ Create a NetworkPolicyList resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -169,14 +611,14 @@ Get an existing NetworkPolicyList resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -187,7 +629,7 @@ Returns true if the given object is an instance of NetworkPolicyList.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -195,7 +637,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -204,7 +646,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicy'>NetworkPolicy</a>[]&gt;;</code></pre>
@@ -212,7 +654,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</code></pre>
@@ -220,7 +662,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -228,7 +670,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -239,8 +681,176 @@ deployments.
 
 
 <h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="IngressArgs" data-link-title="IngressArgs">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L112">
+        interface <strong>IngressArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IngressArgs</span></code></pre>
+
+The set of arguments for constructing a Ingress resource.
+
+<h4 class="pdoc-member-header" id="IngressArgs-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L116">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressArgs-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L120">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"Ingress"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressArgs-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L124">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
+
+Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
+<h4 class="pdoc-member-header" id="IngressArgs-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingress.ts#L128">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressSpec'>IngressSpec</a>&gt;;</code></pre>
+
+Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+<h3 class="pdoc-module-header" id="IngressClassArgs" data-link-title="IngressClassArgs">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L92">
+        interface <strong>IngressClassArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IngressClassArgs</span></code></pre>
+
+The set of arguments for constructing a IngressClass resource.
+
+<h4 class="pdoc-member-header" id="IngressClassArgs-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L96">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressClassArgs-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L100">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"IngressClass"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressClassArgs-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L104">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
+
+Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
+<h4 class="pdoc-member-header" id="IngressClassArgs-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClass.ts#L108">property <b>spec</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressClassSpec'>IngressClassSpec</a>&gt;;</code></pre>
+
+Spec is the desired state of the IngressClass. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+
+<h3 class="pdoc-module-header" id="IngressClassListArgs" data-link-title="IngressClassListArgs">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L93">
+        interface <strong>IngressClassListArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IngressClassListArgs</span></code></pre>
+
+The set of arguments for constructing a IngressClassList resource.
+
+<h4 class="pdoc-member-header" id="IngressClassListArgs-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L97">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressClassListArgs-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L101">property <b>items</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressClass'>IngressClass</a>&gt;[]&gt;;</code></pre>
+
+Items is the list of IngressClasses.
+
+<h4 class="pdoc-member-header" id="IngressClassListArgs-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L105">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"IngressClassList"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressClassListArgs-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressClassList.ts#L109">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
+
+Standard list metadata.
+
+<h3 class="pdoc-module-header" id="IngressListArgs" data-link-title="IngressListArgs">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L93">
+        interface <strong>IngressListArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IngressListArgs</span></code></pre>
+
+The set of arguments for constructing a IngressList resource.
+
+<h4 class="pdoc-member-header" id="IngressListArgs-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L97">property <b>apiVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+<h4 class="pdoc-member-header" id="IngressListArgs-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L101">property <b>items</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Ingress'>Ingress</a>&gt;[]&gt;;</code></pre>
+
+Items is the list of Ingress.
+
+<h4 class="pdoc-member-header" id="IngressListArgs-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L105">property <b>kind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"IngressList"</span>&gt;;</code></pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+<h4 class="pdoc-member-header" id="IngressListArgs-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/ingressList.ts#L109">property <b>metadata</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
+
+Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
 <h3 class="pdoc-module-header" id="NetworkPolicyArgs" data-link-title="NetworkPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L92">
         interface <strong>NetworkPolicyArgs</strong>
     </a>
 </h3>
@@ -250,7 +860,7 @@ deployments.
 The set of arguments for constructing a NetworkPolicy resource.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L89">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -258,7 +868,7 @@ The set of arguments for constructing a NetworkPolicy resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L93">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L100">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</code></pre>
@@ -266,7 +876,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L97">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L104">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -274,7 +884,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicyArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicy.ts#L101">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicy.ts#L108">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</code></pre>
@@ -282,7 +892,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 Specification of the desired behavior for this NetworkPolicy.
 
 <h3 class="pdoc-module-header" id="NetworkPolicyListArgs" data-link-title="NetworkPolicyListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L93">
         interface <strong>NetworkPolicyListArgs</strong>
     </a>
 </h3>
@@ -292,7 +902,7 @@ Specification of the desired behavior for this NetworkPolicy.
 The set of arguments for constructing a NetworkPolicyList resource.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L90">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L97">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</code></pre>
@@ -300,7 +910,7 @@ The set of arguments for constructing a NetworkPolicyList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L94">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L101">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicy'>NetworkPolicy</a>&gt;[]&gt;;</code></pre>
@@ -308,7 +918,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L98">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L105">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</code></pre>
@@ -316,7 +926,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/networking/v1/networkPolicyList.ts#L102">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/fb431bcfc3ec0aaf13ae387b4a7bfe38715a8fbf/sdk/nodejs/networking/v1/networkPolicyList.ts#L109">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

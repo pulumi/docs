@@ -24,7 +24,7 @@ Explore the resources and functions of the admissionregistration/v1 module in th
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.1</dd>
 </dl>
 
 
@@ -38,7 +38,7 @@ Explore the resources and functions of the admissionregistration/v1 module in th
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/v1/#" title="@pulumi/kubernetes/admissionregistration/v1">@pulumi/kubernetes/admissionregistration/v1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration.k8s.io/v1" title="pulumi_kubernetes/admissionregistration.k8s.io/v1">pulumi_kubernetes/admissionregistration.k8s.io/v1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration/v1" title="pulumi_kubernetes/admissionregistration/v1">pulumi_kubernetes/admissionregistration/v1</a></dd>
 
 </dl>
 

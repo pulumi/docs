@@ -23,7 +23,7 @@ EventList is a list of Event objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/events/v1beta1/#pulumi_kubernetes.events/v1beta1.EventList">EventList</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>items=None<span class="p">, </span>metadata=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/events/v1beta1/#pulumi_kubernetes.events/v1beta1.EventList">EventList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[List[Event]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[ListMeta]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -203,7 +203,7 @@ The EventList resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#event">List&lt;Event<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
+    <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -230,7 +230,7 @@ The EventList resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#event">[]Event<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
+    <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -257,7 +257,7 @@ The EventList resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#event">Event[]</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
+    <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The EventList resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#event">List[Event]</a></span>
     </dt>
-    <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
+    <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -414,7 +414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -424,7 +424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}What action was taken/failed regarding to the regarding object.{{% /md %}}</dd>
+    <dd>{{% md %}}action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -444,7 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -454,7 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -464,7 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Event<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -484,7 +484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional. A human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
+    <dd>{{% md %}}note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -494,7 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Why the action was taken.{{% /md %}}</dd>
+    <dd>{{% md %}}reason is why the action was taken. It is human-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -504,7 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The object this Event is about. In most cases it's an Object reporting controller implements. E.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
+    <dd>{{% md %}}regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -514,7 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
+    <dd>{{% md %}}related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -524,7 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -534,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the controller instance, e.g. `kubelet-xyzf`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventseries">Event<wbr>Series<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
+    <dd>{{% md %}}series is data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -554,7 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of this event (Normal, Warning), new types could be added in the future.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -571,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -581,7 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}What action was taken/failed regarding to the regarding object.{{% /md %}}</dd>
+    <dd>{{% md %}}action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -591,7 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -601,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -611,7 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -621,7 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsource">Event<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional. A human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
+    <dd>{{% md %}}note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -651,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Why the action was taken.{{% /md %}}</dd>
+    <dd>{{% md %}}reason is why the action was taken. It is human-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -661,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The object this Event is about. In most cases it's an Object reporting controller implements. E.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
+    <dd>{{% md %}}regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -671,7 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}Optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
+    <dd>{{% md %}}related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -681,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -691,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the controller instance, e.g. `kubelet-xyzf`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -701,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventseries">Event<wbr>Series</a></span>
     </dt>
-    <dd>{{% md %}}Data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
+    <dd>{{% md %}}series is data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -711,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of this event (Normal, Warning), new types could be added in the future.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -728,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -738,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}What action was taken/failed regarding to the regarding object.{{% /md %}}</dd>
+    <dd>{{% md %}}action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -748,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -758,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -768,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -778,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsource">core.v1.<wbr>Event<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -798,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional. A human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
+    <dd>{{% md %}}note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -808,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Why the action was taken.{{% /md %}}</dd>
+    <dd>{{% md %}}reason is why the action was taken. It is human-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">core.v1.<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The object this Event is about. In most cases it's an Object reporting controller implements. E.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
+    <dd>{{% md %}}regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -828,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">core.v1.<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}Optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
+    <dd>{{% md %}}related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -838,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -848,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the controller instance, e.g. `kubelet-xyzf`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventseries">Event<wbr>Series</a></span>
     </dt>
-    <dd>{{% md %}}Data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
+    <dd>{{% md %}}series is data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -868,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of this event (Normal, Warning), new types could be added in the future.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+    <dd>{{% md %}}eventTime is the time when this Event was first observed. It is required.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -895,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}What action was taken/failed regarding to the regarding object.{{% /md %}}</dd>
+    <dd>{{% md %}}action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -915,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -925,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventsource">Dict[Event<wbr>Source]</a></span>
     </dt>
-    <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
+    <dd>{{% md %}}deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Optional. A human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
+    <dd>{{% md %}}note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Why the action was taken.{{% /md %}}</dd>
+    <dd>{{% md %}}reason is why the action was taken. It is human-readable. This field can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}The object this Event is about. In most cases it's an Object reporting controller implements. E.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
+    <dd>{{% md %}}regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -985,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}Optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
+    <dd>{{% md %}}related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1005,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of the controller instance, e.g. `kubelet-xyzf`.{{% /md %}}</dd>
+    <dd>{{% md %}}reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventseries">Dict[Event<wbr>Series]</a></span>
     </dt>
-    <dd>{{% md %}}Data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
+    <dd>{{% md %}}series is data about the Event series this event represents or nil if it's a singleton Event.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1025,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of this event (Normal, Warning), new types could be added in the future.{{% /md %}}</dd>
+    <dd>{{% md %}}type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of occurrences in this series up to the last heartbeat time{{% /md %}}</dd>
+    <dd>{{% md %}}count is the number of occurrences in this series up to the last heartbeat time.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1067,10 +1067,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
+    <dd>{{% md %}}lastObservedTime is the time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of occurrences in this series up to the last heartbeat time{{% /md %}}</dd>
+    <dd>{{% md %}}count is the number of occurrences in this series up to the last heartbeat time.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1104,10 +1104,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
+    <dd>{{% md %}}lastObservedTime is the time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of occurrences in this series up to the last heartbeat time{{% /md %}}</dd>
+    <dd>{{% md %}}count is the number of occurrences in this series up to the last heartbeat time.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1141,10 +1141,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
+    <dd>{{% md %}}lastObservedTime is the time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -1168,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of occurrences in this series up to the last heartbeat time{{% /md %}}</dd>
+    <dd>{{% md %}}count is the number of occurrences in this series up to the last heartbeat time.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1178,10 +1178,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
+    <dd>{{% md %}}lastObservedTime is the time when last Event from the series was seen before last heartbeat.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
@@ -1955,7 +1955,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
+    <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
 Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
 
@@ -2138,7 +2138,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
+    <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
 Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
 
@@ -2321,7 +2321,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
+    <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
 Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
 
@@ -2504,7 +2504,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
+    <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
 Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
 
