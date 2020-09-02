@@ -16,7 +16,7 @@ If no filters are specified, all Droplets will be returned.
 This data source is useful if the Droplets in question are not managed by this provider or you need to
 utilize any of the Droplets' data.
 
-Note: You can use the `digitalocean..Droplet` data source to obtain metadata
+Note: You can use the `digitalocean.Droplet` data source to obtain metadata
 about a single Droplet if you already know the `id`, unique `name`, or unique `tag` to retrieve.
 
 {{% examples %}}
@@ -55,7 +55,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitalocean.GetDroplets(ctx, &digitalocean.GetDropletsArgs{
+			Filters: []digitalocean.GetDropletsFilter{
+				digitalocean.GetDropletsFilter{
+					Key: "size",
+					Values: []string{
+						"s-1vcpu-1gb",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,10 +90,10 @@ Coming soon!
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-small = digitalocean.get_droplets(filters=[{
-    "key": "size",
-    "values": ["s-1vcpu-1gb"],
-}])
+small = digitalocean.get_droplets(filters=[digitalocean.GetDropletsFilterArgs(
+    key="size",
+    values=["s-1vcpu-1gb"],
+)])
 ```
 
 {{% /example %}}
@@ -101,7 +128,7 @@ const small = pulumi.output(digitalocean.getDroplets({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_droplets(</span>filters=None<span class="p">, </span>sorts=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_droplets(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetDropletsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetDropletsSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDropletsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -225,7 +252,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletsfilter">List[Get<wbr>Droplets<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getdropletsfilter">List[Get<wbr>Droplets<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -237,7 +264,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdropletssort">List[Get<wbr>Droplets<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getdropletssort">List[Get<wbr>Droplets<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -271,7 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsdroplet">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Droplets<wbr>Droplet&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:  
+    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -320,7 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsdroplet">[]Get<wbr>Droplets<wbr>Droplet</a></span>
     </dt>
-    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:  
+    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -369,7 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsdroplet">Get<wbr>Droplets<wbr>Droplet[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:  
+    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -418,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsdroplet">List[Get<wbr>Droplets<wbr>Droplet]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:  
+    <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -491,7 +518,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether backups are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -511,7 +539,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the Droplet's disk in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -521,7 +550,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -531,7 +561,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet image ID or slug.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -541,7 +572,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -551,7 +583,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -561,7 +594,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether IPv6 is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -571,7 +605,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -581,7 +616,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -591,7 +627,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the Droplet is locked.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -601,7 +638,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of the Droplet's memory in MB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -611,7 +649,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether monitoring agent is installed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -631,7 +670,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet hourly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -641,7 +681,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet monthly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -651,7 +692,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether private networks are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -661,7 +703,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region the Droplet is running in.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -671,7 +714,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique slug that identifies the type of Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -681,7 +725,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -691,7 +736,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of the tags associated to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -701,7 +747,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -711,7 +758,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the Droplet's virtual CPUs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -721,7 +769,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -731,7 +780,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the VPC where the Droplet is located.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -748,7 +798,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether backups are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -768,7 +819,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the Droplet's disk in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -778,7 +830,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -788,7 +841,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet image ID or slug.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -798,7 +852,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -808,7 +863,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -818,7 +874,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether IPv6 is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -828,7 +885,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -838,7 +896,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -848,7 +907,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the Droplet is locked.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -858,7 +918,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of the Droplet's memory in MB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -868,7 +929,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether monitoring agent is installed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -888,7 +950,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet hourly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -898,7 +961,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet monthly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -908,7 +972,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether private networks are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -918,7 +983,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region the Droplet is running in.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -928,7 +994,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique slug that identifies the type of Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -938,7 +1005,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -948,7 +1016,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of the tags associated to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -958,7 +1027,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -968,7 +1038,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the Droplet's virtual CPUs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -978,7 +1049,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -988,7 +1060,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the VPC where the Droplet is located.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1005,7 +1078,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether backups are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1025,7 +1099,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the Droplet's disk in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1035,7 +1110,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1045,7 +1121,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet image ID or slug.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1055,7 +1132,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1065,7 +1143,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1075,7 +1154,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether IPv6 is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1085,7 +1165,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1095,7 +1176,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1105,7 +1187,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the Droplet is locked.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1115,7 +1198,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of the Droplet's memory in MB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1125,7 +1209,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether monitoring agent is installed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1145,7 +1230,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet hourly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1155,7 +1241,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet monthly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1165,7 +1252,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether private networks are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1175,7 +1263,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region the Droplet is running in.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1185,7 +1274,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique slug that identifies the type of Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1195,7 +1285,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1205,7 +1296,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of the tags associated to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1215,7 +1307,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1225,7 +1318,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the Droplet's virtual CPUs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1235,7 +1329,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1245,7 +1340,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the VPC where the Droplet is located.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1262,7 +1358,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether backups are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1282,7 +1379,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the Droplet's disk in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1292,7 +1390,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1302,7 +1401,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet image ID or slug.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1312,7 +1412,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1322,7 +1423,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's private IPv4 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1332,17 +1434,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="ipv6addressprivate_python">
-<a href="#ipv6addressprivate_python" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Private</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether IPv6 is enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1352,7 +1445,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Droplet's public IPv6 address
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipv6_address_private_python">
+<a href="#ipv6_address_private_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>private</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Droplet's private IPv6 address
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1362,7 +1467,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the Droplet is locked.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1372,7 +1478,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of the Droplet's memory in MB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1382,7 +1489,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether monitoring agent is installed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1402,7 +1510,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet hourly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1412,7 +1521,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Droplet monthly price.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1422,7 +1532,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether private networks are enabled.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1432,7 +1543,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region the Droplet is running in.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1442,7 +1554,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique slug that identifies the type of Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1452,7 +1565,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The status of the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1462,7 +1576,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of the tags associated to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1472,7 +1587,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1482,7 +1598,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the Droplet's virtual CPUs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1492,7 +1609,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1502,7 +1620,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the VPC where the Droplet is located.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1818,6 +1937,6 @@ where the `key` field takes on one or more of the values provided here.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

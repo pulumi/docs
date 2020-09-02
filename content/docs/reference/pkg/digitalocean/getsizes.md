@@ -30,15 +30,15 @@ class MyStack : Stack
     {
         var main = Output.Create(DigitalOcean.GetSizes.InvokeAsync(new DigitalOcean.GetSizesArgs
         {
-            Filter = 
+            Filters = 
             {
-                
+                new DigitalOcean.Inputs.GetSizesFilterArgs
                 {
-                    { "key", "slug" },
-                    { "values", 
+                    Key = "slug",
+                    Values = 
                     {
                         "s-1vcpu-1gb",
-                    } },
+                    },
                 },
             },
         }));
@@ -56,7 +56,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitalocean.GetSizes(ctx, &digitalocean.GetSizesArgs{
+			Sorts: []digitalocean.GetSizesSort{
+				digitalocean.GetSizesSort{
+					Direction: "asc",
+					Key:       "memory",
+				},
+				digitalocean.GetSizesSort{
+					Direction: "desc",
+					Key:       "disk",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,14 +93,14 @@ Coming soon!
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-main = digitalocean.get_sizes(filter=[{
-    "key": "slug",
-    "values": ["s-1vcpu-1gb"],
-}])
+main = digitalocean.get_sizes(filters=[digitalocean.GetSizesFilterArgs(
+    key="slug",
+    values=["s-1vcpu-1gb"],
+)])
 web = digitalocean.Droplet("web",
     image="ubuntu-18-04-x64",
     region="sgp1",
-    size=main.sizes[0]["slug"])
+    size=main.sizes[0].slug)
 ```
 
 {{% /example %}}
@@ -83,7 +112,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
 const main = digitalocean.getSizes({
-    filter: [{
+    filters: [{
         key: "slug",
         values: ["s-1vcpu-1gb"],
     }],
@@ -111,7 +140,7 @@ const web = new digitalocean.Droplet("web", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_sizes(</span>filters=None<span class="p">, </span>sorts=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sizes(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetSizesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetSizesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSizesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -235,7 +264,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">List[Get<wbr>Sizes<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getsizesfilter">List[Get<wbr>Sizes<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -247,7 +276,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizessort">List[Get<wbr>Sizes<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getsizessort">List[Get<wbr>Sizes<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -1208,6 +1237,6 @@ one of the values provided here.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

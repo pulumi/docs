@@ -17,7 +17,7 @@ all images will be returned.
 This data source is useful if the image in question is not managed by this provider or you need to utilize any
 of the image's data.
 
-Note: You can use the `digitalocean..getImage` data source to obtain metadata
+Note: You can use the `digitalocean.getImage` data source to obtain metadata
 about a single image if you already know the `slug`, unique `name`, or `id` to retrieve.
 
 {{% examples %}}
@@ -56,7 +56,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitalocean.GetImages(ctx, &digitalocean.GetImagesArgs{
+			Filters: []digitalocean.GetImagesFilter{
+				digitalocean.GetImagesFilter{
+					Key: "distribution",
+					Values: []string{
+						"Ubuntu",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,10 +91,10 @@ Coming soon!
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-ubuntu = digitalocean.get_images(filters=[{
-    "key": "distribution",
-    "values": ["Ubuntu"],
-}])
+ubuntu = digitalocean.get_images(filters=[digitalocean.GetImagesFilterArgs(
+    key="distribution",
+    values=["Ubuntu"],
+)])
 ```
 
 {{% /example %}}
@@ -102,7 +129,7 @@ const ubuntu = pulumi.output(digitalocean.getImages({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_images(</span>filters=None<span class="p">, </span>sorts=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_images(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetImagesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetImagesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -226,7 +253,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesfilter">List[Get<wbr>Images<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getimagesfilter">List[Get<wbr>Images<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -238,7 +265,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagessort">List[Get<wbr>Images<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getimagessort">List[Get<wbr>Images<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -288,18 +315,6 @@ The following output properties are available:
 - `id`: The ID of the image.
 - `name`: The name of the image.
 - `type`: Type of the image.
-- `distribution` - The name of the distribution of the OS of the image.
-- `min_disk_size`: The minimum 'disk' required for the image.
-- `size_gigabytes`: The size of the image in GB.
-- `private` - Is image a public image or not. Public images represent
-Linux distributions or One-Click Applications, while non-public images represent
-snapshots and backups and are only available within your account.
-- `regions`: A set of the regions that the image is available in.
-- `tags`: A set of tags applied to the image
-- `created`: When the image was created
-- `status`: Current status of the image
-- `error_message`: Any applicable error message pertaining to the image
-- `image` - The id of the image (legacy parameter).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -353,18 +368,6 @@ snapshots and backups and are only available within your account.
 - `id`: The ID of the image.
 - `name`: The name of the image.
 - `type`: Type of the image.
-- `distribution` - The name of the distribution of the OS of the image.
-- `min_disk_size`: The minimum 'disk' required for the image.
-- `size_gigabytes`: The size of the image in GB.
-- `private` - Is image a public image or not. Public images represent
-Linux distributions or One-Click Applications, while non-public images represent
-snapshots and backups and are only available within your account.
-- `regions`: A set of the regions that the image is available in.
-- `tags`: A set of tags applied to the image
-- `created`: When the image was created
-- `status`: Current status of the image
-- `error_message`: Any applicable error message pertaining to the image
-- `image` - The id of the image (legacy parameter).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -418,18 +421,6 @@ snapshots and backups and are only available within your account.
 - `id`: The ID of the image.
 - `name`: The name of the image.
 - `type`: Type of the image.
-- `distribution` - The name of the distribution of the OS of the image.
-- `min_disk_size`: The minimum 'disk' required for the image.
-- `size_gigabytes`: The size of the image in GB.
-- `private` - Is image a public image or not. Public images represent
-Linux distributions or One-Click Applications, while non-public images represent
-snapshots and backups and are only available within your account.
-- `regions`: A set of the regions that the image is available in.
-- `tags`: A set of tags applied to the image
-- `created`: When the image was created
-- `status`: Current status of the image
-- `error_message`: Any applicable error message pertaining to the image
-- `image` - The id of the image (legacy parameter).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -483,18 +474,6 @@ snapshots and backups and are only available within your account.
 - `id`: The ID of the image.
 - `name`: The name of the image.
 - `type`: Type of the image.
-- `distribution` - The name of the distribution of the OS of the image.
-- `min_disk_size`: The minimum 'disk' required for the image.
-- `size_gigabytes`: The size of the image in GB.
-- `private` - Is image a public image or not. Public images represent
-Linux distributions or One-Click Applications, while non-public images represent
-snapshots and backups and are only available within your account.
-- `regions`: A set of the regions that the image is available in.
-- `tags`: A set of tags applied to the image
-- `created`: When the image was created
-- `status`: Current status of the image
-- `error_message`: Any applicable error message pertaining to the image
-- `image` - The id of the image (legacy parameter).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -712,7 +691,10 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the distribution of the OS of the image.
+- `min_disk_size`: The minimum 'disk' required for the image.
+- `size_gigabytes`: The size of the image in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -742,7 +724,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The id of the image (legacy parameter).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -772,7 +755,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Is image a public image or not. Public images represent
+Linux distributions or One-Click Applications, while non-public images represent
+snapshots and backups and are only available within your account.
+- `regions`: A set of the regions that the image is available in.
+- `tags`: A set of tags applied to the image
+- `created`: When the image was created
+- `status`: Current status of the image
+- `error_message`: Any applicable error message pertaining to the image
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -859,7 +850,10 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the distribution of the OS of the image.
+- `min_disk_size`: The minimum 'disk' required for the image.
+- `size_gigabytes`: The size of the image in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -889,7 +883,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The id of the image (legacy parameter).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -919,7 +914,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Is image a public image or not. Public images represent
+Linux distributions or One-Click Applications, while non-public images represent
+snapshots and backups and are only available within your account.
+- `regions`: A set of the regions that the image is available in.
+- `tags`: A set of tags applied to the image
+- `created`: When the image was created
+- `status`: Current status of the image
+- `error_message`: Any applicable error message pertaining to the image
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1006,7 +1009,10 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the distribution of the OS of the image.
+- `min_disk_size`: The minimum 'disk' required for the image.
+- `size_gigabytes`: The size of the image in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1036,7 +1042,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The id of the image (legacy parameter).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1066,7 +1073,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Is image a public image or not. Public images represent
+Linux distributions or One-Click Applications, while non-public images represent
+snapshots and backups and are only available within your account.
+- `regions`: A set of the regions that the image is available in.
+- `tags`: A set of tags applied to the image
+- `created`: When the image was created
+- `status`: Current status of the image
+- `error_message`: Any applicable error message pertaining to the image
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1153,12 +1168,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the distribution of the OS of the image.
+- `min_disk_size`: The minimum 'disk' required for the image.
+- `size_gigabytes`: The size of the image in GB.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="errormessage_python">
-<a href="#errormessage_python" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1183,7 +1201,8 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The id of the image (legacy parameter).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1213,7 +1232,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Is image a public image or not. Public images represent
+Linux distributions or One-Click Applications, while non-public images represent
+snapshots and backups and are only available within your account.
+- `regions`: A set of the regions that the image is available in.
+- `tags`: A set of tags applied to the image
+- `created`: When the image was created
+- `status`: Current status of the image
+- `error_message`: Any applicable error message pertaining to the image
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1227,8 +1254,8 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span id="sizegigabytes_python">
-<a href="#sizegigabytes_python" style="color: inherit; text-decoration: inherit;">size<wbr>Gigabytes</a>
+        <span id="size_gigabytes_python">
+<a href="#size_gigabytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gigabytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1431,6 +1458,6 @@ where the `key` field takes on one or more of the values provided here.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 
