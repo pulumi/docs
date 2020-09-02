@@ -107,7 +107,7 @@ export const azureAdObjectId = example.then(example => example.id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_application(</span>application_id=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[GetApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -348,7 +348,7 @@ The following arguments are supported:
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List[Get<wbr>Application<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">List[Get<wbr>Application<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ The following arguments are supported:
 <a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaims">Dict[Get<wbr>Application<wbr>Optional<wbr>Claims]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
@@ -1155,7 +1155,7 @@ The following output properties are available:
 <a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaims">Dict[Get<wbr>Application<wbr>Optional<wbr>Claims]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
@@ -1412,8 +1412,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmembertypes_python">
-<a href="#allowedmembertypes_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
+        <span id="allowed_member_types_python">
+<a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1456,8 +1456,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1788,8 +1788,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="adminconsentdescription_python">
-<a href="#adminconsentdescription_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
+        <span id="admin_consent_description_python">
+<a href="#admin_consent_description_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1799,8 +1799,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="adminconsentdisplayname_python">
-<a href="#adminconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
+        <span id="admin_consent_display_name_python">
+<a href="#admin_consent_display_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1821,8 +1821,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1843,8 +1843,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userconsentdescription_python">
-<a href="#userconsentdescription_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
+        <span id="user_consent_description_python">
+<a href="#user_consent_description_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1854,8 +1854,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userconsentdisplayname_python">
-<a href="#userconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
+        <span id="user_consent_display_name_python">
+<a href="#user_consent_display_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1982,21 +1982,21 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstokens_python">
-<a href="#accesstokens_python" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
+        <span id="access_tokens_python">
+<a href="#access_tokens_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="idtokens_python">
-<a href="#idtokens_python" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
+        <span id="id_tokens_python">
+<a href="#id_tokens_python" style="color: inherit; text-decoration: inherit;">id_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2191,8 +2191,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2413,8 +2413,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2558,19 +2558,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceaccesses_python">
-<a href="#resourceaccesses_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Accesses</a>
+        <span id="resource_accesses_python">
+<a href="#resource_accesses_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceappid_python">
-<a href="#resourceappid_python" style="color: inherit; text-decoration: inherit;">resource<wbr>App<wbr>Id</a>
+        <span id="resource_app_id_python">
+<a href="#resource_app_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

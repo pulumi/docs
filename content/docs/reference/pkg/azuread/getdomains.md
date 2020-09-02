@@ -99,7 +99,7 @@ export const domains = aadDomains.then(aadDomains => aadDomains.domains);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domains(</span>include_unverified=None<span class="p">, </span>only_default=None<span class="p">, </span>only_initial=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domains(</span><span class="nx">include_unverified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_initial</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -745,8 +745,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationtype_python">
-<a href="#authenticationtype_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
+        <span id="authentication_type_python">
+<a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -756,8 +756,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="domainname_python">
-<a href="#domainname_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -767,8 +767,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -778,8 +778,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isinitial_python">
-<a href="#isinitial_python" style="color: inherit; text-decoration: inherit;">is<wbr>Initial</a>
+        <span id="is_initial_python">
+<a href="#is_initial_python" style="color: inherit; text-decoration: inherit;">is_<wbr>initial</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -789,8 +789,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="isverified_python">
-<a href="#isverified_python" style="color: inherit; text-decoration: inherit;">is<wbr>Verified</a>
+        <span id="is_verified_python">
+<a href="#is_verified_python" style="color: inherit; text-decoration: inherit;">is_<wbr>verified</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
