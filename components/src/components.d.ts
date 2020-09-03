@@ -56,6 +56,7 @@ export namespace Components {
     'webinars': string;
   }
   interface PulumiEventListItem {
+    'class': string;
     'event': PulumiEvent;
   }
   interface PulumiExample {}
@@ -182,6 +183,7 @@ declare namespace LocalJSX {
     'webinars'?: string;
   }
   interface PulumiEventListItem {
+    'class'?: string;
     'event'?: PulumiEvent;
   }
   interface PulumiExample {}

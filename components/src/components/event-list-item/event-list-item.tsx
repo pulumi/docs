@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 import { classNames } from "../../util/util";
 import { PulumiEvent } from "../../util/types/events";
 
@@ -12,14 +12,18 @@ export class EventListItem {
   @Prop()
   event: PulumiEvent;
 
+  @Prop()
+  class: string = "";
+
   render() {
     const {
       archetype, external, registrationUrl, imageSrc, title, description,
       startDate,
     } = this.event;
-    const containerClass = classNames("w-full m-0 p-2", {
-      "order-first": false,
-    });
+
+    const containerClassOptions = {};
+    containerClassOptions[this.class] = this.class !== "";
+    const containerClass = classNames("w-full m-0 p-2", containerClassOptions);
 
     const eventLinkProps = {
       href: archetype === "webinar" && external ? `/webinars/${registrationUrl}` : registrationUrl,
@@ -29,13 +33,13 @@ export class EventListItem {
 
     return [
       <li class={containerClass}>
-        <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col lg:flex-row mx-auto">
-          <div class="w-full lg:w-4/12">
+        <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-auto">
+          <div class="w-full">
             <a {...eventLinkProps}>
               <img class="w-full" src={imageSrc} />
             </a>
           </div>
-          <div class="w-full lg:w-8/12 p-3 ml-3">
+          <div class="w-full p-3 ml-3">
             <a {...eventLinkProps}>
               { title }
               { external ? <i class="text-sm ml-2 fas fa-external-link-alt"></i> : null }

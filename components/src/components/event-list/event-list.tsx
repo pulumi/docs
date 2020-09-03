@@ -1,5 +1,6 @@
 import { Component, Host, h, Prop, State } from "@stencil/core";
 import { PulumiEvent, PulumiRawEvent, PulumiRawWebinar } from "../../util/types/events";
+import { chunkArray } from "../../util/util";
 
 function parseEventsString(eventsString: string): PulumiEvent[] {
   const rawEvents: PulumiRawEvent[] = JSON.parse(eventsString);
@@ -56,12 +57,55 @@ export class EventList {
     this.pulumiEvents = this.pulumiEvents.concat(webinars).concat(events);
   }
 
+  renderEventListRow(chunk: PulumiEvent[]) {
+    const listItemClass = `w-1/${chunk.length}`;
+
+    return(
+      <ul class="flex list-none">
+        {chunk.map((event) => {
+          return(
+            <pulumi-event-list-item class={listItemClass} event={event}></pulumi-event-list-item>
+          );
+        })}
+      </ul>
+    );
+  }
+
+  renderEventFilterItem(args: {text: string, icon: string}) {
+    return(
+      <li class="w-1/12 text-center mx-5">
+        <i class={`fas fa-${args.icon} text-4xl`}></i>
+        <p class="m-0 mt-3 font-bold">{args.text}</p>
+      </li>
+    );
+  }
+
+  renderEventFilter() {
+    const items = [
+      { text: "All", icon: "asterisk" },
+      { text: "Upcoming Sessions", icon: "users" },
+      { text: "On Demand Videos", icon: "video" },
+      { text: "PulumiTV", icon: "tv" },
+    ];
+
+    return(
+      <div class="w-full mb-5">
+        <ul class="flex list-none">
+          { items.map(this.renderEventFilterItem) }
+        </ul>
+      </div>
+    );
+  }
+
   render() {
-    console.log(this.pulumiEvents);
+    const chunkedEvents = chunkArray(this.pulumiEvents, 3);
 
     return (
       <Host>
-        { this.pulumiEvents.map((event) => <pulumi-event-list-item event={event}></pulumi-event-list-item>) }
+        <div class="container mx-auto pt-10">
+          { this.renderEventFilter() }
+          { chunkedEvents.map(this.renderEventListRow) }
+        </div>
         <slot></slot>
       </Host>
     );
