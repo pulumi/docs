@@ -7,11 +7,12 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "docker"]
 ---
 
-In this blog post, we will explore the basics behind PERN stack applications, and will deploy one to AWS. Additionally, we will use a bit of Pulumi Crosswalk to decrease the amount of code that we need to write, and allow for a quick and straightforward path to getting the application up and running.
+In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node; and a PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
 
-<!--more-->
 
 The word *PERN* is an acronym for PostgreSQL, Express, React, and NodeJS. A PERN stack application is simply a project that uses PostgreSQL as a database, Express as an application framework, React as a user interface framework, and which runs on Node.
+
+<!--more-->
 
 The nature of the project means that it has 4 distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI, and sends requests to the stateless server.
 <Project diagram>
@@ -23,9 +24,9 @@ $ mkdir aws-pern-voting-app && cd aws-pern-voting-app
 $ pulumi new aws-typescript
 ```
 
-This tutorial was written for the [aws-pern-voting-app example](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app) but will work with any other PERN stack application. The example uses two folders to hold the client and server tiers, and a Dockerfile in each to turn both into images that can be run on AWS.
+This tutorial was written for the [aws-pern-voting-app example](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app) but will work with any other PERN stack application. The example uses two folders to hold the client and server tiers and a Dockerfile that builds images that run as containers in AWS.
 
-As the specific code for the application can vary widely, the most important part of our project is the infrastructure. We require several configuration variables, which we set using `pulumi config set`. They are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and the region of our database.
+To deploy our PERN stack, the project requires several configuration variables, which we set using `pulumi config set`. The variables are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and the region of our database.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -35,7 +36,7 @@ $ pulumi config set sql-user-password <PASSWORD> --secret
 $ pulumi config set aws:region <REGION>
 ```
 
-The `package.json` file lists the libraries used by the project. We will need to add the following to the `dependancies` section:
+The `package.json` file lists the libraries used by the project. We will dd the following to the `dependencies` section:
 
 ```json
 "@pulumi/cloud-aws": "^0.19.0",
@@ -125,7 +126,7 @@ export class Schema extends pulumi.dynamic.Resource {
 }
 ```
 
-With the Dynamic provider ready, we can focus on the main `index.ts` file. The first few lines indicate the libraries to import and describe the application's configuration options.
+With the Dynamic provider configures, we can focus on the main `index.ts` file. We start with importing libraries and describing the application's configuration options.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -144,7 +145,7 @@ const awsConfig = new pulumi.Config("aws");
 const availabilityZone = awsConfig.get("region");
 ```
 
-Besides for a few language differences, the code for creating the VPC, subnets, and tables is almost identical to our previous projects. Since we will be using Crosswalk, we can leave out a few components and have them be automatically created later.
+Apart from language differences, the code for creating the VPC, subnets, and tables is almost identical to our previous projects. Since we will be using Crosswalk, we can leave out a few components that will be automatically created later.
 
 ```typescript
 const appVpc = new aws.ec2.Vpc("app-vpc", {
@@ -201,7 +202,7 @@ const secondRdsSubnet = new aws.ec2.Subnet("second-rds-subnet", {
 });
 ```
 
-A SubnetGroup and an RDS instance are created. The latter uses PostgreSQL instead of MySQL, and is given an example port of 2000.
+We create a SubnetGroup and an RDS instance. The latter uses PostgreSQL instead of MySQL, and is assigned 2000.
 
 ```typescript
 const rdsSubnetGroup = new aws.rds.SubnetGroup("rds-subnet-group", {
@@ -222,7 +223,7 @@ const postgresqlRdsServer = new aws.rds.Instance("postgresql-rds-server", {
 });
 ```
 
-Pulumi offers some additional tools to make handling PostgreSQL easier.
+Pulumi offers additional tools to make handling PostgreSQL easier.
 
 ```typescript
 const postgresqlProvider = new postgresql.Provider("postgresql-provider", {
@@ -252,7 +253,7 @@ const postgresUser = new postgresql.Role("postgres-standard-role", {
 });
 ```
 
-The Dynamic provider is used to create a schema and a table, grant permissions for our user to edit and select it, and to populate the table with two initial voting options.
+We use the Dynamic provider to create a schema and a table, grant permissions for our user to edit and select it, and populate the table with two initial voting options.
 
 ```typescript
 const creation_script = `
@@ -281,9 +282,9 @@ const postgresqlVotesTable = new Schema("postgresql-votes-schema", {
 });
 ```
 
-With the basic infrastructure and provider finished, we can now write the code that deploys our application to ECS. As mentioned before, we will use Pulumi Crosswalk, a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure.
+With the basic infrastructure and provider completed, we can write the application deployment code to ECS. We will use Pulumi Crosswalk, which is a collection of libraries that makes common infrastructure-as-code tasks in AWS easier and more secure by using well-architected best practices automatically.
 
-The first item we set up will be the server. The Network Listener is assigned the same port that the server is configured for, which in our case is 5000. A set of environment variables representing our PostgreSQL connection credentials are given directly to the `awsx.ecs.FargateService`. In the end, what would have otherwise been over 150 lines of code can be done in just under 20.
+We'll first set up the server. The Network Listener is assigned the same port that the server, which is, in our case, port 5000. A set of environment variables representing our PostgreSQL connection credentials are passed directly to the `awsx.ecs.FargateService`. With AWS Crosswalk, what would have been over 150 lines of code is reduced to just under 20 lines of code.
 
 ```typescript
 const serversideListener = new awsx.elasticloadbalancingv2.NetworkListener("server-side-listener", { port: 5000 });
@@ -327,15 +328,14 @@ const clientsideService = new awsx.ecs.FargateService("client-side-service", {
 });
 ```
 
-To connect to our PERN stack application, we export the address of the clientside listener and its port, and open it
-in a browser window under a port of 3000.
+To make our PERN stack application available on the Internet, we export the address of the clientside listener. We can open a browser window with the URl and port to view our application.
 
 ```typescript
 export let URL = clientsideListener.endpoint.hostname;
 ```
 
-In this example, I explained a few basic principles behind PERN stack applications, and showed how simple it is to create infrastructure to deploy them on ECS. A flexible and optimized tool, Pulumi Crosswalk allows everything from creating simple example applications, to scaling workload, securing and integrating it with your existing infrastructure, or going to production in multiple complex environments.
+In this example, I explained the basic principles behind PERN stack applications and showed how to create the infrastructure to deploy them on ECS. A flexible and optimized tool, Pulumi Crosswalk allows everything from rapidly prototyping applications, to scaling workload, to securing and integrating it with your existing infrastructure, or going to production in multiple complex environments.
 
 Next week, I'll _______.
 
-The blog post's full code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app).
+The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app).
