@@ -13,11 +13,16 @@ In this blog post, we will explore PERN stack applications and deploy one to AWS
 
 The nature of the project means that it has 4 distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI, and sends requests to the stateless server.
 
-PERN projects have four distinct tiers: 
-- a database that keeps track of our data, 
-- a stateless server that receives commands to manage the database, 
-- a clientside server that contains and renders the user interface code, 
+PERN projects have four distinct tiers:
+
+- a database that keeps track of our data,
+
+- a stateless server that receives commands to manage the database,
+
+- a clientside server that contains and renders the user interface code,
+
 - and the users who run the code in their browsers and send requests to the stateless server.
+
 <Project diagram>
 
 An advantage of infrastructure as code is that the application and infrastructure deployment can use the same language. As React and the other components use NodeJS, we'll use it for our infrastructure too by writing it TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
@@ -331,7 +336,7 @@ const clientsideService = new awsx.ecs.FargateService("client-side-service", {
 });
 ```
 
-To make our PERN stack application available on the Internet, we export the address of the clientside listener. We can open a browser window with the URl and port to view our application.
+To make our PERN stack application available on the Internet, we export the address of the clientside listener. We can open a browser window with the URL and port to view our application.
 
 ```typescript
 export let URL = clientsideListener.endpoint.hostname;
