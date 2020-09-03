@@ -23,7 +23,7 @@ PERN projects have four distinct tiers:
 
 - and the users who run the code in their browsers and send requests to the stateless server.
 
-<Project diagram>
+![PERN app diagram](diagram.png)
 
 An advantage of infrastructure as code is that the application and infrastructure deployment can use the same language. As React and the other components use NodeJS, we'll use it for our infrastructure too by writing it TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
 
