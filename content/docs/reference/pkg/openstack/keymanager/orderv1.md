@@ -80,12 +80,12 @@ import pulumi
 import pulumi_openstack as openstack
 
 order1 = openstack.keymanager.OrderV1("order1",
-    meta={
-        "algorithm": "aes",
-        "bit_length": 256,
-        "mode": "cbc",
-        "name": "mysecret",
-    },
+    meta=openstack.keymanager.OrderV1MetaArgs(
+        algorithm="aes",
+        bit_length=256,
+        mode="cbc",
+        name="mysecret",
+    ),
     type="key")
 ```
 
@@ -172,11 +172,11 @@ import pulumi
 import pulumi_openstack as openstack
 
 order1 = openstack.keymanager.OrderV1("order1",
-    meta={
-        "algorithm": "rsa",
-        "bit_length": 4096,
-        "name": "mysecret",
-    },
+    meta=openstack.keymanager.OrderV1MetaArgs(
+        algorithm="rsa",
+        bit_length=4096,
+        name="mysecret",
+    ),
     type="asymmetric")
 ```
 
@@ -212,7 +212,7 @@ const order1 = new openstack.keymanager.OrderV1("order_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.OrderV1">OrderV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>meta=None<span class="p">, </span>region=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/keymanager/#pulumi_openstack.keymanager.OrderV1">OrderV1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[OrderV1MetaArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -519,7 +519,7 @@ V1 order.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderv1meta">Dict[Order<wbr>V1Meta]</a></span>
+        <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
 {{% /md %}}</dd>
@@ -1043,7 +1043,8 @@ Get an existing OrderV1 resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_ref=None<span class="p">, </span>created=None<span class="p">, </span>creator_id=None<span class="p">, </span>meta=None<span class="p">, </span>order_ref=None<span class="p">, </span>region=None<span class="p">, </span>secret_ref=None<span class="p">, </span>status=None<span class="p">, </span>sub_status=None<span class="p">, </span>sub_status_message=None<span class="p">, </span>type=None<span class="p">, </span>updated=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[OrderV1MetaArgs]</span> = None<span class="p">, </span><span class="nx">order_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sub_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sub_status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OrderV1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1051,7 +1052,7 @@ Get an existing OrderV1 resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.OrderV1.html">OrderV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.OrderV1State.html">OrderV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.OrderV1.html">OrderV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.KeyManager.OrderV1State.html">OrderV1State</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1622,7 +1623,7 @@ V1 order.
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderv1meta">Dict[Order<wbr>V1Meta]</a></span>
+        <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
 {{% /md %}}</dd>

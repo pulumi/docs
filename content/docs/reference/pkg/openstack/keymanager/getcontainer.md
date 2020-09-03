@@ -99,7 +99,7 @@ const example = pulumi.output(openstack.keymanager.getContainer({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_container(</span>name=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_container(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContainerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -910,7 +910,7 @@ structure is described below.
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontaineraclread">Dict[Get<wbr>Container<wbr>Acl<wbr>Read]</a></span>
+        <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1119,8 +1119,8 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="projectaccess_python">
-<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+        <span id="project_access_python">
+<a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

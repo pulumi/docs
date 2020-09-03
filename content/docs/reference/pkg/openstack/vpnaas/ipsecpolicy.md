@@ -91,7 +91,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#pulumi_openstack.vpnaas.IpSecPolicy">IpSecPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#pulumi_openstack.vpnaas.IpSecPolicy">IpSecPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encapsulation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetimes</span><span class="p">:</span> <span class="nx">Optional[List[IpSecPolicyLifetimeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pfs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -734,7 +734,7 @@ The default value is aes-128. Changing this updates the existing policy.
 <a href="#lifetimes_python" style="color: inherit; text-decoration: inherit;">lifetimes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
+        <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ Changing this updates the existing policy. Default is ESP.
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -910,7 +910,8 @@ Get an existing IpSecPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encapsulation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetimes</span><span class="p">:</span> <span class="nx">Optional[List[IpSecPolicyLifetimeArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pfs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> IpSecPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -918,7 +919,7 @@ Get an existing IpSecPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.VPNaaS.IpSecPolicy.html">IpSecPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.VPNaaS.IpSecPolicyState.html">IpSecPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.VPNaaS.IpSecPolicy.html">IpSecPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.VPNaaS.IpSecPolicyState.html">IpSecPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1495,7 +1496,7 @@ The default value is aes-128. Changing this updates the existing policy.
 <a href="#state_lifetimes_python" style="color: inherit; text-decoration: inherit;">lifetimes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
+        <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
 {{% /md %}}</dd>
@@ -1568,7 +1569,7 @@ Changing this updates the existing policy. Default is ESP.
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>

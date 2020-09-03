@@ -28,6 +28,7 @@ Explore the resources and functions of the compute module in the Open Stack pack
 <ul class="api">
     <li><a href="getavailabilityzones" title="GetAvailabilityZones"><span class="symbol function"></span>GetAvailabilityZones</a></li>
     <li><a href="getflavor" title="GetFlavor"><span class="symbol function"></span>GetFlavor</a></li>
+    <li><a href="getinstancev2" title="GetInstanceV2"><span class="symbol function"></span>GetInstanceV2</a></li>
     <li><a href="getkeypair" title="GetKeypair"><span class="symbol function"></span>GetKeypair</a></li>
 </ul>
 
@@ -40,7 +41,7 @@ Explore the resources and functions of the compute module in the Open Stack pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

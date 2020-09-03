@@ -98,7 +98,7 @@ const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>name=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -384,6 +384,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="floatingipenabled_csharp">
+<a href="#floatingipenabled_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -663,6 +673,16 @@ the cluster.
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="floatingipenabled_go">
+<a href="#floatingipenabled_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -948,6 +968,16 @@ the cluster.
 
     <dt class="property-"
             title="">
+        <span id="floatingipenabled_nodejs">
+<a href="#floatingipenabled_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1230,6 +1260,16 @@ the cluster.
 
     <dt class="property-"
             title="">
+        <span id="floating_ip_enabled_python">
+<a href="#floating_ip_enabled_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1256,7 +1296,7 @@ the cluster.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties of
 the cluster.
