@@ -24,7 +24,7 @@ meta_desc: "Explore the GetImage function of the Hetzner Cloud package, includin
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_image(</span>id=None<span class="p">, </span>most_recent=None<span class="p">, </span>name=None<span class="p">, </span>selector=None<span class="p">, </span>with_selector=None<span class="p">, </span>with_statuses=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_statuses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -57,7 +57,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -67,7 +68,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If more than one result is returned, use the most recent Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -77,7 +79,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -97,7 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -107,7 +111,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only images with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -124,7 +129,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -134,7 +140,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If more than one result is returned, use the most recent Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -144,7 +151,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -164,7 +172,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -174,7 +183,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only images with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -191,7 +201,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -201,7 +212,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If more than one result is returned, use the most recent Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -211,7 +223,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -231,7 +244,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -241,7 +255,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only images with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -258,7 +273,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -268,7 +284,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If more than one result is returned, use the most recent Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -278,7 +295,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -298,7 +316,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -308,7 +327,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only images with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -338,7 +358,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Date when the Image was created (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -348,7 +369,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the image is considered to be deprecated (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -358,7 +380,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -378,7 +401,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Image, only present when the Image is of type `system`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -388,7 +412,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Flavor of operating system contained in the image, could be `ubuntu`, `centos`, `debian`, `fedora` or `unknown`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,7 +423,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Operating system version.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -408,7 +434,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Indicates that rapid deploy of the image is available.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -418,7 +445,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Image, could be `system`, `backup` or `snapshot`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -428,7 +456,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -485,7 +514,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Date when the Image was created (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -495,7 +525,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the image is considered to be deprecated (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -505,7 +536,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -525,7 +557,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Image, only present when the Image is of type `system`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -535,7 +568,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Flavor of operating system contained in the image, could be `ubuntu`, `centos`, `debian`, `fedora` or `unknown`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -545,7 +579,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Operating system version.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -555,7 +590,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Indicates that rapid deploy of the image is available.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -565,7 +601,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Image, could be `system`, `backup` or `snapshot`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -575,7 +612,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -632,7 +670,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Date when the Image was created (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -642,7 +681,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the image is considered to be deprecated (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -652,7 +692,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -672,7 +713,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Image, only present when the Image is of type `system`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -682,7 +724,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Flavor of operating system contained in the image, could be `ubuntu`, `centos`, `debian`, `fedora` or `unknown`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -692,7 +735,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Operating system version.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -702,7 +746,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Indicates that rapid deploy of the image is available.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -712,7 +757,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Image, could be `system`, `backup` or `snapshot`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -722,7 +768,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -779,7 +826,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Date when the Image was created (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -789,7 +837,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Point in time when the image is considered to be deprecated (in ISO-8601 format).
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -799,7 +848,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Description of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -807,7 +857,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -819,7 +869,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Image, only present when the Image is of type `system`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -829,7 +880,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Flavor of operating system contained in the image, could be `ubuntu`, `centos`, `debian`, `fedora` or `unknown`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -839,7 +891,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Operating system version.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -849,7 +902,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Indicates that rapid deploy of the image is available.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -859,7 +913,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the Image, could be `system`, `backup` or `snapshot`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -869,7 +924,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Image.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

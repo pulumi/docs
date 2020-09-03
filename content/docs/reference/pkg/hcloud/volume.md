@@ -124,7 +124,7 @@ const master = new hcloud.Volume("master", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.Volume">Volume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automount=None<span class="p">, </span>format=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>server_id=None<span class="p">, </span>size=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.Volume">Volume</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automount</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -304,7 +304,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -314,7 +315,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -324,7 +326,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -334,7 +337,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -344,7 +348,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -354,7 +359,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -364,7 +370,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -381,7 +388,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -391,7 +399,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -401,7 +410,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -411,7 +421,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -421,7 +432,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -431,7 +443,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -441,7 +454,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -458,7 +472,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -468,7 +483,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -478,7 +494,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -488,7 +505,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -498,7 +516,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -508,7 +527,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -518,7 +538,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -535,7 +556,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -545,7 +567,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -555,7 +578,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -563,9 +587,10 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -575,7 +600,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -585,7 +611,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -595,7 +622,8 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -633,7 +661,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -660,7 +689,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -687,7 +717,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -714,7 +745,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -735,7 +767,8 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automount=None<span class="p">, </span>format=None<span class="p">, </span>labels=None<span class="p">, </span>linux_device=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>server_id=None<span class="p">, </span>size=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automount</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linux_device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -743,7 +776,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..VolumeState.html">VolumeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..VolumeState.html">VolumeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -857,7 +890,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -867,7 +901,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -877,7 +912,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -887,7 +923,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -897,7 +934,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -907,7 +945,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -917,7 +956,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -927,7 +967,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -944,7 +985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -954,7 +996,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -964,7 +1007,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -974,7 +1018,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +1029,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -994,7 +1040,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1004,7 +1051,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1014,7 +1062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1031,7 +1080,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1041,7 +1091,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1051,7 +1102,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1061,7 +1113,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1071,7 +1124,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1081,7 +1135,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1091,7 +1146,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1101,7 +1157,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1118,7 +1175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automount the volume upon attaching it (server_id must be provided).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1128,7 +1186,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Format volume after creation. `xfs` or `ext4`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1136,9 +1195,10 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1148,7 +1208,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device path on the file system for the Volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1158,7 +1219,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1168,7 +1230,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to create (must be unique per project).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1178,7 +1241,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1188,7 +1252,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume (in GB).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

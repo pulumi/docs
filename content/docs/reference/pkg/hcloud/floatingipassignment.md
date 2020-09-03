@@ -143,7 +143,7 @@ const main = new hcloud.FloatingIpAssignment("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.FloatingIpAssignment">FloatingIpAssignment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>floating_ip_id=None<span class="p">, </span>server_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.FloatingIpAssignment">FloatingIpAssignment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">floating_ip_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -323,7 +323,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -333,7 +334,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -350,7 +352,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -360,7 +363,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -377,7 +381,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -387,7 +392,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -404,7 +410,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -414,7 +421,8 @@ The FloatingIpAssignment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -514,7 +522,8 @@ Get an existing FloatingIpAssignment resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>floating_ip_id=None<span class="p">, </span>server_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">floating_ip_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> FloatingIpAssignment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -522,7 +531,7 @@ Get an existing FloatingIpAssignment resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.FloatingIpAssignment.html">FloatingIpAssignment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..FloatingIpAssignmentState.html">FloatingIpAssignmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.FloatingIpAssignment.html">FloatingIpAssignment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..FloatingIpAssignmentState.html">FloatingIpAssignmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -636,7 +645,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -646,7 +656,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -663,7 +674,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -673,7 +685,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -690,7 +703,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -700,7 +714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -717,7 +732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -727,7 +743,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Server to assign the Floating IP to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

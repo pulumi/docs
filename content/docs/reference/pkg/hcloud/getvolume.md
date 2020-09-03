@@ -24,7 +24,7 @@ meta_desc: "Explore the GetVolume function of the Hetzner Cloud package, includi
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_volume(</span>id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>selector=None<span class="p">, </span>server=None<span class="p">, </span>with_selector=None<span class="p">, </span>with_statuses=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_statuses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -59,7 +59,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -79,7 +80,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -109,7 +111,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -119,7 +122,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only volumes with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -136,7 +140,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -156,7 +161,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -186,7 +192,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -196,7 +203,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only volumes with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -213,7 +221,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -233,7 +242,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -263,7 +273,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -273,7 +284,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only volumes with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -290,7 +302,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -310,7 +323,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -340,7 +354,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -350,7 +365,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List only volumes with the specified status, could contain `creating` or `available`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -400,7 +416,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -410,7 +427,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -420,7 +438,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -507,7 +526,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -517,7 +537,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -527,7 +548,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -614,7 +636,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -624,7 +647,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -634,7 +658,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -699,7 +724,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -721,7 +746,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -731,7 +757,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -741,7 +768,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique ID of the volume.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

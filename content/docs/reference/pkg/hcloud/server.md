@@ -22,7 +22,7 @@ meta_desc: "Explore the Server resource of the Hetzner Cloud package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backups=None<span class="p">, </span>datacenter=None<span class="p">, </span>image=None<span class="p">, </span>iso=None<span class="p">, </span>keep_disk=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>rescue=None<span class="p">, </span>server_type=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.Server">Server</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iso</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rescue</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -202,7 +202,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -212,7 +213,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -222,7 +224,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -232,7 +235,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -242,7 +246,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -252,7 +257,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -262,7 +268,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -272,7 +279,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -282,7 +290,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -292,7 +301,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -302,7 +312,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -312,7 +323,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -329,7 +341,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -339,7 +352,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -349,7 +363,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -359,7 +374,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -369,7 +385,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -379,7 +396,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -389,7 +407,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +418,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +429,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -419,7 +440,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -429,7 +451,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -439,7 +462,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -456,7 +480,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -466,7 +491,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -476,7 +502,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -486,7 +513,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -496,7 +524,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -506,7 +535,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -516,7 +546,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -526,7 +557,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -536,7 +568,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -546,7 +579,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -556,7 +590,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -566,7 +601,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -583,7 +619,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -593,7 +630,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -603,7 +641,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -613,7 +652,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -623,7 +663,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -633,7 +674,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -641,9 +683,10 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -653,7 +696,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -663,7 +707,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -673,7 +718,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -683,7 +729,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -693,7 +740,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -721,7 +769,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -741,7 +790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -751,7 +801,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -761,7 +812,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -771,7 +823,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -788,7 +841,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -808,7 +862,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -818,7 +873,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -828,7 +884,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -838,7 +895,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -855,7 +913,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -875,7 +934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -885,7 +945,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -895,7 +956,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -905,7 +967,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -922,7 +985,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -942,7 +1006,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -952,7 +1017,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -962,7 +1028,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -972,7 +1039,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -993,7 +1061,8 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backup_window=None<span class="p">, </span>backups=None<span class="p">, </span>datacenter=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>ipv6_network=None<span class="p">, </span>iso=None<span class="p">, </span>keep_disk=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>rescue=None<span class="p">, </span>server_type=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iso</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rescue</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Server</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1001,7 +1070,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.Server.html">Server</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..ServerState.html">ServerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.Server.html">Server</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..ServerState.html">ServerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1115,7 +1184,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1125,7 +1195,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1135,7 +1206,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1145,7 +1217,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1155,7 +1228,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1165,7 +1239,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1175,7 +1250,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1185,7 +1261,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1195,7 +1272,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1205,7 +1283,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1215,7 +1294,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1225,7 +1305,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1235,7 +1316,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1245,7 +1327,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1255,7 +1338,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1265,7 +1349,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1275,7 +1360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1292,7 +1378,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1302,7 +1389,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1312,7 +1400,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1322,7 +1411,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1332,7 +1422,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1342,7 +1433,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1352,7 +1444,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1362,7 +1455,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1372,7 +1466,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1382,7 +1477,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1392,7 +1488,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1402,7 +1499,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1412,7 +1510,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1422,7 +1521,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1432,7 +1532,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1442,7 +1543,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1452,7 +1554,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1469,7 +1572,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1479,7 +1583,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1489,7 +1594,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1499,7 +1605,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1509,7 +1616,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1519,7 +1627,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1529,7 +1638,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1539,7 +1649,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1549,7 +1660,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1559,7 +1671,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1569,7 +1682,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1579,7 +1693,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1589,7 +1704,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1599,7 +1715,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1609,7 +1726,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1619,7 +1737,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1629,7 +1748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1646,7 +1766,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
+    <dd>{{% md %}}(string) The backup window of the server, if enabled.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should remove this property from your terraform configuration.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1656,7 +1777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable or disable backups.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1666,7 +1788,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The datacenter name to create the server in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1676,7 +1799,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name or ID of the image the server is created from.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1686,7 +1810,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv4 address.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1696,7 +1821,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The first IPv6 address of the assigned network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1706,7 +1832,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The IPv6 network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1716,7 +1843,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID or Name of an ISO image to mount.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1726,7 +1854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, do not upgrade the disk. This allows downgrading the server type later.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1734,9 +1863,10 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1746,7 +1876,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location name to create the server in. `nbg1`, `fsn1` or `hel1`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1756,7 +1887,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1766,7 +1898,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. `linux64` `linux32` or `freebsd64`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1776,7 +1909,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the server type this server should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1786,7 +1920,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH key IDs or names which should be injected into the server at creation time
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1796,7 +1931,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) The status of the server.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1806,7 +1942,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud-Init user data to use during server creation
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

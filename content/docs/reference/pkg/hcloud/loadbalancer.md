@@ -100,10 +100,10 @@ myserver = hcloud.Server("myserver",
 load_balancer = hcloud.LoadBalancer("loadBalancer",
     load_balancer_type="lb11",
     location="nbg1",
-    targets=[{
-        "server_id": myserver.id,
-        "type": "server",
-    }])
+    targets=[hcloud.LoadBalancerTargetArgs(
+        server_id=myserver.id,
+        type="server",
+    )])
 ```
 
 {{% /example %}}
@@ -142,7 +142,7 @@ const loadBalancer = new hcloud.LoadBalancer("load_balancer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancer">LoadBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancer_type=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_zone=None<span class="p">, </span>targets=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerTargetArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +322,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -332,7 +333,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalanceralgorithm">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -342,7 +344,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -352,7 +355,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -362,7 +366,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -372,7 +377,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -382,7 +388,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -399,7 +406,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +417,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -419,7 +428,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -429,7 +439,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -439,7 +450,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -449,7 +461,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -459,7 +472,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -476,7 +490,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -486,7 +501,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -496,7 +512,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -506,7 +523,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -516,7 +534,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -526,7 +545,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -536,7 +556,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">Load<wbr>Balancer<wbr>Target[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -553,7 +574,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -561,9 +583,10 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceralgorithm">Dict[Load<wbr>Balancer<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -571,9 +594,10 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -583,7 +607,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -593,7 +618,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -603,7 +629,8 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -611,9 +638,10 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancertarget">List[Load<wbr>Balancer<wbr>Target]</a></span>
+        <span class="property-type"><a href="#loadbalancertarget">List[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -651,7 +679,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -661,7 +690,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -708,7 +738,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -718,7 +749,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -765,7 +797,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -775,7 +808,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -822,7 +856,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -832,7 +867,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -873,7 +909,8 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancer_type=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>network_ip=None<span class="p">, </span>network_zone=None<span class="p">, </span>targets=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">network_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancerTargetArgs]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -881,7 +918,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -995,7 +1032,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalanceralgorithm">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1005,7 +1043,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +1054,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1025,7 +1065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1035,7 +1076,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1045,7 +1087,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1055,7 +1098,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1129,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1095,7 +1140,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1112,7 +1158,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1122,7 +1169,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1132,7 +1180,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1142,7 +1191,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1152,7 +1202,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1162,7 +1213,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1172,7 +1224,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1202,7 +1255,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1212,7 +1266,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1229,7 +1284,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1239,7 +1295,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1249,7 +1306,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1259,7 +1317,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1269,7 +1328,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1279,7 +1339,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1289,7 +1350,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1319,7 +1381,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1329,7 +1392,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancertarget">Load<wbr>Balancer<wbr>Target[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1344,9 +1408,10 @@ The following state arguments are supported:
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceralgorithm">Dict[Load<wbr>Balancer<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1356,7 +1421,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1366,7 +1432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1374,9 +1441,10 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1386,7 +1454,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1396,7 +1465,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1406,7 +1476,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1436,7 +1507,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1444,9 +1516,10 @@ The following state arguments are supported:
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancertarget">List[Load<wbr>Balancer<wbr>Target]</a></span>
+        <span class="property-type"><a href="#loadbalancertarget">List[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1489,7 +1562,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1506,7 +1580,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1523,7 +1598,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1540,7 +1616,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1575,7 +1652,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the target. `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1585,7 +1663,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1612,7 +1691,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the target. `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1622,7 +1702,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1649,7 +1730,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the target. `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1659,7 +1741,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1686,7 +1769,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the target. `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1696,7 +1780,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">

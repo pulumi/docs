@@ -90,7 +90,7 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 lb1 = hcloud.get_load_balancer(name="my-load-balancer")
-lb2 = hcloud.get_load_balancer(id="123")
+lb2 = hcloud.get_load_balancer(id=123)
 lb3 = hcloud.get_load_balancer(with_selector="key=value")
 ```
 
@@ -129,7 +129,7 @@ const lb3 = pulumi.output(hcloud.getLoadBalancer({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_load_balancer(</span>id=None<span class="p">, </span>name=None<span class="p">, </span>with_selector=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancer(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -164,7 +164,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -174,7 +175,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -184,7 +186,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -201,7 +204,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -211,7 +215,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -221,7 +226,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -238,7 +244,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -248,7 +255,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -258,7 +266,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -275,7 +284,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -285,7 +295,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -295,7 +306,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Label Selector. For more information about possible values, visit the [Hetzner Cloud Documentation](https://docs.hetzner.cloud/#overview-label-selector).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -325,7 +337,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalanceralgorithm">Pulumi.<wbr>HCloud.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -335,7 +348,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -345,7 +359,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -355,7 +370,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) .
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -365,7 +381,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -375,7 +392,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the location the Load Balancer is in.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -395,7 +413,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservice">List&lt;Pulumi.<wbr>HCloud.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of services a Load Balancer provides.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -405,7 +424,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Target&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -415,7 +435,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -425,7 +446,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -452,7 +474,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalanceralgorithm">Get<wbr>Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -462,7 +485,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -472,7 +496,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -482,7 +507,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) .
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -492,7 +518,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -502,7 +529,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the location the Load Balancer is in.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -522,7 +550,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservice">[]Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of services a Load Balancer provides.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -532,7 +561,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancertarget">[]Get<wbr>Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -542,7 +572,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -552,7 +583,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -579,7 +611,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalanceralgorithm">Get<wbr>Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -589,7 +622,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -599,7 +633,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -609,7 +644,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) .
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -619,7 +655,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -629,7 +666,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the location the Load Balancer is in.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -649,7 +687,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservice">Get<wbr>Load<wbr>Balancer<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of services a Load Balancer provides.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -659,7 +698,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancertarget">Get<wbr>Load<wbr>Balancer<wbr>Target[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -669,7 +709,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -679,7 +720,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -704,9 +746,10 @@ The following output properties are available:
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalanceralgorithm">Dict[Get<wbr>Load<wbr>Balancer<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#getloadbalanceralgorithm">Get<wbr>Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -716,7 +759,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -726,7 +770,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -734,9 +779,10 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(map) User-defined labels (key-value pairs) .
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -746,7 +792,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Type of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -756,7 +803,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the location the Load Balancer is in.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -776,7 +824,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservice">List[Get<wbr>Load<wbr>Balancer<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of services a Load Balancer provides.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -786,7 +835,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancertarget">List[Get<wbr>Load<wbr>Balancer<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of targets of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -796,7 +846,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -806,7 +857,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -857,7 +909,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -874,7 +927,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -891,7 +945,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -908,7 +963,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -943,7 +999,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service connects to the targets on. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -953,7 +1010,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -963,7 +1021,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -973,7 +1032,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service listen on`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -983,7 +1043,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -993,7 +1054,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable proxyprotocol.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1010,7 +1072,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service connects to the targets on. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1020,7 +1083,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1030,7 +1094,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehttp">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1040,7 +1105,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service listen on`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1050,7 +1116,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1060,7 +1127,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable proxyprotocol.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1077,7 +1145,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service connects to the targets on. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1087,7 +1156,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1097,7 +1167,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehttp">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1107,7 +1178,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service listen on`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1117,7 +1189,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1127,7 +1200,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable proxyprotocol.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1144,7 +1218,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service connects to the targets on. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1152,9 +1227,10 @@ The following output properties are available:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Dict[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1162,9 +1238,10 @@ The following output properties are available:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehttp">Dict[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehttp">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1174,7 +1251,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the service listen on`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1184,7 +1262,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1194,7 +1273,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable proxyprotocol.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1229,7 +1309,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1239,7 +1320,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Interval how often the health check will be performed, in seconds.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1249,7 +1331,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the health check tries to connect to. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1259,7 +1342,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1269,7 +1353,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Number of tries a health check will be performed until a target will be listed as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1279,7 +1364,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Timeout when a health check try will be canceled if there is no response, in seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1296,7 +1382,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1306,7 +1393,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Interval how often the health check will be performed, in seconds.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1316,7 +1404,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the health check tries to connect to. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1326,7 +1415,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1336,7 +1426,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Number of tries a health check will be performed until a target will be listed as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1346,7 +1437,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Timeout when a health check try will be canceled if there is no response, in seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1363,7 +1455,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1373,7 +1466,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Interval how often the health check will be performed, in seconds.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1383,7 +1477,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the health check tries to connect to. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1393,7 +1488,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1403,7 +1499,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Number of tries a health check will be performed until a target will be listed as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1413,7 +1510,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Timeout when a health check try will be canceled if there is no response, in seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1428,9 +1526,10 @@ The following output properties are available:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Dict[Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http]</a></span>
+        <span class="property-type"><a href="#getloadbalancerservicehealthcheckhttp">Get<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list) List of http configurations when `protocol` is `http` or `https`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1440,7 +1539,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Interval how often the health check will be performed, in seconds.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1450,7 +1550,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Port the health check tries to connect to. Can be everything between `1` and `65535`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1460,7 +1561,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Protocol the health check uses. `http`, `https` or `tcp`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1470,7 +1572,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Number of tries a health check will be performed until a target will be listed as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1480,7 +1583,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Timeout when a health check try will be canceled if there is no response, in seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1515,7 +1619,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}string) Domain we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1525,7 +1630,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Path we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1535,7 +1641,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Response we expect to be included in the Target response when a Health Check was performed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1545,7 +1652,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1555,7 +1663,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable TLS certificate checking.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1572,7 +1681,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}string) Domain we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1582,7 +1692,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Path we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1592,7 +1703,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Response we expect to be included in the Target response when a Health Check was performed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1602,7 +1714,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1612,7 +1725,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable TLS certificate checking.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1629,7 +1743,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}string) Domain we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1639,7 +1754,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Path we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1649,7 +1765,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Response we expect to be included in the Target response when a Health Check was performed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1659,7 +1776,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1669,7 +1787,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable TLS certificate checking.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1686,7 +1805,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}string) Domain we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1696,7 +1816,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Path we try to access when performing the Health Check.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1706,17 +1827,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Response we expect to be included in the Target response when a Health Check was performed.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="statuscodes_python">
-<a href="#statuscodes_python" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
+        <span id="status_codes_python">
+<a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1726,7 +1849,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(bool) Enable TLS certificate checking.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1761,7 +1885,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) List of IDs from certificates which the Load Balancer has.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1771,7 +1896,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Lifetime of the cookie for sticky session (in seconds).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1781,7 +1907,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the cookie for sticky session.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1791,7 +1918,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if all requests from port 80 should be redirected to port 443.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1801,7 +1929,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if sticky sessions are enabled or not.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1818,7 +1947,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) List of IDs from certificates which the Load Balancer has.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1828,7 +1958,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Lifetime of the cookie for sticky session (in seconds).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1838,7 +1969,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the cookie for sticky session.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1848,7 +1980,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if all requests from port 80 should be redirected to port 443.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1858,7 +1991,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if sticky sessions are enabled or not.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1875,7 +2009,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) List of IDs from certificates which the Load Balancer has.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1885,7 +2020,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Lifetime of the cookie for sticky session (in seconds).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1895,7 +2031,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the cookie for sticky session.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1905,7 +2042,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if all requests from port 80 should be redirected to port 443.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1915,7 +2053,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if sticky sessions are enabled or not.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1932,47 +2071,52 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(list[int]) List of IDs from certificates which the Load Balancer has.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="cookielifetime_python">
-<a href="#cookielifetime_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Lifetime</a>
+        <span id="cookie_lifetime_python">
+<a href="#cookie_lifetime_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) Lifetime of the cookie for sticky session (in seconds).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="cookiename_python">
-<a href="#cookiename_python" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
+        <span id="cookie_name_python">
+<a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Name of the cookie for sticky session.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="redirecthttp_python">
-<a href="#redirecthttp_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http</a>
+        <span id="redirect_http_python">
+<a href="#redirect_http_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if all requests from port 80 should be redirected to port 443.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="stickysessions_python">
-<a href="#stickysessions_python" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
+        <span id="sticky_sessions_python">
+<a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Determine if sticky sessions are enabled or not.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2007,7 +2151,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Label Selector to add a group of resources based on the label.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2017,7 +2162,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) ID of the server which should be a target for this Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2027,7 +2173,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2044,7 +2191,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Label Selector to add a group of resources based on the label.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2054,7 +2202,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) ID of the server which should be a target for this Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2064,7 +2213,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2081,7 +2231,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Label Selector to add a group of resources based on the label.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2091,7 +2242,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) ID of the server which should be a target for this Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2101,7 +2253,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2112,13 +2265,14 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="labelselector_python">
-<a href="#labelselector_python" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
+        <span id="label_selector_python">
+<a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Label Selector to add a group of resources based on the label.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2128,7 +2282,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(int) ID of the server which should be a target for this Load Balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2138,7 +2293,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(string) Type of the target. `server` or `label_selector`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
