@@ -9,15 +9,18 @@ tags: ["aws", "typescript", "docker"]
 
 In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node; and a PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
 
-
-The word *PERN* is an acronym for PostgreSQL, Express, React, and NodeJS. A PERN stack application is simply a project that uses PostgreSQL as a database, Express as an application framework, React as a user interface framework, and which runs on Node.
-
 <!--more-->
 
 The nature of the project means that it has 4 distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI, and sends requests to the stateless server.
+
+PERN projects have four distinct tiers: 
+- a database that keeps track of our data, 
+- a stateless server that receives commands to manage the database, 
+- a clientside server that contains and renders the user interface code, 
+- and the users who run the code in their browsers and send requests to the stateless server.
 <Project diagram>
 
-As React and the other components use NodeJS, we'll use it for our infrastructure too by writing it TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
+An advantage of infrastructure as code is that the application and infrastructure deployment can use the same language. As React and the other components use NodeJS, we'll use it for our infrastructure too by writing it TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
 
 ```bash
 $ mkdir aws-pern-voting-app && cd aws-pern-voting-app
@@ -36,7 +39,7 @@ $ pulumi config set sql-user-password <PASSWORD> --secret
 $ pulumi config set aws:region <REGION>
 ```
 
-The `package.json` file lists the libraries used by the project. We will dd the following to the `dependencies` section:
+The `package.json` file lists the libraries used by the project. We will add the following to the `dependencies` section:
 
 ```json
 "@pulumi/cloud-aws": "^0.19.0",
@@ -44,7 +47,7 @@ The `package.json` file lists the libraries used by the project. We will dd the 
 "pg": "^8.3.3"
 ```
 
-Our project uses a Dynamic Provider written in TypeScript to help create tables and Schemas. It offers the same exact features as our [MySQL provider]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}), but for PostgreSQL.
+Our project uses a Dynamic Provider to help create tables and Schemas. It offers the same exact features as our [MySQL provider]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}), but for PostgreSQL.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,7 +129,7 @@ export class Schema extends pulumi.dynamic.Resource {
 }
 ```
 
-With the Dynamic provider configures, we can focus on the main `index.ts` file. We start with importing libraries and describing the application's configuration options.
+With the Dynamic provider configured, we can focus on the main `index.ts` file. We start with importing libraries and describing the application's configuration options.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -284,7 +287,7 @@ const postgresqlVotesTable = new Schema("postgresql-votes-schema", {
 
 With the basic infrastructure and provider completed, we can write the application deployment code to ECS. We will use Pulumi Crosswalk, which is a collection of libraries that makes common infrastructure-as-code tasks in AWS easier and more secure by using well-architected best practices automatically.
 
-We'll first set up the server. The Network Listener is assigned the same port that the server, which is, in our case, port 5000. A set of environment variables representing our PostgreSQL connection credentials are passed directly to the `awsx.ecs.FargateService`. With AWS Crosswalk, what would have been over 150 lines of code is reduced to just under 20 lines of code.
+We'll first set up the server. The Network Listener is assigned the same port as the server, which is, in our case, port 5000. A set of environment variables representing our PostgreSQL connection credentials are passed directly to the `awsx.ecs.FargateService`. With AWS Crosswalk, what would have been over 150 lines of code is reduced to just under 20 lines of code.
 
 ```typescript
 const serversideListener = new awsx.elasticloadbalancingv2.NetworkListener("server-side-listener", { port: 5000 });
@@ -308,7 +311,7 @@ const serversideService = new awsx.ecs.FargateService("server-side-service", {
 });
 ```
 
-The same is true for the client service, which can be reduced to a short and easily understandable format. By default, React is configured to use the port 3000, but it can easily be updated to a different one. The `SERVER_HOSTNAME` environment variable which we pass in is used when the container starts to generate a tiny configuration file at runtime called `serverParams.js` with the URL. This way, we do not have to rebuild the entire docker image should the server URL change.
+The same is true for the client service, which can be reduced to a short and easy to understand format. By default, React uses port 3000, but it can set to a different port. The `SERVER_HOSTNAME` environment variable which we pass in is used when the container starts to generate a tiny configuration file at runtime called `serverParams.js` with the URL. This way, we do not have to rebuild the entire docker image should the server URL change.
 
 ```typescript
 const clientsideListener = new awsx.elasticloadbalancingv2.NetworkListener("client-side-listener", { port: 3000 });
