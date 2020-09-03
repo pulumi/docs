@@ -11,12 +11,12 @@ In this blog post, we will explore the basics behind PERN stack applications, an
 
 <!--more-->
 
-The word *PERN* is an acronym for PostgreSQL, Express, React, and Node. A PERN stack application is simply a project that uses PostgreSQL as a database, Express as an application framework, React as a user interface framework, and which runs on Node.
+The word *PERN* is an acronym for PostgreSQL, Express, React, and NodeJS. A PERN stack application is simply a project that uses PostgreSQL as a database, Express as an application framework, React as a user interface framework, and which runs on Node.
 
-The nature of the project means that it has 4 distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the users themselves which download that code and use it to send requests to the stateless server.
+The nature of the project means that it has 4 distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI, and sends requests to the stateless server.
 <Project diagram>
 
-As React and the other components use Typescript, we'll use it for our infrastructure too. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
+As React and the other components use NodeJS, we'll use it for our infrastructure too by writing it TypeScript. The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-typescript`.
 
 ```bash
 $ mkdir aws-pern-voting-app && cd aws-pern-voting-app
@@ -43,7 +43,7 @@ The `package.json` file lists the libraries used by the project. We will need to
 "pg": "^8.3.3"
 ```
 
-Our project uses a Dynamic Provider written in typescript to help create tables and Schemas. It offers the same exact features as our [MySQL provider]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}), but for PostgreSQL.
+Our project uses a Dynamic Provider written in TypeScript to help create tables and Schemas. It offers the same exact features as our [MySQL provider]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}), but for PostgreSQL.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
