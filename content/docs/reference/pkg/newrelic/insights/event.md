@@ -129,26 +129,26 @@ func main() {
 import pulumi
 import pulumi_newrelic as newrelic
 
-foo = newrelic.insights.Event("foo", events=[{
-    "attributes": [
-        {
-            "key": "a_string_attribute",
-            "value": "a string",
-        },
-        {
-            "key": "an_integer_attribute",
-            "type": "int",
-            "value": 42,
-        },
-        {
-            "key": "a_float_attribute",
-            "type": "float",
-            "value": 101.1,
-        },
+foo = newrelic.insights.Event("foo", events=[newrelic.insights.EventEventArgs(
+    attributes=[
+        newrelic.insights.EventEventAttributeArgs(
+            key="a_string_attribute",
+            value="a string",
+        ),
+        newrelic.insights.EventEventAttributeArgs(
+            key="an_integer_attribute",
+            type="int",
+            value="42",
+        ),
+        newrelic.insights.EventEventAttributeArgs(
+            key="a_float_attribute",
+            type="float",
+            value="101.1",
+        ),
     ],
-    "timestamp": 1232471100,
-    "type": "MyEvent",
-}])
+    timestamp=1232471100,
+    type="MyEvent",
+)])
 ```
 
 {{% /example %}}
@@ -197,7 +197,7 @@ const foo = new newrelic.insights.Event("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/insights/#pulumi_newrelic.insights.Event">Event</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>events=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/insights/#pulumi_newrelic.insights.Event">Event</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[List[EventEventArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -429,7 +429,7 @@ The Event resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventevent">List[Event<wbr>Event]</a></span>
+        <span class="property-type"><a href="#eventevent">List[Event<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 {{% /md %}}</dd>
@@ -532,7 +532,8 @@ Get an existing Event resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>events=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[List[EventEventArgs]]</span> = None<span class="p">) -&gt;</span> Event</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -540,7 +541,7 @@ Get an existing Event resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Insights.Event.html">Event</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Insights.EventState.html">EventState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Insights.Event.html">Event</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Insights.EventState.html">EventState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -706,7 +707,7 @@ The following state arguments are supported:
 <a href="#state_events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventevent">List[Event<wbr>Event]</a></span>
+        <span class="property-type"><a href="#eventevent">List[Event<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 {{% /md %}}</dd>
@@ -861,7 +862,7 @@ The following state arguments are supported:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventeventattribute">List[Event<wbr>Event<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#eventeventattribute">List[Event<wbr>Event<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

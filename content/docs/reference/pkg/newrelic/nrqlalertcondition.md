@@ -50,7 +50,7 @@ The `term` block the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>baseline_direction=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>open_violation_on_group_overlap=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -843,7 +843,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 <a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditionnrql">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Nrql]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
@@ -887,7 +887,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditioncritical">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
@@ -975,7 +975,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 <a href="#terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditionterm">List[Nrql<wbr>Alert<wbr>Condition<wbr>Term]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditionterm">List[Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
@@ -1030,7 +1030,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditionwarning">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
@@ -1133,7 +1133,8 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>baseline_direction=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>open_violation_on_group_overlap=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>warning=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">) -&gt;</span> NrqlAlertCondition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1141,7 +1142,7 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.NrqlAlertCondition.html">NrqlAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..NrqlAlertConditionState.html">NrqlAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.NrqlAlertCondition.html">NrqlAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..NrqlAlertConditionState.html">NrqlAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1890,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditioncritical">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
 {{% /md %}}</dd>
@@ -1956,7 +1957,7 @@ The following state arguments are supported:
 <a href="#state_nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditionnrql">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Nrql]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
 {{% /md %}}</dd>
@@ -2000,7 +2001,7 @@ The following state arguments are supported:
 <a href="#state_terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditionterm">List[Nrql<wbr>Alert<wbr>Condition<wbr>Term]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditionterm">List[Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
@@ -2055,7 +2056,7 @@ The following state arguments are supported:
 <a href="#state_warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nrqlalertconditionwarning">Dict[Nrql<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
+        <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
 {{% /md %}}</dd>
@@ -2326,8 +2327,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdduration_python">
-<a href="#thresholdduration_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Duration</a>
+        <span id="threshold_duration_python">
+<a href="#threshold_duration_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2336,8 +2337,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdoccurrences_python">
-<a href="#thresholdoccurrences_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Occurrences</a>
+        <span id="threshold_occurrences_python">
+<a href="#threshold_occurrences_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2346,8 +2347,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2502,8 +2503,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationoffset_python">
-<a href="#evaluationoffset_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Offset</a>
+        <span id="evaluation_offset_python">
+<a href="#evaluation_offset_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>offset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2512,8 +2513,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="sincevalue_python">
-<a href="#sincevalue_python" style="color: inherit; text-decoration: inherit;">since<wbr>Value</a>
+        <span id="since_value_python">
+<a href="#since_value_python" style="color: inherit; text-decoration: inherit;">since_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2818,8 +2819,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdduration_python">
-<a href="#thresholdduration_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Duration</a>
+        <span id="threshold_duration_python">
+<a href="#threshold_duration_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2828,8 +2829,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdoccurrences_python">
-<a href="#thresholdoccurrences_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Occurrences</a>
+        <span id="threshold_occurrences_python">
+<a href="#threshold_occurrences_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2838,8 +2839,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3104,8 +3105,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdduration_python">
-<a href="#thresholdduration_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Duration</a>
+        <span id="threshold_duration_python">
+<a href="#threshold_duration_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3114,8 +3115,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdoccurrences_python">
-<a href="#thresholdoccurrences_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Occurrences</a>
+        <span id="threshold_occurrences_python">
+<a href="#threshold_occurrences_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3124,8 +3125,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

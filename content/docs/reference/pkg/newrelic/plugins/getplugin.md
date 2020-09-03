@@ -125,13 +125,13 @@ foo_alert_condition = newrelic.plugins.AlertCondition("fooAlertCondition",
     plugin_guid=foo_plugin.guid,
     value_function="average",
     metric_description="Queue consumers",
-    terms=[{
-        "duration": 5,
-        "operator": "below",
-        "priority": "critical",
-        "threshold": "0.75",
-        "timeFunction": "all",
-    }])
+    terms=[newrelic.plugins.AlertConditionTermArgs(
+        duration=5,
+        operator="below",
+        priority="critical",
+        threshold=0.75,
+        time_function="all",
+    )])
 ```
 
 {{% /example %}}
@@ -179,7 +179,7 @@ const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_plugin(</span>guid=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_plugin(</span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPluginResult</code></pre></div>
 {{% /choosable %}}
 
 

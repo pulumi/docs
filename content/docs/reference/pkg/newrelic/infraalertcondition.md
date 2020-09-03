@@ -201,16 +201,16 @@ high_disk_usage = newrelic.InfraAlertCondition("highDiskUsage",
     select="diskUsedPercent",
     comparison="above",
     where="(`hostname` LIKE '%frontend%')",
-    critical={
-        "duration": 25,
-        "value": 90,
-        "timeFunction": "all",
-    },
-    warning={
-        "duration": 10,
-        "value": 80,
-        "timeFunction": "all",
-    })
+    critical=newrelic.InfraAlertConditionCriticalArgs(
+        duration=25,
+        value=90,
+        time_function="all",
+    ),
+    warning=newrelic.InfraAlertConditionWarningArgs(
+        duration=10,
+        value=80,
+        time_function="all",
+    ))
 high_db_conn_count = newrelic.InfraAlertCondition("highDbConnCount",
     policy_id=foo.id,
     type="infra_metric",
@@ -219,27 +219,27 @@ high_db_conn_count = newrelic.InfraAlertCondition("highDbConnCount",
     comparison="above",
     where="(`hostname` LIKE '%db%')",
     integration_provider="RdsDbInstance",
-    critical={
-        "duration": 25,
-        "value": 90,
-        "timeFunction": "all",
-    })
+    critical=newrelic.InfraAlertConditionCriticalArgs(
+        duration=25,
+        value=90,
+        time_function="all",
+    ))
 process_not_running = newrelic.InfraAlertCondition("processNotRunning",
     policy_id=foo.id,
     type="infra_process_running",
     comparison="equal",
     process_where="`commandName` = '/usr/bin/ruby'",
-    critical={
-        "duration": 5,
-        "value": 0,
-    })
+    critical=newrelic.InfraAlertConditionCriticalArgs(
+        duration=5,
+        value=0,
+    ))
 host_not_reporting = newrelic.InfraAlertCondition("hostNotReporting",
     policy_id=foo.id,
     type="infra_host_not_reporting",
     where="(`hostname` LIKE '%frontend%')",
-    critical={
-        "duration": 5,
-    })
+    critical=newrelic.InfraAlertConditionCriticalArgs(
+        duration=5,
+    ))
 ```
 
 {{% /example %}}
@@ -317,7 +317,7 @@ const hostNotReporting = new newrelic.InfraAlertCondition("hostNotReporting", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.InfraAlertCondition">InfraAlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comparison=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>event=None<span class="p">, </span>integration_provider=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>process_where=None<span class="p">, </span>runbook_url=None<span class="p">, </span>select=None<span class="p">, </span>type=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>warning=None<span class="p">, </span>where=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.InfraAlertCondition">InfraAlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">comparison</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[InfraAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">process_where</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">select</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_close_timer</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[InfraAlertConditionWarningArgs]</span> = None<span class="p">, </span><span class="nx">where</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1044,7 +1044,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1154,7 +1154,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1356,7 +1356,8 @@ Get an existing InfraAlertCondition resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>comparison=None<span class="p">, </span>created_at=None<span class="p">, </span>critical=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>event=None<span class="p">, </span>integration_provider=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>process_where=None<span class="p">, </span>runbook_url=None<span class="p">, </span>select=None<span class="p">, </span>type=None<span class="p">, </span>updated_at=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>warning=None<span class="p">, </span>where=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">comparison</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[InfraAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">process_where</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">select</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">violation_close_timer</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[InfraAlertConditionWarningArgs]</span> = None<span class="p">, </span><span class="nx">where</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InfraAlertCondition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1364,7 +1365,7 @@ Get an existing InfraAlertCondition resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.InfraAlertCondition.html">InfraAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..InfraAlertConditionState.html">InfraAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.InfraAlertCondition.html">InfraAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..InfraAlertConditionState.html">InfraAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2080,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -2223,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -2395,8 +2396,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2561,8 +2562,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

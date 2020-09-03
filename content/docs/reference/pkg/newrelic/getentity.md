@@ -134,10 +134,10 @@ import pulumi_newrelic as newrelic
 app = newrelic.get_entity(name="my-app",
     domain="APM",
     type="APPLICATION",
-    tag={
-        "key": "my-tag",
-        "value": "my-tag-value",
-    })
+    tag=newrelic.GetEntityTagArgs(
+        key="my-tag",
+        value="my-tag-value",
+    ))
 foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
 foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
     policy_id=foo_alert_policy.id,
@@ -145,13 +145,13 @@ foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
     entities=[data["newrelic_application"]["app"]["application_id"]],
     metric="apdex",
     runbook_url="https://www.example.com",
-    terms=[{
-        "duration": 5,
-        "operator": "below",
-        "priority": "critical",
-        "threshold": "0.75",
-        "timeFunction": "all",
-    }])
+    terms=[newrelic.AlertConditionTermArgs(
+        duration=5,
+        operator="below",
+        priority="critical",
+        threshold=0.75,
+        time_function="all",
+    )])
 ```
 
 {{% /example %}}
@@ -204,7 +204,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_entity(</span>domain=None<span class="p">, </span>name=None<span class="p">, </span>tag=None<span class="p">, </span>type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_entity(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[GetEntityTagArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEntityResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -407,7 +407,7 @@ The following arguments are supported:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getentitytag">Dict[Get<wbr>Entity<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -795,7 +795,7 @@ The following output properties are available:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getentitytag">Dict[Get<wbr>Entity<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

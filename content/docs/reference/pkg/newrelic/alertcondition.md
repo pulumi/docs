@@ -144,13 +144,13 @@ foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
     metric="apdex",
     runbook_url="https://www.example.com",
     condition_scope="application",
-    terms=[{
-        "duration": 5,
-        "operator": "below",
-        "priority": "critical",
-        "threshold": "0.75",
-        "timeFunction": "all",
-    }])
+    terms=[newrelic.AlertConditionTermArgs(
+        duration=5,
+        operator="below",
+        priority="critical",
+        threshold=0.75,
+        time_function="all",
+    )])
 ```
 
 {{% /example %}}
@@ -198,7 +198,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertCondition">AlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertCondition">AlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">gc_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[AlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_close_timer</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -937,7 +937,7 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconditionterm">List[Alert<wbr>Condition<wbr>Term]</a></span>
+        <span class="property-type"><a href="#alertconditionterm">List[Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
@@ -1209,7 +1209,8 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">gc_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[List[AlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_close_timer</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> AlertCondition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1217,7 +1218,7 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertCondition.html">AlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..AlertConditionState.html">AlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertCondition.html">AlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..AlertConditionState.html">AlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1912,7 +1913,7 @@ The following state arguments are supported:
 <a href="#state_entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
@@ -2015,7 +2016,7 @@ The following state arguments are supported:
 <a href="#state_terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconditionterm">List[Alert<wbr>Condition<wbr>Term]</a></span>
+        <span class="property-type"><a href="#alertconditionterm">List[Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
@@ -2290,8 +2291,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
