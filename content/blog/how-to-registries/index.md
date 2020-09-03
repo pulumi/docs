@@ -18,7 +18,7 @@ Whether you are working with Kubernetes or serverless, your application uses con
 
 ## Container registry offerings
 
-The AWS provides the [Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/), Azure has  [Container Registry](https://azure.microsoft.com/en-us/services/container-registry/), and Google has it’s [Container Registry](https://cloud.google.com/container-registry). Each provider has associated services unique to their offering, but all support Docker or OCI compliant images.
+AWS provides the [Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/), Azure has [Container Registry](https://azure.microsoft.com/en-us/services/container-registry/), and Google has it’s [Container Registry](https://cloud.google.com/container-registry). Each provider has associated services unique to their offering, but all support Docker or OCI compliant images.
 
 ## Build it
 
