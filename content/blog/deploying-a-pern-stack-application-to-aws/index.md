@@ -307,7 +307,7 @@ const serversideService = new awsx.ecs.FargateService("server-side-service", {
 });
 ```
 
-The same is true for the client service, which can be reduced to a short and easily understandable format. By default, React is configured to use the port 3000, but it can easily be updated to a different one.
+The same is true for the client service, which can be reduced to a short and easily understandable format. By default, React is configured to use the port 3000, but it can easily be updated to a different one. The `SERVER_HOSTNAME` environment variable which we pass in is used when the container starts to generate a tiny configuration file at runtime called `serverParams.js` with the URL. This way, we do not have to rebuild the entire docker image should the server URL change.
 
 ```typescript
 const clientsideListener = new awsx.elasticloadbalancingv2.NetworkListener("client-side-listener", { port: 3000 });
