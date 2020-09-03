@@ -38,7 +38,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupClusterLogging(ctx, &rancher2.LookupClusterLoggingArgs{
+			ClusterId: "<cluster_id>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,7 +98,7 @@ const foo = pulumi.output(rancher2.getClusterLogging({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster_logging(</span>cluster_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster_logging(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterLoggingResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -736,7 +756,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Cluster Logging object (map)
 {{% /md %}}</dd>
@@ -757,7 +777,7 @@ The following output properties are available:
 <a href="#custom_target_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>target_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingcustomtargetconfig">Dict[Get<wbr>Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterloggingcustomtargetconfig">Get<wbr>Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -767,7 +787,7 @@ The following output properties are available:
 <a href="#elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingelasticsearchconfig">Dict[Get<wbr>Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterloggingelasticsearchconfig">Get<wbr>Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The elasticsearch config for Cluster Logging. For `kind = elasticsearch`  (list maxitems:1)
 {{% /md %}}</dd>
@@ -788,7 +808,7 @@ The following output properties are available:
 <a href="#fluentd_config_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingfluentdconfig">Dict[Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterloggingfluentdconfig">Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The fluentd config for Cluster Logging. For `kind = fluentd` (list maxitems:1)
 {{% /md %}}</dd>
@@ -810,7 +830,7 @@ The following output properties are available:
 <a href="#kafka_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingkafkaconfig">Dict[Get<wbr>Cluster<wbr>Logging<wbr>Kafka<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterloggingkafkaconfig">Get<wbr>Cluster<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The kafka config for Cluster Logging. For `kind = kafka` (list maxitems:1)
 {{% /md %}}</dd>
@@ -832,7 +852,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Cluster Logging object (map)
 {{% /md %}}</dd>
@@ -876,7 +896,7 @@ The following output properties are available:
 <a href="#output_tags_python" style="color: inherit; text-decoration: inherit;">output_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(computed) The output tags for Cluster Logging (map)
 {{% /md %}}</dd>
@@ -887,7 +907,7 @@ The following output properties are available:
 <a href="#splunk_config_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingsplunkconfig">Dict[Get<wbr>Cluster<wbr>Logging<wbr>Splunk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterloggingsplunkconfig">Get<wbr>Cluster<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The splunk config for Cluster Logging. For `kind = splunk` (list maxitems:1)
 {{% /md %}}</dd>
@@ -898,7 +918,7 @@ The following output properties are available:
 <a href="#syslog_config_python" style="color: inherit; text-decoration: inherit;">syslog_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingsyslogconfig">Dict[Get<wbr>Cluster<wbr>Logging<wbr>Syslog<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterloggingsyslogconfig">Get<wbr>Cluster<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The syslog config for Cluster Logging. For `kind = syslog` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1097,8 +1117,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1107,8 +1127,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1503,8 +1523,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sslverify_python">
-<a href="#sslverify_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
+        <span id="ssl_verify_python">
+<a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1513,8 +1533,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authpassword_python">
-<a href="#authpassword_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Password</a>
+        <span id="auth_password_python">
+<a href="#auth_password_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1523,8 +1543,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authusername_python">
-<a href="#authusername_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Username</a>
+        <span id="auth_username_python">
+<a href="#auth_username_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1543,8 +1563,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1553,8 +1573,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1563,8 +1583,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkeypass_python">
-<a href="#clientkeypass_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Pass</a>
+        <span id="client_key_pass_python">
+<a href="#client_key_pass_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1573,8 +1593,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1583,8 +1603,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexprefix_python">
-<a href="#indexprefix_python" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
+        <span id="index_prefix_python">
+<a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1593,8 +1613,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslversion_python">
-<a href="#sslversion_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Version</a>
+        <span id="ssl_version_python">
+<a href="#ssl_version_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1769,11 +1789,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="fluentservers_python">
-<a href="#fluentservers_python" style="color: inherit; text-decoration: inherit;">fluent<wbr>Servers</a>
+        <span id="fluent_servers_python">
+<a href="#fluent_servers_python" style="color: inherit; text-decoration: inherit;">fluent_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterloggingfluentdconfigfluentserver">List[Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server]</a></span>
+        <span class="property-type"><a href="#getclusterloggingfluentdconfigfluentserver">List[Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1799,8 +1819,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabletls_python">
-<a href="#enabletls_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Tls</a>
+        <span id="enable_tls_python">
+<a href="#enable_tls_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2095,8 +2115,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedkey_python">
-<a href="#sharedkey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
+        <span id="shared_key_python">
+<a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2371,8 +2391,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="brokerendpoints_python">
-<a href="#brokerendpoints_python" style="color: inherit; text-decoration: inherit;">broker<wbr>Endpoints</a>
+        <span id="broker_endpoints_python">
+<a href="#broker_endpoints_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2391,8 +2411,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2401,8 +2421,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2411,8 +2431,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zookeeperendpoint_python">
-<a href="#zookeeperendpoint_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Endpoint</a>
+        <span id="zookeeper_endpoint_python">
+<a href="#zookeeper_endpoint_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2747,8 +2767,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sslverify_python">
-<a href="#sslverify_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
+        <span id="ssl_verify_python">
+<a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2777,8 +2797,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2787,8 +2807,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2797,8 +2817,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkeypass_python">
-<a href="#clientkeypass_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Pass</a>
+        <span id="client_key_pass_python">
+<a href="#client_key_pass_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3153,8 +3173,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sslverify_python">
-<a href="#sslverify_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
+        <span id="ssl_verify_python">
+<a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3173,8 +3193,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3183,8 +3203,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

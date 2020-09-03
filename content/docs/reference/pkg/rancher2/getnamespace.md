@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupNamespace(ctx, &rancher2.LookupNamespaceArgs{
+			Name:      "foo",
+			ProjectId: rancher2_cluster.Foo - custom.Default_project_id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,7 +102,7 @@ const foo = rancher2_cluster_foo_custom.defaultProjectId.apply(defaultProjectId 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_namespace(</span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_namespace(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNamespaceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -522,7 +543,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Pool object (map)
 {{% /md %}}</dd>
@@ -533,7 +554,7 @@ The following output properties are available:
 <a href="#container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnamespacecontainerresourcelimit">Dict[Get<wbr>Namespace<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#getnamespacecontainerresourcelimit">Get<wbr>Namespace<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
@@ -566,7 +587,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Pool object (map)
 {{% /md %}}</dd>
@@ -597,7 +618,7 @@ The following output properties are available:
 <a href="#resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnamespaceresourcequota">Dict[Get<wbr>Namespace<wbr>Resource<wbr>Quota]</a></span>
+        <span class="property-type"><a href="#getnamespaceresourcequota">Get<wbr>Namespace<wbr>Resource<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
@@ -776,8 +797,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -786,8 +807,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -796,8 +817,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -806,8 +827,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -896,7 +917,7 @@ The following output properties are available:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnamespaceresourcequotalimit">Dict[Get<wbr>Namespace<wbr>Resource<wbr>Quota<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#getnamespaceresourcequotalimit">Get<wbr>Namespace<wbr>Resource<wbr>Quota<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1338,8 +1359,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configmaps_python">
-<a href="#configmaps_python" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+        <span id="config_maps_python">
+<a href="#config_maps_python" style="color: inherit; text-decoration: inherit;">config_<wbr>maps</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1348,8 +1369,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1358,8 +1379,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1368,8 +1389,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="persistentvolumeclaims_python">
-<a href="#persistentvolumeclaims_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+        <span id="persistent_volume_claims_python">
+<a href="#persistent_volume_claims_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1388,8 +1409,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationcontrollers_python">
-<a href="#replicationcontrollers_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+        <span id="replication_controllers_python">
+<a href="#replication_controllers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>controllers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1398,8 +1419,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1408,8 +1429,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1418,8 +1439,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsstorage_python">
-<a href="#requestsstorage_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+        <span id="requests_storage_python">
+<a href="#requests_storage_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1448,8 +1469,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesloadbalancers_python">
-<a href="#servicesloadbalancers_python" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+        <span id="services_load_balancers_python">
+<a href="#services_load_balancers_python" style="color: inherit; text-decoration: inherit;">services_<wbr>load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1458,8 +1479,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesnodeports_python">
-<a href="#servicesnodeports_python" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+        <span id="services_node_ports_python">
+<a href="#services_node_ports_python" style="color: inherit; text-decoration: inherit;">services_<wbr>node_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

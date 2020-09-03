@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupNotifier(ctx, &rancher2.LookupNotifierArgs{
+			ClusterId: "<cluster_id>",
+			Name:      "foo",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,7 +102,7 @@ const foo = pulumi.output(rancher2.getNotifier({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_notifier(</span>cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_notifier(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNotifierResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -621,7 +642,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for notifier object (map)
 {{% /md %}}</dd>
@@ -664,7 +685,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for notifier object (map)
 {{% /md %}}</dd>
@@ -685,7 +706,7 @@ The following output properties are available:
 <a href="#pagerduty_config_python" style="color: inherit; text-decoration: inherit;">pagerduty_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnotifierpagerdutyconfig">Dict[Get<wbr>Notifier<wbr>Pagerduty<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getnotifierpagerdutyconfig">Get<wbr>Notifier<wbr>Pagerduty<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -696,7 +717,7 @@ The following output properties are available:
 <a href="#slack_config_python" style="color: inherit; text-decoration: inherit;">slack_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnotifierslackconfig">Dict[Get<wbr>Notifier<wbr>Slack<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getnotifierslackconfig">Get<wbr>Notifier<wbr>Slack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -707,7 +728,7 @@ The following output properties are available:
 <a href="#smtp_config_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnotifiersmtpconfig">Dict[Get<wbr>Notifier<wbr>Smtp<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getnotifiersmtpconfig">Get<wbr>Notifier<wbr>Smtp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -718,7 +739,7 @@ The following output properties are available:
 <a href="#webhook_config_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnotifierwebhookconfig">Dict[Get<wbr>Notifier<wbr>Webhook<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getnotifierwebhookconfig">Get<wbr>Notifier<wbr>Webhook<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -729,7 +750,7 @@ The following output properties are available:
 <a href="#wechat_config_python" style="color: inherit; text-decoration: inherit;">wechat_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnotifierwechatconfig">Dict[Get<wbr>Notifier<wbr>Wechat<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getnotifierwechatconfig">Get<wbr>Notifier<wbr>Wechat<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -848,8 +869,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="servicekey_python">
-<a href="#servicekey_python" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
+        <span id="service_key_python">
+<a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -858,8 +879,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="proxyurl_python">
-<a href="#proxyurl_python" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1004,8 +1025,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultrecipient_python">
-<a href="#defaultrecipient_python" style="color: inherit; text-decoration: inherit;">default<wbr>Recipient</a>
+        <span id="default_recipient_python">
+<a href="#default_recipient_python" style="color: inherit; text-decoration: inherit;">default_<wbr>recipient</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1024,8 +1045,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="proxyurl_python">
-<a href="#proxyurl_python" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1290,8 +1311,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultrecipient_python">
-<a href="#defaultrecipient_python" style="color: inherit; text-decoration: inherit;">default<wbr>Recipient</a>
+        <span id="default_recipient_python">
+<a href="#default_recipient_python" style="color: inherit; text-decoration: inherit;">default_<wbr>recipient</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1476,8 +1497,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="proxyurl_python">
-<a href="#proxyurl_python" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1732,8 +1753,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultrecipient_python">
-<a href="#defaultrecipient_python" style="color: inherit; text-decoration: inherit;">default<wbr>Recipient</a>
+        <span id="default_recipient_python">
+<a href="#default_recipient_python" style="color: inherit; text-decoration: inherit;">default_<wbr>recipient</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1752,8 +1773,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="proxyurl_python">
-<a href="#proxyurl_python" style="color: inherit; text-decoration: inherit;">proxy<wbr>Url</a>
+        <span id="proxy_url_python">
+<a href="#proxy_url_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1762,8 +1783,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="recipienttype_python">
-<a href="#recipienttype_python" style="color: inherit; text-decoration: inherit;">recipient<wbr>Type</a>
+        <span id="recipient_type_python">
+<a href="#recipient_type_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

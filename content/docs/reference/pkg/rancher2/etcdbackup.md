@@ -22,7 +22,7 @@ meta_desc: "Explore the EtcdBackup resource of the Rancher 2 package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.EtcdBackup">EtcdBackup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>backup_config=None<span class="p">, </span>cluster_id=None<span class="p">, </span>filename=None<span class="p">, </span>labels=None<span class="p">, </span>manual=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.EtcdBackup">EtcdBackup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">backup_config</span><span class="p">:</span> <span class="nx">Optional[EtcdBackupBackupConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">manual</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +496,7 @@ The EtcdBackup resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Etcd Backup object (map)
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The EtcdBackup resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backup_config_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etcdbackupbackupconfig">Dict[Etcd<wbr>Backup<wbr>Backup<wbr>Config]</a></span>
+        <span class="property-type"><a href="#etcdbackupbackupconfig">Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup config for etcd backup (list maxitems:1)
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The EtcdBackup resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Etcd Backup object (map)
 {{% /md %}}</dd>
@@ -665,7 +665,8 @@ Get an existing EtcdBackup resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>backup_config=None<span class="p">, </span>cluster_id=None<span class="p">, </span>filename=None<span class="p">, </span>labels=None<span class="p">, </span>manual=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">backup_config</span><span class="p">:</span> <span class="nx">Optional[EtcdBackupBackupConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">manual</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EtcdBackup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -673,7 +674,7 @@ Get an existing EtcdBackup resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.EtcdBackup.html">EtcdBackup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..EtcdBackupState.html">EtcdBackupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.EtcdBackup.html">EtcdBackup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..EtcdBackupState.html">EtcdBackupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1070,7 +1071,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Etcd Backup object (map)
 {{% /md %}}</dd>
@@ -1081,7 +1082,7 @@ The following state arguments are supported:
 <a href="#state_backup_config_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etcdbackupbackupconfig">Dict[Etcd<wbr>Backup<wbr>Backup<wbr>Config]</a></span>
+        <span class="property-type"><a href="#etcdbackupbackupconfig">Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup config for etcd backup (list maxitems:1)
 {{% /md %}}</dd>
@@ -1114,7 +1115,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Etcd Backup object (map)
 {{% /md %}}</dd>
@@ -1381,8 +1382,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="intervalhours_python">
-<a href="#intervalhours_python" style="color: inherit; text-decoration: inherit;">interval<wbr>Hours</a>
+        <span id="interval_hours_python">
+<a href="#interval_hours_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1403,19 +1404,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupconfig_python">
-<a href="#s3backupconfig_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Config</a>
+        <span id="s3_backup_config_python">
+<a href="#s3_backup_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etcdbackupbackupconfigs3backupconfig">Dict[Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config]</a></span>
+        <span class="property-type"><a href="#etcdbackupbackupconfigs3backupconfig">Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}S3 config options for etcd backup. Valid for `imported` and `rke` clusters. (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="safetimestamp_python">
-<a href="#safetimestamp_python" style="color: inherit; text-decoration: inherit;">safe<wbr>Timestamp</a>
+        <span id="safe_timestamp_python">
+<a href="#safe_timestamp_python" style="color: inherit; text-decoration: inherit;">safe_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1701,8 +1702,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketname_python">
-<a href="#bucketname_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1734,8 +1735,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customca_python">
-<a href="#customca_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Ca</a>
+        <span id="custom_ca_python">
+<a href="#custom_ca_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ca</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

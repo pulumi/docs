@@ -22,7 +22,7 @@ meta_desc: "Explore the MultiClusterApp resource of the Rancher 2 package, inclu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.MultiClusterApp">MultiClusterApp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>answers=None<span class="p">, </span>catalog_name=None<span class="p">, </span>labels=None<span class="p">, </span>members=None<span class="p">, </span>name=None<span class="p">, </span>revision_history_limit=None<span class="p">, </span>revision_id=None<span class="p">, </span>roles=None<span class="p">, </span>targets=None<span class="p">, </span>template_name=None<span class="p">, </span>template_version=None<span class="p">, </span>upgrade_strategy=None<span class="p">, </span>wait=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.MultiClusterApp">MultiClusterApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[List[MultiClusterAppAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[MultiClusterAppMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision_history_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[MultiClusterAppTargetArgs]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_strategy</span><span class="p">:</span> <span class="nx">Optional[MultiClusterAppUpgradeStrategyArgs]</span> = None<span class="p">, </span><span class="nx">wait</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +705,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">List[Multi<wbr>Cluster<wbr>App<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">List[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -760,7 +760,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">List[Multi<wbr>Cluster<wbr>App<wbr>Member]</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">List[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -815,7 +815,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Dict[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -973,7 +973,8 @@ Get an existing MultiClusterApp resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>answers=None<span class="p">, </span>catalog_name=None<span class="p">, </span>labels=None<span class="p">, </span>members=None<span class="p">, </span>name=None<span class="p">, </span>revision_history_limit=None<span class="p">, </span>revision_id=None<span class="p">, </span>roles=None<span class="p">, </span>targets=None<span class="p">, </span>template_name=None<span class="p">, </span>template_version=None<span class="p">, </span>template_version_id=None<span class="p">, </span>upgrade_strategy=None<span class="p">, </span>wait=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[List[MultiClusterAppAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[MultiClusterAppMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision_history_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[List[MultiClusterAppTargetArgs]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_strategy</span><span class="p">:</span> <span class="nx">Optional[MultiClusterAppUpgradeStrategyArgs]</span> = None<span class="p">, </span><span class="nx">wait</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MultiClusterApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -981,7 +982,7 @@ Get an existing MultiClusterApp resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.MultiClusterApp.html">MultiClusterApp</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..MultiClusterAppState.html">MultiClusterAppState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.MultiClusterApp.html">MultiClusterApp</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..MultiClusterAppState.html">MultiClusterAppState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1609,7 +1610,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1620,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">List[Multi<wbr>Cluster<wbr>App<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">List[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -1642,7 +1643,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1653,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">List[Multi<wbr>Cluster<wbr>App<wbr>Member]</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">List[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -1708,7 +1709,7 @@ The following state arguments are supported:
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd>
@@ -1752,7 +1753,7 @@ The following state arguments are supported:
 <a href="#state_upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Dict[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -1949,7 +1950,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
 {{% /md %}}</dd>
@@ -2101,8 +2102,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstype_python">
-<a href="#accesstype_python" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
+        <span id="access_type_python">
+<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2323,8 +2324,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appid_python">
-<a href="#appid_python" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+        <span id="app_id_python">
+<a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2334,8 +2335,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthstate_python">
-<a href="#healthstate_python" style="color: inherit; text-decoration: inherit;">health<wbr>State</a>
+        <span id="health_state_python">
+<a href="#health_state_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2435,11 +2436,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rollingupdate_python">
-<a href="#rollingupdate_python" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
+        <span id="rolling_update_python">
+<a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Dict[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update]</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
 {{% /md %}}</dd>
@@ -2558,8 +2559,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="batchsize_python">
-<a href="#batchsize_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
+        <span id="batch_size_python">
+<a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

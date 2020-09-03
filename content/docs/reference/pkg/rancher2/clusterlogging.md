@@ -47,7 +47,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewClusterLogging(ctx, "foo", &rancher2.ClusterLoggingArgs{
+			ClusterId: pulumi.String("<cluster_id>"),
+			Kind:      pulumi.String("syslog"),
+			SyslogConfig: &rancher2.ClusterLoggingSyslogConfigArgs{
+				Endpoint:  pulumi.String("<syslog_endpoint>"),
+				Protocol:  pulumi.String("udp"),
+				Severity:  pulumi.String("notice"),
+				SslVerify: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,12 +86,12 @@ import pulumi_rancher2 as rancher2
 foo = rancher2.ClusterLogging("foo",
     cluster_id="<cluster_id>",
     kind="syslog",
-    syslog_config={
-        "endpoint": "<syslog_endpoint>",
-        "protocol": "udp",
-        "severity": "notice",
-        "sslVerify": False,
-    })
+    syslog_config=rancher2.ClusterLoggingSyslogConfigArgs(
+        endpoint="<syslog_endpoint>",
+        protocol="udp",
+        severity="notice",
+        ssl_verify=False,
+    ))
 ```
 
 {{% /example %}}
@@ -102,7 +129,7 @@ const foo = new rancher2.ClusterLogging("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ClusterLogging">ClusterLogging</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>custom_target_config=None<span class="p">, </span>elasticsearch_config=None<span class="p">, </span>enable_json_parsing=None<span class="p">, </span>fluentd_config=None<span class="p">, </span>kafka_config=None<span class="p">, </span>kind=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>output_flush_interval=None<span class="p">, </span>output_tags=None<span class="p">, </span>splunk_config=None<span class="p">, </span>syslog_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ClusterLogging">ClusterLogging</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_target_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingCustomTargetConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_json_parsing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fluentd_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingFluentdConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingKafkaConfigArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_flush_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">output_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">splunk_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingSplunkConfigArgs]</span> = None<span class="p">, </span><span class="nx">syslog_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingSyslogConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -818,7 +845,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Cluster Logging object (map)
 {{% /md %}}</dd>
@@ -829,7 +856,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#custom_target_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>target_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingcustomtargetconfig">Dict[Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingcustomtargetconfig">Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -840,7 +867,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingelasticsearchconfig">Dict[Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingelasticsearchconfig">Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Cluster Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -862,7 +889,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fluentd_config_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingfluentdconfig">Dict[Cluster<wbr>Logging<wbr>Fluentd<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingfluentdconfig">Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Cluster Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -873,7 +900,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kafka_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingkafkaconfig">Dict[Cluster<wbr>Logging<wbr>Kafka<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingkafkaconfig">Cluster<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Cluster Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -884,7 +911,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Cluster Logging object (map)
 {{% /md %}}</dd>
@@ -928,7 +955,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#output_tags_python" style="color: inherit; text-decoration: inherit;">output_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The output tags for Cluster Logging (map)
 {{% /md %}}</dd>
@@ -939,7 +966,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#splunk_config_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingsplunkconfig">Dict[Cluster<wbr>Logging<wbr>Splunk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingsplunkconfig">Cluster<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Cluster Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -950,7 +977,7 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#syslog_config_python" style="color: inherit; text-decoration: inherit;">syslog_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingsyslogconfig">Dict[Cluster<wbr>Logging<wbr>Syslog<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingsyslogconfig">Cluster<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Cluster Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1053,7 +1080,8 @@ Get an existing ClusterLogging resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>custom_target_config=None<span class="p">, </span>elasticsearch_config=None<span class="p">, </span>enable_json_parsing=None<span class="p">, </span>fluentd_config=None<span class="p">, </span>kafka_config=None<span class="p">, </span>kind=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>output_flush_interval=None<span class="p">, </span>output_tags=None<span class="p">, </span>splunk_config=None<span class="p">, </span>syslog_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_target_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingCustomTargetConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_json_parsing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fluentd_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingFluentdConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingKafkaConfigArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_flush_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">output_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">splunk_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingSplunkConfigArgs]</span> = None<span class="p">, </span><span class="nx">syslog_config</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingSyslogConfigArgs]</span> = None<span class="p">) -&gt;</span> ClusterLogging</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1061,7 +1089,7 @@ Get an existing ClusterLogging resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterLogging.html">ClusterLogging</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterLoggingState.html">ClusterLoggingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterLogging.html">ClusterLogging</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterLoggingState.html">ClusterLoggingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1689,7 +1717,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Cluster Logging object (map)
 {{% /md %}}</dd>
@@ -1711,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_custom_target_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>target_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingcustomtargetconfig">Dict[Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingcustomtargetconfig">Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1722,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingelasticsearchconfig">Dict[Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingelasticsearchconfig">Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Cluster Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1744,7 +1772,7 @@ The following state arguments are supported:
 <a href="#state_fluentd_config_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingfluentdconfig">Dict[Cluster<wbr>Logging<wbr>Fluentd<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingfluentdconfig">Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Cluster Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1755,7 +1783,7 @@ The following state arguments are supported:
 <a href="#state_kafka_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingkafkaconfig">Dict[Cluster<wbr>Logging<wbr>Kafka<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingkafkaconfig">Cluster<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Cluster Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1777,7 +1805,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Cluster Logging object (map)
 {{% /md %}}</dd>
@@ -1821,7 +1849,7 @@ The following state arguments are supported:
 <a href="#state_output_tags_python" style="color: inherit; text-decoration: inherit;">output_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The output tags for Cluster Logging (map)
 {{% /md %}}</dd>
@@ -1832,7 +1860,7 @@ The following state arguments are supported:
 <a href="#state_splunk_config_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingsplunkconfig">Dict[Cluster<wbr>Logging<wbr>Splunk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingsplunkconfig">Cluster<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Cluster Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1843,7 +1871,7 @@ The following state arguments are supported:
 <a href="#state_syslog_config_python" style="color: inherit; text-decoration: inherit;">syslog_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingsyslogconfig">Dict[Cluster<wbr>Logging<wbr>Syslog<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterloggingsyslogconfig">Cluster<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Cluster Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -2058,8 +2086,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2069,8 +2097,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2500,8 +2528,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authpassword_python">
-<a href="#authpassword_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Password</a>
+        <span id="auth_password_python">
+<a href="#auth_password_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2511,8 +2539,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authusername_python">
-<a href="#authusername_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Username</a>
+        <span id="auth_username_python">
+<a href="#auth_username_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2533,8 +2561,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2544,8 +2572,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2555,8 +2583,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkeypass_python">
-<a href="#clientkeypass_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Pass</a>
+        <span id="client_key_pass_python">
+<a href="#client_key_pass_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2566,8 +2594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dateformat_python">
-<a href="#dateformat_python" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
+        <span id="date_format_python">
+<a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2577,8 +2605,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexprefix_python">
-<a href="#indexprefix_python" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
+        <span id="index_prefix_python">
+<a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2588,8 +2616,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslverify_python">
-<a href="#sslverify_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
+        <span id="ssl_verify_python">
+<a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2599,8 +2627,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslversion_python">
-<a href="#sslversion_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Version</a>
+        <span id="ssl_version_python">
+<a href="#ssl_version_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2788,11 +2816,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="fluentservers_python">
-<a href="#fluentservers_python" style="color: inherit; text-decoration: inherit;">fluent<wbr>Servers</a>
+        <span id="fluent_servers_python">
+<a href="#fluent_servers_python" style="color: inherit; text-decoration: inherit;">fluent_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterloggingfluentdconfigfluentserver">List[Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server]</a></span>
+        <span class="property-type"><a href="#clusterloggingfluentdconfigfluentserver">List[Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd>
@@ -2821,8 +2849,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabletls_python">
-<a href="#enabletls_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Tls</a>
+        <span id="enable_tls_python">
+<a href="#enable_tls_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3142,8 +3170,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedkey_python">
-<a href="#sharedkey_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
+        <span id="shared_key_python">
+<a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3441,8 +3469,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="brokerendpoints_python">
-<a href="#brokerendpoints_python" style="color: inherit; text-decoration: inherit;">broker<wbr>Endpoints</a>
+        <span id="broker_endpoints_python">
+<a href="#broker_endpoints_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3463,8 +3491,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3474,8 +3502,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3485,8 +3513,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="zookeeperendpoint_python">
-<a href="#zookeeperendpoint_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Endpoint</a>
+        <span id="zookeeper_endpoint_python">
+<a href="#zookeeper_endpoint_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3872,8 +3900,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3883,8 +3911,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3894,8 +3922,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkeypass_python">
-<a href="#clientkeypass_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Pass</a>
+        <span id="client_key_pass_python">
+<a href="#client_key_pass_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>pass</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3927,8 +3955,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslverify_python">
-<a href="#sslverify_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
+        <span id="ssl_verify_python">
+<a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4303,8 +4331,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcert_python">
-<a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4314,8 +4342,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4358,8 +4386,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslverify_python">
-<a href="#sslverify_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
+        <span id="ssl_verify_python">
+<a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

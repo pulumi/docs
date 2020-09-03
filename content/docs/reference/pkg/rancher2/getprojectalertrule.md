@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupProjectAlertRule(ctx, &rancher2.LookupProjectAlertRuleArgs{
+			Name:      "<project_alert_rule_name>",
+			ProjectId: "<project_id>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,7 +102,7 @@ const foo = pulumi.output(rancher2.getProjectAlertRule({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_project_alert_rule(</span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project_alert_rule(</span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectAlertRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -256,7 +277,7 @@ The following arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert rule labels (map)
 {{% /md %}}</dd>
@@ -764,7 +785,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert rule annotations (map)
 {{% /md %}}</dd>
@@ -830,7 +851,7 @@ The following output properties are available:
 <a href="#metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectalertrulemetricrule">Dict[Get<wbr>Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getprojectalertrulemetricrule">Get<wbr>Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -851,7 +872,7 @@ The following output properties are available:
 <a href="#pod_rule_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectalertrulepodrule">Dict[Get<wbr>Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getprojectalertrulepodrule">Get<wbr>Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -894,7 +915,7 @@ The following output properties are available:
 <a href="#workload_rule_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectalertruleworkloadrule">Dict[Get<wbr>Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getprojectalertruleworkloadrule">Get<wbr>Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -905,7 +926,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert rule labels (map)
 {{% /md %}}</dd>
@@ -1134,8 +1155,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdvalue_python">
-<a href="#thresholdvalue_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
+        <span id="threshold_value_python">
+<a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1330,8 +1351,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="podid_python">
-<a href="#podid_python" style="color: inherit; text-decoration: inherit;">pod<wbr>Id</a>
+        <span id="pod_id_python">
+<a href="#pod_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1350,8 +1371,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restartintervalseconds_python">
-<a href="#restartintervalseconds_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Interval<wbr>Seconds</a>
+        <span id="restart_interval_seconds_python">
+<a href="#restart_interval_seconds_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1360,8 +1381,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="restarttimes_python">
-<a href="#restarttimes_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Times</a>
+        <span id="restart_times_python">
+<a href="#restart_times_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1506,8 +1527,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availablepercentage_python">
-<a href="#availablepercentage_python" style="color: inherit; text-decoration: inherit;">available<wbr>Percentage</a>
+        <span id="available_percentage_python">
+<a href="#available_percentage_python" style="color: inherit; text-decoration: inherit;">available_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1520,14 +1541,14 @@ The following output properties are available:
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="workloadid_python">
-<a href="#workloadid_python" style="color: inherit; text-decoration: inherit;">workload<wbr>Id</a>
+        <span id="workload_id_python">
+<a href="#workload_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

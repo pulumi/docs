@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupProjectAlertGroup(ctx, &rancher2.LookupProjectAlertGroupArgs{
+			Name:      "<project_alert_group_name>",
+			ProjectId: "<project_id>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,7 +102,7 @@ const foo = pulumi.output(rancher2.getProjectAlertGroup({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_project_alert_group(</span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project_alert_group(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectAlertGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -588,7 +609,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert group annotations (map)
 {{% /md %}}</dd>
@@ -643,7 +664,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert group labels (map)
 {{% /md %}}</dd>
@@ -864,8 +885,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="notifierid_python">
-<a href="#notifierid_python" style="color: inherit; text-decoration: inherit;">notifier<wbr>Id</a>
+        <span id="notifier_id_python">
+<a href="#notifier_id_python" style="color: inherit; text-decoration: inherit;">notifier_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -874,8 +895,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="notifiertype_python">
-<a href="#notifiertype_python" style="color: inherit; text-decoration: inherit;">notifier<wbr>Type</a>
+        <span id="notifier_type_python">
+<a href="#notifier_type_python" style="color: inherit; text-decoration: inherit;">notifier_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -894,8 +915,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultrecipient_python">
-<a href="#defaultrecipient_python" style="color: inherit; text-decoration: inherit;">default<wbr>Recipient</a>
+        <span id="default_recipient_python">
+<a href="#default_recipient_python" style="color: inherit; text-decoration: inherit;">default_<wbr>recipient</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

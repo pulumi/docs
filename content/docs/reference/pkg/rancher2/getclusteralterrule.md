@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.LookupClusterAlterRule(ctx, &rancher2.LookupClusterAlterRuleArgs{
+			ClusterId: "<cluster_id>",
+			Name:      "<cluster_alert_rule_name>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,7 +102,7 @@ const foo = pulumi.output(rancher2.getClusterAlterRule({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster_alter_rule(</span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster_alter_rule(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterAlterRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -256,7 +277,7 @@ The following arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
@@ -797,7 +818,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule annotations (map)
 {{% /md %}}</dd>
@@ -818,7 +839,7 @@ The following output properties are available:
 <a href="#event_rule_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteralterruleeventrule">Dict[Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -884,7 +905,7 @@ The following output properties are available:
 <a href="#metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteralterrulemetricrule">Dict[Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getclusteralterrulemetricrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -905,7 +926,7 @@ The following output properties are available:
 <a href="#node_rule_python" style="color: inherit; text-decoration: inherit;">node_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteralterrulenoderule">Dict[Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getclusteralterrulenoderule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -938,7 +959,7 @@ The following output properties are available:
 <a href="#system_service_rule_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteralterrulesystemservicerule">Dict[Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getclusteralterrulesystemservicerule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -949,7 +970,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
@@ -1068,8 +1089,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcekind_python">
-<a href="#resourcekind_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Kind</a>
+        <span id="resource_kind_python">
+<a href="#resource_kind_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>kind</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1078,8 +1099,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventtype_python">
-<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1304,8 +1325,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdvalue_python">
-<a href="#thresholdvalue_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
+        <span id="threshold_value_python">
+<a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1540,8 +1561,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cputhreshold_python">
-<a href="#cputhreshold_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Threshold</a>
+        <span id="cpu_threshold_python">
+<a href="#cpu_threshold_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1550,8 +1571,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="memthreshold_python">
-<a href="#memthreshold_python" style="color: inherit; text-decoration: inherit;">mem<wbr>Threshold</a>
+        <span id="mem_threshold_python">
+<a href="#mem_threshold_python" style="color: inherit; text-decoration: inherit;">mem_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1560,8 +1581,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodeid_python">
-<a href="#nodeid_python" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1574,7 +1595,7 @@ The following output properties are available:
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

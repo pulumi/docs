@@ -46,7 +46,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewCloudCredential(ctx, "foo", &rancher2.CloudCredentialArgs{
+			Amazonec2CredentialConfig: &rancher2.CloudCredentialAmazonec2CredentialConfigArgs{
+				AccessKey: pulumi.String("<AWS_ACCESS_KEY>"),
+				SecretKey: pulumi.String("<AWS_SECRET_KEY>"),
+			},
+			Description: pulumi.String("foo test"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -56,10 +80,10 @@ import pulumi_rancher2 as rancher2
 
 # Create a new rancher2 Cloud Credential
 foo = rancher2.CloudCredential("foo",
-    amazonec2_credential_config={
-        "access_key": "<AWS_ACCESS_KEY>",
-        "secret_key": "<AWS_SECRET_KEY>",
-    },
+    amazonec2_credential_config=rancher2.CloudCredentialAmazonec2CredentialConfigArgs(
+        access_key="<AWS_ACCESS_KEY>",
+        secret_key="<AWS_SECRET_KEY>",
+    ),
     description="foo test")
 ```
 
@@ -95,7 +119,7 @@ const foo = new rancher2.CloudCredential("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.CloudCredential">CloudCredential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>labels=None<span class="p">, </span>linode_credential_config=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.CloudCredential">CloudCredential</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialAmazonec2CredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">azure_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialAzureCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialDigitaloceanCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialLinodeCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openstack_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialOpenstackCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">vsphere_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialVsphereCredentialConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -624,7 +648,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#amazonec2_credential_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Dict[Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -635,7 +659,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -646,7 +670,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#azure_credential_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -668,7 +692,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#digitalocean_credential_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Dict[Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -679,7 +703,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -690,7 +714,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#linode_credential_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -712,7 +736,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#openstack_credential_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Dict[Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -723,7 +747,7 @@ The CloudCredential resource accepts the following [input]({{< relref "/docs/int
 <a href="#vsphere_credential_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -870,7 +894,8 @@ Get an existing CloudCredential resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_credential_config=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialAmazonec2CredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">azure_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialAzureCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialDigitaloceanCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialLinodeCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openstack_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialOpenstackCredentialConfigArgs]</span> = None<span class="p">, </span><span class="nx">vsphere_credential_config</span><span class="p">:</span> <span class="nx">Optional[CloudCredentialVsphereCredentialConfigArgs]</span> = None<span class="p">) -&gt;</span> CloudCredential</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -878,7 +903,7 @@ Get an existing CloudCredential resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.CloudCredential.html">CloudCredential</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..CloudCredentialState.html">CloudCredentialState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.CloudCredential.html">CloudCredential</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..CloudCredentialState.html">CloudCredentialState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1374,7 +1399,7 @@ The following state arguments are supported:
 <a href="#state_amazonec2_credential_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Dict[Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1385,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -1396,7 +1421,7 @@ The following state arguments are supported:
 <a href="#state_azure_credential_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1418,7 +1443,7 @@ The following state arguments are supported:
 <a href="#state_digitalocean_credential_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Dict[Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1440,7 +1465,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -1451,7 +1476,7 @@ The following state arguments are supported:
 <a href="#state_linode_credential_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1473,7 +1498,7 @@ The following state arguments are supported:
 <a href="#state_openstack_credential_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Dict[Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1484,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_vsphere_credential_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>credential_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config]</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1800,8 +1825,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="subscriptionid_python">
-<a href="#subscriptionid_python" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1890,8 +1915,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstoken_python">
-<a href="#accesstoken_python" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2292,8 +2317,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vcenterport_python">
-<a href="#vcenterport_python" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Port</a>
+        <span id="vcenter_port_python">
+<a href="#vcenter_port_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

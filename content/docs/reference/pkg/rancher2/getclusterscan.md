@@ -24,7 +24,7 @@ meta_desc: "Explore the GetClusterScan function of the Rancher 2 package, includ
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster_scan(</span>cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster_scan(</span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterScanResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -470,7 +470,7 @@ The following output properties are available:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -501,7 +501,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -531,7 +531,7 @@ The following output properties are available:
 <a href="#scan_config_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterscanscanconfig">Dict[Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterscanscanconfig">Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -639,11 +639,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cisscanconfig_python">
-<a href="#cisscanconfig_python" style="color: inherit; text-decoration: inherit;">cis<wbr>Scan<wbr>Config</a>
+        <span id="cis_scan_config_python">
+<a href="#cis_scan_config_python" style="color: inherit; text-decoration: inherit;">cis_<wbr>scan_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterscanscanconfigcisscanconfig">Dict[Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -845,8 +845,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="debugmaster_python">
-<a href="#debugmaster_python" style="color: inherit; text-decoration: inherit;">debug<wbr>Master</a>
+        <span id="debug_master_python">
+<a href="#debug_master_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>master</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -855,8 +855,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="debugworker_python">
-<a href="#debugworker_python" style="color: inherit; text-decoration: inherit;">debug<wbr>Worker</a>
+        <span id="debug_worker_python">
+<a href="#debug_worker_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>worker</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -865,8 +865,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overridebenchmarkversion_python">
-<a href="#overridebenchmarkversion_python" style="color: inherit; text-decoration: inherit;">override<wbr>Benchmark<wbr>Version</a>
+        <span id="override_benchmark_version_python">
+<a href="#override_benchmark_version_python" style="color: inherit; text-decoration: inherit;">override_<wbr>benchmark_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -875,8 +875,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideskips_python">
-<a href="#overrideskips_python" style="color: inherit; text-decoration: inherit;">override<wbr>Skips</a>
+        <span id="override_skips_python">
+<a href="#override_skips_python" style="color: inherit; text-decoration: inherit;">override_<wbr>skips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
