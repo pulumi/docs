@@ -1,4 +1,10 @@
 [[releases]]
+date = "3rd September 2020"
+title = "Pulumi Announces First Annual Cloud Engineering Summit"
+summary = "Cloud engineering leader Pulumi today announced the first annual Cloud Engineering Summit."
+url = "https://info.pulumi.com/press-release/cloud-engineering-summit"
+
+[[releases]]
 date = "17th August 2020"
 title = "Pinpoint Software Chooses Pulumi for Cloud Native Engineering"
 summary = "Pulumi’s industry-leading Kubernetes support gaining strong customer momentum"
