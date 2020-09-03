@@ -16,6 +16,202 @@ teams. The credentials used must have the `manage_teams` permission set.
 
 [Team Api Docs](https://ns1.com/api#team)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Ns1 = Pulumi.Ns1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new NS1 Team
+        var example = new Ns1.Team("example", new Ns1.TeamArgs
+        {
+            AccountManageUsers = false,
+            DnsViewZones = false,
+            IpWhitelists = 
+            {
+                new Ns1.Inputs.TeamIpWhitelistArgs
+                {
+                    Name = "whitelist-1",
+                    Values = 
+                    {
+                        "1.1.1.1",
+                        "2.2.2.2",
+                    },
+                },
+                new Ns1.Inputs.TeamIpWhitelistArgs
+                {
+                    Name = "whitelist-2",
+                    Values = 
+                    {
+                        "3.3.3.3",
+                        "4.4.4.4",
+                    },
+                },
+            },
+        });
+        // Another team
+        var example2 = new Ns1.Team("example2", new Ns1.TeamArgs
+        {
+            DataManageDatasources = true,
+            DnsViewZones = true,
+            DnsZonesAllows = 
+            {
+                "mytest.zone",
+            },
+            DnsZonesAllowByDefault = true,
+            DnsZonesDenies = 
+            {
+                "myother.zone",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ns1.NewTeam(ctx, "example", &ns1.TeamArgs{
+			AccountManageUsers: pulumi.Bool(false),
+			DnsViewZones:       pulumi.Bool(false),
+			IpWhitelists: ns1.TeamIpWhitelistArray{
+				&ns1.TeamIpWhitelistArgs{
+					Name: pulumi.String("whitelist-1"),
+					Values: pulumi.StringArray{
+						pulumi.String("1.1.1.1"),
+						pulumi.String("2.2.2.2"),
+					},
+				},
+				&ns1.TeamIpWhitelistArgs{
+					Name: pulumi.String("whitelist-2"),
+					Values: pulumi.StringArray{
+						pulumi.String("3.3.3.3"),
+						pulumi.String("4.4.4.4"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ns1.NewTeam(ctx, "example2", &ns1.TeamArgs{
+			DataManageDatasources: pulumi.Bool(true),
+			DnsViewZones:          pulumi.Bool(true),
+			DnsZonesAllows: pulumi.StringArray{
+				pulumi.String("mytest.zone"),
+			},
+			DnsZonesAllowByDefault: pulumi.Bool(true),
+			DnsZonesDenies: pulumi.StringArray{
+				pulumi.String("myother.zone"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_ns1 as ns1
+
+# Create a new NS1 Team
+example = ns1.Team("example",
+    account_manage_users=False,
+    dns_view_zones=False,
+    ip_whitelists=[
+        ns1.TeamIpWhitelistArgs(
+            name="whitelist-1",
+            values=[
+                "1.1.1.1",
+                "2.2.2.2",
+            ],
+        ),
+        ns1.TeamIpWhitelistArgs(
+            name="whitelist-2",
+            values=[
+                "3.3.3.3",
+                "4.4.4.4",
+            ],
+        ),
+    ])
+# Another team
+example2 = ns1.Team("example2",
+    data_manage_datasources=True,
+    dns_view_zones=True,
+    dns_zones_allows=["mytest.zone"],
+    dns_zones_allow_by_default=True,
+    dns_zones_denies=["myother.zone"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as ns1 from "@pulumi/ns1";
+
+// Create a new NS1 Team
+const example = new ns1.Team("example", {
+    accountManageUsers: false,
+    // Configure permissions
+    dnsViewZones: false,
+    ipWhitelists: [
+        // Optional IP whitelists
+        {
+            name: "whitelist-1",
+            values: [
+                "1.1.1.1",
+                "2.2.2.2",
+            ],
+        },
+        {
+            name: "whitelist-2",
+            values: [
+                "3.3.3.3",
+                "4.4.4.4",
+            ],
+        },
+    ],
+});
+// Another team
+const example2 = new ns1.Team("example2", {
+    dataManageDatasources: true,
+    dnsViewZones: true,
+    dnsZonesAllows: ["mytest.zone"],
+    dnsZonesAllowByDefault: true,
+    dnsZonesDenies: ["myother.zone"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Team Resource {#create}
@@ -27,7 +223,7 @@ teams. The credentials used must have the `manage_teams` permission set.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Team">Team</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_manage_account_settings=None<span class="p">, </span>account_manage_apikeys=None<span class="p">, </span>account_manage_payment_methods=None<span class="p">, </span>account_manage_plan=None<span class="p">, </span>account_manage_teams=None<span class="p">, </span>account_manage_users=None<span class="p">, </span>account_view_activity_log=None<span class="p">, </span>account_view_invoices=None<span class="p">, </span>data_manage_datafeeds=None<span class="p">, </span>data_manage_datasources=None<span class="p">, </span>data_push_to_datafeeds=None<span class="p">, </span>dhcp_manage_dhcp=None<span class="p">, </span>dhcp_view_dhcp=None<span class="p">, </span>dns_manage_zones=None<span class="p">, </span>dns_view_zones=None<span class="p">, </span>dns_zones_allow_by_default=None<span class="p">, </span>dns_zones_allows=None<span class="p">, </span>dns_zones_denies=None<span class="p">, </span>ip_whitelists=None<span class="p">, </span>ipam_manage_ipam=None<span class="p">, </span>ipam_view_ipam=None<span class="p">, </span>monitoring_manage_jobs=None<span class="p">, </span>monitoring_manage_lists=None<span class="p">, </span>monitoring_view_jobs=None<span class="p">, </span>name=None<span class="p">, </span>security_manage_active_directory=None<span class="p">, </span>security_manage_global2fa=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Team">Team</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[List[TeamIpWhitelistArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1332,7 +1528,7 @@ Only relevant for the DDI product.
 <a href="#ip_whitelists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teamipwhitelist">List[Team<wbr>Ip<wbr>Whitelist]</a></span>
+        <span class="property-type"><a href="#teamipwhitelist">List[Team<wbr>Ip<wbr>Whitelist<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd>
@@ -1526,7 +1722,8 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_manage_account_settings=None<span class="p">, </span>account_manage_apikeys=None<span class="p">, </span>account_manage_payment_methods=None<span class="p">, </span>account_manage_plan=None<span class="p">, </span>account_manage_teams=None<span class="p">, </span>account_manage_users=None<span class="p">, </span>account_view_activity_log=None<span class="p">, </span>account_view_invoices=None<span class="p">, </span>data_manage_datafeeds=None<span class="p">, </span>data_manage_datasources=None<span class="p">, </span>data_push_to_datafeeds=None<span class="p">, </span>dhcp_manage_dhcp=None<span class="p">, </span>dhcp_view_dhcp=None<span class="p">, </span>dns_manage_zones=None<span class="p">, </span>dns_view_zones=None<span class="p">, </span>dns_zones_allow_by_default=None<span class="p">, </span>dns_zones_allows=None<span class="p">, </span>dns_zones_denies=None<span class="p">, </span>ip_whitelists=None<span class="p">, </span>ipam_manage_ipam=None<span class="p">, </span>ipam_view_ipam=None<span class="p">, </span>monitoring_manage_jobs=None<span class="p">, </span>monitoring_manage_lists=None<span class="p">, </span>monitoring_view_jobs=None<span class="p">, </span>name=None<span class="p">, </span>security_manage_active_directory=None<span class="p">, </span>security_manage_global2fa=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[List[TeamIpWhitelistArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Team</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1534,7 +1731,7 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Team.html">Team</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..TeamState.html">TeamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Team.html">Team</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..TeamState.html">TeamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2773,7 +2970,7 @@ Only relevant for the DDI product.
 <a href="#state_ip_whitelists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teamipwhitelist">List[Team<wbr>Ip<wbr>Whitelist]</a></span>
+        <span class="property-type"><a href="#teamipwhitelist">List[Team<wbr>Ip<wbr>Whitelist<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
 {{% /md %}}</dd>

@@ -11,6 +11,7 @@ meta_desc: "Explore the Record resource of the NS1 package, including examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a NS1 Record resource. This can be used to create, modify, and delete records.
+
 ## NS1 Documentation
 
 [Record Api Doc](https://ns1.com/api#records)
@@ -26,7 +27,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Record">Record</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>answers=None<span class="p">, </span>domain=None<span class="p">, </span>filters=None<span class="p">, </span>link=None<span class="p">, </span>meta=None<span class="p">, </span>regions=None<span class="p">, </span>short_answers=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>use_client_subnet=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Record">Record</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[List[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -301,14 +302,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -445,14 +439,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -589,14 +576,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -671,7 +651,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -683,7 +663,7 @@ Answers are documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -707,7 +687,7 @@ Filters are documented below.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -717,7 +697,7 @@ Filters are documented below.
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region]</a></span>
+        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -733,14 +713,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -865,7 +838,8 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>answers=None<span class="p">, </span>domain=None<span class="p">, </span>filters=None<span class="p">, </span>link=None<span class="p">, </span>meta=None<span class="p">, </span>regions=None<span class="p">, </span>short_answers=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>use_client_subnet=None<span class="p">, </span>zone=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[List[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -873,7 +847,7 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1059,14 +1033,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1203,14 +1170,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1347,14 +1307,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1417,7 +1370,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
@@ -1441,7 +1394,7 @@ dots - see the example above and `FQDN formatting` below.
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
@@ -1465,7 +1418,7 @@ Filters are documented below.
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1475,7 +1428,7 @@ Filters are documented below.
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region]</a></span>
+        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
@@ -1491,14 +1444,7 @@ documented below. Please note the ordering requirement!
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1733,7 +1679,7 @@ is documented below.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1922,7 +1868,7 @@ filter chain.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
@@ -2066,7 +2012,7 @@ filter chain.
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -41,7 +41,7 @@ A Pulumi package for creating and managing ns1 cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
+	<dd>1.1.0</dd>
 </dl>
 
 

@@ -15,6 +15,178 @@ Provides a NS1 Monitoring Job resource. This can be used to create, modify, and 
 
 [MonitoringJob Api Doc](https://ns1.com/api#monitoring-jobs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Ns1 = Pulumi.Ns1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var uswestMonitor = new Ns1.MonitoringJob("uswestMonitor", new Ns1.MonitoringJobArgs
+        {
+            Active = true,
+            Config = 
+            {
+                { "host", "example-elb-uswest.aws.amazon.com" },
+                { "port", 443 },
+                { "send", @"HEAD / HTTP/1.0
+
+
+" },
+                { "ssl", 1 },
+            },
+            Frequency = 60,
+            JobType = "tcp",
+            Policy = "quorum",
+            RapidRecheck = true,
+            Regions = 
+            {
+                "sjc",
+                "sin",
+                "lga",
+            },
+            Rules = 
+            {
+                new Ns1.Inputs.MonitoringJobRuleArgs
+                {
+                    Comparison = "contains",
+                    Key = "output",
+                    Value = "200 OK",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-ns1/sdk/go/ns1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ns1.NewMonitoringJob(ctx, "uswestMonitor", &ns1.MonitoringJobArgs{
+			Active: pulumi.Bool(true),
+			Config: pulumi.Map{
+				"host": pulumi.String("example-elb-uswest.aws.amazon.com"),
+				"port": pulumi.Float64(443),
+				"send": pulumi.String(fmt.Sprintf("%v%v%v", "HEAD / HTTP/1.0\n", "\n", "\n")),
+				"ssl": pulumi.Float64(1),
+			},
+			Frequency:    pulumi.Int(60),
+			JobType:      pulumi.String("tcp"),
+			Policy:       pulumi.String("quorum"),
+			RapidRecheck: pulumi.Bool(true),
+			Regions: pulumi.StringArray{
+				pulumi.String("sjc"),
+				pulumi.String("sin"),
+				pulumi.String("lga"),
+			},
+			Rules: ns1.MonitoringJobRuleArray{
+				&ns1.MonitoringJobRuleArgs{
+					Comparison: pulumi.String("contains"),
+					Key:        pulumi.String("output"),
+					Value:      pulumi.String("200 OK"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_ns1 as ns1
+
+uswest_monitor = ns1.MonitoringJob("uswestMonitor",
+    active=True,
+    config={
+        "host": "example-elb-uswest.aws.amazon.com",
+        "port": 443,
+        "send": """HEAD / HTTP/1.0
+
+
+""",
+        "ssl": 1,
+    },
+    frequency=60,
+    job_type="tcp",
+    policy="quorum",
+    rapid_recheck=True,
+    regions=[
+        "sjc",
+        "sin",
+        "lga",
+    ],
+    rules=[ns1.MonitoringJobRuleArgs(
+        comparison="contains",
+        key="output",
+        value="200 OK",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as ns1 from "@pulumi/ns1";
+
+const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
+    active: true,
+    config: {
+        host: "example-elb-uswest.aws.amazon.com",
+        port: 443,
+        send: `HEAD / HTTP/1.0
+
+`,
+        ssl: 1,
+    },
+    frequency: 60,
+    jobType: "tcp",
+    policy: "quorum",
+    rapidRecheck: true,
+    regions: [
+        "sjc",
+        "sin",
+        "lga",
+    ],
+    rules: [{
+        comparison: "contains",
+        key: "output",
+        value: "200 OK",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MonitoringJob Resource {#create}
@@ -26,7 +198,7 @@ Provides a NS1 Monitoring Job resource. This can be used to create, modify, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.MonitoringJob">MonitoringJob</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>config=None<span class="p">, </span>frequency=None<span class="p">, </span>job_type=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>notify_delay=None<span class="p">, </span>notify_failback=None<span class="p">, </span>notify_list=None<span class="p">, </span>notify_regional=None<span class="p">, </span>notify_repeat=None<span class="p">, </span>policy=None<span class="p">, </span>rapid_recheck=None<span class="p">, </span>regions=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.MonitoringJob">MonitoringJob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">notify_failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_list</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify_regional</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_repeat</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rapid_recheck</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[MonitoringJobRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -729,7 +901,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
 {{% /md %}}</dd>
@@ -886,7 +1058,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringjobrule">List[Monitoring<wbr>Job<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#monitoringjobrule">List[Monitoring<wbr>Job<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
 {{% /md %}}</dd>
@@ -989,7 +1161,8 @@ Get an existing MonitoringJob resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>config=None<span class="p">, </span>frequency=None<span class="p">, </span>job_type=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>notify_delay=None<span class="p">, </span>notify_failback=None<span class="p">, </span>notify_list=None<span class="p">, </span>notify_regional=None<span class="p">, </span>notify_repeat=None<span class="p">, </span>policy=None<span class="p">, </span>rapid_recheck=None<span class="p">, </span>regions=None<span class="p">, </span>rules=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">notify_failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_list</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify_regional</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_repeat</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rapid_recheck</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[MonitoringJobRuleArgs]]</span> = None<span class="p">) -&gt;</span> MonitoringJob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -997,7 +1170,7 @@ Get an existing MonitoringJob resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.MonitoringJob.html">MonitoringJob</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..MonitoringJobState.html">MonitoringJobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.MonitoringJob.html">MonitoringJob</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..MonitoringJobState.html">MonitoringJobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1645,7 +1818,7 @@ job. See NS1 API docs for supported values.
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the jobs' type.
 {{% /md %}}</dd>
@@ -1791,7 +1964,7 @@ job. See NS1 API docs for supported values.
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringjobrule">List[Monitoring<wbr>Job<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#monitoringjobrule">List[Monitoring<wbr>Job<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Job Rules are documented below.
 {{% /md %}}</dd>
